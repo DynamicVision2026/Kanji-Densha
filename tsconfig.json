@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/engine" },
+    { "path": "packages/content-schema" },
+    { "path": "packages/content-build" },
+    { "path": "packages/store" },
+    { "path": "apps/web" }
+  ]
+}

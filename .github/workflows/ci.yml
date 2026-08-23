@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Every job below is required; any failing step blocks the merge. The gates are
+# the point of M0 — they enforce the CLAUDE.md invariants from the first commit
+# rather than leaving them to review.
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history for the content-dist-drift diff)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure base ref is present for drift diff
+        run: git fetch --no-tags --prune origin main
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install (frozen lockfile)
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Lint (incl. import-boundary rules)
+        run: pnpm lint
+
+      - name: Engine purity gate
+        run: pnpm check:engine-purity
+
+      - name: Test
+        run: pnpm test
+
+      - name: Content build
+        run: pnpm content:build
+
+      - name: content-dist drift gate
+        env:
+          DRIFT_BASE: origin/main
+        run: pnpm check:content-dist-drift

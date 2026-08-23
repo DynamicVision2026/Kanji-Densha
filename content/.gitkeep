@@ -1,0 +1,2 @@
+# Human-authored source content (YAML) lives here from M2 (architecture §2.1).
+# Not shipped — apps/web may never import from content/ (I2, enforced by eslint).
