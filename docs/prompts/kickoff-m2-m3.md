@@ -55,8 +55,11 @@ decisions D13–D15 before starting. M2 gains a Part 0 below.
 > `status` other than `published` appears anywhere in the output — not filtered at read time,
 > absent from the file (I2).
 >
-> **Part 3 — twenty Grade-1 characters,** hand-authored, with real audio files. Use exactly
-> this set, chosen to stress every branch of the schema:
+> **Part 3 — twenty Grade-1 characters,** hand-authored. **No audio in this milestone** — the
+> TTS vendor is unresolved (D16) and D16 forbids placeholder files, including temporary ones.
+> Declare each record's intended audio filenames so the manifest emits an exact work order for
+> the generation batch, but ship no `.mp3`. Use exactly this set, chosen to stress every
+> branch of the schema:
 >
 > 一 山 川 木 林 森 日 月 火 水 田 男 力 人 大 犬 本 目 生 学
 >
@@ -87,10 +90,13 @@ decisions D13–D15 before starting. M2 gains a Part 0 below.
 > and asserting *which* error fires. A gate that rejects for the wrong reason is a gate that
 > will pass the wrong record later.
 >
-> **Exit criteria.** `pnpm content:build` emits `content-dist/g1.json` and a manifest
-> reporting `teach_ready: 20` against a G1 denominator of 80. Deleting one audio file makes
-> the build fail with a message naming that file. Every fixture in `bad-content/` is
-> rejected. And: adding a twenty-first character requires no code change — say so in the PR
+> **Exit criteria — read this carefully, it inverts.** `pnpm content:build` emits
+> `content-dist/g1.json` and a manifest reporting **`teach_ready: 0`** against a G1
+> denominator of 80, with all twenty characters listed as `audio_pending` and the gate naming
+> audio as the single unmet checklist item for each. That is the milestone passing, not
+> failing (D18). Add a `pending` section to the manifest: per character, exactly which
+> checklist items are unmet and which files would satisfy them. Every fixture in
+> `bad-content/` is rejected. And: adding a twenty-first character requires no code change — say so in the PR
 > and show the diff that would be needed.
 >
 > Do not write the LLM content factory in this milestone. Twenty records authored by hand

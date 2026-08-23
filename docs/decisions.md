@@ -38,5 +38,7 @@ authority should always move in this codebase.
 | **D16** | Pre-rendered fixed audio, vendor deferred behind a commercial-redistribution check. Research corpora excluded outright. Word-surface audio is generated from the *word*, never the bare reading, because isolated-kana pitch accent is frequently wrong. | `docs/licenses.md`, MR-2.1, I10 |
 | **D17** | KanjiVG as logic reference only; product redraw for anything shipped; derived material quarantined in `content/shape/` with its own LICENSE; attribution on the parent page. | `docs/licenses.md` |
 
+| **D18** | `teach_ready` is never softened to let a milestone go green. M2 lands with `teach_ready: 0` and twenty characters listed `audio_pending`; the manifest gains a `pending` section naming the unmet checklist item and the file that would satisfy it. A gate that can only say yes is not a gate. | M2 exit criteria, I9 |
+
 **Still open:** Q14 (whether to license a 教科書体 for the hero character) — a budget
 decision, not a build blocker, since it is one CSS token.
