@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Test / coverage
+coverage/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Env
+.env
+.env.*
+!.env.example
+
+# NOTE: content-dist/ is generated but SHIPPED and committed (I2, architecture §2.2).
+# It is intentionally NOT ignored. The content-dist-drift gate guards it.

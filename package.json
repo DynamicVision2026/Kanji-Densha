@@ -1,0 +1,26 @@
+{
+  "name": "kanji-densha",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc -b",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "content:build": "node packages/content-build/build.mjs",
+    "check:engine-purity": "node scripts/check-engine-purity.mjs",
+    "check:content-dist-drift": "node scripts/check-content-dist-drift.mjs",
+    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm test && pnpm content:build && pnpm check:content-dist-drift"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.9.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.11"
+  }
+}
