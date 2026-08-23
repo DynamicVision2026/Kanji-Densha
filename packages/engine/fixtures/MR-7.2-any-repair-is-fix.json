@@ -1,0 +1,20 @@
+{
+  "clause": "MR-7.2",
+  "name": "any outstanding repair makes status fix",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "status": "fix"
+  }
+}

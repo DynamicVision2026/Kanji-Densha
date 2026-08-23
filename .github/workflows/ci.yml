@@ -42,8 +42,8 @@ jobs:
       - name: Engine purity gate
         run: pnpm check:engine-purity
 
-      - name: Test
-        run: pnpm test
+      - name: Test (with 100% branch coverage gate on evaluateProgress)
+        run: pnpm test:coverage
 
       - name: Content build
         run: pnpm content:build

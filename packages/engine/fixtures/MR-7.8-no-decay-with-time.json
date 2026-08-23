@@ -1,0 +1,47 @@
+{
+  "clause": "MR-7.8",
+  "name": "status never changes from the passage of time alone",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    },
+    {
+      "type": "encounter",
+      "at": 100000,
+      "sessionId": "s1"
+    }
+  ],
+  "expect": {
+    "status": "almost",
+    "almostAt": 0
+  }
+}

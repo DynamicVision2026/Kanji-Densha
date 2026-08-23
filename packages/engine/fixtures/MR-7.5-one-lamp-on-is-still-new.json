@@ -1,0 +1,35 @@
+{
+  "clause": "MR-7.5",
+  "name": "a car with one lamp on is still はじめて",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "status": "new",
+    "lamps": {
+      "reading": false,
+      "meaning": true,
+      "shape": false
+    }
+  }
+}

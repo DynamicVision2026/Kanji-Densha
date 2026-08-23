@@ -1,0 +1,43 @@
+{
+  "clause": "MR-7.3",
+  "name": "reaching almost sets almostAt/almostSessionId to the event",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 5,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 5,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 5,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 5,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "status": "almost",
+    "almostAt": 5,
+    "almostSessionId": "s1"
+  }
+}

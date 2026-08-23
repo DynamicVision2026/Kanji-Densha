@@ -1,0 +1,45 @@
+{
+  "clause": "MR-3.3",
+  "name": "encounter/understand never change lamps, repairs, or counters",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    }
+  ],
+  "expect": {
+    "repairs": [
+      "reading"
+    ],
+    "consecutiveWrong": {
+      "reading": 1,
+      "meaning": 0,
+      "shape": 0
+    },
+    "lamps": {
+      "reading": false,
+      "meaning": false,
+      "shape": false
+    },
+    "encountered": true,
+    "understood": true,
+    "status": "fix"
+  }
+}

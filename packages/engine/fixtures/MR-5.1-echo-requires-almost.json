@@ -1,0 +1,20 @@
+{
+  "clause": "MR-5.1",
+  "name": "an echo answer when status is not almost is rejected",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r1",
+      "soft": false
+    }
+  ],
+  "expectError": {
+    "clause": "MR-5.1"
+  }
+}

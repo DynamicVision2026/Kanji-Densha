@@ -1,0 +1,33 @@
+{
+  "clause": "MR-4.3",
+  "name": "a soft wrong is exempt (repairs, no counting, no novelFailures without a surface)",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": true
+    }
+  ],
+  "expect": {
+    "repairs": [
+      "reading"
+    ],
+    "novelFailures": [],
+    "consecutiveWrong": {
+      "reading": 0,
+      "meaning": 0,
+      "shape": 0
+    },
+    "lamps": {
+      "reading": false,
+      "meaning": false,
+      "shape": false
+    }
+  }
+}

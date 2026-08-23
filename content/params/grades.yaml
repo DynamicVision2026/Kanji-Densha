@@ -1,0 +1,76 @@
+# Grade parameters (spec §11, architecture §1.3, engine GradeParams).
+#
+# Data, not constants. Every field is specified explicitly for all six grades —
+# there is NO inheritance and NO default. G3–G6 silently reusing G1 numbers is a
+# named failure mode (spec §11); the completeness test in test/grades.test.ts
+# guards it.
+#
+# Provenance of the values:
+#   - echoFirstDelayHours (20 for G1–G3, 36 for G4–G6) and echoSecondDelayHours
+#     (~168) are anchored by architecture §1.3 / spec §5.4.
+#   - lostConsecutiveWrong G1 = 3 is anchored by spec §5.5.
+#   - The remaining values are M1-authored reasoned defaults (younger bands get
+#     more reteaching and lower caps; older bands more tolerance). They are DATA:
+#     the architect can retune any of them without an engine change. Flagged for
+#     review — they are not locked in decisions.md.
+
+grades:
+  - grade: 1
+    sessionItemCap: 6
+    itemsPerLamp: 2
+    echoFirstDelayHours: 20
+    echoSecondDelayHours: 168
+    echoPerDayCap: 3
+    lostConsecutiveWrong: 3
+    lostLifetimeWrong: 6
+    forceReteachOnWrong: true
+
+  - grade: 2
+    sessionItemCap: 6
+    itemsPerLamp: 2
+    echoFirstDelayHours: 20
+    echoSecondDelayHours: 168
+    echoPerDayCap: 3
+    lostConsecutiveWrong: 3
+    lostLifetimeWrong: 6
+    forceReteachOnWrong: true
+
+  - grade: 3
+    sessionItemCap: 8
+    itemsPerLamp: 2
+    echoFirstDelayHours: 20
+    echoSecondDelayHours: 168
+    echoPerDayCap: 4
+    lostConsecutiveWrong: 4
+    lostLifetimeWrong: 8
+    forceReteachOnWrong: false
+
+  - grade: 4
+    sessionItemCap: 8
+    itemsPerLamp: 3
+    echoFirstDelayHours: 36
+    echoSecondDelayHours: 168
+    echoPerDayCap: 4
+    lostConsecutiveWrong: 4
+    lostLifetimeWrong: 8
+    forceReteachOnWrong: false
+
+  - grade: 5
+    sessionItemCap: 10
+    itemsPerLamp: 3
+    echoFirstDelayHours: 36
+    echoSecondDelayHours: 168
+    echoPerDayCap: 5
+    lostConsecutiveWrong: 5
+    lostLifetimeWrong: 10
+    forceReteachOnWrong: false
+
+  - grade: 6
+    sessionItemCap: 10
+    itemsPerLamp: 3
+    echoFirstDelayHours: 36
+    echoSecondDelayHours: 168
+    echoPerDayCap: 5
+    lostConsecutiveWrong: 5
+    lostLifetimeWrong: 10
+    forceReteachOnWrong: false

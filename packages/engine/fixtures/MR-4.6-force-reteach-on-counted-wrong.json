@@ -1,0 +1,40 @@
+{
+  "clause": "MR-4.6",
+  "name": "forceReteachOnWrong clears understood on any counted wrong",
+  "params": {
+    "grade": 1,
+    "sessionItemCap": 6,
+    "itemsPerLamp": 2,
+    "echoFirstDelayHours": 20,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 3,
+    "lostConsecutiveWrong": 3,
+    "lostLifetimeWrong": 6,
+    "forceReteachOnWrong": true
+  },
+  "events": [
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "understood": false,
+    "status": "fix",
+    "repairs": [
+      "reading"
+    ]
+  }
+}

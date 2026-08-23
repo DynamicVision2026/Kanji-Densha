@@ -1,0 +1,81 @@
+{
+  "clause": "MR-4.5",
+  "name": "lifetime-wrong threshold drops to lost even when no single lamp is consecutive-lost",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "shape",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "shape",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "lostFlag": true,
+    "status": "lost",
+    "lifetimeWrong": {
+      "reading": 2,
+      "meaning": 2,
+      "shape": 2
+    }
+  }
+}

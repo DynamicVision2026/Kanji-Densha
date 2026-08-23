@@ -1,0 +1,46 @@
+{
+  "clause": "MR-4.5",
+  "name": "consecutive-wrong threshold drops to lost and clears echo/almost",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "lostFlag": true,
+    "understood": false,
+    "status": "lost",
+    "echoes": [],
+    "almostAt": null
+  }
+}
