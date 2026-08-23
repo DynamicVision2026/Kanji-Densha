@@ -81,7 +81,7 @@ Enforced boundaries (CI fails, not a review comment):
   one Playwright path per beat.
 - **Every PR description states:** which milestone, which exit criteria it closes, and
   which invariant it came closest to breaking.
-- **Independent review.** A second model (Codex) reviews before merge. Write PR
+- **Independent review.** The architect reviews before merge. Write PR
   descriptions for a reviewer who has not read the conversation.
 - **Don't touch content data to make a test pass.** If the gate rejects a character,
   the character is wrong or the gate is wrong. Say which.
