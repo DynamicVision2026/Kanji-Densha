@@ -1,0 +1,98 @@
+{
+  "clause": "MR-6.5",
+  "name": "the second successful echo promotes to perfect on that event",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r2",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "m2",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 168,
+      "sessionId": "s3",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r3",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 168,
+      "sessionId": "s3",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "m3",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "status": "perfect",
+    "stampedAt": 168,
+    "echoes": [
+      {
+        "at": 20,
+        "ok": true,
+        "sessionId": "s2"
+      },
+      {
+        "at": 168,
+        "ok": true,
+        "sessionId": "s3"
+      }
+    ]
+  }
+}

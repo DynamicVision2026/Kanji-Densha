@@ -1,0 +1,71 @@
+{
+  "clause": "MR-6.4",
+  "name": "a counted wrong inside an echo round follows §4 (counters increment)",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": false,
+      "mode": "echo",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "consecutiveWrong": {
+      "reading": 0,
+      "meaning": 1,
+      "shape": 0
+    },
+    "lifetimeWrong": {
+      "reading": 0,
+      "meaning": 1,
+      "shape": 0
+    },
+    "repairs": [
+      "meaning"
+    ],
+    "status": "fix",
+    "openEcho": {
+      "sessionId": "s2",
+      "results": {
+        "meaning": false
+      }
+    }
+  }
+}

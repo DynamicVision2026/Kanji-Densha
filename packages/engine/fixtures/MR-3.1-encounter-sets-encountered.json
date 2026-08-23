@@ -1,0 +1,21 @@
+{
+  "clause": "MR-3.1",
+  "name": "encounter sets only encountered",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    }
+  ],
+  "expect": {
+    "encountered": true,
+    "understood": false,
+    "lamps": {
+      "reading": false,
+      "meaning": false,
+      "shape": false
+    },
+    "status": "new"
+  }
+}

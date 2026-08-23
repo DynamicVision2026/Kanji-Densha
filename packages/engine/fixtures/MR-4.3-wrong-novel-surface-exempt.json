@@ -1,0 +1,40 @@
+{
+  "clause": "MR-4.3",
+  "name": "first wrong on a novel surface is exempt: repairs, spends exemption, no counting",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": "rNovel",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "repairs": [
+      "reading"
+    ],
+    "novelFailures": [
+      "rNovel"
+    ],
+    "consecutiveWrong": {
+      "reading": 0,
+      "meaning": 0,
+      "shape": 0
+    },
+    "lifetimeWrong": {
+      "reading": 0,
+      "meaning": 0,
+      "shape": 0
+    },
+    "lamps": {
+      "reading": false,
+      "meaning": false,
+      "shape": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "clause": "MR-7.4",
+  "name": "understand alone (not yet encountered) is still new",
+  "events": [
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    }
+  ],
+  "expect": {
+    "status": "new",
+    "encountered": false,
+    "understood": true
+  }
+}

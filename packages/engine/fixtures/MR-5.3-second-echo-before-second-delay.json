@@ -1,0 +1,74 @@
+{
+  "clause": "MR-5.3",
+  "name": "second echo before echoSecondDelayHours is rejected",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r2",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "m2",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 100,
+      "sessionId": "s3",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r3",
+      "soft": false
+    }
+  ],
+  "expectError": {
+    "clause": "MR-5.3"
+  }
+}

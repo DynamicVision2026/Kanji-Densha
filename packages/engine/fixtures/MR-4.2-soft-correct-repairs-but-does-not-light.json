@@ -1,0 +1,41 @@
+{
+  "clause": "MR-4.2",
+  "name": "soft correct repairs and resets the counter but does not light the lamp",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": true
+    }
+  ],
+  "expect": {
+    "repairs": [],
+    "consecutiveWrong": {
+      "reading": 0,
+      "meaning": 0,
+      "shape": 0
+    },
+    "lamps": {
+      "reading": false,
+      "meaning": false,
+      "shape": false
+    }
+  }
+}

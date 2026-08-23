@@ -1,0 +1,80 @@
+{
+  "clause": "MR-6.3",
+  "name": "a failed echo preserves almostAt, consumes no slot, and drops to fix",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r2",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": false,
+      "mode": "echo",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "almostAt": 0,
+    "status": "fix",
+    "repairs": [
+      "meaning"
+    ],
+    "echoes": [
+      {
+        "at": 20,
+        "ok": false,
+        "sessionId": "s2"
+      }
+    ],
+    "openEcho": null,
+    "lamps": {
+      "reading": true,
+      "meaning": false,
+      "shape": false
+    }
+  }
+}

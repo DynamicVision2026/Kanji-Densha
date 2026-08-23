@@ -1,0 +1,52 @@
+{
+  "clause": "MR-3.2",
+  "name": "understand is the sole exit from lost; recovery passes through fix",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "understand",
+      "at": 1,
+      "sessionId": "s1"
+    }
+  ],
+  "expect": {
+    "lostFlag": false,
+    "understood": true,
+    "status": "fix",
+    "repairs": [
+      "reading"
+    ]
+  }
+}

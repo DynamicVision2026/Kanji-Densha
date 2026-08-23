@@ -1,0 +1,36 @@
+{
+  "clause": "MR-7.4",
+  "name": "a partial state without repairs is new",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "status": "new",
+    "lamps": {
+      "reading": true,
+      "meaning": false,
+      "shape": false
+    },
+    "repairs": []
+  }
+}

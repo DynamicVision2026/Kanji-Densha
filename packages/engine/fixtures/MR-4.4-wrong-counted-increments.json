@@ -1,0 +1,32 @@
+{
+  "clause": "MR-4.4",
+  "name": "a counted wrong increments both counters and repairs",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "repairs": [
+      "reading"
+    ],
+    "consecutiveWrong": {
+      "reading": 1,
+      "meaning": 0,
+      "shape": 0
+    },
+    "lifetimeWrong": {
+      "reading": 1,
+      "meaning": 0,
+      "shape": 0
+    }
+  }
+}

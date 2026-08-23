@@ -32,7 +32,20 @@ of the source-of-truth documents in [`docs/`](./docs). Do not edit
 | `shape` | かたち | Correct shape items (stroke order / component assembly / 選字填空) |
 
 The status is a pure derivation of the lamps and counters, computed by one function,
-`evaluateProgress` (arrives in M1). See [`docs/spec/mastery-rules.md`](./docs/spec/mastery-rules.md).
+`evaluateProgress` in [`packages/engine`](./packages/engine). See
+[`docs/spec/mastery-rules.md`](./docs/spec/mastery-rules.md).
+
+The whole product thesis is one character's journey from `new` to `perfect` across two
+spaced 残響. Two named integration fixtures walk it end to end and are the tests worth
+reading first:
+
+- **`THE-JOURNEY`** — `new` → だいたい → two spaced echoes → かんぺき, with exactly one stamp.
+- **`THE-SETBACK`** — the second echo fails; the character sits at なおし with `almostAt`
+  intact and no echo slot spent, re-lights the lamp next session, and reaches かんぺき
+  **without waiting another week** (D2 / MR-6.3).
+
+See [`packages/engine/fixtures/`](./packages/engine/fixtures) — one fixture per mastery
+rule, each named after the clause it encodes.
 
 ## Repository layout
 

@@ -1,0 +1,25 @@
+{
+  "clause": "MR-4.1",
+  "name": "correct non-soft with no surface lights the lamp and records nothing",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    }
+  ],
+  "expect": {
+    "lamps": {
+      "reading": true,
+      "meaning": false,
+      "shape": false
+    },
+    "seenSurfaces": []
+  }
+}

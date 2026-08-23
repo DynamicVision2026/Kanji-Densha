@@ -1,0 +1,77 @@
+{
+  "clause": "MR-6.1",
+  "name": "an echo answer in a new session closes the stale round as failed and opens a new one",
+  "events": [
+    {
+      "type": "encounter",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "understand",
+      "at": 0,
+      "sessionId": "s1"
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "meaning",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "m1",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 20,
+      "sessionId": "s2",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r2",
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 21,
+      "sessionId": "s3",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "echo",
+      "surfaceId": "r3",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "echoes": [
+      {
+        "at": 21,
+        "ok": false,
+        "sessionId": "s2"
+      }
+    ],
+    "openEcho": {
+      "startedAt": 21,
+      "sessionId": "s3",
+      "results": {
+        "reading": true
+      }
+    },
+    "status": "almost"
+  }
+}

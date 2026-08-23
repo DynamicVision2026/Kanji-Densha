@@ -1,0 +1,39 @@
+{
+  "clause": "MR-4.7",
+  "name": "a correct answer clears the repair in the same session (no cooling-off)",
+  "events": [
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": false,
+      "mode": "practice",
+      "surfaceId": null,
+      "soft": false
+    },
+    {
+      "type": "answer",
+      "at": 0,
+      "sessionId": "s1",
+      "itemId": "i",
+      "lamp": "reading",
+      "correct": true,
+      "mode": "practice",
+      "surfaceId": "r1",
+      "soft": false
+    }
+  ],
+  "expect": {
+    "repairs": [],
+    "lamps": {
+      "reading": true,
+      "meaning": false,
+      "shape": false
+    },
+    "seenSurfaces": [
+      "r1"
+    ]
+  }
+}
