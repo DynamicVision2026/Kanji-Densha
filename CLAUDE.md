@@ -91,6 +91,10 @@ Enforced boundaries (CI fails, not a review comment):
 ## 5. Code conventions
 
 - TypeScript strict, `noUncheckedIndexedAccess` on. No `any`, no non-null `!`.
+- **Coverage is never satisfied by deleting a guard or widening a type.** If a branch is
+  genuinely unreachable, express it as an `invariant()` and say which clause makes it
+  unreachable — do not remove the guard, and do not cast the value present. The metric
+  serves the engine, never the reverse.
 - Domain types live in `packages/engine`. Nothing re-declares `Status` or `Lamp`.
 - Make illegal states unrepresentable before you make them tested. Prefer a narrower
   type or a schema constraint over a runtime check plus a unit test.

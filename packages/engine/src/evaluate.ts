@@ -10,12 +10,12 @@
 
 import type {
   CharacterProgress,
-  EchoAttempt,
   GradeParams,
   Lamp,
   ProgressEvent,
   Status,
 } from './types.js';
+import { invariant } from './invariant.js';
 
 /** D1 / MR-5.3: a real gap of at least this many hours after the first echo. */
 const ECHO_SECOND_FLOOR_HOURS = 48;
@@ -218,19 +218,23 @@ function assertEchoEligible(
     throw new EchoRejectedError('MR-5.4', 'echo session must differ from every prior echo attempt');
   }
 
-  // When status is `almost`, okEchoes is necessarily 0 or 1 (two successful
-  // echoes would have derived `perfect`, not `almost`), so this is a clean
-  // two-way split.
-  if (okEchoCount(d) === 0) {
+  const okEchoes = okEchoCount(d);
+  if (okEchoes === 0) {
     // MR-5.2 first echo.
     if (ev.at < d.almostAt + params.echoFirstDelayHours) {
       throw new EchoRejectedError('MR-5.2', 'first echo before the first delay');
     }
     return;
   }
+  // A character at `almost` has at most one successful echo — two would have
+  // derived `perfect`, not `almost`. Stated as an invariant so the impossibility
+  // is explicit and honest, not a deleted branch.
+  invariant(okEchoes === 1, 'MR-5: an almost character has at most one successful echo');
+
   // MR-5.3 second echo: measured from almostAt (D1), with a 48h floor after the
-  // first successful echo. okEchoes === 1 here guarantees exactly one ok echo.
-  const firstOk = d.echoes.find((e) => e.ok) as EchoAttempt;
+  // first successful echo. okEchoes === 1 guarantees a first successful echo.
+  const firstOk = d.echoes.find((e) => e.ok);
+  invariant(firstOk, 'MR-5.3: okEchoes===1 implies a first successful echo');
   if (ev.at < d.almostAt + params.echoSecondDelayHours) {
     throw new EchoRejectedError('MR-5.3', 'second echo before the second delay');
   }

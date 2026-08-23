@@ -5,72 +5,84 @@
 # named failure mode (spec §11); the completeness test in test/grades.test.ts
 # guards it.
 #
-# Provenance of the values:
-#   - echoFirstDelayHours (20 for G1–G3, 36 for G4–G6) and echoSecondDelayHours
-#     (~168) are anchored by architecture §1.3 / spec §5.4.
-#   - lostConsecutiveWrong G1 = 3 is anchored by spec §5.5.
-#   - The remaining values are M1-authored reasoned defaults (younger bands get
-#     more reteaching and lower caps; older bands more tolerance). They are DATA:
-#     the architect can retune any of them without an engine change. Flagged for
-#     review — they are not locked in decisions.md.
+# These values are the architect's, locked at M1 review (2026-08-23). They are
+# spec-anchored where the spec speaks and judgement where it does not — and the
+# judgement values are still guesses. They live in one file because only real
+# children will settle them.
+#
+# Reasoning to keep in view when retuning:
+#   - sessionItemCap is a TIME BUDGET, not a difficulty knob. A ride is 3–5
+#     minutes. Three items at G1 is a whole ride for a six-year-old; eight at G6
+#     is still short.
+#   - echoPerDayCap is the single most dangerous number here: it is the line
+#     between a daily two-minute return journey and a drill farm — the product
+#     this one exists in opposition to. Start low. Raise it only if real children
+#     finish and ask for more, never because the numbers look better.
+#   - forceReteachOnWrong is on for G1–G2 and off from G3. At six, re-meeting the
+#     character costs nothing and carries no shame. At nine, interrupting a child
+#     who knows the character and simply slipped reads as being corrected — and
+#     the product's whole posture is that なおし is a repair, not a reprimand.
+#   - The lost thresholds loosen as grades rise because later characters are
+#     harder and まよい must stay rare enough to mean something. A colour every
+#     child sees weekly is not a signal, it is wallpaper.
 
 grades:
   - grade: 1
-    sessionItemCap: 6
-    itemsPerLamp: 2
+    sessionItemCap: 3
+    itemsPerLamp: 1
     echoFirstDelayHours: 20
     echoSecondDelayHours: 168
-    echoPerDayCap: 3
+    echoPerDayCap: 8
     lostConsecutiveWrong: 3
-    lostLifetimeWrong: 6
+    lostLifetimeWrong: 12
     forceReteachOnWrong: true
 
   - grade: 2
+    sessionItemCap: 4
+    itemsPerLamp: 1
+    echoFirstDelayHours: 20
+    echoSecondDelayHours: 168
+    echoPerDayCap: 10
+    lostConsecutiveWrong: 3
+    lostLifetimeWrong: 14
+    forceReteachOnWrong: true
+
+  - grade: 3
     sessionItemCap: 6
     itemsPerLamp: 2
     echoFirstDelayHours: 20
     echoSecondDelayHours: 168
-    echoPerDayCap: 3
-    lostConsecutiveWrong: 3
-    lostLifetimeWrong: 6
-    forceReteachOnWrong: true
-
-  - grade: 3
-    sessionItemCap: 8
-    itemsPerLamp: 2
-    echoFirstDelayHours: 20
-    echoSecondDelayHours: 168
-    echoPerDayCap: 4
+    echoPerDayCap: 12
     lostConsecutiveWrong: 4
-    lostLifetimeWrong: 8
+    lostLifetimeWrong: 16
     forceReteachOnWrong: false
 
   - grade: 4
-    sessionItemCap: 8
-    itemsPerLamp: 3
+    sessionItemCap: 6
+    itemsPerLamp: 2
     echoFirstDelayHours: 36
     echoSecondDelayHours: 168
-    echoPerDayCap: 4
+    echoPerDayCap: 14
     lostConsecutiveWrong: 4
-    lostLifetimeWrong: 8
+    lostLifetimeWrong: 18
     forceReteachOnWrong: false
 
   - grade: 5
-    sessionItemCap: 10
-    itemsPerLamp: 3
+    sessionItemCap: 8
+    itemsPerLamp: 2
     echoFirstDelayHours: 36
     echoSecondDelayHours: 168
-    echoPerDayCap: 5
+    echoPerDayCap: 16
     lostConsecutiveWrong: 5
-    lostLifetimeWrong: 10
+    lostLifetimeWrong: 20
     forceReteachOnWrong: false
 
   - grade: 6
-    sessionItemCap: 10
-    itemsPerLamp: 3
+    sessionItemCap: 8
+    itemsPerLamp: 2
     echoFirstDelayHours: 36
     echoSecondDelayHours: 168
-    echoPerDayCap: 5
+    echoPerDayCap: 16
     lostConsecutiveWrong: 5
-    lostLifetimeWrong: 10
+    lostLifetimeWrong: 20
     forceReteachOnWrong: false
