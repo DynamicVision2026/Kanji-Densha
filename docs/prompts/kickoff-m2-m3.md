@@ -19,9 +19,11 @@ decisions D13–D15 before starting. M2 gains a Part 0 below.
 >
 > **Part 0 — reference data.** Ingest `mext_onkun_school_stage_assignments_2017.xlsx` into
 > `content/reference/onkun-stage.json`, preserving every provenance column (source page,
-> confidence, source URL) and recording the source file's hash. Accept `special` and
-> `proper_name` as reading types for the two appendix sheets. Write a validation test that
-> asserts what I already verified by hand, so a corrupted re-ingest is caught: 2,136 unique
+> confidence, source URL) and recording the source file's hash — check it against the hash
+> table in `docs/reference/README.md` before ingesting, and stop if it differs. Accept
+> `special` and `proper_name` as reading types for the two appendix sheets. Write a validation
+> test asserting the structural totals recorded there, so a corrupted re-ingest is caught:
+> 2,136 unique
 > kanji; 1,026 carrying an elementary grade; per-grade counts of exactly
 > 80 / 160 / 200 / 202 / 193 / 191. Never hand-edit the generated JSON.
 >
