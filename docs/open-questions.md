@@ -4,24 +4,29 @@ Rules: the implementer never resolves an entry here silently. Either the archite
 or the entry blocks the milestone named in it. Resolved entries move to `docs/decisions.md`
 and become numbered clauses in `docs/spec/mastery-rules.md`.
 
-As of 2026-08-23, Q1–Q10 and Q12 are resolved and locked — see `docs/decisions.md`.
-Two items remain.
+As of 2026-08-23, Q1–Q13 are resolved and locked — see `docs/decisions.md`. **Nothing open
+blocks any milestone.** One budget question remains.
 
 ---
 
-**Q11 — Kanji display font and licence. Blocks the M3 visual identity lock.**
-Which typeface renders the character itself on the child path, and does it carry a
-web-embedding or server-subsetting licence for commercial use? A 教科書体-adjacent face is
-the pedagogically correct choice and also the expensive one; the sibling juku project
-treated the equivalent question as a Week-1 blocker with a reserved annual budget. The
-fallback is a licensed general-purpose Japanese face for UI text plus a licensed or
-self-drawn set for the large hero character only, which is a far smaller licence surface.
-*No default. Architect to answer before M3 locks the visual identity.*
+**Q14 — Licence a 教科書体 for the hero character? Blocks nothing.**
+D11 settles UI type as Noto Sans JP and splits the hero glyph into its own token. The
+remaining question is whether to pay for a 教科書体 face for that one token. The case for: a
+gothic face teaches はね/とめ terminals and crossings that differ from what a child is marked
+on at school. The case against: it is the sibling project's ¥250–300k/year class of expense,
+the shape lamp does not depend on it, and one token is swappable at any time. Recommendation
+is to defer until real children have used M3 and we know whether the hero glyph is where
+their attention actually goes.
+*Architect to answer after M3, not before.*
 
-**Q13 — Pre-existing content outside the repository. Affects M2 shape, not M2 timing.**
-The product specification header describes a build already at 1,026 `teach_ready` after a
-content scale-out, W6 thicken, and a QA pass. The repository is empty, so no code migrates
-(D10) — but content, audio, or encounter art may exist outside it. If it does, M2 becomes
-"write an importer into the `content/` schema and audit what survives the gate" rather than
-"hand-author 20 characters", and the content track collapses from four waves to one audit.
-*Architect to confirm before M2 begins. M0 and M1 are unaffected either way.*
+---
+
+## Resolved
+
+**Q11 — Kanji display font. ANSWERED 2026-08-23.** Resolved as D11; the residual budget
+question is Q14 above.
+
+**Q13 — Pre-existing content. ANSWERED 2026-08-23.** No content records, no audio, no
+encounter art exist. What does exist is the national reference corpus — see
+`docs/reference/README.md` and D13–D15. M2 keeps its shape (hand-author 20 characters) and
+gains a Part 0: ingest the reference data and make it the gate's authority.

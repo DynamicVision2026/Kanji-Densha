@@ -15,8 +15,12 @@ then the fixtures named after those clauses. Never reverse one in code alone.
 | **D7** | One stamp per character, ever. `stampedAt` is write-once and survives every regression. | MR-7.6 |
 | **D8** | No decay in v1. Status never changes from the passage of time alone. | MR-7.8 |
 | **D9** | Soft items (似た駅名 and kin) can **repair** a lamp but never **light** one, and never count toward まよい. | MR-4.2, MR-4.3 |
-| **D10** | Greenfield build. The repository is empty; M2 hand-authors 20 characters before the content factory is written. | build-plan M2 |
+| **D10** | Greenfield build, revised 2026-08-23: no content records or audio exist, but the four national reference documents do. M2 hand-authors 20 characters on top of an ingested reference corpus. | build-plan M2, `docs/reference/` |
 | **D12** | The repository goes **private** before the first content commit. The corpus is the moat. | — |
+| **D13** | The 2017 音訓割り振り表 (as the supplied xlsx) is ingested as repo-owned reference data and becomes the **gate's authority** for I4. `elementary_readings` and `later_readings` are generated from it per character, not authored. | `docs/reference/` |
+| **D14** | A character declares a curated `taught_readings` subset of its elementary readings. The reading lamp tests only taught readings; the gate verifies the subset is a strict subset of what the reference table permits. Forced by 生, which has ten elementary readings — no child lamp can test ten. | new schema field, M2 |
+| **D11** | Noto Sans JP (SIL OFL 1.1) for UI text. `--font-ui` and `--font-hero` are two separate CSS tokens; both point at Noto now. The shape lamp renders product vectors, not font glyphs, so it is unaffected. | `docs/licenses.md` |
+| **D15** | Echo surface variation falls back to word-surface variation within a single reading when a character has only one elementary reading (川 has only かわ). Not an error, not an omission — a content fact the scheduler must handle. | MR-6.6, M5 |
 
 Two engine-contract changes follow from D2 and D5, and supersede the original draft in
 `architecture.md` §1:
@@ -31,5 +35,8 @@ Two engine-contract changes follow from D2 and D5, and supersede the original dr
 Both changes move authority from the caller to the pure function. That is the direction
 authority should always move in this codebase.
 
-**Still open:** D11 (kanji display font and its web-embedding licence) — see
-`docs/open-questions.md`. It blocks the M3 visual identity lock, nothing earlier.
+| **D16** | Pre-rendered fixed audio, vendor deferred behind a commercial-redistribution check. Research corpora excluded outright. Word-surface audio is generated from the *word*, never the bare reading, because isolated-kana pitch accent is frequently wrong. | `docs/licenses.md`, MR-2.1, I10 |
+| **D17** | KanjiVG as logic reference only; product redraw for anything shipped; derived material quarantined in `content/shape/` with its own LICENSE; attribution on the parent page. | `docs/licenses.md` |
+
+**Still open:** Q14 (whether to license a 教科書体 for the hero character) — a budget
+decision, not a build blocker, since it is one CSS token.
