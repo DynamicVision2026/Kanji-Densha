@@ -15,10 +15,19 @@ import { execFileSync } from 'node:child_process';
 
 const BASE = process.env.DRIFT_BASE || 'origin/main';
 
+// Returns the command's stdout on success (an empty string IS a valid, meaningful
+// result — "the diff is empty"), or null if the command itself failed to run
+// (e.g. an unresolvable ref). Collapsing these two outcomes into one falsy value
+// was a real bug here: a range that legitimately produced zero output (HEAD
+// already equals BASE — the normal state right after any merge, including every
+// push-to-main CI run) was indistinguishable from a failed git invocation, so
+// the loop below kept falling through past a correct empty diff to a later,
+// wrong comparison base. Demonstrated: after merging PR #3 and syncing main
+// locally, `git diff --name-only origin/main...HEAD` correctly returned nothing
+// (HEAD == origin/main), but the old code fell through to `HEAD~1 HEAD` and
+// reported the entire prior commit's file list as "currently changed."
 function git(args) {
   try {
-    // stderr ignored: an unknown base ref is an expected probe failure we
-    // recover from via the fallbacks below; we don't want its noise in logs.
     // core.quotepath=false: without it, git renders any non-ASCII path (every
     // kanji filename in this repo) as a double-quoted octal escape sequence,
     // e.g. "content/characters/1/\346\227\245.yaml" instead of 日.yaml — which
@@ -29,23 +38,24 @@ function git(args) {
       stdio: ['ignore', 'pipe', 'ignore'],
     });
   } catch {
-    return '';
+    return null; // command failed to run — distinct from a successful empty result
   }
 }
 
 const changed = new Set();
 
 // Committed diff vs base (tolerate an unknown base ref: fall back progressively).
+// Stop at the first range that actually RAN, whether or not it found changes.
 for (const range of [[`${BASE}...HEAD`], [`${BASE}`, 'HEAD'], ['HEAD~1', 'HEAD']]) {
   const out = git(['diff', '--name-only', ...range]);
-  if (out) {
+  if (out !== null) {
     out.split('\n').filter(Boolean).forEach((f) => changed.add(f));
     break;
   }
 }
 
 // Working tree: staged + unstaged + untracked.
-const status = git(['status', '--porcelain', '--untracked-files=all']);
+const status = git(['status', '--porcelain', '--untracked-files=all']) ?? '';
 for (const line of status.split('\n').filter(Boolean)) {
   // Porcelain: XY<space>path  (path starts at column 4)
   const path = line.slice(3).trim();

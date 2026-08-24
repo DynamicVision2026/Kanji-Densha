@@ -105,6 +105,13 @@ Enforced boundaries (CI fails, not a review comment):
   from explicit code points (`String.fromCharCode(0x304b, 0x3099)`, not a literal) so the
   input the test starts from is verifiably still decomposed. This is a real environmental
   constraint, not a one-off — expect to hit it again.
+- **Enforcement gates and tooling must be demonstrated against representative data** — kanji
+  filenames, kanji content, non-ASCII paths — never ASCII stand-ins. A gate proven on
+  `test.txt` is not proven. When adding a gate, the demonstration uses the data the gate will
+  actually see in production. (M0's content-dist-drift gate was demonstrated correctly and was
+  still broken for three milestones: git octal-escapes non-ASCII filenames by default, and the
+  gate's `content/` prefix match silently never saw a single one of them until M2's kanji
+  filenames exposed it. The demonstration was real; the data wasn't.)
 - Default UI language is Japanese. English strings exist only where the spec says
   parent-critical. No English fallback text on the child path.
 - Child-path copy is written for a 6-year-old: kana-first, short, no imperative scolding.
