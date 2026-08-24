@@ -1,8 +1,6 @@
 // The shape apps/web reads from content-dist/g{grade}.json (architecture §2.2,
 // M2's build.ts). Mirrors the authored + generated fields exactly; this file
 // declares no new content facts, only the wire shape already emitted.
-import type { Lamp } from '@kanji-densha/engine';
-
 export interface TaughtReading {
   readonly id: string;
   readonly kana: string;
@@ -38,7 +36,7 @@ export interface StrokeOrderItem {
   readonly lamp: 'shape';
 }
 
-export type Item = ReadingChoiceItem | MeaningChoiceItem | StrokeOrderItem | { readonly id: string; readonly type: string; readonly lamp: Lamp };
+export type Item = ReadingChoiceItem | MeaningChoiceItem | StrokeOrderItem;
 
 export type Shape =
   | { readonly published: false }

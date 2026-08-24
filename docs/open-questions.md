@@ -5,8 +5,32 @@ or the entry blocks the milestone named in it. Resolved entries move to `docs/de
 and become numbered clauses in `docs/spec/mastery-rules.md`.
 
 As of 2026-08-23, Q1–Q13 are resolved and locked — see `docs/decisions.md`. **Nothing open
-blocks any milestone.** One budget question remains, and one M3-scope question below has a
+blocks any milestone.** One budget question remains, and two M3-scope questions below have a
 default I am proceeding under — flagged, not silently picked.
+
+---
+
+**Q16 — no path back to わかる when a wrong answer forces reteach mid-ためす. Does not block
+M3; found by the test suite, not designed around.**
+Grade 1 sets `forceReteachOnWrong: true` (the architect's locked `grades.yaml` values — "at
+six, re-meeting the character costs nothing and carries no shame"). MR-4.6: any *counted*
+wrong answer sets `understood = false`, and the only event that sets it back to `true` is
+`understand` (MR-3.2). M3's ためす beat has no path back to わかる mid-practice — so for a
+Grade-1 character, a single wrong answer, even immediately followed by the correct one,
+structurally denies だいたい for the rest of that ride: all three lamps can still light, but
+`understood` stays false and MR-7.3 requires it. This is the engine doing exactly what D19
+specifies; the gap is that the UI never offers the child a way back.
+
+Caught by `apps/web/e2e/ride.spec.ts`'s "forceReteachOnWrong" test, which asserts the current
+(incomplete) behaviour explicitly — lamps lit, `understood: false`, status neither `almost`
+nor `perfect` — so it is a visible, intentional gap rather than a silently unnoticed dead end.
+Not built in M3: the prompt asked for the four beats, not a mid-session recovery flow, and
+this is exactly the kind of interaction M4's observation-first design (see
+`docs/m3-observation-protocol.md`) should settle — does a child even notice they're stuck, or
+does watching one make the right UI obvious in a way spec-writing wouldn't?
+
+*Architect: build the わかる-recovery flow as scoped work (M4 or its own milestone), or say if
+this should be handled differently.*
 
 ---
 

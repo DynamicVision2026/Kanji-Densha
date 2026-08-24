@@ -16,9 +16,6 @@ coverage/
 test-results/
 playwright-report/
 
-# Build output (app-specific)
-apps/web/.output/
-
 # Editor / OS
 .DS_Store
 .idea/

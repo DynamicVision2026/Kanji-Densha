@@ -2,7 +2,7 @@
 
 /* Self-hosted Noto Sans JP subset (SIL OFL 1.1 — credited on the parent
    licence page, docs/licenses.md). Subset to the characters this app actually
-   uses; see apps/web/src/fonts/README.md for how it was built and how to
+   uses; see apps/web/public/fonts/README.md for how it was built and how to
    regenerate it when new copy is added. */
 @font-face {
   font-family: "Noto Sans JP Subset";
