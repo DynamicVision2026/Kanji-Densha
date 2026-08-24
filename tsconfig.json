@@ -5,6 +5,7 @@
     { "path": "packages/content-schema" },
     { "path": "packages/content-build" },
     { "path": "packages/store" },
-    { "path": "apps/web" }
+    { "path": "apps/web" },
+    { "path": "test" }
   ]
 }
