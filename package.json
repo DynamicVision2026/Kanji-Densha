@@ -15,7 +15,8 @@
     "content:build": "node packages/content-build/build.mjs",
     "check:engine-purity": "node scripts/check-engine-purity.mjs",
     "check:content-dist-drift": "node scripts/check-content-dist-drift.mjs",
-    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm test:coverage && pnpm content:build && pnpm check:content-dist-drift"
+    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm test:coverage && pnpm content:build && pnpm check:content-dist-drift",
+    "content:reference": "node packages/content-build/ingest-reference.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -25,5 +26,8 @@
     "typescript-eslint": "^8.67.0",
     "vitest": "^4.1.11",
     "yaml": "^2.9.0"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }
