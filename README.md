@@ -85,6 +85,10 @@ Individual gates: `pnpm typecheck`, `pnpm lint`, `pnpm check:engine-purity`,
 
 ## Status
 
-**M0 — skeleton and enforcement.** No product logic or UI yet; this milestone
-exists so the invariants are enforced by CI from the first commit. See
-[`docs/build-plan.md`](./docs/build-plan.md) for the milestone sequence.
+**M0–M2 merged.** Skeleton and CI enforcement (M0), the pure mastery engine at 100% branch
+coverage (M1), and the content schema, gate, and twenty hand-authored Grade-1 characters at
+`teach_ready: 0/80` — audio deliberately deferred, D18 (M2). **M3 — the vertical slice — is
+in progress:** guest mode, `LocalStore`, and the four beats on a phone for one character. See
+[`docs/build-plan.md`](./docs/build-plan.md) for the milestone sequence and
+[`docs/m3-observation-protocol.md`](./docs/m3-observation-protocol.md) for how M3's real exit
+criterion — a child riding 山 on a real phone — gets observed and fed into M4.
