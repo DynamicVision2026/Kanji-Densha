@@ -97,17 +97,24 @@ const strokeSchema = z.strictObject({
   type: z.string().min(1),
   a11y_ja: z.string().min(1), // unique within a character (gate check)
 });
-const primitiveShapeSchema = z.strictObject({
+// An unpublished shape carries NO stroke/component data — the shape is honestly
+// absent, not a stub (D4). A published shape is either a primitive (strokes) or a
+// compound (components), never both.
+const unpublishedShapeSchema = z.strictObject({ published: z.literal(false) });
+const publishedPrimitiveSchema = z.strictObject({
+  published: z.literal(true),
   kind: z.literal('primitive'),
-  published: z.boolean(),
   strokes: z.array(strokeSchema).min(1),
 });
-const compoundShapeSchema = z.strictObject({
+const publishedCompoundSchema = z.strictObject({
+  published: z.literal(true),
   kind: z.literal('compound'),
-  published: z.boolean(),
   components: z.array(z.strictObject({ char: nfcString(), role: z.string().min(1).optional() })).min(2),
 });
-export const shapeSchema = z.discriminatedUnion('kind', [primitiveShapeSchema, compoundShapeSchema]);
+export const shapeSchema = z.union([
+  unpublishedShapeSchema,
+  z.discriminatedUnion('kind', [publishedPrimitiveSchema, publishedCompoundSchema]),
+]);
 
 export const encounterSchema = z
   .strictObject({

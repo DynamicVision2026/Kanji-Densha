@@ -1,0 +1,73 @@
+character: 月
+grade: 1
+taught_readings:
+  - id: getsu_on
+    kana: ゲツ
+    type: on
+    audio: audio/readings/getsu_on.mp3
+  - id: tsuki_kun
+    kana: つき
+    type: kun
+    audio: audio/readings/tsuki_kun.mp3
+meaning:
+  gloss_ja: よるに でる つき。
+  category: nature
+encounter:
+  template: moon-ink
+  art: null
+  copy_ja: よるに つきが ひかるよ。
+surfaces:
+  - id: tsuki_1
+    word: 月
+    reading_id: tsuki_kun
+    audio: audio/surfaces/tsuki_1.mp3
+  - id: getsuyou_1
+    word: 月よう日
+    reading_id: getsu_on
+    audio: audio/surfaces/getsuyou_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: harai
+      a11y_ja: ひだりの はらい
+    - order: 2
+      type: kaku
+      a11y_ja: みぎの おれ
+    - order: 3
+      type: yoko
+      a11y_ja: うえの よこ
+    - order: 4
+      type: yoko
+      a11y_ja: したの よこ
+items:
+  - id: 月-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: tsuki_kun
+    choices:
+      - kana: つき
+        correct: true
+      - kana: ひ
+        correct: false
+      - kana: そら
+        correct: false
+  - id: 月-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よるに でる つき
+        semantic: true
+        correct: true
+      - gloss_ja: ひるの おひさま
+        semantic: true
+        correct: false
+      - gloss_ja: あかい ひ
+        semantic: true
+        correct: false
+  - id: 月-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

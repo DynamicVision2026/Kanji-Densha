@@ -1,0 +1,67 @@
+character: 人
+grade: 1
+taught_readings:
+  - id: jin_on
+    kana: ジン
+    type: on
+    audio: audio/readings/jin_on.mp3
+  - id: hito_kun
+    kana: ひと
+    type: kun
+    audio: audio/readings/hito_kun.mp3
+meaning:
+  gloss_ja: にんげん。ひと。
+  category: people
+encounter:
+  template: person-ink
+  art: null
+  copy_ja: ふたつの あしで あるく、ひと。
+surfaces:
+  - id: hito_1
+    word: 人
+    reading_id: hito_kun
+    audio: audio/surfaces/hito_1.mp3
+  - id: nihonjin_1
+    word: 日本人
+    reading_id: jin_on
+    audio: audio/surfaces/nihonjin_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: harai
+      a11y_ja: ひだりの はらい
+    - order: 2
+      type: nagai
+      a11y_ja: みぎの ながい はらい
+items:
+  - id: 人-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: hito_kun
+    choices:
+      - kana: ひと
+        correct: true
+      - kana: いぬ
+        correct: false
+      - kana: き
+        correct: false
+  - id: 人-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あるく にんげん
+        semantic: true
+        correct: true
+      - gloss_ja: よつあしの どうぶつ
+        semantic: true
+        correct: false
+      - gloss_ja: そらの とり
+        semantic: true
+        correct: false
+  - id: 人-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

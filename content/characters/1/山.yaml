@@ -1,0 +1,70 @@
+character: 山
+grade: 1
+taught_readings:
+  - id: san_on
+    kana: サン
+    type: on
+    audio: audio/readings/san_on.mp3
+  - id: yama_kun
+    kana: やま
+    type: kun
+    audio: audio/readings/yama_kun.mp3
+meaning:
+  gloss_ja: たかく もりあがった ところ。
+  category: nature
+encounter:
+  template: mountain-ink
+  art: null
+  copy_ja: やまに のぼると、とおくまで みえるよ。
+surfaces:
+  - id: yama_1
+    word: 山
+    reading_id: yama_kun
+    audio: audio/surfaces/yama_1.mp3
+  - id: kazan_1
+    word: 火山
+    reading_id: san_on
+    audio: audio/surfaces/kazan_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: まんなかの たてぼう
+    - order: 2
+      type: oru
+      a11y_ja: ひだりの おれ
+    - order: 3
+      type: tate
+      a11y_ja: みぎの たてぼう
+items:
+  - id: 山-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: yama_kun
+    choices:
+      - kana: やま
+        correct: true
+      - kana: かわ
+        correct: false
+      - kana: そら
+        correct: false
+  - id: 山-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たかい つち の ところ
+        semantic: true
+        correct: true
+      - gloss_ja: みずの ながれ
+        semantic: true
+        correct: false
+      - gloss_ja: ひろい うみ
+        semantic: true
+        correct: false
+  - id: 山-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

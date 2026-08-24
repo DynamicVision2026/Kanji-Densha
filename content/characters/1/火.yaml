@@ -1,0 +1,73 @@
+character: 火
+grade: 1
+taught_readings:
+  - id: ka_on
+    kana: カ
+    type: on
+    audio: audio/readings/ka_on.mp3
+  - id: hi_kun
+    kana: ひ
+    type: kun
+    audio: audio/readings/hi_kun.mp3
+meaning:
+  gloss_ja: あかくて あつい ひ。もえる ひ。
+  category: nature
+encounter:
+  template: fire-ink
+  art: null
+  copy_ja: ひは あかくて あつい。きを つけてね。
+surfaces:
+  - id: hi_2
+    word: 火
+    reading_id: hi_kun
+    audio: audio/surfaces/hi_2.mp3
+  - id: kazan_2
+    word: 火山
+    reading_id: ka_on
+    audio: audio/surfaces/kazan_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: ten
+      a11y_ja: ひだりの てん
+    - order: 2
+      type: ten
+      a11y_ja: みぎの てん
+    - order: 3
+      type: harai
+      a11y_ja: まんなかの ひだりはらい
+    - order: 4
+      type: nagai
+      a11y_ja: みぎの ながい はらい
+items:
+  - id: 火-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: hi_kun
+    choices:
+      - kana: ひ
+        correct: true
+      - kana: みず
+        correct: false
+      - kana: き
+        correct: false
+  - id: 火-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あかくて あつい もの
+        semantic: true
+        correct: true
+      - gloss_ja: つめたい みず
+        semantic: true
+        correct: false
+      - gloss_ja: しろい ゆき
+        semantic: true
+        correct: false
+  - id: 火-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

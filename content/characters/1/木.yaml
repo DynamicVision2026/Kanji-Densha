@@ -1,0 +1,74 @@
+character: 木
+grade: 1
+taught_readings:
+  - id: moku_on
+    kana: モク
+    type: on
+    audio: audio/readings/moku_on.mp3
+  - id: ki_kun
+    kana: き
+    type: kun
+    audio: audio/readings/ki_kun.mp3
+meaning:
+  gloss_ja: はっぱ が でる き。
+  category: nature
+encounter:
+  template: tree-ink
+  art: null
+  copy_ja: きは そらへ のびていくよ。
+surfaces:
+  - id: ki_1
+    word: 木
+    reading_id: ki_kun
+    audio: audio/surfaces/ki_1.mp3
+  - id: mokuyou_1
+    word: 木よう日
+    reading_id: moku_on
+    audio: audio/surfaces/mokuyou_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: yoko
+      a11y_ja: よこの ぼう
+    - order: 2
+      type: tate
+      a11y_ja: たての ぼう
+    - order: 3
+      type: harai
+      a11y_ja: ひだりの はらい
+    - order: 4
+      type: harai
+      a11y_ja: みぎの はらい
+items:
+  - id: 木-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: ki_kun
+    choices:
+      - kana: き
+        correct: true
+      - kana: ひ
+        correct: false
+      - kana: て
+        correct: false
+  - id: 木-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はっぱ の でる き
+        semantic: true
+        correct: true
+      - gloss_ja: もえる ひ
+        semantic: true
+        correct: false
+      - gloss_ja: つめたい みず
+        semantic: true
+        correct: false
+  - id: 木-s-1
+    type: stroke_order
+    lamp: shape
+lines:
+  - ki-no-sen
+status: published

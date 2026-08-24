@@ -1,0 +1,64 @@
+character: 林
+grade: 1
+taught_readings:
+  - id: rin_on
+    kana: リン
+    type: on
+    audio: audio/readings/rin_on.mp3
+  - id: hayashi_kun
+    kana: はやし
+    type: kun
+    audio: audio/readings/hayashi_kun.mp3
+meaning:
+  gloss_ja: きが たくさん ある ところ。
+  category: nature
+encounter:
+  template: grove-ink
+  art: null
+  copy_ja: きが ならぶと はやしに なるよ。
+surfaces:
+  - id: hayashi_1
+    word: 林
+    reading_id: hayashi_kun
+    audio: audio/surfaces/hayashi_1.mp3
+  - id: sanrin_1
+    word: 山林
+    reading_id: rin_on
+    audio: audio/surfaces/sanrin_1.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 木
+items:
+  - id: 林-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: hayashi_kun
+    choices:
+      - kana: はやし
+        correct: true
+      - kana: もり
+        correct: false
+      - kana: やま
+        correct: false
+  - id: 林-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きが たくさん ある ところ
+        semantic: true
+        correct: true
+      - gloss_ja: みずの ある ところ
+        semantic: true
+        correct: false
+      - gloss_ja: いしの ある ところ
+        semantic: true
+        correct: false
+  - id: 林-s-1
+    type: component_assembly
+    lamp: shape
+lines:
+  - ki-no-sen
+status: published

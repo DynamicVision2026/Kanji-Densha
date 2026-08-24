@@ -1,0 +1,22 @@
+# A reading item's reading_id must resolve to one of the character's own
+# taught_readings — not any string, and not another character's reading id.
+character: 山
+grade: 1
+taught_readings:
+  - id: yama_kun
+    kana: やま
+    type: kun
+    audio: audio/readings/yama_kun.mp3
+meaning: { gloss_ja: たかい ところ, category: nature }
+encounter: { template: mountain-ink, art: null, copy_ja: やま }
+surfaces:
+  - { id: yama_1, word: 山, reading_id: yama_kun, audio: audio/surfaces/yama_1.mp3 }
+  - { id: yama_2, word: 山道, reading_id: yama_kun, audio: audio/surfaces/yama_2.mp3 }
+shape: { published: true, kind: primitive, strokes: [{ order: 1, type: tate, a11y_ja: たて }] }
+items:
+  - id: 山-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: does_not_exist  # <-- not a declared taught_reading id
+    choices: [{ kana: やま, correct: true }, { kana: かわ, correct: false }]
+status: published

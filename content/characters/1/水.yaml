@@ -1,0 +1,73 @@
+character: 水
+grade: 1
+taught_readings:
+  - id: sui_on
+    kana: スイ
+    type: on
+    audio: audio/readings/sui_on.mp3
+  - id: mizu_kun
+    kana: みず
+    type: kun
+    audio: audio/readings/mizu_kun.mp3
+meaning:
+  gloss_ja: のむ みず。ながれる みず。
+  category: nature
+encounter:
+  template: water-ink
+  art: null
+  copy_ja: みずは つめたくて きれいだね。
+surfaces:
+  - id: mizu_1
+    word: 水
+    reading_id: mizu_kun
+    audio: audio/surfaces/mizu_1.mp3
+  - id: suiyou_1
+    word: 水よう日
+    reading_id: sui_on
+    audio: audio/surfaces/suiyou_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: まんなかの たて はね
+    - order: 2
+      type: harai
+      a11y_ja: ひだりうえの はらい
+    - order: 3
+      type: harai
+      a11y_ja: ひだりしたの はらい
+    - order: 4
+      type: nagai
+      a11y_ja: みぎの ながい はらい
+items:
+  - id: 水-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: mizu_kun
+    choices:
+      - kana: みず
+        correct: true
+      - kana: ひ
+        correct: false
+      - kana: つち
+        correct: false
+  - id: 水-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つめたく ながれる もの
+        semantic: true
+        correct: true
+      - gloss_ja: あつく もえる もの
+        semantic: true
+        correct: false
+      - gloss_ja: かたい いし
+        semantic: true
+        correct: false
+  - id: 水-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

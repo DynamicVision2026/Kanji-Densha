@@ -1,0 +1,24 @@
+# A compound shape must declare components, never a raw stroke list.
+character: 林
+grade: 1
+taught_readings:
+  - id: hayashi_kun
+    kana: はやし
+    type: kun
+    audio: audio/readings/hayashi_kun.mp3
+meaning: { gloss_ja: きが おおい ところ, category: nature }
+encounter: { template: grove-ink, art: null, copy_ja: はやし }
+surfaces:
+  - { id: hayashi_1, word: 林, reading_id: hayashi_kun, audio: audio/surfaces/hayashi_1.mp3 }
+  - { id: hayashi_2, word: 山林, reading_id: hayashi_kun, audio: audio/surfaces/hayashi_2.mp3 }
+shape:
+  published: true
+  kind: compound
+  strokes: [{ order: 1, type: tate, a11y_ja: たて }]  # <-- forbidden: compound forbids a raw stroke list
+items:
+  - id: 林-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: hayashi_kun
+    choices: [{ kana: はやし, correct: true }, { kana: もり, correct: false }]
+status: published

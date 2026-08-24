@@ -1,4 +1,0 @@
-# Generated, SHIPPED content bundles (g1.json..g6.json + manifest.json) land
-# here from M2, emitted by `pnpm content:build` (architecture §2.2). This dir is
-# committed but never hand-edited: the content-dist-drift gate fails any change
-# here without a matching change under content/ (I2).

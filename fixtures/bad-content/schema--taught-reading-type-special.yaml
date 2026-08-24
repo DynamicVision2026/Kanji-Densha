@@ -1,0 +1,22 @@
+# taught_readings accepts only on/kun; 'special' and 'proper_name' are appendix-only
+# reading types in the reference table and may never be typed by an author here.
+character: 山
+grade: 1
+taught_readings:
+  - id: yama_kun
+    kana: やま
+    type: special  # <-- not a valid taught reading type
+    audio: audio/readings/yama_kun.mp3
+meaning: { gloss_ja: たかい ところ, category: nature }
+encounter: { template: mountain-ink, art: null, copy_ja: やま }
+surfaces:
+  - { id: yama_1, word: 山, reading_id: yama_kun, audio: audio/surfaces/yama_1.mp3 }
+  - { id: yama_2, word: 山道, reading_id: yama_kun, audio: audio/surfaces/yama_2.mp3 }
+shape: { published: true, kind: primitive, strokes: [{ order: 1, type: tate, a11y_ja: たて }] }
+items:
+  - id: 山-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: yama_kun
+    choices: [{ kana: やま, correct: true }, { kana: かわ, correct: false }]
+status: published

@@ -1,0 +1,70 @@
+character: 大
+grade: 1
+taught_readings:
+  - id: dai_on
+    kana: ダイ
+    type: on
+    audio: audio/readings/dai_on.mp3
+  - id: ookii_kun
+    kana: おおきい
+    type: kun
+    audio: audio/readings/ookii_kun.mp3
+meaning:
+  gloss_ja: おおきい こと。
+  category: concept
+encounter:
+  template: big-ink
+  art: null
+  copy_ja: りょうての ひろげて おおきい！
+surfaces:
+  - id: ookii_1
+    word: 大きい
+    reading_id: ookii_kun
+    audio: audio/surfaces/ookii_1.mp3
+  - id: daigaku_1
+    word: 大学
+    reading_id: dai_on
+    audio: audio/surfaces/daigaku_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: yoko
+      a11y_ja: よこの ぼう
+    - order: 2
+      type: harai
+      a11y_ja: ひだりの はらい
+    - order: 3
+      type: nagai
+      a11y_ja: みぎの ながい はらい
+items:
+  - id: 大-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: ookii_kun
+    choices:
+      - kana: おおきい
+        correct: true
+      - kana: ちいさい
+        correct: false
+      - kana: まるい
+        correct: false
+  - id: 大-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おおきい こと
+        semantic: true
+        correct: true
+      - gloss_ja: ちいさい こと
+        semantic: true
+        correct: false
+      - gloss_ja: はやい こと
+        semantic: true
+        correct: false
+  - id: 大-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

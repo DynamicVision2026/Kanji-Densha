@@ -14,6 +14,9 @@
   "scripts": {
     "build": "tsc -b"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@kanji-densha/content-schema": "workspace:*",
+    "yaml": "^2.9.0"
+  },
   "devDependencies": {}
 }

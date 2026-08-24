@@ -1,5 +1,8 @@
-// packages/content-build — the CLI that validates, gates, and emits published
-// content bundles (architecture.md §2.2: parse -> schema validate ->
-// cross-reference -> gate -> emit). M0 placeholder only; the real pipeline and
-// the offline LLM factory arrive in M2. Nothing imports this at runtime.
-export const CONTENT_BUILD_PLACEHOLDER = 'content-build' as const;
+// packages/content-build — the content gate (architecture §2.2). The CLI entry
+// is build.ts (`pnpm content:build`); these exports are the reusable pieces the
+// rejection suite and other tools test against. Nothing here is imported at
+// runtime by apps/web (enforced by the eslint boundary).
+export { gateCharacter } from './gate.js';
+export type { GateError, CharGateResult } from './gate.js';
+export { loadReference, repoRootFrom, readingKey } from './reference.js';
+export type { Reading, CharReadings } from './reference.js';

@@ -1,0 +1,2845 @@
+[
+  {
+    "character": "一",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "ichi_on",
+        "kana": "イチ",
+        "type": "on",
+        "audio": "audio/readings/ichi_on.mp3"
+      },
+      {
+        "id": "hitotsu_kun",
+        "kana": "ひとつ",
+        "type": "kun",
+        "audio": "audio/readings/hitotsu_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "かず の いち。ひとつ。",
+      "category": "number"
+    },
+    "encounter": {
+      "art": null,
+      "template": "line-one-ink",
+      "copy_ja": "いち。ぼう が いっぽん。"
+    },
+    "surfaces": [
+      {
+        "id": "ichi_1",
+        "word": "一",
+        "reading_id": "ichi_on",
+        "audio": "audio/surfaces/ichi_1.mp3"
+      },
+      {
+        "id": "hitotsu_1",
+        "word": "一つ",
+        "reading_id": "hitotsu_kun",
+        "audio": "audio/surfaces/hitotsu_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "yoko",
+          "a11y_ja": "よこの ぼう"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "一-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "ichi_on",
+        "choices": [
+          {
+            "kana": "イチ",
+            "correct": true
+          },
+          {
+            "kana": "ニ",
+            "correct": false
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "一-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ひとつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "たくさん",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "まる",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "一-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "イチ",
+        "type": "on"
+      },
+      {
+        "kana": "イツ",
+        "type": "on"
+      },
+      {
+        "kana": "ひと",
+        "type": "kun"
+      },
+      {
+        "kana": "ひとつ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/ichi_on.mp3",
+          "audio/readings/hitotsu_kun.mp3",
+          "audio/surfaces/ichi_1.mp3",
+          "audio/surfaces/hitotsu_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "人",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "jin_on",
+        "kana": "ジン",
+        "type": "on",
+        "audio": "audio/readings/jin_on.mp3"
+      },
+      {
+        "id": "hito_kun",
+        "kana": "ひと",
+        "type": "kun",
+        "audio": "audio/readings/hito_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "にんげん。ひと。",
+      "category": "people"
+    },
+    "encounter": {
+      "art": null,
+      "template": "person-ink",
+      "copy_ja": "ふたつの あしで あるく、ひと。"
+    },
+    "surfaces": [
+      {
+        "id": "hito_1",
+        "word": "人",
+        "reading_id": "hito_kun",
+        "audio": "audio/surfaces/hito_1.mp3"
+      },
+      {
+        "id": "nihonjin_1",
+        "word": "日本人",
+        "reading_id": "jin_on",
+        "audio": "audio/surfaces/nihonjin_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        },
+        {
+          "order": 2,
+          "type": "nagai",
+          "a11y_ja": "みぎの ながい はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "人-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "hito_kun",
+        "choices": [
+          {
+            "kana": "ひと",
+            "correct": true
+          },
+          {
+            "kana": "いぬ",
+            "correct": false
+          },
+          {
+            "kana": "き",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "人-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "あるく にんげん",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "よつあしの どうぶつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "そらの とり",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "人-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ジン",
+        "type": "on"
+      },
+      {
+        "kana": "ニン",
+        "type": "on"
+      },
+      {
+        "kana": "ひと",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/jin_on.mp3",
+          "audio/readings/hito_kun.mp3",
+          "audio/surfaces/hito_1.mp3",
+          "audio/surfaces/nihonjin_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "力",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "ryoku_on",
+        "kana": "リョク",
+        "type": "on",
+        "audio": "audio/readings/ryoku_on.mp3"
+      },
+      {
+        "id": "chikara_kun",
+        "kana": "ちから",
+        "type": "kun",
+        "audio": "audio/readings/chikara_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "ものを うごかす ちから。",
+      "category": "concept"
+    },
+    "encounter": {
+      "art": null,
+      "template": "power-ink",
+      "copy_ja": "ちからを だして もちあげるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "chikara_1",
+        "word": "力",
+        "reading_id": "chikara_kun",
+        "audio": "audio/surfaces/chikara_1.mp3"
+      },
+      {
+        "id": "suiryoku_1",
+        "word": "水力",
+        "reading_id": "ryoku_on",
+        "audio": "audio/surfaces/suiryoku_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "kaku",
+          "a11y_ja": "よこ から みぎの おれ はね"
+        },
+        {
+          "order": 2,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "力-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "chikara_kun",
+        "choices": [
+          {
+            "kana": "ちから",
+            "correct": true
+          },
+          {
+            "kana": "こえ",
+            "correct": false
+          },
+          {
+            "kana": "て",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "力-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ものを うごかす ちから",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "きれいな いろ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "つめたい かぜ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "力-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "リョク",
+        "type": "on"
+      },
+      {
+        "kana": "リキ",
+        "type": "on"
+      },
+      {
+        "kana": "ちから",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/ryoku_on.mp3",
+          "audio/readings/chikara_kun.mp3",
+          "audio/surfaces/chikara_1.mp3",
+          "audio/surfaces/suiryoku_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "大",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "dai_on",
+        "kana": "ダイ",
+        "type": "on",
+        "audio": "audio/readings/dai_on.mp3"
+      },
+      {
+        "id": "ookii_kun",
+        "kana": "おおきい",
+        "type": "kun",
+        "audio": "audio/readings/ookii_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "おおきい こと。",
+      "category": "concept"
+    },
+    "encounter": {
+      "art": null,
+      "template": "big-ink",
+      "copy_ja": "りょうての ひろげて おおきい！"
+    },
+    "surfaces": [
+      {
+        "id": "ookii_1",
+        "word": "大きい",
+        "reading_id": "ookii_kun",
+        "audio": "audio/surfaces/ookii_1.mp3"
+      },
+      {
+        "id": "daigaku_1",
+        "word": "大学",
+        "reading_id": "dai_on",
+        "audio": "audio/surfaces/daigaku_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "yoko",
+          "a11y_ja": "よこの ぼう"
+        },
+        {
+          "order": 2,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        },
+        {
+          "order": 3,
+          "type": "nagai",
+          "a11y_ja": "みぎの ながい はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "大-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "ookii_kun",
+        "choices": [
+          {
+            "kana": "おおきい",
+            "correct": true
+          },
+          {
+            "kana": "ちいさい",
+            "correct": false
+          },
+          {
+            "kana": "まるい",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "大-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "おおきい こと",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ちいさい こと",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "はやい こと",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "大-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ダイ",
+        "type": "on"
+      },
+      {
+        "kana": "タイ",
+        "type": "on"
+      },
+      {
+        "kana": "おお",
+        "type": "kun"
+      },
+      {
+        "kana": "おおきい",
+        "type": "kun"
+      },
+      {
+        "kana": "おおいに",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/dai_on.mp3",
+          "audio/readings/ookii_kun.mp3",
+          "audio/surfaces/ookii_1.mp3",
+          "audio/surfaces/daigaku_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "学",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "gaku_on",
+        "kana": "ガク",
+        "type": "on",
+        "audio": "audio/readings/gaku_on.mp3"
+      },
+      {
+        "id": "manabu_kun",
+        "kana": "まなぶ",
+        "type": "kun",
+        "audio": "audio/readings/manabu_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "べんきょうを して まなぶ こと。",
+      "category": "concept"
+    },
+    "encounter": {
+      "art": null,
+      "template": "study-ink",
+      "copy_ja": "がっこうで いろいろ まなぶよ。"
+    },
+    "surfaces": [
+      {
+        "id": "manabu_1",
+        "word": "学ぶ",
+        "reading_id": "manabu_kun",
+        "audio": "audio/surfaces/manabu_1.mp3"
+      },
+      {
+        "id": "gakkou_1",
+        "word": "学校",
+        "reading_id": "gaku_on",
+        "audio": "audio/surfaces/gakkou_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": false
+    },
+    "items": [
+      {
+        "id": "学-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "manabu_kun",
+        "choices": [
+          {
+            "kana": "まなぶ",
+            "correct": true
+          },
+          {
+            "kana": "あそぶ",
+            "correct": false
+          },
+          {
+            "kana": "ねむる",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "学-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "べんきょうして まなぶ こと",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "あそんで やすむ こと",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "はしって あそぶ こと",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ガク",
+        "type": "on"
+      },
+      {
+        "kana": "まなぶ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/gaku_on.mp3",
+          "audio/readings/manabu_kun.mp3",
+          "audio/surfaces/manabu_1.mp3",
+          "audio/surfaces/gakkou_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "山",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "san_on",
+        "kana": "サン",
+        "type": "on",
+        "audio": "audio/readings/san_on.mp3"
+      },
+      {
+        "id": "yama_kun",
+        "kana": "やま",
+        "type": "kun",
+        "audio": "audio/readings/yama_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "たかく もりあがった ところ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "mountain-ink",
+      "copy_ja": "やまに のぼると、とおくまで みえるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "yama_1",
+        "word": "山",
+        "reading_id": "yama_kun",
+        "audio": "audio/surfaces/yama_1.mp3"
+      },
+      {
+        "id": "kazan_1",
+        "word": "火山",
+        "reading_id": "san_on",
+        "audio": "audio/surfaces/kazan_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "tate",
+          "a11y_ja": "まんなかの たてぼう"
+        },
+        {
+          "order": 2,
+          "type": "oru",
+          "a11y_ja": "ひだりの おれ"
+        },
+        {
+          "order": 3,
+          "type": "tate",
+          "a11y_ja": "みぎの たてぼう"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "山-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "yama_kun",
+        "choices": [
+          {
+            "kana": "やま",
+            "correct": true
+          },
+          {
+            "kana": "かわ",
+            "correct": false
+          },
+          {
+            "kana": "そら",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "山-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "たかい つち の ところ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みずの ながれ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ひろい うみ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "山-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "サン",
+        "type": "on"
+      },
+      {
+        "kana": "やま",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/san_on.mp3",
+          "audio/readings/yama_kun.mp3",
+          "audio/surfaces/yama_1.mp3",
+          "audio/surfaces/kazan_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "川",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "kawa_kun",
+        "kana": "かわ",
+        "type": "kun",
+        "audio": "audio/readings/kawa_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "みずが ながれる ところ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "river-ink",
+      "copy_ja": "かわは やまから うみへ ながれるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "kawa_1",
+        "word": "川",
+        "reading_id": "kawa_kun",
+        "audio": "audio/surfaces/kawa_1.mp3"
+      },
+      {
+        "id": "ogawa_1",
+        "word": "小川",
+        "reading_id": "kawa_kun",
+        "audio": "audio/surfaces/ogawa_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "tare",
+          "a11y_ja": "ひだりの たれ"
+        },
+        {
+          "order": 2,
+          "type": "tate",
+          "a11y_ja": "まんなかの たて"
+        },
+        {
+          "order": 3,
+          "type": "tate",
+          "a11y_ja": "みぎの たて"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "川-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "kawa_kun",
+        "choices": [
+          {
+            "kana": "かわ",
+            "correct": true
+          },
+          {
+            "kana": "やま",
+            "correct": false
+          },
+          {
+            "kana": "いけ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "川-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "みずが ながれる ところ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "たかい やま",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ひろい のはら",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "川-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [
+      "kawa-no-sen"
+    ],
+    "elementary_readings": [
+      {
+        "kana": "かわ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "セン",
+        "type": "on"
+      }
+    ],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/kawa_kun.mp3",
+          "audio/surfaces/kawa_1.mp3",
+          "audio/surfaces/ogawa_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "日",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "nichi_on",
+        "kana": "ニチ",
+        "type": "on",
+        "audio": "audio/readings/nichi_on.mp3"
+      },
+      {
+        "id": "hi_kun",
+        "kana": "ひ",
+        "type": "kun",
+        "audio": "audio/readings/hi_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "そらに でる おひさま。ひ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "sun-ink",
+      "copy_ja": "あさに おひさまが のぼるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "hi_1",
+        "word": "日",
+        "reading_id": "hi_kun",
+        "audio": "audio/surfaces/hi_1.mp3"
+      },
+      {
+        "id": "nichiyou_1",
+        "word": "日よう日",
+        "reading_id": "nichi_on",
+        "audio": "audio/surfaces/nichiyou_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "tate",
+          "a11y_ja": "ひだりの たて"
+        },
+        {
+          "order": 2,
+          "type": "kaku",
+          "a11y_ja": "うえの よこ から みぎの おれ"
+        },
+        {
+          "order": 3,
+          "type": "yoko",
+          "a11y_ja": "まんなかの よこ"
+        },
+        {
+          "order": 4,
+          "type": "yoko",
+          "a11y_ja": "したの よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "日-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "hi_kun",
+        "choices": [
+          {
+            "kana": "ひ",
+            "correct": true
+          },
+          {
+            "kana": "つき",
+            "correct": false
+          },
+          {
+            "kana": "ほし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "日-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "そらに でる おひさま",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "よるの あかり",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "つめたい みず",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "日-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ニチ",
+        "type": "on"
+      },
+      {
+        "kana": "ジツ",
+        "type": "on"
+      },
+      {
+        "kana": "ひ",
+        "type": "kun"
+      },
+      {
+        "kana": "か",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/nichi_on.mp3",
+          "audio/readings/hi_kun.mp3",
+          "audio/surfaces/hi_1.mp3",
+          "audio/surfaces/nichiyou_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "月",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "getsu_on",
+        "kana": "ゲツ",
+        "type": "on",
+        "audio": "audio/readings/getsu_on.mp3"
+      },
+      {
+        "id": "tsuki_kun",
+        "kana": "つき",
+        "type": "kun",
+        "audio": "audio/readings/tsuki_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "よるに でる つき。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "moon-ink",
+      "copy_ja": "よるに つきが ひかるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "tsuki_1",
+        "word": "月",
+        "reading_id": "tsuki_kun",
+        "audio": "audio/surfaces/tsuki_1.mp3"
+      },
+      {
+        "id": "getsuyou_1",
+        "word": "月よう日",
+        "reading_id": "getsu_on",
+        "audio": "audio/surfaces/getsuyou_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        },
+        {
+          "order": 2,
+          "type": "kaku",
+          "a11y_ja": "みぎの おれ"
+        },
+        {
+          "order": 3,
+          "type": "yoko",
+          "a11y_ja": "うえの よこ"
+        },
+        {
+          "order": 4,
+          "type": "yoko",
+          "a11y_ja": "したの よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "月-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "tsuki_kun",
+        "choices": [
+          {
+            "kana": "つき",
+            "correct": true
+          },
+          {
+            "kana": "ひ",
+            "correct": false
+          },
+          {
+            "kana": "そら",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "月-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "よるに でる つき",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ひるの おひさま",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "あかい ひ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "月-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ゲツ",
+        "type": "on"
+      },
+      {
+        "kana": "ガツ",
+        "type": "on"
+      },
+      {
+        "kana": "つき",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/getsu_on.mp3",
+          "audio/readings/tsuki_kun.mp3",
+          "audio/surfaces/tsuki_1.mp3",
+          "audio/surfaces/getsuyou_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "木",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "moku_on",
+        "kana": "モク",
+        "type": "on",
+        "audio": "audio/readings/moku_on.mp3"
+      },
+      {
+        "id": "ki_kun",
+        "kana": "き",
+        "type": "kun",
+        "audio": "audio/readings/ki_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "はっぱ が でる き。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "tree-ink",
+      "copy_ja": "きは そらへ のびていくよ。"
+    },
+    "surfaces": [
+      {
+        "id": "ki_1",
+        "word": "木",
+        "reading_id": "ki_kun",
+        "audio": "audio/surfaces/ki_1.mp3"
+      },
+      {
+        "id": "mokuyou_1",
+        "word": "木よう日",
+        "reading_id": "moku_on",
+        "audio": "audio/surfaces/mokuyou_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "yoko",
+          "a11y_ja": "よこの ぼう"
+        },
+        {
+          "order": 2,
+          "type": "tate",
+          "a11y_ja": "たての ぼう"
+        },
+        {
+          "order": 3,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        },
+        {
+          "order": 4,
+          "type": "harai",
+          "a11y_ja": "みぎの はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "木-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "ki_kun",
+        "choices": [
+          {
+            "kana": "き",
+            "correct": true
+          },
+          {
+            "kana": "ひ",
+            "correct": false
+          },
+          {
+            "kana": "て",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "木-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "はっぱ の でる き",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "もえる ひ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "つめたい みず",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "木-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [
+      "ki-no-sen"
+    ],
+    "elementary_readings": [
+      {
+        "kana": "ボク",
+        "type": "on"
+      },
+      {
+        "kana": "モク",
+        "type": "on"
+      },
+      {
+        "kana": "き",
+        "type": "kun"
+      },
+      {
+        "kana": "こ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/moku_on.mp3",
+          "audio/readings/ki_kun.mp3",
+          "audio/surfaces/ki_1.mp3",
+          "audio/surfaces/mokuyou_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "本",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "hon_on",
+        "kana": "ホン",
+        "type": "on",
+        "audio": "audio/readings/hon_on.mp3"
+      },
+      {
+        "id": "moto_kun",
+        "kana": "もと",
+        "type": "kun",
+        "audio": "audio/readings/moto_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "よむ ほん。",
+      "category": "object"
+    },
+    "encounter": {
+      "art": null,
+      "template": "book-ink",
+      "copy_ja": "ほんを ひらいて よもう。"
+    },
+    "surfaces": [
+      {
+        "id": "hon_1",
+        "word": "本",
+        "reading_id": "hon_on",
+        "audio": "audio/surfaces/hon_1.mp3"
+      },
+      {
+        "id": "nihon_1",
+        "word": "日本",
+        "reading_id": "hon_on",
+        "audio": "audio/surfaces/nihon_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "yoko",
+          "a11y_ja": "うえの よこ"
+        },
+        {
+          "order": 2,
+          "type": "tate",
+          "a11y_ja": "たての ぼう"
+        },
+        {
+          "order": 3,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        },
+        {
+          "order": 4,
+          "type": "nagai",
+          "a11y_ja": "みぎの ながい はらい"
+        },
+        {
+          "order": 5,
+          "type": "yoko",
+          "a11y_ja": "したの みじかい よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "本-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "hon_on",
+        "choices": [
+          {
+            "kana": "ホン",
+            "correct": true
+          },
+          {
+            "kana": "モク",
+            "correct": false
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "本-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "よむ もの",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "のむ もの",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "きる もの",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "本-s-1",
+        "type": "cloze",
+        "lamp": "shape",
+        "phrase_ja": "□を よむ",
+        "choices": [
+          {
+            "kanji": "本",
+            "correct": true
+          },
+          {
+            "kanji": "木",
+            "correct": false
+          },
+          {
+            "kanji": "休",
+            "correct": false
+          }
+        ]
+      }
+    ],
+    "lines": [
+      "ki-no-sen"
+    ],
+    "elementary_readings": [
+      {
+        "kana": "ホン",
+        "type": "on"
+      },
+      {
+        "kana": "もと",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/hon_on.mp3",
+          "audio/readings/moto_kun.mp3",
+          "audio/surfaces/hon_1.mp3",
+          "audio/surfaces/nihon_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "林",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "rin_on",
+        "kana": "リン",
+        "type": "on",
+        "audio": "audio/readings/rin_on.mp3"
+      },
+      {
+        "id": "hayashi_kun",
+        "kana": "はやし",
+        "type": "kun",
+        "audio": "audio/readings/hayashi_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "きが たくさん ある ところ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "grove-ink",
+      "copy_ja": "きが ならぶと はやしに なるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "hayashi_1",
+        "word": "林",
+        "reading_id": "hayashi_kun",
+        "audio": "audio/surfaces/hayashi_1.mp3"
+      },
+      {
+        "id": "sanrin_1",
+        "word": "山林",
+        "reading_id": "rin_on",
+        "audio": "audio/surfaces/sanrin_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "木"
+        },
+        {
+          "char": "木"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "林-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "hayashi_kun",
+        "choices": [
+          {
+            "kana": "はやし",
+            "correct": true
+          },
+          {
+            "kana": "もり",
+            "correct": false
+          },
+          {
+            "kana": "やま",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "林-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "きが たくさん ある ところ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みずの ある ところ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "いしの ある ところ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "林-s-1",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [
+      "ki-no-sen"
+    ],
+    "elementary_readings": [
+      {
+        "kana": "リン",
+        "type": "on"
+      },
+      {
+        "kana": "はやし",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/rin_on.mp3",
+          "audio/readings/hayashi_kun.mp3",
+          "audio/surfaces/hayashi_1.mp3",
+          "audio/surfaces/sanrin_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "森",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "shin_on",
+        "kana": "シン",
+        "type": "on",
+        "audio": "audio/readings/shin_on.mp3"
+      },
+      {
+        "id": "mori_kun",
+        "kana": "もり",
+        "type": "kun",
+        "audio": "audio/readings/mori_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "きが とても たくさん ある ところ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "forest-ink",
+      "copy_ja": "きが みっつで もり。ふかい もりだね。"
+    },
+    "surfaces": [
+      {
+        "id": "mori_1",
+        "word": "森",
+        "reading_id": "mori_kun",
+        "audio": "audio/surfaces/mori_1.mp3"
+      },
+      {
+        "id": "shinrin_1",
+        "word": "森林",
+        "reading_id": "shin_on",
+        "audio": "audio/surfaces/shinrin_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "木"
+        },
+        {
+          "char": "木"
+        },
+        {
+          "char": "木"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "森-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "mori_kun",
+        "choices": [
+          {
+            "kana": "もり",
+            "correct": true
+          },
+          {
+            "kana": "はやし",
+            "correct": false
+          },
+          {
+            "kana": "やま",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "森-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "きが とても たくさん ある ところ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "きが すこし ある ところ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "きが ない ところ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "森-s-1",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [
+      "ki-no-sen"
+    ],
+    "elementary_readings": [
+      {
+        "kana": "シン",
+        "type": "on"
+      },
+      {
+        "kana": "もり",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/shin_on.mp3",
+          "audio/readings/mori_kun.mp3",
+          "audio/surfaces/mori_1.mp3",
+          "audio/surfaces/shinrin_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "水",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "sui_on",
+        "kana": "スイ",
+        "type": "on",
+        "audio": "audio/readings/sui_on.mp3"
+      },
+      {
+        "id": "mizu_kun",
+        "kana": "みず",
+        "type": "kun",
+        "audio": "audio/readings/mizu_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "のむ みず。ながれる みず。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "water-ink",
+      "copy_ja": "みずは つめたくて きれいだね。"
+    },
+    "surfaces": [
+      {
+        "id": "mizu_1",
+        "word": "水",
+        "reading_id": "mizu_kun",
+        "audio": "audio/surfaces/mizu_1.mp3"
+      },
+      {
+        "id": "suiyou_1",
+        "word": "水よう日",
+        "reading_id": "sui_on",
+        "audio": "audio/surfaces/suiyou_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "tate",
+          "a11y_ja": "まんなかの たて はね"
+        },
+        {
+          "order": 2,
+          "type": "harai",
+          "a11y_ja": "ひだりうえの はらい"
+        },
+        {
+          "order": 3,
+          "type": "harai",
+          "a11y_ja": "ひだりしたの はらい"
+        },
+        {
+          "order": 4,
+          "type": "nagai",
+          "a11y_ja": "みぎの ながい はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "水-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "mizu_kun",
+        "choices": [
+          {
+            "kana": "みず",
+            "correct": true
+          },
+          {
+            "kana": "ひ",
+            "correct": false
+          },
+          {
+            "kana": "つち",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "水-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "つめたく ながれる もの",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "あつく もえる もの",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "かたい いし",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "水-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "スイ",
+        "type": "on"
+      },
+      {
+        "kana": "みず",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/sui_on.mp3",
+          "audio/readings/mizu_kun.mp3",
+          "audio/surfaces/mizu_1.mp3",
+          "audio/surfaces/suiyou_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "火",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "ka_on",
+        "kana": "カ",
+        "type": "on",
+        "audio": "audio/readings/ka_on.mp3"
+      },
+      {
+        "id": "hi_kun",
+        "kana": "ひ",
+        "type": "kun",
+        "audio": "audio/readings/hi_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "あかくて あつい ひ。もえる ひ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "fire-ink",
+      "copy_ja": "ひは あかくて あつい。きを つけてね。"
+    },
+    "surfaces": [
+      {
+        "id": "hi_2",
+        "word": "火",
+        "reading_id": "hi_kun",
+        "audio": "audio/surfaces/hi_2.mp3"
+      },
+      {
+        "id": "kazan_2",
+        "word": "火山",
+        "reading_id": "ka_on",
+        "audio": "audio/surfaces/kazan_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "ten",
+          "a11y_ja": "ひだりの てん"
+        },
+        {
+          "order": 2,
+          "type": "ten",
+          "a11y_ja": "みぎの てん"
+        },
+        {
+          "order": 3,
+          "type": "harai",
+          "a11y_ja": "まんなかの ひだりはらい"
+        },
+        {
+          "order": 4,
+          "type": "nagai",
+          "a11y_ja": "みぎの ながい はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "火-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "hi_kun",
+        "choices": [
+          {
+            "kana": "ひ",
+            "correct": true
+          },
+          {
+            "kana": "みず",
+            "correct": false
+          },
+          {
+            "kana": "き",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "火-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "あかくて あつい もの",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "つめたい みず",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "しろい ゆき",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "火-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "カ",
+        "type": "on"
+      },
+      {
+        "kana": "ひ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ほ",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/ka_on.mp3",
+          "audio/readings/hi_kun.mp3",
+          "audio/surfaces/hi_2.mp3",
+          "audio/surfaces/kazan_2.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "犬",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "ken_on",
+        "kana": "ケン",
+        "type": "on",
+        "audio": "audio/readings/ken_on.mp3"
+      },
+      {
+        "id": "inu_kun",
+        "kana": "いぬ",
+        "type": "kun",
+        "audio": "audio/readings/inu_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "ワンと なく どうぶつ、いぬ。",
+      "category": "animal"
+    },
+    "encounter": {
+      "art": null,
+      "template": "dog-ink",
+      "copy_ja": "いぬは しっぽを ふって よろこぶよ。"
+    },
+    "surfaces": [
+      {
+        "id": "inu_1",
+        "word": "犬",
+        "reading_id": "inu_kun",
+        "audio": "audio/surfaces/inu_1.mp3"
+      },
+      {
+        "id": "koinu_1",
+        "word": "子犬",
+        "reading_id": "inu_kun",
+        "audio": "audio/surfaces/koinu_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "yoko",
+          "a11y_ja": "よこの ぼう"
+        },
+        {
+          "order": 2,
+          "type": "harai",
+          "a11y_ja": "ひだりの はらい"
+        },
+        {
+          "order": 3,
+          "type": "nagai",
+          "a11y_ja": "みぎの ながい はらい"
+        },
+        {
+          "order": 4,
+          "type": "ten",
+          "a11y_ja": "みぎうえの てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "犬-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "inu_kun",
+        "choices": [
+          {
+            "kana": "いぬ",
+            "correct": true
+          },
+          {
+            "kana": "ねこ",
+            "correct": false
+          },
+          {
+            "kana": "とり",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "犬-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ワンと なく どうぶつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ニャーと なく どうぶつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "そらを とぶ とり",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "犬-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ケン",
+        "type": "on"
+      },
+      {
+        "kana": "いぬ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/ken_on.mp3",
+          "audio/readings/inu_kun.mp3",
+          "audio/surfaces/inu_1.mp3",
+          "audio/surfaces/koinu_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "生",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "sei_on",
+        "kana": "セイ",
+        "type": "on",
+        "audio": "audio/readings/sei_on.mp3"
+      },
+      {
+        "id": "ikiru_kun",
+        "kana": "いきる",
+        "type": "kun",
+        "audio": "audio/readings/ikiru_kun.mp3"
+      },
+      {
+        "id": "nama_kun",
+        "kana": "なま",
+        "type": "kun",
+        "audio": "audio/readings/nama_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "いきて いる こと。うまれる こと。",
+      "category": "concept"
+    },
+    "encounter": {
+      "art": null,
+      "template": "life-ink",
+      "copy_ja": "めが でて、いきものが うまれるよ。"
+    },
+    "surfaces": [
+      {
+        "id": "sensei_1",
+        "word": "先生",
+        "reading_id": "sei_on",
+        "audio": "audio/surfaces/sensei_1.mp3"
+      },
+      {
+        "id": "ikiru_1",
+        "word": "生きる",
+        "reading_id": "ikiru_kun",
+        "audio": "audio/surfaces/ikiru_1.mp3"
+      },
+      {
+        "id": "namamono_1",
+        "word": "生もの",
+        "reading_id": "nama_kun",
+        "audio": "audio/surfaces/namamono_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "harai",
+          "a11y_ja": "うえの ひだりはらい"
+        },
+        {
+          "order": 2,
+          "type": "yoko",
+          "a11y_ja": "うえの よこ"
+        },
+        {
+          "order": 3,
+          "type": "tate",
+          "a11y_ja": "まんなかの たて"
+        },
+        {
+          "order": 4,
+          "type": "yoko",
+          "a11y_ja": "なかの よこ"
+        },
+        {
+          "order": 5,
+          "type": "yoko",
+          "a11y_ja": "したの ながい よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "生-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "ikiru_kun",
+        "choices": [
+          {
+            "kana": "いきる",
+            "correct": true
+          },
+          {
+            "kana": "しぬ",
+            "correct": false
+          },
+          {
+            "kana": "ねる",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "生-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "いきて いる こと",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ねむって いる こと",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "こおって いる こと",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "生-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セイ",
+        "type": "on"
+      },
+      {
+        "kana": "ショウ",
+        "type": "on"
+      },
+      {
+        "kana": "いきる",
+        "type": "kun"
+      },
+      {
+        "kana": "いかす",
+        "type": "kun"
+      },
+      {
+        "kana": "いける",
+        "type": "kun"
+      },
+      {
+        "kana": "うまれる",
+        "type": "kun"
+      },
+      {
+        "kana": "うむ",
+        "type": "kun"
+      },
+      {
+        "kana": "はえる",
+        "type": "kun"
+      },
+      {
+        "kana": "はやす",
+        "type": "kun"
+      },
+      {
+        "kana": "なま",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "おう",
+        "type": "kun"
+      },
+      {
+        "kana": "き",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/sei_on.mp3",
+          "audio/readings/ikiru_kun.mp3",
+          "audio/readings/nama_kun.mp3",
+          "audio/surfaces/sensei_1.mp3",
+          "audio/surfaces/ikiru_1.mp3",
+          "audio/surfaces/namamono_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "田",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "den_on",
+        "kana": "デン",
+        "type": "on",
+        "audio": "audio/readings/den_on.mp3"
+      },
+      {
+        "id": "ta_kun",
+        "kana": "た",
+        "type": "kun",
+        "audio": "audio/readings/ta_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "こめを つくる た。たんぼ。",
+      "category": "nature"
+    },
+    "encounter": {
+      "art": null,
+      "template": "field-ink",
+      "copy_ja": "たんぼで おこめが そだつよ。"
+    },
+    "surfaces": [
+      {
+        "id": "ta_1",
+        "word": "田",
+        "reading_id": "ta_kun",
+        "audio": "audio/surfaces/ta_1.mp3"
+      },
+      {
+        "id": "suiden_1",
+        "word": "水田",
+        "reading_id": "den_on",
+        "audio": "audio/surfaces/suiden_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "tate",
+          "a11y_ja": "ひだりの たて"
+        },
+        {
+          "order": 2,
+          "type": "kaku",
+          "a11y_ja": "うえと みぎの おれ"
+        },
+        {
+          "order": 3,
+          "type": "tate",
+          "a11y_ja": "まんなかの たて"
+        },
+        {
+          "order": 4,
+          "type": "yoko",
+          "a11y_ja": "まんなかの よこ"
+        },
+        {
+          "order": 5,
+          "type": "yoko",
+          "a11y_ja": "したの よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "田-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "ta_kun",
+        "choices": [
+          {
+            "kana": "た",
+            "correct": true
+          },
+          {
+            "kana": "やま",
+            "correct": false
+          },
+          {
+            "kana": "かわ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "田-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "こめを つくる ところ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "きの ある ところ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "みずの うみ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "田-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "デン",
+        "type": "on"
+      },
+      {
+        "kana": "た",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/den_on.mp3",
+          "audio/readings/ta_kun.mp3",
+          "audio/surfaces/ta_1.mp3",
+          "audio/surfaces/suiden_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "男",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "dan_on",
+        "kana": "ダン",
+        "type": "on",
+        "audio": "audio/readings/dan_on.mp3"
+      },
+      {
+        "id": "otoko_kun",
+        "kana": "おとこ",
+        "type": "kun",
+        "audio": "audio/readings/otoko_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "おとこの ひと。",
+      "category": "people"
+    },
+    "encounter": {
+      "art": null,
+      "template": "man-ink",
+      "copy_ja": "たで ちからを だす ひと、おとこ。"
+    },
+    "surfaces": [
+      {
+        "id": "otoko_1",
+        "word": "男",
+        "reading_id": "otoko_kun",
+        "audio": "audio/surfaces/otoko_1.mp3"
+      },
+      {
+        "id": "danshi_1",
+        "word": "男子",
+        "reading_id": "dan_on",
+        "audio": "audio/surfaces/danshi_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "田"
+        },
+        {
+          "char": "力"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "男-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "otoko_kun",
+        "choices": [
+          {
+            "kana": "おとこ",
+            "correct": true
+          },
+          {
+            "kana": "おんな",
+            "correct": false
+          },
+          {
+            "kana": "こども",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "男-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "おとこの ひと",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "おんなの ひと",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ちいさな こ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "男-s-1",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ダン",
+        "type": "on"
+      },
+      {
+        "kana": "ナン",
+        "type": "on"
+      },
+      {
+        "kana": "おとこ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/dan_on.mp3",
+          "audio/readings/otoko_kun.mp3",
+          "audio/surfaces/otoko_1.mp3",
+          "audio/surfaces/danshi_1.mp3"
+        ]
+      }
+    ]
+  },
+  {
+    "character": "目",
+    "grade": 1,
+    "taught_readings": [
+      {
+        "id": "moku_on2",
+        "kana": "モク",
+        "type": "on",
+        "audio": "audio/readings/moku_on2.mp3"
+      },
+      {
+        "id": "me_kun",
+        "kana": "め",
+        "type": "kun",
+        "audio": "audio/readings/me_kun.mp3"
+      }
+    ],
+    "meaning": {
+      "gloss_ja": "ものを みる め。",
+      "category": "body"
+    },
+    "encounter": {
+      "art": null,
+      "template": "eye-ink",
+      "copy_ja": "めで まわりを みてみよう。"
+    },
+    "surfaces": [
+      {
+        "id": "me_1",
+        "word": "目",
+        "reading_id": "me_kun",
+        "audio": "audio/surfaces/me_1.mp3"
+      },
+      {
+        "id": "mokuhyou_1",
+        "word": "目ひょう",
+        "reading_id": "moku_on2",
+        "audio": "audio/surfaces/mokuhyou_1.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "tate",
+          "a11y_ja": "ひだりの たて"
+        },
+        {
+          "order": 2,
+          "type": "kaku",
+          "a11y_ja": "うえと みぎの おれ"
+        },
+        {
+          "order": 3,
+          "type": "yoko",
+          "a11y_ja": "うえの なかの よこ"
+        },
+        {
+          "order": 4,
+          "type": "yoko",
+          "a11y_ja": "まんなかの よこ"
+        },
+        {
+          "order": 5,
+          "type": "yoko",
+          "a11y_ja": "したの よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "目-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "me_kun",
+        "choices": [
+          {
+            "kana": "め",
+            "correct": true
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          },
+          {
+            "kana": "て",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "目-m-1",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ものを みる ところ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "おとを きく ところ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "あるく ところ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "目-s-1",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "モク",
+        "type": "on"
+      },
+      {
+        "kana": "め",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ボク",
+        "type": "on"
+      },
+      {
+        "kana": "ま",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": false,
+    "audio_pending": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/moku_on2.mp3",
+          "audio/readings/me_kun.mp3",
+          "audio/surfaces/me_1.mp3",
+          "audio/surfaces/mokuhyou_1.mp3"
+        ]
+      }
+    ]
+  }
+]
