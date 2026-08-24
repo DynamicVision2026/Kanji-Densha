@@ -1,14 +1,17 @@
 character: 田
 grade: 1
 taught_readings:
-  - id: den_on
-    kana: デン
-    type: on
-    audio: audio/readings/den_on.mp3
-  - id: ta_kun
-    kana: た
-    type: kun
-    audio: audio/readings/ta_kun.mp3
+  entries:
+    - id: den_on
+      kana: デン
+      type: on
+      audio: audio/readings/den_on.mp3
+    - id: ta_kun
+      kana: た
+      type: kun
+      audio: audio/readings/ta_kun.mp3
+  rationale: たは具体物としての基本読み。男の部品としても使われる。
+  anchor: ta_kun
 meaning:
   gloss_ja: こめを つくる た。たんぼ。
   category: nature

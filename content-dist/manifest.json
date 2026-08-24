@@ -1,5 +1,5 @@
 {
-  "content_hash": "5d99f4a08a33c124b3ec81cf125b7d87ab89707e4ea5a3728718d1c73a84da4d",
+  "content_hash": "65a0262f4efb1e3865d8f2ae0063b9bca26929145bddc646edb6e2e02b7c47d6",
   "grades": {
     "g1": {
       "grade_total": 80,
@@ -254,10 +254,10 @@
               "satisfied_by": [
                 "audio/readings/sei_on.mp3",
                 "audio/readings/ikiru_kun.mp3",
-                "audio/readings/nama_kun.mp3",
+                "audio/readings/umareru_kun.mp3",
                 "audio/surfaces/sensei_1.mp3",
                 "audio/surfaces/ikiru_1.mp3",
-                "audio/surfaces/namamono_1.mp3"
+                "audio/surfaces/umareru_1.mp3"
               ]
             }
           ]
@@ -493,10 +493,10 @@
         "satisfied_by": [
           "audio/readings/sei_on.mp3",
           "audio/readings/ikiru_kun.mp3",
-          "audio/readings/nama_kun.mp3",
+          "audio/readings/umareru_kun.mp3",
           "audio/surfaces/sensei_1.mp3",
           "audio/surfaces/ikiru_1.mp3",
-          "audio/surfaces/namamono_1.mp3"
+          "audio/surfaces/umareru_1.mp3"
         ]
       }
     ],

@@ -1,14 +1,17 @@
 character: 犬
 grade: 1
 taught_readings:
-  - id: ken_on
-    kana: ケン
-    type: on
-    audio: audio/readings/ken_on.mp3
-  - id: inu_kun
-    kana: いぬ
-    type: kun
-    audio: audio/readings/inu_kun.mp3
+  entries:
+    - id: ken_on
+      kana: ケン
+      type: on
+      audio: audio/readings/ken_on.mp3
+    - id: inu_kun
+      kana: いぬ
+      type: kun
+      audio: audio/readings/inu_kun.mp3
+  rationale: いぬは身近などうぶつとしての基本読み。
+  anchor: inu_kun
 meaning:
   gloss_ja: ワンと なく どうぶつ、いぬ。
   category: animal

@@ -1,14 +1,17 @@
 character: 力
 grade: 1
 taught_readings:
-  - id: ryoku_on
-    kana: リョク
-    type: on
-    audio: audio/readings/ryoku_on.mp3
-  - id: chikara_kun
-    kana: ちから
-    type: kun
-    audio: audio/readings/chikara_kun.mp3
+  entries:
+    - id: ryoku_on
+      kana: リョク
+      type: on
+      audio: audio/readings/ryoku_on.mp3
+    - id: chikara_kun
+      kana: ちから
+      type: kun
+      audio: audio/readings/chikara_kun.mp3
+  rationale: ちからは体の感覚として理解しやすい基本読み。
+  anchor: chikara_kun
 meaning:
   gloss_ja: ものを うごかす ちから。
   category: concept

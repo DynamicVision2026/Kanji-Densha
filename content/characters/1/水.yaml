@@ -1,14 +1,17 @@
 character: 水
 grade: 1
 taught_readings:
-  - id: sui_on
-    kana: スイ
-    type: on
-    audio: audio/readings/sui_on.mp3
-  - id: mizu_kun
-    kana: みず
-    type: kun
-    audio: audio/readings/mizu_kun.mp3
+  entries:
+    - id: sui_on
+      kana: スイ
+      type: on
+      audio: audio/readings/sui_on.mp3
+    - id: mizu_kun
+      kana: みず
+      type: kun
+      audio: audio/readings/mizu_kun.mp3
+  rationale: 水よう日など曜日の語彙で学年に位置づけられる。
+  anchor: sui_on
 meaning:
   gloss_ja: のむ みず。ながれる みず。
   category: nature

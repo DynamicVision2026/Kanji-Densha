@@ -40,5 +40,7 @@ authority should always move in this codebase.
 
 | **D18** | `teach_ready` is never softened to let a milestone go green. M2 lands with `teach_ready: 0` and twenty characters listed `audio_pending`; the manifest gains a `pending` section naming the unmet checklist item and the file that would satisfy it. A gate that can only say yes is not a gate. | M2 exit criteria, I9 |
 
+| **D19** | `taught_readings` gains a required one-line `rationale`, and each character declares an **anchor reading** — the taught reading that justifies its grade placement. The gate rejects a record whose `taught_readings` omits its anchor. Judgment at 1,026 characters must be recorded, not inferred. | M2 schema, `docs/reviews/m2-architect-review.md` |
+
 **Still open:** Q14 (whether to license a 教科書体 for the hero character) — a budget
 decision, not a build blocker, since it is one CSS token.

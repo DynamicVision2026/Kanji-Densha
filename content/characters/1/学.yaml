@@ -1,14 +1,17 @@
 character: 学
 grade: 1
 taught_readings:
-  - id: gaku_on
-    kana: ガク
-    type: on
-    audio: audio/readings/gaku_on.mp3
-  - id: manabu_kun
-    kana: まなぶ
-    type: kun
-    audio: audio/readings/manabu_kun.mp3
+  entries:
+    - id: gaku_on
+      kana: ガク
+      type: on
+      audio: audio/readings/gaku_on.mp3
+    - id: manabu_kun
+      kana: まなぶ
+      type: kun
+      audio: audio/readings/manabu_kun.mp3
+  rationale: 学校・入学など学年配当語彙の中心はガク。まなぶは動作としての基本読み。
+  anchor: gaku_on
 meaning:
   gloss_ja: べんきょうを して まなぶ こと。
   category: concept

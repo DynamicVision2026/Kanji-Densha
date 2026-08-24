@@ -1,10 +1,13 @@
 character: 川
 grade: 1
 taught_readings:
-  - id: kawa_kun
-    kana: かわ
-    type: kun
-    audio: audio/readings/kawa_kun.mp3
+  entries:
+    - id: kawa_kun
+      kana: かわ
+      type: kun
+      audio: audio/readings/kawa_kun.mp3
+  rationale: 小学校で習う音訓は かわ のみ。セン は中学校で学ぶ（D15）。
+  anchor: kawa_kun
 meaning:
   gloss_ja: みずが ながれる ところ。
   category: nature

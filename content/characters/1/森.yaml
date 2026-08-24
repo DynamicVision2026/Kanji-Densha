@@ -1,14 +1,17 @@
 character: 森
 grade: 1
 taught_readings:
-  - id: shin_on
-    kana: シン
-    type: on
-    audio: audio/readings/shin_on.mp3
-  - id: mori_kun
-    kana: もり
-    type: kun
-    audio: audio/readings/mori_kun.mp3
+  entries:
+    - id: shin_on
+      kana: シン
+      type: on
+      audio: audio/readings/shin_on.mp3
+    - id: mori_kun
+      kana: もり
+      type: kun
+      audio: audio/readings/mori_kun.mp3
+  rationale: もりは林よりも多くの木が集まった様子を表す基本読み。
+  anchor: mori_kun
 meaning:
   gloss_ja: きが とても たくさん ある ところ。
   category: nature

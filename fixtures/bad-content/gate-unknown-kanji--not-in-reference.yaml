@@ -2,20 +2,44 @@
 character: ゆ
 grade: 1
 taught_readings:
-  - id: yu_kun
-    kana: ゆ
-    type: kun
-    audio: audio/readings/yu_kun.mp3
-meaning: { gloss_ja: おふろ, category: object }
-encounter: { template: bath-ink, art: null, copy_ja: ゆ }
+  entries:
+    - id: yu_kun
+      kana: ゆ
+      type: kun
+      audio: audio/readings/yu_kun.mp3
+  rationale: フィクスチャ用のダミー根拠（内容判断なし）。
+  anchor: yu_kun
+meaning:
+  gloss_ja: おふろ
+  category: object
+encounter:
+  template: bath-ink
+  art: null
+  copy_ja: ゆ
 surfaces:
-  - { id: yu_1, word: ゆ, reading_id: yu_kun, audio: audio/surfaces/yu_1.mp3 }
-  - { id: yu_2, word: おゆ, reading_id: yu_kun, audio: audio/surfaces/yu_2.mp3 }
-shape: { published: true, kind: primitive, strokes: [{ order: 1, type: tate, a11y_ja: たて }] }
+  - id: yu_1
+    word: ゆ
+    reading_id: yu_kun
+    audio: audio/surfaces/yu_1.mp3
+  - id: yu_2
+    word: おゆ
+    reading_id: yu_kun
+    audio: audio/surfaces/yu_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: たて
 items:
   - id: yu-r-1
     type: reading_choice
     lamp: reading
     reading_id: yu_kun
-    choices: [{ kana: ゆ, correct: true }, { kana: み, correct: false }]
+    choices:
+      - kana: ゆ
+        correct: true
+      - kana: み
+        correct: false
 status: published

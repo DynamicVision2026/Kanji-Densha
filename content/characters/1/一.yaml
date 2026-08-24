@@ -1,14 +1,17 @@
 character: 一
 grade: 1
 taught_readings:
-  - id: ichi_on
-    kana: イチ
-    type: on
-    audio: audio/readings/ichi_on.mp3
-  - id: hitotsu_kun
-    kana: ひとつ
-    type: kun
-    audio: audio/readings/hitotsu_kun.mp3
+  entries:
+    - id: ichi_on
+      kana: イチ
+      type: on
+      audio: audio/readings/ichi_on.mp3
+    - id: hitotsu_kun
+      kana: ひとつ
+      type: kun
+      audio: audio/readings/hitotsu_kun.mp3
+  rationale: 一年生・一つ など学年配当語彙の中心はオンのイチ。ひとつは日常のかぞえかた。
+  anchor: ichi_on
 meaning:
   gloss_ja: かず の いち。ひとつ。
   category: number

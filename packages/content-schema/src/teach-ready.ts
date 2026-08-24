@@ -27,7 +27,7 @@ export function teachReady(
 
   // Every declared audio file (taught readings + word surfaces) must exist.
   const declared = [
-    ...char.taught_readings.map((r) => r.audio),
+    ...char.taught_readings.entries.map((r) => r.audio),
     ...char.surfaces.map((s) => s.audio),
   ];
   const missing = [...new Set(declared.filter((f) => !audioExists(f)))];

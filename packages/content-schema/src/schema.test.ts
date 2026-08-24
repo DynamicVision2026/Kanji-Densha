@@ -6,7 +6,11 @@ function validRecord(): unknown {
   return {
     character: '山',
     grade: 1,
-    taught_readings: [{ id: 'yama', kana: 'やま', type: 'kun', audio: 'audio/山/yama.mp3' }],
+    taught_readings: {
+      entries: [{ id: 'yama', kana: 'やま', type: 'kun', audio: 'audio/山/yama.mp3' }],
+      rationale: 'test fixture',
+      anchor: 'yama',
+    },
     meaning: { gloss_ja: 'たかく もりあがった ところ', category: 'nature' },
     encounter: { art: 'art/山/encounter.webp', template: null, copy_ja: 'やまに のぼるよ。' },
     surfaces: [
@@ -40,6 +44,18 @@ describe('authoredCharacterSchema', () => {
   it('I1: a lamp given as an array is unparseable', () => {
     const bad = validRecord() as Record<string, unknown>;
     (bad.items as { lamp: unknown }[])[0]!.lamp = ['reading'];
+    expect(authoredCharacterSchema.safeParse(bad).success).toBe(false);
+  });
+
+  it('D19: an anchor not present in taught_readings.entries is unparseable', () => {
+    const bad = validRecord() as Record<string, unknown>;
+    (bad.taught_readings as { anchor: string }).anchor = 'not-a-real-id';
+    expect(authoredCharacterSchema.safeParse(bad).success).toBe(false);
+  });
+
+  it('D19: rationale is required on taught_readings', () => {
+    const bad = validRecord() as Record<string, unknown>;
+    delete (bad.taught_readings as Record<string, unknown>).rationale;
     expect(authoredCharacterSchema.safeParse(bad).success).toBe(false);
   });
 

@@ -1,14 +1,17 @@
 character: 日
 grade: 1
 taught_readings:
-  - id: nichi_on
-    kana: ニチ
-    type: on
-    audio: audio/readings/nichi_on.mp3
-  - id: hi_kun
-    kana: ひ
-    type: kun
-    audio: audio/readings/hi_kun.mp3
+  entries:
+    - id: nichi_on
+      kana: ニチ
+      type: on
+      audio: audio/readings/nichi_on.mp3
+    - id: hi_kun
+      kana: ひ
+      type: kun
+      audio: audio/readings/hi_kun.mp3
+  rationale: 日よう日など曜日の語彙が一年生の学年配当語彙の中心。
+  anchor: nichi_on
 meaning:
   gloss_ja: そらに でる おひさま。ひ。
   category: nature

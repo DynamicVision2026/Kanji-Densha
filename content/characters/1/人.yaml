@@ -1,14 +1,17 @@
 character: 人
 grade: 1
 taught_readings:
-  - id: jin_on
-    kana: ジン
-    type: on
-    audio: audio/readings/jin_on.mp3
-  - id: hito_kun
-    kana: ひと
-    type: kun
-    audio: audio/readings/hito_kun.mp3
+  entries:
+    - id: jin_on
+      kana: ジン
+      type: on
+      audio: audio/readings/jin_on.mp3
+    - id: hito_kun
+      kana: ひと
+      type: kun
+      audio: audio/readings/hito_kun.mp3
+  rationale: ひとは日常語彙としての基本読み。
+  anchor: hito_kun
 meaning:
   gloss_ja: にんげん。ひと。
   category: people

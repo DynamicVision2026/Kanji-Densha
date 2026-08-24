@@ -1,14 +1,17 @@
 character: 林
 grade: 1
 taught_readings:
-  - id: rin_on
-    kana: リン
-    type: on
-    audio: audio/readings/rin_on.mp3
-  - id: hayashi_kun
-    kana: はやし
-    type: kun
-    audio: audio/readings/hayashi_kun.mp3
+  entries:
+    - id: rin_on
+      kana: リン
+      type: on
+      audio: audio/readings/rin_on.mp3
+    - id: hayashi_kun
+      kana: はやし
+      type: kun
+      audio: audio/readings/hayashi_kun.mp3
+  rationale: はやしは木が集まった具体的な様子を表す基本読み。
+  anchor: hayashi_kun
 meaning:
   gloss_ja: きが たくさん ある ところ。
   category: nature

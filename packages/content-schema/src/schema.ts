@@ -27,6 +27,21 @@ export const taughtReadingSchema = z.strictObject({
   audio: z.string().min(1),
 });
 
+// D19: the curated subset must record WHY it was chosen (`rationale`, one line)
+// and WHICH taught reading justifies the character's grade placement (`anchor`).
+// The anchor-must-be-a-taught-reading rule is structural — made unparseable here,
+// not left to the gate — because it needs no data outside the record itself.
+export const taughtReadingsSchema = z
+  .strictObject({
+    entries: z.array(taughtReadingSchema).min(1),
+    rationale: z.string().min(1),
+    anchor: z.string().min(1),
+  })
+  .refine((tr) => tr.entries.some((e) => e.id === tr.anchor), {
+    message: 'anchor must reference an id present in entries (D19)',
+    path: ['anchor'],
+  });
+
 export const surfaceSchema = z.strictObject({
   id: z.string().min(1),
   word: nfcString(),
@@ -134,7 +149,7 @@ export const meaningSchema = z.strictObject({
 export const authoredCharacterSchema = z.strictObject({
   character: nfcString(),
   grade: z.number().int().min(1).max(6),
-  taught_readings: z.array(taughtReadingSchema).min(1),
+  taught_readings: taughtReadingsSchema,
   meaning: meaningSchema,
   encounter: encounterSchema,
   surfaces: z.array(surfaceSchema).min(1),
@@ -148,3 +163,4 @@ export type AuthoredCharacter = z.infer<typeof authoredCharacterSchema>;
 export type Item = z.infer<typeof itemSchema>;
 export type Shape = z.infer<typeof shapeSchema>;
 export type TaughtReading = z.infer<typeof taughtReadingSchema>;
+export type TaughtReadings = z.infer<typeof taughtReadingsSchema>;

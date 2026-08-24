@@ -1,14 +1,17 @@
 character: 目
 grade: 1
 taught_readings:
-  - id: moku_on2
-    kana: モク
-    type: on
-    audio: audio/readings/moku_on2.mp3
-  - id: me_kun
-    kana: め
-    type: kun
-    audio: audio/readings/me_kun.mp3
+  entries:
+    - id: moku_on2
+      kana: モク
+      type: on
+      audio: audio/readings/moku_on2.mp3
+    - id: me_kun
+      kana: め
+      type: kun
+      audio: audio/readings/me_kun.mp3
+  rationale: めは体の部位としての基本読み。
+  anchor: me_kun
 meaning:
   gloss_ja: ものを みる め。
   category: body

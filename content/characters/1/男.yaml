@@ -1,14 +1,17 @@
 character: 男
 grade: 1
 taught_readings:
-  - id: dan_on
-    kana: ダン
-    type: on
-    audio: audio/readings/dan_on.mp3
-  - id: otoko_kun
-    kana: おとこ
-    type: kun
-    audio: audio/readings/otoko_kun.mp3
+  entries:
+    - id: dan_on
+      kana: ダン
+      type: on
+      audio: audio/readings/dan_on.mp3
+    - id: otoko_kun
+      kana: おとこ
+      type: kun
+      audio: audio/readings/otoko_kun.mp3
+  rationale: おとこは日常語彙としての基本読み。
+  anchor: otoko_kun
 meaning:
   gloss_ja: おとこの ひと。
   category: people

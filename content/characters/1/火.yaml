@@ -1,14 +1,17 @@
 character: 火
 grade: 1
 taught_readings:
-  - id: ka_on
-    kana: カ
-    type: on
-    audio: audio/readings/ka_on.mp3
-  - id: hi_kun
-    kana: ひ
-    type: kun
-    audio: audio/readings/hi_kun.mp3
+  entries:
+    - id: ka_on
+      kana: カ
+      type: on
+      audio: audio/readings/ka_on.mp3
+    - id: hi_kun
+      kana: ひ
+      type: kun
+      audio: audio/readings/hi_kun.mp3
+  rationale: 火よう日など曜日の語彙で学年に位置づけられる。
+  anchor: ka_on
 meaning:
   gloss_ja: あかくて あつい ひ。もえる ひ。
   category: nature

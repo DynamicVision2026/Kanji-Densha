@@ -1,14 +1,17 @@
 character: 本
 grade: 1
 taught_readings:
-  - id: hon_on
-    kana: ホン
-    type: on
-    audio: audio/readings/hon_on.mp3
-  - id: moto_kun
-    kana: もと
-    type: kun
-    audio: audio/readings/moto_kun.mp3
+  entries:
+    - id: hon_on
+      kana: ホン
+      type: on
+      audio: audio/readings/hon_on.mp3
+    - id: moto_kun
+      kana: もと
+      type: kun
+      audio: audio/readings/moto_kun.mp3
+  rationale: 「ほん」という語そのものが一年生の学年配当語彙。もとは後の学年で語彙が広がる。
+  anchor: hon_on
 meaning:
   gloss_ja: よむ ほん。
   category: object

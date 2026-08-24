@@ -1,18 +1,21 @@
 character: 生
 grade: 1
 taught_readings:
-  - id: sei_on
-    kana: セイ
-    type: on
-    audio: audio/readings/sei_on.mp3
-  - id: ikiru_kun
-    kana: いきる
-    type: kun
-    audio: audio/readings/ikiru_kun.mp3
-  - id: nama_kun
-    kana: なま
-    type: kun
-    audio: audio/readings/nama_kun.mp3
+  entries:
+    - id: sei_on
+      kana: セイ
+      type: on
+      audio: audio/readings/sei_on.mp3
+    - id: ikiru_kun
+      kana: いきる
+      type: kun
+      audio: audio/readings/ikiru_kun.mp3
+    - id: umareru_kun
+      kana: うまれる
+      type: kun
+      audio: audio/readings/umareru_kun.mp3
+  rationale: 先生・一年生のセイと、子どもの生活にある うまれる・いきる。なまは意味の系統が違うため後の学年で。
+  anchor: sei_on
 meaning:
   gloss_ja: いきて いる こと。うまれる こと。
   category: concept
@@ -29,10 +32,10 @@ surfaces:
     word: 生きる
     reading_id: ikiru_kun
     audio: audio/surfaces/ikiru_1.mp3
-  - id: namamono_1
-    word: 生もの
-    reading_id: nama_kun
-    audio: audio/surfaces/namamono_1.mp3
+  - id: umareru_1
+    word: 生まれる
+    reading_id: umareru_kun
+    audio: audio/surfaces/umareru_1.mp3
 shape:
   published: true
   kind: primitive

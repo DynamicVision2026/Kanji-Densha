@@ -3,23 +3,44 @@
 character: 学
 grade: 1
 taught_readings:
-  - id: gaku_on
-    kana: ガク
-    type: on
-    audio: audio/readings/gaku_on.mp3
-meaning: { gloss_ja: まなぶ こと, category: concept }
-encounter: { template: study-ink, art: null, copy_ja: がっこう }
+  entries:
+    - id: gaku_on
+      kana: ガク
+      type: on
+      audio: audio/readings/gaku_on.mp3
+  rationale: フィクスチャ用のダミー根拠（内容判断なし）。
+  anchor: gaku_on
+meaning:
+  gloss_ja: まなぶ こと
+  category: concept
+encounter:
+  template: study-ink
+  art: null
+  copy_ja: がっこう
 surfaces:
-  - { id: manabu_1, word: 学ぶ, reading_id: gaku_on, audio: audio/surfaces/manabu_1.mp3 }
-  - { id: gakkou_1, word: 学校, reading_id: gaku_on, audio: audio/surfaces/gakkou_1.mp3 }
+  - id: manabu_1
+    word: 学ぶ
+    reading_id: gaku_on
+    audio: audio/surfaces/manabu_1.mp3
+  - id: gakkou_1
+    word: 学校
+    reading_id: gaku_on
+    audio: audio/surfaces/gakkou_1.mp3
 shape:
   published: false
-  kind: primitive  # <-- forbidden alongside published:false
-  strokes: [{ order: 1, type: tate, a11y_ja: たて }]
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: たて
 items:
   - id: 学-r-1
     type: reading_choice
     lamp: reading
     reading_id: gaku_on
-    choices: [{ kana: ガク, correct: true }, { kana: ダイ, correct: false }]
+    choices:
+      - kana: ガク
+        correct: true
+      - kana: ダイ
+        correct: false
 status: published

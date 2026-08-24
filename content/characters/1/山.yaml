@@ -1,14 +1,17 @@
 character: 山
 grade: 1
 taught_readings:
-  - id: san_on
-    kana: サン
-    type: on
-    audio: audio/readings/san_on.mp3
-  - id: yama_kun
-    kana: やま
-    type: kun
-    audio: audio/readings/yama_kun.mp3
+  entries:
+    - id: san_on
+      kana: サン
+      type: on
+      audio: audio/readings/san_on.mp3
+    - id: yama_kun
+      kana: やま
+      type: kun
+      audio: audio/readings/yama_kun.mp3
+  rationale: やまは具体物としての第一義の読み。サンは火山などの熟語で後から出会う。
+  anchor: yama_kun
 meaning:
   gloss_ja: たかく もりあがった ところ。
   category: nature

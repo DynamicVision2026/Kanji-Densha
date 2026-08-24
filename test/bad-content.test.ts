@@ -5,13 +5,20 @@
 // parses but fails cross-reference against the national table. A gate that
 // rejects for the wrong reason is a gate that will pass the wrong record later
 // — so each fixture asserts WHICH error fires, not just that something did.
+//
+// The completeness check below derives its expected-code list from
+// GATE_ERROR_CODES (gate.ts's own exported array), not a second hand-typed
+// copy. A hand-typed copy is exactly how this check went vacuously green once
+// already — a mismatch between filenames and gate.ts codes did not fail the
+// build because the check trusted filenames as its own source of truth. It now
+// asserts against the gate itself, so it cannot drift from it again.
 import { describe, it, expect } from 'vitest';
 import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { authoredCharacterSchema } from '../packages/content-schema/src/schema';
-import { gateCharacter } from '../packages/content-build/src/gate';
+import { gateCharacter, GATE_ERROR_CODES } from '../packages/content-build/src/gate';
 import { loadReference } from '../packages/content-build/src/reference';
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -20,32 +27,21 @@ const reference = loadReference(repoRoot);
 
 const files = readdirSync(fixturesDir).filter((f) => f.endsWith('.yaml'));
 
+// "schema--..." -> "schema"; "gate-<code>--..." -> "<code>" (gate.ts error codes).
+function expectedCodeFor(filename: string): string {
+  const prefix = filename.split('--')[0] ?? '';
+  return prefix === 'schema' ? 'schema' : prefix.replace(/^gate-/, '');
+}
+
 describe('bad-content rejection suite', () => {
-  it('every rule declared in this milestone has a fixture', () => {
-    const expectedCodes = [
-      'schema',
-      'unknown-kanji',
-      'grade-mismatch',
-      'later-reading',
-      'not-elementary',
-      'reading-item-unresolved',
-      'surface-unresolved',
-      'duplicate-a11y',
-      'shape-item-without-published-shape',
-    ];
-    const present = new Set(
-      files.map((f) => {
-        const prefix = f.split('--')[0] ?? '';
-        return prefix === 'schema' ? 'schema' : prefix.replace(/^gate-/, '');
-      }),
-    );
+  it('every code the gate can produce, plus schema, has a fixture', () => {
+    const expectedCodes: string[] = ['schema', ...GATE_ERROR_CODES];
+    const present = new Set(files.map(expectedCodeFor));
     for (const code of expectedCodes) expect(present.has(code)).toBe(true);
   });
 
   for (const file of files.sort()) {
-    // "schema--..." -> "schema"; "gate-<code>--..." -> "<code>" (gate.ts error codes).
-    const prefix = file.split('--')[0] ?? '';
-    const expectedCode = prefix === 'schema' ? 'schema' : prefix.replace(/^gate-/, '');
+    const expectedCode = expectedCodeFor(file);
 
     it(`${file} is rejected, naming "${expectedCode}"`, () => {
       const raw = parseYaml(readFileSync(join(fixturesDir, file), 'utf8'));

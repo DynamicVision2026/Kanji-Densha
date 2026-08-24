@@ -1,14 +1,17 @@
 character: 月
 grade: 1
 taught_readings:
-  - id: getsu_on
-    kana: ゲツ
-    type: on
-    audio: audio/readings/getsu_on.mp3
-  - id: tsuki_kun
-    kana: つき
-    type: kun
-    audio: audio/readings/tsuki_kun.mp3
+  entries:
+    - id: getsu_on
+      kana: ゲツ
+      type: on
+      audio: audio/readings/getsu_on.mp3
+    - id: tsuki_kun
+      kana: つき
+      type: kun
+      audio: audio/readings/tsuki_kun.mp3
+  rationale: 月よう日など曜日の語彙で学年に位置づけられる。
+  anchor: getsu_on
 meaning:
   gloss_ja: よるに でる つき。
   category: nature

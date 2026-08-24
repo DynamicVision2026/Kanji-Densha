@@ -12,7 +12,16 @@ import { authoredCharacterSchema } from '@kanji-densha/content-schema';
 import type { AuthoredCharacter } from '@kanji-densha/content-schema';
 import { loadReference, repoRootFrom } from './reference.js';
 import { gateCharacter } from './gate.js';
-import type { GateError } from './gate.js';
+import type { GateError, GateErrorCode } from './gate.js';
+
+// Build-level errors happen before a record even reaches the gate (a YAML parse
+// failure, or a schema rejection with its Zod issue path) — 'yaml-parse' and
+// 'schema' are not gate.ts error codes and are deliberately excluded from
+// GATE_ERROR_CODES, which the rejection suite's completeness check iterates.
+type BuildErrorCode = GateErrorCode | 'yaml-parse' | 'schema';
+interface BuildError extends Omit<GateError, 'code'> {
+  readonly code: BuildErrorCode;
+}
 
 const repoRoot = repoRootFrom(import.meta.url);
 const charactersDir = join(repoRoot, 'content/characters');
@@ -45,7 +54,7 @@ function main(): void {
   const gradeTotals = perGradeTotals();
   const files = findRecords();
 
-  const hardErrors: GateError[] = [];
+  const hardErrors: BuildError[] = [];
   const published: {
     file: string;
     char: AuthoredCharacter;
@@ -136,7 +145,7 @@ function main(): void {
     };
     for (const p of list) {
       if (p.unmet.length > 0) pending[p.char.character] = p.unmet;
-      for (const a of [...p.char.taught_readings.map((r) => r.audio), ...p.char.surfaces.map((s) => s.audio)]) {
+      for (const a of [...p.char.taught_readings.entries.map((r) => r.audio), ...p.char.surfaces.map((s) => s.audio)]) {
         if (audioExists(a) && !audioManifest.includes(a)) audioManifest.push(a);
       }
     }

@@ -7,8 +7,27 @@ import type { AuthoredCharacter, UnmetItem } from '@kanji-densha/content-schema'
 import type { CharReadings, Reading } from './reference.js';
 import { readingKey } from './reference.js';
 
+// The full set of error codes gateCharacter can produce. This is the single
+// source of truth for "what can the gate reject and why" — the rejection
+// suite's completeness check (test/bad-content.test.ts) asserts against this
+// array rather than a hand-maintained copy, so a new code cannot go untested
+// by silently falling out of sync with a second list (the failure this review
+// caught: a completeness check that passed vacuously because it trusted
+// filenames instead of the gate itself).
+export const GATE_ERROR_CODES = [
+  'unknown-kanji',
+  'grade-mismatch',
+  'later-reading',
+  'not-elementary',
+  'reading-item-unresolved',
+  'surface-unresolved',
+  'shape-item-without-published-shape',
+  'duplicate-a11y',
+] as const;
+export type GateErrorCode = (typeof GATE_ERROR_CODES)[number];
+
 export interface GateError {
-  readonly code: string;
+  readonly code: GateErrorCode;
   readonly file: string;
   readonly character: string;
   readonly field: string;
@@ -32,7 +51,7 @@ export function gateCharacter(
   audioExists: (filename: string) => boolean,
 ): CharGateResult {
   const errors: GateError[] = [];
-  const err = (code: string, field: string, message: string) =>
+  const err = (code: GateErrorCode, field: string, message: string) =>
     errors.push({ code, file, character: char.character, field, message });
 
   const elementary = readings?.elementary ?? [];
@@ -47,20 +66,22 @@ export function gateCharacter(
   }
 
   // D14 / I4: every taught reading must be an elementary reading in the table.
+  // D19: the anchor-in-entries containment is structural (schema refine); the
+  // gate does not re-check it here, only that each taught reading is elementary.
   const elementaryKeys = new Set(elementary.map((r) => readingKey(r.type, r.kana)));
-  for (const tr of char.taught_readings) {
+  for (const tr of char.taught_readings.entries) {
     if (!elementaryKeys.has(readingKey(tr.type, tr.kana))) {
       const asLater = later.find((r) => r.kana === tr.kana.normalize('NFC'));
       if (asLater !== undefined) {
         err(
           'later-reading',
-          `taught_readings[${tr.id}]`,
+          `taught_readings.entries[${tr.id}]`,
           `${char.character}: taught reading ${tr.kana} (${tr.type}) is a ${asLater.stage} reading, not elementary — it may never light the reading lamp (I4)`,
         );
       } else {
         err(
           'not-elementary',
-          `taught_readings[${tr.id}]`,
+          `taught_readings.entries[${tr.id}]`,
           `${char.character}: taught reading ${tr.kana} (${tr.type}) is not among the character's elementary readings in the reference table (D14)`,
         );
       }
@@ -68,7 +89,7 @@ export function gateCharacter(
   }
 
   // Reading items and surfaces must resolve to a declared taught reading.
-  const taughtIds = new Set(char.taught_readings.map((t) => t.id));
+  const taughtIds = new Set(char.taught_readings.entries.map((t) => t.id));
   for (const item of char.items) {
     if (item.type === 'reading_choice' && !taughtIds.has(item.reading_id)) {
       err('reading-item-unresolved', `items[${item.id}].reading_id`, `reading item ${item.id} references reading_id "${item.reading_id}", which is not a taught reading of ${char.character}`);

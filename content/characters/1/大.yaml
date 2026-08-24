@@ -1,14 +1,17 @@
 character: 大
 grade: 1
 taught_readings:
-  - id: dai_on
-    kana: ダイ
-    type: on
-    audio: audio/readings/dai_on.mp3
-  - id: ookii_kun
-    kana: おおきい
-    type: kun
-    audio: audio/readings/ookii_kun.mp3
+  entries:
+    - id: dai_on
+      kana: ダイ
+      type: on
+      audio: audio/readings/dai_on.mp3
+    - id: ookii_kun
+      kana: おおきい
+      type: kun
+      audio: audio/readings/ookii_kun.mp3
+  rationale: おおきいは対義語（ちいさい）とともに一年生で身につく基本語彙。
+  anchor: ookii_kun
 meaning:
   gloss_ja: おおきい こと。
   category: concept

@@ -2,20 +2,24 @@
   {
     "character": "一",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "ichi_on",
-        "kana": "イチ",
-        "type": "on",
-        "audio": "audio/readings/ichi_on.mp3"
-      },
-      {
-        "id": "hitotsu_kun",
-        "kana": "ひとつ",
-        "type": "kun",
-        "audio": "audio/readings/hitotsu_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "ichi_on",
+          "kana": "イチ",
+          "type": "on",
+          "audio": "audio/readings/ichi_on.mp3"
+        },
+        {
+          "id": "hitotsu_kun",
+          "kana": "ひとつ",
+          "type": "kun",
+          "audio": "audio/readings/hitotsu_kun.mp3"
+        }
+      ],
+      "rationale": "一年生・一つ など学年配当語彙の中心はオンのイチ。ひとつは日常のかぞえかた。",
+      "anchor": "ichi_on"
+    },
     "meaning": {
       "gloss_ja": "かず の いち。ひとつ。",
       "category": "number"
@@ -135,20 +139,24 @@
   {
     "character": "人",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "jin_on",
-        "kana": "ジン",
-        "type": "on",
-        "audio": "audio/readings/jin_on.mp3"
-      },
-      {
-        "id": "hito_kun",
-        "kana": "ひと",
-        "type": "kun",
-        "audio": "audio/readings/hito_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "jin_on",
+          "kana": "ジン",
+          "type": "on",
+          "audio": "audio/readings/jin_on.mp3"
+        },
+        {
+          "id": "hito_kun",
+          "kana": "ひと",
+          "type": "kun",
+          "audio": "audio/readings/hito_kun.mp3"
+        }
+      ],
+      "rationale": "ひとは日常語彙としての基本読み。",
+      "anchor": "hito_kun"
+    },
     "meaning": {
       "gloss_ja": "にんげん。ひと。",
       "category": "people"
@@ -269,20 +277,24 @@
   {
     "character": "力",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "ryoku_on",
-        "kana": "リョク",
-        "type": "on",
-        "audio": "audio/readings/ryoku_on.mp3"
-      },
-      {
-        "id": "chikara_kun",
-        "kana": "ちから",
-        "type": "kun",
-        "audio": "audio/readings/chikara_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "ryoku_on",
+          "kana": "リョク",
+          "type": "on",
+          "audio": "audio/readings/ryoku_on.mp3"
+        },
+        {
+          "id": "chikara_kun",
+          "kana": "ちから",
+          "type": "kun",
+          "audio": "audio/readings/chikara_kun.mp3"
+        }
+      ],
+      "rationale": "ちからは体の感覚として理解しやすい基本読み。",
+      "anchor": "chikara_kun"
+    },
     "meaning": {
       "gloss_ja": "ものを うごかす ちから。",
       "category": "concept"
@@ -403,20 +415,24 @@
   {
     "character": "大",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "dai_on",
-        "kana": "ダイ",
-        "type": "on",
-        "audio": "audio/readings/dai_on.mp3"
-      },
-      {
-        "id": "ookii_kun",
-        "kana": "おおきい",
-        "type": "kun",
-        "audio": "audio/readings/ookii_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "dai_on",
+          "kana": "ダイ",
+          "type": "on",
+          "audio": "audio/readings/dai_on.mp3"
+        },
+        {
+          "id": "ookii_kun",
+          "kana": "おおきい",
+          "type": "kun",
+          "audio": "audio/readings/ookii_kun.mp3"
+        }
+      ],
+      "rationale": "おおきいは対義語（ちいさい）とともに一年生で身につく基本語彙。",
+      "anchor": "ookii_kun"
+    },
     "meaning": {
       "gloss_ja": "おおきい こと。",
       "category": "concept"
@@ -550,20 +566,24 @@
   {
     "character": "学",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "gaku_on",
-        "kana": "ガク",
-        "type": "on",
-        "audio": "audio/readings/gaku_on.mp3"
-      },
-      {
-        "id": "manabu_kun",
-        "kana": "まなぶ",
-        "type": "kun",
-        "audio": "audio/readings/manabu_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "gaku_on",
+          "kana": "ガク",
+          "type": "on",
+          "audio": "audio/readings/gaku_on.mp3"
+        },
+        {
+          "id": "manabu_kun",
+          "kana": "まなぶ",
+          "type": "kun",
+          "audio": "audio/readings/manabu_kun.mp3"
+        }
+      ],
+      "rationale": "学校・入学など学年配当語彙の中心はガク。まなぶは動作としての基本読み。",
+      "anchor": "gaku_on"
+    },
     "meaning": {
       "gloss_ja": "べんきょうを して まなぶ こと。",
       "category": "concept"
@@ -662,20 +682,24 @@
   {
     "character": "山",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "san_on",
-        "kana": "サン",
-        "type": "on",
-        "audio": "audio/readings/san_on.mp3"
-      },
-      {
-        "id": "yama_kun",
-        "kana": "やま",
-        "type": "kun",
-        "audio": "audio/readings/yama_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "san_on",
+          "kana": "サン",
+          "type": "on",
+          "audio": "audio/readings/san_on.mp3"
+        },
+        {
+          "id": "yama_kun",
+          "kana": "やま",
+          "type": "kun",
+          "audio": "audio/readings/yama_kun.mp3"
+        }
+      ],
+      "rationale": "やまは具体物としての第一義の読み。サンは火山などの熟語で後から出会う。",
+      "anchor": "yama_kun"
+    },
     "meaning": {
       "gloss_ja": "たかく もりあがった ところ。",
       "category": "nature"
@@ -797,14 +821,18 @@
   {
     "character": "川",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "kawa_kun",
-        "kana": "かわ",
-        "type": "kun",
-        "audio": "audio/readings/kawa_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "kawa_kun",
+          "kana": "かわ",
+          "type": "kun",
+          "audio": "audio/readings/kawa_kun.mp3"
+        }
+      ],
+      "rationale": "小学校で習う音訓は かわ のみ。セン は中学校で学ぶ（D15）。",
+      "anchor": "kawa_kun"
+    },
     "meaning": {
       "gloss_ja": "みずが ながれる ところ。",
       "category": "nature"
@@ -928,20 +956,24 @@
   {
     "character": "日",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "nichi_on",
-        "kana": "ニチ",
-        "type": "on",
-        "audio": "audio/readings/nichi_on.mp3"
-      },
-      {
-        "id": "hi_kun",
-        "kana": "ひ",
-        "type": "kun",
-        "audio": "audio/readings/hi_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "nichi_on",
+          "kana": "ニチ",
+          "type": "on",
+          "audio": "audio/readings/nichi_on.mp3"
+        },
+        {
+          "id": "hi_kun",
+          "kana": "ひ",
+          "type": "kun",
+          "audio": "audio/readings/hi_kun.mp3"
+        }
+      ],
+      "rationale": "日よう日など曜日の語彙が一年生の学年配当語彙の中心。",
+      "anchor": "nichi_on"
+    },
     "meaning": {
       "gloss_ja": "そらに でる おひさま。ひ。",
       "category": "nature"
@@ -1076,20 +1108,24 @@
   {
     "character": "月",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "getsu_on",
-        "kana": "ゲツ",
-        "type": "on",
-        "audio": "audio/readings/getsu_on.mp3"
-      },
-      {
-        "id": "tsuki_kun",
-        "kana": "つき",
-        "type": "kun",
-        "audio": "audio/readings/tsuki_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "getsu_on",
+          "kana": "ゲツ",
+          "type": "on",
+          "audio": "audio/readings/getsu_on.mp3"
+        },
+        {
+          "id": "tsuki_kun",
+          "kana": "つき",
+          "type": "kun",
+          "audio": "audio/readings/tsuki_kun.mp3"
+        }
+      ],
+      "rationale": "月よう日など曜日の語彙で学年に位置づけられる。",
+      "anchor": "getsu_on"
+    },
     "meaning": {
       "gloss_ja": "よるに でる つき。",
       "category": "nature"
@@ -1220,20 +1256,24 @@
   {
     "character": "木",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "moku_on",
-        "kana": "モク",
-        "type": "on",
-        "audio": "audio/readings/moku_on.mp3"
-      },
-      {
-        "id": "ki_kun",
-        "kana": "き",
-        "type": "kun",
-        "audio": "audio/readings/ki_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "moku_on",
+          "kana": "モク",
+          "type": "on",
+          "audio": "audio/readings/moku_on.mp3"
+        },
+        {
+          "id": "ki_kun",
+          "kana": "き",
+          "type": "kun",
+          "audio": "audio/readings/ki_kun.mp3"
+        }
+      ],
+      "rationale": "きは具体物としての基本読み。林・森の部品としても機能する。",
+      "anchor": "ki_kun"
+    },
     "meaning": {
       "gloss_ja": "はっぱ が でる き。",
       "category": "nature"
@@ -1370,20 +1410,24 @@
   {
     "character": "本",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "hon_on",
-        "kana": "ホン",
-        "type": "on",
-        "audio": "audio/readings/hon_on.mp3"
-      },
-      {
-        "id": "moto_kun",
-        "kana": "もと",
-        "type": "kun",
-        "audio": "audio/readings/moto_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "hon_on",
+          "kana": "ホン",
+          "type": "on",
+          "audio": "audio/readings/hon_on.mp3"
+        },
+        {
+          "id": "moto_kun",
+          "kana": "もと",
+          "type": "kun",
+          "audio": "audio/readings/moto_kun.mp3"
+        }
+      ],
+      "rationale": "「ほん」という語そのものが一年生の学年配当語彙。もとは後の学年で語彙が広がる。",
+      "anchor": "hon_on"
+    },
     "meaning": {
       "gloss_ja": "よむ ほん。",
       "category": "object"
@@ -1532,20 +1576,24 @@
   {
     "character": "林",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "rin_on",
-        "kana": "リン",
-        "type": "on",
-        "audio": "audio/readings/rin_on.mp3"
-      },
-      {
-        "id": "hayashi_kun",
-        "kana": "はやし",
-        "type": "kun",
-        "audio": "audio/readings/hayashi_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "rin_on",
+          "kana": "リン",
+          "type": "on",
+          "audio": "audio/readings/rin_on.mp3"
+        },
+        {
+          "id": "hayashi_kun",
+          "kana": "はやし",
+          "type": "kun",
+          "audio": "audio/readings/hayashi_kun.mp3"
+        }
+      ],
+      "rationale": "はやしは木が集まった具体的な様子を表す基本読み。",
+      "anchor": "hayashi_kun"
+    },
     "meaning": {
       "gloss_ja": "きが たくさん ある ところ。",
       "category": "nature"
@@ -1660,20 +1708,24 @@
   {
     "character": "森",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "shin_on",
-        "kana": "シン",
-        "type": "on",
-        "audio": "audio/readings/shin_on.mp3"
-      },
-      {
-        "id": "mori_kun",
-        "kana": "もり",
-        "type": "kun",
-        "audio": "audio/readings/mori_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "shin_on",
+          "kana": "シン",
+          "type": "on",
+          "audio": "audio/readings/shin_on.mp3"
+        },
+        {
+          "id": "mori_kun",
+          "kana": "もり",
+          "type": "kun",
+          "audio": "audio/readings/mori_kun.mp3"
+        }
+      ],
+      "rationale": "もりは林よりも多くの木が集まった様子を表す基本読み。",
+      "anchor": "mori_kun"
+    },
     "meaning": {
       "gloss_ja": "きが とても たくさん ある ところ。",
       "category": "nature"
@@ -1791,20 +1843,24 @@
   {
     "character": "水",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "sui_on",
-        "kana": "スイ",
-        "type": "on",
-        "audio": "audio/readings/sui_on.mp3"
-      },
-      {
-        "id": "mizu_kun",
-        "kana": "みず",
-        "type": "kun",
-        "audio": "audio/readings/mizu_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "sui_on",
+          "kana": "スイ",
+          "type": "on",
+          "audio": "audio/readings/sui_on.mp3"
+        },
+        {
+          "id": "mizu_kun",
+          "kana": "みず",
+          "type": "kun",
+          "audio": "audio/readings/mizu_kun.mp3"
+        }
+      ],
+      "rationale": "水よう日など曜日の語彙で学年に位置づけられる。",
+      "anchor": "sui_on"
+    },
     "meaning": {
       "gloss_ja": "のむ みず。ながれる みず。",
       "category": "nature"
@@ -1931,20 +1987,24 @@
   {
     "character": "火",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "ka_on",
-        "kana": "カ",
-        "type": "on",
-        "audio": "audio/readings/ka_on.mp3"
-      },
-      {
-        "id": "hi_kun",
-        "kana": "ひ",
-        "type": "kun",
-        "audio": "audio/readings/hi_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "ka_on",
+          "kana": "カ",
+          "type": "on",
+          "audio": "audio/readings/ka_on.mp3"
+        },
+        {
+          "id": "hi_kun",
+          "kana": "ひ",
+          "type": "kun",
+          "audio": "audio/readings/hi_kun.mp3"
+        }
+      ],
+      "rationale": "火よう日など曜日の語彙で学年に位置づけられる。",
+      "anchor": "ka_on"
+    },
     "meaning": {
       "gloss_ja": "あかくて あつい ひ。もえる ひ。",
       "category": "nature"
@@ -2076,20 +2136,24 @@
   {
     "character": "犬",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "ken_on",
-        "kana": "ケン",
-        "type": "on",
-        "audio": "audio/readings/ken_on.mp3"
-      },
-      {
-        "id": "inu_kun",
-        "kana": "いぬ",
-        "type": "kun",
-        "audio": "audio/readings/inu_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "ken_on",
+          "kana": "ケン",
+          "type": "on",
+          "audio": "audio/readings/ken_on.mp3"
+        },
+        {
+          "id": "inu_kun",
+          "kana": "いぬ",
+          "type": "kun",
+          "audio": "audio/readings/inu_kun.mp3"
+        }
+      ],
+      "rationale": "いぬは身近などうぶつとしての基本読み。",
+      "anchor": "inu_kun"
+    },
     "meaning": {
       "gloss_ja": "ワンと なく どうぶつ、いぬ。",
       "category": "animal"
@@ -2216,26 +2280,30 @@
   {
     "character": "生",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "sei_on",
-        "kana": "セイ",
-        "type": "on",
-        "audio": "audio/readings/sei_on.mp3"
-      },
-      {
-        "id": "ikiru_kun",
-        "kana": "いきる",
-        "type": "kun",
-        "audio": "audio/readings/ikiru_kun.mp3"
-      },
-      {
-        "id": "nama_kun",
-        "kana": "なま",
-        "type": "kun",
-        "audio": "audio/readings/nama_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "sei_on",
+          "kana": "セイ",
+          "type": "on",
+          "audio": "audio/readings/sei_on.mp3"
+        },
+        {
+          "id": "ikiru_kun",
+          "kana": "いきる",
+          "type": "kun",
+          "audio": "audio/readings/ikiru_kun.mp3"
+        },
+        {
+          "id": "umareru_kun",
+          "kana": "うまれる",
+          "type": "kun",
+          "audio": "audio/readings/umareru_kun.mp3"
+        }
+      ],
+      "rationale": "先生・一年生のセイと、子どもの生活にある うまれる・いきる。なまは意味の系統が違うため後の学年で。",
+      "anchor": "sei_on"
+    },
     "meaning": {
       "gloss_ja": "いきて いる こと。うまれる こと。",
       "category": "concept"
@@ -2259,10 +2327,10 @@
         "audio": "audio/surfaces/ikiru_1.mp3"
       },
       {
-        "id": "namamono_1",
-        "word": "生もの",
-        "reading_id": "nama_kun",
-        "audio": "audio/surfaces/namamono_1.mp3"
+        "id": "umareru_1",
+        "word": "生まれる",
+        "reading_id": "umareru_kun",
+        "audio": "audio/surfaces/umareru_1.mp3"
       }
     ],
     "shape": {
@@ -2405,10 +2473,10 @@
         "satisfied_by": [
           "audio/readings/sei_on.mp3",
           "audio/readings/ikiru_kun.mp3",
-          "audio/readings/nama_kun.mp3",
+          "audio/readings/umareru_kun.mp3",
           "audio/surfaces/sensei_1.mp3",
           "audio/surfaces/ikiru_1.mp3",
-          "audio/surfaces/namamono_1.mp3"
+          "audio/surfaces/umareru_1.mp3"
         ]
       }
     ]
@@ -2416,20 +2484,24 @@
   {
     "character": "田",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "den_on",
-        "kana": "デン",
-        "type": "on",
-        "audio": "audio/readings/den_on.mp3"
-      },
-      {
-        "id": "ta_kun",
-        "kana": "た",
-        "type": "kun",
-        "audio": "audio/readings/ta_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "den_on",
+          "kana": "デン",
+          "type": "on",
+          "audio": "audio/readings/den_on.mp3"
+        },
+        {
+          "id": "ta_kun",
+          "kana": "た",
+          "type": "kun",
+          "audio": "audio/readings/ta_kun.mp3"
+        }
+      ],
+      "rationale": "たは具体物としての基本読み。男の部品としても使われる。",
+      "anchor": "ta_kun"
+    },
     "meaning": {
       "gloss_ja": "こめを つくる た。たんぼ。",
       "category": "nature"
@@ -2561,20 +2633,24 @@
   {
     "character": "男",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "dan_on",
-        "kana": "ダン",
-        "type": "on",
-        "audio": "audio/readings/dan_on.mp3"
-      },
-      {
-        "id": "otoko_kun",
-        "kana": "おとこ",
-        "type": "kun",
-        "audio": "audio/readings/otoko_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "dan_on",
+          "kana": "ダン",
+          "type": "on",
+          "audio": "audio/readings/dan_on.mp3"
+        },
+        {
+          "id": "otoko_kun",
+          "kana": "おとこ",
+          "type": "kun",
+          "audio": "audio/readings/otoko_kun.mp3"
+        }
+      ],
+      "rationale": "おとこは日常語彙としての基本読み。",
+      "anchor": "otoko_kun"
+    },
     "meaning": {
       "gloss_ja": "おとこの ひと。",
       "category": "people"
@@ -2691,20 +2767,24 @@
   {
     "character": "目",
     "grade": 1,
-    "taught_readings": [
-      {
-        "id": "moku_on2",
-        "kana": "モク",
-        "type": "on",
-        "audio": "audio/readings/moku_on2.mp3"
-      },
-      {
-        "id": "me_kun",
-        "kana": "め",
-        "type": "kun",
-        "audio": "audio/readings/me_kun.mp3"
-      }
-    ],
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "moku_on2",
+          "kana": "モク",
+          "type": "on",
+          "audio": "audio/readings/moku_on2.mp3"
+        },
+        {
+          "id": "me_kun",
+          "kana": "め",
+          "type": "kun",
+          "audio": "audio/readings/me_kun.mp3"
+        }
+      ],
+      "rationale": "めは体の部位としての基本読み。",
+      "anchor": "me_kun"
+    },
     "meaning": {
       "gloss_ja": "ものを みる め。",
       "category": "body"
