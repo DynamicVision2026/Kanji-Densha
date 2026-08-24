@@ -1,0 +1,46 @@
+# A taught reading kana that doesn't match ANY row for this character at all
+# (not even a later-stage one) — distinct failure from the later-reading case.
+character: 山
+grade: 1
+taught_readings:
+  entries:
+    - id: yama_bogus
+      kana: ヤマ
+      type: on
+      audio: audio/readings/yama_bogus.mp3
+  rationale: フィクスチャ用のダミー根拠（内容判断なし）。
+  anchor: yama_bogus
+meaning:
+  gloss_ja: たかい ところ
+  category: nature
+encounter:
+  template: mountain-ink
+  art: null
+  copy_ja: やま
+surfaces:
+  - id: yama_1
+    word: 山
+    reading_id: yama_bogus
+    audio: audio/surfaces/yama_1.mp3
+  - id: yama_2
+    word: 山道
+    reading_id: yama_bogus
+    audio: audio/surfaces/yama_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: たて
+items:
+  - id: 山-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: yama_bogus
+    choices:
+      - kana: ヤマ
+        correct: true
+      - kana: かわ
+        correct: false
+status: published

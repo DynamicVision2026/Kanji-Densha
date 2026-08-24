@@ -1,0 +1,87 @@
+character: 生
+grade: 1
+taught_readings:
+  entries:
+    - id: sei_on
+      kana: セイ
+      type: on
+      audio: audio/readings/sei_on.mp3
+    - id: ikiru_kun
+      kana: いきる
+      type: kun
+      audio: audio/readings/ikiru_kun.mp3
+    - id: umareru_kun
+      kana: うまれる
+      type: kun
+      audio: audio/readings/umareru_kun.mp3
+  rationale: 先生・一年生のセイと、子どもの生活にある うまれる・いきる。なまは意味の系統が違うため後の学年で。
+  anchor: sei_on
+meaning:
+  gloss_ja: いきて いる こと。うまれる こと。
+  category: concept
+encounter:
+  template: life-ink
+  art: null
+  copy_ja: めが でて、いきものが うまれるよ。
+surfaces:
+  - id: sensei_1
+    word: 先生
+    reading_id: sei_on
+    audio: audio/surfaces/sensei_1.mp3
+  - id: ikiru_1
+    word: 生きる
+    reading_id: ikiru_kun
+    audio: audio/surfaces/ikiru_1.mp3
+  - id: umareru_1
+    word: 生まれる
+    reading_id: umareru_kun
+    audio: audio/surfaces/umareru_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: harai
+      a11y_ja: うえの ひだりはらい
+    - order: 2
+      type: yoko
+      a11y_ja: うえの よこ
+    - order: 3
+      type: tate
+      a11y_ja: まんなかの たて
+    - order: 4
+      type: yoko
+      a11y_ja: なかの よこ
+    - order: 5
+      type: yoko
+      a11y_ja: したの ながい よこ
+items:
+  - id: 生-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: ikiru_kun
+    choices:
+      - kana: いきる
+        correct: true
+      - kana: しぬ
+        correct: false
+      - kana: ねる
+        correct: false
+  - id: 生-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いきて いる こと
+        semantic: true
+        correct: true
+      - gloss_ja: ねむって いる こと
+        semantic: true
+        correct: false
+      - gloss_ja: こおって いる こと
+        semantic: true
+        correct: false
+  - id: 生-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,50 @@
+# 川's セン (on) is a junior_high reading (D15) — teaching it violates I4 even
+# though the character itself is Grade 1 and かわ is a legitimate taught reading.
+character: 川
+grade: 1
+taught_readings:
+  entries:
+    - id: kawa_kun
+      kana: かわ
+      type: kun
+      audio: audio/readings/kawa_kun.mp3
+    - id: sen_on
+      kana: セン
+      type: on
+      audio: audio/readings/sen_on.mp3
+  rationale: フィクスチャ用のダミー根拠（内容判断なし）。
+  anchor: kawa_kun
+meaning:
+  gloss_ja: みずの ながれ
+  category: nature
+encounter:
+  template: river-ink
+  art: null
+  copy_ja: かわ
+surfaces:
+  - id: kawa_1
+    word: 川
+    reading_id: kawa_kun
+    audio: audio/surfaces/kawa_1.mp3
+  - id: kawa_2
+    word: 小川
+    reading_id: kawa_kun
+    audio: audio/surfaces/kawa_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tare
+      a11y_ja: たれ
+items:
+  - id: 川-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: kawa_kun
+    choices:
+      - kana: かわ
+        correct: true
+      - kana: やま
+        correct: false
+status: published

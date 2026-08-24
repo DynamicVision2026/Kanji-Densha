@@ -12,18 +12,23 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage --coverage.provider=v8 --coverage.include=packages/engine/src/evaluate.ts --coverage.reporter=text --coverage.thresholds.statements=100 --coverage.thresholds.branches=100 --coverage.thresholds.functions=100 --coverage.thresholds.lines=100",
-    "content:build": "node packages/content-build/build.mjs",
+    "content:build": "tsc -b packages/content-build && node packages/content-build/dist/build.js",
     "check:engine-purity": "node scripts/check-engine-purity.mjs",
     "check:content-dist-drift": "node scripts/check-content-dist-drift.mjs",
-    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm test:coverage && pnpm content:build && pnpm check:content-dist-drift"
+    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm test:coverage && pnpm content:build && pnpm check:content-dist-drift",
+    "content:reference": "node packages/content-build/ingest-reference.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/node": "^26.2.0",
     "@vitest/coverage-v8": "^4.1.11",
     "eslint": "^10.9.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.67.0",
     "vitest": "^4.1.11",
     "yaml": "^2.9.0"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }

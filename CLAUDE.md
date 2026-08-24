@@ -99,6 +99,12 @@ Enforced boundaries (CI fails, not a review comment):
 - Make illegal states unrepresentable before you make them tested. Prefer a narrower
   type or a schema constraint over a runtime check plus a unit test.
 - Kanji strings are NFC-normalised at the schema boundary. Never compare unnormalised.
+- **Testing NFC normalisation:** editing tools normalise Japanese literals in flight, so a
+  decomposed character pasted into source becomes composed before it's ever saved — a test
+  meant to exercise NFC normalisation silently exercises nothing. Build the decomposed string
+  from explicit code points (`String.fromCharCode(0x304b, 0x3099)`, not a literal) so the
+  input the test starts from is verifiably still decomposed. This is a real environmental
+  constraint, not a one-off — expect to hit it again.
 - Default UI language is Japanese. English strings exist only where the spec says
   parent-critical. No English fallback text on the child path.
 - Child-path copy is written for a 6-year-old: kana-first, short, no imperative scolding.

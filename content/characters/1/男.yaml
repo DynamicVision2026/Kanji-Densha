@@ -1,0 +1,66 @@
+character: 男
+grade: 1
+taught_readings:
+  entries:
+    - id: dan_on
+      kana: ダン
+      type: on
+      audio: audio/readings/dan_on.mp3
+    - id: otoko_kun
+      kana: おとこ
+      type: kun
+      audio: audio/readings/otoko_kun.mp3
+  rationale: おとこは日常語彙としての基本読み。
+  anchor: otoko_kun
+meaning:
+  gloss_ja: おとこの ひと。
+  category: people
+encounter:
+  template: man-ink
+  art: null
+  copy_ja: たで ちからを だす ひと、おとこ。
+surfaces:
+  - id: otoko_1
+    word: 男
+    reading_id: otoko_kun
+    audio: audio/surfaces/otoko_1.mp3
+  - id: danshi_1
+    word: 男子
+    reading_id: dan_on
+    audio: audio/surfaces/danshi_1.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 田
+    - char: 力
+items:
+  - id: 男-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: otoko_kun
+    choices:
+      - kana: おとこ
+        correct: true
+      - kana: おんな
+        correct: false
+      - kana: こども
+        correct: false
+  - id: 男-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おとこの ひと
+        semantic: true
+        correct: true
+      - gloss_ja: おんなの ひと
+        semantic: true
+        correct: false
+      - gloss_ja: ちいさな こ
+        semantic: true
+        correct: false
+  - id: 男-s-1
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

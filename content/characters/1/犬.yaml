@@ -1,0 +1,76 @@
+character: 犬
+grade: 1
+taught_readings:
+  entries:
+    - id: ken_on
+      kana: ケン
+      type: on
+      audio: audio/readings/ken_on.mp3
+    - id: inu_kun
+      kana: いぬ
+      type: kun
+      audio: audio/readings/inu_kun.mp3
+  rationale: いぬは身近などうぶつとしての基本読み。
+  anchor: inu_kun
+meaning:
+  gloss_ja: ワンと なく どうぶつ、いぬ。
+  category: animal
+encounter:
+  template: dog-ink
+  art: null
+  copy_ja: いぬは しっぽを ふって よろこぶよ。
+surfaces:
+  - id: inu_1
+    word: 犬
+    reading_id: inu_kun
+    audio: audio/surfaces/inu_1.mp3
+  - id: koinu_1
+    word: 子犬
+    reading_id: inu_kun
+    audio: audio/surfaces/koinu_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: yoko
+      a11y_ja: よこの ぼう
+    - order: 2
+      type: harai
+      a11y_ja: ひだりの はらい
+    - order: 3
+      type: nagai
+      a11y_ja: みぎの ながい はらい
+    - order: 4
+      type: ten
+      a11y_ja: みぎうえの てん
+items:
+  - id: 犬-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: inu_kun
+    choices:
+      - kana: いぬ
+        correct: true
+      - kana: ねこ
+        correct: false
+      - kana: とり
+        correct: false
+  - id: 犬-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ワンと なく どうぶつ
+        semantic: true
+        correct: true
+      - gloss_ja: ニャーと なく どうぶつ
+        semantic: true
+        correct: false
+      - gloss_ja: そらを とぶ とり
+        semantic: true
+        correct: false
+  - id: 犬-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

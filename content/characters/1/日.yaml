@@ -1,0 +1,76 @@
+character: 日
+grade: 1
+taught_readings:
+  entries:
+    - id: nichi_on
+      kana: ニチ
+      type: on
+      audio: audio/readings/nichi_on.mp3
+    - id: hi_kun
+      kana: ひ
+      type: kun
+      audio: audio/readings/hi_kun.mp3
+  rationale: 日よう日など曜日の語彙が一年生の学年配当語彙の中心。
+  anchor: nichi_on
+meaning:
+  gloss_ja: そらに でる おひさま。ひ。
+  category: nature
+encounter:
+  template: sun-ink
+  art: null
+  copy_ja: あさに おひさまが のぼるよ。
+surfaces:
+  - id: hi_1
+    word: 日
+    reading_id: hi_kun
+    audio: audio/surfaces/hi_1.mp3
+  - id: nichiyou_1
+    word: 日よう日
+    reading_id: nichi_on
+    audio: audio/surfaces/nichiyou_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: ひだりの たて
+    - order: 2
+      type: kaku
+      a11y_ja: うえの よこ から みぎの おれ
+    - order: 3
+      type: yoko
+      a11y_ja: まんなかの よこ
+    - order: 4
+      type: yoko
+      a11y_ja: したの よこ
+items:
+  - id: 日-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: hi_kun
+    choices:
+      - kana: ひ
+        correct: true
+      - kana: つき
+        correct: false
+      - kana: ほし
+        correct: false
+  - id: 日-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そらに でる おひさま
+        semantic: true
+        correct: true
+      - gloss_ja: よるの あかり
+        semantic: true
+        correct: false
+      - gloss_ja: つめたい みず
+        semantic: true
+        correct: false
+  - id: 日-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

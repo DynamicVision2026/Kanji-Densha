@@ -19,7 +19,15 @@ function git(args) {
   try {
     // stderr ignored: an unknown base ref is an expected probe failure we
     // recover from via the fallbacks below; we don't want its noise in logs.
-    return execFileSync('git', args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+    // core.quotepath=false: without it, git renders any non-ASCII path (every
+    // kanji filename in this repo) as a double-quoted octal escape sequence,
+    // e.g. "content/characters/1/\346\227\245.yaml" instead of 日.yaml — which
+    // silently fails the prefix match below and made this gate blind to content/
+    // changes the first time a non-ASCII path went through it (M2).
+    return execFileSync('git', ['-c', 'core.quotepath=false', ...args], {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    });
   } catch {
     return '';
   }

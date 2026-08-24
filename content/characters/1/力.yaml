@@ -1,0 +1,70 @@
+character: 力
+grade: 1
+taught_readings:
+  entries:
+    - id: ryoku_on
+      kana: リョク
+      type: on
+      audio: audio/readings/ryoku_on.mp3
+    - id: chikara_kun
+      kana: ちから
+      type: kun
+      audio: audio/readings/chikara_kun.mp3
+  rationale: ちからは体の感覚として理解しやすい基本読み。
+  anchor: chikara_kun
+meaning:
+  gloss_ja: ものを うごかす ちから。
+  category: concept
+encounter:
+  template: power-ink
+  art: null
+  copy_ja: ちからを だして もちあげるよ。
+surfaces:
+  - id: chikara_1
+    word: 力
+    reading_id: chikara_kun
+    audio: audio/surfaces/chikara_1.mp3
+  - id: suiryoku_1
+    word: 水力
+    reading_id: ryoku_on
+    audio: audio/surfaces/suiryoku_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: kaku
+      a11y_ja: よこ から みぎの おれ はね
+    - order: 2
+      type: harai
+      a11y_ja: ひだりの はらい
+items:
+  - id: 力-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: chikara_kun
+    choices:
+      - kana: ちから
+        correct: true
+      - kana: こえ
+        correct: false
+      - kana: て
+        correct: false
+  - id: 力-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ものを うごかす ちから
+        semantic: true
+        correct: true
+      - gloss_ja: きれいな いろ
+        semantic: true
+        correct: false
+      - gloss_ja: つめたい かぜ
+        semantic: true
+        correct: false
+  - id: 力-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

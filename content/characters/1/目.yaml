@@ -1,0 +1,79 @@
+character: 目
+grade: 1
+taught_readings:
+  entries:
+    - id: moku_on2
+      kana: モク
+      type: on
+      audio: audio/readings/moku_on2.mp3
+    - id: me_kun
+      kana: め
+      type: kun
+      audio: audio/readings/me_kun.mp3
+  rationale: めは体の部位としての基本読み。
+  anchor: me_kun
+meaning:
+  gloss_ja: ものを みる め。
+  category: body
+encounter:
+  template: eye-ink
+  art: null
+  copy_ja: めで まわりを みてみよう。
+surfaces:
+  - id: me_1
+    word: 目
+    reading_id: me_kun
+    audio: audio/surfaces/me_1.mp3
+  - id: mokuhyou_1
+    word: 目ひょう
+    reading_id: moku_on2
+    audio: audio/surfaces/mokuhyou_1.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: tate
+      a11y_ja: ひだりの たて
+    - order: 2
+      type: kaku
+      a11y_ja: うえと みぎの おれ
+    - order: 3
+      type: yoko
+      a11y_ja: うえの なかの よこ
+    - order: 4
+      type: yoko
+      a11y_ja: まんなかの よこ
+    - order: 5
+      type: yoko
+      a11y_ja: したの よこ
+items:
+  - id: 目-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: me_kun
+    choices:
+      - kana: め
+        correct: true
+      - kana: みみ
+        correct: false
+      - kana: て
+        correct: false
+  - id: 目-m-1
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ものを みる ところ
+        semantic: true
+        correct: true
+      - gloss_ja: おとを きく ところ
+        semantic: true
+        correct: false
+      - gloss_ja: あるく ところ
+        semantic: true
+        correct: false
+  - id: 目-s-1
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

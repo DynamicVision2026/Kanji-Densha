@@ -1,0 +1,41 @@
+# A published primitive must declare strokes.
+character: 一
+grade: 1
+taught_readings:
+  entries:
+    - id: ichi_on
+      kana: イチ
+      type: on
+      audio: audio/readings/ichi_on.mp3
+  rationale: フィクスチャ用のダミー根拠（内容判断なし）。
+  anchor: ichi_on
+meaning:
+  gloss_ja: かずの いち
+  category: number
+encounter:
+  template: line-one-ink
+  art: null
+  copy_ja: いち
+surfaces:
+  - id: ichi_1
+    word: 一
+    reading_id: ichi_on
+    audio: audio/surfaces/ichi_1.mp3
+  - id: ichi_2
+    word: 一つ
+    reading_id: ichi_on
+    audio: audio/surfaces/ichi_2.mp3
+shape:
+  published: true
+  kind: primitive
+items:
+  - id: 一-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: ichi_on
+    choices:
+      - kana: イチ
+        correct: true
+      - kana: ニ
+        correct: false
+status: published

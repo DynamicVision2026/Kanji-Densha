@@ -18,9 +18,9 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
 
-  // Node scripts and build placeholders are plain ESM with Node globals.
+  // Node scripts and build tooling are plain ESM with Node globals.
   {
-    files: ['scripts/**/*.mjs', '**/build.mjs', 'eslint.config.js', 'vitest.config.ts'],
+    files: ['**/*.mjs', 'eslint.config.js', 'vitest.config.ts'],
     languageOptions: {
       globals: {
         process: 'readonly',
