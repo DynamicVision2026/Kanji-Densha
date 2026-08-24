@@ -85,6 +85,12 @@ Enforced boundaries (CI fails, not a review comment):
   descriptions for a reviewer who has not read the conversation.
 - **Don't touch content data to make a test pass.** If the gate rejects a character,
   the character is wrong or the gate is wrong. Say which.
+- **Changes to CI gates and enforcement scripts go through a PR with a demonstration, same
+  as product code — never a direct commit to `main`, even for a "docs-only adjacent" fix.**
+  The enforcement layer protects everything else in this repo; it gets the most scrutiny, not
+  the least. (A drift-gate fix once went straight to `main` on the reasoning that it was
+  docs-adjacent. The fix was correct, but the precedent wasn't: gate code is exactly the code
+  that must not be trusted on the strength of local testing alone.)
 
 ---
 
@@ -105,13 +111,21 @@ Enforced boundaries (CI fails, not a review comment):
   from explicit code points (`String.fromCharCode(0x304b, 0x3099)`, not a literal) so the
   input the test starts from is verifiably still decomposed. This is a real environmental
   constraint, not a one-off — expect to hit it again.
-- **Enforcement gates and tooling must be demonstrated against representative data** — kanji
-  filenames, kanji content, non-ASCII paths — never ASCII stand-ins. A gate proven on
-  `test.txt` is not proven. When adding a gate, the demonstration uses the data the gate will
-  actually see in production. (M0's content-dist-drift gate was demonstrated correctly and was
-  still broken for three milestones: git octal-escapes non-ASCII filenames by default, and the
-  gate's `content/` prefix match silently never saw a single one of them until M2's kanji
-  filenames exposed it. The demonstration was real; the data wasn't.)
+- **Enforcement gates must be demonstrated against representative data** — kanji filenames,
+  kanji content, non-ASCII paths — and against the **boring states**: nothing changed, empty
+  result, no diff, first run. A gate proven on `test.txt` is not proven; neither is a gate
+  only ever exercised where there was something to find. (M0's content-dist-drift gate carried
+  two bugs found this way, not by inspection: git octal-escapes non-ASCII filenames by default,
+  so the gate's `content/` prefix match silently never saw a single kanji filename for three
+  milestones; separately, its fallback logic couldn't tell "command failed" from "command
+  succeeded and returned nothing," so a genuinely empty, correct diff — the ordinary state
+  right after any merge, including every push-to-main CI run — was discarded in favor of
+  comparing against the wrong base. A gate that only works when it has something to find is a
+  gate that works exactly when you don't need it.)
+- **Any helper wrapping a subprocess must distinguish exit status from output content.**
+  "Command failed" and "command succeeded and returned nothing" are different results and must
+  not collapse into the same falsy value — that confusion is how a fallback chain silently
+  discards a correct answer, and it reads fine in review.
 - Default UI language is Japanese. English strings exist only where the spec says
   parent-critical. No English fallback text on the child path.
 - Child-path copy is written for a 6-year-old: kana-first, short, no imperative scolding.
