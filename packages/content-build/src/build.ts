@@ -49,6 +49,58 @@ function perGradeTotals(): Record<string, number> {
   return doc.totals.per_grade; // I9: the denominator comes from the reference, never a constant
 }
 
+interface GradeParamsRow {
+  grade: number;
+  sessionItemCap: number;
+  itemsPerLamp: number;
+  echoFirstDelayHours: number;
+  echoSecondDelayHours: number;
+  echoPerDayCap: number;
+  lostConsecutiveWrong: number;
+  lostLifetimeWrong: number;
+  forceReteachOnWrong: boolean;
+}
+
+const GRADE_PARAM_FIELDS: (keyof GradeParamsRow)[] = [
+  'sessionItemCap',
+  'itemsPerLamp',
+  'echoFirstDelayHours',
+  'echoSecondDelayHours',
+  'echoPerDayCap',
+  'lostConsecutiveWrong',
+  'lostLifetimeWrong',
+  'forceReteachOnWrong',
+];
+
+// apps/web may only read content-dist/ (I2), but needs GradeParams to call
+// evaluateProgress. Rather than duplicate content/params/grades.yaml into the
+// app, content:build emits it as generated data — content/ stays the single
+// source of truth. Fails the build (naming the grade and field) rather than
+// silently shipping a malformed row, since D19's "no silent G1 reuse" failure
+// mode applies here too: a missing field must not go unnoticed by ending up
+// `undefined` in the shipped bundle.
+function loadAndEmitGradeParams(): void {
+  const doc = parseYaml(readFileSync(join(repoRoot, 'content/params/grades.yaml'), 'utf8')) as {
+    grades: GradeParamsRow[];
+  };
+  const grades = doc.grades ?? [];
+  const foundGrades = grades.map((g) => g.grade).sort((a, b) => a - b);
+  const expected = [1, 2, 3, 4, 5, 6];
+  if (JSON.stringify(foundGrades) !== JSON.stringify(expected)) {
+    console.error(`✗ content:build FAILED — content/params/grades.yaml must specify exactly grades 1..6, found [${foundGrades.join(', ')}]`);
+    process.exit(1);
+  }
+  for (const g of grades) {
+    for (const field of GRADE_PARAM_FIELDS) {
+      if (g[field] === undefined) {
+        console.error(`✗ content:build FAILED — content/params/grades.yaml grade ${g.grade} is missing "${field}"`);
+        process.exit(1);
+      }
+    }
+  }
+  writeFileSync(join(distDir, 'grades.json'), `${JSON.stringify(grades, null, 2)}\n`);
+}
+
 function main(): void {
   const reference = loadReference(repoRoot);
   const gradeTotals = perGradeTotals();
@@ -105,6 +157,7 @@ function main(): void {
   // --- emit (published only, I2) ------------------------------------------
   rmSync(distDir, { recursive: true, force: true });
   mkdirSync(distDir, { recursive: true });
+  loadAndEmitGradeParams();
 
   const byGrade = new Map<number, typeof published>();
   for (const p of published) {
