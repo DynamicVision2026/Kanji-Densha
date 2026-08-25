@@ -37,6 +37,11 @@ Attention, in order of what it will teach you:
 5. How long before they look away? Time it. If a ride is meant to be three minutes and they
    drift at ninety seconds, `sessionItemCap` is wrong, not the child.
 
+**Exclude the かたち (shape) step from your notes entirely.** It is M3's Q15 placeholder —
+watch the strokes, press one button — and it cannot be answered wrong. There is no signal in
+it: not hesitation, not confidence, not confusion. Reading meaning into it would corrupt the
+notes M4's real stroke-order design gets built from. Watch the other three beats.
+
 ## What not to do
 
 - Do not ask "was that fun?" Children say yes to adults holding phones. Ask what happened,
