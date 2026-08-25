@@ -18,13 +18,32 @@ const nfcString = () => z.string().min(1).transform(nfc);
 export const READING_TYPES = ['on', 'kun'] as const;
 export const STATUSES = ['draft', 'review', 'published'] as const;
 
+// `audio` resolves against content/ (packages/content-build's audioExists),
+// joined verbatim — an author-supplied `..` segment or a leading `/` could
+// therefore walk out of content/ entirely, including into
+// assets/audio-review/, the human-review staging area that must be
+// structurally unreachable from a content record (D16 revised 2026-08-26).
+// Made unparseable here rather than caught later: the same "eliminate the
+// structural ambiguity" fix as the apps/web/src/content/ naming collision.
+function isSafeRelativeAudioPath(p: string): boolean {
+  if (p.startsWith('/')) return false;
+  if (!/\.(mp3|wav)$/.test(p)) return false;
+  return p.split('/').every((seg) => seg.length > 0 && seg !== '.' && seg !== '..' && /^[A-Za-z0-9._-]+$/.test(seg));
+}
+
+const audioFilename = () =>
+  z.string().min(1).refine(isSafeRelativeAudioPath, {
+    message:
+      'audio must be a safe relative path under content/ — no ".." segment, no leading "/", .mp3 or .wav only',
+  });
+
 // A taught reading (D14). `audio` is the intended filename; the file need not
 // exist yet (D16/D18) — the gate turns a missing file into audio_pending.
 export const taughtReadingSchema = z.strictObject({
   id: z.string().min(1),
   kana: nfcString(),
   type: z.enum(READING_TYPES),
-  audio: z.string().min(1),
+  audio: audioFilename(),
 });
 
 // D19: the curated subset must record WHY it was chosen (`rationale`, one line)
@@ -46,7 +65,7 @@ export const surfaceSchema = z.strictObject({
   id: z.string().min(1),
   word: nfcString(),
   reading_id: z.string().min(1), // resolves to a taught_reading (gate)
-  audio: z.string().min(1),
+  audio: audioFilename(),
 });
 
 // --- items: exactly one lamp each (I1), pinned by a literal per type -------
