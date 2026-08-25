@@ -17,9 +17,8 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
-import { authoredCharacterSchema } from '../packages/content-schema/src/schema';
-import { gateCharacter, GATE_ERROR_CODES } from '../packages/content-build/src/gate';
-import { loadReference } from '../packages/content-build/src/reference';
+import { authoredCharacterSchema } from '@kanji-densha/content-schema';
+import { gateCharacter, GATE_ERROR_CODES, loadReference } from '@kanji-densha/content-build';
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fixturesDir = join(repoRoot, 'fixtures/bad-content');

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Self-hosted Noto Sans JP subset (SIL OFL 1.1 — credited on the parent
+   licence page, docs/licenses.md). Subset to the characters this app actually
+   uses; see apps/web/public/fonts/README.md for how it was built and how to
+   regenerate it when new copy is added. */
+@font-face {
+  font-family: "Noto Sans JP Subset";
+  src: url("/fonts/NotoSansJP-Subset-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans JP Subset";
+  src: url("/fonts/NotoSansJP-Subset-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* D11: two separate tokens, both pointing at Noto Sans JP for now. --font-hero
+     is the token M4/Q14 swaps for a 教科書体 face without touching anything else
+     — the hero glyph teaches はね/とめ terminals a gothic face gets wrong, but
+     that swap is a budget decision, not a build one (Q14). */
+  --font-ui: "Noto Sans JP Subset", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --font-hero: "Noto Sans JP Subset", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+
+  /* Art direction (architecture §4, locked): ink-wash on a 宣紙 (paper) ground,
+     vermilion reserved for the locomotive and the current station only — so it
+     is a signal colour here, never decorative background. */
+  --paper: #faf6ee;
+  --ink: #2a2622;
+  --ink-soft: #5a5348;
+  --vermilion: #c34a2c;
+  --line: #d8cfbe;
+
+  /* Five status colours (spec §5.1). Colour is never the only signal — every
+     status also carries a shape/label (architecture §4: distinguishable in
+     greyscale and to a colour-blind parent). */
+  --status-new: #9c9284;
+  --status-lost: #b0433a;
+  --status-fix: #c98a2c;
+  --status-almost: #4a7a8c;
+  --status-perfect: #3d7a4c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100dvh;
+}

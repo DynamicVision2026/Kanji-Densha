@@ -1,0 +1,68 @@
+[
+  {
+    "grade": 1,
+    "sessionItemCap": 3,
+    "itemsPerLamp": 1,
+    "echoFirstDelayHours": 20,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 8,
+    "lostConsecutiveWrong": 3,
+    "lostLifetimeWrong": 12,
+    "forceReteachOnWrong": true
+  },
+  {
+    "grade": 2,
+    "sessionItemCap": 4,
+    "itemsPerLamp": 1,
+    "echoFirstDelayHours": 20,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 10,
+    "lostConsecutiveWrong": 3,
+    "lostLifetimeWrong": 14,
+    "forceReteachOnWrong": true
+  },
+  {
+    "grade": 3,
+    "sessionItemCap": 6,
+    "itemsPerLamp": 2,
+    "echoFirstDelayHours": 20,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 12,
+    "lostConsecutiveWrong": 4,
+    "lostLifetimeWrong": 16,
+    "forceReteachOnWrong": false
+  },
+  {
+    "grade": 4,
+    "sessionItemCap": 6,
+    "itemsPerLamp": 2,
+    "echoFirstDelayHours": 36,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 14,
+    "lostConsecutiveWrong": 4,
+    "lostLifetimeWrong": 18,
+    "forceReteachOnWrong": false
+  },
+  {
+    "grade": 5,
+    "sessionItemCap": 8,
+    "itemsPerLamp": 2,
+    "echoFirstDelayHours": 36,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 16,
+    "lostConsecutiveWrong": 5,
+    "lostLifetimeWrong": 20,
+    "forceReteachOnWrong": false
+  },
+  {
+    "grade": 6,
+    "sessionItemCap": 8,
+    "itemsPerLamp": 2,
+    "echoFirstDelayHours": 36,
+    "echoSecondDelayHours": 168,
+    "echoPerDayCap": 16,
+    "lostConsecutiveWrong": 5,
+    "lostLifetimeWrong": 20,
+    "forceReteachOnWrong": false
+  }
+]

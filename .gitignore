@@ -4,14 +4,17 @@ node_modules/
 # Build output
 dist/
 *.tsbuildinfo
+.output/
+
+# NOTE: apps/web/src/routeTree.gen.ts is generated (by TanStack Router, from
+# routes/) but COMMITTED, same treatment as content-dist/ — apps/web can
+# typecheck without a build step first. Never hand-edit it; it self-documents
+# this and regenerates on the next `vite dev`/`vite build`.
 
 # Test / coverage
 coverage/
 test-results/
 playwright-report/
-
-# Build output (app-specific)
-apps/web/.output/
 
 # Editor / OS
 .DS_Store

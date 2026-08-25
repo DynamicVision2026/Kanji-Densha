@@ -8,7 +8,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { parse } from 'yaml';
-import type { GradeParams } from '../packages/engine/src/types';
+import type { GradeParams } from '@kanji-densha/engine';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const yamlPath = join(here, '..', 'content', 'params', 'grades.yaml');
