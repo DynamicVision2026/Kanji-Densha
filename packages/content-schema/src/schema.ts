@@ -19,22 +19,22 @@ export const READING_TYPES = ['on', 'kun'] as const;
 export const STATUSES = ['draft', 'review', 'published'] as const;
 
 // `audio` resolves against content/ (packages/content-build's audioExists),
-// joined verbatim — an author-supplied `..` segment or a leading `/` could
-// therefore walk out of content/ entirely, including into
-// assets/audio-review/, the human-review staging area that must be
-// structurally unreachable from a content record (D16 revised 2026-08-26).
-// Made unparseable here rather than caught later: the same "eliminate the
-// structural ambiguity" fix as the apps/web/src/content/ naming collision.
-function isSafeRelativeAudioPath(p: string): boolean {
-  if (p.startsWith('/')) return false;
-  if (!/\.(mp3|wav)$/.test(p)) return false;
-  return p.split('/').every((seg) => seg.length > 0 && seg !== '.' && seg !== '..' && /^[A-Za-z0-9._-]+$/.test(seg));
-}
+// joined verbatim — an author-supplied `..` segment, an absolute path, or a
+// symlink-like oddity could therefore walk out of content/ entirely,
+// including into assets/audio-review/, the human-review staging area that
+// must be structurally unreachable from a content record (D16 revised
+// 2026-08-26). An earlier version of this rejected only `..` and a leading
+// `/` — a denylist, which only ever blocks the cases someone thought of.
+// This is an allowlist instead: match the one legitimate shape (exactly
+// `audio/<category>/<filename>.mp3` or `.wav`) rather than exclude bad
+// ones — every real record already looks like this, so nothing legitimate
+// is newly rejected. Same principle as making an illegal record
+// unparseable instead of pattern-matching known-illegal ones.
+const AUDIO_PATH_RE = /^audio\/[^/]+\/[a-z0-9_-]+\.(mp3|wav)$/;
 
 const audioFilename = () =>
-  z.string().min(1).refine(isSafeRelativeAudioPath, {
-    message:
-      'audio must be a safe relative path under content/ — no ".." segment, no leading "/", .mp3 or .wav only',
+  z.string().min(1).regex(AUDIO_PATH_RE, {
+    message: 'audio must match audio/<category>/<filename>.mp3|.wav exactly (e.g. audio/readings/yama_kun.mp3)',
   });
 
 // A taught reading (D14). `audio` is the intended filename; the file need not
