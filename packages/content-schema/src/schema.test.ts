@@ -7,7 +7,7 @@ function validRecord(): unknown {
     character: '山',
     grade: 1,
     taught_readings: {
-      entries: [{ id: 'yama', kana: 'やま', type: 'kun', audio: 'audio/山/yama.mp3' }],
+      entries: [{ id: 'yama', kana: 'やま', type: 'kun', audio: 'audio/readings/yama.mp3' }],
       rationale: 'test fixture',
       anchor: 'yama',
     },

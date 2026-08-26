@@ -35,12 +35,14 @@ Two engine-contract changes follow from D2 and D5, and supersede the original dr
 Both changes move authority from the caller to the pure function. That is the direction
 authority should always move in this codebase.
 
-| **D16** | Pre-rendered fixed audio, vendor deferred behind a commercial-redistribution check. Research corpora excluded outright. Word-surface audio is generated from the *word*, never the bare reading, because isolated-kana pitch accent is frequently wrong. | `docs/licenses.md`, MR-2.1, I10 |
+| **D16** | *Revised 2026-08-26.* Pre-rendered fixed audio via **VOICEVOX + VOICEVOX Nemo**, generated locally, self-hosted; runtime generation prohibited on the child path. xAI TTS withdrawn. Resolved **for the 山 pilot only** — full Grade 1 generation stays blocked pending native-speaker review of the pilot. Word-surface audio is generated from the *word*, never the bare reading. | `docs/licenses.md`, MR-2.1, I10 |
 | **D17** | KanjiVG as logic reference only; product redraw for anything shipped; derived material quarantined in `content/shape/` with its own LICENSE; attribution on the parent page. | `docs/licenses.md` |
 
 | **D18** | `teach_ready` is never softened to let a milestone go green. M2 lands with `teach_ready: 0` and twenty characters listed `audio_pending`; the manifest gains a `pending` section naming the unmet checklist item and the file that would satisfy it. A gate that can only say yes is not a gate. | M2 exit criteria, I9 |
 
 | **D19** | `taught_readings` gains a required one-line `rationale`, and each character declares an **anchor reading** — the taught reading that justifies its grade placement. The gate rejects a record whose `taught_readings` omits its anchor. Judgment at 1,026 characters must be recorded, not inferred. | M2 schema, `docs/reviews/m2-architect-review.md` |
+
+| **D20** | On the welcome screen, a car once attached is never detached — regression from かんぺき leaves the train intact. Same logic as the write-once stamp (D7): a shrinking train punishes a child with an animation. Regression is surfaced on the timetable and the parent attention list instead. | `docs/reviews/welcome-screen-brief-review.md`, MR-7.7 |
 
 **Still open:** Q14 (whether to license a 教科書体 for the hero character) — a budget
 decision, not a build blocker, since it is one CSS token.
