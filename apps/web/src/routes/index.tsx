@@ -1,22 +1,18 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { getCharacter } from '../published/load.js';
-import { Ride } from '../ride/Ride.js';
+import { createFileRoute, Navigate } from "@tanstack/react-router";
+import { ChildShell } from "@/components/child-shell";
+import { useCurrentUserState } from "@/lib/auth/use-current-user";
 
-// M3: the vertical slice rides exactly one character, 山, guest mode only.
-// No route map (M5), no character selection — that is deliberately not this
-// milestone's job.
-const CHARACTER_ID = '山';
-
-export const Route = createFileRoute('/')({
-  component: Home,
-});
+export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
-  const char = getCharacter(CHARACTER_ID);
-  if (char === undefined) {
-    // Should not happen — content-dist always has 山 published (M2) — but a
-    // silent blank screen would be worse than saying so.
-    return <p style={{ padding: 20 }}>「{CHARACTER_ID}」が みつかりませんでした。</p>;
+  const { user, isPending } = useCurrentUserState();
+  if (isPending) {
+    return (
+      <ChildShell>
+        <div className="grid flex-1 place-items-center text-sm text-fg-muted">漢字でんしゃ</div>
+      </ChildShell>
+    );
   }
-  return <Ride char={char} />;
+  if (user && !user.isDevFallback) return <Navigate to="/app" />;
+  return <Navigate to="/demo" />;
 }
