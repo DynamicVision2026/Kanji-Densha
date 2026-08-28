@@ -1,23 +1,15 @@
 {
-  "content_hash": "dfde8b6b48eab7c72c7fef998d37b0afdd055207f2c8eb2b4db08a616ce416be",
+  "content_hash": "5834cee530304df4b218dee6e2c71e48ff3d9e8afd31e3b90fa67c1d7258444b",
   "grades": {
     "g1": {
       "grade_total": 80,
-      "teach_ready": 60,
+      "teach_ready": 80,
       "published": 80,
       "characters": [
         {
           "character": "一",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/ichi_on.mp3",
-                "audio/readings/hitotsu_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "七",
@@ -61,16 +53,8 @@
         },
         {
           "character": "人",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/jin_on.mp3",
-                "audio/readings/hito_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "休",
@@ -109,16 +93,8 @@
         },
         {
           "character": "力",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/ryoku_on.mp3",
-                "audio/readings/chikara_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "十",
@@ -162,16 +138,8 @@
         },
         {
           "character": "大",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/dai_on.mp3",
-                "audio/readings/ookii_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "天",
@@ -195,16 +163,8 @@
         },
         {
           "character": "学",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/gaku_on.mp3",
-                "audio/readings/manabu_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "小",
@@ -213,28 +173,13 @@
         },
         {
           "character": "山",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/san_on.mp3",
-                "audio/readings/yama_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "川",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/kawa_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "左",
@@ -258,16 +203,8 @@
         },
         {
           "character": "日",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/nichi_on.mp3",
-                "audio/readings/hi_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "早",
@@ -276,42 +213,18 @@
         },
         {
           "character": "月",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/getsu_on.mp3",
-                "audio/readings/tsuki_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "木",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/moku_on.mp3",
-                "audio/readings/ki_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "本",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/hon_on.mp3",
-                "audio/readings/moto_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "村",
@@ -320,16 +233,8 @@
         },
         {
           "character": "林",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/rin_on.mp3",
-                "audio/readings/hayashi_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "校",
@@ -338,16 +243,8 @@
         },
         {
           "character": "森",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/shin_on.mp3",
-                "audio/readings/mori_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "正",
@@ -361,42 +258,18 @@
         },
         {
           "character": "水",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/sui_on.mp3",
-                "audio/readings/mizu_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "火",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/ka_on.mp3",
-                "audio/readings/hi_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "犬",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/ken_on.mp3",
-                "audio/readings/inu_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "玉",
@@ -410,43 +283,18 @@
         },
         {
           "character": "生",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/sei_on.mp3",
-                "audio/readings/ikiru_kun.mp3",
-                "audio/readings/umareru_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "田",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/den_on.mp3",
-                "audio/readings/ta_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "男",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/dan_on.mp3",
-                "audio/readings/otoko_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "町",
@@ -465,16 +313,8 @@
         },
         {
           "character": "目",
-          "teach_ready": false,
-          "unmet": [
-            {
-              "item": "audio",
-              "satisfied_by": [
-                "audio/readings/moku_on2.mp3",
-                "audio/readings/me_kun.mp3"
-              ]
-            }
-          ]
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "石",
@@ -6152,189 +5992,48 @@
     "audio/readings/30ed30a6.mp3",
     "audio/readings/30ed30af.mp3",
     "audio/readings/30ed30f3.mp3",
-    "audio/readings/30ef.mp3"
+    "audio/readings/30ef.mp3",
+    "audio/readings/chikara_kun.mp3",
+    "audio/readings/dai_on.mp3",
+    "audio/readings/dan_on.mp3",
+    "audio/readings/den_on.mp3",
+    "audio/readings/gaku_on.mp3",
+    "audio/readings/getsu_on.mp3",
+    "audio/readings/hayashi_kun.mp3",
+    "audio/readings/hi_kun.mp3",
+    "audio/readings/hito_kun.mp3",
+    "audio/readings/hitotsu_kun.mp3",
+    "audio/readings/hon_on.mp3",
+    "audio/readings/ichi_on.mp3",
+    "audio/readings/ikiru_kun.mp3",
+    "audio/readings/inu_kun.mp3",
+    "audio/readings/jin_on.mp3",
+    "audio/readings/ka_on.mp3",
+    "audio/readings/kawa_kun.mp3",
+    "audio/readings/ken_on.mp3",
+    "audio/readings/ki_kun.mp3",
+    "audio/readings/manabu_kun.mp3",
+    "audio/readings/me_kun.mp3",
+    "audio/readings/mizu_kun.mp3",
+    "audio/readings/moku_on.mp3",
+    "audio/readings/moku_on2.mp3",
+    "audio/readings/mori_kun.mp3",
+    "audio/readings/moto_kun.mp3",
+    "audio/readings/nichi_on.mp3",
+    "audio/readings/ookii_kun.mp3",
+    "audio/readings/otoko_kun.mp3",
+    "audio/readings/rin_on.mp3",
+    "audio/readings/ryoku_on.mp3",
+    "audio/readings/san_on.mp3",
+    "audio/readings/sei_on.mp3",
+    "audio/readings/shin_on.mp3",
+    "audio/readings/sui_on.mp3",
+    "audio/readings/ta_kun.mp3",
+    "audio/readings/tsuki_kun.mp3",
+    "audio/readings/umareru_kun.mp3",
+    "audio/readings/yama_kun.mp3"
   ],
   "pending": {
-    "一": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ichi_on.mp3",
-          "audio/readings/hitotsu_kun.mp3"
-        ]
-      }
-    ],
-    "人": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/jin_on.mp3",
-          "audio/readings/hito_kun.mp3"
-        ]
-      }
-    ],
-    "力": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ryoku_on.mp3",
-          "audio/readings/chikara_kun.mp3"
-        ]
-      }
-    ],
-    "大": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/dai_on.mp3",
-          "audio/readings/ookii_kun.mp3"
-        ]
-      }
-    ],
-    "学": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/gaku_on.mp3",
-          "audio/readings/manabu_kun.mp3"
-        ]
-      }
-    ],
-    "山": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/san_on.mp3",
-          "audio/readings/yama_kun.mp3"
-        ]
-      }
-    ],
-    "川": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/kawa_kun.mp3"
-        ]
-      }
-    ],
-    "日": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/nichi_on.mp3",
-          "audio/readings/hi_kun.mp3"
-        ]
-      }
-    ],
-    "月": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/getsu_on.mp3",
-          "audio/readings/tsuki_kun.mp3"
-        ]
-      }
-    ],
-    "木": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/moku_on.mp3",
-          "audio/readings/ki_kun.mp3"
-        ]
-      }
-    ],
-    "本": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/hon_on.mp3",
-          "audio/readings/moto_kun.mp3"
-        ]
-      }
-    ],
-    "林": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/rin_on.mp3",
-          "audio/readings/hayashi_kun.mp3"
-        ]
-      }
-    ],
-    "森": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/shin_on.mp3",
-          "audio/readings/mori_kun.mp3"
-        ]
-      }
-    ],
-    "水": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/sui_on.mp3",
-          "audio/readings/mizu_kun.mp3"
-        ]
-      }
-    ],
-    "火": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ka_on.mp3",
-          "audio/readings/hi_kun.mp3"
-        ]
-      }
-    ],
-    "犬": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ken_on.mp3",
-          "audio/readings/inu_kun.mp3"
-        ]
-      }
-    ],
-    "生": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/sei_on.mp3",
-          "audio/readings/ikiru_kun.mp3",
-          "audio/readings/umareru_kun.mp3"
-        ]
-      }
-    ],
-    "田": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/den_on.mp3",
-          "audio/readings/ta_kun.mp3"
-        ]
-      }
-    ],
-    "男": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/dan_on.mp3",
-          "audio/readings/otoko_kun.mp3"
-        ]
-      }
-    ],
-    "目": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/moku_on2.mp3",
-          "audio/readings/me_kun.mp3"
-        ]
-      }
-    ],
     "媛": [
       {
         "item": "audio",
