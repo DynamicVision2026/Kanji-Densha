@@ -15,7 +15,10 @@ import { z } from 'zod';
 const nfc = (s: string) => s.normalize('NFC');
 const nfcString = () => z.string().min(1).transform(nfc);
 
-export const READING_TYPES = ['on', 'kun'] as const;
+// D25: 'proper_name' covers characters whose only elementary-stage reading is a
+// place-name entry in the reference table's appendix_2 (滋 in 滋賀, 阪 in 大阪, …) —
+// no per-character on/kun breakdown exists for these, only the whole word's reading.
+export const READING_TYPES = ['on', 'kun', 'proper_name'] as const;
 export const STATUSES = ['draft', 'review', 'published'] as const;
 
 // `audio` resolves against content/ (packages/content-build's audioExists),

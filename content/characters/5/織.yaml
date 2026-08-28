@@ -1,0 +1,69 @@
+character: 織
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: おる
+      type: kun
+      audio: audio/readings/304a308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おる。
+    布を 織る。
+    糸を くむ。
+surfaces:
+  - id: s0
+    word: 織
+    reading_id: r0
+    audio: audio/surfaces/7e54_0.mp3
+  - id: s1
+    word: 織る
+    reading_id: r0
+    audio: audio/surfaces/7e54308b_1.mp3
+  - id: s2
+    word: 織る
+    reading_id: r0
+    audio: audio/surfaces/304a308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 戠
+items:
+  - id: 織-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おる
+        correct: true
+      - kana: つとめる
+        correct: false
+      - kana: ハン
+        correct: false
+  - id: 織-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おる
+        semantic: true
+        correct: true
+      - gloss_ja: ついやす
+        semantic: true
+        correct: false
+      - gloss_ja: きく
+        semantic: true
+        correct: false
+  - id: 織-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

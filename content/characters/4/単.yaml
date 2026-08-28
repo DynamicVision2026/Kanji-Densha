@@ -1,0 +1,73 @@
+character: 単
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: タン
+      type: on
+      audio: audio/readings/30bf30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひとえ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たん。
+    単語を おぼえる。
+    ひとつ。
+surfaces:
+  - id: s0
+    word: 単
+    reading_id: r0
+    audio: audio/surfaces/5358_0.mp3
+  - id: s1
+    word: 単語
+    reading_id: r0
+    audio: audio/surfaces/53588a9e_1.mp3
+  - id: s2
+    word: 単語
+    reading_id: r0
+    audio: audio/surfaces/305f30933054_2.mp3
+  - id: s3
+    word: 単純
+    reading_id: r0
+    audio: audio/surfaces/53587d14_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺍
+    - char: 甲
+items:
+  - id: 単-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: タン
+        correct: true
+      - kana: ヨウ
+        correct: false
+      - kana: まち
+        correct: false
+  - id: 単-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひとえ
+        semantic: true
+        correct: true
+      - gloss_ja: かた
+        semantic: true
+        correct: false
+      - gloss_ja: まれ
+        semantic: true
+        correct: false
+  - id: 単-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

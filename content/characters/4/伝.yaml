@@ -1,0 +1,84 @@
+character: 伝
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: つたわる
+      type: kun
+      audio: audio/readings/3064305f308f308b.mp3
+    - id: r1
+      kana: つたえる
+      type: kun
+      audio: audio/readings/3064305f3048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つたわる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つたえる。
+    ことばを 伝える。
+    とどける。
+surfaces:
+  - id: s0
+    word: 伝
+    reading_id: r0
+    audio: audio/surfaces/4f1d_0.mp3
+  - id: s1
+    word: 伝える
+    reading_id: r1
+    audio: audio/surfaces/4f1d3048308b_1.mp3
+  - id: s2
+    word: 伝える
+    reading_id: r1
+    audio: audio/surfaces/3064305f3048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 云
+items:
+  - id: 伝-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つたわる
+        correct: true
+      - kana: とぶ
+        correct: false
+      - kana: なく
+        correct: false
+  - id: 伝-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: つたえる
+        correct: true
+      - kana: カン
+        correct: false
+      - kana: しず
+        correct: false
+  - id: 伝-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つたわる
+        semantic: true
+        correct: true
+      - gloss_ja: もっとも
+        semantic: true
+        correct: false
+      - gloss_ja: まいる
+        semantic: true
+        correct: false
+  - id: 伝-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

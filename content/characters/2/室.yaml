@@ -1,0 +1,73 @@
+character: 室
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: シツ
+      type: on
+      audio: audio/readings/30b730c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: むろ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きょうしつ。
+    へやの なか。
+    教室に はいる。
+surfaces:
+  - id: s0
+    word: 室
+    reading_id: r0
+    audio: audio/surfaces/5ba4_0.mp3
+  - id: s1
+    word: 教室
+    reading_id: r0
+    audio: audio/surfaces/65595ba4_1.mp3
+  - id: s2
+    word: 教室
+    reading_id: r0
+    audio: audio/surfaces/304d3087304630573064_2.mp3
+  - id: s3
+    word: 室内
+    reading_id: r0
+    audio: audio/surfaces/5ba45185_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 宀
+    - char: 至
+items:
+  - id: 室-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シツ
+        correct: true
+      - kana: ほそい
+        correct: false
+      - kana: スウ
+        correct: false
+  - id: 室-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: むろ
+        semantic: true
+        correct: true
+      - gloss_ja: ほし
+        semantic: true
+        correct: false
+      - gloss_ja: いう
+        semantic: true
+        correct: false
+  - id: 室-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

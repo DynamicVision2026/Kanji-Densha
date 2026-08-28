@@ -1,0 +1,92 @@
+character: 聞
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: きく
+      type: kun
+      audio: audio/readings/304d304f.mp3
+    - id: r1
+      kana: ブン
+      type: on
+      audio: audio/readings/30d630f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きく。
+    話を 聞く。
+    耳を すます。
+surfaces:
+  - id: s0
+    word: 聞
+    reading_id: r0
+    audio: audio/surfaces/805e_0.mp3
+  - id: s1
+    word: 聞く
+    reading_id: r0
+    audio: audio/surfaces/805e304f_1.mp3
+  - id: s2
+    word: 聞く
+    reading_id: r0
+    audio: audio/surfaces/304d304f_2.mp3
+  - id: s3
+    word: 新聞
+    reading_id: r1
+    audio: audio/surfaces/65b0805e_3.mp3
+  - id: s4
+    word: 見聞
+    reading_id: r1
+    audio: audio/surfaces/898b805e_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 門
+    - char: 耳
+items:
+  - id: 聞-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: きく
+        correct: true
+      - kana: あかるい
+        correct: false
+      - kana: たのしい
+        correct: false
+  - id: 聞-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ブン
+        correct: true
+      - kana: タ
+        correct: false
+      - kana: リ
+        correct: false
+  - id: 聞-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きく
+        semantic: true
+        correct: true
+      - gloss_ja: くむ
+        semantic: true
+        correct: false
+      - gloss_ja: おおやけ
+        semantic: true
+        correct: false
+  - id: 聞-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

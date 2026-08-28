@@ -1,0 +1,69 @@
+character: 述
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: のべる
+      type: kun
+      audio: audio/readings/306e3079308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のべる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のべる。
+    意見を 述べる。
+    はなす。
+surfaces:
+  - id: s0
+    word: 述
+    reading_id: r0
+    audio: audio/surfaces/8ff0_0.mp3
+  - id: s1
+    word: 述べる
+    reading_id: r0
+    audio: audio/surfaces/8ff03079308b_1.mp3
+  - id: s2
+    word: 述べる
+    reading_id: r0
+    audio: audio/surfaces/306e3079308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 术
+items:
+  - id: 述-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: のべる
+        correct: true
+      - kana: あらわれる
+        correct: false
+      - kana: ひたい
+        correct: false
+  - id: 述-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のべる
+        semantic: true
+        correct: true
+      - gloss_ja: すべる
+        semantic: true
+        correct: false
+      - gloss_ja: ゆるす
+        semantic: true
+        correct: false
+  - id: 述-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

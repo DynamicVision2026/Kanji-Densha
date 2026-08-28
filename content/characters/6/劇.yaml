@@ -1,0 +1,73 @@
+character: 劇
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゲキ
+      type: on
+      audio: audio/readings/30b230ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: げき。しばい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    げき。
+    演劇を みる。
+    しばい。
+surfaces:
+  - id: s0
+    word: 劇
+    reading_id: r0
+    audio: audio/surfaces/5287_0.mp3
+  - id: s1
+    word: 演劇
+    reading_id: r0
+    audio: audio/surfaces/6f145287_1.mp3
+  - id: s2
+    word: 演劇
+    reading_id: r0
+    audio: audio/surfaces/304830933052304d_2.mp3
+  - id: s3
+    word: 劇場
+    reading_id: r0
+    audio: audio/surfaces/52875834_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 豦
+    - char: 刀
+items:
+  - id: 劇-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゲキ
+        correct: true
+      - kana: さがす
+        correct: false
+      - kana: キ
+        correct: false
+  - id: 劇-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: げき。しばい
+        semantic: true
+        correct: true
+      - gloss_ja: しお
+        semantic: true
+        correct: false
+      - gloss_ja: とばり
+        semantic: true
+        correct: false
+  - id: 劇-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 間
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あいだ
+      type: kun
+      audio: audio/readings/304230443060.mp3
+    - id: r1
+      kana: カン
+      type: on
+      audio: audio/readings/30ab30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あいだ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あいだ。
+    とびらの 間。
+    ひまの とき。
+surfaces:
+  - id: s0
+    word: 間
+    reading_id: r0
+    audio: audio/surfaces/9593_0.mp3
+  - id: s1
+    word: 間
+    reading_id: r0
+    audio: audio/surfaces/9593_1.mp3
+  - id: s2
+    word: 間
+    reading_id: r0
+    audio: audio/surfaces/304230443060_2.mp3
+  - id: s3
+    word: 時間
+    reading_id: r1
+    audio: audio/surfaces/66429593_3.mp3
+  - id: s4
+    word: 週間
+    reading_id: r1
+    audio: audio/surfaces/90319593_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 門
+    - char: 日
+items:
+  - id: 間-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あいだ
+        correct: true
+      - kana: ひく
+        correct: false
+      - kana: サイ
+        correct: false
+  - id: 間-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: カン
+        correct: true
+      - kana: ショク
+        correct: false
+      - kana: ブン
+        correct: false
+  - id: 間-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あいだ
+        semantic: true
+        correct: true
+      - gloss_ja: たに
+        semantic: true
+        correct: false
+      - gloss_ja: は
+        semantic: true
+        correct: false
+  - id: 間-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

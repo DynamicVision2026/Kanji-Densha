@@ -1,0 +1,70 @@
+character: 妻
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: つま
+      type: kun
+      audio: audio/readings/3064307e.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つま。
+    家の 妻。
+    つれあい。
+surfaces:
+  - id: s0
+    word: 妻
+    reading_id: r0
+    audio: audio/surfaces/59bb_0.mp3
+  - id: s1
+    word: 妻
+    reading_id: r0
+    audio: audio/surfaces/59bb_1.mp3
+  - id: s2
+    word: 妻
+    reading_id: r0
+    audio: audio/surfaces/3064307e_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 肀
+    - char: 女
+items:
+  - id: 妻-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つま
+        correct: true
+      - kana: あむ
+        correct: false
+      - kana: トウ
+        correct: false
+  - id: 妻-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つま
+        semantic: true
+        correct: true
+      - gloss_ja: かんむり
+        semantic: true
+        correct: false
+      - gloss_ja: わざわい
+        semantic: true
+        correct: false
+  - id: 妻-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

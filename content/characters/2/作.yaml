@@ -1,0 +1,92 @@
+character: 作
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: つくる
+      type: kun
+      audio: audio/readings/3064304f308b.mp3
+    - id: r1
+      kana: サク
+      type: on
+      audio: audio/readings/30b530af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つくる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つくる。
+    えを 作る。
+    手を つかう。
+surfaces:
+  - id: s0
+    word: 作
+    reading_id: r0
+    audio: audio/surfaces/4f5c_0.mp3
+  - id: s1
+    word: 作る
+    reading_id: r0
+    audio: audio/surfaces/4f5c308b_1.mp3
+  - id: s2
+    word: 作る
+    reading_id: r0
+    audio: audio/surfaces/3064304f308b_2.mp3
+  - id: s3
+    word: 作品
+    reading_id: r1
+    audio: audio/surfaces/4f5c54c1_3.mp3
+  - id: s4
+    word: 作文
+    reading_id: r1
+    audio: audio/surfaces/4f5c6587_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 乍
+items:
+  - id: 作-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つくる
+        correct: true
+      - kana: あたらしい
+        correct: false
+      - kana: あるく
+        correct: false
+  - id: 作-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: サク
+        correct: true
+      - kana: くに
+        correct: false
+      - kana: ただちに
+        correct: false
+  - id: 作-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つくる
+        semantic: true
+        correct: true
+      - gloss_ja: さい。うまれつきの ちから
+        semantic: true
+        correct: false
+      - gloss_ja: か。きょうか
+        semantic: true
+        correct: false
+  - id: 作-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

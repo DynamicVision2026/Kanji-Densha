@@ -1,0 +1,69 @@
+character: 破
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: やぶる
+      type: kun
+      audio: audio/readings/30843076308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やぶる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やぶる。
+    紙を 破る。
+    こわす。
+surfaces:
+  - id: s0
+    word: 破
+    reading_id: r0
+    audio: audio/surfaces/7834_0.mp3
+  - id: s1
+    word: 破る
+    reading_id: r0
+    audio: audio/surfaces/7834308b_1.mp3
+  - id: s2
+    word: 破る
+    reading_id: r0
+    audio: audio/surfaces/30843076308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 石
+    - char: 皮
+items:
+  - id: 破-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: やぶる
+        correct: true
+      - kana: みちびく
+        correct: false
+      - kana: セツ
+        correct: false
+  - id: 破-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やぶる
+        semantic: true
+        correct: true
+      - gloss_ja: えい。まもる
+        semantic: true
+        correct: false
+      - gloss_ja: おさめる
+        semantic: true
+        correct: false
+  - id: 破-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

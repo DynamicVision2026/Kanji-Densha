@@ -1,0 +1,84 @@
+character: 連
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: つらなる
+      type: kun
+      audio: audio/readings/30643089306a308b.mp3
+    - id: r1
+      kana: つれる
+      type: kun
+      audio: audio/readings/3064308c308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つらなる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つれる。
+    犬を 連れる。
+    つなぐ。
+surfaces:
+  - id: s0
+    word: 連
+    reading_id: r0
+    audio: audio/surfaces/9023_0.mp3
+  - id: s1
+    word: 連れる
+    reading_id: r1
+    audio: audio/surfaces/9023308c308b_1.mp3
+  - id: s2
+    word: 連れる
+    reading_id: r1
+    audio: audio/surfaces/3064308c308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 車
+items:
+  - id: 連-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つらなる
+        correct: true
+      - kana: くま
+        correct: false
+      - kana: ソツ
+        correct: false
+  - id: 連-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: つれる
+        correct: true
+      - kana: まつ
+        correct: false
+      - kana: ボク
+        correct: false
+  - id: 連-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つらなる
+        semantic: true
+        correct: true
+      - gloss_ja: はく。ひろい。はくぶつかん
+        semantic: true
+        correct: false
+      - gloss_ja: おっと
+        semantic: true
+        correct: false
+  - id: 連-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

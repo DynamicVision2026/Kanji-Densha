@@ -1,0 +1,85 @@
+character: 事
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: こと
+      type: kun
+      audio: audio/readings/30533068.mp3
+    - id: r1
+      kana: ジ
+      type: on
+      audio: audio/readings/30b8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こと。
+    仕事の 事。
+    できごと。
+surfaces:
+  - id: s0
+    word: 事
+    reading_id: r0
+    audio: audio/surfaces/4e8b_0.mp3
+  - id: s1
+    word: 仕事
+    reading_id: r1
+    audio: audio/surfaces/4ed54e8b_1.mp3
+  - id: s2
+    word: 仕事
+    reading_id: r1
+    audio: audio/surfaces/305730543068_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 口
+    - char: ヨ
+items:
+  - id: 事-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: こと
+        correct: true
+      - kana: はた
+        correct: false
+      - kana: キャク
+        correct: false
+  - id: 事-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ジ
+        correct: true
+      - kana: そそぐ
+        correct: false
+      - kana: ゆだねる
+        correct: false
+  - id: 事-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こと
+        semantic: true
+        correct: true
+      - gloss_ja: つかえる
+        semantic: true
+        correct: false
+      - gloss_ja: まつ
+        semantic: true
+        correct: false
+  - id: 事-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

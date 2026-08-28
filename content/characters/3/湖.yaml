@@ -1,0 +1,69 @@
+character: 湖
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: みずうみ
+      type: kun
+      audio: audio/readings/307f305a3046307f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みずうみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みずうみ。
+    広い 湖。
+    静かな 水。
+surfaces:
+  - id: s0
+    word: 湖
+    reading_id: r0
+    audio: audio/surfaces/6e56_0.mp3
+  - id: s1
+    word: 湖
+    reading_id: r0
+    audio: audio/surfaces/6e56_1.mp3
+  - id: s2
+    word: 湖
+    reading_id: r0
+    audio: audio/surfaces/307f305a3046307f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 胡
+items:
+  - id: 湖-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みずうみ
+        correct: true
+      - kana: くるしい
+        correct: false
+      - kana: うける
+        correct: false
+  - id: 湖-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みずうみ
+        semantic: true
+        correct: true
+      - gloss_ja: やむ
+        semantic: true
+        correct: false
+      - gloss_ja: に
+        semantic: true
+        correct: false
+  - id: 湖-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

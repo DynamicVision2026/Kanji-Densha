@@ -1,0 +1,69 @@
+character: 適
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: テキ
+      type: on
+      audio: audio/readings/30c630ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かなう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かなう。
+    適当な 大きさ。
+    あっている。
+surfaces:
+  - id: s0
+    word: 適
+    reading_id: r0
+    audio: audio/surfaces/9069_0.mp3
+  - id: s1
+    word: 適当
+    reading_id: r0
+    audio: audio/surfaces/90695f53_1.mp3
+  - id: s2
+    word: 適当
+    reading_id: r0
+    audio: audio/surfaces/3066304d30683046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 啇
+items:
+  - id: 適-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: テキ
+        correct: true
+      - kana: よろこぶ
+        correct: false
+      - kana: いとなむ
+        correct: false
+  - id: 適-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かなう
+        semantic: true
+        correct: true
+      - gloss_ja: ほとけ
+        semantic: true
+        correct: false
+      - gloss_ja: まじる
+        semantic: true
+        correct: false
+  - id: 適-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

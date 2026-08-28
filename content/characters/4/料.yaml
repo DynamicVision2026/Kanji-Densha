@@ -1,0 +1,73 @@
+character: 料
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: リョウ
+      type: on
+      audio: audio/readings/30ea30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: りょう。りょうり。だい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    りょう。
+    料理を つくる。
+    はかる。
+surfaces:
+  - id: s0
+    word: 料
+    reading_id: r0
+    audio: audio/surfaces/6599_0.mp3
+  - id: s1
+    word: 料理
+    reading_id: r0
+    audio: audio/surfaces/65997406_1.mp3
+  - id: s2
+    word: 料理
+    reading_id: r0
+    audio: audio/surfaces/308a30873046308a_2.mp3
+  - id: s3
+    word: 料金
+    reading_id: r0
+    audio: audio/surfaces/659991d1_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 米
+    - char: 斗
+items:
+  - id: 料-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: リョウ
+        correct: true
+      - kana: まと
+        correct: false
+      - kana: ミ
+        correct: false
+  - id: 料-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: りょう。りょうり。だい
+        semantic: true
+        correct: true
+      - gloss_ja: たまう
+        semantic: true
+        correct: false
+      - gloss_ja: くま
+        semantic: true
+        correct: false
+  - id: 料-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

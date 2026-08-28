@@ -1,0 +1,69 @@
+character: 域
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: イキ
+      type: on
+      audio: audio/readings/30a430ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いき。くいき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いき。
+    この 地域。
+    くぎった ばしょ。
+surfaces:
+  - id: s0
+    word: 域
+    reading_id: r0
+    audio: audio/surfaces/57df_0.mp3
+  - id: s1
+    word: 地域
+    reading_id: r0
+    audio: audio/surfaces/573057df_1.mp3
+  - id: s2
+    word: 地域
+    reading_id: r0
+    audio: audio/surfaces/30613044304d_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 或
+items:
+  - id: 域-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イキ
+        correct: true
+      - kana: きざむ
+        correct: false
+      - kana: ハ
+        correct: false
+  - id: 域-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いき。くいき
+        semantic: true
+        correct: true
+      - gloss_ja: ほす
+        semantic: true
+        correct: false
+      - gloss_ja: こまる
+        semantic: true
+        correct: false
+  - id: 域-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

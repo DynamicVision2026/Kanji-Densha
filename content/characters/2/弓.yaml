@@ -1,0 +1,80 @@
+character: 弓
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゆみ
+      type: kun
+      audio: audio/readings/3086307f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ゆみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ゆみ。
+    弓を ひく。
+    しなる かたち。
+surfaces:
+  - id: s0
+    word: 弓
+    reading_id: r0
+    audio: audio/surfaces/5f13_0.mp3
+  - id: s1
+    word: 弓
+    reading_id: r0
+    audio: audio/surfaces/5f13_1.mp3
+  - id: s2
+    word: 弓
+    reading_id: r0
+    audio: audio/surfaces/3086307f_2.mp3
+  - id: s3
+    word: 弓矢
+    reading_id: r0
+    audio: audio/surfaces/5f1377e2_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: おれ
+      a11y_ja: おれ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+items:
+  - id: 弓-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゆみ
+        correct: true
+      - kana: ドク
+        correct: false
+      - kana: もちいる
+        correct: false
+  - id: 弓-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ゆみ
+        semantic: true
+        correct: true
+      - gloss_ja: おなじ
+        semantic: true
+        correct: false
+      - gloss_ja: むろ
+        semantic: true
+        correct: false
+  - id: 弓-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

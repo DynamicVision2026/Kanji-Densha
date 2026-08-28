@@ -1,0 +1,89 @@
+character: 糸
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: いと
+      type: kun
+      audio: audio/readings/30443068.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いと。
+    ほそい 糸。
+    ぬう とき。
+surfaces:
+  - id: s0
+    word: 糸
+    reading_id: r0
+    audio: audio/surfaces/7cf8_0.mp3
+  - id: s1
+    word: 糸
+    reading_id: r0
+    audio: audio/surfaces/7cf8_1.mp3
+  - id: s2
+    word: 糸
+    reading_id: r0
+    audio: audio/surfaces/30443068_2.mp3
+  - id: s3
+    word: 毛糸
+    reading_id: r0
+    audio: audio/surfaces/6bdb7cf8_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: てん
+      a11y_ja: てん
+    - order: 4
+      type: たて
+      a11y_ja: たて
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+    - order: 6
+      type: てん
+      a11y_ja: てん6
+items:
+  - id: 糸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いと
+        correct: true
+      - kana: エン
+        correct: false
+      - kana: おと
+        correct: false
+  - id: 糸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いと
+        semantic: true
+        correct: true
+      - gloss_ja: あおい
+        semantic: true
+        correct: false
+      - gloss_ja: せん
+        semantic: true
+        correct: false
+  - id: 糸-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

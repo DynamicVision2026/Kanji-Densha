@@ -1,0 +1,92 @@
+character: 語
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: かたる
+      type: kun
+      audio: audio/readings/304b305f308b.mp3
+    - id: r1
+      kana: ゴ
+      type: on
+      audio: audio/readings/30b4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かたる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こくご。
+    ことばを かたる。
+    国語の じかん。
+surfaces:
+  - id: s0
+    word: 語
+    reading_id: r0
+    audio: audio/surfaces/8a9e_0.mp3
+  - id: s1
+    word: 国語
+    reading_id: r1
+    audio: audio/surfaces/56fd8a9e_1.mp3
+  - id: s2
+    word: 国語
+    reading_id: r1
+    audio: audio/surfaces/3053304f3054_2.mp3
+  - id: s3
+    word: 英語
+    reading_id: r1
+    audio: audio/surfaces/82f18a9e_3.mp3
+  - id: s4
+    word: 言語
+    reading_id: r1
+    audio: audio/surfaces/8a008a9e_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 吾
+items:
+  - id: 語-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かたる
+        correct: true
+      - kana: マン
+        correct: false
+      - kana: そと
+        correct: false
+  - id: 語-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ゴ
+        correct: true
+      - kana: コ
+        correct: false
+      - kana: ソウ
+        correct: false
+  - id: 語-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かたる
+        semantic: true
+        correct: true
+      - gloss_ja: ただちに
+        semantic: true
+        correct: false
+      - gloss_ja: ほそい
+        semantic: true
+        correct: false
+  - id: 語-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

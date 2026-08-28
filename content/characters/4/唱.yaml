@@ -1,0 +1,69 @@
+character: 唱
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: となえる
+      type: kun
+      audio: audio/readings/3068306a3048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: となえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    となえる。
+    歌を 唱える。
+    声に だす。
+surfaces:
+  - id: s0
+    word: 唱
+    reading_id: r0
+    audio: audio/surfaces/5531_0.mp3
+  - id: s1
+    word: 唱える
+    reading_id: r0
+    audio: audio/surfaces/55313048308b_1.mp3
+  - id: s2
+    word: 唱える
+    reading_id: r0
+    audio: audio/surfaces/3068306a3048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 昌
+items:
+  - id: 唱-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: となえる
+        correct: true
+      - kana: えらぶ
+        correct: false
+      - kana: めし
+        correct: false
+  - id: 唱-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: となえる
+        semantic: true
+        correct: true
+      - gloss_ja: いとしい
+        semantic: true
+        correct: false
+      - gloss_ja: さかえる
+        semantic: true
+        correct: false
+  - id: 唱-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

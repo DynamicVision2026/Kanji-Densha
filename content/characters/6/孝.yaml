@@ -1,0 +1,73 @@
+character: 孝
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こう。おやを たいせつに する
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こう。
+    孝行する。
+    親を たいせつに。
+surfaces:
+  - id: s0
+    word: 孝
+    reading_id: r0
+    audio: audio/surfaces/5b5d_0.mp3
+  - id: s1
+    word: 孝行
+    reading_id: r0
+    audio: audio/surfaces/5b5d884c_1.mp3
+  - id: s2
+    word: 孝行
+    reading_id: r0
+    audio: audio/surfaces/3053304630533046_2.mp3
+  - id: s3
+    word: 親孝行
+    reading_id: r0
+    audio: audio/surfaces/89aa5b5d884c_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 耂
+    - char: 子
+items:
+  - id: 孝-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: あやまる
+        correct: false
+      - kana: ちち
+        correct: false
+  - id: 孝-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こう。おやを たいせつに する
+        semantic: true
+        correct: true
+      - gloss_ja: した
+        semantic: true
+        correct: false
+      - gloss_ja: とう。さとう
+        semantic: true
+        correct: false
+  - id: 孝-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

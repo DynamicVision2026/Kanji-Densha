@@ -1,0 +1,89 @@
+character: 色
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: いろ
+      type: kun
+      audio: audio/readings/3044308d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いろ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いろ。
+    赤い 色。
+    ぬる とき。
+surfaces:
+  - id: s0
+    word: 色
+    reading_id: r0
+    audio: audio/surfaces/8272_0.mp3
+  - id: s1
+    word: 色
+    reading_id: r0
+    audio: audio/surfaces/8272_1.mp3
+  - id: s2
+    word: 色
+    reading_id: r0
+    audio: audio/surfaces/3044308d_2.mp3
+  - id: s3
+    word: 黄色
+    reading_id: r0
+    audio: audio/surfaces/9ec48272_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: たて
+      a11y_ja: たて
+    - order: 5
+      type: よこ
+      a11y_ja: よこ
+    - order: 6
+      type: はらい
+      a11y_ja: はらい6
+items:
+  - id: 色-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いろ
+        correct: true
+      - kana: ひかり
+        correct: false
+      - kana: かく
+        correct: false
+  - id: 色-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いろ
+        semantic: true
+        correct: true
+      - gloss_ja: さい。うまれつきの ちから
+        semantic: true
+        correct: false
+      - gloss_ja: か。きょうか
+        semantic: true
+        correct: false
+  - id: 色-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

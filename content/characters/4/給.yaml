@@ -1,0 +1,73 @@
+character: 給
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: キュウ
+      type: on
+      audio: audio/readings/30ad30e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たまう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たまう。
+    給料の 給。
+    あたえる。
+surfaces:
+  - id: s0
+    word: 給
+    reading_id: r0
+    audio: audio/surfaces/7d66_0.mp3
+  - id: s1
+    word: 給料
+    reading_id: r0
+    audio: audio/surfaces/7d666599_1.mp3
+  - id: s2
+    word: 給料
+    reading_id: r0
+    audio: audio/surfaces/304d30853046308a30873046_2.mp3
+  - id: s3
+    word: 支給
+    reading_id: r0
+    audio: audio/surfaces/652f7d66_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 合
+items:
+  - id: 給-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キュウ
+        correct: true
+      - kana: えひめ
+        correct: false
+      - kana: ゲイ
+        correct: false
+  - id: 給-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たまう
+        semantic: true
+        correct: true
+      - gloss_ja: おぼえる
+        semantic: true
+        correct: false
+      - gloss_ja: き。わかれる
+        semantic: true
+        correct: false
+  - id: 給-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

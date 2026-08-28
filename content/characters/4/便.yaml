@@ -1,0 +1,69 @@
+character: 便
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: たより
+      type: kun
+      audio: audio/readings/305f3088308a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たより
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たより。
+    便りが くる。
+    つごう。
+surfaces:
+  - id: s0
+    word: 便
+    reading_id: r0
+    audio: audio/surfaces/4fbf_0.mp3
+  - id: s1
+    word: 便り
+    reading_id: r0
+    audio: audio/surfaces/4fbf308a_1.mp3
+  - id: s2
+    word: 便り
+    reading_id: r0
+    audio: audio/surfaces/305f3088308a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 更
+items:
+  - id: 便-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たより
+        correct: true
+      - kana: おさめる
+        correct: false
+      - kana: たば
+        correct: false
+  - id: 便-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たより
+        semantic: true
+        correct: true
+      - gloss_ja: かならず
+        semantic: true
+        correct: false
+      - gloss_ja: とむ
+        semantic: true
+        correct: false
+  - id: 便-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

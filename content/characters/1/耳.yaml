@@ -1,0 +1,89 @@
+character: 耳
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: みみ
+      type: kun
+      audio: audio/readings/307f307f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みみ。
+    耳で きく。
+    音を うける。
+surfaces:
+  - id: s0
+    word: 耳
+    reading_id: r0
+    audio: audio/surfaces/8033_0.mp3
+  - id: s1
+    word: 耳
+    reading_id: r0
+    audio: audio/surfaces/8033_1.mp3
+  - id: s2
+    word: 耳
+    reading_id: r0
+    audio: audio/surfaces/307f307f_2.mp3
+  - id: s3
+    word: 耳たぶ
+    reading_id: r0
+    audio: audio/surfaces/8033305f3076_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい
+    - order: 6
+      type: たて
+      a11y_ja: たて6
+items:
+  - id: 耳-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みみ
+        correct: true
+      - kana: リツ
+        correct: false
+      - kana: むっつ
+        correct: false
+  - id: 耳-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みみ
+        semantic: true
+        correct: true
+      - gloss_ja: むら
+        semantic: true
+        correct: false
+      - gloss_ja: まち
+        semantic: true
+        correct: false
+  - id: 耳-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

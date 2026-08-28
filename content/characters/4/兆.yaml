@@ -1,0 +1,85 @@
+character: 兆
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: チョウ
+      type: on
+      audio: audio/readings/30c130e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きざす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きざす。
+    一兆えん。
+    おおきな かず。
+surfaces:
+  - id: s0
+    word: 兆
+    reading_id: r0
+    audio: audio/surfaces/5146_0.mp3
+  - id: s1
+    word: 一兆
+    reading_id: r0
+    audio: audio/surfaces/4e005146_1.mp3
+  - id: s2
+    word: 一兆
+    reading_id: r0
+    audio: audio/surfaces/30443063306130873046_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: てん
+      a11y_ja: てん
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+    - order: 6
+      type: てん
+      a11y_ja: てん6
+items:
+  - id: 兆-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: チョウ
+        correct: true
+      - kana: がわ
+        correct: false
+      - kana: とむ
+        correct: false
+  - id: 兆-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きざす
+        semantic: true
+        correct: true
+      - gloss_ja: しん。しんか
+        semantic: true
+        correct: false
+      - gloss_ja: つむ
+        semantic: true
+        correct: false
+  - id: 兆-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

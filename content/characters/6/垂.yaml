@@ -1,0 +1,69 @@
+character: 垂
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: たれる
+      type: kun
+      audio: audio/readings/305f308c308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たれる。
+    枝が 垂れる。
+    下がる。
+surfaces:
+  - id: s0
+    word: 垂
+    reading_id: r0
+    audio: audio/surfaces/5782_0.mp3
+  - id: s1
+    word: 垂れる
+    reading_id: r0
+    audio: audio/surfaces/5782308c308b_1.mp3
+  - id: s2
+    word: 垂れる
+    reading_id: r0
+    audio: audio/surfaces/305f308c308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 千
+    - char: 土
+items:
+  - id: 垂-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たれる
+        correct: true
+      - kana: キョウ
+        correct: false
+      - kana: あたたかい
+        correct: false
+  - id: 垂-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たれる
+        semantic: true
+        correct: true
+      - gloss_ja: たっとい
+        semantic: true
+        correct: false
+      - gloss_ja: かいこ
+        semantic: true
+        correct: false
+  - id: 垂-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

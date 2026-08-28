@@ -1,0 +1,70 @@
+character: 岸
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: きし
+      type: kun
+      audio: audio/readings/304d3057.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きし。
+    川の 岸。
+    水の へり。
+surfaces:
+  - id: s0
+    word: 岸
+    reading_id: r0
+    audio: audio/surfaces/5cb8_0.mp3
+  - id: s1
+    word: 岸
+    reading_id: r0
+    audio: audio/surfaces/5cb8_1.mp3
+  - id: s2
+    word: 岸
+    reading_id: r0
+    audio: audio/surfaces/304d3057_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 山
+    - char: 厂
+    - char: 干
+items:
+  - id: 岸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: きし
+        correct: true
+      - kana: あつまる
+        correct: false
+      - kana: チョウ
+        correct: false
+  - id: 岸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きし
+        semantic: true
+        correct: true
+      - gloss_ja: のぼる
+        semantic: true
+        correct: false
+      - gloss_ja: れつ。ならび
+        semantic: true
+        correct: false
+  - id: 岸-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 径
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ケイ
+      type: on
+      audio: audio/readings/30b130a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みち
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みち。
+    直径を はかる。
+    ほそい みち。
+surfaces:
+  - id: s0
+    word: 径
+    reading_id: r0
+    audio: audio/surfaces/5f84_0.mp3
+  - id: s1
+    word: 直径
+    reading_id: r0
+    audio: audio/surfaces/76f45f84_1.mp3
+  - id: s2
+    word: 直径
+    reading_id: r0
+    audio: audio/surfaces/30613087306330513044_2.mp3
+  - id: s3
+    word: 半径
+    reading_id: r0
+    audio: audio/surfaces/534a5f84_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 彳
+    - char: 圣
+items:
+  - id: 径-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ケイ
+        correct: true
+      - kana: うしなう
+        correct: false
+      - kana: まご
+        correct: false
+  - id: 径-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みち
+        semantic: true
+        correct: true
+      - gloss_ja: そっする
+        semantic: true
+        correct: false
+      - gloss_ja: おき
+        semantic: true
+        correct: false
+  - id: 径-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

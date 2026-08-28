@@ -1,0 +1,104 @@
+character: 鳥
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: とり
+      type: kun
+      audio: audio/readings/3068308a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とり。
+    空を とぶ。
+    なく こえ。
+surfaces:
+  - id: s0
+    word: 鳥
+    reading_id: r0
+    audio: audio/surfaces/9ce5_0.mp3
+  - id: s1
+    word: 鳥
+    reading_id: r0
+    audio: audio/surfaces/9ce5_1.mp3
+  - id: s2
+    word: 鳥
+    reading_id: r0
+    audio: audio/surfaces/3068308a_2.mp3
+  - id: s3
+    word: 小鳥
+    reading_id: r0
+    audio: audio/surfaces/5c0f9ce5_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: よこ
+      a11y_ja: よこ
+    - order: 5
+      type: よこ
+      a11y_ja: よこ5
+    - order: 6
+      type: よこ
+      a11y_ja: よこ6
+    - order: 7
+      type: はらい
+      a11y_ja: はらい7
+    - order: 8
+      type: てん
+      a11y_ja: てん
+    - order: 9
+      type: てん
+      a11y_ja: てん9
+    - order: 10
+      type: てん
+      a11y_ja: てん10
+    - order: 11
+      type: てん
+      a11y_ja: てん11
+items:
+  - id: 鳥-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とり
+        correct: true
+      - kana: あかり
+        correct: false
+      - kana: かど
+        correct: false
+  - id: 鳥-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とり
+        semantic: true
+        correct: true
+      - gloss_ja: と
+        semantic: true
+        correct: false
+      - gloss_ja: あかり
+        semantic: true
+        correct: false
+  - id: 鳥-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

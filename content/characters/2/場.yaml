@@ -1,0 +1,73 @@
+character: 場
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ば
+      type: kun
+      audio: audio/readings/3070.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ば
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ば。
+    あそぶ 場。
+    人が たつ ところ。
+surfaces:
+  - id: s0
+    word: 場
+    reading_id: r0
+    audio: audio/surfaces/5834_0.mp3
+  - id: s1
+    word: 場
+    reading_id: r0
+    audio: audio/surfaces/5834_1.mp3
+  - id: s2
+    word: 場
+    reading_id: r0
+    audio: audio/surfaces/3070_2.mp3
+  - id: s3
+    word: 場所
+    reading_id: r0
+    audio: audio/surfaces/58346240_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 昜
+items:
+  - id: 場-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ば
+        correct: true
+      - kana: はね
+        correct: false
+      - kana: おしえる
+        correct: false
+  - id: 場-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ば
+        semantic: true
+        correct: true
+      - gloss_ja: ふとい
+        semantic: true
+        correct: false
+      - gloss_ja: まじわる
+        semantic: true
+        correct: false
+  - id: 場-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

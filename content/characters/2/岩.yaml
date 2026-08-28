@@ -1,0 +1,73 @@
+character: 岩
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: いわ
+      type: kun
+      audio: audio/readings/3044308f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いわ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いわ。
+    山の 岩。
+    石より おおきい。
+surfaces:
+  - id: s0
+    word: 岩
+    reading_id: r0
+    audio: audio/surfaces/5ca9_0.mp3
+  - id: s1
+    word: 岩
+    reading_id: r0
+    audio: audio/surfaces/5ca9_1.mp3
+  - id: s2
+    word: 岩
+    reading_id: r0
+    audio: audio/surfaces/3044308f_2.mp3
+  - id: s3
+    word: 岩場
+    reading_id: r0
+    audio: audio/surfaces/5ca95834_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 山
+    - char: 石
+items:
+  - id: 岩-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いわ
+        correct: true
+      - kana: コク
+        correct: false
+      - kana: ショク
+        correct: false
+  - id: 岩-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いわ
+        semantic: true
+        correct: true
+      - gloss_ja: ひかる
+        semantic: true
+        correct: false
+      - gloss_ja: よう。ようび
+        semantic: true
+        correct: false
+  - id: 岩-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

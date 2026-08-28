@@ -1,0 +1,92 @@
+character: 言
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: いう
+      type: kun
+      audio: audio/readings/30443046.mp3
+    - id: r1
+      kana: ゲン
+      type: on
+      audio: audio/readings/30b230f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いう。
+    ことばを いう。
+    口から でる。
+surfaces:
+  - id: s0
+    word: 言
+    reading_id: r0
+    audio: audio/surfaces/8a00_0.mp3
+  - id: s1
+    word: 言う
+    reading_id: r0
+    audio: audio/surfaces/8a003046_1.mp3
+  - id: s2
+    word: 言う
+    reading_id: r0
+    audio: audio/surfaces/30443046_2.mp3
+  - id: s3
+    word: 言語
+    reading_id: r1
+    audio: audio/surfaces/8a008a9e_3.mp3
+  - id: s4
+    word: 宣言
+    reading_id: r1
+    audio: audio/surfaces/5ba38a00_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 亠
+    - char: 口
+items:
+  - id: 言-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いう
+        correct: true
+      - kana: こたえる
+        correct: false
+      - kana: け
+        correct: false
+  - id: 言-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ゲン
+        correct: true
+      - kana: やしろ
+        correct: false
+      - kana: うち
+        correct: false
+  - id: 言-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いう
+        semantic: true
+        correct: true
+      - gloss_ja: ながい
+        semantic: true
+        correct: false
+      - gloss_ja: くろ
+        semantic: true
+        correct: false
+  - id: 言-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

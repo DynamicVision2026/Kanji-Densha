@@ -1,0 +1,77 @@
+character: 線
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: セン
+      type: on
+      audio: audio/readings/30bb30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すじ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    せん。
+    細い 線。
+    ひいて つなぐ。
+surfaces:
+  - id: s0
+    word: 線
+    reading_id: r0
+    audio: audio/surfaces/7dda_0.mp3
+  - id: s1
+    word: 線
+    reading_id: r0
+    audio: audio/surfaces/7dda_1.mp3
+  - id: s2
+    word: 線
+    reading_id: r0
+    audio: audio/surfaces/305b3093_2.mp3
+  - id: s3
+    word: 直線
+    reading_id: r0
+    audio: audio/surfaces/76f47dda_3.mp3
+  - id: s4
+    word: 線路
+    reading_id: r0
+    audio: audio/surfaces/7dda8def_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 泉
+items:
+  - id: 線-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: セン
+        correct: true
+      - kana: マイ
+        correct: false
+      - kana: うみ
+        correct: false
+  - id: 線-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すじ
+        semantic: true
+        correct: true
+      - gloss_ja: ひかる
+        semantic: true
+        correct: false
+      - gloss_ja: くる
+        semantic: true
+        correct: false
+  - id: 線-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

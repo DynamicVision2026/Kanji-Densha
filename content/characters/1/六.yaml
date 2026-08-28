@@ -1,0 +1,117 @@
+character: 六
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: む
+      type: kun
+      audio: audio/readings/3080.mp3
+    - id: r1
+      kana: むっつ
+      type: kun
+      audio: audio/readings/308030633064.mp3
+    - id: r2
+      kana: ロク
+      type: on
+      audio: audio/readings/30ed30af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: むっつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    むっつ。
+    かずの 六。
+    六つ かぞえる。
+surfaces:
+  - id: s0
+    word: 六
+    reading_id: r0
+    audio: audio/surfaces/516d_0.mp3
+  - id: s1
+    word: 六つ
+    reading_id: r1
+    audio: audio/surfaces/516d3064_1.mp3
+  - id: s2
+    word: 六つ
+    reading_id: r1
+    audio: audio/surfaces/308030633064_2.mp3
+  - id: s3
+    word: 六月
+    reading_id: r2
+    audio: audio/surfaces/516d6708_3.mp3
+  - id: s4
+    word: 六時
+    reading_id: r2
+    audio: audio/surfaces/516d6642_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 六-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: む
+        correct: true
+      - kana: テン
+        correct: false
+      - kana: むし
+        correct: false
+  - id: 六-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: むっつ
+        correct: true
+      - kana: みみ
+        correct: false
+      - kana: いと
+        correct: false
+  - id: 六-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ロク
+        correct: true
+      - kana: ちいさい
+        correct: false
+      - kana: でる
+        correct: false
+  - id: 六-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: むっつ
+        semantic: true
+        correct: true
+      - gloss_ja: ここのつ
+        semantic: true
+        correct: false
+      - gloss_ja: そら。から
+        semantic: true
+        correct: false
+  - id: 六-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

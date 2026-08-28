@@ -1,0 +1,69 @@
+character: 例
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: たとえる
+      type: kun
+      audio: audio/readings/305f30683048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たとえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たとえる。
+    花に 例える。
+    にている。
+surfaces:
+  - id: s0
+    word: 例
+    reading_id: r0
+    audio: audio/surfaces/4f8b_0.mp3
+  - id: s1
+    word: 例える
+    reading_id: r0
+    audio: audio/surfaces/4f8b3048308b_1.mp3
+  - id: s2
+    word: 例える
+    reading_id: r0
+    audio: audio/surfaces/305f30683048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 列
+items:
+  - id: 例-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たとえる
+        correct: true
+      - kana: くら
+        correct: false
+      - kana: ヒョウ
+        correct: false
+  - id: 例-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たとえる
+        semantic: true
+        correct: true
+      - gloss_ja: せき
+        semantic: true
+        correct: false
+      - gloss_ja: はた
+        semantic: true
+        correct: false
+  - id: 例-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

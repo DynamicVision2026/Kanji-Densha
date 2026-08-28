@@ -1,0 +1,129 @@
+character: 直
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ただちに
+      type: kun
+      audio: audio/readings/305f30603061306b.mp3
+    - id: r1
+      kana: なおす
+      type: kun
+      audio: audio/readings/306a304a3059.mp3
+    - id: r2
+      kana: チョク
+      type: on
+      audio: audio/readings/30c130e730af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ただちに
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    なおす。
+    字を 直す。
+    まっすぐ。
+surfaces:
+  - id: s0
+    word: 直
+    reading_id: r0
+    audio: audio/surfaces/76f4_0.mp3
+  - id: s1
+    word: 直す
+    reading_id: r1
+    audio: audio/surfaces/76f43059_1.mp3
+  - id: s2
+    word: 直す
+    reading_id: r1
+    audio: audio/surfaces/306a304a3059_2.mp3
+  - id: s3
+    word: 直接
+    reading_id: r2
+    audio: audio/surfaces/76f463a5_3.mp3
+  - id: s4
+    word: 正直
+    reading_id: r2
+    audio: audio/surfaces/6b6376f4_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: たて
+      a11y_ja: たて3
+    - order: 4
+      type: おれ
+      a11y_ja: おれ
+    - order: 5
+      type: よこ
+      a11y_ja: よこ5
+    - order: 6
+      type: よこ
+      a11y_ja: よこ6
+    - order: 7
+      type: よこ
+      a11y_ja: よこ7
+    - order: 8
+      type: おれ
+      a11y_ja: おれ8
+items:
+  - id: 直-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ただちに
+        correct: true
+      - kana: てら
+        correct: false
+      - kana: の
+        correct: false
+  - id: 直-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: なおす
+        correct: true
+      - kana: いう
+        correct: false
+      - kana: みち
+        correct: false
+  - id: 直-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: チョク
+        correct: true
+      - kana: はれる
+        correct: false
+      - kana: ガク
+        correct: false
+  - id: 直-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ただちに
+        semantic: true
+        correct: true
+      - gloss_ja: と
+        semantic: true
+        correct: false
+      - gloss_ja: あかり
+        semantic: true
+        correct: false
+  - id: 直-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

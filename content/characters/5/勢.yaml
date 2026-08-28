@@ -1,0 +1,69 @@
+character: 勢
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: いきおい
+      type: kun
+      audio: audio/readings/3044304d304a3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いきおい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いきおい。
+    勢いが ある。
+    ちから。
+surfaces:
+  - id: s0
+    word: 勢
+    reading_id: r0
+    audio: audio/surfaces/52e2_0.mp3
+  - id: s1
+    word: 勢い
+    reading_id: r0
+    audio: audio/surfaces/52e23044_1.mp3
+  - id: s2
+    word: 勢い
+    reading_id: r0
+    audio: audio/surfaces/3044304d304a3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 埶
+    - char: 力
+items:
+  - id: 勢-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いきおい
+        correct: true
+      - kana: たがやす
+        correct: false
+      - kana: よる
+        correct: false
+  - id: 勢-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いきおい
+        semantic: true
+        correct: true
+      - gloss_ja: やどる
+        semantic: true
+        correct: false
+      - gloss_ja: つとめる
+        semantic: true
+        correct: false
+  - id: 勢-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

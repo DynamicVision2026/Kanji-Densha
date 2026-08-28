@@ -1,0 +1,69 @@
+character: 電
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: デン
+      type: on
+      audio: audio/readings/30c730f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: でん。でんき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    でんしゃ。
+    電車に のる。
+    電気の 電。
+surfaces:
+  - id: s0
+    word: 電
+    reading_id: r0
+    audio: audio/surfaces/96fb_0.mp3
+  - id: s1
+    word: 電車
+    reading_id: r0
+    audio: audio/surfaces/96fb8eca_1.mp3
+  - id: s2
+    word: 電気
+    reading_id: r0
+    audio: audio/surfaces/96fb6c17_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 雨
+    - char: 申
+items:
+  - id: 電-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: デン
+        correct: true
+      - kana: くる
+        correct: false
+      - kana: かえる
+        correct: false
+  - id: 電-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: でん。でんき
+        semantic: true
+        correct: true
+      - gloss_ja: まる
+        semantic: true
+        correct: false
+      - gloss_ja: しし
+        semantic: true
+        correct: false
+  - id: 電-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

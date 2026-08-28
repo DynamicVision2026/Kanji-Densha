@@ -1,0 +1,70 @@
+character: 厳
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: きびしい
+      type: kun
+      audio: audio/readings/304d307330573044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おごそか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きびしい。
+    厳しい きまり。
+    ゆるがない。
+surfaces:
+  - id: s0
+    word: 厳
+    reading_id: r0
+    audio: audio/surfaces/53b3_0.mp3
+  - id: s1
+    word: 厳しい
+    reading_id: r0
+    audio: audio/surfaces/53b330573044_1.mp3
+  - id: s2
+    word: 厳しい
+    reading_id: r0
+    audio: audio/surfaces/304d307330573044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺍
+    - char: 厂
+    - char: 敢
+items:
+  - id: 厳-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: きびしい
+        correct: true
+      - kana: おがむ
+        correct: false
+      - kana: おりる
+        correct: false
+  - id: 厳-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おごそか
+        semantic: true
+        correct: true
+      - gloss_ja: い。いぶくろ
+        semantic: true
+        correct: false
+      - gloss_ja: おもり
+        semantic: true
+        correct: false
+  - id: 厳-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

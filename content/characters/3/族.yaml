@@ -1,0 +1,73 @@
+character: 族
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゾク
+      type: on
+      audio: audio/readings/30be30af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ぞく。かぞく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぞく。
+    家族の 族。
+    なかま。
+surfaces:
+  - id: s0
+    word: 族
+    reading_id: r0
+    audio: audio/surfaces/65cf_0.mp3
+  - id: s1
+    word: 家族
+    reading_id: r0
+    audio: audio/surfaces/5bb665cf_1.mp3
+  - id: s2
+    word: 家族
+    reading_id: r0
+    audio: audio/surfaces/304b305e304f_2.mp3
+  - id: s3
+    word: 民族
+    reading_id: r0
+    audio: audio/surfaces/6c1165cf_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 方
+    - char: 矢
+items:
+  - id: 族-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゾク
+        correct: true
+      - kana: かみ
+        correct: false
+      - kana: のぼる
+        correct: false
+  - id: 族-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ぞく。かぞく
+        semantic: true
+        correct: true
+      - gloss_ja: あたたか
+        semantic: true
+        correct: false
+      - gloss_ja: み
+        semantic: true
+        correct: false
+  - id: 族-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

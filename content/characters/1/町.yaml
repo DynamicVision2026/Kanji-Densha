@@ -1,0 +1,73 @@
+character: 町
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: まち
+      type: kun
+      audio: audio/readings/307e3061.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まち
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まち。
+    この 町。
+    田と みち。
+surfaces:
+  - id: s0
+    word: 町
+    reading_id: r0
+    audio: audio/surfaces/753a_0.mp3
+  - id: s1
+    word: 町
+    reading_id: r0
+    audio: audio/surfaces/753a_1.mp3
+  - id: s2
+    word: 町
+    reading_id: r0
+    audio: audio/surfaces/307e3061_2.mp3
+  - id: s3
+    word: 下町
+    reading_id: r0
+    audio: audio/surfaces/4e0b753a_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 田
+    - char: 丁
+items:
+  - id: 町-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まち
+        correct: true
+      - kana: やっつ
+        correct: false
+      - kana: ヒャク
+        correct: false
+  - id: 町-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まち
+        semantic: true
+        correct: true
+      - gloss_ja: みっつ
+        semantic: true
+        correct: false
+      - gloss_ja: もじ。かんじ
+        semantic: true
+        correct: false
+  - id: 町-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

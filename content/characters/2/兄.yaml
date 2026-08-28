@@ -1,0 +1,92 @@
+character: 兄
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あに
+      type: kun
+      audio: audio/readings/3042306b.mp3
+    - id: r1
+      kana: キョウ
+      type: on
+      audio: audio/readings/30ad30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あに
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あに。
+    兄と あそぶ。
+    上の きょうだい。
+surfaces:
+  - id: s0
+    word: 兄
+    reading_id: r0
+    audio: audio/surfaces/5144_0.mp3
+  - id: s1
+    word: 兄
+    reading_id: r0
+    audio: audio/surfaces/5144_1.mp3
+  - id: s2
+    word: 兄
+    reading_id: r0
+    audio: audio/surfaces/3042306b_2.mp3
+  - id: s3
+    word: 兄弟
+    reading_id: r1
+    audio: audio/surfaces/51445f1f_3.mp3
+  - id: s4
+    word: 兄妹
+    reading_id: r1
+    audio: audio/surfaces/514459b9_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 儿
+items:
+  - id: 兄-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あに
+        correct: true
+      - kana: くむ
+        correct: false
+      - kana: よむ
+        correct: false
+  - id: 兄-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: キョウ
+        correct: true
+      - kana: スウ
+        correct: false
+      - kana: きた
+        correct: false
+  - id: 兄-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あに
+        semantic: true
+        correct: true
+      - gloss_ja: みずから
+        semantic: true
+        correct: false
+      - gloss_ja: かど
+        semantic: true
+        correct: false
+  - id: 兄-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 書
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: かく
+      type: kun
+      audio: audio/readings/304b304f.mp3
+    - id: r1
+      kana: ショ
+      type: on
+      audio: audio/readings/30b730e7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かく。
+    字を 書く。
+    紙の うえ。
+surfaces:
+  - id: s0
+    word: 書
+    reading_id: r0
+    audio: audio/surfaces/66f8_0.mp3
+  - id: s1
+    word: 書く
+    reading_id: r0
+    audio: audio/surfaces/66f8304f_1.mp3
+  - id: s2
+    word: 書く
+    reading_id: r0
+    audio: audio/surfaces/304b304f_2.mp3
+  - id: s3
+    word: 辞書
+    reading_id: r1
+    audio: audio/surfaces/8f9e66f8_3.mp3
+  - id: s4
+    word: 書道
+    reading_id: r1
+    audio: audio/surfaces/66f89053_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 聿
+    - char: 日
+items:
+  - id: 書-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かく
+        correct: true
+      - kana: サン
+        correct: false
+      - kana: ふゆ
+        correct: false
+  - id: 書-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ショ
+        correct: true
+      - kana: ゆみ
+        correct: false
+      - kana: ショク
+        correct: false
+  - id: 書-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かく
+        semantic: true
+        correct: true
+      - gloss_ja: くう
+        semantic: true
+        correct: false
+      - gloss_ja: みやこ
+        semantic: true
+        correct: false
+  - id: 書-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

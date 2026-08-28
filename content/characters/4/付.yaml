@@ -1,0 +1,69 @@
+character: 付
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: つける
+      type: kun
+      audio: audio/readings/30643051308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つける。
+    名前を 付ける。
+    くっつける。
+surfaces:
+  - id: s0
+    word: 付
+    reading_id: r0
+    audio: audio/surfaces/4ed8_0.mp3
+  - id: s1
+    word: 付ける
+    reading_id: r0
+    audio: audio/surfaces/4ed83051308b_1.mp3
+  - id: s2
+    word: 付ける
+    reading_id: r0
+    audio: audio/surfaces/30643051308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 寸
+items:
+  - id: 付-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つける
+        correct: true
+      - kana: おき
+        correct: false
+      - kana: ボク
+        correct: false
+  - id: 付-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つける
+        semantic: true
+        correct: true
+      - gloss_ja: まち
+        semantic: true
+        correct: false
+      - gloss_ja: みる
+        semantic: true
+        correct: false
+  - id: 付-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

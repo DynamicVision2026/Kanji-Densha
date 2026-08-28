@@ -1,0 +1,73 @@
+character: 雪
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゆき
+      type: kun
+      audio: audio/readings/3086304d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ゆき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ゆき。
+    白い 雪。
+    冬に ふる。
+surfaces:
+  - id: s0
+    word: 雪
+    reading_id: r0
+    audio: audio/surfaces/96ea_0.mp3
+  - id: s1
+    word: 雪
+    reading_id: r0
+    audio: audio/surfaces/96ea_1.mp3
+  - id: s2
+    word: 雪
+    reading_id: r0
+    audio: audio/surfaces/3086304d_2.mp3
+  - id: s3
+    word: 雪だるま
+    reading_id: r0
+    audio: audio/surfaces/96ea3060308b307e_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 雨
+    - char: 彐
+items:
+  - id: 雪-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゆき
+        correct: true
+      - kana: いう
+        correct: false
+      - kana: てら
+        correct: false
+  - id: 雪-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ゆき
+        semantic: true
+        correct: true
+      - gloss_ja: のち
+        semantic: true
+        correct: false
+      - gloss_ja: かど
+        semantic: true
+        correct: false
+  - id: 雪-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

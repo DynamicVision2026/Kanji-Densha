@@ -1,0 +1,117 @@
+character: 五
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: いつ
+      type: kun
+      audio: audio/readings/30443064.mp3
+    - id: r1
+      kana: いつつ
+      type: kun
+      audio: audio/readings/304430643064.mp3
+    - id: r2
+      kana: ゴ
+      type: on
+      audio: audio/readings/30b4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いつつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いつつ。
+    かずの 五。
+    五つ かぞえる。
+surfaces:
+  - id: s0
+    word: 五
+    reading_id: r0
+    audio: audio/surfaces/4e94_0.mp3
+  - id: s1
+    word: 五つ
+    reading_id: r1
+    audio: audio/surfaces/4e943064_1.mp3
+  - id: s2
+    word: 五つ
+    reading_id: r1
+    audio: audio/surfaces/304430643064_2.mp3
+  - id: s3
+    word: 五月
+    reading_id: r2
+    audio: audio/surfaces/4e946708_3.mp3
+  - id: s4
+    word: 五人
+    reading_id: r2
+    audio: audio/surfaces/4e944eba_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+items:
+  - id: 五-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いつ
+        correct: true
+      - kana: みみ
+        correct: false
+      - kana: いと
+        correct: false
+  - id: 五-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: いつつ
+        correct: true
+      - kana: ち
+        correct: false
+      - kana: あか
+        correct: false
+  - id: 五-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ゴ
+        correct: true
+      - kana: いと
+        correct: false
+      - kana: よっつ
+        correct: false
+  - id: 五-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いつつ
+        semantic: true
+        correct: true
+      - gloss_ja: ぶん。もじ
+        semantic: true
+        correct: false
+      - gloss_ja: みぎがわ
+        semantic: true
+        correct: false
+  - id: 五-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

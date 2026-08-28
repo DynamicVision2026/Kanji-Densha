@@ -1,0 +1,74 @@
+character: 聖
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: セイ
+      type: on
+      audio: audio/readings/30bb30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひじり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひじり。
+    聖人の 話。
+    とうとい。
+surfaces:
+  - id: s0
+    word: 聖
+    reading_id: r0
+    audio: audio/surfaces/8056_0.mp3
+  - id: s1
+    word: 聖人
+    reading_id: r0
+    audio: audio/surfaces/80564eba_1.mp3
+  - id: s2
+    word: 聖人
+    reading_id: r0
+    audio: audio/surfaces/305b304430583093_2.mp3
+  - id: s3
+    word: 聖書
+    reading_id: r0
+    audio: audio/surfaces/805666f8_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 耳
+    - char: 口
+    - char: 王
+items:
+  - id: 聖-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: セイ
+        correct: true
+      - kana: わたくし
+        correct: false
+      - kana: とじる
+        correct: false
+  - id: 聖-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひじり
+        semantic: true
+        correct: true
+      - gloss_ja: ね
+        semantic: true
+        correct: false
+      - gloss_ja: くれる
+        semantic: true
+        correct: false
+  - id: 聖-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

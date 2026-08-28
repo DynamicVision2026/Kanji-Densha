@@ -1,0 +1,69 @@
+character: 注
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: そそぐ
+      type: kun
+      audio: audio/readings/305d305d3050.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: そそぐ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    そそぐ。
+    水を 注ぐ。
+    いれる。
+surfaces:
+  - id: s0
+    word: 注
+    reading_id: r0
+    audio: audio/surfaces/6ce8_0.mp3
+  - id: s1
+    word: 注ぐ
+    reading_id: r0
+    audio: audio/surfaces/6ce83050_1.mp3
+  - id: s2
+    word: 注ぐ
+    reading_id: r0
+    audio: audio/surfaces/305d305d3050_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 主
+items:
+  - id: 注-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: そそぐ
+        correct: true
+      - kana: ビョウ
+        correct: false
+      - kana: ゆだねる
+        correct: false
+  - id: 注-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そそぐ
+        semantic: true
+        correct: true
+      - gloss_ja: かなしい
+        semantic: true
+        correct: false
+      - gloss_ja: およぐ
+        semantic: true
+        correct: false
+  - id: 注-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

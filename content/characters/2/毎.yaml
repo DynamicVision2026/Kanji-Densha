@@ -1,0 +1,73 @@
+character: 毎
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: マイ
+      type: on
+      audio: audio/readings/30de30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ごと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まいにち。
+    毎日 あるく。
+    いつも。
+surfaces:
+  - id: s0
+    word: 毎
+    reading_id: r0
+    audio: audio/surfaces/6bce_0.mp3
+  - id: s1
+    word: 毎日
+    reading_id: r0
+    audio: audio/surfaces/6bce65e5_1.mp3
+  - id: s2
+    word: 毎日
+    reading_id: r0
+    audio: audio/surfaces/307e3044306b3061_2.mp3
+  - id: s3
+    word: 毎週
+    reading_id: r0
+    audio: audio/surfaces/6bce9031_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 𠂉
+    - char: 母
+items:
+  - id: 毎-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: マイ
+        correct: true
+      - kana: のち
+        correct: false
+      - kana: シャ
+        correct: false
+  - id: 毎-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ごと
+        semantic: true
+        correct: true
+      - gloss_ja: あき
+        semantic: true
+        correct: false
+      - gloss_ja: き。ゆげ
+        semantic: true
+        correct: false
+  - id: 毎-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

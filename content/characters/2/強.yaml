@@ -1,0 +1,92 @@
+character: 強
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: つよい
+      type: kun
+      audio: audio/readings/306430883044.mp3
+    - id: r1
+      kana: キョウ
+      type: on
+      audio: audio/readings/30ad30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つよい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つよい。
+    強い かぜ。
+    弓と むし。
+surfaces:
+  - id: s0
+    word: 強
+    reading_id: r0
+    audio: audio/surfaces/5f37_0.mp3
+  - id: s1
+    word: 強い
+    reading_id: r0
+    audio: audio/surfaces/5f373044_1.mp3
+  - id: s2
+    word: 強い
+    reading_id: r0
+    audio: audio/surfaces/306430883044_2.mp3
+  - id: s3
+    word: 勉強
+    reading_id: r1
+    audio: audio/surfaces/52c95f37_3.mp3
+  - id: s4
+    word: 強調
+    reading_id: r1
+    audio: audio/surfaces/5f378abf_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 弓
+    - char: 虫
+items:
+  - id: 強-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つよい
+        correct: true
+      - kana: カン
+        correct: false
+      - kana: ひかり
+        correct: false
+  - id: 強-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: キョウ
+        correct: true
+      - kana: ショク
+        correct: false
+      - kana: ブン
+        correct: false
+  - id: 強-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つよい
+        semantic: true
+        correct: true
+      - gloss_ja: あいだ
+        semantic: true
+        correct: false
+      - gloss_ja: みなみ
+        semantic: true
+        correct: false
+  - id: 強-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

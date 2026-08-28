@@ -1,0 +1,73 @@
+character: 康
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こう。すこやか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やすらか。
+    健康に きをつける。
+    やすらか。
+surfaces:
+  - id: s0
+    word: 康
+    reading_id: r0
+    audio: audio/surfaces/5eb7_0.mp3
+  - id: s1
+    word: 健康
+    reading_id: r0
+    audio: audio/surfaces/50655eb7_1.mp3
+  - id: s2
+    word: 健康
+    reading_id: r0
+    audio: audio/surfaces/3051309330533046_2.mp3
+  - id: s3
+    word: 安康
+    reading_id: r0
+    audio: audio/surfaces/5b895eb7_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 隶
+items:
+  - id: 康-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: わ
+        correct: false
+      - kana: ねがう
+        correct: false
+  - id: 康-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こう。すこやか
+        semantic: true
+        correct: true
+      - gloss_ja: はなぶさ
+        semantic: true
+        correct: false
+      - gloss_ja: たから
+        semantic: true
+        correct: false
+  - id: 康-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

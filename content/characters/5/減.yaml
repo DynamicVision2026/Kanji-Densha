@@ -1,0 +1,69 @@
+character: 減
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: へる
+      type: kun
+      audio: audio/readings/3078308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: へる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    へる。
+    数が 減る。
+    少なく なる。
+surfaces:
+  - id: s0
+    word: 減
+    reading_id: r0
+    audio: audio/surfaces/6e1b_0.mp3
+  - id: s1
+    word: 減る
+    reading_id: r0
+    audio: audio/surfaces/6e1b308b_1.mp3
+  - id: s2
+    word: 減る
+    reading_id: r0
+    audio: audio/surfaces/3078308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 咸
+items:
+  - id: 減-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: へる
+        correct: true
+      - kana: ケツ
+        correct: false
+      - kana: こころよい
+        correct: false
+  - id: 減-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: へる
+        semantic: true
+        correct: true
+      - gloss_ja: ぼう。ぼうえき。とりひき
+        semantic: true
+        correct: false
+      - gloss_ja: くだん
+        semantic: true
+        correct: false
+  - id: 減-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

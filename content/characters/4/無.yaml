@@ -1,0 +1,69 @@
+character: 無
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ない
+      type: kun
+      audio: audio/readings/306a3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ない
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ない。
+    時間がない。
+    何も ない。
+surfaces:
+  - id: s0
+    word: 無
+    reading_id: r0
+    audio: audio/surfaces/7121_0.mp3
+  - id: s1
+    word: 無い
+    reading_id: r0
+    audio: audio/surfaces/71213044_1.mp3
+  - id: s2
+    word: 無い
+    reading_id: r0
+    audio: audio/surfaces/306a3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 𠂉
+    - char: 灬
+items:
+  - id: 無-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ない
+        correct: true
+      - kana: あらそう
+        correct: false
+      - kana: かならず
+        correct: false
+  - id: 無-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ない
+        semantic: true
+        correct: true
+      - gloss_ja: とぶ
+        semantic: true
+        correct: false
+      - gloss_ja: ふ。おか
+        semantic: true
+        correct: false
+  - id: 無-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

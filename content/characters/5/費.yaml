@@ -1,0 +1,69 @@
+character: 費
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヒ
+      type: on
+      audio: audio/readings/30d2.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ついやす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ついやす。
+    費用が かかる。
+    つかう。
+surfaces:
+  - id: s0
+    word: 費
+    reading_id: r0
+    audio: audio/surfaces/8cbb_0.mp3
+  - id: s1
+    word: 費用
+    reading_id: r0
+    audio: audio/surfaces/8cbb7528_1.mp3
+  - id: s2
+    word: 費用
+    reading_id: r0
+    audio: audio/surfaces/307230883046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 弗
+    - char: 貝
+items:
+  - id: 費-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヒ
+        correct: true
+      - kana: ゆめ
+        correct: false
+      - kana: ハン
+        correct: false
+  - id: 費-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ついやす
+        semantic: true
+        correct: true
+      - gloss_ja: ゆ。はこぶ
+        semantic: true
+        correct: false
+      - gloss_ja: し。れきし
+        semantic: true
+        correct: false
+  - id: 費-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

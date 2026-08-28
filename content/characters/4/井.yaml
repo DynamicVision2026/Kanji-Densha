@@ -1,0 +1,79 @@
+character: 井
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: い
+      type: kun
+      audio: audio/readings/3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: い
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    い。
+    井戸の 水。
+    四角い あな。
+surfaces:
+  - id: s0
+    word: 井
+    reading_id: r0
+    audio: audio/surfaces/4e95_0.mp3
+  - id: s1
+    word: 井戸
+    reading_id: r0
+    audio: audio/surfaces/4e956238_1.mp3
+  - id: s2
+    word: 井戸
+    reading_id: r0
+    audio: audio/surfaces/30443069_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ2
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: たて
+      a11y_ja: たて
+items:
+  - id: 井-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: い
+        correct: true
+      - kana: おおさか
+        correct: false
+      - kana: レイ
+        correct: false
+  - id: 井-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: い
+        semantic: true
+        correct: true
+      - gloss_ja: な
+        semantic: true
+        correct: false
+      - gloss_ja: さつ。さっする。みて さとる
+        semantic: true
+        correct: false
+  - id: 井-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

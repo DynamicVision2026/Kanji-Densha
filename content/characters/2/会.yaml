@@ -1,0 +1,92 @@
+character: 会
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あう
+      type: kun
+      audio: audio/readings/30423046.mp3
+    - id: r1
+      kana: カイ
+      type: on
+      audio: audio/readings/30ab30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あう。
+    友だちに 会う。
+    人と あう。
+surfaces:
+  - id: s0
+    word: 会
+    reading_id: r0
+    audio: audio/surfaces/4f1a_0.mp3
+  - id: s1
+    word: 会う
+    reading_id: r0
+    audio: audio/surfaces/4f1a3046_1.mp3
+  - id: s2
+    word: 会う
+    reading_id: r0
+    audio: audio/surfaces/30423046_2.mp3
+  - id: s3
+    word: 会話
+    reading_id: r1
+    audio: audio/surfaces/4f1a8a71_3.mp3
+  - id: s4
+    word: 社会
+    reading_id: r1
+    audio: audio/surfaces/793e4f1a_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 云
+items:
+  - id: 会-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あう
+        correct: true
+      - kana: コウ
+        correct: false
+      - kana: くび
+        correct: false
+  - id: 会-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: カイ
+        correct: true
+      - kana: エン
+        correct: false
+      - kana: かた
+        correct: false
+  - id: 会-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あう
+        semantic: true
+        correct: true
+      - gloss_ja: つよい
+        semantic: true
+        correct: false
+      - gloss_ja: とおい
+        semantic: true
+        correct: false
+  - id: 会-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

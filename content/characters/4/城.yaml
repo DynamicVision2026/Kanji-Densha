@@ -1,0 +1,69 @@
+character: 城
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: しろ
+      type: kun
+      audio: audio/readings/3057308d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しろ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しろ。
+    古い 城。
+    石の かき。
+surfaces:
+  - id: s0
+    word: 城
+    reading_id: r0
+    audio: audio/surfaces/57ce_0.mp3
+  - id: s1
+    word: 城
+    reading_id: r0
+    audio: audio/surfaces/57ce_1.mp3
+  - id: s2
+    word: 城
+    reading_id: r0
+    audio: audio/surfaces/3057308d_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 成
+items:
+  - id: 城-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しろ
+        correct: true
+      - kana: ヨウ
+        correct: false
+      - kana: まち
+        correct: false
+  - id: 城-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しろ
+        semantic: true
+        correct: true
+      - gloss_ja: ひ
+        semantic: true
+        correct: false
+      - gloss_ja: ねん。おもい
+        semantic: true
+        correct: false
+  - id: 城-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

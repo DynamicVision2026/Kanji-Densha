@@ -1,0 +1,73 @@
+character: 農
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ノウ
+      type: on
+      audio: audio/readings/30ce30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のう。のうぎょう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のう。
+    農業の 農。
+    田を たがやす。
+surfaces:
+  - id: s0
+    word: 農
+    reading_id: r0
+    audio: audio/surfaces/8fb2_0.mp3
+  - id: s1
+    word: 農業
+    reading_id: r0
+    audio: audio/surfaces/8fb2696d_1.mp3
+  - id: s2
+    word: 農業
+    reading_id: r0
+    audio: audio/surfaces/306e3046304e30873046_2.mp3
+  - id: s3
+    word: 農民
+    reading_id: r0
+    audio: audio/surfaces/8fb26c11_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 曲
+    - char: 辰
+items:
+  - id: 農-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ノウ
+        correct: true
+      - kana: みずうみ
+        correct: false
+      - kana: ところ
+        correct: false
+  - id: 農-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のう。のうぎょう
+        semantic: true
+        correct: true
+      - gloss_ja: うた
+        semantic: true
+        correct: false
+      - gloss_ja: みじかい
+        semantic: true
+        correct: false
+  - id: 農-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

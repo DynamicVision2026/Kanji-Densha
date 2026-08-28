@@ -1,0 +1,104 @@
+character: 羽
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: は
+      type: kun
+      audio: audio/readings/306f.mp3
+    - id: r1
+      kana: はね
+      type: kun
+      audio: audio/readings/306f306d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: は
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はね。
+    とりの 羽。
+    そらを とぶ。
+surfaces:
+  - id: s0
+    word: 羽
+    reading_id: r0
+    audio: audio/surfaces/7fbd_0.mp3
+  - id: s1
+    word: 羽
+    reading_id: r1
+    audio: audio/surfaces/7fbd_1.mp3
+  - id: s2
+    word: 羽
+    reading_id: r1
+    audio: audio/surfaces/306f306d_2.mp3
+  - id: s3
+    word: 羽根
+    reading_id: r1
+    audio: audio/surfaces/7fbd6839_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: てん
+      a11y_ja: てん
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: てん
+      a11y_ja: てん5
+    - order: 6
+      type: はらい
+      a11y_ja: はらい6
+items:
+  - id: 羽-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: は
+        correct: true
+      - kana: まるい
+        correct: false
+      - kana: かく
+        correct: false
+  - id: 羽-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: はね
+        correct: true
+      - kana: ダイ
+        correct: false
+      - kana: ワ
+        correct: false
+  - id: 羽-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: は
+        semantic: true
+        correct: true
+      - gloss_ja: すくない
+        semantic: true
+        correct: false
+      - gloss_ja: うし
+        semantic: true
+        correct: false
+  - id: 羽-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

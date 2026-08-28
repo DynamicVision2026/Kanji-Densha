@@ -1,0 +1,73 @@
+character: 就
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つく。
+    就職する。
+    つきしたがう。
+surfaces:
+  - id: s0
+    word: 就
+    reading_id: r0
+    audio: audio/surfaces/5c31_0.mp3
+  - id: s1
+    word: 就職
+    reading_id: r0
+    audio: audio/surfaces/5c318077_1.mp3
+  - id: s2
+    word: 就職
+    reading_id: r0
+    audio: audio/surfaces/30573085304630573087304f_2.mp3
+  - id: s3
+    word: 就業
+    reading_id: r0
+    audio: audio/surfaces/5c31696d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 京
+    - char: 尤
+items:
+  - id: 就-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: すな
+        correct: false
+      - kana: バン
+        correct: false
+  - id: 就-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つく
+        semantic: true
+        correct: true
+      - gloss_ja: はげしい
+        semantic: true
+        correct: false
+      - gloss_ja: き
+        semantic: true
+        correct: false
+  - id: 就-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

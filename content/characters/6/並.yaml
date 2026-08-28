@@ -1,0 +1,84 @@
+character: 並
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: なみ
+      type: kun
+      audio: audio/readings/306a307f.mp3
+    - id: r1
+      kana: ならぶ
+      type: kun
+      audio: audio/readings/306a30893076.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: なみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ならぶ。
+    列に 並ぶ。
+    ならべる。
+surfaces:
+  - id: s0
+    word: 並
+    reading_id: r0
+    audio: audio/surfaces/4e26_0.mp3
+  - id: s1
+    word: 並ぶ
+    reading_id: r1
+    audio: audio/surfaces/4e263076_1.mp3
+  - id: s2
+    word: 並ぶ
+    reading_id: r1
+    audio: audio/surfaces/306a30893076_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 䒑
+    - char: 业
+items:
+  - id: 並-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なみ
+        correct: true
+      - kana: たわら
+        correct: false
+      - kana: しりぞく
+        correct: false
+  - id: 並-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ならぶ
+        correct: true
+      - kana: ほす
+        correct: false
+      - kana: マイ
+        correct: false
+  - id: 並-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: なみ
+        semantic: true
+        correct: true
+      - gloss_ja: かわ
+        semantic: true
+        correct: false
+      - gloss_ja: はがね
+        semantic: true
+        correct: false
+  - id: 並-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

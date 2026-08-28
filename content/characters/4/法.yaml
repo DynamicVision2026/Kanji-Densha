@@ -1,0 +1,73 @@
+character: 法
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ホウ
+      type: on
+      audio: audio/readings/30db30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のり。
+    方法を かんがえる。
+    やりかた。
+surfaces:
+  - id: s0
+    word: 法
+    reading_id: r0
+    audio: audio/surfaces/6cd5_0.mp3
+  - id: s1
+    word: 方法
+    reading_id: r0
+    audio: audio/surfaces/65b96cd5_1.mp3
+  - id: s2
+    word: 方法
+    reading_id: r0
+    audio: audio/surfaces/307b3046307b3046_2.mp3
+  - id: s3
+    word: 法律
+    reading_id: r0
+    audio: audio/surfaces/6cd55f8b_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 去
+items:
+  - id: 法-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ホウ
+        correct: true
+      - kana: つける
+        correct: false
+      - kana: アイ
+        correct: false
+  - id: 法-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のり
+        semantic: true
+        correct: true
+      - gloss_ja: たい。なかまの 列
+        semantic: true
+        correct: false
+      - gloss_ja: そこ
+        semantic: true
+        correct: false
+  - id: 法-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

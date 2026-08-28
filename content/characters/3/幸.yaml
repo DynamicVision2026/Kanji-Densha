@@ -1,0 +1,84 @@
+character: 幸
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: さいわい
+      type: kun
+      audio: audio/readings/30553044308f3044.mp3
+    - id: r1
+      kana: しあわせ
+      type: kun
+      audio: audio/readings/30573042308f305b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さいわい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しあわせ。
+    幸せな ひ。
+    こころが あたたかい。
+surfaces:
+  - id: s0
+    word: 幸
+    reading_id: r0
+    audio: audio/surfaces/5e78_0.mp3
+  - id: s1
+    word: 幸せ
+    reading_id: r1
+    audio: audio/surfaces/5e78305b_1.mp3
+  - id: s2
+    word: 幸せ
+    reading_id: r1
+    audio: audio/surfaces/30573042308f305b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 𢆉
+items:
+  - id: 幸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: さいわい
+        correct: true
+      - kana: みなと
+        correct: false
+      - kana: ころがる
+        correct: false
+  - id: 幸-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: しあわせ
+        correct: true
+      - kana: みどり
+        correct: false
+      - kana: シキ
+        correct: false
+  - id: 幸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さいわい
+        semantic: true
+        correct: true
+      - gloss_ja: あいて
+        semantic: true
+        correct: false
+      - gloss_ja: たいら
+        semantic: true
+        correct: false
+  - id: 幸-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 院
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: イン
+      type: on
+      audio: audio/readings/30a430f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いん。びょういん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いん。
+    病院の 院。
+    いえの なか。
+surfaces:
+  - id: s0
+    word: 院
+    reading_id: r0
+    audio: audio/surfaces/9662_0.mp3
+  - id: s1
+    word: 病院
+    reading_id: r0
+    audio: audio/surfaces/75c59662_1.mp3
+  - id: s2
+    word: 病院
+    reading_id: r0
+    audio: audio/surfaces/30733087304630443093_2.mp3
+  - id: s3
+    word: 入院
+    reading_id: r0
+    audio: audio/surfaces/51659662_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 阝
+    - char: 完
+items:
+  - id: 院-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イン
+        correct: true
+      - kana: ととのえる
+        correct: false
+      - kana: なみ
+        correct: false
+  - id: 院-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いん。びょういん
+        semantic: true
+        correct: true
+      - gloss_ja: もつ
+        semantic: true
+        correct: false
+      - gloss_ja: そそぐ
+        semantic: true
+        correct: false
+  - id: 院-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

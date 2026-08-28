@@ -1,0 +1,69 @@
+character: 印
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: しるし
+      type: kun
+      audio: audio/readings/3057308b3057.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しるし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しるし。
+    まるの 印。
+    おす とき。
+surfaces:
+  - id: s0
+    word: 印
+    reading_id: r0
+    audio: audio/surfaces/5370_0.mp3
+  - id: s1
+    word: 印
+    reading_id: r0
+    audio: audio/surfaces/5370_1.mp3
+  - id: s2
+    word: 印
+    reading_id: r0
+    audio: audio/surfaces/3057308b3057_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 卩
+    - char: 丨
+items:
+  - id: 印-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しるし
+        correct: true
+      - kana: いさむ
+        correct: false
+      - kana: ガイ
+        correct: false
+  - id: 印-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しるし
+        semantic: true
+        correct: true
+      - gloss_ja: こ
+        semantic: true
+        correct: false
+      - gloss_ja: まわり
+        semantic: true
+        correct: false
+  - id: 印-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

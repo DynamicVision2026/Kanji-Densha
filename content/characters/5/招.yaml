@@ -1,0 +1,69 @@
+character: 招
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: まねく
+      type: kun
+      audio: audio/readings/307e306d304f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まねく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まねく。
+    友を 招く。
+    よぶ。
+surfaces:
+  - id: s0
+    word: 招
+    reading_id: r0
+    audio: audio/surfaces/62db_0.mp3
+  - id: s1
+    word: 招く
+    reading_id: r0
+    audio: audio/surfaces/62db304f_1.mp3
+  - id: s2
+    word: 招く
+    reading_id: r0
+    audio: audio/surfaces/307e306d304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 扌
+    - char: 召
+items:
+  - id: 招-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まねく
+        correct: true
+      - kana: かた
+        correct: false
+      - kana: すぎる
+        correct: false
+  - id: 招-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まねく
+        semantic: true
+        correct: true
+      - gloss_ja: あらわれる
+        semantic: true
+        correct: false
+      - gloss_ja: ほど
+        semantic: true
+        correct: false
+  - id: 招-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

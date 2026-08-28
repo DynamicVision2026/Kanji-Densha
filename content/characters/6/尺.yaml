@@ -1,0 +1,83 @@
+character: 尺
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: シャク
+      type: on
+      audio: audio/readings/30b730e330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しゃく。ものさし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しゃく。
+    一尺の 長さ。
+    ものさし。
+surfaces:
+  - id: s0
+    word: 尺
+    reading_id: r0
+    audio: audio/surfaces/5c3a_0.mp3
+  - id: s1
+    word: 一尺
+    reading_id: r0
+    audio: audio/surfaces/4e005c3a_1.mp3
+  - id: s2
+    word: 一尺
+    reading_id: r0
+    audio: audio/surfaces/3044306330573083304f_2.mp3
+  - id: s3
+    word: 尺度
+    reading_id: r0
+    audio: audio/surfaces/5c3a5ea6_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: おれ
+      a11y_ja: おれ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 尺-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シャク
+        correct: true
+      - kana: べに
+        correct: false
+      - kana: ノウ
+        correct: false
+  - id: 尺-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しゃく。ものさし
+        semantic: true
+        correct: true
+      - gloss_ja: あぶない
+        semantic: true
+        correct: false
+      - gloss_ja: たつ
+        semantic: true
+        correct: false
+  - id: 尺-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

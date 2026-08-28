@@ -1,0 +1,92 @@
+character: 角
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: かど
+      type: kun
+      audio: audio/readings/304b3069.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かど
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かど。
+    みちの 角。
+    とがった ところ。
+surfaces:
+  - id: s0
+    word: 角
+    reading_id: r0
+    audio: audio/surfaces/89d2_0.mp3
+  - id: s1
+    word: 角
+    reading_id: r0
+    audio: audio/surfaces/89d2_1.mp3
+  - id: s2
+    word: 角
+    reading_id: r0
+    audio: audio/surfaces/304b3069_2.mp3
+  - id: s3
+    word: 街角
+    reading_id: r0
+    audio: audio/surfaces/885789d2_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: たて
+      a11y_ja: たて
+    - order: 6
+      type: よこ
+      a11y_ja: よこ
+    - order: 7
+      type: よこ
+      a11y_ja: よこ7
+items:
+  - id: 角-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かど
+        correct: true
+      - kana: ヨウ
+        correct: false
+      - kana: かえる
+        correct: false
+  - id: 角-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かど
+        semantic: true
+        correct: true
+      - gloss_ja: うた
+        semantic: true
+        correct: false
+      - gloss_ja: きた
+        semantic: true
+        correct: false
+  - id: 角-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

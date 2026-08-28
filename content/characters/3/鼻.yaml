@@ -1,0 +1,69 @@
+character: 鼻
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: はな
+      type: kun
+      audio: audio/readings/306f306a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はな
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はな。
+    赤い 鼻。
+    においを かぐ。
+surfaces:
+  - id: s0
+    word: 鼻
+    reading_id: r0
+    audio: audio/surfaces/9f3b_0.mp3
+  - id: s1
+    word: 鼻
+    reading_id: r0
+    audio: audio/surfaces/9f3b_1.mp3
+  - id: s2
+    word: 鼻
+    reading_id: r0
+    audio: audio/surfaces/306f306a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 自
+    - char: 畀
+items:
+  - id: 鼻-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はな
+        correct: true
+      - kana: かかり
+        correct: false
+      - kana: おわる
+        correct: false
+  - id: 鼻-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はな
+        semantic: true
+        correct: true
+      - gloss_ja: さけ
+        semantic: true
+        correct: false
+      - gloss_ja: ふえ
+        semantic: true
+        correct: false
+  - id: 鼻-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

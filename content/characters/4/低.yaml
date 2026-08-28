@@ -1,0 +1,69 @@
+character: 低
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ひくい
+      type: kun
+      audio: audio/readings/3072304f3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひくい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひくい。
+    低い 山。
+    高く ない。
+surfaces:
+  - id: s0
+    word: 低
+    reading_id: r0
+    audio: audio/surfaces/4f4e_0.mp3
+  - id: s1
+    word: 低い
+    reading_id: r0
+    audio: audio/surfaces/4f4e3044_1.mp3
+  - id: s2
+    word: 低い
+    reading_id: r0
+    audio: audio/surfaces/3072304f3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 氐
+items:
+  - id: 低-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ひくい
+        correct: true
+      - kana: わ
+        correct: false
+      - kana: ねがう
+        correct: false
+  - id: 低-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひくい
+        semantic: true
+        correct: true
+      - gloss_ja: やめる
+        semantic: true
+        correct: false
+      - gloss_ja: はじめ
+        semantic: true
+        correct: false
+  - id: 低-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

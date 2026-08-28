@@ -1,0 +1,107 @@
+character: 形
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: かた
+      type: kun
+      audio: audio/readings/304b305f.mp3
+    - id: r1
+      kana: かたち
+      type: kun
+      audio: audio/readings/304b305f3061.mp3
+    - id: r2
+      kana: ケイ
+      type: on
+      audio: audio/readings/30b130a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かたち。
+    字の 形。
+    かたちを みる。
+surfaces:
+  - id: s0
+    word: 形
+    reading_id: r0
+    audio: audio/surfaces/5f62_0.mp3
+  - id: s1
+    word: 形
+    reading_id: r1
+    audio: audio/surfaces/5f62_1.mp3
+  - id: s2
+    word: 形
+    reading_id: r1
+    audio: audio/surfaces/304b305f3061_2.mp3
+  - id: s3
+    word: 図形
+    reading_id: r2
+    audio: audio/surfaces/56f35f62_3.mp3
+  - id: s4
+    word: 形式
+    reading_id: r2
+    audio: audio/surfaces/5f625f0f_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 开
+    - char: 彡
+items:
+  - id: 形-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かた
+        correct: true
+      - kana: たべる
+        correct: false
+      - kana: わかる
+        correct: false
+  - id: 形-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: かたち
+        correct: true
+      - kana: ほし
+        correct: false
+      - kana: ふゆ
+        correct: false
+  - id: 形-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ケイ
+        correct: true
+      - kana: あき
+        correct: false
+      - kana: うる
+        correct: false
+  - id: 形-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かた
+        semantic: true
+        correct: true
+      - gloss_ja: くう
+        semantic: true
+        correct: false
+      - gloss_ja: いま
+        semantic: true
+        correct: false
+  - id: 形-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

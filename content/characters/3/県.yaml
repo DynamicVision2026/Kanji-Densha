@@ -1,0 +1,73 @@
+character: 県
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ケン
+      type: on
+      audio: audio/readings/30b130f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    けん。
+    わたしの 県。
+    くにの くぎり。
+surfaces:
+  - id: s0
+    word: 県
+    reading_id: r0
+    audio: audio/surfaces/770c_0.mp3
+  - id: s1
+    word: 県
+    reading_id: r0
+    audio: audio/surfaces/770c_1.mp3
+  - id: s2
+    word: 県
+    reading_id: r0
+    audio: audio/surfaces/30513093_2.mp3
+  - id: s3
+    word: 県立
+    reading_id: r0
+    audio: audio/surfaces/770c7acb_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 目
+    - char: 小
+items:
+  - id: 県-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ケン
+        correct: true
+      - kana: ふえ
+        correct: false
+      - kana: はなす
+        correct: false
+  - id: 県-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かける
+        semantic: true
+        correct: true
+      - gloss_ja: ひとしい
+        semantic: true
+        correct: false
+      - gloss_ja: ねる
+        semantic: true
+        correct: false
+  - id: 県-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

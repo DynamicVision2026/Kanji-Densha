@@ -1,0 +1,85 @@
+character: 帯
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: おびる
+      type: kun
+      audio: audio/readings/304a3073308b.mp3
+    - id: r1
+      kana: おび
+      type: kun
+      audio: audio/readings/304a3073.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おびる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おび。
+    赤い 帯。
+    からだに まく。
+surfaces:
+  - id: s0
+    word: 帯
+    reading_id: r0
+    audio: audio/surfaces/5e2f_0.mp3
+  - id: s1
+    word: 帯
+    reading_id: r1
+    audio: audio/surfaces/5e2f_1.mp3
+  - id: s2
+    word: 帯
+    reading_id: r1
+    audio: audio/surfaces/304a3073_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 卅
+    - char: 冖
+    - char: 巾
+items:
+  - id: 帯-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おびる
+        correct: true
+      - kana: はじめて
+        correct: false
+      - kana: すえ
+        correct: false
+  - id: 帯-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: おび
+        correct: true
+      - kana: ヒョウ
+        correct: false
+      - kana: あげる
+        correct: false
+  - id: 帯-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おびる
+        semantic: true
+        correct: true
+      - gloss_ja: か
+        semantic: true
+        correct: false
+      - gloss_ja: ざい。ざいりょう。きざい
+        semantic: true
+        correct: false
+  - id: 帯-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

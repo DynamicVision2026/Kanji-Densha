@@ -1,0 +1,99 @@
+character: 丸
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: まる
+      type: kun
+      audio: audio/readings/307e308b.mp3
+    - id: r1
+      kana: まるい
+      type: kun
+      audio: audio/readings/307e308b3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まる。
+    丸い かたち。
+    はしが ない。
+surfaces:
+  - id: s0
+    word: 丸
+    reading_id: r0
+    audio: audio/surfaces/4e38_0.mp3
+  - id: s1
+    word: 丸い
+    reading_id: r1
+    audio: audio/surfaces/4e383044_1.mp3
+  - id: s2
+    word: 丸い
+    reading_id: r1
+    audio: audio/surfaces/307e308b3044_2.mp3
+  - id: s3
+    word: 日の丸
+    reading_id: r0
+    audio: audio/surfaces/65e5306e4e38_3.mp3
+  - id: s4
+    word: 丸太
+    reading_id: r0
+    audio: audio/surfaces/4e38592a_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 丸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まる
+        correct: true
+      - kana: ば
+        correct: false
+      - kana: ちち
+        correct: false
+  - id: 丸-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: まるい
+        correct: true
+      - kana: かぜ
+        correct: false
+      - kana: かた
+        correct: false
+  - id: 丸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まる
+        semantic: true
+        correct: true
+      - gloss_ja: しる
+        semantic: true
+        correct: false
+      - gloss_ja: あう
+        semantic: true
+        correct: false
+  - id: 丸-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

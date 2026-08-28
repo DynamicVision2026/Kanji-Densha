@@ -1,0 +1,88 @@
+character: 病
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: やまい
+      type: kun
+      audio: audio/readings/3084307e3044.mp3
+    - id: r1
+      kana: ビョウ
+      type: on
+      audio: audio/readings/30d330e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やむ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やまい。
+    病気の 病。
+    からだを やすめる。
+surfaces:
+  - id: s0
+    word: 病
+    reading_id: r0
+    audio: audio/surfaces/75c5_0.mp3
+  - id: s1
+    word: 病気
+    reading_id: r1
+    audio: audio/surfaces/75c56c17_1.mp3
+  - id: s2
+    word: 病気
+    reading_id: r1
+    audio: audio/surfaces/307330873046304d_2.mp3
+  - id: s3
+    word: 病院
+    reading_id: r1
+    audio: audio/surfaces/75c59662_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 疒
+    - char: 丙
+items:
+  - id: 病-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: やまい
+        correct: true
+      - kana: しらべる
+        correct: false
+      - kana: たいら
+        correct: false
+  - id: 病-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ビョウ
+        correct: true
+      - kana: ばける
+        correct: false
+      - kana: のる
+        correct: false
+  - id: 病-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やむ
+        semantic: true
+        correct: true
+      - gloss_ja: いき
+        semantic: true
+        correct: false
+      - gloss_ja: べ
+        semantic: true
+        correct: false
+  - id: 病-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 支
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ささえる
+      type: kun
+      audio: audio/readings/305530553048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ささえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ささえる。
+    家を 支える。
+    たおさない。
+surfaces:
+  - id: s0
+    word: 支
+    reading_id: r0
+    audio: audio/surfaces/652f_0.mp3
+  - id: s1
+    word: 支える
+    reading_id: r0
+    audio: audio/surfaces/652f3048308b_1.mp3
+  - id: s2
+    word: 支える
+    reading_id: r0
+    audio: audio/surfaces/305530553048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 十
+    - char: 又
+items:
+  - id: 支-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ささえる
+        correct: true
+      - kana: あらわす
+        correct: false
+      - kana: カン
+        correct: false
+  - id: 支-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ささえる
+        semantic: true
+        correct: true
+      - gloss_ja: わざと
+        semantic: true
+        correct: false
+      - gloss_ja: よる
+        semantic: true
+        correct: false
+  - id: 支-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

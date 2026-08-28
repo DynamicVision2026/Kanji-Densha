@@ -1,0 +1,82 @@
+character: 末
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: すえ
+      type: kun
+      audio: audio/readings/30593048.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すえ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すえ。
+    月の 末。
+    おわり。
+surfaces:
+  - id: s0
+    word: 末
+    reading_id: r0
+    audio: audio/surfaces/672b_0.mp3
+  - id: s1
+    word: 末
+    reading_id: r0
+    audio: audio/surfaces/672b_1.mp3
+  - id: s2
+    word: 末
+    reading_id: r0
+    audio: audio/surfaces/30593048_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ2
+    - order: 3
+      type: たて
+      a11y_ja: たて
+    - order: 4
+      type: はらい
+      a11y_ja: はらい
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+items:
+  - id: 末-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: すえ
+        correct: true
+      - kana: つめたい
+        correct: false
+      - kana: ギ
+        correct: false
+  - id: 末-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すえ
+        semantic: true
+        correct: true
+      - gloss_ja: じ。うるおう
+        semantic: true
+        correct: false
+      - gloss_ja: じゅん。じゅんばん。したがう
+        semantic: true
+        correct: false
+  - id: 末-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

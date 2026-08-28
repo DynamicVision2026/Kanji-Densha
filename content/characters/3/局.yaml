@@ -1,0 +1,73 @@
+character: 局
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: キョク
+      type: on
+      audio: audio/readings/30ad30e730af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つぼね
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きょく。
+    放送局。
+    声が とどく。
+surfaces:
+  - id: s0
+    word: 局
+    reading_id: r0
+    audio: audio/surfaces/5c40_0.mp3
+  - id: s1
+    word: 放送局
+    reading_id: r0
+    audio: audio/surfaces/653e90015c40_1.mp3
+  - id: s2
+    word: 放送局
+    reading_id: r0
+    audio: audio/surfaces/307b3046305d3046304d3087304f_2.mp3
+  - id: s3
+    word: 結局
+    reading_id: r0
+    audio: audio/surfaces/7d505c40_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尸
+    - char: 句
+items:
+  - id: 局-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キョク
+        correct: true
+      - kana: ギン
+        correct: false
+      - kana: まもる
+        correct: false
+  - id: 局-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つぼね
+        semantic: true
+        correct: true
+      - gloss_ja: しな
+        semantic: true
+        correct: false
+      - gloss_ja: かい。せかい
+        semantic: true
+        correct: false
+  - id: 局-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

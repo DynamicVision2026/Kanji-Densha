@@ -1,0 +1,73 @@
+character: 図
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ズ
+      type: on
+      audio: audio/readings/30ba.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: え
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちず。
+    地図を みる。
+    えの なかま。
+surfaces:
+  - id: s0
+    word: 図
+    reading_id: r0
+    audio: audio/surfaces/56f3_0.mp3
+  - id: s1
+    word: 地図
+    reading_id: r0
+    audio: audio/surfaces/573056f3_1.mp3
+  - id: s2
+    word: 地図
+    reading_id: r0
+    audio: audio/surfaces/3061305a_2.mp3
+  - id: s3
+    word: 図工
+    reading_id: r0
+    audio: audio/surfaces/56f35de5_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 囗
+    - char: 乂
+items:
+  - id: 図-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ズ
+        correct: true
+      - kana: ゆみ
+        correct: false
+      - kana: くに
+        correct: false
+  - id: 図-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: え
+        semantic: true
+        correct: true
+      - gloss_ja: くる
+        semantic: true
+        correct: false
+      - gloss_ja: いけ
+        semantic: true
+        correct: false
+  - id: 図-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

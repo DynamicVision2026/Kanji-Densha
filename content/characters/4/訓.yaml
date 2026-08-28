@@ -1,0 +1,73 @@
+character: 訓
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: クン
+      type: on
+      audio: audio/readings/30af30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おしえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おしえる。
+    訓読み。
+    やまとことば。
+surfaces:
+  - id: s0
+    word: 訓
+    reading_id: r0
+    audio: audio/surfaces/8a13_0.mp3
+  - id: s1
+    word: 訓読み
+    reading_id: r0
+    audio: audio/surfaces/8a138aad307f_1.mp3
+  - id: s2
+    word: 訓読み
+    reading_id: r0
+    audio: audio/surfaces/304f30933088307f_2.mp3
+  - id: s3
+    word: 訓練
+    reading_id: r0
+    audio: audio/surfaces/8a137df4_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 川
+items:
+  - id: 訓-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: クン
+        correct: true
+      - kana: たば
+        correct: false
+      - kana: おっと
+        correct: false
+  - id: 訓-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おしえる
+        semantic: true
+        correct: true
+      - gloss_ja: せき
+        semantic: true
+        correct: false
+      - gloss_ja: はた
+        semantic: true
+        correct: false
+  - id: 訓-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

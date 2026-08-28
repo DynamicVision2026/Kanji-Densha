@@ -1,0 +1,73 @@
+character: 昼
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ひる
+      type: kun
+      audio: audio/readings/3072308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひる。
+    昼の ごはん。
+    あかるい とき。
+surfaces:
+  - id: s0
+    word: 昼
+    reading_id: r0
+    audio: audio/surfaces/663c_0.mp3
+  - id: s1
+    word: 昼
+    reading_id: r0
+    audio: audio/surfaces/663c_1.mp3
+  - id: s2
+    word: 昼
+    reading_id: r0
+    audio: audio/surfaces/3072308b_2.mp3
+  - id: s3
+    word: 昼休み
+    reading_id: r0
+    audio: audio/surfaces/663c4f11307f_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尺
+    - char: 日
+items:
+  - id: 昼-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ひる
+        correct: true
+      - kana: ギョ
+        correct: false
+      - kana: コン
+        correct: false
+  - id: 昼-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひる
+        semantic: true
+        correct: true
+      - gloss_ja: はかる
+        semantic: true
+        correct: false
+      - gloss_ja: きた
+        semantic: true
+        correct: false
+  - id: 昼-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

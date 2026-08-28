@@ -1,0 +1,69 @@
+character: 遺
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: イ
+      type: on
+      audio: audio/readings/30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のこす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のこす。
+    文化の 遺産。
+    あとに のこる。
+surfaces:
+  - id: s0
+    word: 遺
+    reading_id: r0
+    audio: audio/surfaces/907a_0.mp3
+  - id: s1
+    word: 遺産
+    reading_id: r0
+    audio: audio/surfaces/907a7523_1.mp3
+  - id: s2
+    word: 遺産
+    reading_id: r0
+    audio: audio/surfaces/304430553093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 貴
+items:
+  - id: 遺-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イ
+        correct: true
+      - kana: いただく
+        correct: false
+      - kana: うやまう
+        correct: false
+  - id: 遺-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のこす
+        semantic: true
+        correct: true
+      - gloss_ja: むす
+        semantic: true
+        correct: false
+      - gloss_ja: いただく
+        semantic: true
+        correct: false
+  - id: 遺-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

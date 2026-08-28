@@ -1,0 +1,69 @@
+character: 以
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: イ
+      type: on
+      audio: audio/readings/30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: もって
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    もって。
+    これ 以上。
+    これより。
+surfaces:
+  - id: s0
+    word: 以
+    reading_id: r0
+    audio: audio/surfaces/4ee5_0.mp3
+  - id: s1
+    word: 以上
+    reading_id: r0
+    audio: audio/surfaces/4ee54e0a_1.mp3
+  - id: s2
+    word: 以上
+    reading_id: r0
+    audio: audio/surfaces/3044305830873046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 丶
+items:
+  - id: 以-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イ
+        correct: true
+      - kana: うむ
+        correct: false
+      - kana: たたかう
+        correct: false
+  - id: 以-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: もって
+        semantic: true
+        correct: true
+      - gloss_ja: いかん
+        semantic: true
+        correct: false
+      - gloss_ja: めし
+        semantic: true
+        correct: false
+  - id: 以-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

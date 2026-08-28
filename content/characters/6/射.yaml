@@ -1,0 +1,84 @@
+character: 射
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: いる
+      type: kun
+      audio: audio/readings/3044308b.mp3
+    - id: r1
+      kana: シャ
+      type: on
+      audio: audio/readings/30b730e3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いる。
+    注射を うける。
+    とばす。
+surfaces:
+  - id: s0
+    word: 射
+    reading_id: r0
+    audio: audio/surfaces/5c04_0.mp3
+  - id: s1
+    word: 注射
+    reading_id: r1
+    audio: audio/surfaces/6ce85c04_1.mp3
+  - id: s2
+    word: 注射
+    reading_id: r1
+    audio: audio/surfaces/30613085304630573083_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 身
+    - char: 寸
+items:
+  - id: 射-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いる
+        correct: true
+      - kana: サク
+        correct: false
+      - kana: うたがう
+        correct: false
+  - id: 射-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シャ
+        correct: true
+      - kana: きびしい
+        correct: false
+      - kana: ウ
+        correct: false
+  - id: 射-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いる
+        semantic: true
+        correct: true
+      - gloss_ja: てん。ひろげる。てんじ
+        semantic: true
+        correct: false
+      - gloss_ja: わけ
+        semantic: true
+        correct: false
+  - id: 射-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

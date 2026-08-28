@@ -1,0 +1,73 @@
+character: 徒
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ト
+      type: on
+      audio: audio/readings/30c8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いたずら
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いたずら。
+    生徒が ならぶ。
+    あるく ひと。
+surfaces:
+  - id: s0
+    word: 徒
+    reading_id: r0
+    audio: audio/surfaces/5f92_0.mp3
+  - id: s1
+    word: 生徒
+    reading_id: r0
+    audio: audio/surfaces/751f5f92_1.mp3
+  - id: s2
+    word: 生徒
+    reading_id: r0
+    audio: audio/surfaces/305b30443068_2.mp3
+  - id: s3
+    word: 徒歩
+    reading_id: r0
+    audio: audio/surfaces/5f926b69_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 彳
+    - char: 走
+items:
+  - id: 徒-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ト
+        correct: true
+      - kana: ヘイ
+        correct: false
+      - kana: イ
+        correct: false
+  - id: 徒-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いたずら
+        semantic: true
+        correct: true
+      - gloss_ja: はた
+        semantic: true
+        correct: false
+      - gloss_ja: あさる
+        semantic: true
+        correct: false
+  - id: 徒-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

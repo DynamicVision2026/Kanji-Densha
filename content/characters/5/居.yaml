@@ -1,0 +1,69 @@
+character: 居
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: いる
+      type: kun
+      audio: audio/readings/3044308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いる。
+    部屋に 居る。
+    そこにある。
+surfaces:
+  - id: s0
+    word: 居
+    reading_id: r0
+    audio: audio/surfaces/5c45_0.mp3
+  - id: s1
+    word: 居る
+    reading_id: r0
+    audio: audio/surfaces/5c45308b_1.mp3
+  - id: s2
+    word: 居る
+    reading_id: r0
+    audio: audio/surfaces/3044308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尸
+    - char: 古
+items:
+  - id: 居-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いる
+        correct: true
+      - kana: まずしい
+        correct: false
+      - kana: タイ
+        correct: false
+  - id: 居-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いる
+        semantic: true
+        correct: true
+      - gloss_ja: つま
+        semantic: true
+        correct: false
+      - gloss_ja: こえる
+        semantic: true
+        correct: false
+  - id: 居-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

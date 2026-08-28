@@ -1,0 +1,69 @@
+character: 面
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: メン
+      type: on
+      audio: audio/readings/30e130f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おも
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おも。
+    正面を みる。
+    かお。
+surfaces:
+  - id: s0
+    word: 面
+    reading_id: r0
+    audio: audio/surfaces/9762_0.mp3
+  - id: s1
+    word: 正面
+    reading_id: r0
+    audio: audio/surfaces/6b639762_1.mp3
+  - id: s2
+    word: 正面
+    reading_id: r0
+    audio: audio/surfaces/30573087304630813093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 囗
+items:
+  - id: 面-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: メン
+        correct: true
+      - kana: あぶら
+        correct: false
+      - kana: ひらく
+        correct: false
+  - id: 面-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おも
+        semantic: true
+        correct: true
+      - gloss_ja: や
+        semantic: true
+        correct: false
+      - gloss_ja: しき。やりかた
+        semantic: true
+        correct: false
+  - id: 面-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

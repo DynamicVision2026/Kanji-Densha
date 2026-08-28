@@ -1,0 +1,69 @@
+character: 建
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: たてる
+      type: kun
+      audio: audio/readings/305f3066308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たてる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たてる。
+    家を 建てる。
+    つくる。
+surfaces:
+  - id: s0
+    word: 建
+    reading_id: r0
+    audio: audio/surfaces/5efa_0.mp3
+  - id: s1
+    word: 建てる
+    reading_id: r0
+    audio: audio/surfaces/5efa3066308b_1.mp3
+  - id: s2
+    word: 建てる
+    reading_id: r0
+    audio: audio/surfaces/305f3066308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 廴
+    - char: 聿
+items:
+  - id: 建-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たてる
+        correct: true
+      - kana: おび
+        correct: false
+      - kana: あたり
+        correct: false
+  - id: 建-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たてる
+        semantic: true
+        correct: true
+      - gloss_ja: おさめる
+        semantic: true
+        correct: false
+      - gloss_ja: いわう
+        semantic: true
+        correct: false
+  - id: 建-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

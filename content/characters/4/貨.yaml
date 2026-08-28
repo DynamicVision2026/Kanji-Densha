@@ -1,0 +1,69 @@
+character: 貨
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: カ
+      type: on
+      audio: audio/readings/30ab.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たから
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    にもの。
+    貨物の 貨。
+    はこぶ もの。
+surfaces:
+  - id: s0
+    word: 貨
+    reading_id: r0
+    audio: audio/surfaces/8ca8_0.mp3
+  - id: s1
+    word: 貨物
+    reading_id: r0
+    audio: audio/surfaces/8ca87269_1.mp3
+  - id: s2
+    word: 貨物
+    reading_id: r0
+    audio: audio/surfaces/304b30823064_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 化
+    - char: 貝
+items:
+  - id: 貨-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カ
+        correct: true
+      - kana: ふし
+        correct: false
+      - kana: ネン
+        correct: false
+  - id: 貨-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たから
+        semantic: true
+        correct: true
+      - gloss_ja: ろうする
+        semantic: true
+        correct: false
+      - gloss_ja: しるし
+        semantic: true
+        correct: false
+  - id: 貨-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

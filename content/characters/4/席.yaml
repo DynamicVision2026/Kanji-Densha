@@ -1,0 +1,74 @@
+character: 席
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: セキ
+      type: on
+      audio: audio/readings/30bb30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: むしろ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    せき。
+    座席に すわる。
+    すわる ば。
+surfaces:
+  - id: s0
+    word: 席
+    reading_id: r0
+    audio: audio/surfaces/5e2d_0.mp3
+  - id: s1
+    word: 座席
+    reading_id: r0
+    audio: audio/surfaces/5ea75e2d_1.mp3
+  - id: s2
+    word: 座席
+    reading_id: r0
+    audio: audio/surfaces/3056305b304d_2.mp3
+  - id: s3
+    word: 出席
+    reading_id: r0
+    audio: audio/surfaces/51fa5e2d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 廿
+    - char: 巾
+items:
+  - id: 席-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: セキ
+        correct: true
+      - kana: よい
+        correct: false
+      - kana: くだ
+        correct: false
+  - id: 席-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: むしろ
+        semantic: true
+        correct: true
+      - gloss_ja: ふ。〜でない
+        semantic: true
+        correct: false
+      - gloss_ja: わかれる
+        semantic: true
+        correct: false
+  - id: 席-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

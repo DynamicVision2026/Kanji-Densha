@@ -1,0 +1,69 @@
+character: 笑
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: わらう
+      type: kun
+      audio: audio/readings/308f30893046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: わらう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    わらう。
+    大きく 笑う。
+    こころが あかるい。
+surfaces:
+  - id: s0
+    word: 笑
+    reading_id: r0
+    audio: audio/surfaces/7b11_0.mp3
+  - id: s1
+    word: 笑う
+    reading_id: r0
+    audio: audio/surfaces/7b113046_1.mp3
+  - id: s2
+    word: 笑う
+    reading_id: r0
+    audio: audio/surfaces/308f30893046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 竹
+    - char: 夭
+items:
+  - id: 笑-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: わらう
+        correct: true
+      - kana: フ
+        correct: false
+      - kana: おいる
+        correct: false
+  - id: 笑-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: わらう
+        semantic: true
+        correct: true
+      - gloss_ja: いさむ
+        semantic: true
+        correct: false
+      - gloss_ja: はかる
+        semantic: true
+        correct: false
+  - id: 笑-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

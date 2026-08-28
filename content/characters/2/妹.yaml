@@ -1,0 +1,73 @@
+character: 妹
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: いもうと
+      type: kun
+      audio: audio/readings/3044308230463068.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いもうと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いもうと。
+    下の 妹。
+    きょうだい。
+surfaces:
+  - id: s0
+    word: 妹
+    reading_id: r0
+    audio: audio/surfaces/59b9_0.mp3
+  - id: s1
+    word: 妹
+    reading_id: r0
+    audio: audio/surfaces/59b9_1.mp3
+  - id: s2
+    word: 妹
+    reading_id: r0
+    audio: audio/surfaces/3044308230463068_2.mp3
+  - id: s3
+    word: 妹分
+    reading_id: r0
+    audio: audio/surfaces/59b95206_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 女
+    - char: 未
+items:
+  - id: 妹-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いもうと
+        correct: true
+      - kana: サク
+        correct: false
+      - kana: にし
+        correct: false
+  - id: 妹-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いもうと
+        semantic: true
+        correct: true
+      - gloss_ja: まわる
+        semantic: true
+        correct: false
+      - gloss_ja: ふゆ
+        semantic: true
+        correct: false
+  - id: 妹-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

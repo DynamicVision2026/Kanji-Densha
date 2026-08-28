@@ -1,0 +1,69 @@
+character: 派
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ハ
+      type: on
+      audio: audio/readings/30cf.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: は。わかれ。なかま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    は。
+    立派な たてもの。
+    わかれ。
+surfaces:
+  - id: s0
+    word: 派
+    reading_id: r0
+    audio: audio/surfaces/6d3e_0.mp3
+  - id: s1
+    word: 立派
+    reading_id: r0
+    audio: audio/surfaces/7acb6d3e_1.mp3
+  - id: s2
+    word: 立派
+    reading_id: r0
+    audio: audio/surfaces/308a30633071_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 𠂢
+items:
+  - id: 派-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ハ
+        correct: true
+      - kana: カク
+        correct: false
+      - kana: よい
+        correct: false
+  - id: 派-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: は。わかれ。なかま
+        semantic: true
+        correct: true
+      - gloss_ja: べに
+        semantic: true
+        correct: false
+      - gloss_ja: うけたまわる
+        semantic: true
+        correct: false
+  - id: 派-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 姿
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: すがた
+      type: kun
+      audio: audio/readings/3059304c305f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すがた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すがた。
+    きれいな 姿。
+    かたち。
+surfaces:
+  - id: s0
+    word: 姿
+    reading_id: r0
+    audio: audio/surfaces/59ff_0.mp3
+  - id: s1
+    word: 姿
+    reading_id: r0
+    audio: audio/surfaces/59ff_1.mp3
+  - id: s2
+    word: 姿
+    reading_id: r0
+    audio: audio/surfaces/3059304c305f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 次
+    - char: 女
+items:
+  - id: 姿-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: すがた
+        correct: true
+      - kana: かぶ
+        correct: false
+      - kana: つくる
+        correct: false
+  - id: 姿-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すがた
+        semantic: true
+        correct: true
+      - gloss_ja: そう。かさなり
+        semantic: true
+        correct: false
+      - gloss_ja: はん。はん。ちいさな グループ
+        semantic: true
+        correct: false
+  - id: 姿-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

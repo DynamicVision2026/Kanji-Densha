@@ -1,0 +1,73 @@
+character: 賛
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: サン
+      type: on
+      audio: audio/readings/30b530f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たすける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たすける。
+    賛成する。
+    よいと いう。
+surfaces:
+  - id: s0
+    word: 賛
+    reading_id: r0
+    audio: audio/surfaces/8cdb_0.mp3
+  - id: s1
+    word: 賛成
+    reading_id: r0
+    audio: audio/surfaces/8cdb6210_1.mp3
+  - id: s2
+    word: 賛成
+    reading_id: r0
+    audio: audio/surfaces/30553093305b3044_2.mp3
+  - id: s3
+    word: 賛同
+    reading_id: r0
+    audio: audio/surfaces/8cdb540c_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 夫
+    - char: 貝
+items:
+  - id: 賛-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サン
+        correct: true
+      - kana: シ
+        correct: false
+      - kana: あらわれる
+        correct: false
+  - id: 賛-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たすける
+        semantic: true
+        correct: true
+      - gloss_ja: ゆめ
+        semantic: true
+        correct: false
+      - gloss_ja: さむらい
+        semantic: true
+        correct: false
+  - id: 賛-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

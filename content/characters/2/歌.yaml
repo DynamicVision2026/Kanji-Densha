@@ -1,0 +1,107 @@
+character: 歌
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: うた
+      type: kun
+      audio: audio/readings/3046305f.mp3
+    - id: r1
+      kana: うたう
+      type: kun
+      audio: audio/readings/3046305f3046.mp3
+    - id: r2
+      kana: カ
+      type: on
+      audio: audio/readings/30ab.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うた。
+    歌を うたう。
+    こえを のせる。
+surfaces:
+  - id: s0
+    word: 歌
+    reading_id: r0
+    audio: audio/surfaces/6b4c_0.mp3
+  - id: s1
+    word: 歌う
+    reading_id: r1
+    audio: audio/surfaces/6b4c3046_1.mp3
+  - id: s2
+    word: 歌う
+    reading_id: r1
+    audio: audio/surfaces/3046305f3046_2.mp3
+  - id: s3
+    word: 国歌
+    reading_id: r2
+    audio: audio/surfaces/56fd6b4c_3.mp3
+  - id: s4
+    word: 校歌
+    reading_id: r2
+    audio: audio/surfaces/68216b4c_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 可
+    - char: 欠
+items:
+  - id: 歌-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うた
+        correct: true
+      - kana: くび
+        correct: false
+      - kana: うま
+        correct: false
+  - id: 歌-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: うたう
+        correct: true
+      - kana: の
+        correct: false
+      - kana: たかい
+        correct: false
+  - id: 歌-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: カ
+        correct: true
+      - kana: いま
+        correct: false
+      - kana: こめ
+        correct: false
+  - id: 歌-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うた
+        semantic: true
+        correct: true
+      - gloss_ja: こう。つくる しごと
+        semantic: true
+        correct: false
+      - gloss_ja: よ
+        semantic: true
+        correct: false
+  - id: 歌-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

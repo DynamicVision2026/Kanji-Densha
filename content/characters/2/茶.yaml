@@ -1,0 +1,73 @@
+character: 茶
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: チャ
+      type: on
+      audio: audio/readings/30c130e3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ちゃ。おちゃ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おちゃ。
+    お茶を のむ。
+    ちゃいろ。
+surfaces:
+  - id: s0
+    word: 茶
+    reading_id: r0
+    audio: audio/surfaces/8336_0.mp3
+  - id: s1
+    word: お茶
+    reading_id: r0
+    audio: audio/surfaces/304a8336_1.mp3
+  - id: s2
+    word: お茶
+    reading_id: r0
+    audio: audio/surfaces/304a30613083_2.mp3
+  - id: s3
+    word: 茶色
+    reading_id: r0
+    audio: audio/surfaces/83368272_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 艹
+    - char: 余
+items:
+  - id: 茶-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: チャ
+        correct: true
+      - kana: ちかい
+        correct: false
+      - kana: サク
+        correct: false
+  - id: 茶-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ちゃ。おちゃ
+        semantic: true
+        correct: true
+      - gloss_ja: あるく
+        semantic: true
+        correct: false
+      - gloss_ja: かず
+        semantic: true
+        correct: false
+  - id: 茶-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

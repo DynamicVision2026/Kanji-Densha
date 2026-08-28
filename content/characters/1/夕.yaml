@@ -1,0 +1,76 @@
+character: 夕
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゆう
+      type: kun
+      audio: audio/readings/30863046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ゆうがた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ゆうがた。
+    夕方の 空。
+    月に ちかい。
+surfaces:
+  - id: s0
+    word: 夕
+    reading_id: r0
+    audio: audio/surfaces/5915_0.mp3
+  - id: s1
+    word: 夕方
+    reading_id: r0
+    audio: audio/surfaces/591565b9_1.mp3
+  - id: s2
+    word: 夕日
+    reading_id: r0
+    audio: audio/surfaces/591565e5_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 夕-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゆう
+        correct: true
+      - kana: む
+        correct: false
+      - kana: ロク
+        correct: false
+  - id: 夕-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ゆうがた
+        semantic: true
+        correct: true
+      - gloss_ja: ななつ
+        semantic: true
+        correct: false
+      - gloss_ja: でる。だす
+        semantic: true
+        correct: false
+  - id: 夕-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

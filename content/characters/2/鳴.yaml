@@ -1,0 +1,73 @@
+character: 鳴
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: なく
+      type: kun
+      audio: audio/readings/306a304f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: なく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    なく。
+    鳥が 鳴く。
+    こえが でる。
+surfaces:
+  - id: s0
+    word: 鳴
+    reading_id: r0
+    audio: audio/surfaces/9cf4_0.mp3
+  - id: s1
+    word: 鳴く
+    reading_id: r0
+    audio: audio/surfaces/9cf4304f_1.mp3
+  - id: s2
+    word: 鳴く
+    reading_id: r0
+    audio: audio/surfaces/306a304f_2.mp3
+  - id: s3
+    word: 鳴き声
+    reading_id: r0
+    audio: audio/surfaces/9cf4304d58f0_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 鳥
+items:
+  - id: 鳴-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なく
+        correct: true
+      - kana: うたう
+        correct: false
+      - kana: ゲン
+        correct: false
+  - id: 鳴-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: なく
+        semantic: true
+        correct: true
+      - gloss_ja: ひく
+        semantic: true
+        correct: false
+      - gloss_ja: ひる
+        semantic: true
+        correct: false
+  - id: 鳴-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

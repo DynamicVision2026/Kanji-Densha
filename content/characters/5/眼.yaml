@@ -1,0 +1,73 @@
+character: 眼
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ガン
+      type: on
+      audio: audio/readings/30ac30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まなこ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まなこ。
+    眼科に いく。
+    目の なかま。
+surfaces:
+  - id: s0
+    word: 眼
+    reading_id: r0
+    audio: audio/surfaces/773c_0.mp3
+  - id: s1
+    word: 眼科
+    reading_id: r0
+    audio: audio/surfaces/773c79d1_1.mp3
+  - id: s2
+    word: 眼科
+    reading_id: r0
+    audio: audio/surfaces/304c3093304b_2.mp3
+  - id: s3
+    word: 眼光
+    reading_id: r0
+    audio: audio/surfaces/773c5149_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 目
+    - char: 艮
+items:
+  - id: 眼-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ガン
+        correct: true
+      - kana: ジュ
+        correct: false
+      - kana: まじる
+        correct: false
+  - id: 眼-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まなこ
+        semantic: true
+        correct: true
+      - gloss_ja: へる
+        semantic: true
+        correct: false
+      - gloss_ja: ほど
+        semantic: true
+        correct: false
+  - id: 眼-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

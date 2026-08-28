@@ -1,0 +1,69 @@
+character: 創
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: つくる
+      type: kun
+      audio: audio/readings/3064304f308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つくる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つくる。
+    歌を 創る。
+    はじめて つくる。
+surfaces:
+  - id: s0
+    word: 創
+    reading_id: r0
+    audio: audio/surfaces/5275_0.mp3
+  - id: s1
+    word: 創る
+    reading_id: r0
+    audio: audio/surfaces/5275308b_1.mp3
+  - id: s2
+    word: 創る
+    reading_id: r0
+    audio: audio/surfaces/3064304f308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 倉
+    - char: 刀
+items:
+  - id: 創-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つくる
+        correct: true
+      - kana: コウ
+        correct: false
+      - kana: ニュウ
+        correct: false
+  - id: 創-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つくる
+        semantic: true
+        correct: true
+      - gloss_ja: わすれる
+        semantic: true
+        correct: false
+      - gloss_ja: まく
+        semantic: true
+        correct: false
+  - id: 創-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

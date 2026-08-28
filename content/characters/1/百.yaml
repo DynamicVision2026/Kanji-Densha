@@ -1,0 +1,69 @@
+character: 百
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヒャク
+      type: on
+      audio: audio/readings/30d230e330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひゃく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひゃく。
+    百えん。
+    一と 白。
+surfaces:
+  - id: s0
+    word: 百
+    reading_id: r0
+    audio: audio/surfaces/767e_0.mp3
+  - id: s1
+    word: 百
+    reading_id: r0
+    audio: audio/surfaces/767e_1.mp3
+  - id: s2
+    word: 百円
+    reading_id: r0
+    audio: audio/surfaces/767e5186_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 白
+items:
+  - id: 百-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヒャク
+        correct: true
+      - kana: ここのつ
+        correct: false
+      - kana: やすむ
+        correct: false
+  - id: 百-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひゃく
+        semantic: true
+        correct: true
+      - gloss_ja: ふたつ
+        semantic: true
+        correct: false
+      - gloss_ja: やっつ
+        semantic: true
+        correct: false
+  - id: 百-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

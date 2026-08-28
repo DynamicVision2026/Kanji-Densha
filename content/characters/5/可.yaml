@@ -1,0 +1,82 @@
+character: 可
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: カ
+      type: on
+      audio: audio/readings/30ab.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: べき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    べき。
+    可能の 可。
+    できる こと。
+surfaces:
+  - id: s0
+    word: 可
+    reading_id: r0
+    audio: audio/surfaces/53ef_0.mp3
+  - id: s1
+    word: 可能
+    reading_id: r0
+    audio: audio/surfaces/53ef80fd_1.mp3
+  - id: s2
+    word: 可能
+    reading_id: r0
+    audio: audio/surfaces/304b306e3046_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい
+items:
+  - id: 可-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カ
+        correct: true
+      - kana: リャク
+        correct: false
+      - kana: ぬの
+        correct: false
+  - id: 可-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: べき
+        semantic: true
+        correct: true
+      - gloss_ja: わた
+        semantic: true
+        correct: false
+      - gloss_ja: し。れきし
+        semantic: true
+        correct: false
+  - id: 可-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

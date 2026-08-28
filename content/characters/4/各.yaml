@@ -1,0 +1,73 @@
+character: 各
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: カク
+      type: on
+      audio: audio/readings/30ab30af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おのおの
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おのおの。
+    各自で する。
+    それぞれ。
+surfaces:
+  - id: s0
+    word: 各
+    reading_id: r0
+    audio: audio/surfaces/5404_0.mp3
+  - id: s1
+    word: 各自
+    reading_id: r0
+    audio: audio/surfaces/540481ea_1.mp3
+  - id: s2
+    word: 各自
+    reading_id: r0
+    audio: audio/surfaces/304b304f3058_2.mp3
+  - id: s3
+    word: 各国
+    reading_id: r0
+    audio: audio/surfaces/540456fd_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 夂
+    - char: 口
+items:
+  - id: 各-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カク
+        correct: true
+      - kana: おぼえる
+        correct: false
+      - kana: さす
+        correct: false
+  - id: 各-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おのおの
+        semantic: true
+        correct: true
+      - gloss_ja: みる
+        semantic: true
+        correct: false
+      - gloss_ja: ぎ。はなしあう。ぎかい
+        semantic: true
+        correct: false
+  - id: 各-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

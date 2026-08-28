@@ -1,0 +1,83 @@
+character: 文
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ブン
+      type: on
+      audio: audio/readings/30d630f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ぶん。もじ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぶん。
+    文字の 文。
+    ことばを かく。
+surfaces:
+  - id: s0
+    word: 文
+    reading_id: r0
+    audio: audio/surfaces/6587_0.mp3
+  - id: s1
+    word: 文字
+    reading_id: r0
+    audio: audio/surfaces/65875b57_1.mp3
+  - id: s2
+    word: 文字
+    reading_id: r0
+    audio: audio/surfaces/30823058_2.mp3
+  - id: s3
+    word: 文学
+    reading_id: r0
+    audio: audio/surfaces/65875b66_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 文-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ブン
+        correct: true
+      - kana: ふた
+        correct: false
+      - kana: ニ
+        correct: false
+  - id: 文-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ぶん。もじ
+        semantic: true
+        correct: true
+      - gloss_ja: がっこう
+        semantic: true
+        correct: false
+      - gloss_ja: よっつ
+        semantic: true
+        correct: false
+  - id: 文-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

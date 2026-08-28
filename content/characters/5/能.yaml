@@ -1,0 +1,70 @@
+character: 能
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ノウ
+      type: on
+      audio: audio/readings/30ce30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    よく。
+    能力が ある。
+    できる ちから。
+surfaces:
+  - id: s0
+    word: 能
+    reading_id: r0
+    audio: audio/surfaces/80fd_0.mp3
+  - id: s1
+    word: 能力
+    reading_id: r0
+    audio: audio/surfaces/80fd529b_1.mp3
+  - id: s2
+    word: 能力
+    reading_id: r0
+    audio: audio/surfaces/306e3046308a3087304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 厶
+    - char: 月
+    - char: 匕
+items:
+  - id: 能-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ノウ
+        correct: true
+      - kana: たしか
+        correct: false
+      - kana: とまる
+        correct: false
+  - id: 能-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よく
+        semantic: true
+        correct: true
+      - gloss_ja: とめる
+        semantic: true
+        correct: false
+      - gloss_ja: し。しほん。もとで
+        semantic: true
+        correct: false
+  - id: 能-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

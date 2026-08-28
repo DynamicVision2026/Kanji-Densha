@@ -1,0 +1,84 @@
+character: 構
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: かまえる
+      type: kun
+      audio: audio/readings/304b307e3048308b.mp3
+    - id: r1
+      kana: かまう
+      type: kun
+      audio: audio/readings/304b307e3046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かまえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かまう。
+    動物を 構う。
+    組み立てる。
+surfaces:
+  - id: s0
+    word: 構
+    reading_id: r0
+    audio: audio/surfaces/69cb_0.mp3
+  - id: s1
+    word: 構う
+    reading_id: r1
+    audio: audio/surfaces/69cb3046_1.mp3
+  - id: s2
+    word: 構う
+    reading_id: r1
+    audio: audio/surfaces/304b307e3046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 冓
+items:
+  - id: 構-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かまえる
+        correct: true
+      - kana: まずしい
+        correct: false
+      - kana: あまる
+        correct: false
+  - id: 構-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: かまう
+        correct: true
+      - kana: やぶる
+        correct: false
+      - kana: あばれる
+        correct: false
+  - id: 構-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かまえる
+        semantic: true
+        correct: true
+      - gloss_ja: せい。つくる
+        semantic: true
+        correct: false
+      - gloss_ja: あたる
+        semantic: true
+        correct: false
+  - id: 構-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

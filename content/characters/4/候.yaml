@@ -1,0 +1,73 @@
+character: 候
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: そうろう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    そうろう。
+    気候が かわる。
+    ときの ようす。
+surfaces:
+  - id: s0
+    word: 候
+    reading_id: r0
+    audio: audio/surfaces/5019_0.mp3
+  - id: s1
+    word: 気候
+    reading_id: r0
+    audio: audio/surfaces/6c175019_1.mp3
+  - id: s2
+    word: 気候
+    reading_id: r0
+    audio: audio/surfaces/304d30533046_2.mp3
+  - id: s3
+    word: 候補
+    reading_id: r0
+    audio: audio/surfaces/501988dc_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 侯
+items:
+  - id: 候-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: キュウ
+        correct: false
+      - kana: のこる
+        correct: false
+  - id: 候-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そうろう
+        semantic: true
+        correct: true
+      - gloss_ja: のぞむ
+        semantic: true
+        correct: false
+      - gloss_ja: いさむ
+        semantic: true
+        correct: false
+  - id: 候-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

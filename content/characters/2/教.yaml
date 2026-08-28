@@ -1,0 +1,92 @@
+character: 教
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: おしえる
+      type: kun
+      audio: audio/readings/304a30573048308b.mp3
+    - id: r1
+      kana: キョウ
+      type: on
+      audio: audio/readings/30ad30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おしえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おしえる。
+    教える ひと。
+    学びの て。
+surfaces:
+  - id: s0
+    word: 教
+    reading_id: r0
+    audio: audio/surfaces/6559_0.mp3
+  - id: s1
+    word: 教える
+    reading_id: r0
+    audio: audio/surfaces/65593048308b_1.mp3
+  - id: s2
+    word: 教える
+    reading_id: r0
+    audio: audio/surfaces/304a30573048308b_2.mp3
+  - id: s3
+    word: 教室
+    reading_id: r1
+    audio: audio/surfaces/65595ba4_3.mp3
+  - id: s4
+    word: 教師
+    reading_id: r1
+    audio: audio/surfaces/65595e2b_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 孝
+    - char: 攵
+items:
+  - id: 教-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おしえる
+        correct: true
+      - kana: ヨウ
+        correct: false
+      - kana: しるす
+        correct: false
+  - id: 教-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: キョウ
+        correct: true
+      - kana: き
+        correct: false
+      - kana: ひる
+        correct: false
+  - id: 教-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おしえる
+        semantic: true
+        correct: true
+      - gloss_ja: かたな
+        semantic: true
+        correct: false
+      - gloss_ja: あね
+        semantic: true
+        correct: false
+  - id: 教-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

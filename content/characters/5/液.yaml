@@ -1,0 +1,69 @@
+character: 液
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: エキ
+      type: on
+      audio: audio/readings/30a830ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: えき。みずのような もの
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    えき。
+    液体の 液。
+    みずの なかま。
+surfaces:
+  - id: s0
+    word: 液
+    reading_id: r0
+    audio: audio/surfaces/6db2_0.mp3
+  - id: s1
+    word: 液体
+    reading_id: r0
+    audio: audio/surfaces/6db24f53_1.mp3
+  - id: s2
+    word: 液体
+    reading_id: r0
+    audio: audio/surfaces/3048304d305f3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 夜
+items:
+  - id: 液-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: エキ
+        correct: true
+      - kana: すくう
+        correct: false
+      - kana: こたえる
+        correct: false
+  - id: 液-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: えき。みずのような もの
+        semantic: true
+        correct: true
+      - gloss_ja: くらべる
+        semantic: true
+        correct: false
+      - gloss_ja: こ。ひとつ。こじん
+        semantic: true
+        correct: false
+  - id: 液-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,83 @@
+character: 中
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: なか
+      type: kun
+      audio: audio/readings/306a304b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: なか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    なか。
+    はこの 中。
+    まんなか。
+surfaces:
+  - id: s0
+    word: 中
+    reading_id: r0
+    audio: audio/surfaces/4e2d_0.mp3
+  - id: s1
+    word: 中
+    reading_id: r0
+    audio: audio/surfaces/4e2d_1.mp3
+  - id: s2
+    word: 中
+    reading_id: r0
+    audio: audio/surfaces/306a304b_2.mp3
+  - id: s3
+    word: 仲間
+    reading_id: r0
+    audio: audio/surfaces/4ef29593_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+    - order: 4
+      type: たて
+      a11y_ja: たて4
+items:
+  - id: 中-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なか
+        correct: true
+      - kana: ハチ
+        correct: false
+      - kana: ブン
+        correct: false
+  - id: 中-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: なか
+        semantic: true
+        correct: true
+      - gloss_ja: くち
+        semantic: true
+        correct: false
+      - gloss_ja: こ。こども
+        semantic: true
+        correct: false
+  - id: 中-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

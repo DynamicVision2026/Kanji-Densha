@@ -1,0 +1,92 @@
+character: 高
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: たかい
+      type: kun
+      audio: audio/readings/305f304b3044.mp3
+    - id: r1
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たかい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たかい。
+    高い やま。
+    うえへ。
+surfaces:
+  - id: s0
+    word: 高
+    reading_id: r0
+    audio: audio/surfaces/9ad8_0.mp3
+  - id: s1
+    word: 高い
+    reading_id: r0
+    audio: audio/surfaces/9ad83044_1.mp3
+  - id: s2
+    word: 高い
+    reading_id: r0
+    audio: audio/surfaces/305f304b3044_2.mp3
+  - id: s3
+    word: 高校
+    reading_id: r1
+    audio: audio/surfaces/9ad86821_3.mp3
+  - id: s4
+    word: 最高
+    reading_id: r1
+    audio: audio/surfaces/67009ad8_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 亠
+    - char: 口
+items:
+  - id: 高-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たかい
+        correct: true
+      - kana: ほし
+        correct: false
+      - kana: ふゆ
+        correct: false
+  - id: 高-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: ひかる
+        correct: false
+      - kana: チ
+        correct: false
+  - id: 高-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たかい
+        semantic: true
+        correct: true
+      - gloss_ja: ちかい
+        semantic: true
+        correct: false
+      - gloss_ja: あるく
+        semantic: true
+        correct: false
+  - id: 高-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

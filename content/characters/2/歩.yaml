@@ -1,0 +1,92 @@
+character: 歩
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あるく
+      type: kun
+      audio: audio/readings/3042308b304f.mp3
+    - id: r1
+      kana: ホ
+      type: on
+      audio: audio/readings/30db.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あるく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あるく。
+    道を 歩く。
+    あしで すすむ。
+surfaces:
+  - id: s0
+    word: 歩
+    reading_id: r0
+    audio: audio/surfaces/6b69_0.mp3
+  - id: s1
+    word: 歩く
+    reading_id: r0
+    audio: audio/surfaces/6b69304f_1.mp3
+  - id: s2
+    word: 歩く
+    reading_id: r0
+    audio: audio/surfaces/3042308b304f_2.mp3
+  - id: s3
+    word: 歩道
+    reading_id: r1
+    audio: audio/surfaces/6b699053_3.mp3
+  - id: s4
+    word: 散歩
+    reading_id: r1
+    audio: audio/surfaces/65636b69_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 止
+    - char: 少
+items:
+  - id: 歩-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あるく
+        correct: true
+      - kana: もちいる
+        correct: false
+      - kana: たかい
+        correct: false
+  - id: 歩-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ホ
+        correct: true
+      - kana: はる
+        correct: false
+      - kana: かう
+        correct: false
+  - id: 歩-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あるく
+        semantic: true
+        correct: true
+      - gloss_ja: はしる
+        semantic: true
+        correct: false
+      - gloss_ja: ひろい
+        semantic: true
+        correct: false
+  - id: 歩-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

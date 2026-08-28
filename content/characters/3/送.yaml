@@ -1,0 +1,69 @@
+character: 送
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: おくる
+      type: kun
+      audio: audio/readings/304a304f308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おくる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おくる。
+    手紙を 送る。
+    とどける。
+surfaces:
+  - id: s0
+    word: 送
+    reading_id: r0
+    audio: audio/surfaces/9001_0.mp3
+  - id: s1
+    word: 送る
+    reading_id: r0
+    audio: audio/surfaces/9001308b_1.mp3
+  - id: s2
+    word: 送る
+    reading_id: r0
+    audio: audio/surfaces/304a304f308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 关
+items:
+  - id: 送-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おくる
+        correct: true
+      - kana: おもい
+        correct: false
+      - kana: さだめる
+        correct: false
+  - id: 送-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おくる
+        semantic: true
+        correct: true
+      - gloss_ja: とばり
+        semantic: true
+        correct: false
+      - gloss_ja: ある
+        semantic: true
+        correct: false
+  - id: 送-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

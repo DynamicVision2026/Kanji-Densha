@@ -1,0 +1,69 @@
+character: 慣
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: なれる
+      type: kun
+      audio: audio/readings/306a308c308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: なれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    なれる。
+    場所に 慣れる。
+    おなじみ。
+surfaces:
+  - id: s0
+    word: 慣
+    reading_id: r0
+    audio: audio/surfaces/6163_0.mp3
+  - id: s1
+    word: 慣れる
+    reading_id: r0
+    audio: audio/surfaces/6163308c308b_1.mp3
+  - id: s2
+    word: 慣れる
+    reading_id: r0
+    audio: audio/surfaces/306a308c308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 忄
+    - char: 貫
+items:
+  - id: 慣-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なれる
+        correct: true
+      - kana: ます
+        correct: false
+      - kana: シュウ
+        correct: false
+  - id: 慣-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: なれる
+        semantic: true
+        correct: true
+      - gloss_ja: よめ
+        semantic: true
+        correct: false
+      - gloss_ja: おこる
+        semantic: true
+        correct: false
+  - id: 慣-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

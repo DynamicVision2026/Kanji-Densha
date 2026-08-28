@@ -1,0 +1,73 @@
+character: 号
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゴウ
+      type: on
+      audio: audio/readings/30b430a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さけぶ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ごう。
+    番号の 号。
+    よぶ しるし。
+surfaces:
+  - id: s0
+    word: 号
+    reading_id: r0
+    audio: audio/surfaces/53f7_0.mp3
+  - id: s1
+    word: 番号
+    reading_id: r0
+    audio: audio/surfaces/756a53f7_1.mp3
+  - id: s2
+    word: 番号
+    reading_id: r0
+    audio: audio/surfaces/3070309330543046_2.mp3
+  - id: s3
+    word: 信号
+    reading_id: r0
+    audio: audio/surfaces/4fe153f7_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 丂
+items:
+  - id: 号-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゴウ
+        correct: true
+      - kana: みや
+        correct: false
+      - kana: シキ
+        correct: false
+  - id: 号-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さけぶ
+        semantic: true
+        correct: true
+      - gloss_ja: き。きかん。とき
+        semantic: true
+        correct: false
+      - gloss_ja: すむ
+        semantic: true
+        correct: false
+  - id: 号-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

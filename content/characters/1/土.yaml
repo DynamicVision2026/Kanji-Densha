@@ -1,0 +1,80 @@
+character: 土
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: つち
+      type: kun
+      audio: audio/readings/30643061.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つち
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つち。
+    土に さわる。
+    あたたかい におい。
+surfaces:
+  - id: s0
+    word: 土
+    reading_id: r0
+    audio: audio/surfaces/571f_0.mp3
+  - id: s1
+    word: 土
+    reading_id: r0
+    audio: audio/surfaces/571f_1.mp3
+  - id: s2
+    word: 土
+    reading_id: r0
+    audio: audio/surfaces/30643061_2.mp3
+  - id: s3
+    word: 赤土
+    reading_id: r0
+    audio: audio/surfaces/8d64571f_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+items:
+  - id: 土-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つち
+        correct: true
+      - kana: くち
+        correct: false
+      - kana: ひだり
+        correct: false
+  - id: 土-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つち
+        semantic: true
+        correct: true
+      - gloss_ja: きん。おかね
+        semantic: true
+        correct: false
+      - gloss_ja: くち
+        semantic: true
+        correct: false
+  - id: 土-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,99 @@
+character: 小
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ちいさい
+      type: kun
+      audio: audio/readings/3061304430553044.mp3
+    - id: r1
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ちいさい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちいさい。
+    小さい こえ。
+    点と はらい。
+surfaces:
+  - id: s0
+    word: 小
+    reading_id: r0
+    audio: audio/surfaces/5c0f_0.mp3
+  - id: s1
+    word: 小さい
+    reading_id: r0
+    audio: audio/surfaces/5c0f30553044_1.mp3
+  - id: s2
+    word: 小さい
+    reading_id: r0
+    audio: audio/surfaces/3061304430553044_2.mp3
+  - id: s3
+    word: 小学校
+    reading_id: r1
+    audio: audio/surfaces/5c0f5b666821_3.mp3
+  - id: s4
+    word: 小学生
+    reading_id: r1
+    audio: audio/surfaces/5c0f5b66751f_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 小-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ちいさい
+        correct: true
+      - kana: でる
+        correct: false
+      - kana: うえ
+        correct: false
+  - id: 小-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: みみ
+        correct: false
+      - kana: ジ
+        correct: false
+  - id: 小-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ちいさい
+        semantic: true
+        correct: true
+      - gloss_ja: よっつ
+        semantic: true
+        correct: false
+      - gloss_ja: ななつ
+        semantic: true
+        correct: false
+  - id: 小-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

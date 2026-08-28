@@ -1,0 +1,84 @@
+character: 修
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: おさめる
+      type: kun
+      audio: audio/readings/304a30553081308b.mp3
+    - id: r1
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おさめる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おさめる。
+    修理する。
+    なおす。
+surfaces:
+  - id: s0
+    word: 修
+    reading_id: r0
+    audio: audio/surfaces/4fee_0.mp3
+  - id: s1
+    word: 修理
+    reading_id: r1
+    audio: audio/surfaces/4fee7406_1.mp3
+  - id: s2
+    word: 修理
+    reading_id: r1
+    audio: audio/surfaces/305730853046308a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 攸
+items:
+  - id: 修-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おさめる
+        correct: true
+      - kana: みちびく
+        correct: false
+      - kana: ベン
+        correct: false
+  - id: 修-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: ある
+        correct: false
+      - kana: ショウ
+        correct: false
+  - id: 修-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おさめる
+        semantic: true
+        correct: true
+      - gloss_ja: ながい
+        semantic: true
+        correct: false
+      - gloss_ja: あやまる
+        semantic: true
+        correct: false
+  - id: 修-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

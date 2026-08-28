@@ -1,0 +1,76 @@
+character: 子
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: こ
+      type: kun
+      audio: audio/readings/3053.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こ。こども
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こ。
+    子どもの 子。
+    ちいさな 人。
+surfaces:
+  - id: s0
+    word: 子
+    reading_id: r0
+    audio: audio/surfaces/5b50_0.mp3
+  - id: s1
+    word: 子ども
+    reading_id: r0
+    audio: audio/surfaces/5b5030693082_1.mp3
+  - id: s2
+    word: 男の子
+    reading_id: r0
+    audio: audio/surfaces/7537306e5b50_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: おれ
+      a11y_ja: おれ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+items:
+  - id: 子-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: こ
+        correct: true
+      - kana: つち
+        correct: false
+      - kana: ふたつ
+        correct: false
+  - id: 子-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こ。こども
+        semantic: true
+        correct: true
+      - gloss_ja: みぎがわ
+        semantic: true
+        correct: false
+      - gloss_ja: おと。おん
+        semantic: true
+        correct: false
+  - id: 子-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,70 @@
+character: 歴
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: レキ
+      type: on
+      audio: audio/readings/30ec30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: れき。れきし。へて きた こと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    れき。
+    歴史の 時間。
+    すぎた こと。
+surfaces:
+  - id: s0
+    word: 歴
+    reading_id: r0
+    audio: audio/surfaces/6b74_0.mp3
+  - id: s1
+    word: 歴史
+    reading_id: r0
+    audio: audio/surfaces/6b7453f2_1.mp3
+  - id: s2
+    word: 歴史
+    reading_id: r0
+    audio: audio/surfaces/308c304d3057_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 厂
+    - char: 林
+    - char: 止
+items:
+  - id: 歴-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: レキ
+        correct: true
+      - kana: さくら
+        correct: false
+      - kana: ミャク
+        correct: false
+  - id: 歴-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: れき。れきし。へて きた こと
+        semantic: true
+        correct: true
+      - gloss_ja: つくる
+        semantic: true
+        correct: false
+      - gloss_ja: たしか
+        semantic: true
+        correct: false
+  - id: 歴-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

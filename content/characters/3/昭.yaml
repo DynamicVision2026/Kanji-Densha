@@ -1,0 +1,69 @@
+character: 昭
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しょう。あきらか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しょう。
+    昭和の 昭。
+    あかるい。
+surfaces:
+  - id: s0
+    word: 昭
+    reading_id: r0
+    audio: audio/surfaces/662d_0.mp3
+  - id: s1
+    word: 昭和
+    reading_id: r0
+    audio: audio/surfaces/662d548c_1.mp3
+  - id: s2
+    word: 昭和
+    reading_id: r0
+    audio: audio/surfaces/305730873046308f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 召
+items:
+  - id: 昭-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: やまい
+        correct: false
+      - kana: そだつ
+        correct: false
+  - id: 昭-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しょう。あきらか
+        semantic: true
+        correct: true
+      - gloss_ja: つぼね
+        semantic: true
+        correct: false
+      - gloss_ja: のる
+        semantic: true
+        correct: false
+  - id: 昭-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

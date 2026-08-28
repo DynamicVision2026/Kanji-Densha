@@ -1,0 +1,69 @@
+character: 植
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: うえる
+      type: kun
+      audio: audio/readings/30463048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うえる。
+    木を 植える。
+    土に いれる。
+surfaces:
+  - id: s0
+    word: 植
+    reading_id: r0
+    audio: audio/surfaces/690d_0.mp3
+  - id: s1
+    word: 植える
+    reading_id: r0
+    audio: audio/surfaces/690d3048308b_1.mp3
+  - id: s2
+    word: 植える
+    reading_id: r0
+    audio: audio/surfaces/30463048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 直
+items:
+  - id: 植-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うえる
+        correct: true
+      - kana: カイ
+        correct: false
+      - kana: つかえる
+        correct: false
+  - id: 植-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うえる
+        semantic: true
+        correct: true
+      - gloss_ja: さか
+        semantic: true
+        correct: false
+      - gloss_ja: いん。びょういん
+        semantic: true
+        correct: false
+  - id: 植-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

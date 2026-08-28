@@ -1,0 +1,74 @@
+character: 憲
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ケン
+      type: on
+      audio: audio/readings/30b130f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: けん。けんぽう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    けん。
+    憲法を まなぶ。
+    くにの きまり。
+surfaces:
+  - id: s0
+    word: 憲
+    reading_id: r0
+    audio: audio/surfaces/61b2_0.mp3
+  - id: s1
+    word: 憲法
+    reading_id: r0
+    audio: audio/surfaces/61b26cd5_1.mp3
+  - id: s2
+    word: 憲法
+    reading_id: r0
+    audio: audio/surfaces/30513093307d3046_2.mp3
+  - id: s3
+    word: 立憲
+    reading_id: r0
+    audio: audio/surfaces/7acb61b2_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 宀
+    - char: 𢑚
+    - char: 心
+items:
+  - id: 憲-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ケン
+        correct: true
+      - kana: ほす
+        correct: false
+      - kana: ゾウ
+        correct: false
+  - id: 憲-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: けん。けんぽう
+        semantic: true
+        correct: true
+      - gloss_ja: つく
+        semantic: true
+        correct: false
+      - gloss_ja: はらわた
+        semantic: true
+        correct: false
+  - id: 憲-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

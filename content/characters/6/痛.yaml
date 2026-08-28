@@ -1,0 +1,69 @@
+character: 痛
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: いたい
+      type: kun
+      audio: audio/readings/3044305f3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いたい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いたい。
+    頭が 痛い。
+    くるしい。
+surfaces:
+  - id: s0
+    word: 痛
+    reading_id: r0
+    audio: audio/surfaces/75db_0.mp3
+  - id: s1
+    word: 痛い
+    reading_id: r0
+    audio: audio/surfaces/75db3044_1.mp3
+  - id: s2
+    word: 痛い
+    reading_id: r0
+    audio: audio/surfaces/3044305f3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 疒
+    - char: 甬
+items:
+  - id: 痛-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いたい
+        correct: true
+      - kana: こと
+        correct: false
+      - kana: スイ
+        correct: false
+  - id: 痛-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いたい
+        semantic: true
+        correct: true
+      - gloss_ja: ちぢむ
+        semantic: true
+        correct: false
+      - gloss_ja: たく。いえ
+        semantic: true
+        correct: false
+  - id: 痛-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

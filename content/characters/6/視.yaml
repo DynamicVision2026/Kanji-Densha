@@ -1,0 +1,73 @@
+character: 視
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みる。
+    視力を はかる。
+    目で みる。
+surfaces:
+  - id: s0
+    word: 視
+    reading_id: r0
+    audio: audio/surfaces/8996_0.mp3
+  - id: s1
+    word: 視力
+    reading_id: r0
+    audio: audio/surfaces/8996529b_1.mp3
+  - id: s2
+    word: 視力
+    reading_id: r0
+    audio: audio/surfaces/3057308a3087304f_2.mp3
+  - id: s3
+    word: 視覚
+    reading_id: r0
+    audio: audio/surfaces/8996899a_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 示
+    - char: 見
+items:
+  - id: 視-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シ
+        correct: true
+      - kana: ラン
+        correct: false
+      - kana: ショウ
+        correct: false
+  - id: 視-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みる
+        semantic: true
+        correct: true
+      - gloss_ja: した
+        semantic: true
+        correct: false
+      - gloss_ja: みさお
+        semantic: true
+        correct: false
+  - id: 視-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

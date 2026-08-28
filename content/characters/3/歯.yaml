@@ -1,0 +1,69 @@
+character: 歯
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: は
+      type: kun
+      audio: audio/readings/306f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よわい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    は。
+    白い 歯。
+    みがいて まもる。
+surfaces:
+  - id: s0
+    word: 歯
+    reading_id: r0
+    audio: audio/surfaces/6b6f_0.mp3
+  - id: s1
+    word: 歯
+    reading_id: r0
+    audio: audio/surfaces/6b6f_1.mp3
+  - id: s2
+    word: 歯
+    reading_id: r0
+    audio: audio/surfaces/306f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 止
+    - char: 米
+items:
+  - id: 歯-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: は
+        correct: true
+      - kana: まつる
+        correct: false
+      - kana: かみ
+        correct: false
+  - id: 歯-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よわい
+        semantic: true
+        correct: true
+      - gloss_ja: すすむ
+        semantic: true
+        correct: false
+      - gloss_ja: うつくしい
+        semantic: true
+        correct: false
+  - id: 歯-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

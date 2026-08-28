@@ -1,0 +1,69 @@
+character: 福
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: フク
+      type: on
+      audio: audio/readings/30d530af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふく。しあわせ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふく。
+    幸福の 福。
+    しあわせ。
+surfaces:
+  - id: s0
+    word: 福
+    reading_id: r0
+    audio: audio/surfaces/798f_0.mp3
+  - id: s1
+    word: 幸福
+    reading_id: r0
+    audio: audio/surfaces/5e78798f_1.mp3
+  - id: s2
+    word: 幸福
+    reading_id: r0
+    audio: audio/surfaces/305330463075304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 示
+    - char: 畐
+items:
+  - id: 福-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: フク
+        correct: true
+      - kana: ク
+        correct: false
+      - kana: とる
+        correct: false
+  - id: 福-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふく。しあわせ
+        semantic: true
+        correct: true
+      - gloss_ja: おきる
+        semantic: true
+        correct: false
+      - gloss_ja: ならう
+        semantic: true
+        correct: false
+  - id: 福-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 故
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: コ
+      type: on
+      audio: audio/readings/30b3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ゆえ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ゆえ。
+    事故が おこる。
+    わけ。
+surfaces:
+  - id: s0
+    word: 故
+    reading_id: r0
+    audio: audio/surfaces/6545_0.mp3
+  - id: s1
+    word: 事故
+    reading_id: r0
+    audio: audio/surfaces/4e8b6545_1.mp3
+  - id: s2
+    word: 事故
+    reading_id: r0
+    audio: audio/surfaces/30583053_2.mp3
+  - id: s3
+    word: 故事
+    reading_id: r0
+    audio: audio/surfaces/65454e8b_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 古
+    - char: 攵
+items:
+  - id: 故-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コ
+        correct: true
+      - kana: うつる
+        correct: false
+      - kana: あむ
+        correct: false
+  - id: 故-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ゆえ
+        semantic: true
+        correct: true
+      - gloss_ja: べき
+        semantic: true
+        correct: false
+      - gloss_ja: えだ
+        semantic: true
+        correct: false
+  - id: 故-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 浴
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: あびる
+      type: kun
+      audio: audio/readings/30423073308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あびる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あびる。
+    水を 浴びる。
+    からだに あびる。
+surfaces:
+  - id: s0
+    word: 浴
+    reading_id: r0
+    audio: audio/surfaces/6d74_0.mp3
+  - id: s1
+    word: 浴びる
+    reading_id: r0
+    audio: audio/surfaces/6d743073308b_1.mp3
+  - id: s2
+    word: 浴びる
+    reading_id: r0
+    audio: audio/surfaces/30423073308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 谷
+items:
+  - id: 浴-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あびる
+        correct: true
+      - kana: ひくい
+        correct: false
+      - kana: すえ
+        correct: false
+  - id: 浴-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あびる
+        semantic: true
+        correct: true
+      - gloss_ja: ふく。そえる。ふくいん
+        semantic: true
+        correct: false
+      - gloss_ja: のぞむ
+        semantic: true
+        correct: false
+  - id: 浴-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

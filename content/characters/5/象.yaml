@@ -1,0 +1,84 @@
+character: 象
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+    - id: r1
+      kana: ゾウ
+      type: on
+      audio: audio/readings/30be30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かたどる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぞう。
+    大きな 象。
+    かたどる。
+surfaces:
+  - id: s0
+    word: 象
+    reading_id: r0
+    audio: audio/surfaces/8c61_0.mp3
+  - id: s1
+    word: 象
+    reading_id: r1
+    audio: audio/surfaces/8c61_1.mp3
+  - id: s2
+    word: 象
+    reading_id: r1
+    audio: audio/surfaces/305e3046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺈
+    - char: 豕
+items:
+  - id: 象-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: くらべる
+        correct: false
+      - kana: はかる
+        correct: false
+  - id: 象-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ゾウ
+        correct: true
+      - kana: つとめる
+        correct: false
+      - kana: ハン
+        correct: false
+  - id: 象-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かたどる
+        semantic: true
+        correct: true
+      - gloss_ja: デシメートル
+        semantic: true
+        correct: false
+      - gloss_ja: さ。しらべる
+        semantic: true
+        correct: false
+  - id: 象-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

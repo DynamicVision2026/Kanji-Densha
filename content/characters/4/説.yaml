@@ -1,0 +1,88 @@
+character: 説
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: とく
+      type: kun
+      audio: audio/readings/3068304f.mp3
+    - id: r1
+      kana: セツ
+      type: on
+      audio: audio/readings/30bb30c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とく。
+    説明する。
+    わけを はなす。
+surfaces:
+  - id: s0
+    word: 説
+    reading_id: r0
+    audio: audio/surfaces/8aac_0.mp3
+  - id: s1
+    word: 説明
+    reading_id: r1
+    audio: audio/surfaces/8aac660e_1.mp3
+  - id: s2
+    word: 説明
+    reading_id: r1
+    audio: audio/surfaces/305b306430813044_2.mp3
+  - id: s3
+    word: 小説
+    reading_id: r1
+    audio: audio/surfaces/5c0f8aac_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 兑
+items:
+  - id: 説-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とく
+        correct: true
+      - kana: ホウ
+        correct: false
+      - kana: かける
+        correct: false
+  - id: 説-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: セツ
+        correct: true
+      - kana: かがみ
+        correct: false
+      - kana: ソツ
+        correct: false
+  - id: 説-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とく
+        semantic: true
+        correct: true
+      - gloss_ja: いくさ
+        semantic: true
+        correct: false
+      - gloss_ja: つづく
+        semantic: true
+        correct: false
+  - id: 説-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

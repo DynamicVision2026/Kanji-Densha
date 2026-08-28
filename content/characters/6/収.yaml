@@ -1,0 +1,88 @@
+character: 収
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: おさめる
+      type: kun
+      audio: audio/readings/304a30553081308b.mp3
+    - id: r1
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おさめる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おさめる。
+    収入が ある。
+    とりいれる。
+surfaces:
+  - id: s0
+    word: 収
+    reading_id: r0
+    audio: audio/surfaces/53ce_0.mp3
+  - id: s1
+    word: 収入
+    reading_id: r1
+    audio: audio/surfaces/53ce5165_1.mp3
+  - id: s2
+    word: 収入
+    reading_id: r1
+    audio: audio/surfaces/305730853046306b30853046_2.mp3
+  - id: s3
+    word: 収穫
+    reading_id: r1
+    audio: audio/surfaces/53ce7a6b_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 丩
+    - char: 又
+items:
+  - id: 収-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おさめる
+        correct: true
+      - kana: ヘイ
+        correct: false
+      - kana: サツ
+        correct: false
+  - id: 収-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: おりる
+        correct: false
+      - kana: ハ
+        correct: false
+  - id: 収-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おさめる
+        semantic: true
+        correct: true
+      - gloss_ja: へい。きざはし。へいか
+        semantic: true
+        correct: false
+      - gloss_ja: たまご
+        semantic: true
+        correct: false
+  - id: 収-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,79 @@
+character: 午
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゴ
+      type: on
+      audio: audio/readings/30b4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うま。
+    午前と 午後。
+    ひるの あいだ。
+surfaces:
+  - id: s0
+    word: 午
+    reading_id: r0
+    audio: audio/surfaces/5348_0.mp3
+  - id: s1
+    word: 午前
+    reading_id: r0
+    audio: audio/surfaces/5348524d_1.mp3
+  - id: s2
+    word: 午後
+    reading_id: r0
+    audio: audio/surfaces/53485f8c_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+    - order: 4
+      type: たて
+      a11y_ja: たて
+items:
+  - id: 午-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゴ
+        correct: true
+      - kana: バン
+        correct: false
+      - kana: くも
+        correct: false
+  - id: 午-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うま
+        semantic: true
+        correct: true
+      - gloss_ja: くび
+        semantic: true
+        correct: false
+      - gloss_ja: かんがえる
+        semantic: true
+        correct: false
+  - id: 午-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,70 @@
+character: 奮
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ふるう
+      type: kun
+      audio: audio/readings/3075308b3046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふるう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふるう。
+    心を 奮う。
+    はりきる。
+surfaces:
+  - id: s0
+    word: 奮
+    reading_id: r0
+    audio: audio/surfaces/596e_0.mp3
+  - id: s1
+    word: 奮う
+    reading_id: r0
+    audio: audio/surfaces/596e3046_1.mp3
+  - id: s2
+    word: 奮う
+    reading_id: r0
+    audio: audio/surfaces/3075308b3046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 大
+    - char: 隹
+    - char: 田
+items:
+  - id: 奮-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ふるう
+        correct: true
+      - kana: すじ
+        correct: false
+      - kana: ね
+        correct: false
+  - id: 奮-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふるう
+        semantic: true
+        correct: true
+      - gloss_ja: かつぐ
+        semantic: true
+        correct: false
+      - gloss_ja: みとめる
+        semantic: true
+        correct: false
+  - id: 奮-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

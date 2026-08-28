@@ -1,0 +1,73 @@
+character: 式
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: シキ
+      type: on
+      audio: audio/readings/30b730ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しき。やりかた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しき。
+    入学式。
+    あらたまった ば。
+surfaces:
+  - id: s0
+    word: 式
+    reading_id: r0
+    audio: audio/surfaces/5f0f_0.mp3
+  - id: s1
+    word: 入学式
+    reading_id: r0
+    audio: audio/surfaces/51655b665f0f_1.mp3
+  - id: s2
+    word: 入学式
+    reading_id: r0
+    audio: audio/surfaces/306b30853046304c304f3057304d_2.mp3
+  - id: s3
+    word: 公式
+    reading_id: r0
+    audio: audio/surfaces/516c5f0f_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 弋
+    - char: 工
+items:
+  - id: 式-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シキ
+        correct: true
+      - kana: キ
+        correct: false
+      - kana: つぐ
+        correct: false
+  - id: 式-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しき。やりかた
+        semantic: true
+        correct: true
+      - gloss_ja: さいわい
+        semantic: true
+        correct: false
+      - gloss_ja: いき
+        semantic: true
+        correct: false
+  - id: 式-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 約
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヤク
+      type: on
+      audio: audio/readings/30e430af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つづまる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やく。
+    約束を まもる。
+    ちぢめる。
+surfaces:
+  - id: s0
+    word: 約
+    reading_id: r0
+    audio: audio/surfaces/7d04_0.mp3
+  - id: s1
+    word: 約束
+    reading_id: r0
+    audio: audio/surfaces/7d04675f_1.mp3
+  - id: s2
+    word: 約束
+    reading_id: r0
+    audio: audio/surfaces/3084304f305d304f_2.mp3
+  - id: s3
+    word: 予約
+    reading_id: r0
+    audio: audio/surfaces/4e887d04_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 勺
+items:
+  - id: 約-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヤク
+        correct: true
+      - kana: ザイ
+        correct: false
+      - kana: セキ
+        correct: false
+  - id: 約-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つづまる
+        semantic: true
+        correct: true
+      - gloss_ja: とく。とくべつ
+        semantic: true
+        correct: false
+      - gloss_ja: うめ
+        semantic: true
+        correct: false
+  - id: 約-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

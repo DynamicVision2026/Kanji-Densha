@@ -1,0 +1,94 @@
+character: 反
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: そる
+      type: kun
+      audio: audio/readings/305d308b.mp3
+    - id: r1
+      kana: ハン
+      type: on
+      audio: audio/readings/30cf30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: そる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    そる。
+    反対の 反。
+    うらがえす。
+surfaces:
+  - id: s0
+    word: 反
+    reading_id: r0
+    audio: audio/surfaces/53cd_0.mp3
+  - id: s1
+    word: 反対
+    reading_id: r1
+    audio: audio/surfaces/53cd5bfe_1.mp3
+  - id: s2
+    word: 反対
+    reading_id: r1
+    audio: audio/surfaces/306f3093305f3044_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 反-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: そる
+        correct: true
+      - kana: ショウ
+        correct: false
+      - kana: いのち
+        correct: false
+  - id: 反-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ハン
+        correct: true
+      - kana: うける
+        correct: false
+      - kana: おもて
+        correct: false
+  - id: 反-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そる
+        semantic: true
+        correct: true
+      - gloss_ja: さいわい
+        semantic: true
+        correct: false
+      - gloss_ja: おもう
+        semantic: true
+        correct: false
+  - id: 反-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

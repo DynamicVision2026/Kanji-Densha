@@ -1,0 +1,83 @@
+character: 友
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: とも
+      type: kun
+      audio: audio/readings/30683082.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とも
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とも。
+    よい 友。
+    いっしょに あそぶ。
+surfaces:
+  - id: s0
+    word: 友
+    reading_id: r0
+    audio: audio/surfaces/53cb_0.mp3
+  - id: s1
+    word: 友
+    reading_id: r0
+    audio: audio/surfaces/53cb_1.mp3
+  - id: s2
+    word: 友
+    reading_id: r0
+    audio: audio/surfaces/30683082_2.mp3
+  - id: s3
+    word: 友達
+    reading_id: r0
+    audio: audio/surfaces/53cb9054_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 友-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とも
+        correct: true
+      - kana: くろい
+        correct: false
+      - kana: シン
+        correct: false
+  - id: 友-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とも
+        semantic: true
+        correct: true
+      - gloss_ja: てら
+        semantic: true
+        correct: false
+      - gloss_ja: かど
+        semantic: true
+        correct: false
+  - id: 友-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

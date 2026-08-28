@@ -1,0 +1,84 @@
+character: 混
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: まじる
+      type: kun
+      audio: audio/readings/307e3058308b.mp3
+    - id: r1
+      kana: まざる
+      type: kun
+      audio: audio/readings/307e3056308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まじる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まざる。
+    水が 混ざる。
+    いっしょに。
+surfaces:
+  - id: s0
+    word: 混
+    reading_id: r0
+    audio: audio/surfaces/6df7_0.mp3
+  - id: s1
+    word: 混ざる
+    reading_id: r1
+    audio: audio/surfaces/6df73056308b_1.mp3
+  - id: s2
+    word: 混ざる
+    reading_id: r1
+    audio: audio/surfaces/307e3056308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 昆
+items:
+  - id: 混-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まじる
+        correct: true
+      - kana: キュウ
+        correct: false
+      - kana: キョウ
+        correct: false
+  - id: 混-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: まざる
+        correct: true
+      - kana: ケン
+        correct: false
+      - kana: ころす
+        correct: false
+  - id: 混-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まじる
+        semantic: true
+        correct: true
+      - gloss_ja: し。れきし
+        semantic: true
+        correct: false
+      - gloss_ja: デシメートル
+        semantic: true
+        correct: false
+  - id: 混-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

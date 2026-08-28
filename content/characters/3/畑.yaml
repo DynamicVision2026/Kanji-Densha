@@ -1,0 +1,84 @@
+character: 畑
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: はた
+      type: kun
+      audio: audio/readings/306f305f.mp3
+    - id: r1
+      kana: はたけ
+      type: kun
+      audio: audio/readings/306f305f3051.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はたけ。
+    野菜の 畑。
+    土を たがやす。
+surfaces:
+  - id: s0
+    word: 畑
+    reading_id: r0
+    audio: audio/surfaces/7551_0.mp3
+  - id: s1
+    word: 畑
+    reading_id: r1
+    audio: audio/surfaces/7551_1.mp3
+  - id: s2
+    word: 畑
+    reading_id: r1
+    audio: audio/surfaces/306f305f3051_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 火
+    - char: 田
+items:
+  - id: 畑-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はた
+        correct: true
+      - kana: くばる
+        correct: false
+      - kana: キ
+        correct: false
+  - id: 畑-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: はたけ
+        correct: true
+      - kana: よ
+        correct: false
+      - kana: ヨ
+        correct: false
+  - id: 畑-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はた
+        semantic: true
+        correct: true
+      - gloss_ja: にわ
+        semantic: true
+        correct: false
+      - gloss_ja: は
+        semantic: true
+        correct: false
+  - id: 畑-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

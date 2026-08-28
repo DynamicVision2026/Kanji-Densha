@@ -1,0 +1,73 @@
+character: 題
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ダイ
+      type: on
+      audio: audio/readings/30c030a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: だい。だいめい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    だい。
+    問題の 題。
+    とく こと。
+surfaces:
+  - id: s0
+    word: 題
+    reading_id: r0
+    audio: audio/surfaces/984c_0.mp3
+  - id: s1
+    word: 問題
+    reading_id: r0
+    audio: audio/surfaces/554f984c_1.mp3
+  - id: s2
+    word: 問題
+    reading_id: r0
+    audio: audio/surfaces/3082309330603044_2.mp3
+  - id: s3
+    word: 課題
+    reading_id: r0
+    audio: audio/surfaces/8ab2984c_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 是
+    - char: 頁
+items:
+  - id: 題-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ダイ
+        correct: true
+      - kana: キャク
+        correct: false
+      - kana: つぎ
+        correct: false
+  - id: 題-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: だい。だいめい
+        semantic: true
+        correct: true
+      - gloss_ja: もの
+        semantic: true
+        correct: false
+      - gloss_ja: おう
+        semantic: true
+        correct: false
+  - id: 題-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

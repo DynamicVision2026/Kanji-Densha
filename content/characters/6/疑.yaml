@@ -1,0 +1,70 @@
+character: 疑
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: うたがう
+      type: kun
+      audio: audio/readings/3046305f304c3046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うたがう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うたがう。
+    話を 疑う。
+    ほんとうか。
+surfaces:
+  - id: s0
+    word: 疑
+    reading_id: r0
+    audio: audio/surfaces/7591_0.mp3
+  - id: s1
+    word: 疑う
+    reading_id: r0
+    audio: audio/surfaces/75913046_1.mp3
+  - id: s2
+    word: 疑う
+    reading_id: r0
+    audio: audio/surfaces/3046305f304c3046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 匕
+    - char: 矢
+    - char: 疋
+items:
+  - id: 疑-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うたがう
+        correct: true
+      - kana: シュウ
+        correct: false
+      - kana: ミツ
+        correct: false
+  - id: 疑-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うたがう
+        semantic: true
+        correct: true
+      - gloss_ja: うつる
+        semantic: true
+        correct: false
+      - gloss_ja: あやまる
+        semantic: true
+        correct: false
+  - id: 疑-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

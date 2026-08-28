@@ -1,0 +1,102 @@
+character: 止
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: とまる
+      type: kun
+      audio: audio/readings/3068307e308b.mp3
+    - id: r1
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とまる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とまる。
+    車が 止まる。
+    うごきが やむ。
+surfaces:
+  - id: s0
+    word: 止
+    reading_id: r0
+    audio: audio/surfaces/6b62_0.mp3
+  - id: s1
+    word: 止まる
+    reading_id: r0
+    audio: audio/surfaces/6b62307e308b_1.mp3
+  - id: s2
+    word: 止まる
+    reading_id: r0
+    audio: audio/surfaces/3068307e308b_2.mp3
+  - id: s3
+    word: 中止
+    reading_id: r1
+    audio: audio/surfaces/4e2d6b62_3.mp3
+  - id: s4
+    word: 停止
+    reading_id: r1
+    audio: audio/surfaces/505c6b62_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: たて
+      a11y_ja: たて3
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+items:
+  - id: 止-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とまる
+        correct: true
+      - kana: おしえる
+        correct: false
+      - kana: つくる
+        correct: false
+  - id: 止-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シ
+        correct: true
+      - kana: くる
+        correct: false
+      - kana: ゴウ
+        correct: false
+  - id: 止-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とまる
+        semantic: true
+        correct: true
+      - gloss_ja: おなじ
+        semantic: true
+        correct: false
+      - gloss_ja: むろ
+        semantic: true
+        correct: false
+  - id: 止-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

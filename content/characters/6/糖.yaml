@@ -1,0 +1,69 @@
+character: 糖
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: トウ
+      type: on
+      audio: audio/readings/30c830a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とう。さとう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とう。
+    砂糖を いれる。
+    あまい。
+surfaces:
+  - id: s0
+    word: 糖
+    reading_id: r0
+    audio: audio/surfaces/7cd6_0.mp3
+  - id: s1
+    word: 砂糖
+    reading_id: r0
+    audio: audio/surfaces/78027cd6_1.mp3
+  - id: s2
+    word: 砂糖
+    reading_id: r0
+    audio: audio/surfaces/305530683046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 米
+    - char: 唐
+items:
+  - id: 糖-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: トウ
+        correct: true
+      - kana: ザ
+        correct: false
+      - kana: ヒ
+        correct: false
+  - id: 糖-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とう。さとう
+        semantic: true
+        correct: true
+      - gloss_ja: おごそか
+        semantic: true
+        correct: false
+      - gloss_ja: ちぢむ
+        semantic: true
+        correct: false
+  - id: 糖-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

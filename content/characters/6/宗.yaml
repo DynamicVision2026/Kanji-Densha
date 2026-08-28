@@ -1,0 +1,73 @@
+character: 宗
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: むね
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    むね。
+    宗教を まなぶ。
+    中心。
+surfaces:
+  - id: s0
+    word: 宗
+    reading_id: r0
+    audio: audio/surfaces/5b97_0.mp3
+  - id: s1
+    word: 宗教
+    reading_id: r0
+    audio: audio/surfaces/5b976559_1.mp3
+  - id: s2
+    word: 宗教
+    reading_id: r0
+    audio: audio/surfaces/305730853046304d30873046_2.mp3
+  - id: s3
+    word: 宗派
+    reading_id: r0
+    audio: audio/surfaces/5b976d3e_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 宀
+    - char: 示
+items:
+  - id: 宗-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: かぶ
+        correct: false
+      - kana: つくる
+        correct: false
+  - id: 宗-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: むね
+        semantic: true
+        correct: true
+      - gloss_ja: たれる
+        semantic: true
+        correct: false
+      - gloss_ja: たっとい
+        semantic: true
+        correct: false
+  - id: 宗-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

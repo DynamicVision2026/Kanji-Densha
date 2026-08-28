@@ -1,0 +1,80 @@
+character: 寸
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: スン
+      type: on
+      audio: audio/readings/30b930f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すん。すこし。ものさし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すん。
+    一寸の 長さ。
+    とても みじかい。
+surfaces:
+  - id: s0
+    word: 寸
+    reading_id: r0
+    audio: audio/surfaces/5bf8_0.mp3
+  - id: s1
+    word: 一寸
+    reading_id: r0
+    audio: audio/surfaces/4e005bf8_1.mp3
+  - id: s2
+    word: 一寸
+    reading_id: r0
+    audio: audio/surfaces/3044306330593093_2.mp3
+  - id: s3
+    word: 寸法
+    reading_id: r0
+    audio: audio/surfaces/5bf86cd5_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 寸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: スン
+        correct: true
+      - kana: わる
+        correct: false
+      - kana: まど
+        correct: false
+  - id: 寸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すん。すこし。ものさし
+        semantic: true
+        correct: true
+      - gloss_ja: みだれる
+        semantic: true
+        correct: false
+      - gloss_ja: けい。つながり
+        semantic: true
+        correct: false
+  - id: 寸-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

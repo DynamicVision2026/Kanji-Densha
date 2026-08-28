@@ -1,0 +1,73 @@
+character: 史
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: し。れきし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    し。
+    歴史を まなぶ。
+    むかしの こと。
+surfaces:
+  - id: s0
+    word: 史
+    reading_id: r0
+    audio: audio/surfaces/53f2_0.mp3
+  - id: s1
+    word: 歴史
+    reading_id: r0
+    audio: audio/surfaces/6b7453f2_1.mp3
+  - id: s2
+    word: 歴史
+    reading_id: r0
+    audio: audio/surfaces/308c304d3057_2.mp3
+  - id: s3
+    word: 史学
+    reading_id: r0
+    audio: audio/surfaces/53f25b66_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: ノ
+items:
+  - id: 史-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シ
+        correct: true
+      - kana: エイ
+        correct: false
+      - kana: ホウ
+        correct: false
+  - id: 史-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: し。れきし
+        semantic: true
+        correct: true
+      - gloss_ja: こう。こうぎ
+        semantic: true
+        correct: false
+      - gloss_ja: やぶる
+        semantic: true
+        correct: false
+  - id: 史-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 蔵
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゾウ
+      type: on
+      audio: audio/readings/30be30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くら
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くら。
+    冷蔵庫に いれる。
+    しまう。
+surfaces:
+  - id: s0
+    word: 蔵
+    reading_id: r0
+    audio: audio/surfaces/8535_0.mp3
+  - id: s1
+    word: 冷蔵庫
+    reading_id: r0
+    audio: audio/surfaces/51b785355eab_1.mp3
+  - id: s2
+    word: 冷蔵庫
+    reading_id: r0
+    audio: audio/surfaces/308c3044305e30463053_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 艹
+    - char: 臧
+items:
+  - id: 蔵-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゾウ
+        correct: true
+      - kana: ダン
+        correct: false
+      - kana: うたがう
+        correct: false
+  - id: 蔵-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くら
+        semantic: true
+        correct: true
+      - gloss_ja: けん。けんぽう
+        semantic: true
+        correct: false
+      - gloss_ja: したがう
+        semantic: true
+        correct: false
+  - id: 蔵-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,88 @@
+character: 我
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: われ
+      type: kun
+      audio: audio/readings/308f308c.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: われ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    われ。
+    我を わすれる。
+    じぶん。
+surfaces:
+  - id: s0
+    word: 我
+    reading_id: r0
+    audio: audio/surfaces/6211_0.mp3
+  - id: s1
+    word: 我
+    reading_id: r0
+    audio: audio/surfaces/6211_1.mp3
+  - id: s2
+    word: 我
+    reading_id: r0
+    audio: audio/surfaces/308f308c_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+    - order: 6
+      type: はらい
+      a11y_ja: はらい6
+    - order: 7
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 我-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: われ
+        correct: true
+      - kana: とうとい
+        correct: false
+      - kana: カン
+        correct: false
+  - id: 我-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: われ
+        semantic: true
+        correct: true
+      - gloss_ja: はらわた
+        semantic: true
+        correct: false
+      - gloss_ja: ひ。ひはんする
+        semantic: true
+        correct: false
+  - id: 我-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

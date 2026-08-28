@@ -1,0 +1,102 @@
+character: 少
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: すくない
+      type: kun
+      audio: audio/readings/3059304f306a3044.mp3
+    - id: r1
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すくない
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すくない。
+    人が 少ない。
+    すこし。
+surfaces:
+  - id: s0
+    word: 少
+    reading_id: r0
+    audio: audio/surfaces/5c11_0.mp3
+  - id: s1
+    word: 少ない
+    reading_id: r0
+    audio: audio/surfaces/5c11306a3044_1.mp3
+  - id: s2
+    word: 少ない
+    reading_id: r0
+    audio: audio/surfaces/3059304f306a3044_2.mp3
+  - id: s3
+    word: 少年
+    reading_id: r1
+    audio: audio/surfaces/5c115e74_3.mp3
+  - id: s4
+    word: 少女
+    reading_id: r1
+    audio: audio/surfaces/5c115973_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: てん
+      a11y_ja: てん
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 少-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: すくない
+        correct: true
+      - kana: あるく
+        correct: false
+      - kana: もと
+        correct: false
+  - id: 少-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: あに
+        correct: false
+      - kana: はれる
+        correct: false
+  - id: 少-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すくない
+        semantic: true
+        correct: true
+      - gloss_ja: いろ
+        semantic: true
+        correct: false
+      - gloss_ja: うお
+        semantic: true
+        correct: false
+  - id: 少-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

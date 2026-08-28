@@ -1,0 +1,70 @@
+character: 周
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: まわり
+      type: kun
+      audio: audio/readings/307e308f308a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まわり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まわり。
+    机の 周り。
+    ひとめぐり。
+surfaces:
+  - id: s0
+    word: 周
+    reading_id: r0
+    audio: audio/surfaces/5468_0.mp3
+  - id: s1
+    word: 周り
+    reading_id: r0
+    audio: audio/surfaces/5468308a_1.mp3
+  - id: s2
+    word: 周り
+    reading_id: r0
+    audio: audio/surfaces/307e308f308a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 冂
+    - char: 土
+    - char: 口
+items:
+  - id: 周-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まわり
+        correct: true
+      - kana: カク
+        correct: false
+      - kana: サ
+        correct: false
+  - id: 周-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まわり
+        semantic: true
+        correct: true
+      - gloss_ja: けい。けしき
+        semantic: true
+        correct: false
+      - gloss_ja: いさお
+        semantic: true
+        correct: false
+  - id: 周-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

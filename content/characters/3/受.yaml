@@ -1,0 +1,70 @@
+character: 受
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: うける
+      type: kun
+      audio: audio/readings/30463051308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うける。
+    手紙を 受ける。
+    うけとる。
+surfaces:
+  - id: s0
+    word: 受
+    reading_id: r0
+    audio: audio/surfaces/53d7_0.mp3
+  - id: s1
+    word: 受ける
+    reading_id: r0
+    audio: audio/surfaces/53d73051308b_1.mp3
+  - id: s2
+    word: 受ける
+    reading_id: r0
+    audio: audio/surfaces/30463051308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 爪
+    - char: 冖
+    - char: 又
+items:
+  - id: 受-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うける
+        correct: true
+      - kana: ならう
+        correct: false
+      - kana: はしら
+        correct: false
+  - id: 受-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うける
+        semantic: true
+        correct: true
+      - gloss_ja: あい
+        semantic: true
+        correct: false
+      - gloss_ja: びょう。いちびょう
+        semantic: true
+        correct: false
+  - id: 受-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

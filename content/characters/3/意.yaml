@@ -1,0 +1,73 @@
+character: 意
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: イ
+      type: on
+      audio: audio/readings/30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: い。こころ。おもい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こころ。
+    意味の 意。
+    おもい。
+surfaces:
+  - id: s0
+    word: 意
+    reading_id: r0
+    audio: audio/surfaces/610f_0.mp3
+  - id: s1
+    word: 意味
+    reading_id: r0
+    audio: audio/surfaces/610f5473_1.mp3
+  - id: s2
+    word: 意味
+    reading_id: r0
+    audio: audio/surfaces/3044307f_2.mp3
+  - id: s3
+    word: 意見
+    reading_id: r0
+    audio: audio/surfaces/610f898b_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 音
+    - char: 心
+items:
+  - id: 意-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イ
+        correct: true
+      - kana: あたたかい
+        correct: false
+      - kana: ね
+        correct: false
+  - id: 意-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: い。こころ。おもい
+        semantic: true
+        correct: true
+      - gloss_ja: はしら
+        semantic: true
+        correct: false
+      - gloss_ja: よし
+        semantic: true
+        correct: false
+  - id: 意-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

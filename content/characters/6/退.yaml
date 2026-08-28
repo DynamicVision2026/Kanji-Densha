@@ -1,0 +1,69 @@
+character: 退
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: しりぞく
+      type: kun
+      audio: audio/readings/3057308a305e304f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しりぞく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しりぞく。
+    後ろに 退く。
+    ひく。
+surfaces:
+  - id: s0
+    word: 退
+    reading_id: r0
+    audio: audio/surfaces/9000_0.mp3
+  - id: s1
+    word: 退く
+    reading_id: r0
+    audio: audio/surfaces/9000304f_1.mp3
+  - id: s2
+    word: 退く
+    reading_id: r0
+    audio: audio/surfaces/3057308a305e304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 艮
+items:
+  - id: 退-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しりぞく
+        correct: true
+      - kana: そなえる
+        correct: false
+      - kana: ダン
+        correct: false
+  - id: 退-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しりぞく
+        semantic: true
+        correct: true
+      - gloss_ja: つくる
+        semantic: true
+        correct: false
+      - gloss_ja: はい。はい句
+        semantic: true
+        correct: false
+  - id: 退-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

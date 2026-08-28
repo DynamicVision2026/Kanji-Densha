@@ -1,0 +1,84 @@
+character: 変
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: かわる
+      type: kun
+      audio: audio/readings/304b308f308b.mp3
+    - id: r1
+      kana: かえる
+      type: kun
+      audio: audio/readings/304b3048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かわる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かえる。
+    服を 変える。
+    ちがう ように。
+surfaces:
+  - id: s0
+    word: 変
+    reading_id: r0
+    audio: audio/surfaces/5909_0.mp3
+  - id: s1
+    word: 変える
+    reading_id: r1
+    audio: audio/surfaces/59093048308b_1.mp3
+  - id: s2
+    word: 変える
+    reading_id: r1
+    audio: audio/surfaces/304b3048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 亦
+    - char: 夂
+items:
+  - id: 変-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かわる
+        correct: true
+      - kana: リョウ
+        correct: false
+      - kana: ザイ
+        correct: false
+  - id: 変-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: かえる
+        correct: true
+      - kana: アイ
+        correct: false
+      - kana: おさめる
+        correct: false
+  - id: 変-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かわる
+        semantic: true
+        correct: true
+      - gloss_ja: しか
+        semantic: true
+        correct: false
+      - gloss_ja: まつ
+        semantic: true
+        correct: false
+  - id: 変-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

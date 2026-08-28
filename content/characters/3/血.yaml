@@ -1,0 +1,85 @@
+character: 血
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ち
+      type: kun
+      audio: audio/readings/3061.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ち
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ち。
+    赤い 血。
+    からだの なか。
+surfaces:
+  - id: s0
+    word: 血
+    reading_id: r0
+    audio: audio/surfaces/8840_0.mp3
+  - id: s1
+    word: 血
+    reading_id: r0
+    audio: audio/surfaces/8840_1.mp3
+  - id: s2
+    word: 血
+    reading_id: r0
+    audio: audio/surfaces/3061_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: たて
+      a11y_ja: たて4
+    - order: 5
+      type: たて
+      a11y_ja: たて5
+    - order: 6
+      type: よこ
+      a11y_ja: よこ
+items:
+  - id: 血-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ち
+        correct: true
+      - kana: テツ
+        correct: false
+      - kana: あじ
+        correct: false
+  - id: 血-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ち
+        semantic: true
+        correct: true
+      - gloss_ja: ひのと
+        semantic: true
+        correct: false
+      - gloss_ja: あぶら
+        semantic: true
+        correct: false
+  - id: 血-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 当
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あたる
+      type: kun
+      audio: audio/readings/3042305f308b.mp3
+    - id: r1
+      kana: トウ
+      type: on
+      audio: audio/readings/30c830a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あたる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あたる。
+    ボールが 当たる。
+    あたる ばしょ。
+surfaces:
+  - id: s0
+    word: 当
+    reading_id: r0
+    audio: audio/surfaces/5f53_0.mp3
+  - id: s1
+    word: 当たる
+    reading_id: r0
+    audio: audio/surfaces/5f53305f308b_1.mp3
+  - id: s2
+    word: 当たる
+    reading_id: r0
+    audio: audio/surfaces/3042305f308b_2.mp3
+  - id: s3
+    word: 本当
+    reading_id: r1
+    audio: audio/surfaces/672c5f53_3.mp3
+  - id: s4
+    word: 当時
+    reading_id: r1
+    audio: audio/surfaces/5f536642_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺌
+    - char: 彐
+items:
+  - id: 当-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あたる
+        correct: true
+      - kana: はかる
+        correct: false
+      - kana: あね
+        correct: false
+  - id: 当-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: トウ
+        correct: true
+      - kana: いもうと
+        correct: false
+      - kana: コ
+        correct: false
+  - id: 当-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あたる
+        semantic: true
+        correct: true
+      - gloss_ja: よ
+        semantic: true
+        correct: false
+      - gloss_ja: はしる
+        semantic: true
+        correct: false
+  - id: 当-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

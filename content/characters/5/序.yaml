@@ -1,0 +1,69 @@
+character: 序
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジョ
+      type: on
+      audio: audio/readings/30b830e7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ついで
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ついで。
+    順序を まもる。
+    ならび。
+surfaces:
+  - id: s0
+    word: 序
+    reading_id: r0
+    audio: audio/surfaces/5e8f_0.mp3
+  - id: s1
+    word: 順序
+    reading_id: r0
+    audio: audio/surfaces/98065e8f_1.mp3
+  - id: s2
+    word: 順序
+    reading_id: r0
+    audio: audio/surfaces/30583085309330583087_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 予
+items:
+  - id: 序-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジョ
+        correct: true
+      - kana: ショウ
+        correct: false
+      - kana: ある
+        correct: false
+  - id: 序-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ついで
+        semantic: true
+        correct: true
+      - gloss_ja: すべて
+        semantic: true
+        correct: false
+      - gloss_ja: とく
+        semantic: true
+        correct: false
+  - id: 序-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

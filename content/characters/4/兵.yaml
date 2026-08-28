@@ -1,0 +1,73 @@
+character: 兵
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヘイ
+      type: on
+      audio: audio/readings/30d830a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つわもの
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つわもの。
+    兵士が あるく。
+    いくさの ひと。
+surfaces:
+  - id: s0
+    word: 兵
+    reading_id: r0
+    audio: audio/surfaces/5175_0.mp3
+  - id: s1
+    word: 兵士
+    reading_id: r0
+    audio: audio/surfaces/517558eb_1.mp3
+  - id: s2
+    word: 兵士
+    reading_id: r0
+    audio: audio/surfaces/307830443057_2.mp3
+  - id: s3
+    word: 兵器
+    reading_id: r0
+    audio: audio/surfaces/51755668_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 斤
+    - char: 八
+items:
+  - id: 兵-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヘイ
+        correct: true
+      - kana: くだ
+        correct: false
+      - kana: もっとも
+        correct: false
+  - id: 兵-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つわもの
+        semantic: true
+        correct: true
+      - gloss_ja: もとめる
+        semantic: true
+        correct: false
+      - gloss_ja: きそう
+        semantic: true
+        correct: false
+  - id: 兵-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

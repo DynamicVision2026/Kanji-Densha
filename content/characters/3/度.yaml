@@ -1,0 +1,74 @@
+character: 度
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ド
+      type: on
+      audio: audio/readings/30c9.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たび
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たび。
+    温度の 度。
+    はかり。
+surfaces:
+  - id: s0
+    word: 度
+    reading_id: r0
+    audio: audio/surfaces/5ea6_0.mp3
+  - id: s1
+    word: 温度
+    reading_id: r0
+    audio: audio/surfaces/6e295ea6_1.mp3
+  - id: s2
+    word: 温度
+    reading_id: r0
+    audio: audio/surfaces/304a30933069_2.mp3
+  - id: s3
+    word: 速度
+    reading_id: r0
+    audio: audio/surfaces/901f5ea6_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 廿
+    - char: 又
+items:
+  - id: 度-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ド
+        correct: true
+      - kana: もうす
+        correct: false
+      - kana: ゆ
+        correct: false
+  - id: 度-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たび
+        semantic: true
+        correct: true
+      - gloss_ja: しぬ
+        semantic: true
+        correct: false
+      - gloss_ja: きめる
+        semantic: true
+        correct: false
+  - id: 度-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

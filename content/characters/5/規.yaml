@@ -1,0 +1,73 @@
+character: 規
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: き。きまり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のり。
+    規則を まもる。
+    ものさし。
+surfaces:
+  - id: s0
+    word: 規
+    reading_id: r0
+    audio: audio/surfaces/898f_0.mp3
+  - id: s1
+    word: 規則
+    reading_id: r0
+    audio: audio/surfaces/898f5247_1.mp3
+  - id: s2
+    word: 規則
+    reading_id: r0
+    audio: audio/surfaces/304d305d304f_2.mp3
+  - id: s3
+    word: 規模
+    reading_id: r0
+    audio: audio/surfaces/898f6a21_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 夫
+    - char: 見
+items:
+  - id: 規-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: ジョ
+        correct: false
+      - kana: とる
+        correct: false
+  - id: 規-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: き。きまり
+        semantic: true
+        correct: true
+      - gloss_ja: つくる
+        semantic: true
+        correct: false
+      - gloss_ja: かく。しかく。かくさ
+        semantic: true
+        correct: false
+  - id: 規-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

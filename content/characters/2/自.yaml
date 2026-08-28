@@ -1,0 +1,108 @@
+character: 自
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: みずから
+      type: kun
+      audio: audio/readings/307f305a304b3089.mp3
+    - id: r1
+      kana: ジ
+      type: on
+      audio: audio/readings/30b8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みずから
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    じぶん。
+    自分で する。
+    みずから。
+surfaces:
+  - id: s0
+    word: 自
+    reading_id: r0
+    audio: audio/surfaces/81ea_0.mp3
+  - id: s1
+    word: 自分
+    reading_id: r1
+    audio: audio/surfaces/81ea5206_1.mp3
+  - id: s2
+    word: 自分
+    reading_id: r1
+    audio: audio/surfaces/305830763093_2.mp3
+  - id: s3
+    word: 自転車
+    reading_id: r1
+    audio: audio/surfaces/81ea8ee28eca_3.mp3
+  - id: s4
+    word: 自由
+    reading_id: r1
+    audio: audio/surfaces/81ea7531_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: よこ
+      a11y_ja: よこ
+    - order: 5
+      type: よこ
+      a11y_ja: よこ5
+    - order: 6
+      type: よこ
+      a11y_ja: よこ6
+items:
+  - id: 自-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みずから
+        correct: true
+      - kana: なつ
+        correct: false
+      - kana: ケイ
+        correct: false
+  - id: 自-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ジ
+        correct: true
+      - kana: からだ
+        correct: false
+      - kana: はなす
+        correct: false
+  - id: 自-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みずから
+        semantic: true
+        correct: true
+      - gloss_ja: しるす
+        semantic: true
+        correct: false
+      - gloss_ja: むぎ
+        semantic: true
+        correct: false
+  - id: 自-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

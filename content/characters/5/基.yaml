@@ -1,0 +1,73 @@
+character: 基
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: もと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    もと。
+    基本を ならう。
+    土台。
+surfaces:
+  - id: s0
+    word: 基
+    reading_id: r0
+    audio: audio/surfaces/57fa_0.mp3
+  - id: s1
+    word: 基本
+    reading_id: r0
+    audio: audio/surfaces/57fa672c_1.mp3
+  - id: s2
+    word: 基本
+    reading_id: r0
+    audio: audio/surfaces/304d307b3093_2.mp3
+  - id: s3
+    word: 基礎
+    reading_id: r0
+    audio: audio/surfaces/57fa790e_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 其
+    - char: 土
+items:
+  - id: 基-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: ひさしい
+        correct: false
+      - kana: やさしい
+        correct: false
+  - id: 基-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: もと
+        semantic: true
+        correct: true
+      - gloss_ja: ためる
+        semantic: true
+        correct: false
+      - gloss_ja: えい。まもる
+        semantic: true
+        correct: false
+  - id: 基-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

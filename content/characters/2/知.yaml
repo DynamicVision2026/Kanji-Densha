@@ -1,0 +1,92 @@
+character: 知
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: しる
+      type: kun
+      audio: audio/readings/3057308b.mp3
+    - id: r1
+      kana: チ
+      type: on
+      audio: audio/readings/30c1.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しる。
+    名前を 知る。
+    わかる こと。
+surfaces:
+  - id: s0
+    word: 知
+    reading_id: r0
+    audio: audio/surfaces/77e5_0.mp3
+  - id: s1
+    word: 知る
+    reading_id: r0
+    audio: audio/surfaces/77e5308b_1.mp3
+  - id: s2
+    word: 知る
+    reading_id: r0
+    audio: audio/surfaces/3057308b_2.mp3
+  - id: s3
+    word: 知識
+    reading_id: r1
+    audio: audio/surfaces/77e58b58_3.mp3
+  - id: s4
+    word: 通知
+    reading_id: r1
+    audio: audio/surfaces/901a77e5_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 矢
+    - char: 口
+items:
+  - id: 知-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しる
+        correct: true
+      - kana: おもう
+        correct: false
+      - kana: ゆき
+        correct: false
+  - id: 知-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: チ
+        correct: true
+      - kana: あき
+        correct: false
+      - kana: かう
+        correct: false
+  - id: 知-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しる
+        semantic: true
+        correct: true
+      - gloss_ja: ちゃ。おちゃ
+        semantic: true
+        correct: false
+      - gloss_ja: あう
+        semantic: true
+        correct: false
+  - id: 知-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

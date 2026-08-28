@@ -1,0 +1,69 @@
+character: 益
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: エキ
+      type: on
+      audio: audio/readings/30a830ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ます
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    えき。
+    利益の 益。
+    ためになる。
+surfaces:
+  - id: s0
+    word: 益
+    reading_id: r0
+    audio: audio/surfaces/76ca_0.mp3
+  - id: s1
+    word: 利益
+    reading_id: r0
+    audio: audio/surfaces/522976ca_1.mp3
+  - id: s2
+    word: 利益
+    reading_id: r0
+    audio: audio/surfaces/308a3048304d_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氺
+    - char: 皿
+items:
+  - id: 益-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: エキ
+        correct: true
+      - kana: よろこぶ
+        correct: false
+      - kana: ながい
+        correct: false
+  - id: 益-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ます
+        semantic: true
+        correct: true
+      - gloss_ja: まじる
+        semantic: true
+        correct: false
+      - gloss_ja: のっとる
+        semantic: true
+        correct: false
+  - id: 益-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

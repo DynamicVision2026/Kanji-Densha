@@ -1,0 +1,69 @@
+character: 背
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: せ
+      type: kun
+      audio: audio/readings/305b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: せ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    せ。
+    高い 背。
+    うしろ。
+surfaces:
+  - id: s0
+    word: 背
+    reading_id: r0
+    audio: audio/surfaces/80cc_0.mp3
+  - id: s1
+    word: 背
+    reading_id: r0
+    audio: audio/surfaces/80cc_1.mp3
+  - id: s2
+    word: 背
+    reading_id: r0
+    audio: audio/surfaces/305b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 北
+    - char: 月
+items:
+  - id: 背-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: せ
+        correct: true
+      - kana: ミツ
+        correct: false
+      - kana: わかい
+        correct: false
+  - id: 背-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: せ
+        semantic: true
+        correct: true
+      - gloss_ja: わたくし
+        semantic: true
+        correct: false
+      - gloss_ja: もっぱら
+        semantic: true
+        correct: false
+  - id: 背-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 赤
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: あか
+      type: kun
+      audio: audio/readings/3042304b.mp3
+    - id: r1
+      kana: あかい
+      type: kun
+      audio: audio/readings/3042304b3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あかい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あかい。
+    赤い はな。
+    あたたかい いろ。
+surfaces:
+  - id: s0
+    word: 赤
+    reading_id: r0
+    audio: audio/surfaces/8d64_0.mp3
+  - id: s1
+    word: 赤い
+    reading_id: r1
+    audio: audio/surfaces/8d643044_1.mp3
+  - id: s2
+    word: 赤い
+    reading_id: r1
+    audio: audio/surfaces/3042304b3044_2.mp3
+  - id: s3
+    word: 赤ちゃん
+    reading_id: r0
+    audio: audio/surfaces/8d64306130833093_3.mp3
+  - id: s4
+    word: 赤字
+    reading_id: r0
+    audio: audio/surfaces/8d645b57_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 灬
+items:
+  - id: 赤-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あか
+        correct: true
+      - kana: いる
+        correct: false
+      - kana: ニ
+        correct: false
+  - id: 赤-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: あかい
+        correct: true
+      - kana: ななつ
+        correct: false
+      - kana: なな
+        correct: false
+  - id: 赤-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あかい
+        semantic: true
+        correct: true
+      - gloss_ja: もじ。かんじ
+        semantic: true
+        correct: false
+      - gloss_ja: て
+        semantic: true
+        correct: false
+  - id: 赤-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

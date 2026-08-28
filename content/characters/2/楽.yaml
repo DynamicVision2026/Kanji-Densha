@@ -1,0 +1,92 @@
+character: 楽
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: たのしい
+      type: kun
+      audio: audio/readings/305f306e30573044.mp3
+    - id: r1
+      kana: ガク
+      type: on
+      audio: audio/readings/30ac30af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たのしい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たのしい。
+    楽しい ひ。
+    音が なる。
+surfaces:
+  - id: s0
+    word: 楽
+    reading_id: r0
+    audio: audio/surfaces/697d_0.mp3
+  - id: s1
+    word: 楽しい
+    reading_id: r0
+    audio: audio/surfaces/697d30573044_1.mp3
+  - id: s2
+    word: 楽しい
+    reading_id: r0
+    audio: audio/surfaces/305f306e30573044_2.mp3
+  - id: s3
+    word: 音楽
+    reading_id: r1
+    audio: audio/surfaces/97f3697d_3.mp3
+  - id: s4
+    word: 楽器
+    reading_id: r1
+    audio: audio/surfaces/697d5668_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 白
+    - char: 木
+items:
+  - id: 楽-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たのしい
+        correct: true
+      - kana: は
+        correct: false
+      - kana: つくる
+        correct: false
+  - id: 楽-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ガク
+        correct: true
+      - kana: カツ
+        correct: false
+      - kana: くび
+        correct: false
+  - id: 楽-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たのしい
+        semantic: true
+        correct: true
+      - gloss_ja: くろ
+        semantic: true
+        correct: false
+      - gloss_ja: その
+        semantic: true
+        correct: false
+  - id: 楽-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

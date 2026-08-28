@@ -1,0 +1,69 @@
+character: 賃
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: チン
+      type: on
+      audio: audio/readings/30c130f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ちん。だい。ちんぎん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちん。
+    家賃を はらう。
+    だい。
+surfaces:
+  - id: s0
+    word: 賃
+    reading_id: r0
+    audio: audio/surfaces/8cc3_0.mp3
+  - id: s1
+    word: 家賃
+    reading_id: r0
+    audio: audio/surfaces/5bb68cc3_1.mp3
+  - id: s2
+    word: 家賃
+    reading_id: r0
+    audio: audio/surfaces/308430613093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 任
+    - char: 貝
+items:
+  - id: 賃-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: チン
+        correct: true
+      - kana: マイ
+        correct: false
+      - kana: すてる
+        correct: false
+  - id: 賃-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ちん。だい。ちんぎん
+        semantic: true
+        correct: true
+      - gloss_ja: おがむ
+        semantic: true
+        correct: false
+      - gloss_ja: りつ。のり。リズム
+        semantic: true
+        correct: false
+  - id: 賃-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

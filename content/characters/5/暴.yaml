@@ -1,0 +1,70 @@
+character: 暴
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: あばれる
+      type: kun
+      audio: audio/readings/30423070308c308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あばく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あばれる。
+    風が 暴れる。
+    はげしい。
+surfaces:
+  - id: s0
+    word: 暴
+    reading_id: r0
+    audio: audio/surfaces/66b4_0.mp3
+  - id: s1
+    word: 暴れる
+    reading_id: r0
+    audio: audio/surfaces/66b4308c308b_1.mp3
+  - id: s2
+    word: 暴れる
+    reading_id: r0
+    audio: audio/surfaces/30423070308c308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 共
+    - char: 水
+items:
+  - id: 暴-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あばれる
+        correct: true
+      - kana: せめる
+        correct: false
+      - kana: かう
+        correct: false
+  - id: 暴-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あばく
+        semantic: true
+        correct: true
+      - gloss_ja: まじる
+        semantic: true
+        correct: false
+      - gloss_ja: おかす
+        semantic: true
+        correct: false
+  - id: 暴-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

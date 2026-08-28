@@ -1,0 +1,73 @@
+character: 純
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジュン
+      type: on
+      audio: audio/readings/30b830e530f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: じゅん。まじりけが ない
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    じゅん。
+    純粋な 水。
+    まじりが ない。
+surfaces:
+  - id: s0
+    word: 純
+    reading_id: r0
+    audio: audio/surfaces/7d14_0.mp3
+  - id: s1
+    word: 純粋
+    reading_id: r0
+    audio: audio/surfaces/7d147c8b_1.mp3
+  - id: s2
+    word: 純粋
+    reading_id: r0
+    audio: audio/surfaces/30583085309330593044_2.mp3
+  - id: s3
+    word: 純金
+    reading_id: r0
+    audio: audio/surfaces/7d1491d1_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 屯
+items:
+  - id: 純-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジュン
+        correct: true
+      - kana: チン
+        correct: false
+      - kana: ゲキ
+        correct: false
+  - id: 純-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: じゅん。まじりけが ない
+        semantic: true
+        correct: true
+      - gloss_ja: はい
+        semantic: true
+        correct: false
+      - gloss_ja: べに
+        semantic: true
+        correct: false
+  - id: 純-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

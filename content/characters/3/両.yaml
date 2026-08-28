@@ -1,0 +1,85 @@
+character: 両
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: リョウ
+      type: on
+      audio: audio/readings/30ea30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: てる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    りょう。
+    両方を みる。
+    ふたつ。
+surfaces:
+  - id: s0
+    word: 両
+    reading_id: r0
+    audio: audio/surfaces/4e21_0.mp3
+  - id: s1
+    word: 両方
+    reading_id: r0
+    audio: audio/surfaces/4e2165b9_1.mp3
+  - id: s2
+    word: 両方
+    reading_id: r0
+    audio: audio/surfaces/308a30873046307b3046_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: たて
+      a11y_ja: たて4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+    - order: 6
+      type: たて
+      a11y_ja: たて6
+items:
+  - id: 両-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: リョウ
+        correct: true
+      - kana: じ
+        correct: false
+      - kana: キョク
+        correct: false
+  - id: 両-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: てる
+        semantic: true
+        correct: true
+      - gloss_ja: いん。びょういん
+        semantic: true
+        correct: false
+      - gloss_ja: はじめる
+        semantic: true
+        correct: false
+  - id: 両-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

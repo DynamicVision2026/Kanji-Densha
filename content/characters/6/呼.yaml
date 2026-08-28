@@ -1,0 +1,69 @@
+character: 呼
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: よぶ
+      type: kun
+      audio: audio/readings/30883076.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よぶ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    よぶ。
+    名前を 呼ぶ。
+    声を かける。
+surfaces:
+  - id: s0
+    word: 呼
+    reading_id: r0
+    audio: audio/surfaces/547c_0.mp3
+  - id: s1
+    word: 呼ぶ
+    reading_id: r0
+    audio: audio/surfaces/547c3076_1.mp3
+  - id: s2
+    word: 呼ぶ
+    reading_id: r0
+    audio: audio/surfaces/30883076_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 乎
+items:
+  - id: 呼-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: よぶ
+        correct: true
+      - kana: ジン
+        correct: false
+      - kana: リツ
+        correct: false
+  - id: 呼-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よぶ
+        semantic: true
+        correct: true
+      - gloss_ja: まく
+        semantic: true
+        correct: false
+      - gloss_ja: すわる
+        semantic: true
+        correct: false
+  - id: 呼-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

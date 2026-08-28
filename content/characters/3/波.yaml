@@ -1,0 +1,69 @@
+character: 波
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: なみ
+      type: kun
+      audio: audio/readings/306a307f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: なみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    なみ。
+    大きな 波。
+    海が よせる。
+surfaces:
+  - id: s0
+    word: 波
+    reading_id: r0
+    audio: audio/surfaces/6ce2_0.mp3
+  - id: s1
+    word: 波
+    reading_id: r0
+    audio: audio/surfaces/6ce2_1.mp3
+  - id: s2
+    word: 波
+    reading_id: r0
+    audio: audio/surfaces/306a307f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 皮
+items:
+  - id: 波-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なみ
+        correct: true
+      - kana: おくる
+        correct: false
+      - kana: ハツ
+        correct: false
+  - id: 波-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: なみ
+        semantic: true
+        correct: true
+      - gloss_ja: まもる
+        semantic: true
+        correct: false
+      - gloss_ja: さだめる
+        semantic: true
+        correct: false
+  - id: 波-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

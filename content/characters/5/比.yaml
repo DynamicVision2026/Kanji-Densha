@@ -1,0 +1,79 @@
+character: 比
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: くらべる
+      type: kun
+      audio: audio/readings/304f30893079308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くらべる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くらべる。
+    大きさを 比べる。
+    ならべて みる。
+surfaces:
+  - id: s0
+    word: 比
+    reading_id: r0
+    audio: audio/surfaces/6bd4_0.mp3
+  - id: s1
+    word: 比べる
+    reading_id: r0
+    audio: audio/surfaces/6bd43079308b_1.mp3
+  - id: s2
+    word: 比べる
+    reading_id: r0
+    audio: audio/surfaces/304f30893079308b_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 比-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くらべる
+        correct: true
+      - kana: サイ
+        correct: false
+      - kana: キン
+        correct: false
+  - id: 比-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くらべる
+        semantic: true
+        correct: true
+      - gloss_ja: あばく
+        semantic: true
+        correct: false
+      - gloss_ja: ころす
+        semantic: true
+        correct: false
+  - id: 比-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,74 @@
+character: 雑
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ザツ
+      type: on
+      audio: audio/readings/30b630c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まじえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まじえる。
+    雑誌を よむ。
+    いろいろ。
+surfaces:
+  - id: s0
+    word: 雑
+    reading_id: r0
+    audio: audio/surfaces/96d1_0.mp3
+  - id: s1
+    word: 雑誌
+    reading_id: r0
+    audio: audio/surfaces/96d18a8c_1.mp3
+  - id: s2
+    word: 雑誌
+    reading_id: r0
+    audio: audio/surfaces/305630633057_2.mp3
+  - id: s3
+    word: 複雑
+    reading_id: r0
+    audio: audio/surfaces/890796d1_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 九
+    - char: 木
+    - char: 隹
+items:
+  - id: 雑-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ザツ
+        correct: true
+      - kana: かぎる
+        correct: false
+      - kana: たしか
+        correct: false
+  - id: 雑-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まじえる
+        semantic: true
+        correct: true
+      - gloss_ja: えだ
+        semantic: true
+        correct: false
+      - gloss_ja: おす
+        semantic: true
+        correct: false
+  - id: 雑-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

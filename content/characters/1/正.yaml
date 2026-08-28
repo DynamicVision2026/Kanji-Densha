@@ -1,0 +1,92 @@
+character: 正
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ただしい
+      type: kun
+      audio: audio/readings/305f306030573044.mp3
+    - id: r1
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ただしい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ただしい。
+    正しい こたえ。
+    まっすぐに。
+surfaces:
+  - id: s0
+    word: 正
+    reading_id: r0
+    audio: audio/surfaces/6b63_0.mp3
+  - id: s1
+    word: 正しい
+    reading_id: r0
+    audio: audio/surfaces/6b6330573044_1.mp3
+  - id: s2
+    word: 正しい
+    reading_id: r0
+    audio: audio/surfaces/305f306030573044_2.mp3
+  - id: s3
+    word: 正月
+    reading_id: r1
+    audio: audio/surfaces/6b636708_3.mp3
+  - id: s4
+    word: 正面
+    reading_id: r1
+    audio: audio/surfaces/6b639762_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 止
+items:
+  - id: 正-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ただしい
+        correct: true
+      - kana: みみ
+        correct: false
+      - kana: ななつ
+        correct: false
+  - id: 正-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: ひだり
+        correct: false
+      - kana: コウ
+        correct: false
+  - id: 正-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ただしい
+        semantic: true
+        correct: true
+      - gloss_ja: むっつ
+        semantic: true
+        correct: false
+      - gloss_ja: おうさま
+        semantic: true
+        correct: false
+  - id: 正-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

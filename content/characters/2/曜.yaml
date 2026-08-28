@@ -1,0 +1,69 @@
+character: 曜
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヨウ
+      type: on
+      audio: audio/readings/30e830a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よう。ようび
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ようび。
+    日曜日。
+    週の なまえ。
+surfaces:
+  - id: s0
+    word: 曜
+    reading_id: r0
+    audio: audio/surfaces/66dc_0.mp3
+  - id: s1
+    word: 日曜日
+    reading_id: r0
+    audio: audio/surfaces/65e566dc65e5_1.mp3
+  - id: s2
+    word: 月曜日
+    reading_id: r0
+    audio: audio/surfaces/670866dc65e5_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 翟
+items:
+  - id: 曜-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヨウ
+        correct: true
+      - kana: タ
+        correct: false
+      - kana: ニク
+        correct: false
+  - id: 曜-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よう。ようび
+        semantic: true
+        correct: true
+      - gloss_ja: ながい
+        semantic: true
+        correct: false
+      - gloss_ja: くろ
+        semantic: true
+        correct: false
+  - id: 曜-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

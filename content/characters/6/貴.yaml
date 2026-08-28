@@ -1,0 +1,70 @@
+character: 貴
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たっとい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たっとい。
+    貴重な もの。
+    大切。
+surfaces:
+  - id: s0
+    word: 貴
+    reading_id: r0
+    audio: audio/surfaces/8cb4_0.mp3
+  - id: s1
+    word: 貴重
+    reading_id: r0
+    audio: audio/surfaces/8cb491cd_1.mp3
+  - id: s2
+    word: 貴重
+    reading_id: r0
+    audio: audio/surfaces/304d306130873046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 中
+    - char: 一
+    - char: 貝
+items:
+  - id: 貴-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: たから
+        correct: false
+      - kana: ジ
+        correct: false
+  - id: 貴-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たっとい
+        semantic: true
+        correct: true
+      - gloss_ja: みさお
+        semantic: true
+        correct: false
+      - gloss_ja: うつ
+        semantic: true
+        correct: false
+  - id: 貴-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 職
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショク
+      type: on
+      audio: audio/readings/30b730e730af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しょく。しごと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しょく。
+    職業を えらぶ。
+    しごと。
+surfaces:
+  - id: s0
+    word: 職
+    reading_id: r0
+    audio: audio/surfaces/8077_0.mp3
+  - id: s1
+    word: 職業
+    reading_id: r0
+    audio: audio/surfaces/8077696d_1.mp3
+  - id: s2
+    word: 職業
+    reading_id: r0
+    audio: audio/surfaces/30573087304f304e30873046_2.mp3
+  - id: s3
+    word: 職場
+    reading_id: r0
+    audio: audio/surfaces/80775834_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 耳
+    - char: 戠
+items:
+  - id: 職-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショク
+        correct: true
+      - kana: あばれる
+        correct: false
+      - kana: ノウ
+        correct: false
+  - id: 職-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しょく。しごと
+        semantic: true
+        correct: true
+      - gloss_ja: さが
+        semantic: true
+        correct: false
+      - gloss_ja: やさしい
+        semantic: true
+        correct: false
+  - id: 職-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,84 @@
+character: 現
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: あらわれる
+      type: kun
+      audio: audio/readings/30423089308f308c308b.mp3
+    - id: r1
+      kana: あらわす
+      type: kun
+      audio: audio/readings/30423089308f3059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あらわれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あらわす。
+    顔を 現す。
+    今 ここ。
+surfaces:
+  - id: s0
+    word: 現
+    reading_id: r0
+    audio: audio/surfaces/73fe_0.mp3
+  - id: s1
+    word: 現す
+    reading_id: r1
+    audio: audio/surfaces/73fe3059_1.mp3
+  - id: s2
+    word: 現す
+    reading_id: r1
+    audio: audio/surfaces/30423089308f3059_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 王
+    - char: 見
+items:
+  - id: 現-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あらわれる
+        correct: true
+      - kana: すぎる
+        correct: false
+      - kana: ク
+        correct: false
+  - id: 現-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: あらわす
+        correct: true
+      - kana: けわしい
+        correct: false
+      - kana: ザツ
+        correct: false
+  - id: 現-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あらわれる
+        semantic: true
+        correct: true
+      - gloss_ja: ゆるす
+        semantic: true
+        correct: false
+      - gloss_ja: さかん
+        semantic: true
+        correct: false
+  - id: 現-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

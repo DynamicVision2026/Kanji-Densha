@@ -1,0 +1,73 @@
+character: 障
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さわる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さわる。
+    故障する。
+    さしつかえる。
+surfaces:
+  - id: s0
+    word: 障
+    reading_id: r0
+    audio: audio/surfaces/969c_0.mp3
+  - id: s1
+    word: 故障
+    reading_id: r0
+    audio: audio/surfaces/6545969c_1.mp3
+  - id: s2
+    word: 故障
+    reading_id: r0
+    audio: audio/surfaces/3053305730873046_2.mp3
+  - id: s3
+    word: 障害
+    reading_id: r0
+    audio: audio/surfaces/969c5bb3_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⻖
+    - char: 章
+items:
+  - id: 障-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: ほす
+        correct: false
+      - kana: ゾウ
+        correct: false
+  - id: 障-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さわる
+        semantic: true
+        correct: true
+      - gloss_ja: ぜに
+        semantic: true
+        correct: false
+      - gloss_ja: のうずる
+        semantic: true
+        correct: false
+  - id: 障-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

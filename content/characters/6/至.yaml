@@ -1,0 +1,70 @@
+character: 至
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: いたる
+      type: kun
+      audio: audio/readings/3044305f308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いたる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いたる。
+    場所に 至る。
+    とどく。
+surfaces:
+  - id: s0
+    word: 至
+    reading_id: r0
+    audio: audio/surfaces/81f3_0.mp3
+  - id: s1
+    word: 至る
+    reading_id: r0
+    audio: audio/surfaces/81f3308b_1.mp3
+  - id: s2
+    word: 至る
+    reading_id: r0
+    audio: audio/surfaces/3044305f308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 厶
+    - char: 土
+items:
+  - id: 至-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いたる
+        correct: true
+      - kana: かいこ
+        correct: false
+      - kana: ならぶ
+        correct: false
+  - id: 至-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いたる
+        semantic: true
+        correct: true
+      - gloss_ja: もっぱら
+        semantic: true
+        correct: false
+      - gloss_ja: かたい
+        semantic: true
+        correct: false
+  - id: 至-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

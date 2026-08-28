@@ -1,0 +1,70 @@
+character: 武
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ブ
+      type: on
+      audio: audio/readings/30d6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たけ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たけ。
+    武士が あるく。
+    いくさ。
+surfaces:
+  - id: s0
+    word: 武
+    reading_id: r0
+    audio: audio/surfaces/6b66_0.mp3
+  - id: s1
+    word: 武士
+    reading_id: r0
+    audio: audio/surfaces/6b6658eb_1.mp3
+  - id: s2
+    word: 武士
+    reading_id: r0
+    audio: audio/surfaces/30763057_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 弋
+    - char: 止
+items:
+  - id: 武-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ブ
+        correct: true
+      - kana: ケツ
+        correct: false
+      - kana: とく
+        correct: false
+  - id: 武-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たけ
+        semantic: true
+        correct: true
+      - gloss_ja: みき
+        semantic: true
+        correct: false
+      - gloss_ja: しらげる
+        semantic: true
+        correct: false
+  - id: 武-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

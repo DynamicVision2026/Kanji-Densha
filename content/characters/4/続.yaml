@@ -1,0 +1,69 @@
+character: 続
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: つづく
+      type: kun
+      audio: audio/readings/30643065304f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つづく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つづく。
+    雨が 続く。
+    とぎれない。
+surfaces:
+  - id: s0
+    word: 続
+    reading_id: r0
+    audio: audio/surfaces/7d9a_0.mp3
+  - id: s1
+    word: 続く
+    reading_id: r0
+    audio: audio/surfaces/7d9a304f_1.mp3
+  - id: s2
+    word: 続く
+    reading_id: r0
+    audio: audio/surfaces/30643065304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 売
+items:
+  - id: 続-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つづく
+        correct: true
+      - kana: まと
+        correct: false
+      - kana: ミ
+        correct: false
+  - id: 続-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つづく
+        semantic: true
+        correct: true
+      - gloss_ja: さく。きのう
+        semantic: true
+        correct: false
+      - gloss_ja: うじ
+        semantic: true
+        correct: false
+  - id: 続-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

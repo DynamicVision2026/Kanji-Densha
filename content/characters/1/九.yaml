@@ -1,0 +1,111 @@
+character: 九
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ここの
+      type: kun
+      audio: audio/readings/30533053306e.mp3
+    - id: r1
+      kana: ここのつ
+      type: kun
+      audio: audio/readings/30533053306e3064.mp3
+    - id: r2
+      kana: キュウ
+      type: on
+      audio: audio/readings/30ad30e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ここのつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ここのつ。
+    かずの 九。
+    九つ かぞえる。
+surfaces:
+  - id: s0
+    word: 九
+    reading_id: r0
+    audio: audio/surfaces/4e5d_0.mp3
+  - id: s1
+    word: 九つ
+    reading_id: r1
+    audio: audio/surfaces/4e5d3064_1.mp3
+  - id: s2
+    word: 九つ
+    reading_id: r1
+    audio: audio/surfaces/30533053306e3064_2.mp3
+  - id: s3
+    word: 九州
+    reading_id: r2
+    audio: audio/surfaces/4e5d5dde_3.mp3
+  - id: s4
+    word: 九百
+    reading_id: r2
+    audio: audio/surfaces/4e5d767e_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+items:
+  - id: 九-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ここの
+        correct: true
+      - kana: セン
+        correct: false
+      - kana: ち
+        correct: false
+  - id: 九-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ここのつ
+        correct: true
+      - kana: ちいさい
+        correct: false
+      - kana: おんな
+        correct: false
+  - id: 九-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: キュウ
+        correct: true
+      - kana: な
+        correct: false
+      - kana: ヒャク
+        correct: false
+  - id: 九-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ここのつ
+        semantic: true
+        correct: true
+      - gloss_ja: ひだりがわ
+        semantic: true
+        correct: false
+      - gloss_ja: いと
+        semantic: true
+        correct: false
+  - id: 九-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

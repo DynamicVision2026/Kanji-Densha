@@ -1,0 +1,73 @@
+character: 季
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: き。きせつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    き。
+    季節が かわる。
+    春夏秋冬。
+surfaces:
+  - id: s0
+    word: 季
+    reading_id: r0
+    audio: audio/surfaces/5b63_0.mp3
+  - id: s1
+    word: 季節
+    reading_id: r0
+    audio: audio/surfaces/5b637bc0_1.mp3
+  - id: s2
+    word: 季節
+    reading_id: r0
+    audio: audio/surfaces/304d305b3064_2.mp3
+  - id: s3
+    word: 四季
+    reading_id: r0
+    audio: audio/surfaces/56db5b63_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 子
+items:
+  - id: 季-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: やしなう
+        correct: false
+      - kana: カク
+        correct: false
+  - id: 季-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: き。きせつ
+        semantic: true
+        correct: true
+      - gloss_ja: はかる
+        semantic: true
+        correct: false
+      - gloss_ja: ろうする
+        semantic: true
+        correct: false
+  - id: 季-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

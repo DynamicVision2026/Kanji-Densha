@@ -1,0 +1,73 @@
+character: 句
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ク
+      type: on
+      audio: audio/readings/30af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: く。ことばの く
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    く。
+    俳句を つくる。
+    ことばの まとまり。
+surfaces:
+  - id: s0
+    word: 句
+    reading_id: r0
+    audio: audio/surfaces/53e5_0.mp3
+  - id: s1
+    word: 俳句
+    reading_id: r0
+    audio: audio/surfaces/4ff353e5_1.mp3
+  - id: s2
+    word: 俳句
+    reading_id: r0
+    audio: audio/surfaces/306f3044304f_2.mp3
+  - id: s3
+    word: 語句
+    reading_id: r0
+    audio: audio/surfaces/8a9e53e5_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 勹
+    - char: 口
+items:
+  - id: 句-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ク
+        correct: true
+      - kana: ゴ
+        correct: false
+      - kana: みき
+        correct: false
+  - id: 句-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: く。ことばの く
+        semantic: true
+        correct: true
+      - gloss_ja: つね
+        semantic: true
+        correct: false
+      - gloss_ja: うつる
+        semantic: true
+        correct: false
+  - id: 句-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

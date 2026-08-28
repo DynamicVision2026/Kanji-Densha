@@ -1,0 +1,69 @@
+character: 願
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ねがう
+      type: kun
+      audio: audio/readings/306d304c3046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ねがう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ねがう。
+    休みを 願う。
+    こころから。
+surfaces:
+  - id: s0
+    word: 願
+    reading_id: r0
+    audio: audio/surfaces/9858_0.mp3
+  - id: s1
+    word: 願う
+    reading_id: r0
+    audio: audio/surfaces/98583046_1.mp3
+  - id: s2
+    word: 願う
+    reading_id: r0
+    audio: audio/surfaces/306d304c3046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 原
+    - char: 頁
+items:
+  - id: 願-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ねがう
+        correct: true
+      - kana: あびる
+        correct: false
+      - kana: おぼえる
+        correct: false
+  - id: 願-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ねがう
+        semantic: true
+        correct: true
+      - gloss_ja: こう。すこやか
+        semantic: true
+        correct: false
+      - gloss_ja: さく。きのう
+        semantic: true
+        correct: false
+  - id: 願-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

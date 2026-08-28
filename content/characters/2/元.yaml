@@ -1,0 +1,98 @@
+character: 元
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: もと
+      type: kun
+      audio: audio/readings/30823068.mp3
+    - id: r1
+      kana: ゲン
+      type: on
+      audio: audio/readings/30b230f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: もと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    げんき。
+    はじめの もと。
+    元気な こえ。
+surfaces:
+  - id: s0
+    word: 元
+    reading_id: r0
+    audio: audio/surfaces/5143_0.mp3
+  - id: s1
+    word: 元気
+    reading_id: r1
+    audio: audio/surfaces/51436c17_1.mp3
+  - id: s2
+    word: 元気
+    reading_id: r1
+    audio: audio/surfaces/30523093304d_2.mp3
+  - id: s3
+    word: 地元
+    reading_id: r1
+    audio: audio/surfaces/57305143_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ2
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 元-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: もと
+        correct: true
+      - kana: わける
+        correct: false
+      - kana: なに
+        correct: false
+  - id: 元-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ゲン
+        correct: true
+      - kana: うみ
+        correct: false
+      - kana: やしろ
+        correct: false
+  - id: 元-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: もと
+        semantic: true
+        correct: true
+      - gloss_ja: たに
+        semantic: true
+        correct: false
+      - gloss_ja: は
+        semantic: true
+        correct: false
+  - id: 元-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

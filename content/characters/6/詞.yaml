@@ -1,0 +1,73 @@
+character: 詞
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ことば
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ことば。
+    歌詞を よむ。
+    ことば。
+surfaces:
+  - id: s0
+    word: 詞
+    reading_id: r0
+    audio: audio/surfaces/8a5e_0.mp3
+  - id: s1
+    word: 歌詞
+    reading_id: r0
+    audio: audio/surfaces/6b4c8a5e_1.mp3
+  - id: s2
+    word: 歌詞
+    reading_id: r0
+    audio: audio/surfaces/304b3057_2.mp3
+  - id: s3
+    word: 動詞
+    reading_id: r0
+    audio: audio/surfaces/52d58a5e_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 司
+items:
+  - id: 詞-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シ
+        correct: true
+      - kana: きびしい
+        correct: false
+      - kana: トウ
+        correct: false
+  - id: 詞-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ことば
+        semantic: true
+        correct: true
+      - gloss_ja: かなでる
+        semantic: true
+        correct: false
+      - gloss_ja: おがむ
+        semantic: true
+        correct: false
+  - id: 詞-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

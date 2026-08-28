@@ -1,0 +1,73 @@
+character: 衆
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おおい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おおい。
+    大衆の 人。
+    おおくの ひと。
+surfaces:
+  - id: s0
+    word: 衆
+    reading_id: r0
+    audio: audio/surfaces/8846_0.mp3
+  - id: s1
+    word: 大衆
+    reading_id: r0
+    audio: audio/surfaces/59278846_1.mp3
+  - id: s2
+    word: 大衆
+    reading_id: r0
+    audio: audio/surfaces/305f3044305730853046_2.mp3
+  - id: s3
+    word: 合衆
+    reading_id: r0
+    audio: audio/surfaces/54088846_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 血
+    - char: 乑
+items:
+  - id: 衆-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: みなもと
+        correct: false
+      - kana: テン
+        correct: false
+  - id: 衆-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おおい
+        semantic: true
+        correct: true
+      - gloss_ja: ない
+        semantic: true
+        correct: false
+      - gloss_ja: ほす
+        semantic: true
+        correct: false
+  - id: 衆-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

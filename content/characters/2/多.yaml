@@ -1,0 +1,92 @@
+character: 多
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: おおい
+      type: kun
+      audio: audio/readings/304a304a3044.mp3
+    - id: r1
+      kana: タ
+      type: on
+      audio: audio/readings/30bf.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おおい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おおい。
+    人が 多い。
+    たくさん。
+surfaces:
+  - id: s0
+    word: 多
+    reading_id: r0
+    audio: audio/surfaces/591a_0.mp3
+  - id: s1
+    word: 多い
+    reading_id: r0
+    audio: audio/surfaces/591a3044_1.mp3
+  - id: s2
+    word: 多い
+    reading_id: r0
+    audio: audio/surfaces/304a304a3044_2.mp3
+  - id: s3
+    word: 多数
+    reading_id: r1
+    audio: audio/surfaces/591a6570_3.mp3
+  - id: s4
+    word: 多少
+    reading_id: r1
+    audio: audio/surfaces/591a5c11_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 夕
+    - char: 夕
+items:
+  - id: 多-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おおい
+        correct: true
+      - kana: とも
+        correct: false
+      - kana: いく
+        correct: false
+  - id: 多-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: タ
+        correct: true
+      - kana: みずから
+        correct: false
+      - kana: よむ
+        correct: false
+  - id: 多-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おおい
+        semantic: true
+        correct: true
+      - gloss_ja: こう。つくる しごと
+        semantic: true
+        correct: false
+      - gloss_ja: の
+        semantic: true
+        correct: false
+  - id: 多-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 競
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: キョウ
+      type: on
+      audio: audio/readings/30ad30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きそう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きそう。
+    競争する。
+    くらべる。
+surfaces:
+  - id: s0
+    word: 競
+    reading_id: r0
+    audio: audio/surfaces/7af6_0.mp3
+  - id: s1
+    word: 競争
+    reading_id: r0
+    audio: audio/surfaces/7af64e89_1.mp3
+  - id: s2
+    word: 競争
+    reading_id: r0
+    audio: audio/surfaces/304d30873046305d3046_2.mp3
+  - id: s3
+    word: 競技
+    reading_id: r0
+    audio: audio/surfaces/7af66280_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 立
+    - char: 兄
+items:
+  - id: 競-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キョウ
+        correct: true
+      - kana: うしなう
+        correct: false
+      - kana: まご
+        correct: false
+  - id: 競-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きそう
+        semantic: true
+        correct: true
+      - gloss_ja: うじ
+        semantic: true
+        correct: false
+      - gloss_ja: うしなう
+        semantic: true
+        correct: false
+  - id: 競-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 良
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: よい
+      type: kun
+      audio: audio/readings/30883044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    よい。
+    良い 本。
+    わるく ない。
+surfaces:
+  - id: s0
+    word: 良
+    reading_id: r0
+    audio: audio/surfaces/826f_0.mp3
+  - id: s1
+    word: 良い
+    reading_id: r0
+    audio: audio/surfaces/826f3044_1.mp3
+  - id: s2
+    word: 良い
+    reading_id: r0
+    audio: audio/surfaces/30883044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 艮
+    - char: 丶
+items:
+  - id: 良-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: よい
+        correct: true
+      - kana: かおり
+        correct: false
+      - kana: シン
+        correct: false
+  - id: 良-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よい
+        semantic: true
+        correct: true
+      - gloss_ja: か。じゅぎょうの 一課
+        semantic: true
+        correct: false
+      - gloss_ja: おぼえる
+        semantic: true
+        correct: false
+  - id: 良-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

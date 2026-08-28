@@ -1,0 +1,80 @@
+character: 士
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さむらい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さむらい。
+    兵士が あるく。
+    おとこ。
+surfaces:
+  - id: s0
+    word: 士
+    reading_id: r0
+    audio: audio/surfaces/58eb_0.mp3
+  - id: s1
+    word: 兵士
+    reading_id: r0
+    audio: audio/surfaces/517558eb_1.mp3
+  - id: s2
+    word: 兵士
+    reading_id: r0
+    audio: audio/surfaces/307830443057_2.mp3
+  - id: s3
+    word: 紳士
+    reading_id: r0
+    audio: audio/surfaces/7d3358eb_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+items:
+  - id: 士-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シ
+        correct: true
+      - kana: そなえる
+        correct: false
+      - kana: ソン
+        correct: false
+  - id: 士-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さむらい
+        semantic: true
+        correct: true
+      - gloss_ja: たち
+        semantic: true
+        correct: false
+      - gloss_ja: あばく
+        semantic: true
+        correct: false
+  - id: 士-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

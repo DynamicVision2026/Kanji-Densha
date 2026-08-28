@@ -1,0 +1,76 @@
+character: 亡
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ボウ
+      type: on
+      audio: audio/readings/30dc30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ない
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ない。
+    死亡の 記録。
+    なくなる。
+surfaces:
+  - id: s0
+    word: 亡
+    reading_id: r0
+    audio: audio/surfaces/4ea1_0.mp3
+  - id: s1
+    word: 死亡
+    reading_id: r0
+    audio: audio/surfaces/6b7b4ea1_1.mp3
+  - id: s2
+    word: 死亡
+    reading_id: r0
+    audio: audio/surfaces/3057307c3046_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+items:
+  - id: 亡-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ボウ
+        correct: true
+      - kana: タク
+        correct: false
+      - kana: つくえ
+        correct: false
+  - id: 亡-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ない
+        semantic: true
+        correct: true
+      - gloss_ja: ほす
+        semantic: true
+        correct: false
+      - gloss_ja: こまる
+        semantic: true
+        correct: false
+  - id: 亡-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

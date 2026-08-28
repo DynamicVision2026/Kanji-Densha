@@ -1,0 +1,69 @@
+character: 常
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: つね
+      type: kun
+      audio: audio/readings/3064306d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つね
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つね。
+    常に 勉強。
+    いつもの。
+surfaces:
+  - id: s0
+    word: 常
+    reading_id: r0
+    audio: audio/surfaces/5e38_0.mp3
+  - id: s1
+    word: 常に
+    reading_id: r0
+    audio: audio/surfaces/5e38306b_1.mp3
+  - id: s2
+    word: 常に
+    reading_id: r0
+    audio: audio/surfaces/3064306d306b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尚
+    - char: 巾
+items:
+  - id: 常-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つね
+        correct: true
+      - kana: エキ
+        correct: false
+      - kana: ふせぐ
+        correct: false
+  - id: 常-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つね
+        semantic: true
+        correct: true
+      - gloss_ja: やどる
+        semantic: true
+        correct: false
+      - gloss_ja: つとめる
+        semantic: true
+        correct: false
+  - id: 常-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

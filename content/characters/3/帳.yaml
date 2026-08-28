@@ -1,0 +1,69 @@
+character: 帳
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: チョウ
+      type: on
+      audio: audio/readings/30c130e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とばり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちょう。
+    手帳に かく。
+    かみを とじる。
+surfaces:
+  - id: s0
+    word: 帳
+    reading_id: r0
+    audio: audio/surfaces/5e33_0.mp3
+  - id: s1
+    word: 手帳
+    reading_id: r0
+    audio: audio/surfaces/624b5e33_1.mp3
+  - id: s2
+    word: 手帳
+    reading_id: r0
+    audio: audio/surfaces/3066306130873046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 巾
+    - char: 長
+items:
+  - id: 帳-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: チョウ
+        correct: true
+      - kana: やまい
+        correct: false
+      - kana: そだつ
+        correct: false
+  - id: 帳-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とばり
+        semantic: true
+        correct: true
+      - gloss_ja: さいわい
+        semantic: true
+        correct: false
+      - gloss_ja: おもう
+        semantic: true
+        correct: false
+  - id: 帳-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

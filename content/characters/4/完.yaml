@@ -1,0 +1,73 @@
+character: 完
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: カン
+      type: on
+      audio: audio/readings/30ab30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かん。かんせい。おわる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かん。
+    完全に おわる。
+    欠けない。
+surfaces:
+  - id: s0
+    word: 完
+    reading_id: r0
+    audio: audio/surfaces/5b8c_0.mp3
+  - id: s1
+    word: 完全
+    reading_id: r0
+    audio: audio/surfaces/5b8c5168_1.mp3
+  - id: s2
+    word: 完全
+    reading_id: r0
+    audio: audio/surfaces/304b3093305c3093_2.mp3
+  - id: s3
+    word: 完成
+    reading_id: r0
+    audio: audio/surfaces/5b8c6210_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 宀
+    - char: 元
+items:
+  - id: 完-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カン
+        correct: true
+      - kana: つめたい
+        correct: false
+      - kana: もとめる
+        correct: false
+  - id: 完-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かん。かんせい。おわる
+        semantic: true
+        correct: true
+      - gloss_ja: つつむ
+        semantic: true
+        correct: false
+      - gloss_ja: ない
+        semantic: true
+        correct: false
+  - id: 完-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

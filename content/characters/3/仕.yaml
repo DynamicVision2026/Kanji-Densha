@@ -1,0 +1,84 @@
+character: 仕
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: つかえる
+      type: kun
+      audio: audio/readings/3064304b3048308b.mp3
+    - id: r1
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つかえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しごと。
+    仕事を する。
+    つとめる。
+surfaces:
+  - id: s0
+    word: 仕
+    reading_id: r0
+    audio: audio/surfaces/4ed5_0.mp3
+  - id: s1
+    word: 仕事
+    reading_id: r1
+    audio: audio/surfaces/4ed54e8b_1.mp3
+  - id: s2
+    word: 仕事
+    reading_id: r1
+    audio: audio/surfaces/305730543068_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 士
+items:
+  - id: 仕-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つかえる
+        correct: true
+      - kana: さる
+        correct: false
+      - kana: うつす
+        correct: false
+  - id: 仕-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シ
+        correct: true
+      - kana: ハン
+        correct: false
+      - kana: たま
+        correct: false
+  - id: 仕-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つかえる
+        semantic: true
+        correct: true
+      - gloss_ja: ばい。にばい
+        semantic: true
+        correct: false
+      - gloss_ja: いやす
+        semantic: true
+        correct: false
+  - id: 仕-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

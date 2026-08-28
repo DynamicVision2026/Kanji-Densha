@@ -1,0 +1,70 @@
+character: 整
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ととのえる
+      type: kun
+      audio: audio/readings/30683068306e3048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ととのえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ととのえる。
+    部屋を 整える。
+    そろえる。
+surfaces:
+  - id: s0
+    word: 整
+    reading_id: r0
+    audio: audio/surfaces/6574_0.mp3
+  - id: s1
+    word: 整える
+    reading_id: r0
+    audio: audio/surfaces/65743048308b_1.mp3
+  - id: s2
+    word: 整える
+    reading_id: r0
+    audio: audio/surfaces/30683068306e3048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 束
+    - char: 攵
+    - char: 正
+items:
+  - id: 整-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ととのえる
+        correct: true
+      - kana: まもる
+        correct: false
+      - kana: ダイ
+        correct: false
+  - id: 整-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ととのえる
+        semantic: true
+        correct: true
+      - gloss_ja: よ
+        semantic: true
+        correct: false
+      - gloss_ja: ふで
+        semantic: true
+        correct: false
+  - id: 整-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

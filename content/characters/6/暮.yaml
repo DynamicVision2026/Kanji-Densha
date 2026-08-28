@@ -1,0 +1,84 @@
+character: 暮
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: くれる
+      type: kun
+      audio: audio/readings/304f308c308b.mp3
+    - id: r1
+      kana: くらす
+      type: kun
+      audio: audio/readings/304f30893059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くらす。
+    家で 暮らす。
+    日が くれる。
+surfaces:
+  - id: s0
+    word: 暮
+    reading_id: r0
+    audio: audio/surfaces/66ae_0.mp3
+  - id: s1
+    word: 暮らす
+    reading_id: r1
+    audio: audio/surfaces/66ae30893059_1.mp3
+  - id: s2
+    word: 暮らす
+    reading_id: r1
+    audio: audio/surfaces/304f30893059_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 莫
+    - char: 日
+items:
+  - id: 暮-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くれる
+        correct: true
+      - kana: すな
+        correct: false
+      - kana: カン
+        correct: false
+  - id: 暮-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: くらす
+        correct: true
+      - kana: うつる
+        correct: false
+      - kana: ならぶ
+        correct: false
+  - id: 暮-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くれる
+        semantic: true
+        correct: true
+      - gloss_ja: へい。きざはし。へいか
+        semantic: true
+        correct: false
+      - gloss_ja: はい
+        semantic: true
+        correct: false
+  - id: 暮-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

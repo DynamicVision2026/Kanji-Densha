@@ -1,0 +1,69 @@
+character: 滋
+grade: 4
+taught_readings:
+  entries:
+    - id: pn0
+      kana: しが
+      type: proper_name
+      audio: audio/readings/3057304c.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: pn0
+meaning:
+  gloss_ja: じ。うるおう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しが。
+    滋賀の 湖。
+    うるおう。
+surfaces:
+  - id: s0
+    word: 滋
+    reading_id: pn0
+    audio: audio/surfaces/6ecb_0.mp3
+  - id: s1
+    word: 滋賀
+    reading_id: pn0
+    audio: audio/surfaces/6ecb8cc0_1.mp3
+  - id: s2
+    word: 滋賀
+    reading_id: pn0
+    audio: audio/surfaces/3057304c_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 兹
+items:
+  - id: 滋-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: pn0
+    choices:
+      - kana: しが
+        correct: true
+      - kana: する
+        correct: false
+      - kana: セツ
+        correct: false
+  - id: 滋-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: じ。うるおう
+        semantic: true
+        correct: true
+      - gloss_ja: ひめ
+        semantic: true
+        correct: false
+      - gloss_ja: め
+        semantic: true
+        correct: false
+  - id: 滋-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

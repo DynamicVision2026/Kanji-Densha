@@ -1,0 +1,69 @@
+character: 神
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: かみ
+      type: kun
+      audio: audio/readings/304b307f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かみ。
+    森の 神。
+    まつる。
+surfaces:
+  - id: s0
+    word: 神
+    reading_id: r0
+    audio: audio/surfaces/795e_0.mp3
+  - id: s1
+    word: 神
+    reading_id: r0
+    audio: audio/surfaces/795e_1.mp3
+  - id: s2
+    word: 神
+    reading_id: r0
+    audio: audio/surfaces/304b307f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 示
+    - char: 申
+items:
+  - id: 神-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かみ
+        correct: true
+      - kana: おきる
+        correct: false
+      - kana: は
+        correct: false
+  - id: 神-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かみ
+        semantic: true
+        correct: true
+      - gloss_ja: おもて
+        semantic: true
+        correct: false
+      - gloss_ja: あたたか
+        semantic: true
+        correct: false
+  - id: 神-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

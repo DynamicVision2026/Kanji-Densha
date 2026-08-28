@@ -1,0 +1,69 @@
+character: 覚
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: おぼえる
+      type: kun
+      audio: audio/readings/304a307c3048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おぼえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おぼえる。
+    字を 覚える。
+    こころに のこす。
+surfaces:
+  - id: s0
+    word: 覚
+    reading_id: r0
+    audio: audio/surfaces/899a_0.mp3
+  - id: s1
+    word: 覚える
+    reading_id: r0
+    audio: audio/surfaces/899a3048308b_1.mp3
+  - id: s2
+    word: 覚える
+    reading_id: r0
+    audio: audio/surfaces/304a307c3048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺍
+    - char: 見
+items:
+  - id: 覚-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おぼえる
+        correct: true
+      - kana: クン
+        correct: false
+      - kana: しか
+        correct: false
+  - id: 覚-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おぼえる
+        semantic: true
+        correct: true
+      - gloss_ja: このむ
+        semantic: true
+        correct: false
+      - gloss_ja: さき
+        semantic: true
+        correct: false
+  - id: 覚-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published
