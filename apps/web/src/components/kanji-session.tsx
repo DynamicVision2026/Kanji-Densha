@@ -50,14 +50,17 @@ function openingBeat(input: {
   lookMode: boolean;
   echoOn: boolean;
   progress: ProgressState;
-  forceReteach: boolean;
   computed: BeatId;
 }): BeatId {
   if (input.lookMode) return "understand";
   if (input.echoOn) return "echo";
   if (!input.progress.encounterCompleted) return "encounter";
+  // MR-4.5/4.6: the engine itself flips `understood` back to false on a
+  // lost-triggering or force-reteach wrong answer, and the adapter carries
+  // that through two-way (legacy-progress-adapter.ts). A character mid-repair
+  // already fails this check, so it routes to わかる without a separate
+  // repairRequiredKinds branch.
   if (!input.progress.understandCompleted) return "understand";
-  if (input.progress.repairRequiredKinds.length && input.forceReteach) return "understand";
   return input.computed;
 }
 
@@ -79,6 +82,7 @@ export function KanjiSession({
   childName: _childName,
   hrefHome,
   busy,
+  sessionId: sessionIdProp,
   onEncounter,
   onUnderstand,
   onAnswer,
@@ -93,6 +97,12 @@ export function KanjiSession({
   childName?: string;
   hrefHome: "/demo" | "/app";
   busy?: boolean;
+  // Shared with the encounter/understand mutations at the call site, so one
+  // visit to one kanji produces one sessionId across every event (D-brief:
+  // thread sessionId through every event). Optional — the demo route has no
+  // server round trip to share an id with, so it falls back to one generated
+  // here, same as before this prop existed.
+  sessionId?: string;
   onEncounter: () => void | Promise<unknown>;
   onUnderstand: () => void | Promise<unknown>;
   onAnswer: (input: {
@@ -121,7 +131,6 @@ export function KanjiSession({
       lookMode,
       echoOn: Boolean(echoOn),
       progress,
-      forceReteach: params.force_reteach_on_wrong,
       computed,
     }),
   );
@@ -134,11 +143,12 @@ export function KanjiSession({
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [result, setResult] = useState<{ correct: boolean; label: string } | null>(null);
-  const [sessionId] = useState(() =>
+  const [autoSessionId] = useState(() =>
     typeof crypto !== "undefined" && crypto.randomUUID
       ? crypto.randomUUID()
       : `s-${Date.now()}`,
   );
+  const sessionId = sessionIdProp ?? autoSessionId;
   const [repairCount, setRepairCount] = useState(0);
   const [couple, setCouple] = useState<{ chars: string[]; count: number } | null>(null);
   const [lastWrongByKind, setLastWrongByKind] = useState<Partial<Record<PracticeKind, string>>>(
@@ -205,7 +215,6 @@ export function KanjiSession({
         lookMode,
         echoOn: Boolean(echoOn),
         progress,
-        forceReteach: params.force_reteach_on_wrong,
         computed,
       }),
     );

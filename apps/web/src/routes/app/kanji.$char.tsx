@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { KanjiSession } from "@/components/kanji-session";
@@ -35,6 +36,11 @@ function KanjiStudy() {
   const childId = search.child || readActiveChildId() || "";
   const lookMode = (search.mode ?? "play") === "look";
   const qc = useQueryClient();
+  // One id per visit to this kanji (the component remounts on char change via
+  // `key={char}` below) — shared with KanjiSession so every event this
+  // sitting produces (encounter, understand, answer) carries the same
+  // sessionId, not three disconnected ones.
+  const [sessionId] = useState(() => crypto.randomUUID());
 
   const studyQ = useQuery({
     queryKey: ["study", childId, char],
@@ -43,7 +49,7 @@ function KanjiStudy() {
   });
 
   const encounter = useMutation({
-    mutationFn: () => completeEncounter({ data: { childId, char } }),
+    mutationFn: () => completeEncounter({ data: { childId, char, sessionId } }),
     onSuccess: (out) => {
       void qc.setQueryData(["study", childId, char], (prev: typeof studyQ.data) =>
         prev ? { ...prev, progress: out.progress } : prev,
@@ -51,7 +57,7 @@ function KanjiStudy() {
     },
   });
   const understand = useMutation({
-    mutationFn: () => completeUnderstand({ data: { childId, char } }),
+    mutationFn: () => completeUnderstand({ data: { childId, char, sessionId } }),
     onSuccess: (out) => {
       void qc.setQueryData(["study", childId, char], (prev: typeof studyQ.data) =>
         prev ? { ...prev, progress: out.progress } : prev,
@@ -82,6 +88,7 @@ function KanjiStudy() {
       childId={childId}
       childName={study.child.name}
       hrefHome="/app"
+      sessionId={sessionId}
       busy={encounter.isPending || understand.isPending}
       onEncounter={() => encounter.mutateAsync()}
       onUnderstand={() => understand.mutateAsync()}

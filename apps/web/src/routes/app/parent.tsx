@@ -197,6 +197,8 @@ function ParentPage() {
           {t("shapeLicense")}
           <br />
           {t("audioLicense")}
+          <br />
+          {t("fontLicense")}
         </p>
       </main>
     </AppShell>
