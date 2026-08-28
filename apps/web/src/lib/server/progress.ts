@@ -316,6 +316,33 @@ async function awardStamp(userId: string, childId: string, prev: ProgressState, 
   `;
 }
 
+async function recordEchoRejection(input: {
+  userId: string;
+  childId: string;
+  kanji: string;
+  sessionId: string;
+  clause: string;
+  message: string;
+  almostAt: Date | null;
+  attemptedAt: Date;
+  eligibleAtIso: string | null;
+}) {
+  const sql = await getSql();
+  const deltaHours =
+    input.eligibleAtIso === null
+      ? null
+      : (input.attemptedAt.getTime() - Date.parse(input.eligibleAtIso)) / 3_600_000;
+  await sql`
+    insert into echo_rejections (
+      user_id, child_id, kanji, session_id, clause, message, almost_at, attempted_at, delta_hours
+    )
+    values (
+      ${input.userId}, ${input.childId}, ${input.kanji}, ${input.sessionId},
+      ${input.clause}, ${input.message}, ${input.almostAt}, ${input.attemptedAt}, ${deltaHours}
+    )
+  `;
+}
+
 async function echoStartsToday(userId: string, childId: string, nowIso: string) {
   const sql = await getSql();
   const day = utcDay(nowIso);
@@ -501,11 +528,21 @@ export const submitPractice = createServerFn({ method: "POST" })
       if (!(err instanceof EchoRejectedError) || !wantsEcho) throw err;
       // The engine's own eligibility check (MR-5) is the authority, not the
       // app's echoIsDue guess above — a rejection here means that guess was
-      // stale (e.g. a second tab already spent the echo). Downgrade to
-      // practice-mode scoring rather than surfacing an error to the child;
-      // this console line stands in for telemetry until a real pipeline
-      // exists.
-      console.warn(`echo rejected, scoring as practice: ${err.clause} ${data.char}`);
+      // stale (e.g. a second tab already spent the echo, or the scheduler
+      // drifted). The child never sees this — practice-mode scoring below is
+      // silent — but the event must land somewhere queryable: echo_rejections
+      // is the table to check if echoes look off after launch.
+      await recordEchoRejection({
+        userId: context.userId,
+        childId: data.childId,
+        kanji: data.char,
+        sessionId: data.sessionId,
+        clause: err.clause,
+        message: err.message,
+        almostAt: timestampFromHours(prev.almostAt),
+        attemptedAt: new Date(now),
+        eligibleAtIso: prevLegacy.echoDueAt,
+      });
       scoringEcho = false;
       next = attempt("practice");
     }
