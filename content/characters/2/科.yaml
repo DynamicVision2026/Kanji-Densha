@@ -1,0 +1,73 @@
+character: 科
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: カ
+      type: on
+      audio: audio/readings/30ab.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: か。きょうか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    か。
+    科学の 科。
+    しらべる とき。
+surfaces:
+  - id: s0
+    word: 科
+    reading_id: r0
+    audio: audio/surfaces/79d1_0.mp3
+  - id: s1
+    word: 科学
+    reading_id: r0
+    audio: audio/surfaces/79d15b66_1.mp3
+  - id: s2
+    word: 科学
+    reading_id: r0
+    audio: audio/surfaces/304b304c304f_2.mp3
+  - id: s3
+    word: 学科
+    reading_id: r0
+    audio: audio/surfaces/5b6679d1_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 斗
+items:
+  - id: 科-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カ
+        correct: true
+      - kana: うお
+        correct: false
+      - kana: くろい
+        correct: false
+  - id: 科-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: か。きょうか
+        semantic: true
+        correct: true
+      - gloss_ja: なに
+        semantic: true
+        correct: false
+      - gloss_ja: おとうと
+        semantic: true
+        correct: false
+  - id: 科-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 交
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: まじわる
+      type: kun
+      audio: audio/readings/307e3058308f308b.mp3
+    - id: r1
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まじわる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まじわる。
+    みちが 交わる。
+    ゆきき。
+surfaces:
+  - id: s0
+    word: 交
+    reading_id: r0
+    audio: audio/surfaces/4ea4_0.mp3
+  - id: s1
+    word: 交わる
+    reading_id: r0
+    audio: audio/surfaces/4ea4308f308b_1.mp3
+  - id: s2
+    word: 交わる
+    reading_id: r0
+    audio: audio/surfaces/307e3058308f308b_2.mp3
+  - id: s3
+    word: 交通
+    reading_id: r1
+    audio: audio/surfaces/4ea4901a_3.mp3
+  - id: s4
+    word: 交換
+    reading_id: r1
+    audio: audio/surfaces/4ea463db_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 亠
+    - char: 父
+items:
+  - id: 交-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まじわる
+        correct: true
+      - kana: ソウ
+        correct: false
+      - kana: ナイ
+        correct: false
+  - id: 交-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: まえ
+        correct: false
+      - kana: よる
+        correct: false
+  - id: 交-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まじわる
+        semantic: true
+        correct: true
+      - gloss_ja: しる
+        semantic: true
+        correct: false
+      - gloss_ja: あう
+        semantic: true
+        correct: false
+  - id: 交-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

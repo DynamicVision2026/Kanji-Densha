@@ -1,0 +1,69 @@
+character: 統
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: トウ
+      type: on
+      audio: audio/readings/30c830a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すべる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すべる。
+    伝統を まもる。
+    まとめる。
+surfaces:
+  - id: s0
+    word: 統
+    reading_id: r0
+    audio: audio/surfaces/7d71_0.mp3
+  - id: s1
+    word: 伝統
+    reading_id: r0
+    audio: audio/surfaces/4f1d7d71_1.mp3
+  - id: s2
+    word: 伝統
+    reading_id: r0
+    audio: audio/surfaces/3067309330683046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 充
+items:
+  - id: 統-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: トウ
+        correct: true
+      - kana: ジュン
+        correct: false
+      - kana: つま
+        correct: false
+  - id: 統-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すべる
+        semantic: true
+        correct: true
+      - gloss_ja: まなこ
+        semantic: true
+        correct: false
+      - gloss_ja: ぜい。ぜいきん
+        semantic: true
+        correct: false
+  - id: 統-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

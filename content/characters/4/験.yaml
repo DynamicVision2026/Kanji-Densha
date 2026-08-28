@@ -1,0 +1,73 @@
+character: 験
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ケン
+      type: on
+      audio: audio/readings/30b130f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あかし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あかし。
+    試験を うける。
+    ためす。
+surfaces:
+  - id: s0
+    word: 験
+    reading_id: r0
+    audio: audio/surfaces/9a13_0.mp3
+  - id: s1
+    word: 試験
+    reading_id: r0
+    audio: audio/surfaces/8a669a13_1.mp3
+  - id: s2
+    word: 試験
+    reading_id: r0
+    audio: audio/surfaces/305730513093_2.mp3
+  - id: s3
+    word: 経験
+    reading_id: r0
+    audio: audio/surfaces/7d4c9a13_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 馬
+    - char: 僉
+items:
+  - id: 験-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ケン
+        correct: true
+      - kana: まいる
+        correct: false
+      - kana: あさい
+        correct: false
+  - id: 験-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あかし
+        semantic: true
+        correct: true
+      - gloss_ja: とく。とくべつ
+        semantic: true
+        correct: false
+      - gloss_ja: うめ
+        semantic: true
+        correct: false
+  - id: 験-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,83 @@
+character: 公
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おおやけ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こうえん。
+    みんなの ばしょ。
+    公園で あそぶ。
+surfaces:
+  - id: s0
+    word: 公
+    reading_id: r0
+    audio: audio/surfaces/516c_0.mp3
+  - id: s1
+    word: 公園
+    reading_id: r0
+    audio: audio/surfaces/516c5712_1.mp3
+  - id: s2
+    word: 公園
+    reading_id: r0
+    audio: audio/surfaces/3053304630483093_2.mp3
+  - id: s3
+    word: 公式
+    reading_id: r0
+    audio: audio/surfaces/516c5f0f_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 公-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: スウ
+        correct: false
+      - kana: テン
+        correct: false
+  - id: 公-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おおやけ
+        semantic: true
+        correct: true
+      - gloss_ja: あたらしい
+        semantic: true
+        correct: false
+      - gloss_ja: おしえる
+        semantic: true
+        correct: false
+  - id: 公-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

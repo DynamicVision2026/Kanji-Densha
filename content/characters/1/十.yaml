@@ -1,0 +1,73 @@
+character: 十
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: とお
+      type: kun
+      audio: audio/readings/3068304a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とお
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とお。
+    かずの 十。
+    たてと よこ。
+surfaces:
+  - id: s0
+    word: 十
+    reading_id: r0
+    audio: audio/surfaces/5341_0.mp3
+  - id: s1
+    word: 十
+    reading_id: r0
+    audio: audio/surfaces/5341_1.mp3
+  - id: s2
+    word: 十日
+    reading_id: r0
+    audio: audio/surfaces/534165e5_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+items:
+  - id: 十-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とお
+        correct: true
+      - kana: あおい
+        correct: false
+      - kana: いし
+        correct: false
+  - id: 十-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とお
+        semantic: true
+        correct: true
+      - gloss_ja: き。こころや くうき
+        semantic: true
+        correct: false
+      - gloss_ja: きん。おかね
+        semantic: true
+        correct: false
+  - id: 十-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

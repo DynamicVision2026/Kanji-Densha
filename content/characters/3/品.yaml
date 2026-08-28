@@ -1,0 +1,70 @@
+character: 品
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: しな
+      type: kun
+      audio: audio/readings/3057306a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しな
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しな。
+    よい 品。
+    えらぶ もの。
+surfaces:
+  - id: s0
+    word: 品
+    reading_id: r0
+    audio: audio/surfaces/54c1_0.mp3
+  - id: s1
+    word: 品
+    reading_id: r0
+    audio: audio/surfaces/54c1_1.mp3
+  - id: s2
+    word: 品
+    reading_id: r0
+    audio: audio/surfaces/3057306a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 口
+    - char: 口
+items:
+  - id: 品-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しな
+        correct: true
+      - kana: にわ
+        correct: false
+      - kana: はなす
+        correct: false
+  - id: 品-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しな
+        semantic: true
+        correct: true
+      - gloss_ja: のる
+        semantic: true
+        correct: false
+      - gloss_ja: はた
+        semantic: true
+        correct: false
+  - id: 品-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

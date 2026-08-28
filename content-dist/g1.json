@@ -135,6 +135,1513 @@
     ]
   },
   {
+    "character": "七",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "なな",
+          "type": "kun",
+          "audio": "audio/readings/306a306a.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ななつ",
+          "type": "kun",
+          "audio": "audio/readings/306a306a3064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "シチ",
+          "type": "on",
+          "audio": "audio/readings/30b730c1.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ななつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ななつ。\nかずの 七。\n七つ かぞえる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "七",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e03_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "七つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4e033064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "七つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/306a306a3064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "七月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e036708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "七時",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e036642_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "七-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "なな",
+            "correct": true
+          },
+          {
+            "kana": "つち",
+            "correct": false
+          },
+          {
+            "kana": "まち",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "七-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ななつ",
+            "correct": true
+          },
+          {
+            "kana": "はやい",
+            "correct": false
+          },
+          {
+            "kana": "セン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "七-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "シチ",
+            "correct": true
+          },
+          {
+            "kana": "うえ",
+            "correct": false
+          },
+          {
+            "kana": "ちいさい",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "七-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ななつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "した。さがる",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ここのつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "七-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シチ",
+        "type": "on"
+      },
+      {
+        "kana": "なな",
+        "type": "kun"
+      },
+      {
+        "kana": "ななつ",
+        "type": "kun"
+      },
+      {
+        "kana": "なの",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "三",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "み",
+          "type": "kun",
+          "audio": "audio/readings/307f.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "みっつ",
+          "type": "kun",
+          "audio": "audio/readings/307f30633064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "サン",
+          "type": "on",
+          "audio": "audio/readings/30b530f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "みっつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "みっつ。\nかずの 三。\n線が 三本。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "三",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e09_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "三つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4e093064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "三つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/307f30633064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "三月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e096708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "三人",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e094eba_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ2"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "三-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "み",
+            "correct": true
+          },
+          {
+            "kana": "くち",
+            "correct": false
+          },
+          {
+            "kana": "いつつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "三-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "みっつ",
+            "correct": true
+          },
+          {
+            "kana": "ニ",
+            "correct": false
+          },
+          {
+            "kana": "ふた",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "三-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "サン",
+            "correct": true
+          },
+          {
+            "kana": "やすむ",
+            "correct": false
+          },
+          {
+            "kana": "ここのつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "三-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "みっつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ゆうがた",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "さき。せんせい",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "三-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "サン",
+        "type": "on"
+      },
+      {
+        "kana": "み",
+        "type": "kun"
+      },
+      {
+        "kana": "みつ",
+        "type": "kun"
+      },
+      {
+        "kana": "みっつ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "上",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "うえ",
+          "type": "kun",
+          "audio": "audio/readings/30463048.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ジョウ",
+          "type": "on",
+          "audio": "audio/readings/30b830e730a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "うえ。あがる",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "うえ。\nつくえの 上。\nあがる とき。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "上",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e0a_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "上",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e0a_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "上",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30463048_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "上手",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4e0a624b_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "以上",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4ee54e0a_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "上-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "うえ",
+            "correct": true
+          },
+          {
+            "kana": "あお",
+            "correct": false
+          },
+          {
+            "kana": "ただしい",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "上-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ジョウ",
+            "correct": true
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          },
+          {
+            "kana": "なな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "上-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "うえ。あがる",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "はやい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "たけ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "上-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ジョウ",
+        "type": "on"
+      },
+      {
+        "kana": "うえ",
+        "type": "kun"
+      },
+      {
+        "kana": "うわ",
+        "type": "kun"
+      },
+      {
+        "kana": "かみ",
+        "type": "kun"
+      },
+      {
+        "kana": "あげる",
+        "type": "kun"
+      },
+      {
+        "kana": "あがる",
+        "type": "kun"
+      },
+      {
+        "kana": "のぼる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ショウ",
+        "type": "on"
+      },
+      {
+        "kana": "のぼせる",
+        "type": "kun"
+      },
+      {
+        "kana": "のぼす",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "下",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "した",
+          "type": "kun",
+          "audio": "audio/readings/3057305f.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "した。さがる",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "した。\nつくえの 下。\nさがる とき。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "下",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e0b_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "下",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e0b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "下",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/3057305f_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "靴下",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/97744e0b_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "下-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "した",
+            "correct": true
+          },
+          {
+            "kana": "そら",
+            "correct": false
+          },
+          {
+            "kana": "ケン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "下-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "した。さがる",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "おうさま",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "き。こころや くうき",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "下-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "カ",
+        "type": "on"
+      },
+      {
+        "kana": "ゲ",
+        "type": "on"
+      },
+      {
+        "kana": "した",
+        "type": "kun"
+      },
+      {
+        "kana": "しも",
+        "type": "kun"
+      },
+      {
+        "kana": "さげる",
+        "type": "kun"
+      },
+      {
+        "kana": "さがる",
+        "type": "kun"
+      },
+      {
+        "kana": "くだる",
+        "type": "kun"
+      },
+      {
+        "kana": "くだす",
+        "type": "kun"
+      },
+      {
+        "kana": "くださる",
+        "type": "kun"
+      },
+      {
+        "kana": "おろす",
+        "type": "kun"
+      },
+      {
+        "kana": "おりる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "もと",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "中",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "なか",
+          "type": "kun",
+          "audio": "audio/readings/306a304b.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "なか",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "なか。\nはこの 中。\nまんなか。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "中",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e2d_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "中",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e2d_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "中",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/306a304b_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "仲間",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4ef29593_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて4"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "中-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "なか",
+            "correct": true
+          },
+          {
+            "kana": "ハチ",
+            "correct": false
+          },
+          {
+            "kana": "ブン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "中-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "なか",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "くち",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "こ。こども",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "中-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "チュウ",
+        "type": "on"
+      },
+      {
+        "kana": "ジュウ",
+        "type": "on"
+      },
+      {
+        "kana": "なか",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "九",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ここの",
+          "type": "kun",
+          "audio": "audio/readings/30533053306e.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ここのつ",
+          "type": "kun",
+          "audio": "audio/readings/30533053306e3064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "キュウ",
+          "type": "on",
+          "audio": "audio/readings/30ad30e530a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ここのつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ここのつ。\nかずの 九。\n九つ かぞえる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "九",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e5d_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "九つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4e5d3064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "九つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/30533053306e3064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "九州",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e5d5dde_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "九百",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e5d767e_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "九-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ここの",
+            "correct": true
+          },
+          {
+            "kana": "セン",
+            "correct": false
+          },
+          {
+            "kana": "ち",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "九-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ここのつ",
+            "correct": true
+          },
+          {
+            "kana": "ちいさい",
+            "correct": false
+          },
+          {
+            "kana": "おんな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "九-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "キュウ",
+            "correct": true
+          },
+          {
+            "kana": "な",
+            "correct": false
+          },
+          {
+            "kana": "ヒャク",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "九-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ここのつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ひだりがわ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "いと",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "九-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "キュウ",
+        "type": "on"
+      },
+      {
+        "kana": "ク",
+        "type": "on"
+      },
+      {
+        "kana": "ここの",
+        "type": "kun"
+      },
+      {
+        "kana": "ここのつ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "二",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ふた",
+          "type": "kun",
+          "audio": "audio/readings/3075305f.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ふたつ",
+          "type": "kun",
+          "audio": "audio/readings/3075305f3064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "ニ",
+          "type": "on",
+          "audio": "audio/readings/30cb.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ふたつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ふたつ。\nかずの 二。\n線が 二本。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "二",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e8c_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "二つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4e8c3064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "二つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/3075305f3064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "二月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e8c6708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "二時",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e8c6642_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ2"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "二-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ふた",
+            "correct": true
+          },
+          {
+            "kana": "ここの",
+            "correct": false
+          },
+          {
+            "kana": "かい",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "二-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ふたつ",
+            "correct": true
+          },
+          {
+            "kana": "エン",
+            "correct": false
+          },
+          {
+            "kana": "あま",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "二-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "ニ",
+            "correct": true
+          },
+          {
+            "kana": "て",
+            "correct": false
+          },
+          {
+            "kana": "くるま",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "二-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ふたつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ちいさい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ゆうがた",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "二-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ニ",
+        "type": "on"
+      },
+      {
+        "kana": "ふた",
+        "type": "kun"
+      },
+      {
+        "kana": "ふたつ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "五",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "いつ",
+          "type": "kun",
+          "audio": "audio/readings/30443064.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "いつつ",
+          "type": "kun",
+          "audio": "audio/readings/304430643064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "ゴ",
+          "type": "on",
+          "audio": "audio/readings/30b4.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "いつつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "いつつ。\nかずの 五。\n五つ かぞえる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "五",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e94_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "五つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4e943064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "五つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/304430643064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "五月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e946708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "五人",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/4e944eba_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "五-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "いつ",
+            "correct": true
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          },
+          {
+            "kana": "いと",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "五-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "いつつ",
+            "correct": true
+          },
+          {
+            "kana": "ち",
+            "correct": false
+          },
+          {
+            "kana": "あか",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "五-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "ゴ",
+            "correct": true
+          },
+          {
+            "kana": "いと",
+            "correct": false
+          },
+          {
+            "kana": "よっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "五-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "いつつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ぶん。もじ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "みぎがわ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "五-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ゴ",
+        "type": "on"
+      },
+      {
+        "kana": "いつ",
+        "type": "kun"
+      },
+      {
+        "kana": "いつつ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
     "character": "人",
     "grade": 1,
     "taught_readings": {
@@ -269,6 +1776,1244 @@
         ]
       }
     ]
+  },
+  {
+    "character": "休",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "やすむ",
+          "type": "kun",
+          "audio": "audio/readings/308430593080.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "キュウ",
+          "type": "on",
+          "audio": "audio/readings/30ad30e530a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "やすむ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "やすむ。\nいえで 休む。\n人と 木。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "休",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4f11_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "休む",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4f113080_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "休む",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/308430593080_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "休日",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4f1165e5_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "休校",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/4f116821_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "人"
+        },
+        {
+          "char": "木"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "休-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "やすむ",
+            "correct": true
+          },
+          {
+            "kana": "さき",
+            "correct": false
+          },
+          {
+            "kana": "ソウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "休-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "キュウ",
+            "correct": true
+          },
+          {
+            "kana": "あかい",
+            "correct": false
+          },
+          {
+            "kana": "あか",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "休-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "やすむ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むし",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ふたつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "休-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "キュウ",
+        "type": "on"
+      },
+      {
+        "kana": "やすむ",
+        "type": "kun"
+      },
+      {
+        "kana": "やすまる",
+        "type": "kun"
+      },
+      {
+        "kana": "やすめる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "先",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "さき",
+          "type": "kun",
+          "audio": "audio/readings/3055304d.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "セン",
+          "type": "on",
+          "audio": "audio/readings/30bb30f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "さき。せんせい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "さき。\n先生の 先。\nまえを いく。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "先",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5148_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "先生",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/5148751f_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "先月",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/51486708_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "⺧"
+        },
+        {
+          "char": "儿"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "先-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "さき",
+            "correct": true
+          },
+          {
+            "kana": "はいる",
+            "correct": false
+          },
+          {
+            "kana": "とし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "先-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "セン",
+            "correct": true
+          },
+          {
+            "kana": "ジョウ",
+            "correct": false
+          },
+          {
+            "kana": "うえ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "先-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "さき。せんせい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "やすむ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "みる",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "先-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セン",
+        "type": "on"
+      },
+      {
+        "kana": "さき",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "入",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "いる",
+          "type": "kun",
+          "audio": "audio/readings/3044308b.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "はいる",
+          "type": "kun",
+          "audio": "audio/readings/306f3044308b.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "ニュウ",
+          "type": "on",
+          "audio": "audio/readings/30cb30e530a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "はいる",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "はいる。\nいえに 入る。\n人と にてる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "入",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5165_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "入る",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/5165308b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "入る",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/306f3044308b_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "入学",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/51655b66_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "入場",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/51655834_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "入-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "いる",
+            "correct": true
+          },
+          {
+            "kana": "よ",
+            "correct": false
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "入-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "はいる",
+            "correct": true
+          },
+          {
+            "kana": "あめ",
+            "correct": false
+          },
+          {
+            "kana": "みぎ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "入-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "ニュウ",
+            "correct": true
+          },
+          {
+            "kana": "した",
+            "correct": false
+          },
+          {
+            "kana": "オウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "入-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "はいる",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むし",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ふたつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "入-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ニュウ",
+        "type": "on"
+      },
+      {
+        "kana": "いる",
+        "type": "kun"
+      },
+      {
+        "kana": "いれる",
+        "type": "kun"
+      },
+      {
+        "kana": "はいる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "八",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "や",
+          "type": "kun",
+          "audio": "audio/readings/3084.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "やっつ",
+          "type": "kun",
+          "audio": "audio/readings/308430633064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "ハチ",
+          "type": "on",
+          "audio": "audio/readings/30cf30c1.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "やっつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "やっつ。\nかずの 八。\n左右に ひらく。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "八",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/516b_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "八つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/516b3064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "八つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/308430633064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "八月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/516b6708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "八時",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/516b6642_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "八-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "や",
+            "correct": true
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "八-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "やっつ",
+            "correct": true
+          },
+          {
+            "kana": "たま",
+            "correct": false
+          },
+          {
+            "kana": "キュウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "八-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "ハチ",
+            "correct": true
+          },
+          {
+            "kana": "エン",
+            "correct": false
+          },
+          {
+            "kana": "あま",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "八-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "やっつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むし",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ふたつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "八-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ハチ",
+        "type": "on"
+      },
+      {
+        "kana": "や",
+        "type": "kun"
+      },
+      {
+        "kana": "やつ",
+        "type": "kun"
+      },
+      {
+        "kana": "やっつ",
+        "type": "kun"
+      },
+      {
+        "kana": "よう",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "六",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "む",
+          "type": "kun",
+          "audio": "audio/readings/3080.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "むっつ",
+          "type": "kun",
+          "audio": "audio/readings/308030633064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "ロク",
+          "type": "on",
+          "audio": "audio/readings/30ed30af.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "むっつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "むっつ。\nかずの 六。\n六つ かぞえる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "六",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/516d_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "六つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/516d3064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "六つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/308030633064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "六月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/516d6708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "六時",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/516d6642_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 4,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "六-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "む",
+            "correct": true
+          },
+          {
+            "kana": "テン",
+            "correct": false
+          },
+          {
+            "kana": "むし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "六-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "むっつ",
+            "correct": true
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          },
+          {
+            "kana": "いと",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "六-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "ロク",
+            "correct": true
+          },
+          {
+            "kana": "ちいさい",
+            "correct": false
+          },
+          {
+            "kana": "でる",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "六-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "むっつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ここのつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "そら。から",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "六-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ロク",
+        "type": "on"
+      },
+      {
+        "kana": "む",
+        "type": "kun"
+      },
+      {
+        "kana": "むつ",
+        "type": "kun"
+      },
+      {
+        "kana": "むっつ",
+        "type": "kun"
+      },
+      {
+        "kana": "むい",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "円",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "まるい",
+          "type": "kun",
+          "audio": "audio/readings/307e308b3044.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "エン",
+          "type": "on",
+          "audio": "audio/readings/30a830f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "まる。えん",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "えん。\nまるい かたち。\n百円の 円。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "円",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5186_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "円い",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/51863044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "円い",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/307e308b3044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "百円",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/767e5186_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "円周",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/51865468_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて4"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "円-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "まるい",
+            "correct": true
+          },
+          {
+            "kana": "ふたつ",
+            "correct": false
+          },
+          {
+            "kana": "ふた",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "円-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "エン",
+            "correct": true
+          },
+          {
+            "kana": "ヒャク",
+            "correct": false
+          },
+          {
+            "kana": "ハチ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "円-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "まる。えん",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "なか",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "つち",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "円-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "エン",
+        "type": "on"
+      },
+      {
+        "kana": "まるい",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "出",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "でる",
+          "type": "kun",
+          "audio": "audio/readings/3067308b.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "でる。だす",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "でる。\nそとに 出る。\n山が ふたつ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "出",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/51fa_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "出る",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/51fa308b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "出かける",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/51fa304b3051308b_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 3,
+          "type": "たて",
+          "a11y_ja": "たて3"
+        },
+        {
+          "order": 4,
+          "type": "はらい",
+          "a11y_ja": "はらい4"
+        },
+        {
+          "order": 5,
+          "type": "たて",
+          "a11y_ja": "たて5"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "出-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "でる",
+            "correct": true
+          },
+          {
+            "kana": "あお",
+            "correct": false
+          },
+          {
+            "kana": "ゆう",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "出-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "でる。だす",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ゆうがた",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "さき。せんせい",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "出-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シュツ",
+        "type": "on"
+      },
+      {
+        "kana": "でる",
+        "type": "kun"
+      },
+      {
+        "kana": "だす",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "スイ",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "力",
@@ -407,6 +3152,1196 @@
     ]
   },
   {
+    "character": "十",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "とお",
+          "type": "kun",
+          "audio": "audio/readings/3068304a.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "とお",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "とお。\nかずの 十。\nたてと よこ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "十",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5341_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "十",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5341_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "十日",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/534165e5_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "十-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "とお",
+            "correct": true
+          },
+          {
+            "kana": "あおい",
+            "correct": false
+          },
+          {
+            "kana": "いし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "十-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "とお",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "き。こころや くうき",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "きん。おかね",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "十-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ジュウ",
+        "type": "on"
+      },
+      {
+        "kana": "ジッ",
+        "type": "on"
+      },
+      {
+        "kana": "とお",
+        "type": "kun"
+      },
+      {
+        "kana": "と",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "千",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ち",
+          "type": "kun",
+          "audio": "audio/readings/3061.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "セン",
+          "type": "on",
+          "audio": "audio/readings/30bb30f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "せん",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "せん。\n千えん。\nおおきな かず。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "千",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5343_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "千",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/5343_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "千円",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/53435186_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "たて",
+          "a11y_ja": "たて"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "千-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ち",
+            "correct": true
+          },
+          {
+            "kana": "とお",
+            "correct": false
+          },
+          {
+            "kana": "おんな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "千-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "セン",
+            "correct": true
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          },
+          {
+            "kana": "なな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "千-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "せん",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "まる。えん",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "はな",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "千-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セン",
+        "type": "on"
+      },
+      {
+        "kana": "ち",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "口",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "くち",
+          "type": "kun",
+          "audio": "audio/readings/304f3061.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "くち",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "くち。\n口を あける。\nことばの とびら。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "口",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/53e3_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "口",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/53e3_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "入り口",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5165308a53e3_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "口-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "くち",
+            "correct": true
+          },
+          {
+            "kana": "むら",
+            "correct": false
+          },
+          {
+            "kana": "なか",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "口-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "くち",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "がっこう",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "よっつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "口-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "コウ",
+        "type": "on"
+      },
+      {
+        "kana": "ク",
+        "type": "on"
+      },
+      {
+        "kana": "くち",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "右",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "みぎ",
+          "type": "kun",
+          "audio": "audio/readings/307f304e.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ユウ",
+          "type": "on",
+          "audio": "audio/readings/30e630a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "みぎがわ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "みぎ。\n右手で かく。\nみぎがわ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "右",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/53f3_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "右手",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/53f3624b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "右側",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/53f35074_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "左右",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/5de653f3_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "ナ"
+        },
+        {
+          "char": "口"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "右-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "みぎ",
+            "correct": true
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          },
+          {
+            "kana": "みっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "右-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ユウ",
+            "correct": true
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          },
+          {
+            "kana": "なな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "右-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "みぎがわ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "はやい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "たけ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "右-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ウ",
+        "type": "on"
+      },
+      {
+        "kana": "ユウ",
+        "type": "on"
+      },
+      {
+        "kana": "みぎ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "名",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "な",
+          "type": "kun",
+          "audio": "audio/readings/306a.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "なまえ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "なまえ。\n名まえ。\nよぶ ことば。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "名",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/540d_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "名まえ",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/540d307e3048_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "名まえ",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/306a307e3048_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "名札",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/540d672d_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "夕"
+        },
+        {
+          "char": "口"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "名-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "な",
+            "correct": true
+          },
+          {
+            "kana": "リツ",
+            "correct": false
+          },
+          {
+            "kana": "むっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "名-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "なまえ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "くさ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "なか",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "名-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "メイ",
+        "type": "on"
+      },
+      {
+        "kana": "ミョウ",
+        "type": "on"
+      },
+      {
+        "kana": "な",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "四",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "よ",
+          "type": "kun",
+          "audio": "audio/readings/3088.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "よっつ",
+          "type": "kun",
+          "audio": "audio/readings/308830633064.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "シ",
+          "type": "on",
+          "audio": "audio/readings/30b7.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "よっつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "よっつ。\nかずの 四。\n四つ かぞえる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "四",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/56db_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "四つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/56db3064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "四つ",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/308830633064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "四月",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/56db6708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "四季",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/56db5b63_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 3,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 4,
+          "type": "はらい",
+          "a11y_ja": "はらい4"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "四-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "よ",
+            "correct": true
+          },
+          {
+            "kana": "あし",
+            "correct": false
+          },
+          {
+            "kana": "ソウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "四-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "よっつ",
+            "correct": true
+          },
+          {
+            "kana": "オウ",
+            "correct": false
+          },
+          {
+            "kana": "まるい",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "四-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "シ",
+            "correct": true
+          },
+          {
+            "kana": "おんな",
+            "correct": false
+          },
+          {
+            "kana": "とお",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "四-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "よっつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ここのつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "そら。から",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "四-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シ",
+        "type": "on"
+      },
+      {
+        "kana": "よ",
+        "type": "kun"
+      },
+      {
+        "kana": "よつ",
+        "type": "kun"
+      },
+      {
+        "kana": "よっつ",
+        "type": "kun"
+      },
+      {
+        "kana": "よん",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "土",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "つち",
+          "type": "kun",
+          "audio": "audio/readings/30643061.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "つち",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "つち。\n土に さわる。\nあたたかい におい。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "土",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/571f_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "土",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/571f_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "土",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30643061_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "赤土",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8d64571f_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "土-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "つち",
+            "correct": true
+          },
+          {
+            "kana": "くち",
+            "correct": false
+          },
+          {
+            "kana": "ひだり",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "土-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "つち",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "きん。おかね",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "くち",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "土-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ド",
+        "type": "on"
+      },
+      {
+        "kana": "ト",
+        "type": "on"
+      },
+      {
+        "kana": "つち",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "夕",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ゆう",
+          "type": "kun",
+          "audio": "audio/readings/30863046.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ゆうがた",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ゆうがた。\n夕方の 空。\n月に ちかい。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "夕",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5915_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "夕方",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/591565b9_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "夕日",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/591565e5_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        },
+        {
+          "order": 3,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "夕-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ゆう",
+            "correct": true
+          },
+          {
+            "kana": "む",
+            "correct": false
+          },
+          {
+            "kana": "ロク",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "夕-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ゆうがた",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ななつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "でる。だす",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "夕-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ゆう",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "セキ",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
     "character": "大",
     "grade": 1,
     "taught_readings": {
@@ -541,6 +4476,14 @@
       {
         "kana": "おおいに",
         "type": "kun"
+      },
+      {
+        "kana": "おおさか",
+        "type": "proper_name"
+      },
+      {
+        "kana": "おおいた",
+        "type": "proper_name"
       }
     ],
     "later_readings": [],
@@ -554,6 +4497,579 @@
         ]
       }
     ]
+  },
+  {
+    "character": "天",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "あま",
+          "type": "kun",
+          "audio": "audio/readings/3042307e.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "テン",
+          "type": "on",
+          "audio": "audio/readings/30c630f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "てん。そら",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "てん。\n天気の 天。\nうえの そら。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "天",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5929_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "天気",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/59296c17_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "天気",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/30663093304d_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "天国",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/592956fd_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ2"
+        },
+        {
+          "order": 3,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 4,
+          "type": "はらい",
+          "a11y_ja": "はらい4"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "天-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "あま",
+            "correct": true
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          },
+          {
+            "kana": "みっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "天-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "テン",
+            "correct": true
+          },
+          {
+            "kana": "さき",
+            "correct": false
+          },
+          {
+            "kana": "ソウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "天-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "てん。そら",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "そら。から",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "がっこう",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "天-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "テン",
+        "type": "on"
+      },
+      {
+        "kana": "あま",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "あめ",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "女",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "おんな",
+          "type": "kun",
+          "audio": "audio/readings/304a3093306a.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "おんな",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "おんな。\n女の子。\nやさしい かたち。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "女",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5973_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "女の子",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5973306e5b50_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "女の子",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/304a3093306a306e3053_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "女の人",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5973306e4eba_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "女-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "おんな",
+            "correct": true
+          },
+          {
+            "kana": "あおい",
+            "correct": false
+          },
+          {
+            "kana": "いし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "女-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "おんな",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むら",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "まち",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "女-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ジョ",
+        "type": "on"
+      },
+      {
+        "kana": "おんな",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ニョ",
+        "type": "on"
+      },
+      {
+        "kana": "ニョウ",
+        "type": "on"
+      },
+      {
+        "kana": "め",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "子",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "こ",
+          "type": "kun",
+          "audio": "audio/readings/3053.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "こ。こども",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "こ。\n子どもの 子。\nちいさな 人。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "子",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5b50_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "子ども",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5b5030693082_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "男の子",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7537306e5b50_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "子-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "こ",
+            "correct": true
+          },
+          {
+            "kana": "つち",
+            "correct": false
+          },
+          {
+            "kana": "ふたつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "子-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "こ。こども",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みぎがわ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "おと。おん",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "子-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シ",
+        "type": "on"
+      },
+      {
+        "kana": "ス",
+        "type": "on"
+      },
+      {
+        "kana": "こ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "字",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ジ",
+          "type": "on",
+          "audio": "audio/readings/30b8.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "もじ。かんじ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "もじ。\nおおきな 字。\nかんじの 字。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "字",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5b57_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "字",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5b57_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "文字",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/65875b57_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "宀"
+        },
+        {
+          "char": "子"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "字-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ジ",
+            "correct": true
+          },
+          {
+            "kana": "ち",
+            "correct": false
+          },
+          {
+            "kana": "さき",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "字-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "もじ。かんじ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "はやい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "たけ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "字-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ジ",
+        "type": "on"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "あざ",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "学",
@@ -600,7 +5116,16 @@
       }
     ],
     "shape": {
-      "published": false
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "⺍"
+        },
+        {
+          "char": "子"
+        }
+      ]
     },
     "items": [
       {
@@ -644,6 +5169,11 @@
             "correct": false
           }
         ]
+      },
+      {
+        "id": "学-s-1",
+        "type": "component_assembly",
+        "lamp": "shape"
       }
     ],
     "lines": [],
@@ -668,6 +5198,181 @@
         ]
       }
     ]
+  },
+  {
+    "character": "小",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ちいさい",
+          "type": "kun",
+          "audio": "audio/readings/3061304430553044.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ショウ",
+          "type": "on",
+          "audio": "audio/readings/30b730e730a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ちいさい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ちいさい。\n小さい こえ。\n点と はらい。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "小",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5c0f_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "小さい",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5c0f30553044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "小さい",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/3061304430553044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "小学校",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/5c0f5b666821_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "小学生",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/5c0f5b66751f_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        },
+        {
+          "order": 3,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "小-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ちいさい",
+            "correct": true
+          },
+          {
+            "kana": "でる",
+            "correct": false
+          },
+          {
+            "kana": "うえ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "小-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ショウ",
+            "correct": true
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          },
+          {
+            "kana": "ジ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "小-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ちいさい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "よっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ななつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "小-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ショウ",
+        "type": "on"
+      },
+      {
+        "kana": "ちいさい",
+        "type": "kun"
+      },
+      {
+        "kana": "こ",
+        "type": "kun"
+      },
+      {
+        "kana": "お",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "山",
@@ -792,6 +5497,10 @@
       {
         "kana": "やま",
         "type": "kun"
+      },
+      {
+        "kana": "とやま",
+        "type": "proper_name"
       }
     ],
     "later_readings": [],
@@ -921,6 +5630,10 @@
       {
         "kana": "かわ",
         "type": "kun"
+      },
+      {
+        "kana": "かながわ",
+        "type": "proper_name"
       }
     ],
     "later_readings": [
@@ -938,6 +5651,560 @@
         ]
       }
     ]
+  },
+  {
+    "character": "左",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ひだり",
+          "type": "kun",
+          "audio": "audio/readings/30723060308a.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ひだりがわ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ひだり。\n左手を あげる。\nみぎと ちがう。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "左",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5de6_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "左手",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5de6624b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "左側",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5de65074_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "ナ"
+        },
+        {
+          "char": "工"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "左-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ひだり",
+            "correct": true
+          },
+          {
+            "kana": "いと",
+            "correct": false
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "左-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ひだりがわ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "おうさま",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "左-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "サ",
+        "type": "on"
+      },
+      {
+        "kana": "ひだり",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "年",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "とし",
+          "type": "kun",
+          "audio": "audio/readings/30683057.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "とし。ねん",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "とし。\nことしの 年。\nいちねん。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "年",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5e74_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "年",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5e74_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "年",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30683057_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "年下",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5e744e0b_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ5"
+        },
+        {
+          "order": 6,
+          "type": "たて",
+          "a11y_ja": "たて6"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "年-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "とし",
+            "correct": true
+          },
+          {
+            "kana": "かい",
+            "correct": false
+          },
+          {
+            "kana": "ここの",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "年-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "とし。ねん",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "よっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ななつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "年-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ネン",
+        "type": "on"
+      },
+      {
+        "kana": "とし",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "手",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "て",
+          "type": "kun",
+          "audio": "audio/readings/3066.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "て",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "て。\n手を あげる。\n五本の ゆび。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "手",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/624b_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "手",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/624b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "右手",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/53f3624b_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "手-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "て",
+            "correct": true
+          },
+          {
+            "kana": "ふたつ",
+            "correct": false
+          },
+          {
+            "kana": "いる",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "手-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "て",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "いし",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "はやい",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "手-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シュ",
+        "type": "on"
+      },
+      {
+        "kana": "て",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "た",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "文",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ブン",
+          "type": "on",
+          "audio": "audio/readings/30d630f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ぶん。もじ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ぶん。\n文字の 文。\nことばを かく。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "文",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6587_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "文字",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/65875b57_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "文字",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30823058_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "文学",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/65875b66_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 4,
+          "type": "はらい",
+          "a11y_ja": "はらい4"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "文-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ブン",
+            "correct": true
+          },
+          {
+            "kana": "ふた",
+            "correct": false
+          },
+          {
+            "kana": "ニ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "文-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ぶん。もじ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "がっこう",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "よっつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "文-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ブン",
+        "type": "on"
+      },
+      {
+        "kana": "モン",
+        "type": "on"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ふみ",
+        "type": "kun"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "日",
@@ -1088,6 +6355,177 @@
         ]
       }
     ]
+  },
+  {
+    "character": "早",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "はやい",
+          "type": "kun",
+          "audio": "audio/readings/306f30843044.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ソウ",
+          "type": "on",
+          "audio": "audio/readings/30bd30a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "はやい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "はやい。\n早く おきる。\n日と 十。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "早",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/65e9_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "早い",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/65e93044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "早い",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/306f30843044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "早朝",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/65e9671d_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "早速",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/65e9901f_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "日"
+        },
+        {
+          "char": "十"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "早-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "はやい",
+            "correct": true
+          },
+          {
+            "kana": "むし",
+            "correct": false
+          },
+          {
+            "kana": "なか",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "早-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ソウ",
+            "correct": true
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          },
+          {
+            "kana": "みっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "早-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "はやい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ここのつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "そら。から",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "早-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ソウ",
+        "type": "on"
+      },
+      {
+        "kana": "はやい",
+        "type": "kun"
+      },
+      {
+        "kana": "はやまる",
+        "type": "kun"
+      },
+      {
+        "kana": "はやめる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "サッ",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "月",
@@ -1552,6 +6990,132 @@
     ]
   },
   {
+    "character": "村",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "むら",
+          "type": "kun",
+          "audio": "audio/readings/30803089.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "むら",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "むら。\n小さな 村。\n木と いえ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "村",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6751_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "村",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6751_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "村",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30803089_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "村人",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/67514eba_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "木"
+        },
+        {
+          "char": "寸"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "村-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "むら",
+            "correct": true
+          },
+          {
+            "kana": "さき",
+            "correct": false
+          },
+          {
+            "kana": "ソウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "村-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "むら",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "もじ。かんじ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "村-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ソン",
+        "type": "on"
+      },
+      {
+        "kana": "むら",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
     "character": "林",
     "grade": 1,
     "taught_readings": {
@@ -1680,6 +7244,122 @@
         ]
       }
     ]
+  },
+  {
+    "character": "校",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "コウ",
+          "type": "on",
+          "audio": "audio/readings/30b330a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "がっこう",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "がっこう。\n学びの いえ。\n木を くむ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "校",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6821_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "学校",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5b666821_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "校長",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/68219577_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "木"
+        },
+        {
+          "char": "交"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "校-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "コウ",
+            "correct": true
+          },
+          {
+            "kana": "ここの",
+            "correct": false
+          },
+          {
+            "kana": "キュウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "校-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "がっこう",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みぎがわ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "おと。おん",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "校-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "コウ",
+        "type": "on"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "森",
@@ -1813,6 +7493,296 @@
         ]
       }
     ]
+  },
+  {
+    "character": "正",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ただしい",
+          "type": "kun",
+          "audio": "audio/readings/305f306030573044.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ショウ",
+          "type": "on",
+          "audio": "audio/readings/30b730e730a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ただしい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ただしい。\n正しい こたえ。\nまっすぐに。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "正",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6b63_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "正しい",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6b6330573044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "正しい",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/305f306030573044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "正月",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/6b636708_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "正面",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/6b639762_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "一"
+        },
+        {
+          "char": "止"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "正-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ただしい",
+            "correct": true
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "正-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ショウ",
+            "correct": true
+          },
+          {
+            "kana": "ひだり",
+            "correct": false
+          },
+          {
+            "kana": "コウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "正-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ただしい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "おうさま",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "正-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セイ",
+        "type": "on"
+      },
+      {
+        "kana": "ショウ",
+        "type": "on"
+      },
+      {
+        "kana": "ただしい",
+        "type": "kun"
+      },
+      {
+        "kana": "ただす",
+        "type": "kun"
+      },
+      {
+        "kana": "まさ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "気",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "キ",
+          "type": "on",
+          "audio": "audio/readings/30ad.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "き。こころや くうき",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "き。\n天気の 気。\nくうきの なか。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "気",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6c17_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "天気",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/59296c17_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "空気",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7a7a6c17_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "气"
+        },
+        {
+          "char": "乂"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "気-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "キ",
+            "correct": true
+          },
+          {
+            "kana": "さき",
+            "correct": false
+          },
+          {
+            "kana": "ソウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "気-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "き。こころや くうき",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "いつつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "みっつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "気-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "キ",
+        "type": "on"
+      },
+      {
+        "kana": "ケ",
+        "type": "on"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "水",
@@ -2244,6 +8214,281 @@
         ]
       }
     ]
+  },
+  {
+    "character": "玉",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "たま",
+          "type": "kun",
+          "audio": "audio/readings/305f307e.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "たま",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "たま。\nまるい 玉。\n王に てん。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "玉",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7389_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "玉",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7389_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "玉",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/305f307e_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "目玉",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/76ee7389_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        },
+        {
+          "order": 5,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "玉-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "たま",
+            "correct": true
+          },
+          {
+            "kana": "よ",
+            "correct": false
+          },
+          {
+            "kana": "シ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "玉-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "たま",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ただしい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "あかい",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "玉-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ギョク",
+        "type": "on"
+      },
+      {
+        "kana": "たま",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "王",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "オウ",
+          "type": "on",
+          "audio": "audio/readings/30aa30a6.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "おうさま",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "motif:ou",
+      "copy_ja": "おう。\nおうさま。\n王子の 王。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "王",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/738b_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "王子",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/738b5b50_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "国王",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/56fd738b_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ2"
+        },
+        {
+          "order": 3,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "王-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "オウ",
+            "correct": true
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "王-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "おうさま",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みる",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ひだりがわ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "王-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "オウ",
+        "type": "on"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "生",
@@ -2726,6 +8971,464 @@
     ]
   },
   {
+    "character": "町",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "まち",
+          "type": "kun",
+          "audio": "audio/readings/307e3061.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "まち",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "まち。\nこの 町。\n田と みち。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "町",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/753a_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "町",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/753a_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "町",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/307e3061_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "下町",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/4e0b753a_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "田"
+        },
+        {
+          "char": "丁"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "町-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "まち",
+            "correct": true
+          },
+          {
+            "kana": "やっつ",
+            "correct": false
+          },
+          {
+            "kana": "ヒャク",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "町-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "まち",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "みっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "もじ。かんじ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "町-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "チョウ",
+        "type": "on"
+      },
+      {
+        "kana": "まち",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "白",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "しろ",
+          "type": "kun",
+          "audio": "audio/readings/3057308d.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "しろい",
+          "type": "kun",
+          "audio": "audio/readings/3057308d3044.mp3"
+        },
+        {
+          "id": "r2",
+          "kana": "ハク",
+          "type": "on",
+          "audio": "audio/readings/30cf30af.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "しろい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "しろい。\n白い くも。\nあかるい いろ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "白",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/767d_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "白い",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/767d3044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "白い",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/3057308d3044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "白鳥",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/767d9ce5_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "白紙",
+        "reading_id": "r2",
+        "audio": "audio/surfaces/767d7d19_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ5"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "白-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "しろ",
+            "correct": true
+          },
+          {
+            "kana": "ハチ",
+            "correct": false
+          },
+          {
+            "kana": "や",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "白-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "しろい",
+            "correct": true
+          },
+          {
+            "kana": "ユウ",
+            "correct": false
+          },
+          {
+            "kana": "ロク",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "白-r-2",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r2",
+        "choices": [
+          {
+            "kana": "ハク",
+            "correct": true
+          },
+          {
+            "kana": "あか",
+            "correct": false
+          },
+          {
+            "kana": "ゆう",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "白-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "しろい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "つち",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "やっつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "白-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ハク",
+        "type": "on"
+      },
+      {
+        "kana": "しろ",
+        "type": "kun"
+      },
+      {
+        "kana": "しら",
+        "type": "kun"
+      },
+      {
+        "kana": "しろい",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ビャク",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "百",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "ヒャク",
+          "type": "on",
+          "audio": "audio/readings/30d230e330af.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "ひゃく",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "ひゃく。\n百えん。\n一と 白。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "百",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/767e_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "百",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/767e_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "百円",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/767e5186_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "一"
+        },
+        {
+          "char": "白"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "百-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "ヒャク",
+            "correct": true
+          },
+          {
+            "kana": "ここのつ",
+            "correct": false
+          },
+          {
+            "kana": "やすむ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "百-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "ひゃく",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ふたつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "やっつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "百-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ヒャク",
+        "type": "on"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
     "character": "目",
     "grade": 1,
     "taught_readings": {
@@ -2880,5 +9583,2764 @@
         ]
       }
     ]
+  },
+  {
+    "character": "石",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "いし",
+          "type": "kun",
+          "audio": "audio/readings/30443057.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "いし",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "いし。\n白い 石。\n右と にてる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "石",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/77f3_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "石",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/77f3_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "小石",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/5c0f77f3_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "厂"
+        },
+        {
+          "char": "口"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "石-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "いし",
+            "correct": true
+          },
+          {
+            "kana": "うえ",
+            "correct": false
+          },
+          {
+            "kana": "ただしい",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "石-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "いし",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "き。こころや くうき",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "きん。おかね",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "石-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セキ",
+        "type": "on"
+      },
+      {
+        "kana": "シャク",
+        "type": "on"
+      },
+      {
+        "kana": "いし",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "コク",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "空",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "そら",
+          "type": "kun",
+          "audio": "audio/readings/305d3089.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "そら。から",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "motif:sora",
+      "copy_ja": "そら。\nあおい 空。\nどこまでも ひろい。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "空",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7a7a_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "空",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7a7a_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "青空",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/97527a7a_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "穴"
+        },
+        {
+          "char": "工"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "空-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "そら",
+            "correct": true
+          },
+          {
+            "kana": "あかい",
+            "correct": false
+          },
+          {
+            "kana": "セン",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "空-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "そら。から",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "でる。だす",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ただしい",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "空-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "クウ",
+        "type": "on"
+      },
+      {
+        "kana": "そら",
+        "type": "kun"
+      },
+      {
+        "kana": "あく",
+        "type": "kun"
+      },
+      {
+        "kana": "あける",
+        "type": "kun"
+      },
+      {
+        "kana": "から",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "立",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "たつ",
+          "type": "kun",
+          "audio": "audio/readings/305f3064.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "リツ",
+          "type": "on",
+          "audio": "audio/readings/30ea30c4.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "たつ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "たつ。\nまえに 立つ。\n足を つける。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "立",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7acb_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "立つ",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7acb3064_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "立つ",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/305f3064_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "起立",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/8d777acb_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "独立",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/72ec7acb_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "てん",
+          "a11y_ja": "てん"
+        },
+        {
+          "order": 4,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ5"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "立-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "たつ",
+            "correct": true
+          },
+          {
+            "kana": "シ",
+            "correct": false
+          },
+          {
+            "kana": "よっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "立-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "リツ",
+            "correct": true
+          },
+          {
+            "kana": "よっつ",
+            "correct": false
+          },
+          {
+            "kana": "よ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "立-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "たつ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ちいさい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ゆうがた",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "立-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "リツ",
+        "type": "on"
+      },
+      {
+        "kana": "たつ",
+        "type": "kun"
+      },
+      {
+        "kana": "たてる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "リュウ",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "竹",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "たけ",
+          "type": "kun",
+          "audio": "audio/readings/305f3051.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "たけ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "たけ。\nほそい 竹。\nまっすぐ のびる。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "竹",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7af9_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "竹",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7af9_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "竹",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/305f3051_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "竹馬",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7af999ac_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 3,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 4,
+          "type": "はらい",
+          "a11y_ja": "はらい4"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ5"
+        },
+        {
+          "order": 6,
+          "type": "はらい",
+          "a11y_ja": "はらい6"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "竹-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "たけ",
+            "correct": true
+          },
+          {
+            "kana": "サン",
+            "correct": false
+          },
+          {
+            "kana": "よ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "竹-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "たけ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "て",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ちいさい",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "竹-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "チク",
+        "type": "on"
+      },
+      {
+        "kana": "たけ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "糸",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "いと",
+          "type": "kun",
+          "audio": "audio/readings/30443068.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "いと",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "いと。\nほそい 糸。\nぬう とき。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "糸",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7cf8_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "糸",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/7cf8_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "糸",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30443068_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "毛糸",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/6bdb7cf8_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        },
+        {
+          "order": 3,
+          "type": "てん",
+          "a11y_ja": "てん"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 5,
+          "type": "はらい",
+          "a11y_ja": "はらい5"
+        },
+        {
+          "order": 6,
+          "type": "てん",
+          "a11y_ja": "てん6"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "糸-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "いと",
+            "correct": true
+          },
+          {
+            "kana": "エン",
+            "correct": false
+          },
+          {
+            "kana": "おと",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "糸-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "いと",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "あおい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "せん",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "糸-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シ",
+        "type": "on"
+      },
+      {
+        "kana": "いと",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "耳",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "みみ",
+          "type": "kun",
+          "audio": "audio/readings/307f307f.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "みみ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "みみ。\n耳で きく。\n音を うける。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "耳",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8033_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "耳",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8033_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "耳",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/307f307f_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "耳たぶ",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8033305f3076_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ3"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        },
+        {
+          "order": 5,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 6,
+          "type": "たて",
+          "a11y_ja": "たて6"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "耳-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "みみ",
+            "correct": true
+          },
+          {
+            "kana": "リツ",
+            "correct": false
+          },
+          {
+            "kana": "むっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "耳-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "みみ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "むら",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "まち",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "耳-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "みみ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ジ",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "花",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "はな",
+          "type": "kun",
+          "audio": "audio/readings/306f306a.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "はな",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "motif:hana",
+      "copy_ja": "はな。\n花が さく。\n花火の 花。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "花",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/82b1_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "花火",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/82b1706b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "花束",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/82b1675f_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "艹"
+        },
+        {
+          "char": "化"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "花-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "はな",
+            "correct": true
+          },
+          {
+            "kana": "キ",
+            "correct": false
+          },
+          {
+            "kana": "ここのつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "花-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "はな",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "いと",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "くるま",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "花-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "カ",
+        "type": "on"
+      },
+      {
+        "kana": "はな",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "草",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "くさ",
+          "type": "kun",
+          "audio": "audio/readings/304f3055.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "くさ",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "くさ。\nみどりの 草。\n花の となり。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "草",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8349_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "草",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8349_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "草花",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/834982b1_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "艹"
+        },
+        {
+          "char": "早"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "草-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "くさ",
+            "correct": true
+          },
+          {
+            "kana": "はやい",
+            "correct": false
+          },
+          {
+            "kana": "あし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "草-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "くさ",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "しろい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "なまえ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "草-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ソウ",
+        "type": "on"
+      },
+      {
+        "kana": "くさ",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "虫",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "むし",
+          "type": "kun",
+          "audio": "audio/readings/30803057.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "むし",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "むし。\n小さな 虫。\n草の うえ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "虫",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/866b_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "虫",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/866b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "虫",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/30803057_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "虫歯",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/866b6b6f_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて4"
+        },
+        {
+          "order": 5,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 6,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "虫-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "むし",
+            "correct": true
+          },
+          {
+            "kana": "たつ",
+            "correct": false
+          },
+          {
+            "kana": "む",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "虫-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "むし",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "さき。せんせい",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "むら",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "虫-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "チュウ",
+        "type": "on"
+      },
+      {
+        "kana": "むし",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "見",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "みる",
+          "type": "kun",
+          "audio": "audio/readings/307f308b.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "ケン",
+          "type": "on",
+          "audio": "audio/readings/30b130f3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "みる",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "みる。\nそらを 見る。\n目の 下に 人。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "見",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/898b_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "見る",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/898b308b_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "見る",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/307f308b_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "意見",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/610f898b_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "見物",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/898b7269_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "目"
+        },
+        {
+          "char": "儿"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "見-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "みる",
+            "correct": true
+          },
+          {
+            "kana": "ちいさい",
+            "correct": false
+          },
+          {
+            "kana": "おんな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "見-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "ケン",
+            "correct": true
+          },
+          {
+            "kana": "はやい",
+            "correct": false
+          },
+          {
+            "kana": "さき",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "見-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "みる",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "はいる",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ひゃく",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "見-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ケン",
+        "type": "on"
+      },
+      {
+        "kana": "みる",
+        "type": "kun"
+      },
+      {
+        "kana": "みえる",
+        "type": "kun"
+      },
+      {
+        "kana": "みせる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "貝",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "かい",
+          "type": "kun",
+          "audio": "audio/readings/304b3044.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "かい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "かい。\n浜で ひろう。\n貝の から。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "貝",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8c9d_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "貝",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8c9d_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "貝",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/304b3044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "貝がら",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8c9d304c3089_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 2,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ5"
+        },
+        {
+          "order": 6,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 7,
+          "type": "てん",
+          "a11y_ja": "てん"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "貝-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "かい",
+            "correct": true
+          },
+          {
+            "kana": "くるま",
+            "correct": false
+          },
+          {
+            "kana": "て",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "貝-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "かい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "たつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "まる。えん",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "貝-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "かい",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "赤",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "あか",
+          "type": "kun",
+          "audio": "audio/readings/3042304b.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "あかい",
+          "type": "kun",
+          "audio": "audio/readings/3042304b3044.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "あかい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "あかい。\n赤い はな。\nあたたかい いろ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "赤",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8d64_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "赤い",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/8d643044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "赤い",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/3042304b3044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "赤ちゃん",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8d64306130833093_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "赤字",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8d645b57_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "土"
+        },
+        {
+          "char": "灬"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "赤-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "あか",
+            "correct": true
+          },
+          {
+            "kana": "いる",
+            "correct": false
+          },
+          {
+            "kana": "ニ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "赤-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "あかい",
+            "correct": true
+          },
+          {
+            "kana": "ななつ",
+            "correct": false
+          },
+          {
+            "kana": "なな",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "赤-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "あかい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "もじ。かんじ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "て",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "赤-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セキ",
+        "type": "on"
+      },
+      {
+        "kana": "あか",
+        "type": "kun"
+      },
+      {
+        "kana": "あかい",
+        "type": "kun"
+      },
+      {
+        "kana": "あからむ",
+        "type": "kun"
+      },
+      {
+        "kana": "あからめる",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "シャク",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "足",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "あし",
+          "type": "kun",
+          "audio": "audio/readings/30423057.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "あし",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "あし。\n足が はやい。\nあるく とき。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "足",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8db3_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "足",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8db3_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "足音",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8db397f3_2.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "口"
+        },
+        {
+          "char": "止"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "足-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "あし",
+            "correct": true
+          },
+          {
+            "kana": "おんな",
+            "correct": false
+          },
+          {
+            "kana": "ショウ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "足-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "あし",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "はな",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "やすむ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "足-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ソク",
+        "type": "on"
+      },
+      {
+        "kana": "あし",
+        "type": "kun"
+      },
+      {
+        "kana": "たりる",
+        "type": "kun"
+      },
+      {
+        "kana": "たる",
+        "type": "kun"
+      },
+      {
+        "kana": "たす",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "車",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "くるま",
+          "type": "kun",
+          "audio": "audio/readings/304f308b307e.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "シャ",
+          "type": "on",
+          "audio": "audio/readings/30b730e3.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "くるま",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "motif:kuruma",
+      "copy_ja": "くるま。\n車に のる。\nわの かたち。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "車",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8eca_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "車",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8eca_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "車",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/304f308b307e_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "電車",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/96fb8eca_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "自転車",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/81ea8ee28eca_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "おれ",
+          "a11y_ja": "おれ"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        },
+        {
+          "order": 5,
+          "type": "よこ",
+          "a11y_ja": "よこ5"
+        },
+        {
+          "order": 6,
+          "type": "よこ",
+          "a11y_ja": "よこ6"
+        },
+        {
+          "order": 7,
+          "type": "たて",
+          "a11y_ja": "たて7"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "車-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "くるま",
+            "correct": true
+          },
+          {
+            "kana": "たけ",
+            "correct": false
+          },
+          {
+            "kana": "むら",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "車-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "シャ",
+            "correct": true
+          },
+          {
+            "kana": "ここのつ",
+            "correct": false
+          },
+          {
+            "kana": "ここの",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "車-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "くるま",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "はいる",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ひゃく",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "車-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "シャ",
+        "type": "on"
+      },
+      {
+        "kana": "くるま",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "金",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "かね",
+          "type": "kun",
+          "audio": "audio/readings/304b306d.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "きん。おかね",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "きん。\nおかねの 金。\nひかる いろ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "金",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/91d1_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "金",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/91d1_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "金",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/304b306d_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "お金",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/304a91d1_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 2,
+          "type": "はらい",
+          "a11y_ja": "はらい2"
+        },
+        {
+          "order": 3,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 4,
+          "type": "よこ",
+          "a11y_ja": "よこ4"
+        },
+        {
+          "order": 5,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 6,
+          "type": "てん",
+          "a11y_ja": "てん"
+        },
+        {
+          "order": 7,
+          "type": "はらい",
+          "a11y_ja": "はらい7"
+        },
+        {
+          "order": 8,
+          "type": "よこ",
+          "a11y_ja": "よこ8"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "金-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "かね",
+            "correct": true
+          },
+          {
+            "kana": "いと",
+            "correct": false
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "金-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "きん。おかね",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "おと。おん",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "き。こころや くうき",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "金-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "キン",
+        "type": "on"
+      },
+      {
+        "kana": "コン",
+        "type": "on"
+      },
+      {
+        "kana": "かね",
+        "type": "kun"
+      },
+      {
+        "kana": "かな",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "雨",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "あめ",
+          "type": "kun",
+          "audio": "audio/readings/30423081.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "あま",
+          "type": "kun",
+          "audio": "audio/readings/3042307e.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "あめが ふる",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "motif:ame",
+      "copy_ja": "あめ。\n天から ふる。\n大雨に きをつけて。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "雨",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/96e8_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "大雨",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/592796e8_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "雨",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/96e8_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "雨水",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/96e86c34_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "primitive",
+      "strokes": [
+        {
+          "order": 1,
+          "type": "よこ",
+          "a11y_ja": "よこ"
+        },
+        {
+          "order": 2,
+          "type": "たて",
+          "a11y_ja": "たて"
+        },
+        {
+          "order": 3,
+          "type": "はらい",
+          "a11y_ja": "はらい"
+        },
+        {
+          "order": 4,
+          "type": "たて",
+          "a11y_ja": "たて4"
+        },
+        {
+          "order": 5,
+          "type": "てん",
+          "a11y_ja": "てん"
+        },
+        {
+          "order": 6,
+          "type": "てん",
+          "a11y_ja": "てん6"
+        },
+        {
+          "order": 7,
+          "type": "てん",
+          "a11y_ja": "てん7"
+        },
+        {
+          "order": 8,
+          "type": "てん",
+          "a11y_ja": "てん8"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "雨-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "あめ",
+            "correct": true
+          },
+          {
+            "kana": "あおい",
+            "correct": false
+          },
+          {
+            "kana": "いし",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "雨-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "あま",
+            "correct": true
+          },
+          {
+            "kana": "かね",
+            "correct": false
+          },
+          {
+            "kana": "たま",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "雨-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "あめが ふる",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "よっつ",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "ななつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "雨-s-0",
+        "type": "stroke_order",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "ウ",
+        "type": "on"
+      },
+      {
+        "kana": "あめ",
+        "type": "kun"
+      },
+      {
+        "kana": "あま",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "青",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "あお",
+          "type": "kun",
+          "audio": "audio/readings/3042304a.mp3"
+        },
+        {
+          "id": "r1",
+          "kana": "あおい",
+          "type": "kun",
+          "audio": "audio/readings/3042304a3044.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "あおい",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "あおい。\n青い そら。\n青の いろ。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "青",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/9752_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "青い",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/97523044_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "青い",
+        "reading_id": "r1",
+        "audio": "audio/surfaces/3042304a3044_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "青空",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/97527a7a_3.mp3"
+      },
+      {
+        "id": "s4",
+        "word": "青虫",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/9752866b_4.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "龶"
+        },
+        {
+          "char": "月"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "青-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "あお",
+            "correct": true
+          },
+          {
+            "kana": "なな",
+            "correct": false
+          },
+          {
+            "kana": "みみ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "青-r-1",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r1",
+        "choices": [
+          {
+            "kana": "あおい",
+            "correct": true
+          },
+          {
+            "kana": "ジ",
+            "correct": false
+          },
+          {
+            "kana": "いと",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "青-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "あおい",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "ひゃく",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "むっつ",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "青-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "セイ",
+        "type": "on"
+      },
+      {
+        "kana": "あお",
+        "type": "kun"
+      },
+      {
+        "kana": "あおい",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "ショウ",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
+  },
+  {
+    "character": "音",
+    "grade": 1,
+    "taught_readings": {
+      "entries": [
+        {
+          "id": "r0",
+          "kana": "おと",
+          "type": "kun",
+          "audio": "audio/readings/304a3068.mp3"
+        }
+      ],
+      "rationale": "[AUTO] derived from word surfaces",
+      "anchor": "r0"
+    },
+    "meaning": {
+      "gloss_ja": "おと。おん",
+      "category": "harvest"
+    },
+    "encounter": {
+      "art": null,
+      "template": "template",
+      "copy_ja": "おと。\n耳に とどく。\n音が する。"
+    },
+    "surfaces": [
+      {
+        "id": "s0",
+        "word": "音",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/97f3_0.mp3"
+      },
+      {
+        "id": "s1",
+        "word": "音",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/97f3_1.mp3"
+      },
+      {
+        "id": "s2",
+        "word": "音",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/304a3068_2.mp3"
+      },
+      {
+        "id": "s3",
+        "word": "足音",
+        "reading_id": "r0",
+        "audio": "audio/surfaces/8db397f3_3.mp3"
+      }
+    ],
+    "shape": {
+      "published": true,
+      "kind": "compound",
+      "components": [
+        {
+          "char": "立"
+        },
+        {
+          "char": "日"
+        }
+      ]
+    },
+    "items": [
+      {
+        "id": "音-r-0",
+        "type": "reading_choice",
+        "lamp": "reading",
+        "reading_id": "r0",
+        "choices": [
+          {
+            "kana": "おと",
+            "correct": true
+          },
+          {
+            "kana": "ひだり",
+            "correct": false
+          },
+          {
+            "kana": "みっつ",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "音-m-0",
+        "type": "meaning_choice",
+        "lamp": "meaning",
+        "choices": [
+          {
+            "gloss_ja": "おと。おん",
+            "semantic": true,
+            "correct": true
+          },
+          {
+            "gloss_ja": "てん。そら",
+            "semantic": true,
+            "correct": false
+          },
+          {
+            "gloss_ja": "とし。ねん",
+            "semantic": true,
+            "correct": false
+          }
+        ]
+      },
+      {
+        "id": "音-s-0",
+        "type": "component_assembly",
+        "lamp": "shape"
+      }
+    ],
+    "lines": [],
+    "elementary_readings": [
+      {
+        "kana": "オン",
+        "type": "on"
+      },
+      {
+        "kana": "おと",
+        "type": "kun"
+      },
+      {
+        "kana": "ね",
+        "type": "kun"
+      }
+    ],
+    "later_readings": [
+      {
+        "kana": "イン",
+        "type": "on"
+      }
+    ],
+    "teach_ready": true,
+    "audio_pending": []
   }
 ]

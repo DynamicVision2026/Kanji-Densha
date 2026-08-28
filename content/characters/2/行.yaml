@@ -1,0 +1,92 @@
+character: 行
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: いく
+      type: kun
+      audio: audio/readings/3044304f.mp3
+    - id: r1
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いく。
+    学校へ 行く。
+    あしで すすむ。
+surfaces:
+  - id: s0
+    word: 行
+    reading_id: r0
+    audio: audio/surfaces/884c_0.mp3
+  - id: s1
+    word: 行く
+    reading_id: r0
+    audio: audio/surfaces/884c304f_1.mp3
+  - id: s2
+    word: 行く
+    reading_id: r0
+    audio: audio/surfaces/3044304f_2.mp3
+  - id: s3
+    word: 銀行
+    reading_id: r1
+    audio: audio/surfaces/9280884c_3.mp3
+  - id: s4
+    word: 行動
+    reading_id: r1
+    audio: audio/surfaces/884c52d5_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 彳
+    - char: 亍
+items:
+  - id: 行-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いく
+        correct: true
+      - kana: かみ
+        correct: false
+      - kana: ふね
+        correct: false
+  - id: 行-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: キ
+        correct: false
+      - kana: いろ
+        correct: false
+  - id: 行-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いく
+        semantic: true
+        correct: true
+      - gloss_ja: にし
+        semantic: true
+        correct: false
+      - gloss_ja: はかる
+        semantic: true
+        correct: false
+  - id: 行-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

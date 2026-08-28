@@ -1,0 +1,69 @@
+character: 盟
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: メイ
+      type: on
+      audio: audio/readings/30e130a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: めい。ちかう。どうめい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    めい。
+    同盟する。
+    ちかう。
+surfaces:
+  - id: s0
+    word: 盟
+    reading_id: r0
+    audio: audio/surfaces/76df_0.mp3
+  - id: s1
+    word: 同盟
+    reading_id: r0
+    audio: audio/surfaces/540c76df_1.mp3
+  - id: s2
+    word: 同盟
+    reading_id: r0
+    audio: audio/surfaces/3069304630813044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 明
+    - char: 皿
+items:
+  - id: 盟-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: メイ
+        correct: true
+      - kana: まど
+        correct: false
+      - kana: カク
+        correct: false
+  - id: 盟-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: めい。ちかう。どうめい
+        semantic: true
+        correct: true
+      - gloss_ja: こまる
+        semantic: true
+        correct: false
+      - gloss_ja: じん。おもいやり
+        semantic: true
+        correct: false
+  - id: 盟-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

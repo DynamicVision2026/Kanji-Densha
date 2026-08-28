@@ -1,0 +1,73 @@
+character: 首
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: くび
+      type: kun
+      audio: audio/readings/304f3073.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くび
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くび。
+    首を まわす。
+    あたまの した。
+surfaces:
+  - id: s0
+    word: 首
+    reading_id: r0
+    audio: audio/surfaces/9996_0.mp3
+  - id: s1
+    word: 首
+    reading_id: r0
+    audio: audio/surfaces/9996_1.mp3
+  - id: s2
+    word: 首
+    reading_id: r0
+    audio: audio/surfaces/304f3073_2.mp3
+  - id: s3
+    word: 手首
+    reading_id: r0
+    audio: audio/surfaces/624b9996_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 丷
+    - char: 自
+items:
+  - id: 首-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くび
+        correct: true
+      - kana: いえ
+        correct: false
+      - kana: はかる
+        correct: false
+  - id: 首-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くび
+        semantic: true
+        correct: true
+      - gloss_ja: こえ
+        semantic: true
+        correct: false
+      - gloss_ja: もと
+        semantic: true
+        correct: false
+  - id: 首-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

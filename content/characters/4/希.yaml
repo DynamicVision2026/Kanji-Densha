@@ -1,0 +1,73 @@
+character: 希
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まれ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まれ。
+    希望が ある。
+    のぞみ。
+surfaces:
+  - id: s0
+    word: 希
+    reading_id: r0
+    audio: audio/surfaces/5e0c_0.mp3
+  - id: s1
+    word: 希望
+    reading_id: r0
+    audio: audio/surfaces/5e0c671b_1.mp3
+  - id: s2
+    word: 希望
+    reading_id: r0
+    audio: audio/surfaces/304d307c3046_2.mp3
+  - id: s3
+    word: 希少
+    reading_id: r0
+    audio: audio/surfaces/5e0c5c11_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 㐅
+    - char: 布
+items:
+  - id: 希-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: とち
+        correct: false
+      - kana: リ
+        correct: false
+  - id: 希-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まれ
+        semantic: true
+        correct: true
+      - gloss_ja: きよい
+        semantic: true
+        correct: false
+      - gloss_ja: いくさ
+        semantic: true
+        correct: false
+  - id: 希-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

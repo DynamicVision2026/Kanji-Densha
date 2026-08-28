@@ -1,0 +1,92 @@
+character: 社
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: やしろ
+      type: kun
+      audio: audio/readings/30843057308d.mp3
+    - id: r1
+      kana: シャ
+      type: on
+      audio: audio/readings/30b730e3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やしろ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しゃかい。
+    みんなの なかま。
+    社会の じかん。
+surfaces:
+  - id: s0
+    word: 社
+    reading_id: r0
+    audio: audio/surfaces/793e_0.mp3
+  - id: s1
+    word: 社会
+    reading_id: r1
+    audio: audio/surfaces/793e4f1a_1.mp3
+  - id: s2
+    word: 社会
+    reading_id: r1
+    audio: audio/surfaces/30573083304b3044_2.mp3
+  - id: s3
+    word: 会社
+    reading_id: r1
+    audio: audio/surfaces/4f1a793e_3.mp3
+  - id: s4
+    word: 神社
+    reading_id: r1
+    audio: audio/surfaces/795e793e_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 示
+    - char: 土
+items:
+  - id: 社-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: やしろ
+        correct: true
+      - kana: たかい
+        correct: false
+      - kana: ながい
+        correct: false
+  - id: 社-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シャ
+        correct: true
+      - kana: いう
+        correct: false
+      - kana: まえ
+        correct: false
+  - id: 社-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やしろ
+        semantic: true
+        correct: true
+      - gloss_ja: かみ
+        semantic: true
+        correct: false
+      - gloss_ja: そと
+        semantic: true
+        correct: false
+  - id: 社-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

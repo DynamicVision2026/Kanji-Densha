@@ -1,0 +1,82 @@
+character: 出
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: でる
+      type: kun
+      audio: audio/readings/3067308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: でる。だす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    でる。
+    そとに 出る。
+    山が ふたつ。
+surfaces:
+  - id: s0
+    word: 出
+    reading_id: r0
+    audio: audio/surfaces/51fa_0.mp3
+  - id: s1
+    word: 出る
+    reading_id: r0
+    audio: audio/surfaces/51fa308b_1.mp3
+  - id: s2
+    word: 出かける
+    reading_id: r0
+    audio: audio/surfaces/51fa304b3051308b_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: たて
+      a11y_ja: たて3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: たて
+      a11y_ja: たて5
+items:
+  - id: 出-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: でる
+        correct: true
+      - kana: あお
+        correct: false
+      - kana: ゆう
+        correct: false
+  - id: 出-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: でる。だす
+        semantic: true
+        correct: true
+      - gloss_ja: ゆうがた
+        semantic: true
+        correct: false
+      - gloss_ja: さき。せんせい
+        semantic: true
+        correct: false
+  - id: 出-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

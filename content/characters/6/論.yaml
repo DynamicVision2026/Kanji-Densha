@@ -1,0 +1,69 @@
+character: 論
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ロン
+      type: on
+      audio: audio/readings/30ed30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ろん。ろんじる。はなしあう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ろん。
+    議論する。
+    すじを いう。
+surfaces:
+  - id: s0
+    word: 論
+    reading_id: r0
+    audio: audio/surfaces/8ad6_0.mp3
+  - id: s1
+    word: 議論
+    reading_id: r0
+    audio: audio/surfaces/8b708ad6_1.mp3
+  - id: s2
+    word: 議論
+    reading_id: r0
+    audio: audio/surfaces/304e308d3093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 侖
+items:
+  - id: 論-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ロン
+        correct: true
+      - kana: しお
+        correct: false
+      - kana: ゲキ
+        correct: false
+  - id: 論-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ろん。ろんじる。はなしあう
+        semantic: true
+        correct: true
+      - gloss_ja: きず
+        semantic: true
+        correct: false
+      - gloss_ja: あらわす
+        semantic: true
+        correct: false
+  - id: 論-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

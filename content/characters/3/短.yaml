@@ -1,0 +1,69 @@
+character: 短
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: みじかい
+      type: kun
+      audio: audio/readings/307f3058304b3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みじかい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みじかい。
+    短い 鉛筆。
+    長く ない。
+surfaces:
+  - id: s0
+    word: 短
+    reading_id: r0
+    audio: audio/surfaces/77ed_0.mp3
+  - id: s1
+    word: 短い
+    reading_id: r0
+    audio: audio/surfaces/77ed3044_1.mp3
+  - id: s2
+    word: 短い
+    reading_id: r0
+    audio: audio/surfaces/307f3058304b3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 矢
+    - char: 豆
+items:
+  - id: 短-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みじかい
+        correct: true
+      - kana: おもい
+        correct: false
+      - kana: さだめる
+        correct: false
+  - id: 短-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みじかい
+        semantic: true
+        correct: true
+      - gloss_ja: ふえ
+        semantic: true
+        correct: false
+      - gloss_ja: は
+        semantic: true
+        correct: false
+  - id: 短-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

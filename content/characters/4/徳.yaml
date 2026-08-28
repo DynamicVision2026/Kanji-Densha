@@ -1,0 +1,71 @@
+character: 徳
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: トク
+      type: on
+      audio: audio/readings/30c830af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とく。よい おこない
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とく。
+    道徳の 時間。
+    よい おこない。
+surfaces:
+  - id: s0
+    word: 徳
+    reading_id: r0
+    audio: audio/surfaces/5fb3_0.mp3
+  - id: s1
+    word: 道徳
+    reading_id: r0
+    audio: audio/surfaces/90535fb3_1.mp3
+  - id: s2
+    word: 道徳
+    reading_id: r0
+    audio: audio/surfaces/306930463068304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 彳
+    - char: 十
+    - char: 罒
+    - char: 心
+items:
+  - id: 徳-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: トク
+        correct: true
+      - kana: ゼン
+        correct: false
+      - kana: かならず
+        correct: false
+  - id: 徳-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とく。よい おこない
+        semantic: true
+        correct: true
+      - gloss_ja: す
+        semantic: true
+        correct: false
+      - gloss_ja: たち
+        semantic: true
+        correct: false
+  - id: 徳-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

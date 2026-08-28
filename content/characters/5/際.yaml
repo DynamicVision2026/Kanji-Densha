@@ -1,0 +1,73 @@
+character: 際
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: サイ
+      type: on
+      audio: audio/readings/30b530a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きわ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きわ。
+    実際の 話。
+    きわまる とき。
+surfaces:
+  - id: s0
+    word: 際
+    reading_id: r0
+    audio: audio/surfaces/969b_0.mp3
+  - id: s1
+    word: 実際
+    reading_id: r0
+    audio: audio/surfaces/5b9f969b_1.mp3
+  - id: s2
+    word: 実際
+    reading_id: r0
+    audio: audio/surfaces/3058306330553044_2.mp3
+  - id: s3
+    word: 国際
+    reading_id: r0
+    audio: audio/surfaces/56fd969b_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⻖
+    - char: 祭
+items:
+  - id: 際-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サイ
+        correct: true
+      - kana: サン
+        correct: false
+      - kana: かぎる
+        correct: false
+  - id: 際-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きわ
+        semantic: true
+        correct: true
+      - gloss_ja: へる
+        semantic: true
+        correct: false
+      - gloss_ja: たつ
+        semantic: true
+        correct: false
+  - id: 際-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

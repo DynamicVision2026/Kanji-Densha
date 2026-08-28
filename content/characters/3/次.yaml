@@ -1,0 +1,84 @@
+character: 次
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: つぐ
+      type: kun
+      audio: audio/readings/30643050.mp3
+    - id: r1
+      kana: つぎ
+      type: kun
+      audio: audio/readings/3064304e.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つぐ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つぎ。
+    次の 駅。
+    これから。
+surfaces:
+  - id: s0
+    word: 次
+    reading_id: r0
+    audio: audio/surfaces/6b21_0.mp3
+  - id: s1
+    word: 次
+    reading_id: r1
+    audio: audio/surfaces/6b21_1.mp3
+  - id: s2
+    word: 次
+    reading_id: r1
+    audio: audio/surfaces/3064304e_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 冫
+    - char: 欠
+items:
+  - id: 次-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つぐ
+        correct: true
+      - kana: ユ
+        correct: false
+      - kana: まつる
+        correct: false
+  - id: 次-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: つぎ
+        correct: true
+      - kana: しあわせ
+        correct: false
+      - kana: みやこ
+        correct: false
+  - id: 次-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つぐ
+        semantic: true
+        correct: true
+      - gloss_ja: なみ
+        semantic: true
+        correct: false
+      - gloss_ja: やすい
+        semantic: true
+        correct: false
+  - id: 次-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

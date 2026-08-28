@@ -1,0 +1,69 @@
+character: 返
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: かえす
+      type: kun
+      audio: audio/readings/304b30483059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かえす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かえす。
+    本を 返す。
+    もどす。
+surfaces:
+  - id: s0
+    word: 返
+    reading_id: r0
+    audio: audio/surfaces/8fd4_0.mp3
+  - id: s1
+    word: 返す
+    reading_id: r0
+    audio: audio/surfaces/8fd43059_1.mp3
+  - id: s2
+    word: 返す
+    reading_id: r0
+    audio: audio/surfaces/304b30483059_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 反
+items:
+  - id: 返-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かえす
+        correct: true
+      - kana: みやこ
+        correct: false
+      - kana: とう
+        correct: false
+  - id: 返-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かえす
+        semantic: true
+        correct: true
+      - gloss_ja: いん。なかま
+        semantic: true
+        correct: false
+      - gloss_ja: つかう
+        semantic: true
+        correct: false
+  - id: 返-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,89 @@
+character: 州
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: す
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    す。
+    九州の 州。
+    しまの まとまり。
+surfaces:
+  - id: s0
+    word: 州
+    reading_id: r0
+    audio: audio/surfaces/5dde_0.mp3
+  - id: s1
+    word: 九州
+    reading_id: r0
+    audio: audio/surfaces/4e5d5dde_1.mp3
+  - id: s2
+    word: 九州
+    reading_id: r0
+    audio: audio/surfaces/304d30853046305730853046_2.mp3
+  - id: s3
+    word: 本州
+    reading_id: r0
+    audio: audio/surfaces/672c5dde_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: てん
+      a11y_ja: てん
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: てん
+      a11y_ja: てん3
+    - order: 4
+      type: たて
+      a11y_ja: たて
+    - order: 5
+      type: てん
+      a11y_ja: てん5
+    - order: 6
+      type: たて
+      a11y_ja: たて6
+items:
+  - id: 州-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: むこう
+        correct: false
+      - kana: ショウ
+        correct: false
+  - id: 州-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: す
+        semantic: true
+        correct: true
+      - gloss_ja: ほか
+        semantic: true
+        correct: false
+      - gloss_ja: ふく。しあわせ
+        semantic: true
+        correct: false
+  - id: 州-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

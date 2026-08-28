@@ -1,0 +1,70 @@
+character: 散
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ちる
+      type: kun
+      audio: audio/readings/3061308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ちる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちる。
+    花が 散る。
+    ばらばら。
+surfaces:
+  - id: s0
+    word: 散
+    reading_id: r0
+    audio: audio/surfaces/6563_0.mp3
+  - id: s1
+    word: 散る
+    reading_id: r0
+    audio: audio/surfaces/6563308b_1.mp3
+  - id: s2
+    word: 散る
+    reading_id: r0
+    audio: audio/surfaces/3061308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 龷
+    - char: 月
+    - char: 攵
+items:
+  - id: 散-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ちる
+        correct: true
+      - kana: なおる
+        correct: false
+      - kana: がわ
+        correct: false
+  - id: 散-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ちる
+        semantic: true
+        correct: true
+      - gloss_ja: うめ
+        semantic: true
+        correct: false
+      - gloss_ja: ふ。〜でない
+        semantic: true
+        correct: false
+  - id: 散-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

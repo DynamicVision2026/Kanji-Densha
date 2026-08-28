@@ -1,0 +1,73 @@
+character: 旧
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: キュウ
+      type: on
+      audio: audio/readings/30ad30e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふるい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふるい。
+    旧い たてもの。
+    むかし。
+surfaces:
+  - id: s0
+    word: 旧
+    reading_id: r0
+    audio: audio/surfaces/65e7_0.mp3
+  - id: s1
+    word: 旧校
+    reading_id: r0
+    audio: audio/surfaces/65e76821_1.mp3
+  - id: s2
+    word: 旧校
+    reading_id: r0
+    audio: audio/surfaces/304d3085304630533046_2.mp3
+  - id: s3
+    word: 旧姓
+    reading_id: r0
+    audio: audio/surfaces/65e759d3_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 丨
+    - char: 日
+items:
+  - id: 旧-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キュウ
+        correct: true
+      - kana: テキ
+        correct: false
+      - kana: ゼイ
+        correct: false
+  - id: 旧-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふるい
+        semantic: true
+        correct: true
+      - gloss_ja: えい。まもる
+        semantic: true
+        correct: false
+      - gloss_ja: のべる
+        semantic: true
+        correct: false
+  - id: 旧-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

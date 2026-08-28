@@ -1,0 +1,69 @@
+character: 陛
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヘイ
+      type: on
+      audio: audio/readings/30d830a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: へい。きざはし。へいか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    へい。
+    陛下の 名。
+    きざはし。
+surfaces:
+  - id: s0
+    word: 陛
+    reading_id: r0
+    audio: audio/surfaces/965b_0.mp3
+  - id: s1
+    word: 陛下
+    reading_id: r0
+    audio: audio/surfaces/965b4e0b_1.mp3
+  - id: s2
+    word: 陛下
+    reading_id: r0
+    audio: audio/surfaces/30783044304b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⻖
+    - char: 坒
+items:
+  - id: 陛-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヘイ
+        correct: true
+      - kana: コウ
+        correct: false
+      - kana: ちち
+        correct: false
+  - id: 陛-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: へい。きざはし。へいか
+        semantic: true
+        correct: true
+      - gloss_ja: かわ
+        semantic: true
+        correct: false
+      - gloss_ja: はがね
+        semantic: true
+        correct: false
+  - id: 陛-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

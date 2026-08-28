@@ -1,0 +1,105 @@
+character: 用
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: もちいる
+      type: kun
+      audio: audio/readings/308230613044308b.mp3
+    - id: r1
+      kana: ヨウ
+      type: on
+      audio: audio/readings/30e830a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: もちいる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    もちいる。
+    道具を 用いる。
+    つかう こと。
+surfaces:
+  - id: s0
+    word: 用
+    reading_id: r0
+    audio: audio/surfaces/7528_0.mp3
+  - id: s1
+    word: 用いる
+    reading_id: r0
+    audio: audio/surfaces/75283044308b_1.mp3
+  - id: s2
+    word: 用いる
+    reading_id: r0
+    audio: audio/surfaces/308230613044308b_2.mp3
+  - id: s3
+    word: 用意
+    reading_id: r1
+    audio: audio/surfaces/7528610f_3.mp3
+  - id: s4
+    word: 使用
+    reading_id: r1
+    audio: audio/surfaces/4f7f7528_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+    - order: 5
+      type: たて
+      a11y_ja: たて
+items:
+  - id: 用-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: もちいる
+        correct: true
+      - kana: セン
+        correct: false
+      - kana: ドウ
+        correct: false
+  - id: 用-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ヨウ
+        correct: true
+      - kana: くろ
+        correct: false
+      - kana: ただちに
+        correct: false
+  - id: 用-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: もちいる
+        semantic: true
+        correct: true
+      - gloss_ja: とき
+        semantic: true
+        correct: false
+      - gloss_ja: いきる
+        semantic: true
+        correct: false
+  - id: 用-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,111 @@
+character: 二
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: ふた
+      type: kun
+      audio: audio/readings/3075305f.mp3
+    - id: r1
+      kana: ふたつ
+      type: kun
+      audio: audio/readings/3075305f3064.mp3
+    - id: r2
+      kana: ニ
+      type: on
+      audio: audio/readings/30cb.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふたつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふたつ。
+    かずの 二。
+    線が 二本。
+surfaces:
+  - id: s0
+    word: 二
+    reading_id: r0
+    audio: audio/surfaces/4e8c_0.mp3
+  - id: s1
+    word: 二つ
+    reading_id: r1
+    audio: audio/surfaces/4e8c3064_1.mp3
+  - id: s2
+    word: 二つ
+    reading_id: r1
+    audio: audio/surfaces/3075305f3064_2.mp3
+  - id: s3
+    word: 二月
+    reading_id: r2
+    audio: audio/surfaces/4e8c6708_3.mp3
+  - id: s4
+    word: 二時
+    reading_id: r2
+    audio: audio/surfaces/4e8c6642_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ2
+items:
+  - id: 二-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ふた
+        correct: true
+      - kana: ここの
+        correct: false
+      - kana: かい
+        correct: false
+  - id: 二-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ふたつ
+        correct: true
+      - kana: エン
+        correct: false
+      - kana: あま
+        correct: false
+  - id: 二-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ニ
+        correct: true
+      - kana: て
+        correct: false
+      - kana: くるま
+        correct: false
+  - id: 二-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふたつ
+        semantic: true
+        correct: true
+      - gloss_ja: ちいさい
+        semantic: true
+        correct: false
+      - gloss_ja: ゆうがた
+        semantic: true
+        correct: false
+  - id: 二-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

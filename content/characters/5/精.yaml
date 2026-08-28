@@ -1,0 +1,69 @@
+character: 精
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: セイ
+      type: on
+      audio: audio/readings/30bb30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しらげる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しらげる。
+    精神を つかう。
+    こまかい。
+surfaces:
+  - id: s0
+    word: 精
+    reading_id: r0
+    audio: audio/surfaces/7cbe_0.mp3
+  - id: s1
+    word: 精神
+    reading_id: r0
+    audio: audio/surfaces/7cbe795e_1.mp3
+  - id: s2
+    word: 精神
+    reading_id: r0
+    audio: audio/surfaces/305b304430573093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 米
+    - char: 青
+items:
+  - id: 精-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: セイ
+        correct: true
+      - kana: つま
+        correct: false
+      - kana: ク
+        correct: false
+  - id: 精-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しらげる
+        semantic: true
+        correct: true
+      - gloss_ja: ゆめ
+        semantic: true
+        correct: false
+      - gloss_ja: たすける
+        semantic: true
+        correct: false
+  - id: 精-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

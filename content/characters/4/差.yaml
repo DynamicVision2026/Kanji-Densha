@@ -1,0 +1,69 @@
+character: 差
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: さす
+      type: kun
+      audio: audio/readings/30553059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さす。
+    傘を 差す。
+    ちがい。
+surfaces:
+  - id: s0
+    word: 差
+    reading_id: r0
+    audio: audio/surfaces/5dee_0.mp3
+  - id: s1
+    word: 差す
+    reading_id: r0
+    audio: audio/surfaces/5dee3059_1.mp3
+  - id: s2
+    word: 差す
+    reading_id: r0
+    audio: audio/surfaces/30553059_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 羊
+    - char: 工
+items:
+  - id: 差-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: さす
+        correct: true
+      - kana: ギョ
+        correct: false
+      - kana: こころみる
+        correct: false
+  - id: 差-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さす
+        semantic: true
+        correct: true
+      - gloss_ja: かわる
+        semantic: true
+        correct: false
+      - gloss_ja: いまだ
+        semantic: true
+        correct: false
+  - id: 差-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

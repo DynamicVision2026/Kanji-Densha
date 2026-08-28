@@ -1,0 +1,69 @@
+character: 墓
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: はか
+      type: kun
+      audio: audio/readings/306f304b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はか。
+    山の 墓。
+    ねむる ばしょ。
+surfaces:
+  - id: s0
+    word: 墓
+    reading_id: r0
+    audio: audio/surfaces/5893_0.mp3
+  - id: s1
+    word: 墓
+    reading_id: r0
+    audio: audio/surfaces/5893_1.mp3
+  - id: s2
+    word: 墓
+    reading_id: r0
+    audio: audio/surfaces/306f304b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 莫
+    - char: 土
+items:
+  - id: 墓-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はか
+        correct: true
+      - kana: こころよい
+        correct: false
+      - kana: あまる
+        correct: false
+  - id: 墓-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はか
+        semantic: true
+        correct: true
+      - gloss_ja: ぜい。ぜいきん
+        semantic: true
+        correct: false
+      - gloss_ja: さくら
+        semantic: true
+        correct: false
+  - id: 墓-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

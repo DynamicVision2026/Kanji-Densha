@@ -1,0 +1,73 @@
+character: 漢
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: カン
+      type: on
+      audio: audio/readings/30ab30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かん。漢字の 漢
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かん。
+    漢字の 漢。
+    この 字の なかま。
+surfaces:
+  - id: s0
+    word: 漢
+    reading_id: r0
+    audio: audio/surfaces/6f22_0.mp3
+  - id: s1
+    word: 漢字
+    reading_id: r0
+    audio: audio/surfaces/6f225b57_1.mp3
+  - id: s2
+    word: 漢字
+    reading_id: r0
+    audio: audio/surfaces/304b30933058_2.mp3
+  - id: s3
+    word: 漢文
+    reading_id: r0
+    audio: audio/surfaces/6f226587_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 𦰩
+items:
+  - id: 漢-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カン
+        correct: true
+      - kana: エキ
+        correct: false
+      - kana: むこう
+        correct: false
+  - id: 漢-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かん。漢字の 漢
+        semantic: true
+        correct: true
+      - gloss_ja: ばい。にばい
+        semantic: true
+        correct: false
+      - gloss_ja: いやす
+        semantic: true
+        correct: false
+  - id: 漢-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

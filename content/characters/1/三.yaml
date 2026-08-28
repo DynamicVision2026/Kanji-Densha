@@ -1,0 +1,114 @@
+character: 三
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: み
+      type: kun
+      audio: audio/readings/307f.mp3
+    - id: r1
+      kana: みっつ
+      type: kun
+      audio: audio/readings/307f30633064.mp3
+    - id: r2
+      kana: サン
+      type: on
+      audio: audio/readings/30b530f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みっつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みっつ。
+    かずの 三。
+    線が 三本。
+surfaces:
+  - id: s0
+    word: 三
+    reading_id: r0
+    audio: audio/surfaces/4e09_0.mp3
+  - id: s1
+    word: 三つ
+    reading_id: r1
+    audio: audio/surfaces/4e093064_1.mp3
+  - id: s2
+    word: 三つ
+    reading_id: r1
+    audio: audio/surfaces/307f30633064_2.mp3
+  - id: s3
+    word: 三月
+    reading_id: r2
+    audio: audio/surfaces/4e096708_3.mp3
+  - id: s4
+    word: 三人
+    reading_id: r2
+    audio: audio/surfaces/4e094eba_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ2
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+items:
+  - id: 三-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: み
+        correct: true
+      - kana: くち
+        correct: false
+      - kana: いつつ
+        correct: false
+  - id: 三-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: みっつ
+        correct: true
+      - kana: ニ
+        correct: false
+      - kana: ふた
+        correct: false
+  - id: 三-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: サン
+        correct: true
+      - kana: やすむ
+        correct: false
+      - kana: ここのつ
+        correct: false
+  - id: 三-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みっつ
+        semantic: true
+        correct: true
+      - gloss_ja: ゆうがた
+        semantic: true
+        correct: false
+      - gloss_ja: さき。せんせい
+        semantic: true
+        correct: false
+  - id: 三-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

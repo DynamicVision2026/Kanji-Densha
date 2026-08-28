@@ -1,0 +1,92 @@
+character: 見
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: みる
+      type: kun
+      audio: audio/readings/307f308b.mp3
+    - id: r1
+      kana: ケン
+      type: on
+      audio: audio/readings/30b130f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みる。
+    そらを 見る。
+    目の 下に 人。
+surfaces:
+  - id: s0
+    word: 見
+    reading_id: r0
+    audio: audio/surfaces/898b_0.mp3
+  - id: s1
+    word: 見る
+    reading_id: r0
+    audio: audio/surfaces/898b308b_1.mp3
+  - id: s2
+    word: 見る
+    reading_id: r0
+    audio: audio/surfaces/307f308b_2.mp3
+  - id: s3
+    word: 意見
+    reading_id: r1
+    audio: audio/surfaces/610f898b_3.mp3
+  - id: s4
+    word: 見物
+    reading_id: r1
+    audio: audio/surfaces/898b7269_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 目
+    - char: 儿
+items:
+  - id: 見-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みる
+        correct: true
+      - kana: ちいさい
+        correct: false
+      - kana: おんな
+        correct: false
+  - id: 見-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ケン
+        correct: true
+      - kana: はやい
+        correct: false
+      - kana: さき
+        correct: false
+  - id: 見-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みる
+        semantic: true
+        correct: true
+      - gloss_ja: はいる
+        semantic: true
+        correct: false
+      - gloss_ja: ひゃく
+        semantic: true
+        correct: false
+  - id: 見-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

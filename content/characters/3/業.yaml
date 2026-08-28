@@ -1,0 +1,73 @@
+character: 業
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ギョウ
+      type: on
+      audio: audio/readings/30ae30e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: わざ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    わざ。
+    授業の 業。
+    学びの しごと。
+surfaces:
+  - id: s0
+    word: 業
+    reading_id: r0
+    audio: audio/surfaces/696d_0.mp3
+  - id: s1
+    word: 授業
+    reading_id: r0
+    audio: audio/surfaces/6388696d_1.mp3
+  - id: s2
+    word: 授業
+    reading_id: r0
+    audio: audio/surfaces/30583085304e30873046_2.mp3
+  - id: s3
+    word: 工業
+    reading_id: r0
+    audio: audio/surfaces/5de5696d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 业
+    - char: 木
+items:
+  - id: 業-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ギョウ
+        correct: true
+      - kana: まつ
+        correct: false
+      - kana: うつくしい
+        correct: false
+  - id: 業-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: わざ
+        semantic: true
+        correct: true
+      - gloss_ja: あきなう
+        semantic: true
+        correct: false
+      - gloss_ja: くばる
+        semantic: true
+        correct: false
+  - id: 業-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 優
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ユウ
+      type: on
+      audio: audio/readings/30e630a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やさしい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やさしい。
+    優秀な 成績。
+    すぐれる。
+surfaces:
+  - id: s0
+    word: 優
+    reading_id: r0
+    audio: audio/surfaces/512a_0.mp3
+  - id: s1
+    word: 優秀
+    reading_id: r0
+    audio: audio/surfaces/512a79c0_1.mp3
+  - id: s2
+    word: 優秀
+    reading_id: r0
+    audio: audio/surfaces/30863046305730853046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 憂
+items:
+  - id: 優-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ユウ
+        correct: true
+      - kana: あやまる
+        correct: false
+      - kana: むずかしい
+        correct: false
+  - id: 優-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やさしい
+        semantic: true
+        correct: true
+      - gloss_ja: はい。はい句
+        semantic: true
+        correct: false
+      - gloss_ja: い。いぶくろ
+        semantic: true
+        correct: false
+  - id: 優-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

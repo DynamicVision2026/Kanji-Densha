@@ -1,0 +1,92 @@
+character: 遠
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: とおい
+      type: kun
+      audio: audio/readings/3068304a3044.mp3
+    - id: r1
+      kana: エン
+      type: on
+      audio: audio/readings/30a830f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とおい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とおい。
+    遠い いえ。
+    まだ さき。
+surfaces:
+  - id: s0
+    word: 遠
+    reading_id: r0
+    audio: audio/surfaces/9060_0.mp3
+  - id: s1
+    word: 遠い
+    reading_id: r0
+    audio: audio/surfaces/90603044_1.mp3
+  - id: s2
+    word: 遠い
+    reading_id: r0
+    audio: audio/surfaces/3068304a3044_2.mp3
+  - id: s3
+    word: 遠足
+    reading_id: r1
+    audio: audio/surfaces/90608db3_3.mp3
+  - id: s4
+    word: 遠方
+    reading_id: r1
+    audio: audio/surfaces/906065b9_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 袁
+items:
+  - id: 遠-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とおい
+        correct: true
+      - kana: ケイ
+        correct: false
+      - kana: や
+        correct: false
+  - id: 遠-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: エン
+        correct: true
+      - kana: あに
+        correct: false
+      - kana: こえ
+        correct: false
+  - id: 遠-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とおい
+        semantic: true
+        correct: true
+      - gloss_ja: え
+        semantic: true
+        correct: false
+      - gloss_ja: かた
+        semantic: true
+        correct: false
+  - id: 遠-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

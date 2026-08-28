@@ -1,0 +1,73 @@
+character: 対
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: タイ
+      type: on
+      audio: audio/readings/30bf30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あいて
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たい。
+    反対の 対。
+    向かいあう。
+surfaces:
+  - id: s0
+    word: 対
+    reading_id: r0
+    audio: audio/surfaces/5bfe_0.mp3
+  - id: s1
+    word: 反対
+    reading_id: r0
+    audio: audio/surfaces/53cd5bfe_1.mp3
+  - id: s2
+    word: 反対
+    reading_id: r0
+    audio: audio/surfaces/306f3093305f3044_2.mp3
+  - id: s3
+    word: 絶対
+    reading_id: r0
+    audio: audio/surfaces/7d765bfe_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 文
+    - char: 寸
+items:
+  - id: 対-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: タイ
+        correct: true
+      - kana: に
+        correct: false
+      - kana: さら
+        correct: false
+  - id: 対-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あいて
+        semantic: true
+        correct: true
+      - gloss_ja: たすける
+        semantic: true
+        correct: false
+      - gloss_ja: のう。のうぎょう
+        semantic: true
+        correct: false
+  - id: 対-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 賞
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ほめる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ほめる。
+    賞金を もらう。
+    ほめる しるし。
+surfaces:
+  - id: s0
+    word: 賞
+    reading_id: r0
+    audio: audio/surfaces/8cde_0.mp3
+  - id: s1
+    word: 賞金
+    reading_id: r0
+    audio: audio/surfaces/8cde91d1_1.mp3
+  - id: s2
+    word: 賞金
+    reading_id: r0
+    audio: audio/surfaces/305730873046304d3093_2.mp3
+  - id: s3
+    word: 賞状
+    reading_id: r0
+    audio: audio/surfaces/8cde72b6_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尚
+    - char: 貝
+items:
+  - id: 賞-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: きく
+        correct: false
+      - kana: ガン
+        correct: false
+  - id: 賞-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ほめる
+        semantic: true
+        correct: true
+      - gloss_ja: ひょう。ひょうかする
+        semantic: true
+        correct: false
+      - gloss_ja: たがやす
+        semantic: true
+        correct: false
+  - id: 賞-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

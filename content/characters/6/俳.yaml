@@ -1,0 +1,69 @@
+character: 俳
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ハイ
+      type: on
+      audio: audio/readings/30cf30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はい。はい句
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はい。
+    俳句を つくる。
+    うた。
+surfaces:
+  - id: s0
+    word: 俳
+    reading_id: r0
+    audio: audio/surfaces/4ff3_0.mp3
+  - id: s1
+    word: 俳句
+    reading_id: r0
+    audio: audio/surfaces/4ff353e5_1.mp3
+  - id: s2
+    word: 俳句
+    reading_id: r0
+    audio: audio/surfaces/306f3044304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 非
+items:
+  - id: 俳-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ハイ
+        correct: true
+      - kana: くらす
+        correct: false
+      - kana: すがた
+        correct: false
+  - id: 俳-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はい。はい句
+        semantic: true
+        correct: true
+      - gloss_ja: ぼう。ぼう
+        semantic: true
+        correct: false
+      - gloss_ja: みる
+        semantic: true
+        correct: false
+  - id: 俳-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

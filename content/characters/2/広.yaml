@@ -1,0 +1,92 @@
+character: 広
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ひろい
+      type: kun
+      audio: audio/readings/3072308d3044.mp3
+    - id: r1
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひろい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひろい。
+    広い うみ。
+    どこまでも。
+surfaces:
+  - id: s0
+    word: 広
+    reading_id: r0
+    audio: audio/surfaces/5e83_0.mp3
+  - id: s1
+    word: 広い
+    reading_id: r0
+    audio: audio/surfaces/5e833044_1.mp3
+  - id: s2
+    word: 広い
+    reading_id: r0
+    audio: audio/surfaces/3072308d3044_2.mp3
+  - id: s3
+    word: 広告
+    reading_id: r1
+    audio: audio/surfaces/5e83544a_3.mp3
+  - id: s4
+    word: 広大
+    reading_id: r1
+    audio: audio/surfaces/5e835927_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: ム
+items:
+  - id: 広-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ひろい
+        correct: true
+      - kana: シャ
+        correct: false
+      - kana: おおい
+        correct: false
+  - id: 広-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: うた
+        correct: false
+      - kana: かみ
+        correct: false
+  - id: 広-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひろい
+        semantic: true
+        correct: true
+      - gloss_ja: かた
+        semantic: true
+        correct: false
+      - gloss_ja: ほし
+        semantic: true
+        correct: false
+  - id: 広-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

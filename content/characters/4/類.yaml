@@ -1,0 +1,85 @@
+character: 類
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: たぐい
+      type: kun
+      audio: audio/readings/305f30503044.mp3
+    - id: r1
+      kana: ルイ
+      type: on
+      audio: audio/readings/30eb30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たぐい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たぐい。
+    種類が おおい。
+    にた もの。
+surfaces:
+  - id: s0
+    word: 類
+    reading_id: r0
+    audio: audio/surfaces/985e_0.mp3
+  - id: s1
+    word: 種類
+    reading_id: r1
+    audio: audio/surfaces/7a2e985e_1.mp3
+  - id: s2
+    word: 種類
+    reading_id: r1
+    audio: audio/surfaces/30573085308b3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 米
+    - char: 犬
+    - char: 頁
+items:
+  - id: 類-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たぐい
+        correct: true
+      - kana: つむ
+        correct: false
+      - kana: リョウ
+        correct: false
+  - id: 類-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ルイ
+        correct: true
+      - kana: かたい
+        correct: false
+      - kana: そこ
+        correct: false
+  - id: 類-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たぐい
+        semantic: true
+        correct: true
+      - gloss_ja: いばら
+        semantic: true
+        correct: false
+      - gloss_ja: くわえる
+        semantic: true
+        correct: false
+  - id: 類-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

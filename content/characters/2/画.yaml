@@ -1,0 +1,74 @@
+character: 画
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ガ
+      type: on
+      audio: audio/readings/30ac.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: えがく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    え。
+    画を かく。
+    絵と ちかい。
+surfaces:
+  - id: s0
+    word: 画
+    reading_id: r0
+    audio: audio/surfaces/753b_0.mp3
+  - id: s1
+    word: 画家
+    reading_id: r0
+    audio: audio/surfaces/753b5bb6_1.mp3
+  - id: s2
+    word: 画家
+    reading_id: r0
+    audio: audio/surfaces/304c304b_2.mp3
+  - id: s3
+    word: 漫画
+    reading_id: r0
+    audio: audio/surfaces/6f2b753b_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 一
+    - char: 田
+    - char: 凵
+items:
+  - id: 画-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ガ
+        correct: true
+      - kana: かんがえる
+        correct: false
+      - kana: ショ
+        correct: false
+  - id: 画-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: えがく
+        semantic: true
+        correct: true
+      - gloss_ja: ひかる
+        semantic: true
+        correct: false
+      - gloss_ja: よう。ようび
+        semantic: true
+        correct: false
+  - id: 画-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

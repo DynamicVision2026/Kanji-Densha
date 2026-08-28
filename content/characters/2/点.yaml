@@ -1,0 +1,73 @@
+character: 点
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: テン
+      type: on
+      audio: audio/readings/30c630f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    てん。
+    まるい 点。
+    小さく うつ。
+surfaces:
+  - id: s0
+    word: 点
+    reading_id: r0
+    audio: audio/surfaces/70b9_0.mp3
+  - id: s1
+    word: 点
+    reading_id: r0
+    audio: audio/surfaces/70b9_1.mp3
+  - id: s2
+    word: 点
+    reading_id: r0
+    audio: audio/surfaces/30663093_2.mp3
+  - id: s3
+    word: 点数
+    reading_id: r0
+    audio: audio/surfaces/70b96570_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 占
+    - char: 灬
+items:
+  - id: 点-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: テン
+        correct: true
+      - kana: くも
+        correct: false
+      - kana: ちかい
+        correct: false
+  - id: 点-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つける
+        semantic: true
+        correct: true
+      - gloss_ja: くる
+        semantic: true
+        correct: false
+      - gloss_ja: ち。じめん
+        semantic: true
+        correct: false
+  - id: 点-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

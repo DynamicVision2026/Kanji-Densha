@@ -1,0 +1,69 @@
+character: 燃
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: もえる
+      type: kun
+      audio: audio/readings/30823048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: もえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    もえる。
+    木が 燃える。
+    火が つく。
+surfaces:
+  - id: s0
+    word: 燃
+    reading_id: r0
+    audio: audio/surfaces/71c3_0.mp3
+  - id: s1
+    word: 燃える
+    reading_id: r0
+    audio: audio/surfaces/71c33048308b_1.mp3
+  - id: s2
+    word: 燃える
+    reading_id: r0
+    audio: audio/surfaces/30823048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 火
+    - char: 然
+items:
+  - id: 燃-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: もえる
+        correct: true
+      - kana: ことわる
+        correct: false
+      - kana: なさけ
+        correct: false
+  - id: 燃-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: もえる
+        semantic: true
+        correct: true
+      - gloss_ja: きく
+        semantic: true
+        correct: false
+      - gloss_ja: あかがね
+        semantic: true
+        correct: false
+  - id: 燃-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

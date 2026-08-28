@@ -1,0 +1,88 @@
+character: 豆
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: まめ
+      type: kun
+      audio: audio/readings/307e3081.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まめ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まめ。
+    小さな 豆。
+    土から なる。
+surfaces:
+  - id: s0
+    word: 豆
+    reading_id: r0
+    audio: audio/surfaces/8c46_0.mp3
+  - id: s1
+    word: 豆
+    reading_id: r0
+    audio: audio/surfaces/8c46_1.mp3
+  - id: s2
+    word: 豆
+    reading_id: r0
+    audio: audio/surfaces/307e3081_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+    - order: 5
+      type: てん
+      a11y_ja: てん
+    - order: 6
+      type: はらい
+      a11y_ja: はらい
+    - order: 7
+      type: よこ
+      a11y_ja: よこ7
+items:
+  - id: 豆-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まめ
+        correct: true
+      - kana: まもる
+        correct: false
+      - kana: かわる
+        correct: false
+  - id: 豆-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まめ
+        semantic: true
+        correct: true
+      - gloss_ja: れい。れいぎ
+        semantic: true
+        correct: false
+      - gloss_ja: かける
+        semantic: true
+        correct: false
+  - id: 豆-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

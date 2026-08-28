@@ -1,0 +1,88 @@
+character: 台
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ダイ
+      type: on
+      audio: audio/readings/30c030a4.mp3
+    - id: r1
+      kana: タイ
+      type: on
+      audio: audio/readings/30bf30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うてな
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たいふう。
+    台風が くる。
+    風が つよい。
+surfaces:
+  - id: s0
+    word: 台
+    reading_id: r0
+    audio: audio/surfaces/53f0_0.mp3
+  - id: s1
+    word: 台風
+    reading_id: r1
+    audio: audio/surfaces/53f098a8_1.mp3
+  - id: s2
+    word: 台風
+    reading_id: r1
+    audio: audio/surfaces/305f304430753046_2.mp3
+  - id: s3
+    word: 舞台
+    reading_id: r1
+    audio: audio/surfaces/821e53f0_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 厶
+    - char: 口
+items:
+  - id: 台-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ダイ
+        correct: true
+      - kana: かた
+        correct: false
+      - kana: シ
+        correct: false
+  - id: 台-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: タイ
+        correct: true
+      - kana: かう
+        correct: false
+      - kana: ひく
+        correct: false
+  - id: 台-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うてな
+        semantic: true
+        correct: true
+      - gloss_ja: いま
+        semantic: true
+        correct: false
+      - gloss_ja: なに
+        semantic: true
+        correct: false
+  - id: 台-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

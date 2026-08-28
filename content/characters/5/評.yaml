@@ -1,0 +1,69 @@
+character: 評
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヒョウ
+      type: on
+      audio: audio/readings/30d230e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひょう。ひょうかする
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひょう。
+    評価する。
+    よしか 悪しか。
+surfaces:
+  - id: s0
+    word: 評
+    reading_id: r0
+    audio: audio/surfaces/8a55_0.mp3
+  - id: s1
+    word: 評価
+    reading_id: r0
+    audio: audio/surfaces/8a554fa1_1.mp3
+  - id: s2
+    word: 評価
+    reading_id: r0
+    audio: audio/surfaces/307230873046304b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 平
+items:
+  - id: 評-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヒョウ
+        correct: true
+      - kana: かまえる
+        correct: false
+      - kana: ギ
+        correct: false
+  - id: 評-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひょう。ひょうかする
+        semantic: true
+        correct: true
+      - gloss_ja: かなう
+        semantic: true
+        correct: false
+      - gloss_ja: ゆるす
+        semantic: true
+        correct: false
+  - id: 評-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

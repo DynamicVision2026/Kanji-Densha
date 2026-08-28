@@ -1,0 +1,73 @@
+character: 児
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジ
+      type: on
+      audio: audio/readings/30b8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こ。
+    児童の 組。
+    こども。
+surfaces:
+  - id: s0
+    word: 児
+    reading_id: r0
+    audio: audio/surfaces/5150_0.mp3
+  - id: s1
+    word: 児童
+    reading_id: r0
+    audio: audio/surfaces/51507ae5_1.mp3
+  - id: s2
+    word: 児童
+    reading_id: r0
+    audio: audio/surfaces/305830693046_2.mp3
+  - id: s3
+    word: 小児
+    reading_id: r0
+    audio: audio/surfaces/5c0f5150_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 旧
+    - char: 儿
+items:
+  - id: 児-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジ
+        correct: true
+      - kana: グン
+        correct: false
+      - kana: かりる
+        correct: false
+  - id: 児-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こ
+        semantic: true
+        correct: true
+      - gloss_ja: いとしい
+        semantic: true
+        correct: false
+      - gloss_ja: さかえる
+        semantic: true
+        correct: false
+  - id: 児-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

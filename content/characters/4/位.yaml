@@ -1,0 +1,69 @@
+character: 位
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: くらい
+      type: kun
+      audio: audio/readings/304f30893044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くらい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くらい。
+    一位の 位。
+    ばしょ。
+surfaces:
+  - id: s0
+    word: 位
+    reading_id: r0
+    audio: audio/surfaces/4f4d_0.mp3
+  - id: s1
+    word: 位
+    reading_id: r0
+    audio: audio/surfaces/4f4d_1.mp3
+  - id: s2
+    word: 位
+    reading_id: r0
+    audio: audio/surfaces/304f30893044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 立
+items:
+  - id: 位-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くらい
+        correct: true
+      - kana: いばら
+        correct: false
+      - kana: クン
+        correct: false
+  - id: 位-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くらい
+        semantic: true
+        correct: true
+      - gloss_ja: おいる
+        semantic: true
+        correct: false
+      - gloss_ja: しるし
+        semantic: true
+        correct: false
+  - id: 位-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

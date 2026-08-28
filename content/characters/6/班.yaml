@@ -1,0 +1,70 @@
+character: 班
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ハン
+      type: on
+      audio: audio/readings/30cf30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はん。はん。ちいさな グループ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はん。
+    班長が はなす。
+    くみ。
+surfaces:
+  - id: s0
+    word: 班
+    reading_id: r0
+    audio: audio/surfaces/73ed_0.mp3
+  - id: s1
+    word: 班長
+    reading_id: r0
+    audio: audio/surfaces/73ed9577_1.mp3
+  - id: s2
+    word: 班長
+    reading_id: r0
+    audio: audio/surfaces/306f3093306130873046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 王
+    - char: 刀
+    - char: 王
+items:
+  - id: 班-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ハン
+        correct: true
+      - kana: もる
+        correct: false
+      - kana: こと
+        correct: false
+  - id: 班-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はん。はん。ちいさな グループ
+        semantic: true
+        correct: true
+      - gloss_ja: すな
+        semantic: true
+        correct: false
+      - gloss_ja: たれる
+        semantic: true
+        correct: false
+  - id: 班-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

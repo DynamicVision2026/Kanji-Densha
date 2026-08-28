@@ -1,0 +1,73 @@
+character: 災
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: サイ
+      type: on
+      audio: audio/readings/30b530a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: わざわい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    わざわい。
+    災害に そなえる。
+    よくない こと。
+surfaces:
+  - id: s0
+    word: 災
+    reading_id: r0
+    audio: audio/surfaces/707d_0.mp3
+  - id: s1
+    word: 災害
+    reading_id: r0
+    audio: audio/surfaces/707d5bb3_1.mp3
+  - id: s2
+    word: 災害
+    reading_id: r0
+    audio: audio/surfaces/30553044304c3044_2.mp3
+  - id: s3
+    word: 火災
+    reading_id: r0
+    audio: audio/surfaces/706b707d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 巛
+    - char: 火
+items:
+  - id: 災-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サイ
+        correct: true
+      - kana: ゆるす
+        correct: false
+      - kana: さくら
+        correct: false
+  - id: 災-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: わざわい
+        semantic: true
+        correct: true
+      - gloss_ja: まじる
+        semantic: true
+        correct: false
+      - gloss_ja: わかる
+        semantic: true
+        correct: false
+  - id: 災-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

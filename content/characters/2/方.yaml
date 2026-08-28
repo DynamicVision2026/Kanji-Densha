@@ -1,0 +1,102 @@
+character: 方
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: かた
+      type: kun
+      audio: audio/readings/304b305f.mp3
+    - id: r1
+      kana: ホウ
+      type: on
+      audio: audio/readings/30db30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かた。
+    右の 方。
+    あの かた。
+surfaces:
+  - id: s0
+    word: 方
+    reading_id: r0
+    audio: audio/surfaces/65b9_0.mp3
+  - id: s1
+    word: 方
+    reading_id: r0
+    audio: audio/surfaces/65b9_1.mp3
+  - id: s2
+    word: 方
+    reading_id: r0
+    audio: audio/surfaces/304b305f_2.mp3
+  - id: s3
+    word: 方法
+    reading_id: r1
+    audio: audio/surfaces/65b96cd5_3.mp3
+  - id: s4
+    word: 方向
+    reading_id: r1
+    audio: audio/surfaces/65b95411_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 方-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かた
+        correct: true
+      - kana: いえ
+        correct: false
+      - kana: あね
+        correct: false
+  - id: 方-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ホウ
+        correct: true
+      - kana: てら
+        correct: false
+      - kana: セン
+        correct: false
+  - id: 方-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かた
+        semantic: true
+        correct: true
+      - gloss_ja: くに
+        semantic: true
+        correct: false
+      - gloss_ja: みやこ
+        semantic: true
+        correct: false
+  - id: 方-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

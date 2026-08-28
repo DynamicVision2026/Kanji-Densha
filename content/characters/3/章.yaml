@@ -1,0 +1,73 @@
+character: 章
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しょう。しるし。ぶんしょう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しょう。
+    文章の 章。
+    まとまり。
+surfaces:
+  - id: s0
+    word: 章
+    reading_id: r0
+    audio: audio/surfaces/7ae0_0.mp3
+  - id: s1
+    word: 文章
+    reading_id: r0
+    audio: audio/surfaces/65877ae0_1.mp3
+  - id: s2
+    word: 文章
+    reading_id: r0
+    audio: audio/surfaces/30763093305730873046_2.mp3
+  - id: s3
+    word: 章節
+    reading_id: r0
+    audio: audio/surfaces/7ae07bc0_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 立
+    - char: 早
+items:
+  - id: 章-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: ユ
+        correct: false
+      - kana: に
+        correct: false
+  - id: 章-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しょう。しるし。ぶんしょう
+        semantic: true
+        correct: true
+      - gloss_ja: いやす
+        semantic: true
+        correct: false
+      - gloss_ja: まつる
+        semantic: true
+        correct: false
+  - id: 章-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

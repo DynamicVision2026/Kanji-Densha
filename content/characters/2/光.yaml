@@ -1,0 +1,107 @@
+character: 光
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ひかる
+      type: kun
+      audio: audio/readings/3072304b308b.mp3
+    - id: r1
+      kana: ひかり
+      type: kun
+      audio: audio/readings/3072304b308a.mp3
+    - id: r2
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひかる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひかり。
+    光が さす。
+    あかるい。
+surfaces:
+  - id: s0
+    word: 光
+    reading_id: r0
+    audio: audio/surfaces/5149_0.mp3
+  - id: s1
+    word: 光
+    reading_id: r1
+    audio: audio/surfaces/5149_1.mp3
+  - id: s2
+    word: 光
+    reading_id: r1
+    audio: audio/surfaces/3072304b308a_2.mp3
+  - id: s3
+    word: 日光
+    reading_id: r2
+    audio: audio/surfaces/65e55149_3.mp3
+  - id: s4
+    word: 光線
+    reading_id: r2
+    audio: audio/surfaces/51497dda_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺌
+    - char: 兀
+items:
+  - id: 光-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ひかる
+        correct: true
+      - kana: なかば
+        correct: false
+      - kana: キョウ
+        correct: false
+  - id: 光-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ひかり
+        correct: true
+      - kana: スウ
+        correct: false
+      - kana: きた
+        correct: false
+  - id: 光-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: まるい
+        correct: false
+      - kana: チャ
+        correct: false
+  - id: 光-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひかる
+        semantic: true
+        correct: true
+      - gloss_ja: たのしい
+        semantic: true
+        correct: false
+      - gloss_ja: よむ
+        semantic: true
+        correct: false
+  - id: 光-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

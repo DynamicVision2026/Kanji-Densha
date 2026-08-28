@@ -1,0 +1,73 @@
+character: 音
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: おと
+      type: kun
+      audio: audio/readings/304a3068.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おと。おん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おと。
+    耳に とどく。
+    音が する。
+surfaces:
+  - id: s0
+    word: 音
+    reading_id: r0
+    audio: audio/surfaces/97f3_0.mp3
+  - id: s1
+    word: 音
+    reading_id: r0
+    audio: audio/surfaces/97f3_1.mp3
+  - id: s2
+    word: 音
+    reading_id: r0
+    audio: audio/surfaces/304a3068_2.mp3
+  - id: s3
+    word: 足音
+    reading_id: r0
+    audio: audio/surfaces/8db397f3_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 立
+    - char: 日
+items:
+  - id: 音-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おと
+        correct: true
+      - kana: ひだり
+        correct: false
+      - kana: みっつ
+        correct: false
+  - id: 音-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おと。おん
+        semantic: true
+        correct: true
+      - gloss_ja: てん。そら
+        semantic: true
+        correct: false
+      - gloss_ja: とし。ねん
+        semantic: true
+        correct: false
+  - id: 音-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 計
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: はかる
+      type: kun
+      audio: audio/readings/306f304b308b.mp3
+    - id: r1
+      kana: ケイ
+      type: on
+      audio: audio/readings/30b130a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はかる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    けいさん。
+    数を はかる。
+    時計の 計。
+surfaces:
+  - id: s0
+    word: 計
+    reading_id: r0
+    audio: audio/surfaces/8a08_0.mp3
+  - id: s1
+    word: 計算
+    reading_id: r1
+    audio: audio/surfaces/8a087b97_1.mp3
+  - id: s2
+    word: 計算
+    reading_id: r1
+    audio: audio/surfaces/3051304430553093_2.mp3
+  - id: s3
+    word: 時計
+    reading_id: r1
+    audio: audio/surfaces/66428a08_3.mp3
+  - id: s4
+    word: 計画
+    reading_id: r1
+    audio: audio/surfaces/8a08753b_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 十
+items:
+  - id: 計-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はかる
+        correct: true
+      - kana: あね
+        correct: false
+      - kana: セツ
+        correct: false
+  - id: 計-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ケイ
+        correct: true
+      - kana: あかり
+        correct: false
+      - kana: かたる
+        correct: false
+  - id: 計-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はかる
+        semantic: true
+        correct: true
+      - gloss_ja: うお
+        semantic: true
+        correct: false
+      - gloss_ja: かぜ
+        semantic: true
+        correct: false
+  - id: 計-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 銀
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ギン
+      type: on
+      audio: audio/readings/30ae30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しろがね
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しろがね。
+    銀色の 光。
+    白く ひかる。
+surfaces:
+  - id: s0
+    word: 銀
+    reading_id: r0
+    audio: audio/surfaces/9280_0.mp3
+  - id: s1
+    word: 銀色
+    reading_id: r0
+    audio: audio/surfaces/92808272_1.mp3
+  - id: s2
+    word: 銀色
+    reading_id: r0
+    audio: audio/surfaces/304e30933044308d_2.mp3
+  - id: s3
+    word: 銀行
+    reading_id: r0
+    audio: audio/surfaces/9280884c_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 金
+    - char: 艮
+items:
+  - id: 銀-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ギン
+        correct: true
+      - kana: つぐ
+        correct: false
+      - kana: ゼン
+        correct: false
+  - id: 銀-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しろがね
+        semantic: true
+        correct: true
+      - gloss_ja: くら
+        semantic: true
+        correct: false
+      - gloss_ja: まったく
+        semantic: true
+        correct: false
+  - id: 銀-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

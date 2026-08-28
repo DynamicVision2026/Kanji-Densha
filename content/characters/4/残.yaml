@@ -1,0 +1,69 @@
+character: 残
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: のこる
+      type: kun
+      audio: audio/readings/306e3053308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のこる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のこる。
+    ご飯が 残る。
+    まだ ある。
+surfaces:
+  - id: s0
+    word: 残
+    reading_id: r0
+    audio: audio/surfaces/6b8b_0.mp3
+  - id: s1
+    word: 残る
+    reading_id: r0
+    audio: audio/surfaces/6b8b308b_1.mp3
+  - id: s2
+    word: 残る
+    reading_id: r0
+    audio: audio/surfaces/306e3053308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 歹
+    - char: 戈
+items:
+  - id: 残-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: のこる
+        correct: true
+      - kana: こころみる
+        correct: false
+      - kana: くら
+        correct: false
+  - id: 残-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のこる
+        semantic: true
+        correct: true
+      - gloss_ja: なく
+        semantic: true
+        correct: false
+      - gloss_ja: きわめる
+        semantic: true
+        correct: false
+  - id: 残-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

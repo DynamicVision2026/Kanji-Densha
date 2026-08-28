@@ -1,0 +1,85 @@
+character: 解
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: とく
+      type: kun
+      audio: audio/readings/3068304f.mp3
+    - id: r1
+      kana: とける
+      type: kun
+      audio: audio/readings/30683051308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とく。
+    問題が 解ける。
+    わかる こと。
+surfaces:
+  - id: s0
+    word: 解
+    reading_id: r0
+    audio: audio/surfaces/89e3_0.mp3
+  - id: s1
+    word: 解ける
+    reading_id: r1
+    audio: audio/surfaces/89e33051308b_1.mp3
+  - id: s2
+    word: 解ける
+    reading_id: r1
+    audio: audio/surfaces/30683051308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 角
+    - char: 刀
+    - char: 牛
+items:
+  - id: 解-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とく
+        correct: true
+      - kana: しめす
+        correct: false
+      - kana: せめる
+        correct: false
+  - id: 解-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: とける
+        correct: true
+      - kana: ます
+        correct: false
+      - kana: もえる
+        correct: false
+  - id: 解-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とく
+        semantic: true
+        correct: true
+      - gloss_ja: える
+        semantic: true
+        correct: false
+      - gloss_ja: かた
+        semantic: true
+        correct: false
+  - id: 解-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

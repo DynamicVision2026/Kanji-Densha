@@ -1,0 +1,73 @@
+character: 署
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショ
+      type: on
+      audio: audio/readings/30b730e7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しょ。やくしょ。なまえを かく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しょ。
+    署名する。
+    なまえを かく。
+surfaces:
+  - id: s0
+    word: 署
+    reading_id: r0
+    audio: audio/surfaces/7f72_0.mp3
+  - id: s1
+    word: 署名
+    reading_id: r0
+    audio: audio/surfaces/7f72540d_1.mp3
+  - id: s2
+    word: 署名
+    reading_id: r0
+    audio: audio/surfaces/3057308730813044_2.mp3
+  - id: s3
+    word: 部署
+    reading_id: r0
+    audio: audio/surfaces/90e87f72_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 罒
+    - char: 者
+items:
+  - id: 署-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショ
+        correct: true
+      - kana: した
+        correct: false
+      - kana: イキ
+        correct: false
+  - id: 署-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しょ。やくしょ。なまえを かく
+        semantic: true
+        correct: true
+      - gloss_ja: かなでる
+        semantic: true
+        correct: false
+      - gloss_ja: おがむ
+        semantic: true
+        correct: false
+  - id: 署-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

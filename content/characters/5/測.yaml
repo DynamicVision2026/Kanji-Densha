@@ -1,0 +1,69 @@
+character: 測
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: はかる
+      type: kun
+      audio: audio/readings/306f304b308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はかる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はかる。
+    長さを 測る。
+    しらべる。
+surfaces:
+  - id: s0
+    word: 測
+    reading_id: r0
+    audio: audio/surfaces/6e2c_0.mp3
+  - id: s1
+    word: 測る
+    reading_id: r0
+    audio: audio/surfaces/6e2c308b_1.mp3
+  - id: s2
+    word: 測る
+    reading_id: r0
+    audio: audio/surfaces/306f304b308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 則
+items:
+  - id: 測-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はかる
+        correct: true
+      - kana: せめる
+        correct: false
+      - kana: かう
+        correct: false
+  - id: 測-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はかる
+        semantic: true
+        correct: true
+      - gloss_ja: ならす
+        semantic: true
+        correct: false
+      - gloss_ja: そこなう
+        semantic: true
+        correct: false
+  - id: 測-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

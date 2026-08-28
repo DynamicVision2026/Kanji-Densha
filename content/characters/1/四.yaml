@@ -1,0 +1,120 @@
+character: 四
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: よ
+      type: kun
+      audio: audio/readings/3088.mp3
+    - id: r1
+      kana: よっつ
+      type: kun
+      audio: audio/readings/308830633064.mp3
+    - id: r2
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よっつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    よっつ。
+    かずの 四。
+    四つ かぞえる。
+surfaces:
+  - id: s0
+    word: 四
+    reading_id: r0
+    audio: audio/surfaces/56db_0.mp3
+  - id: s1
+    word: 四つ
+    reading_id: r1
+    audio: audio/surfaces/56db3064_1.mp3
+  - id: s2
+    word: 四つ
+    reading_id: r1
+    audio: audio/surfaces/308830633064_2.mp3
+  - id: s3
+    word: 四月
+    reading_id: r2
+    audio: audio/surfaces/56db6708_3.mp3
+  - id: s4
+    word: 四季
+    reading_id: r2
+    audio: audio/surfaces/56db5b63_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: よこ
+      a11y_ja: よこ
+items:
+  - id: 四-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: よ
+        correct: true
+      - kana: あし
+        correct: false
+      - kana: ソウ
+        correct: false
+  - id: 四-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: よっつ
+        correct: true
+      - kana: オウ
+        correct: false
+      - kana: まるい
+        correct: false
+  - id: 四-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: シ
+        correct: true
+      - kana: おんな
+        correct: false
+      - kana: とお
+        correct: false
+  - id: 四-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よっつ
+        semantic: true
+        correct: true
+      - gloss_ja: ここのつ
+        semantic: true
+        correct: false
+      - gloss_ja: そら。から
+        semantic: true
+        correct: false
+  - id: 四-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

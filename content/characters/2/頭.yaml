@@ -1,0 +1,92 @@
+character: 頭
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あたま
+      type: kun
+      audio: audio/readings/3042305f307e.mp3
+    - id: r1
+      kana: トウ
+      type: on
+      audio: audio/readings/30c830a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あたま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あたま。
+    頭を あらう。
+    かんがえる ところ。
+surfaces:
+  - id: s0
+    word: 頭
+    reading_id: r0
+    audio: audio/surfaces/982d_0.mp3
+  - id: s1
+    word: 頭
+    reading_id: r0
+    audio: audio/surfaces/982d_1.mp3
+  - id: s2
+    word: 頭
+    reading_id: r0
+    audio: audio/surfaces/3042305f307e_2.mp3
+  - id: s3
+    word: 先頭
+    reading_id: r1
+    audio: audio/surfaces/5148982d_3.mp3
+  - id: s4
+    word: 頭部
+    reading_id: r1
+    audio: audio/surfaces/982d90e8_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 豆
+    - char: 頁
+items:
+  - id: 頭-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あたま
+        correct: true
+      - kana: かた
+        correct: false
+      - kana: シ
+        correct: false
+  - id: 頭-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: トウ
+        correct: true
+      - kana: おや
+        correct: false
+      - kana: ホウ
+        correct: false
+  - id: 頭-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あたま
+        semantic: true
+        correct: true
+      - gloss_ja: おもう
+        semantic: true
+        correct: false
+      - gloss_ja: え。えがく
+        semantic: true
+        correct: false
+  - id: 頭-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 部
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ブ
+      type: on
+      audio: audio/readings/30d6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: べ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぶ。
+    部屋の 部。
+    くぎった ば。
+surfaces:
+  - id: s0
+    word: 部
+    reading_id: r0
+    audio: audio/surfaces/90e8_0.mp3
+  - id: s1
+    word: 部屋
+    reading_id: r0
+    audio: audio/surfaces/90e85c4b_1.mp3
+  - id: s2
+    word: 部屋
+    reading_id: r0
+    audio: audio/surfaces/30783084_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 咅
+    - char: ⻏
+items:
+  - id: 部-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ブ
+        correct: true
+      - kana: かみ
+        correct: false
+      - kana: ゆ
+        correct: false
+  - id: 部-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: べ
+        semantic: true
+        correct: true
+      - gloss_ja: さだめる
+        semantic: true
+        correct: false
+      - gloss_ja: よう。うみ。せいよう
+        semantic: true
+        correct: false
+  - id: 部-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

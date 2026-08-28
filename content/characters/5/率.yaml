@@ -1,0 +1,69 @@
+character: 率
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ひきいる
+      type: kun
+      audio: audio/readings/3072304d3044308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひきいる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひきいる。
+    組を 率いる。
+    わりあい。
+surfaces:
+  - id: s0
+    word: 率
+    reading_id: r0
+    audio: audio/surfaces/7387_0.mp3
+  - id: s1
+    word: 率いる
+    reading_id: r0
+    audio: audio/surfaces/73873044308b_1.mp3
+  - id: s2
+    word: 率いる
+    reading_id: r0
+    audio: audio/surfaces/3072304d3044308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 玄
+    - char: 十
+items:
+  - id: 率-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ひきいる
+        correct: true
+      - kana: もえる
+        correct: false
+      - kana: ソウ
+        correct: false
+  - id: 率-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひきいる
+        semantic: true
+        correct: true
+      - gloss_ja: デシメートル
+        semantic: true
+        correct: false
+      - gloss_ja: さ。しらべる
+        semantic: true
+        correct: false
+  - id: 率-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

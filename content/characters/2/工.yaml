@@ -1,0 +1,84 @@
+character: 工
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こう。つくる しごと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こうじょう。
+    ものを つくる。
+    工作の 工。
+surfaces:
+  - id: s0
+    word: 工
+    reading_id: r0
+    audio: audio/surfaces/5de5_0.mp3
+  - id: s1
+    word: 工場
+    reading_id: r0
+    audio: audio/surfaces/5de55834_1.mp3
+  - id: s2
+    word: 工場
+    reading_id: r0
+    audio: audio/surfaces/30533046305830873046_2.mp3
+  - id: s3
+    word: 工事
+    reading_id: r0
+    audio: audio/surfaces/5de54e8b_3.mp3
+  - id: s4
+    word: 工作
+    reading_id: r0
+    audio: audio/surfaces/5de54f5c_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+items:
+  - id: 工-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: かたる
+        correct: false
+      - kana: くび
+        correct: false
+  - id: 工-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こう。つくる しごと
+        semantic: true
+        correct: true
+      - gloss_ja: そと
+        semantic: true
+        correct: false
+      - gloss_ja: おなじ
+        semantic: true
+        correct: false
+  - id: 工-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

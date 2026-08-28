@@ -1,0 +1,102 @@
+character: 心
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: こころ
+      type: kun
+      audio: audio/readings/30533053308d.mp3
+    - id: r1
+      kana: シン
+      type: on
+      audio: audio/readings/30b730f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こころ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こころ。
+    やさしい 心。
+    むねの なか。
+surfaces:
+  - id: s0
+    word: 心
+    reading_id: r0
+    audio: audio/surfaces/5fc3_0.mp3
+  - id: s1
+    word: 心
+    reading_id: r0
+    audio: audio/surfaces/5fc3_1.mp3
+  - id: s2
+    word: 心
+    reading_id: r0
+    audio: audio/surfaces/30533053308d_2.mp3
+  - id: s3
+    word: 安心
+    reading_id: r1
+    audio: audio/surfaces/5b895fc3_3.mp3
+  - id: s4
+    word: 心臓
+    reading_id: r1
+    audio: audio/surfaces/5fc381d3_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: てん
+      a11y_ja: てん
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: てん
+      a11y_ja: てん3
+    - order: 4
+      type: てん
+      a11y_ja: てん4
+items:
+  - id: 心-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: こころ
+        correct: true
+      - kana: あいだ
+        correct: false
+      - kana: まじわる
+        correct: false
+  - id: 心-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シン
+        correct: true
+      - kana: いもうと
+        correct: false
+      - kana: コ
+        correct: false
+  - id: 心-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こころ
+        semantic: true
+        correct: true
+      - gloss_ja: あに
+        semantic: true
+        correct: false
+      - gloss_ja: はは
+        semantic: true
+        correct: false
+  - id: 心-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 堂
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ドウ
+      type: on
+      audio: audio/readings/30c930a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: どう。おおやけの たてもの
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    どう。
+    食堂で たべる。
+    おおきな いえ。
+surfaces:
+  - id: s0
+    word: 堂
+    reading_id: r0
+    audio: audio/surfaces/5802_0.mp3
+  - id: s1
+    word: 食堂
+    reading_id: r0
+    audio: audio/surfaces/98df5802_1.mp3
+  - id: s2
+    word: 食堂
+    reading_id: r0
+    audio: audio/surfaces/30573087304f30693046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尚
+    - char: 土
+items:
+  - id: 堂-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ドウ
+        correct: true
+      - kana: ジュツ
+        correct: false
+      - kana: サイ
+        correct: false
+  - id: 堂-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: どう。おおやけの たてもの
+        semantic: true
+        correct: true
+      - gloss_ja: かんむり
+        semantic: true
+        correct: false
+      - gloss_ja: わざわい
+        semantic: true
+        correct: false
+  - id: 堂-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

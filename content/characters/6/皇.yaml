@@ -1,0 +1,92 @@
+character: 皇
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+    - id: r1
+      kana: オウ
+      type: on
+      audio: audio/readings/30aa30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こう。てんのう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こう。
+    天皇の 名。
+    きみ。
+surfaces:
+  - id: s0
+    word: 皇
+    reading_id: r0
+    audio: audio/surfaces/7687_0.mp3
+  - id: s1
+    word: 天皇
+    reading_id: r1
+    audio: audio/surfaces/59297687_1.mp3
+  - id: s2
+    word: 天皇
+    reading_id: r1
+    audio: audio/surfaces/30663093306e3046_2.mp3
+  - id: s3
+    word: 皇帝
+    reading_id: r0
+    audio: audio/surfaces/76875e1d_3.mp3
+  - id: s4
+    word: 皇室
+    reading_id: r0
+    audio: audio/surfaces/76875ba4_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 白
+    - char: 王
+items:
+  - id: 皇-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: べに
+        correct: false
+      - kana: オン
+        correct: false
+  - id: 皇-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: オウ
+        correct: true
+      - kana: そう
+        correct: false
+      - kana: いずみ
+        correct: false
+  - id: 皇-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こう。てんのう
+        semantic: true
+        correct: true
+      - gloss_ja: おとずれる
+        semantic: true
+        correct: false
+      - gloss_ja: かぶ
+        semantic: true
+        correct: false
+  - id: 皇-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

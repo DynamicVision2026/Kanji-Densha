@@ -1,0 +1,92 @@
+character: 古
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ふるい
+      type: kun
+      audio: audio/readings/3075308b3044.mp3
+    - id: r1
+      kana: コ
+      type: on
+      audio: audio/readings/30b3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふるい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふるい。
+    古い ほん。
+    ながい とき。
+surfaces:
+  - id: s0
+    word: 古
+    reading_id: r0
+    audio: audio/surfaces/53e4_0.mp3
+  - id: s1
+    word: 古い
+    reading_id: r0
+    audio: audio/surfaces/53e43044_1.mp3
+  - id: s2
+    word: 古い
+    reading_id: r0
+    audio: audio/surfaces/3075308b3044_2.mp3
+  - id: s3
+    word: 古代
+    reading_id: r1
+    audio: audio/surfaces/53e44ee3_3.mp3
+  - id: s4
+    word: 古典
+    reading_id: r1
+    audio: audio/surfaces/53e45178_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 十
+    - char: 口
+items:
+  - id: 古-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ふるい
+        correct: true
+      - kana: たかい
+        correct: false
+      - kana: チャ
+        correct: false
+  - id: 古-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コ
+        correct: true
+      - kana: やしろ
+        correct: false
+      - kana: うち
+        correct: false
+  - id: 古-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふるい
+        semantic: true
+        correct: true
+      - gloss_ja: あたる
+        semantic: true
+        correct: false
+      - gloss_ja: かみ
+        semantic: true
+        correct: false
+  - id: 古-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

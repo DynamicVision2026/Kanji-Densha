@@ -1,0 +1,70 @@
+character: 労
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ロウ
+      type: on
+      audio: audio/readings/30ed30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ろうする
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ろう。
+    労働する。
+    つかれる しごと。
+surfaces:
+  - id: s0
+    word: 労
+    reading_id: r0
+    audio: audio/surfaces/52b4_0.mp3
+  - id: s1
+    word: 労働
+    reading_id: r0
+    audio: audio/surfaces/52b450cd_1.mp3
+  - id: s2
+    word: 労働
+    reading_id: r0
+    audio: audio/surfaces/308d304630693046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺍
+    - char: 冖
+    - char: 力
+items:
+  - id: 労-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ロウ
+        correct: true
+      - kana: むれ
+        correct: false
+      - kana: たね
+        correct: false
+  - id: 労-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ろうする
+        semantic: true
+        correct: true
+      - gloss_ja: すこやか
+        semantic: true
+        correct: false
+      - gloss_ja: さ。たすける
+        semantic: true
+        correct: false
+  - id: 労-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

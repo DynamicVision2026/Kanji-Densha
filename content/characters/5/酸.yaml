@@ -1,0 +1,73 @@
+character: 酸
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: サン
+      type: on
+      audio: audio/readings/30b530f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すい。
+    酸素が いる。
+    すっぱい。
+surfaces:
+  - id: s0
+    word: 酸
+    reading_id: r0
+    audio: audio/surfaces/9178_0.mp3
+  - id: s1
+    word: 酸素
+    reading_id: r0
+    audio: audio/surfaces/91787d20_1.mp3
+  - id: s2
+    word: 酸素
+    reading_id: r0
+    audio: audio/surfaces/30553093305d_2.mp3
+  - id: s3
+    word: 酸性
+    reading_id: r0
+    audio: audio/surfaces/91786027_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 酉
+    - char: 夋
+items:
+  - id: 酸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サン
+        correct: true
+      - kana: トウ
+        correct: false
+      - kana: せめる
+        correct: false
+  - id: 酸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すい
+        semantic: true
+        correct: true
+      - gloss_ja: たち
+        semantic: true
+        correct: false
+      - gloss_ja: あばく
+        semantic: true
+        correct: false
+  - id: 酸-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

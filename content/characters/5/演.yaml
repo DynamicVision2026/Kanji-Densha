@@ -1,0 +1,69 @@
+character: 演
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: エン
+      type: on
+      audio: audio/readings/30a830f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: えん。えんずる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    えんじる。
+    役を 演じる。
+    みせる こと。
+surfaces:
+  - id: s0
+    word: 演
+    reading_id: r0
+    audio: audio/surfaces/6f14_0.mp3
+  - id: s1
+    word: 演じる
+    reading_id: r0
+    audio: audio/surfaces/6f143058308b_1.mp3
+  - id: s2
+    word: 演じる
+    reading_id: r0
+    audio: audio/surfaces/304830933058308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 寅
+items:
+  - id: 演-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: エン
+        correct: true
+      - kana: ゾク
+        correct: false
+      - kana: ジョ
+        correct: false
+  - id: 演-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: えん。えんずる
+        semantic: true
+        correct: true
+      - gloss_ja: もと
+        semantic: true
+        correct: false
+      - gloss_ja: とく
+        semantic: true
+        correct: false
+  - id: 演-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

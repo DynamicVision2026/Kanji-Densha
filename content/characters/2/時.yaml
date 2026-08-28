@@ -1,0 +1,92 @@
+character: 時
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: とき
+      type: kun
+      audio: audio/readings/3068304d.mp3
+    - id: r1
+      kana: ジ
+      type: on
+      audio: audio/readings/30b8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とき。
+    いまの 時。
+    時計の 時。
+surfaces:
+  - id: s0
+    word: 時
+    reading_id: r0
+    audio: audio/surfaces/6642_0.mp3
+  - id: s1
+    word: 時
+    reading_id: r0
+    audio: audio/surfaces/6642_1.mp3
+  - id: s2
+    word: 時
+    reading_id: r0
+    audio: audio/surfaces/3068304d_2.mp3
+  - id: s3
+    word: 時間
+    reading_id: r1
+    audio: audio/surfaces/66429593_3.mp3
+  - id: s4
+    word: 時計
+    reading_id: r1
+    audio: audio/surfaces/66428a08_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 寺
+items:
+  - id: 時-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とき
+        correct: true
+      - kana: ながい
+        correct: false
+      - kana: かぜ
+        correct: false
+  - id: 時-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ジ
+        correct: true
+      - kana: カツ
+        correct: false
+      - kana: シュウ
+        correct: false
+  - id: 時-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とき
+        semantic: true
+        correct: true
+      - gloss_ja: いく
+        semantic: true
+        correct: false
+      - gloss_ja: ことわり
+        semantic: true
+        correct: false
+  - id: 時-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

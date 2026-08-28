@@ -1,0 +1,92 @@
+character: 国
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: くに
+      type: kun
+      audio: audio/readings/304f306b.mp3
+    - id: r1
+      kana: コク
+      type: on
+      audio: audio/readings/30b330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くに
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くに。
+    わたしの 国。
+    はたが ある。
+surfaces:
+  - id: s0
+    word: 国
+    reading_id: r0
+    audio: audio/surfaces/56fd_0.mp3
+  - id: s1
+    word: 国
+    reading_id: r0
+    audio: audio/surfaces/56fd_1.mp3
+  - id: s2
+    word: 国
+    reading_id: r0
+    audio: audio/surfaces/304f306b_2.mp3
+  - id: s3
+    word: 外国
+    reading_id: r1
+    audio: audio/surfaces/591656fd_3.mp3
+  - id: s4
+    word: 国民
+    reading_id: r1
+    audio: audio/surfaces/56fd6c11_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 囗
+    - char: 玉
+items:
+  - id: 国-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くに
+        correct: true
+      - kana: かたる
+        correct: false
+      - kana: くび
+        correct: false
+  - id: 国-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コク
+        correct: true
+      - kana: まじわる
+        correct: false
+      - kana: チ
+        correct: false
+  - id: 国-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くに
+        semantic: true
+        correct: true
+      - gloss_ja: ゆき
+        semantic: true
+        correct: false
+      - gloss_ja: ふるい
+        semantic: true
+        correct: false
+  - id: 国-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

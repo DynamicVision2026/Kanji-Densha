@@ -1,0 +1,73 @@
+character: 典
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: テン
+      type: on
+      audio: audio/readings/30c630f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: てん。のり。じてん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    てん。
+    辞典を ひく。
+    のり。
+surfaces:
+  - id: s0
+    word: 典
+    reading_id: r0
+    audio: audio/surfaces/5178_0.mp3
+  - id: s1
+    word: 辞典
+    reading_id: r0
+    audio: audio/surfaces/8f9e5178_1.mp3
+  - id: s2
+    word: 辞典
+    reading_id: r0
+    audio: audio/surfaces/305830663093_2.mp3
+  - id: s3
+    word: 古典
+    reading_id: r0
+    audio: audio/surfaces/53e45178_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 曲
+    - char: 八
+items:
+  - id: 典-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: テン
+        correct: true
+      - kana: ガ
+        correct: false
+      - kana: コウ
+        correct: false
+  - id: 典-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: てん。のり。じてん
+        semantic: true
+        correct: true
+      - gloss_ja: ころも
+        semantic: true
+        correct: false
+      - gloss_ja: おか
+        semantic: true
+        correct: false
+  - id: 典-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

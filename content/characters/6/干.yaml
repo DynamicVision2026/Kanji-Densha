@@ -1,0 +1,76 @@
+character: 干
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ほす
+      type: kun
+      audio: audio/readings/307b3059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ほす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ほす。
+    布を 干す。
+    水を とばす。
+surfaces:
+  - id: s0
+    word: 干
+    reading_id: r0
+    audio: audio/surfaces/5e72_0.mp3
+  - id: s1
+    word: 干す
+    reading_id: r0
+    audio: audio/surfaces/5e723059_1.mp3
+  - id: s2
+    word: 干す
+    reading_id: r0
+    audio: audio/surfaces/307b3059_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ2
+    - order: 3
+      type: たて
+      a11y_ja: たて
+items:
+  - id: 干-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ほす
+        correct: true
+      - kana: はい
+        correct: false
+      - kana: よい
+        correct: false
+  - id: 干-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ほす
+        semantic: true
+        correct: true
+      - gloss_ja: なみ
+        semantic: true
+        correct: false
+      - gloss_ja: おん。めぐみ
+        semantic: true
+        correct: false
+  - id: 干-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

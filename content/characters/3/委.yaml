@@ -1,0 +1,84 @@
+character: 委
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゆだねる
+      type: kun
+      audio: audio/readings/30863060306d308b.mp3
+    - id: r1
+      kana: イ
+      type: on
+      audio: audio/readings/30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ゆだねる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ゆだねる。
+    委員の 委。
+    まかす こと。
+surfaces:
+  - id: s0
+    word: 委
+    reading_id: r0
+    audio: audio/surfaces/59d4_0.mp3
+  - id: s1
+    word: 委員
+    reading_id: r1
+    audio: audio/surfaces/59d454e1_1.mp3
+  - id: s2
+    word: 委員
+    reading_id: r1
+    audio: audio/surfaces/304430443093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 女
+items:
+  - id: 委-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゆだねる
+        correct: true
+      - kana: ベン
+        correct: false
+      - kana: よこ
+        correct: false
+  - id: 委-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: イ
+        correct: true
+      - kana: おちる
+        correct: false
+      - kana: つぎ
+        correct: false
+  - id: 委-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ゆだねる
+        semantic: true
+        correct: true
+      - gloss_ja: ふく。しあわせ
+        semantic: true
+        correct: false
+      - gloss_ja: かん。漢字の 漢
+        semantic: true
+        correct: false
+  - id: 委-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

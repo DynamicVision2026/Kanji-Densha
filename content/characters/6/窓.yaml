@@ -1,0 +1,70 @@
+character: 窓
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: まど
+      type: kun
+      audio: audio/readings/307e3069.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まど
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まど。
+    大きな 窓。
+    光が はいる。
+surfaces:
+  - id: s0
+    word: 窓
+    reading_id: r0
+    audio: audio/surfaces/7a93_0.mp3
+  - id: s1
+    word: 窓
+    reading_id: r0
+    audio: audio/surfaces/7a93_1.mp3
+  - id: s2
+    word: 窓
+    reading_id: r0
+    audio: audio/surfaces/307e3069_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 穴
+    - char: 厶
+    - char: 心
+items:
+  - id: 窓-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まど
+        correct: true
+      - kana: ジュン
+        correct: false
+      - kana: おさない
+        correct: false
+  - id: 窓-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まど
+        semantic: true
+        correct: true
+      - gloss_ja: みなもと
+        semantic: true
+        correct: false
+      - gloss_ja: たて
+        semantic: true
+        correct: false
+  - id: 窓-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

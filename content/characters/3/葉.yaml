@@ -1,0 +1,70 @@
+character: 葉
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: は
+      type: kun
+      audio: audio/readings/306f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: は
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    は。
+    緑の 葉。
+    木に つく。
+surfaces:
+  - id: s0
+    word: 葉
+    reading_id: r0
+    audio: audio/surfaces/8449_0.mp3
+  - id: s1
+    word: 葉
+    reading_id: r0
+    audio: audio/surfaces/8449_1.mp3
+  - id: s2
+    word: 葉
+    reading_id: r0
+    audio: audio/surfaces/306f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 艹
+    - char: 世
+    - char: 木
+items:
+  - id: 葉-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: は
+        correct: true
+      - kana: はな
+        correct: false
+      - kana: わるい
+        correct: false
+  - id: 葉-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: は
+        semantic: true
+        correct: true
+      - gloss_ja: ひとしい
+        semantic: true
+        correct: false
+      - gloss_ja: じ
+        semantic: true
+        correct: false
+  - id: 葉-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

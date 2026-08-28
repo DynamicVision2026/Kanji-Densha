@@ -1,0 +1,102 @@
+character: 引
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: ひく
+      type: kun
+      audio: audio/readings/3072304f.mp3
+    - id: r1
+      kana: イン
+      type: on
+      audio: audio/readings/30a430f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひく。
+    いとを 引く。
+    こちらへ。
+surfaces:
+  - id: s0
+    word: 引
+    reading_id: r0
+    audio: audio/surfaces/5f15_0.mp3
+  - id: s1
+    word: 引く
+    reading_id: r0
+    audio: audio/surfaces/5f15304f_1.mp3
+  - id: s2
+    word: 引く
+    reading_id: r0
+    audio: audio/surfaces/3072304f_2.mp3
+  - id: s3
+    word: 引力
+    reading_id: r1
+    audio: audio/surfaces/5f15529b_3.mp3
+  - id: s4
+    word: 引用
+    reading_id: r1
+    audio: audio/surfaces/5f157528_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: おれ
+      a11y_ja: おれ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい
+    - order: 4
+      type: たて
+      a11y_ja: たて
+items:
+  - id: 引-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ひく
+        correct: true
+      - kana: サイ
+        correct: false
+      - kana: ツウ
+        correct: false
+  - id: 引-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: イン
+        correct: true
+      - kana: とおる
+        correct: false
+      - kana: まわる
+        correct: false
+  - id: 引-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひく
+        semantic: true
+        correct: true
+      - gloss_ja: き。ゆげ
+        semantic: true
+        correct: false
+      - gloss_ja: うる
+        semantic: true
+        correct: false
+  - id: 引-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

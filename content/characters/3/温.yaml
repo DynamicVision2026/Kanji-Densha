@@ -1,0 +1,84 @@
+character: 温
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: あたたか
+      type: kun
+      audio: audio/readings/3042305f305f304b.mp3
+    - id: r1
+      kana: あたたかい
+      type: kun
+      audio: audio/readings/3042305f305f304b3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あたたか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あたたかい。
+    温かい みず。
+    こころも あたたかい。
+surfaces:
+  - id: s0
+    word: 温
+    reading_id: r0
+    audio: audio/surfaces/6e29_0.mp3
+  - id: s1
+    word: 温かい
+    reading_id: r1
+    audio: audio/surfaces/6e29304b3044_1.mp3
+  - id: s2
+    word: 温かい
+    reading_id: r1
+    audio: audio/surfaces/3042305f305f304b3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 氵
+    - char: 昷
+items:
+  - id: 温-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あたたか
+        correct: true
+      - kana: ユウ
+        correct: false
+      - kana: つかえる
+        correct: false
+  - id: 温-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: あたたかい
+        correct: true
+      - kana: ととのえる
+        correct: false
+      - kana: ヨ
+        correct: false
+  - id: 温-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あたたか
+        semantic: true
+        correct: true
+      - gloss_ja: とばり
+        semantic: true
+        correct: false
+      - gloss_ja: ある
+        semantic: true
+        correct: false
+  - id: 温-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

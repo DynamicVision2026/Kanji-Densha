@@ -1,0 +1,80 @@
+character: 万
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: マン
+      type: on
+      audio: audio/readings/30de30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よろず
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まん。
+    一万えん。
+    とても おおきい かず。
+surfaces:
+  - id: s0
+    word: 万
+    reading_id: r0
+    audio: audio/surfaces/4e07_0.mp3
+  - id: s1
+    word: 一万
+    reading_id: r0
+    audio: audio/surfaces/4e004e07_1.mp3
+  - id: s2
+    word: 一万
+    reading_id: r0
+    audio: audio/surfaces/30443061307e3093_2.mp3
+  - id: s3
+    word: 万人
+    reading_id: r0
+    audio: audio/surfaces/4e074eba_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+items:
+  - id: 万-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: マン
+        correct: true
+      - kana: かど
+        correct: false
+      - kana: うしろ
+        correct: false
+  - id: 万-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よろず
+        semantic: true
+        correct: true
+      - gloss_ja: ゆき
+        semantic: true
+        correct: false
+      - gloss_ja: うま
+        semantic: true
+        correct: false
+  - id: 万-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

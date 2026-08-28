@@ -1,0 +1,69 @@
+character: 空
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: そら
+      type: kun
+      audio: audio/readings/305d3089.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: そら。から
+  category: harvest
+encounter:
+  art: null
+  template: motif:sora
+  copy_ja: |-
+    そら。
+    あおい 空。
+    どこまでも ひろい。
+surfaces:
+  - id: s0
+    word: 空
+    reading_id: r0
+    audio: audio/surfaces/7a7a_0.mp3
+  - id: s1
+    word: 空
+    reading_id: r0
+    audio: audio/surfaces/7a7a_1.mp3
+  - id: s2
+    word: 青空
+    reading_id: r0
+    audio: audio/surfaces/97527a7a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 穴
+    - char: 工
+items:
+  - id: 空-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: そら
+        correct: true
+      - kana: あかい
+        correct: false
+      - kana: セン
+        correct: false
+  - id: 空-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そら。から
+        semantic: true
+        correct: true
+      - gloss_ja: でる。だす
+        semantic: true
+        correct: false
+      - gloss_ja: ただしい
+        semantic: true
+        correct: false
+  - id: 空-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

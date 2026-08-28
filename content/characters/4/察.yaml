@@ -1,0 +1,73 @@
+character: 察
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: サツ
+      type: on
+      audio: audio/readings/30b530c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さつ。さっする。みて さとる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    察する。
+    警察に きく。
+    よく みる。
+surfaces:
+  - id: s0
+    word: 察
+    reading_id: r0
+    audio: audio/surfaces/5bdf_0.mp3
+  - id: s1
+    word: 警察
+    reading_id: r0
+    audio: audio/surfaces/8b665bdf_1.mp3
+  - id: s2
+    word: 警察
+    reading_id: r0
+    audio: audio/surfaces/3051304430553064_2.mp3
+  - id: s3
+    word: 観察
+    reading_id: r0
+    audio: audio/surfaces/89b35bdf_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 宀
+    - char: 祭
+items:
+  - id: 察-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サツ
+        correct: true
+      - kana: まいる
+        correct: false
+      - kana: あさい
+        correct: false
+  - id: 察-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さつ。さっする。みて さとる
+        semantic: true
+        correct: true
+      - gloss_ja: はなぶさ
+        semantic: true
+        correct: false
+      - gloss_ja: たから
+        semantic: true
+        correct: false
+  - id: 察-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

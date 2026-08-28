@@ -1,0 +1,69 @@
+character: 積
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: つむ
+      type: kun
+      audio: audio/readings/30643080.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つむ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つむ。
+    箱を 積む。
+    かさねる。
+surfaces:
+  - id: s0
+    word: 積
+    reading_id: r0
+    audio: audio/surfaces/7a4d_0.mp3
+  - id: s1
+    word: 積む
+    reading_id: r0
+    audio: audio/surfaces/7a4d3080_1.mp3
+  - id: s2
+    word: 積む
+    reading_id: r0
+    audio: audio/surfaces/30643080_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 責
+items:
+  - id: 積-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: つむ
+        correct: true
+      - kana: さい
+        correct: false
+      - kana: しずか
+        correct: false
+  - id: 積-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つむ
+        semantic: true
+        correct: true
+      - gloss_ja: しるし
+        semantic: true
+        correct: false
+      - gloss_ja: はたす
+        semantic: true
+        correct: false
+  - id: 積-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

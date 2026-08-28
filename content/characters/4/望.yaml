@@ -1,0 +1,70 @@
+character: 望
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: のぞむ
+      type: kun
+      audio: audio/readings/306e305e3080.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のぞむ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のぞむ。
+    空を 望む。
+    みはるかす。
+surfaces:
+  - id: s0
+    word: 望
+    reading_id: r0
+    audio: audio/surfaces/671b_0.mp3
+  - id: s1
+    word: 望む
+    reading_id: r0
+    audio: audio/surfaces/671b3080_1.mp3
+  - id: s2
+    word: 望む
+    reading_id: r0
+    audio: audio/surfaces/306e305e3080_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 亡
+    - char: 月
+    - char: 王
+items:
+  - id: 望-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: のぞむ
+        correct: true
+      - kana: かなめ
+        correct: false
+      - kana: ガイ
+        correct: false
+  - id: 望-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のぞむ
+        semantic: true
+        correct: true
+      - gloss_ja: ふ。〜でない
+        semantic: true
+        correct: false
+      - gloss_ja: わかれる
+        semantic: true
+        correct: false
+  - id: 望-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

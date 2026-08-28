@@ -1,0 +1,73 @@
+character: 査
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: サ
+      type: on
+      audio: audio/readings/30b5.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さ。しらべる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しらべる。
+    調査する。
+    よく みる。
+surfaces:
+  - id: s0
+    word: 査
+    reading_id: r0
+    audio: audio/surfaces/67fb_0.mp3
+  - id: s1
+    word: 調査
+    reading_id: r0
+    audio: audio/surfaces/8abf67fb_1.mp3
+  - id: s2
+    word: 調査
+    reading_id: r0
+    audio: audio/surfaces/3061308730463055_2.mp3
+  - id: s3
+    word: 検査
+    reading_id: r0
+    audio: audio/surfaces/691c67fb_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 且
+items:
+  - id: 査-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サ
+        correct: true
+      - kana: ショウ
+        correct: false
+      - kana: ザイ
+        correct: false
+  - id: 査-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さ。しらべる
+        semantic: true
+        correct: true
+      - gloss_ja: すい
+        semantic: true
+        correct: false
+      - gloss_ja: たけ
+        semantic: true
+        correct: false
+  - id: 査-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

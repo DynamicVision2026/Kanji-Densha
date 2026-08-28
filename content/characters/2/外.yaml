@@ -1,0 +1,73 @@
+character: 外
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: そと
+      type: kun
+      audio: audio/readings/305d3068.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: そと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    そと。
+    外に でる。
+    うちと ちがう。
+surfaces:
+  - id: s0
+    word: 外
+    reading_id: r0
+    audio: audio/surfaces/5916_0.mp3
+  - id: s1
+    word: 外
+    reading_id: r0
+    audio: audio/surfaces/5916_1.mp3
+  - id: s2
+    word: 外
+    reading_id: r0
+    audio: audio/surfaces/305d3068_2.mp3
+  - id: s3
+    word: 外側
+    reading_id: r0
+    audio: audio/surfaces/59165074_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 夕
+    - char: 卜
+items:
+  - id: 外-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: そと
+        correct: true
+      - kana: きる
+        correct: false
+      - kana: ひがし
+        correct: false
+  - id: 外-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そと
+        semantic: true
+        correct: true
+      - gloss_ja: むぎ
+        semantic: true
+        correct: false
+      - gloss_ja: ば
+        semantic: true
+        correct: false
+  - id: 外-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

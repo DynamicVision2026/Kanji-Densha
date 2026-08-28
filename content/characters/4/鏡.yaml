@@ -1,0 +1,69 @@
+character: 鏡
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: かがみ
+      type: kun
+      audio: audio/readings/304b304c307f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かがみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かがみ。
+    丸い 鏡。
+    顔を うつす。
+surfaces:
+  - id: s0
+    word: 鏡
+    reading_id: r0
+    audio: audio/surfaces/93e1_0.mp3
+  - id: s1
+    word: 鏡
+    reading_id: r0
+    audio: audio/surfaces/93e1_1.mp3
+  - id: s2
+    word: 鏡
+    reading_id: r0
+    audio: audio/surfaces/304b304c307f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 金
+    - char: 竟
+items:
+  - id: 鏡-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かがみ
+        correct: true
+      - kana: さかえる
+        correct: false
+      - kana: ケイ
+        correct: false
+  - id: 鏡-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かがみ
+        semantic: true
+        correct: true
+      - gloss_ja: わらう
+        semantic: true
+        correct: false
+      - gloss_ja: い
+        semantic: true
+        correct: false
+  - id: 鏡-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

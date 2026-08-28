@@ -1,0 +1,73 @@
+character: 園
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: エン
+      type: on
+      audio: audio/readings/30a830f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: その
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    その。
+    公園の 園。
+    花が ある。
+surfaces:
+  - id: s0
+    word: 園
+    reading_id: r0
+    audio: audio/surfaces/5712_0.mp3
+  - id: s1
+    word: 公園
+    reading_id: r0
+    audio: audio/surfaces/516c5712_1.mp3
+  - id: s2
+    word: 公園
+    reading_id: r0
+    audio: audio/surfaces/3053304630483093_2.mp3
+  - id: s3
+    word: 動物園
+    reading_id: r0
+    audio: audio/surfaces/52d572695712_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 囗
+    - char: 袁
+items:
+  - id: 園-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: エン
+        correct: true
+      - kana: こえ
+        correct: false
+      - kana: かたな
+        correct: false
+  - id: 園-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: その
+        semantic: true
+        correct: true
+      - gloss_ja: とり
+        semantic: true
+        correct: false
+      - gloss_ja: いま
+        semantic: true
+        correct: false
+  - id: 園-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,102 @@
+character: 内
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: うち
+      type: kun
+      audio: audio/readings/30463061.mp3
+    - id: r1
+      kana: ナイ
+      type: on
+      audio: audio/readings/30ca30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うち
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うち。
+    家の 内。
+    そとと ちがう。
+surfaces:
+  - id: s0
+    word: 内
+    reading_id: r0
+    audio: audio/surfaces/5185_0.mp3
+  - id: s1
+    word: 内
+    reading_id: r0
+    audio: audio/surfaces/5185_1.mp3
+  - id: s2
+    word: 内
+    reading_id: r0
+    audio: audio/surfaces/30463061_2.mp3
+  - id: s3
+    word: 内容
+    reading_id: r1
+    audio: audio/surfaces/51855bb9_3.mp3
+  - id: s4
+    word: 国内
+    reading_id: r1
+    audio: audio/surfaces/56fd5185_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 内-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うち
+        correct: true
+      - kana: はる
+        correct: false
+      - kana: なかば
+        correct: false
+  - id: 内-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ナイ
+        correct: true
+      - kana: チョク
+        correct: false
+      - kana: ガ
+        correct: false
+  - id: 内-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うち
+        semantic: true
+        correct: true
+      - gloss_ja: からだ
+        semantic: true
+        correct: false
+      - gloss_ja: かんがえる
+        semantic: true
+        correct: false
+  - id: 内-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 冊
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: サツ
+      type: on
+      audio: audio/readings/30b530c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さつ。
+    本 一冊。
+    とじた もの。
+surfaces:
+  - id: s0
+    word: 冊
+    reading_id: r0
+    audio: audio/surfaces/518a_0.mp3
+  - id: s1
+    word: 一冊
+    reading_id: r0
+    audio: audio/surfaces/4e00518a_1.mp3
+  - id: s2
+    word: 一冊
+    reading_id: r0
+    audio: audio/surfaces/3044306330553064_2.mp3
+  - id: s3
+    word: 冊子
+    reading_id: r0
+    audio: audio/surfaces/518a5b50_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 冂
+    - char: 廾
+items:
+  - id: 冊-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サツ
+        correct: true
+      - kana: いたる
+        correct: false
+      - kana: ならぶ
+        correct: false
+  - id: 冊-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふみ
+        semantic: true
+        correct: true
+      - gloss_ja: こまる
+        semantic: true
+        correct: false
+      - gloss_ja: たれる
+        semantic: true
+        correct: false
+  - id: 冊-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

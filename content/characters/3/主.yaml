@@ -1,0 +1,88 @@
+character: 主
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ぬし
+      type: kun
+      audio: audio/readings/306c3057.mp3
+    - id: r1
+      kana: シュ
+      type: on
+      audio: audio/readings/30b730e5.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ぬし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぬし。
+    主人の 主。
+    おもな ひと。
+surfaces:
+  - id: s0
+    word: 主
+    reading_id: r0
+    audio: audio/surfaces/4e3b_0.mp3
+  - id: s1
+    word: 主人
+    reading_id: r1
+    audio: audio/surfaces/4e3b4eba_1.mp3
+  - id: s2
+    word: 主人
+    reading_id: r1
+    audio: audio/surfaces/3057308530583093_2.mp3
+  - id: s3
+    word: 主義
+    reading_id: r1
+    audio: audio/surfaces/4e3b7fa9_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 丶
+    - char: 王
+items:
+  - id: 主-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ぬし
+        correct: true
+      - kana: とう
+        correct: false
+      - kana: みなと
+        correct: false
+  - id: 主-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シュ
+        correct: true
+      - kana: ハツ
+        correct: false
+      - kana: いそぐ
+        correct: false
+  - id: 主-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ぬし
+        semantic: true
+        correct: true
+      - gloss_ja: ねる
+        semantic: true
+        correct: false
+      - gloss_ja: みずうみ
+        semantic: true
+        correct: false
+  - id: 主-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

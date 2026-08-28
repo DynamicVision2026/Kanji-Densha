@@ -1,0 +1,92 @@
+character: 走
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: はしる
+      type: kun
+      audio: audio/readings/306f3057308b.mp3
+    - id: r1
+      kana: ソウ
+      type: on
+      audio: audio/readings/30bd30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はしる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はしる。
+    速く 走る。
+    足を うごかす。
+surfaces:
+  - id: s0
+    word: 走
+    reading_id: r0
+    audio: audio/surfaces/8d70_0.mp3
+  - id: s1
+    word: 走る
+    reading_id: r0
+    audio: audio/surfaces/8d70308b_1.mp3
+  - id: s2
+    word: 走る
+    reading_id: r0
+    audio: audio/surfaces/306f3057308b_2.mp3
+  - id: s3
+    word: 競走
+    reading_id: r1
+    audio: audio/surfaces/7af68d70_3.mp3
+  - id: s4
+    word: 走行
+    reading_id: r1
+    audio: audio/surfaces/8d70884c_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 止
+items:
+  - id: 走-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はしる
+        correct: true
+      - kana: ニク
+        correct: false
+      - kana: ゆみ
+        correct: false
+  - id: 走-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ソウ
+        correct: true
+      - kana: あに
+        correct: false
+      - kana: こえ
+        correct: false
+  - id: 走-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はしる
+        semantic: true
+        correct: true
+      - gloss_ja: ふゆ
+        semantic: true
+        correct: false
+      - gloss_ja: あね
+        semantic: true
+        correct: false
+  - id: 走-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

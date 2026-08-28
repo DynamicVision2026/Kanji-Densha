@@ -1,0 +1,69 @@
+character: 税
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゼイ
+      type: on
+      audio: audio/readings/30bc30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ぜい。ぜいきん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぜい。
+    税金を はらう。
+    くにへ。
+surfaces:
+  - id: s0
+    word: 税
+    reading_id: r0
+    audio: audio/surfaces/7a0e_0.mp3
+  - id: s1
+    word: 税金
+    reading_id: r0
+    audio: audio/surfaces/7a0e91d1_1.mp3
+  - id: s2
+    word: 税金
+    reading_id: r0
+    audio: audio/surfaces/305c3044304d3093_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 兑
+items:
+  - id: 税-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゼイ
+        correct: true
+      - kana: なさけ
+        correct: false
+      - kana: サン
+        correct: false
+  - id: 税-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ぜい。ぜいきん
+        semantic: true
+        correct: true
+      - gloss_ja: まじえる
+        semantic: true
+        correct: false
+      - gloss_ja: たけ
+        semantic: true
+        correct: false
+  - id: 税-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 医
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: イ
+      type: on
+      audio: audio/readings/30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いやす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    い。
+    医者の 医。
+    からだを みる。
+surfaces:
+  - id: s0
+    word: 医
+    reading_id: r0
+    audio: audio/surfaces/533b_0.mp3
+  - id: s1
+    word: 医者
+    reading_id: r0
+    audio: audio/surfaces/533b8005_1.mp3
+  - id: s2
+    word: 医者
+    reading_id: r0
+    audio: audio/surfaces/304430573083_2.mp3
+  - id: s3
+    word: 医学
+    reading_id: r0
+    audio: audio/surfaces/533b5b66_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 匚
+    - char: 矢
+items:
+  - id: 医-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イ
+        correct: true
+      - kana: ある
+        correct: false
+      - kana: カン
+        correct: false
+  - id: 医-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いやす
+        semantic: true
+        correct: true
+      - gloss_ja: つかう
+        semantic: true
+        correct: false
+      - gloss_ja: かわる
+        semantic: true
+        correct: false
+  - id: 医-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

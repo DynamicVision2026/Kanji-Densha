@@ -1,0 +1,69 @@
+character: 感
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: カン
+      type: on
+      audio: audio/readings/30ab30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かん。かんじる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かんじる。
+    心で 感じる。
+    こころの 動き。
+surfaces:
+  - id: s0
+    word: 感
+    reading_id: r0
+    audio: audio/surfaces/611f_0.mp3
+  - id: s1
+    word: 感じる
+    reading_id: r0
+    audio: audio/surfaces/611f3058308b_1.mp3
+  - id: s2
+    word: 感じる
+    reading_id: r0
+    audio: audio/surfaces/304b30933058308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 咸
+    - char: 心
+items:
+  - id: 感-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カン
+        correct: true
+      - kana: ひらく
+        correct: false
+      - kana: しぬ
+        correct: false
+  - id: 感-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かん。かんじる
+        semantic: true
+        correct: true
+      - gloss_ja: くら
+        semantic: true
+        correct: false
+      - gloss_ja: まったく
+        semantic: true
+        correct: false
+  - id: 感-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

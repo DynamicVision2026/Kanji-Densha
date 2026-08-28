@@ -1,0 +1,73 @@
+character: 声
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: こえ
+      type: kun
+      audio: audio/readings/30533048.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こえ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こえ。
+    大きな 声。
+    耳に とどく。
+surfaces:
+  - id: s0
+    word: 声
+    reading_id: r0
+    audio: audio/surfaces/58f0_0.mp3
+  - id: s1
+    word: 声
+    reading_id: r0
+    audio: audio/surfaces/58f0_1.mp3
+  - id: s2
+    word: 声
+    reading_id: r0
+    audio: audio/surfaces/30533048_2.mp3
+  - id: s3
+    word: 大声
+    reading_id: r0
+    audio: audio/surfaces/592758f0_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 士
+    - char: 尸
+items:
+  - id: 声-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: こえ
+        correct: true
+      - kana: いもうと
+        correct: false
+      - kana: エ
+        correct: false
+  - id: 声-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こえ
+        semantic: true
+        correct: true
+      - gloss_ja: かど
+        semantic: true
+        correct: false
+      - gloss_ja: みち
+        semantic: true
+        correct: false
+  - id: 声-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

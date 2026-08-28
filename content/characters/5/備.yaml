@@ -1,0 +1,69 @@
+character: 備
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: そなえる
+      type: kun
+      audio: audio/readings/305d306a3048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: そなえる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    そなえる。
+    災害に 備える。
+    用意。
+surfaces:
+  - id: s0
+    word: 備
+    reading_id: r0
+    audio: audio/surfaces/5099_0.mp3
+  - id: s1
+    word: 備える
+    reading_id: r0
+    audio: audio/surfaces/50993048308b_1.mp3
+  - id: s2
+    word: 備える
+    reading_id: r0
+    audio: audio/surfaces/305d306a3048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 萹
+items:
+  - id: 備-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: そなえる
+        correct: true
+      - kana: まねく
+        correct: false
+      - kana: ある
+        correct: false
+  - id: 備-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: そなえる
+        semantic: true
+        correct: true
+      - gloss_ja: かまえる
+        semantic: true
+        correct: false
+      - gloss_ja: まかせる
+        semantic: true
+        correct: false
+  - id: 備-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

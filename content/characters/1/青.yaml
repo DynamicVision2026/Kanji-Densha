@@ -1,0 +1,92 @@
+character: 青
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: あお
+      type: kun
+      audio: audio/readings/3042304a.mp3
+    - id: r1
+      kana: あおい
+      type: kun
+      audio: audio/readings/3042304a3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あおい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あおい。
+    青い そら。
+    青の いろ。
+surfaces:
+  - id: s0
+    word: 青
+    reading_id: r0
+    audio: audio/surfaces/9752_0.mp3
+  - id: s1
+    word: 青い
+    reading_id: r1
+    audio: audio/surfaces/97523044_1.mp3
+  - id: s2
+    word: 青い
+    reading_id: r1
+    audio: audio/surfaces/3042304a3044_2.mp3
+  - id: s3
+    word: 青空
+    reading_id: r0
+    audio: audio/surfaces/97527a7a_3.mp3
+  - id: s4
+    word: 青虫
+    reading_id: r0
+    audio: audio/surfaces/9752866b_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 龶
+    - char: 月
+items:
+  - id: 青-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あお
+        correct: true
+      - kana: なな
+        correct: false
+      - kana: みみ
+        correct: false
+  - id: 青-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: あおい
+        correct: true
+      - kana: ジ
+        correct: false
+      - kana: いと
+        correct: false
+  - id: 青-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あおい
+        semantic: true
+        correct: true
+      - gloss_ja: ひゃく
+        semantic: true
+        correct: false
+      - gloss_ja: むっつ
+        semantic: true
+        correct: false
+  - id: 青-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

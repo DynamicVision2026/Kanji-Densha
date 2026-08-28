@@ -1,0 +1,69 @@
+character: 鹿
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: しか
+      type: kun
+      audio: audio/readings/3057304b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しか。
+    山の 鹿。
+    つのが ある。
+surfaces:
+  - id: s0
+    word: 鹿
+    reading_id: r0
+    audio: audio/surfaces/9e7f_0.mp3
+  - id: s1
+    word: 鹿
+    reading_id: r0
+    audio: audio/surfaces/9e7f_1.mp3
+  - id: s2
+    word: 鹿
+    reading_id: r0
+    audio: audio/surfaces/3057304b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 比
+items:
+  - id: 鹿-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しか
+        correct: true
+      - kana: まち
+        correct: false
+      - kana: かおり
+        correct: false
+  - id: 鹿-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しか
+        semantic: true
+        correct: true
+      - gloss_ja: ふ。〜でない
+        semantic: true
+        correct: false
+      - gloss_ja: やめる
+        semantic: true
+        correct: false
+  - id: 鹿-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

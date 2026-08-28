@@ -1,0 +1,69 @@
+character: 岐
+grade: 4
+taught_readings:
+  entries:
+    - id: pn0
+      kana: ぎふ
+      type: proper_name
+      audio: audio/readings/304e3075.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: pn0
+meaning:
+  gloss_ja: き。わかれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    き。
+    岐阜の まち。
+    道が わかれる。
+surfaces:
+  - id: s0
+    word: 岐
+    reading_id: pn0
+    audio: audio/surfaces/5c90_0.mp3
+  - id: s1
+    word: 岐阜
+    reading_id: pn0
+    audio: audio/surfaces/5c90961c_1.mp3
+  - id: s2
+    word: 岐阜
+    reading_id: pn0
+    audio: audio/surfaces/304e3075_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 山
+    - char: 支
+items:
+  - id: 岐-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: pn0
+    choices:
+      - kana: ぎふ
+        correct: true
+      - kana: フ
+        correct: false
+      - kana: おいる
+        correct: false
+  - id: 岐-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: き。わかれる
+        semantic: true
+        correct: true
+      - gloss_ja: いさお
+        semantic: true
+        correct: false
+      - gloss_ja: もっとも
+        semantic: true
+        correct: false
+  - id: 岐-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

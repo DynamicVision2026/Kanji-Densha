@@ -1,0 +1,88 @@
+character: 在
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ある
+      type: kun
+      audio: audio/readings/3042308b.mp3
+    - id: r1
+      kana: ザイ
+      type: on
+      audio: audio/readings/30b630a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ある
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ある。
+    存在が ある。
+    そこにある。
+surfaces:
+  - id: s0
+    word: 在
+    reading_id: r0
+    audio: audio/surfaces/5728_0.mp3
+  - id: s1
+    word: 存在
+    reading_id: r1
+    audio: audio/surfaces/5b585728_1.mp3
+  - id: s2
+    word: 存在
+    reading_id: r1
+    audio: audio/surfaces/305d309330563044_2.mp3
+  - id: s3
+    word: 現在
+    reading_id: r1
+    audio: audio/surfaces/73fe5728_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 𠂇
+    - char: 土
+items:
+  - id: 在-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ある
+        correct: true
+      - kana: さかい
+        correct: false
+      - kana: カ
+        correct: false
+  - id: 在-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ザイ
+        correct: true
+      - kana: もうける
+        correct: false
+      - kana: みちびく
+        correct: false
+  - id: 在-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ある
+        semantic: true
+        correct: true
+      - gloss_ja: さげる
+        semantic: true
+        correct: false
+      - gloss_ja: ふるい
+        semantic: true
+        correct: false
+  - id: 在-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

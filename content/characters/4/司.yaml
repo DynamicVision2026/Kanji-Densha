@@ -1,0 +1,74 @@
+character: 司
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: つかさどる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    つかさどる。
+    司会をする。
+    とりしきる。
+surfaces:
+  - id: s0
+    word: 司
+    reading_id: r0
+    audio: audio/surfaces/53f8_0.mp3
+  - id: s1
+    word: 司会
+    reading_id: r0
+    audio: audio/surfaces/53f84f1a_1.mp3
+  - id: s2
+    word: 司会
+    reading_id: r0
+    audio: audio/surfaces/3057304b3044_2.mp3
+  - id: s3
+    word: 司令
+    reading_id: r0
+    audio: audio/surfaces/53f84ee4_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 𠃌
+    - char: 一
+    - char: 口
+items:
+  - id: 司-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シ
+        correct: true
+      - kana: つける
+        correct: false
+      - kana: ロク
+        correct: false
+  - id: 司-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: つかさどる
+        semantic: true
+        correct: true
+      - gloss_ja: あたり
+        semantic: true
+        correct: false
+      - gloss_ja: みちる
+        semantic: true
+        correct: false
+  - id: 司-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

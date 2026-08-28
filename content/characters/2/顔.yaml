@@ -1,0 +1,73 @@
+character: 顔
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: かお
+      type: kun
+      audio: audio/readings/304b304a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かお
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かお。
+    顔を あらう。
+    目と くち。
+surfaces:
+  - id: s0
+    word: 顔
+    reading_id: r0
+    audio: audio/surfaces/9854_0.mp3
+  - id: s1
+    word: 顔
+    reading_id: r0
+    audio: audio/surfaces/9854_1.mp3
+  - id: s2
+    word: 顔
+    reading_id: r0
+    audio: audio/surfaces/304b304a_2.mp3
+  - id: s3
+    word: 顔色
+    reading_id: r0
+    audio: audio/surfaces/98548272_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 彦
+    - char: 頁
+items:
+  - id: 顔-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かお
+        correct: true
+      - kana: は
+        correct: false
+      - kana: おしえる
+        correct: false
+  - id: 顔-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かお
+        semantic: true
+        correct: true
+      - gloss_ja: かたな
+        semantic: true
+        correct: false
+      - gloss_ja: あね
+        semantic: true
+        correct: false
+  - id: 顔-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,111 @@
+character: 明
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あかり
+      type: kun
+      audio: audio/readings/3042304b308a.mp3
+    - id: r1
+      kana: あかるい
+      type: kun
+      audio: audio/readings/3042304b308b3044.mp3
+    - id: r2
+      kana: メイ
+      type: on
+      audio: audio/readings/30e130a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あかり
+  category: harvest
+encounter:
+  art: null
+  template: motif:aka
+  copy_ja: |-
+    あかり。
+    明るい へや。
+    日と 月。
+surfaces:
+  - id: s0
+    word: 明
+    reading_id: r0
+    audio: audio/surfaces/660e_0.mp3
+  - id: s1
+    word: 明るい
+    reading_id: r1
+    audio: audio/surfaces/660e308b3044_1.mp3
+  - id: s2
+    word: 明るい
+    reading_id: r1
+    audio: audio/surfaces/3042304b308b3044_2.mp3
+  - id: s3
+    word: 明日
+    reading_id: r0
+    audio: audio/surfaces/660e65e5_3.mp3
+  - id: s4
+    word: 説明
+    reading_id: r2
+    audio: audio/surfaces/8aac660e_4.mp3
+  - id: s5
+    word: 発明
+    reading_id: r2
+    audio: audio/surfaces/767a660e_5.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 月
+items:
+  - id: 明-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あかり
+        correct: true
+      - kana: のち
+        correct: false
+      - kana: うち
+        correct: false
+  - id: 明-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: あかるい
+        correct: true
+      - kana: ショウ
+        correct: false
+      - kana: とおい
+        correct: false
+  - id: 明-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: メイ
+        correct: true
+      - kana: くも
+        correct: false
+      - kana: かず
+        correct: false
+  - id: 明-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あかり
+        semantic: true
+        correct: true
+      - gloss_ja: ふね
+        semantic: true
+        correct: false
+      - gloss_ja: のち
+        semantic: true
+        correct: false
+  - id: 明-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

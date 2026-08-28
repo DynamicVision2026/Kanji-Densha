@@ -1,0 +1,73 @@
+character: 機
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はた。
+    機会が ある。
+    とき。
+surfaces:
+  - id: s0
+    word: 機
+    reading_id: r0
+    audio: audio/surfaces/6a5f_0.mp3
+  - id: s1
+    word: 機会
+    reading_id: r0
+    audio: audio/surfaces/6a5f4f1a_1.mp3
+  - id: s2
+    word: 機会
+    reading_id: r0
+    audio: audio/surfaces/304d304b3044_2.mp3
+  - id: s3
+    word: 機械
+    reading_id: r0
+    audio: audio/surfaces/6a5f68b0_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 幾
+items:
+  - id: 機-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: ふだ
+        correct: false
+      - kana: ふし
+        correct: false
+  - id: 機-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はた
+        semantic: true
+        correct: true
+      - gloss_ja: つつむ
+        semantic: true
+        correct: false
+      - gloss_ja: しろ
+        semantic: true
+        correct: false
+  - id: 機-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

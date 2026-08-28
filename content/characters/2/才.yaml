@@ -1,0 +1,80 @@
+character: 才
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: サイ
+      type: on
+      audio: audio/readings/30b530a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さい。うまれつきの ちから
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さい。
+    三才の こ。
+    としを かぞえる。
+surfaces:
+  - id: s0
+    word: 才
+    reading_id: r0
+    audio: audio/surfaces/624d_0.mp3
+  - id: s1
+    word: 三才
+    reading_id: r0
+    audio: audio/surfaces/4e09624d_1.mp3
+  - id: s2
+    word: 三才
+    reading_id: r0
+    audio: audio/surfaces/3055309330553044_2.mp3
+  - id: s3
+    word: 才能
+    reading_id: r0
+    audio: audio/surfaces/624d80fd_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+items:
+  - id: 才-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サイ
+        correct: true
+      - kana: くう
+        correct: false
+      - kana: とり
+        correct: false
+  - id: 才-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さい。うまれつきの ちから
+        semantic: true
+        correct: true
+      - gloss_ja: とおる
+        semantic: true
+        correct: false
+      - gloss_ja: つくる
+        semantic: true
+        correct: false
+  - id: 才-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

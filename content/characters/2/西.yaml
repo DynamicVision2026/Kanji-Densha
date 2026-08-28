@@ -1,0 +1,89 @@
+character: 西
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: にし
+      type: kun
+      audio: audio/readings/306b3057.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: にし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    にし。
+    西の そら。
+    日が しずむ。
+surfaces:
+  - id: s0
+    word: 西
+    reading_id: r0
+    audio: audio/surfaces/897f_0.mp3
+  - id: s1
+    word: 西
+    reading_id: r0
+    audio: audio/surfaces/897f_1.mp3
+  - id: s2
+    word: 西
+    reading_id: r0
+    audio: audio/surfaces/306b3057_2.mp3
+  - id: s3
+    word: 西口
+    reading_id: r0
+    audio: audio/surfaces/897f53e3_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: おれ
+      a11y_ja: おれ
+    - order: 4
+      type: はらい
+      a11y_ja: はらい
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+    - order: 6
+      type: よこ
+      a11y_ja: よこ6
+items:
+  - id: 西-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: にし
+        correct: true
+      - kana: キョウ
+        correct: false
+      - kana: サイ
+        correct: false
+  - id: 西-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: にし
+        semantic: true
+        correct: true
+      - gloss_ja: いま
+        semantic: true
+        correct: false
+      - gloss_ja: なに
+        semantic: true
+        correct: false
+  - id: 西-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

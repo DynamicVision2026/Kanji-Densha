@@ -1,0 +1,86 @@
+character: 玉
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: たま
+      type: kun
+      audio: audio/readings/305f307e.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たま。
+    まるい 玉。
+    王に てん。
+surfaces:
+  - id: s0
+    word: 玉
+    reading_id: r0
+    audio: audio/surfaces/7389_0.mp3
+  - id: s1
+    word: 玉
+    reading_id: r0
+    audio: audio/surfaces/7389_1.mp3
+  - id: s2
+    word: 玉
+    reading_id: r0
+    audio: audio/surfaces/305f307e_2.mp3
+  - id: s3
+    word: 目玉
+    reading_id: r0
+    audio: audio/surfaces/76ee7389_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: たて
+      a11y_ja: たて
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+    - order: 5
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 玉-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たま
+        correct: true
+      - kana: よ
+        correct: false
+      - kana: シ
+        correct: false
+  - id: 玉-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たま
+        semantic: true
+        correct: true
+      - gloss_ja: ただしい
+        semantic: true
+        correct: false
+      - gloss_ja: あかい
+        semantic: true
+        correct: false
+  - id: 玉-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,83 @@
+character: 予
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヨ
+      type: on
+      audio: audio/readings/30e8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あらかじめ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あらかじめ。
+    予定を かく。
+    まえもって。
+surfaces:
+  - id: s0
+    word: 予
+    reading_id: r0
+    audio: audio/surfaces/4e88_0.mp3
+  - id: s1
+    word: 予定
+    reading_id: r0
+    audio: audio/surfaces/4e885b9a_1.mp3
+  - id: s2
+    word: 予定
+    reading_id: r0
+    audio: audio/surfaces/308830663044_2.mp3
+  - id: s3
+    word: 予約
+    reading_id: r0
+    audio: audio/surfaces/4e887d04_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: てん
+      a11y_ja: てん
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 予-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヨ
+        correct: true
+      - kana: やすい
+        correct: false
+      - kana: グ
+        correct: false
+  - id: 予-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あらかじめ
+        semantic: true
+        correct: true
+      - gloss_ja: いき
+        semantic: true
+        correct: false
+      - gloss_ja: まける
+        semantic: true
+        correct: false
+  - id: 予-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

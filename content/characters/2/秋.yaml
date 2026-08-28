@@ -1,0 +1,73 @@
+character: 秋
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: あき
+      type: kun
+      audio: audio/readings/3042304d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あき。
+    秋の かぜ。
+    はが ちる。
+surfaces:
+  - id: s0
+    word: 秋
+    reading_id: r0
+    audio: audio/surfaces/79cb_0.mp3
+  - id: s1
+    word: 秋
+    reading_id: r0
+    audio: audio/surfaces/79cb_1.mp3
+  - id: s2
+    word: 秋
+    reading_id: r0
+    audio: audio/surfaces/3042304d_2.mp3
+  - id: s3
+    word: 秋休み
+    reading_id: r0
+    audio: audio/surfaces/79cb4f11307f_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 火
+items:
+  - id: 秋-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あき
+        correct: true
+      - kana: ほそい
+        correct: false
+      - kana: スウ
+        correct: false
+  - id: 秋-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あき
+        semantic: true
+        correct: true
+      - gloss_ja: すくない
+        semantic: true
+        correct: false
+      - gloss_ja: ゆみ
+        semantic: true
+        correct: false
+  - id: 秋-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

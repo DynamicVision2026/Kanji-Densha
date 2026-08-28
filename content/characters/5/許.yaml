@@ -1,0 +1,69 @@
+character: 許
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ゆるす
+      type: kun
+      audio: audio/readings/3086308b3059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ゆるす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ゆるす。
+    あやまちを 許す。
+    みとめる。
+surfaces:
+  - id: s0
+    word: 許
+    reading_id: r0
+    audio: audio/surfaces/8a31_0.mp3
+  - id: s1
+    word: 許す
+    reading_id: r0
+    audio: audio/surfaces/8a313059_1.mp3
+  - id: s2
+    word: 許す
+    reading_id: r0
+    audio: audio/surfaces/3086308b3059_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 午
+items:
+  - id: 許-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ゆるす
+        correct: true
+      - kana: つとめる
+        correct: false
+      - kana: ハン
+        correct: false
+  - id: 許-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ゆるす
+        semantic: true
+        correct: true
+      - gloss_ja: すぎる
+        semantic: true
+        correct: false
+      - gloss_ja: おる
+        semantic: true
+        correct: false
+  - id: 許-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

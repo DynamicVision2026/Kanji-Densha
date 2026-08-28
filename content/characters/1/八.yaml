@@ -1,0 +1,111 @@
+character: 八
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: や
+      type: kun
+      audio: audio/readings/3084.mp3
+    - id: r1
+      kana: やっつ
+      type: kun
+      audio: audio/readings/308430633064.mp3
+    - id: r2
+      kana: ハチ
+      type: on
+      audio: audio/readings/30cf30c1.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やっつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やっつ。
+    かずの 八。
+    左右に ひらく。
+surfaces:
+  - id: s0
+    word: 八
+    reading_id: r0
+    audio: audio/surfaces/516b_0.mp3
+  - id: s1
+    word: 八つ
+    reading_id: r1
+    audio: audio/surfaces/516b3064_1.mp3
+  - id: s2
+    word: 八つ
+    reading_id: r1
+    audio: audio/surfaces/308430633064_2.mp3
+  - id: s3
+    word: 八月
+    reading_id: r2
+    audio: audio/surfaces/516b6708_3.mp3
+  - id: s4
+    word: 八時
+    reading_id: r2
+    audio: audio/surfaces/516b6642_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+items:
+  - id: 八-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: や
+        correct: true
+      - kana: ななつ
+        correct: false
+      - kana: みみ
+        correct: false
+  - id: 八-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: やっつ
+        correct: true
+      - kana: たま
+        correct: false
+      - kana: キュウ
+        correct: false
+  - id: 八-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ハチ
+        correct: true
+      - kana: エン
+        correct: false
+      - kana: あま
+        correct: false
+  - id: 八-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やっつ
+        semantic: true
+        correct: true
+      - gloss_ja: むし
+        semantic: true
+        correct: false
+      - gloss_ja: ふたつ
+        semantic: true
+        correct: false
+  - id: 八-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

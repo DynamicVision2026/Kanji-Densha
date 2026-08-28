@@ -1,0 +1,107 @@
+character: 食
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: くう
+      type: kun
+      audio: audio/readings/304f3046.mp3
+    - id: r1
+      kana: たべる
+      type: kun
+      audio: audio/readings/305f3079308b.mp3
+    - id: r2
+      kana: ショク
+      type: on
+      audio: audio/readings/30b730e730af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たべる。
+    ごはんを 食べる。
+    口に いれる。
+surfaces:
+  - id: s0
+    word: 食
+    reading_id: r0
+    audio: audio/surfaces/98df_0.mp3
+  - id: s1
+    word: 食べる
+    reading_id: r1
+    audio: audio/surfaces/98df3079308b_1.mp3
+  - id: s2
+    word: 食べる
+    reading_id: r1
+    audio: audio/surfaces/305f3079308b_2.mp3
+  - id: s3
+    word: 食事
+    reading_id: r2
+    audio: audio/surfaces/98df4e8b_3.mp3
+  - id: s4
+    word: 食品
+    reading_id: r2
+    audio: audio/surfaces/98df54c1_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 良
+items:
+  - id: 食-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くう
+        correct: true
+      - kana: セツ
+        correct: false
+      - kana: ガク
+        correct: false
+  - id: 食-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: たべる
+        correct: true
+      - kana: ワ
+        correct: false
+      - kana: おや
+        correct: false
+  - id: 食-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ショク
+        correct: true
+      - kana: サイ
+        correct: false
+      - kana: きた
+        correct: false
+  - id: 食-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くう
+        semantic: true
+        correct: true
+      - gloss_ja: こころ
+        semantic: true
+        correct: false
+      - gloss_ja: つよい
+        semantic: true
+        correct: false
+  - id: 食-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

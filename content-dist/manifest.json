@@ -1,10 +1,10 @@
 {
-  "content_hash": "ac17b34f1e55709a147c14d64e9cdaf3db331ce50738846b69961dba13770934",
+  "content_hash": "dfde8b6b48eab7c72c7fef998d37b0afdd055207f2c8eb2b4db08a616ce416be",
   "grades": {
     "g1": {
       "grade_total": 80,
-      "teach_ready": 0,
-      "published": 20,
+      "teach_ready": 60,
+      "published": 80,
       "characters": [
         {
           "character": "一",
@@ -20,6 +20,46 @@
           ]
         },
         {
+          "character": "七",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "三",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "上",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "下",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "中",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "九",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "二",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "五",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "人",
           "teach_ready": false,
           "unmet": [
@@ -31,6 +71,41 @@
               ]
             }
           ]
+        },
+        {
+          "character": "休",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "先",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "入",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "八",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "六",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "円",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "出",
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "力",
@@ -46,6 +121,46 @@
           ]
         },
         {
+          "character": "十",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "千",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "口",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "右",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "名",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "四",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "土",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "夕",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "大",
           "teach_ready": false,
           "unmet": [
@@ -59,6 +174,26 @@
           ]
         },
         {
+          "character": "天",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "女",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "子",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "字",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "学",
           "teach_ready": false,
           "unmet": [
@@ -70,6 +205,11 @@
               ]
             }
           ]
+        },
+        {
+          "character": "小",
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "山",
@@ -97,6 +237,26 @@
           ]
         },
         {
+          "character": "左",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "年",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "手",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "文",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "日",
           "teach_ready": false,
           "unmet": [
@@ -108,6 +268,11 @@
               ]
             }
           ]
+        },
+        {
+          "character": "早",
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "月",
@@ -149,6 +314,11 @@
           ]
         },
         {
+          "character": "村",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "林",
           "teach_ready": false,
           "unmet": [
@@ -162,6 +332,11 @@
           ]
         },
         {
+          "character": "校",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "森",
           "teach_ready": false,
           "unmet": [
@@ -173,6 +348,16 @@
               ]
             }
           ]
+        },
+        {
+          "character": "正",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "気",
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "水",
@@ -212,6 +397,16 @@
               ]
             }
           ]
+        },
+        {
+          "character": "玉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "王",
+          "teach_ready": true,
+          "unmet": []
         },
         {
           "character": "生",
@@ -254,6 +449,21 @@
           ]
         },
         {
+          "character": "町",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "白",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "百",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
           "character": "目",
           "teach_ready": false,
           "unmet": [
@@ -265,11 +475,5685 @@
               ]
             }
           ]
+        },
+        {
+          "character": "石",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "空",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "立",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "竹",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "糸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "耳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "花",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "草",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "虫",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "見",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "赤",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "足",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "車",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "金",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "雨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "青",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "音",
+          "teach_ready": true,
+          "unmet": []
+        }
+      ]
+    },
+    "g2": {
+      "grade_total": 160,
+      "teach_ready": 160,
+      "published": 160,
+      "characters": [
+        {
+          "character": "万",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "丸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "交",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "京",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "今",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "会",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "体",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "何",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "作",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "元",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "兄",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "光",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "公",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "内",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "冬",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "刀",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "分",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "切",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "前",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "北",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "午",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "半",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "南",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "原",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "友",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "古",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "台",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "合",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "同",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "回",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "図",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "国",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "園",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "地",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "場",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "声",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "売",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "夏",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "外",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "多",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "夜",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "太",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "妹",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "姉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "室",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "家",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "寺",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "少",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "岩",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "工",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "市",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "帰",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "広",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "店",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "弓",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "引",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "弟",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "弱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "強",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "当",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "形",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "後",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "心",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "思",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "戸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "才",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "教",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "数",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "新",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "方",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "明",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "星",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "春",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "昼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "時",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "晴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "曜",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "書",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "朝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "来",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "東",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "楽",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "歌",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "止",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "歩",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "母",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "毎",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "毛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "池",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "汽",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "活",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "海",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "点",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "父",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "牛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "理",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "用",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "画",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "番",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "直",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "矢",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "知",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "社",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "秋",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "科",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "答",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "算",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "米",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "紙",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "細",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "組",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "絵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "線",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "羽",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "考",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "聞",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "肉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "自",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "船",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "色",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "茶",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "行",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "西",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "親",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "角",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "言",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "計",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "記",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "話",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "語",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "読",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "谷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "買",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "走",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "近",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "通",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "週",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "道",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "遠",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "里",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "野",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "長",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "門",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "間",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "雪",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "雲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "電",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "頭",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "顔",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "風",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "食",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "首",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "馬",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "高",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "魚",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鳥",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鳴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "麦",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "黄",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "黒",
+          "teach_ready": true,
+          "unmet": []
+        }
+      ]
+    },
+    "g3": {
+      "grade_total": 200,
+      "teach_ready": 200,
+      "published": 200,
+      "characters": [
+        {
+          "character": "丁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "世",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "両",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "主",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "乗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "予",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "事",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "仕",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "他",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "代",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "住",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "使",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "係",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "倍",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "全",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "具",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "写",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "列",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "助",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "勉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "動",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "勝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "化",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "区",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "医",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "去",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "反",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "取",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "受",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "号",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "向",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "君",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "味",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "命",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "和",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "品",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "員",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "商",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "問",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "坂",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "央",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "始",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "委",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "守",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "安",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "定",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "実",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "客",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宿",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "寒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "対",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "局",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "屋",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "岸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "島",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "州",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "帳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "平",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "幸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "度",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "庫",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "庭",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "式",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "役",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "待",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "急",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "息",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "悪",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "悲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "想",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "意",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "感",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "所",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "打",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "投",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "拾",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "持",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "指",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "放",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "整",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "旅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "族",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "昔",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "昭",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "暑",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "暗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "曲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "有",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "服",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "期",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "板",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "柱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "根",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "植",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "業",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "様",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "横",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "橋",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "次",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "歯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "死",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "氷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "決",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "油",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "波",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "注",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "泳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "洋",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "流",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "消",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "深",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "温",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "港",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "湖",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "湯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "漢",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "炭",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "物",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "球",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "由",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "申",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "界",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "畑",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "病",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "発",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "登",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "皮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "皿",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "相",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "県",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "真",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "着",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "短",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "研",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "礼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "神",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "祭",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "福",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "秒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "究",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "章",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "童",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "笛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "第",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "筆",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "等",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "箱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "級",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "終",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "緑",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "練",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "羊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "美",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "習",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "者",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "育",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "苦",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "荷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "落",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "葉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "薬",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "血",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "表",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "詩",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "調",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "談",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "豆",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "負",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "起",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "路",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "身",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "転",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "軽",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "農",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "返",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "追",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "送",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "速",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "進",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "遊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "運",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "部",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "都",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "配",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "酒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "重",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鉄",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "銀",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "開",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "院",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "陽",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "階",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "集",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "面",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "題",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "飲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "館",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "駅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鼻",
+          "teach_ready": true,
+          "unmet": []
+        }
+      ]
+    },
+    "g4": {
+      "grade_total": 202,
+      "teach_ready": 199,
+      "published": 202,
+      "characters": [
+        {
+          "character": "不",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "争",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "井",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "付",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "令",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "以",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "仲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "伝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "位",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "低",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "佐",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "例",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "便",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "信",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "倉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "候",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "借",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "健",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "側",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "働",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "億",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "兆",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "児",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "共",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "兵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "典",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "冷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "初",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "別",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "利",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "刷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "副",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "功",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "加",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "努",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "労",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "勇",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "包",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "卒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "協",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "単",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "博",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "印",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "参",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "司",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "各",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "周",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "唱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "器",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "固",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "城",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "埼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "塩",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "変",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "夫",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "失",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "奈",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "好",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "媛",
+          "teach_ready": false,
+          "unmet": [
+            {
+              "item": "audio",
+              "satisfied_by": [
+                "audio/readings/304830723081.mp3"
+              ]
+            }
+          ]
+        },
+        {
+          "character": "季",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "孫",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "完",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "官",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "害",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "富",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "察",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "岐",
+          "teach_ready": false,
+          "unmet": [
+            {
+              "item": "audio",
+              "satisfied_by": [
+                "audio/readings/304e3075.mp3"
+              ]
+            }
+          ]
+        },
+        {
+          "character": "岡",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "崎",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "巣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "差",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "希",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "席",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "帯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "底",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "府",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "康",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "建",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "径",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "徒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "徳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "必",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "念",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "愛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "成",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "戦",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "折",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "挙",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "改",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "敗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "散",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "料",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "旗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "昨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "景",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "最",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "望",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "未",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "末",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "札",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "材",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "束",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "松",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "果",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "栃",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "栄",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "案",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "梅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "梨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "械",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "極",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "標",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "機",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "欠",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "残",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "氏",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "民",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "求",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "沖",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "治",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "法",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "泣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "浅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "浴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "清",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "満",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "滋",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "漁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "潟",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "灯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "無",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "然",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "焼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "照",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "熊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "熱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "牧",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "特",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "産",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "的",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "省",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "祝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "票",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "種",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "積",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "競",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "笑",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "管",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "節",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "約",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "結",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "給",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "続",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "縄",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "置",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "群",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "老",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "臣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "良",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "芸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "芽",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "英",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "茨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "菜",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "街",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "衣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "要",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "覚",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "観",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "訓",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "試",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "説",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "課",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "議",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "賀",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "軍",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "輪",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "辞",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "辺",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "連",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "達",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "選",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "郡",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "量",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "録",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鏡",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "関",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "阜",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "阪",
+          "teach_ready": false,
+          "unmet": [
+            {
+              "item": "audio",
+              "satisfied_by": [
+                "audio/readings/304a304a3055304b.mp3"
+              ]
+            }
+          ]
+        },
+        {
+          "character": "陸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "隊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "静",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "順",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "願",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "類",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "飛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "飯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "養",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "香",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "験",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鹿",
+          "teach_ready": true,
+          "unmet": []
+        }
+      ]
+    },
+    "g5": {
+      "grade_total": 193,
+      "teach_ready": 193,
+      "published": 193,
+      "characters": [
+        {
+          "character": "久",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "仏",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "仮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "件",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "任",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "似",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "余",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "価",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "保",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "修",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "個",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "停",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "備",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "像",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "再",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "刊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "判",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "制",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "則",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "効",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "務",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "勢",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "厚",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "句",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "可",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "史",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "告",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "喜",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "営",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "因",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "団",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "囲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "圧",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "在",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "均",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "型",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "基",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "堂",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "報",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "境",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "墓",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "増",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "士",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "夢",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "妻",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "婦",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "容",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "寄",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "導",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "居",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "属",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "布",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "師",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "常",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "幹",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "序",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "弁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "張",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "往",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "得",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "復",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "志",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "応",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "快",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "性",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "情",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "態",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "慣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "技",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "招",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "授",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "採",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "接",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "提",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "損",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "支",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "政",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "故",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "救",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "断",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "旧",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "易",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "暴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "条",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "枝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "査",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "格",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "桜",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "検",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "構",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "武",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "歴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "殺",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "毒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "比",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "永",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "河",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "液",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "混",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "減",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "測",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "準",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "演",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "潔",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "災",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "燃",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "版",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "犯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "状",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "独",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "率",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "現",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "留",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "略",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "益",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "眼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "破",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "確",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "示",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "祖",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "禁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "移",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "程",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "税",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "築",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "粉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "精",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "紀",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "素",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "経",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "統",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "絶",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "綿",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "総",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "編",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "績",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "織",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "罪",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "義",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "耕",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "職",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "肥",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "能",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "脈",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "興",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "舎",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "航",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "術",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "衛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "製",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "複",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "規",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "解",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "設",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "許",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "証",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "評",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "講",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "謝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "識",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "護",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "豊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "象",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "財",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貧",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "責",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貯",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "費",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貿",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "資",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "賛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "賞",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "質",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "輸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "述",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "迷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "逆",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "造",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "過",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "適",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "酸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鉱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "銅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "防",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "限",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "険",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "際",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "雑",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "非",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "領",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "額",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "飼",
+          "teach_ready": true,
+          "unmet": []
+        }
+      ]
+    },
+    "g6": {
+      "grade_total": 191,
+      "teach_ready": 191,
+      "published": 191,
+      "characters": [
+        {
+          "character": "並",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "乱",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "乳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "亡",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "仁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "供",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "俳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "俵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "値",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "傷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "優",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "党",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "冊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "処",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "券",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "刻",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "割",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "創",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "劇",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "勤",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "危",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "卵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "厳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "収",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "后",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "否",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "吸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "呼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "善",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "困",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "垂",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "域",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "奏",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "奮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "姿",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "存",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "孝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宇",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宙",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "宣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "密",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "寸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "専",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "射",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "将",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "尊",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "就",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "尺",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "届",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "展",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "層",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "己",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "巻",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "幕",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "干",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "幼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "庁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "座",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "延",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "律",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "従",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "忘",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "忠",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "恩",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "憲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "我",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "批",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "承",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "担",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "拝",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "拡",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "捨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "探",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "推",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "揮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "操",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "敬",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "敵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "映",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "晩",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "暖",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "暮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "朗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "机",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "枚",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "染",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "株",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "棒",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "模",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "権",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "樹",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "欲",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "段",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "沿",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "泉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "洗",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "派",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "済",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "源",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "潮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "激",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "灰",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "熟",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "片",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "班",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "異",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "疑",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "痛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "皇",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "盛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "盟",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "看",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "砂",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "磁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "私",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "秘",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "穀",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "穴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "窓",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "筋",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "策",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "簡",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "糖",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "系",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "紅",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "納",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "純",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "絹",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "縦",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "縮",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "署",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "翌",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "聖",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "肺",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "胃",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "背",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "胸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "脳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "腸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "腹",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "臓",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "臨",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "至",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "舌",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "若",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "著",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "蒸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "蔵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "蚕",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "衆",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "裁",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "装",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "裏",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "補",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "視",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "覧",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "討",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "訪",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "訳",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "詞",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "誌",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "認",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "誕",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "誠",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "誤",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "論",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "諸",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "警",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "貴",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "賃",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "退",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "遺",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "郵",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "郷",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "針",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "銭",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "鋼",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "閉",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "閣",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "降",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "陛",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "除",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "障",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "難",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "革",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "頂",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "預",
+          "teach_ready": true,
+          "unmet": []
+        },
+        {
+          "character": "骨",
+          "teach_ready": true,
+          "unmet": []
         }
       ]
     }
   },
-  "audio_manifest": [],
+  "audio_manifest": [
+    "audio/readings/30423044.mp3",
+    "audio/readings/304230443060.mp3",
+    "audio/readings/30423046.mp3",
+    "audio/readings/3042304a.mp3",
+    "audio/readings/3042304a3044.mp3",
+    "audio/readings/3042304b.mp3",
+    "audio/readings/3042304b3044.mp3",
+    "audio/readings/3042304b308a.mp3",
+    "audio/readings/3042304b308b3044.mp3",
+    "audio/readings/3042304d.mp3",
+    "audio/readings/30423052308b.mp3",
+    "audio/readings/30423055.mp3",
+    "audio/readings/304230553044.mp3",
+    "audio/readings/30423057.mp3",
+    "audio/readings/30423058.mp3",
+    "audio/readings/3042305a3051308b.mp3",
+    "audio/readings/3042305d3076.mp3",
+    "audio/readings/3042305f305f304b.mp3",
+    "audio/readings/3042305f305f304b3044.mp3",
+    "audio/readings/3042305f307e.mp3",
+    "audio/readings/3042305f308930573044.mp3",
+    "audio/readings/3042305f308a.mp3",
+    "audio/readings/3042305f308b.mp3",
+    "audio/readings/304230643044.mp3",
+    "audio/readings/30423064307e308b.mp3",
+    "audio/readings/3042306a.mp3",
+    "audio/readings/3042306b.mp3",
+    "audio/readings/3042306d.mp3",
+    "audio/readings/30423070308c308b.mp3",
+    "audio/readings/30423073308b.mp3",
+    "audio/readings/30423076306a3044.mp3",
+    "audio/readings/304230763089.mp3",
+    "audio/readings/3042307e.mp3",
+    "audio/readings/3042307e308b.mp3",
+    "audio/readings/30423080.mp3",
+    "audio/readings/30423081.mp3",
+    "audio/readings/30423084307e308b.mp3",
+    "audio/readings/304230893046.mp3",
+    "audio/readings/30423089305d3046.mp3",
+    "audio/readings/30423089305f3081308b.mp3",
+    "audio/readings/30423089308f3059.mp3",
+    "audio/readings/30423089308f308c308b.mp3",
+    "audio/readings/3042308b.mp3",
+    "audio/readings/3042308b304f.mp3",
+    "audio/readings/3044.mp3",
+    "audio/readings/30443046.mp3",
+    "audio/readings/30443048.mp3",
+    "audio/readings/3044304d.mp3",
+    "audio/readings/3044304d304a3044.mp3",
+    "audio/readings/3044304f.mp3",
+    "audio/readings/30443051.mp3",
+    "audio/readings/304430553080.mp3",
+    "audio/readings/30443057.mp3",
+    "audio/readings/3044305a307f.mp3",
+    "audio/readings/3044305d3050.mp3",
+    "audio/readings/3044305f.mp3",
+    "audio/readings/3044305f3044.mp3",
+    "audio/readings/3044305f3060304f.mp3",
+    "audio/readings/3044305f308b.mp3",
+    "audio/readings/30443061.mp3",
+    "audio/readings/30443064.mp3",
+    "audio/readings/304430643064.mp3",
+    "audio/readings/30443068.mp3",
+    "audio/readings/30443068306a3080.mp3",
+    "audio/readings/3044306e3061.mp3",
+    "audio/readings/304430703089.mp3",
+    "audio/readings/3044307e.mp3",
+    "audio/readings/3044308230463068.mp3",
+    "audio/readings/3044308b.mp3",
+    "audio/readings/3044308d.mp3",
+    "audio/readings/3044308f.mp3",
+    "audio/readings/3044308f3046.mp3",
+    "audio/readings/30463048.mp3",
+    "audio/readings/30463048308b.mp3",
+    "audio/readings/3046304a.mp3",
+    "audio/readings/30463051308b.mp3",
+    "audio/readings/30463054304f.mp3",
+    "audio/readings/30463057.mp3",
+    "audio/readings/30463057306a3046.mp3",
+    "audio/readings/30463057308d.mp3",
+    "audio/readings/3046305f.mp3",
+    "audio/readings/3046305f3046.mp3",
+    "audio/readings/3046305f304c3046.mp3",
+    "audio/readings/30463061.mp3",
+    "audio/readings/30463064.mp3",
+    "audio/readings/30463064304f30573044.mp3",
+    "audio/readings/304630643059.mp3",
+    "audio/readings/30463064308b.mp3",
+    "audio/readings/3046307e.mp3",
+    "audio/readings/3046307f.mp3",
+    "audio/readings/30463080.mp3",
+    "audio/readings/30463081.mp3",
+    "audio/readings/30463084307e3046.mp3",
+    "audio/readings/30463089.mp3",
+    "audio/readings/3046308b.mp3",
+    "audio/readings/30483060.mp3",
+    "audio/readings/304830893076.mp3",
+    "audio/readings/3048308b.mp3",
+    "audio/readings/304a3044308b.mp3",
+    "audio/readings/304a3046.mp3",
+    "audio/readings/304a304a3044.mp3",
+    "audio/readings/304a304b.mp3",
+    "audio/readings/304a304c3080.mp3",
+    "audio/readings/304a304d.mp3",
+    "audio/readings/304a304d308b.mp3",
+    "audio/readings/304a304e306a3046.mp3",
+    "audio/readings/304a304f.mp3",
+    "audio/readings/304a304f308b.mp3",
+    "audio/readings/304a3055306a3044.mp3",
+    "audio/readings/304a30553081308b.mp3",
+    "audio/readings/304a30573048308b.mp3",
+    "audio/readings/304a3061308b.mp3",
+    "audio/readings/304a30633068.mp3",
+    "audio/readings/304a3068.mp3",
+    "audio/readings/304a306830463068.mp3",
+    "audio/readings/304a306a3058.mp3",
+    "audio/readings/304a3073.mp3",
+    "audio/readings/304a3073308b.mp3",
+    "audio/readings/304a307c3048308b.mp3",
+    "audio/readings/304a30823044.mp3",
+    "audio/readings/304a30823046.mp3",
+    "audio/readings/304a30823066.mp3",
+    "audio/readings/304a3084.mp3",
+    "audio/readings/304a30883050.mp3",
+    "audio/readings/304a308a308b.mp3",
+    "audio/readings/304a308b.mp3",
+    "audio/readings/304a308f308b.mp3",
+    "audio/readings/304a3093306a.mp3",
+    "audio/readings/304b.mp3",
+    "audio/readings/304b3044.mp3",
+    "audio/readings/304b30443053.mp3",
+    "audio/readings/304b3046.mp3",
+    "audio/readings/304b30483059.mp3",
+    "audio/readings/304b3048308b.mp3",
+    "audio/readings/304b304a.mp3",
+    "audio/readings/304b304a308a.mp3",
+    "audio/readings/304b304b308a.mp3",
+    "audio/readings/304b304b308b.mp3",
+    "audio/readings/304b304b308f308b.mp3",
+    "audio/readings/304b304c307f.mp3",
+    "audio/readings/304b304e308b.mp3",
+    "audio/readings/304b304f.mp3",
+    "audio/readings/304b3051308b.mp3",
+    "audio/readings/304b30533080.mp3",
+    "audio/readings/304b3059.mp3",
+    "audio/readings/304b305a.mp3",
+    "audio/readings/304b305c.mp3",
+    "audio/readings/304b305f.mp3",
+    "audio/readings/304b305f3044.mp3",
+    "audio/readings/304b305f3061.mp3",
+    "audio/readings/304b305f306a.mp3",
+    "audio/readings/304b305f3081308b.mp3",
+    "audio/readings/304b305f308b.mp3",
+    "audio/readings/304b3064.mp3",
+    "audio/readings/304b3069.mp3",
+    "audio/readings/304b306a30573044.mp3",
+    "audio/readings/304b306a3081.mp3",
+    "audio/readings/304b306a3089305a.mp3",
+    "audio/readings/304b306d.mp3",
+    "audio/readings/304b3076.mp3",
+    "audio/readings/304b307e3046.mp3",
+    "audio/readings/304b307e3048308b.mp3",
+    "audio/readings/304b307f.mp3",
+    "audio/readings/304b30893060.mp3",
+    "audio/readings/304b308a.mp3",
+    "audio/readings/304b308a308b.mp3",
+    "audio/readings/304b308b3044.mp3",
+    "audio/readings/304b308f.mp3",
+    "audio/readings/304b308f308b.mp3",
+    "audio/readings/304b3093304c3048308b.mp3",
+    "audio/readings/304c308f.mp3",
+    "audio/readings/304d.mp3",
+    "audio/readings/304d3048308b.mp3",
+    "audio/readings/304d304f.mp3",
+    "audio/readings/304d30563080.mp3",
+    "audio/readings/304d3057.mp3",
+    "audio/readings/304d305a.mp3",
+    "audio/readings/304d305a304f.mp3",
+    "audio/readings/304d305f.mp3",
+    "audio/readings/304d306c.mp3",
+    "audio/readings/304d307330573044.mp3",
+    "audio/readings/304d307f.mp3",
+    "audio/readings/304d3081308b.mp3",
+    "audio/readings/304d30883044.mp3",
+    "audio/readings/304d308b.mp3",
+    "audio/readings/304f3046.mp3",
+    "audio/readings/304f3055.mp3",
+    "audio/readings/304f3059308a.mp3",
+    "audio/readings/304f3060.mp3",
+    "audio/readings/304f3061.mp3",
+    "audio/readings/304f306b.mp3",
+    "audio/readings/304f3070308b.mp3",
+    "audio/readings/304f3073.mp3",
+    "audio/readings/304f307e.mp3",
+    "audio/readings/304f307f.mp3",
+    "audio/readings/304f3080.mp3",
+    "audio/readings/304f3082.mp3",
+    "audio/readings/304f3089.mp3",
+    "audio/readings/304f30893044.mp3",
+    "audio/readings/304f30893059.mp3",
+    "audio/readings/304f30893079308b.mp3",
+    "audio/readings/304f308b.mp3",
+    "audio/readings/304f308b30573044.mp3",
+    "audio/readings/304f308b307e.mp3",
+    "audio/readings/304f308c308b.mp3",
+    "audio/readings/304f308d.mp3",
+    "audio/readings/304f308d3044.mp3",
+    "audio/readings/304f308f3048308b.mp3",
+    "audio/readings/3051.mp3",
+    "audio/readings/3051308f30573044.mp3",
+    "audio/readings/3053.mp3",
+    "audio/readings/30533048.mp3",
+    "audio/readings/30533048308b.mp3",
+    "audio/readings/3053304a308a.mp3",
+    "audio/readings/30533053306e.mp3",
+    "audio/readings/30533053306e3064.mp3",
+    "audio/readings/30533053308d.mp3",
+    "audio/readings/30533053308d30563057.mp3",
+    "audio/readings/30533053308d30563059.mp3",
+    "audio/readings/30533053308d307f308b.mp3",
+    "audio/readings/30533053308d30883044.mp3",
+    "audio/readings/3053305f3048308b.mp3",
+    "audio/readings/30533068.mp3",
+    "audio/readings/30533068308f308b.mp3",
+    "audio/readings/3053306a.mp3",
+    "audio/readings/3053306e3080.mp3",
+    "audio/readings/3053307e308b.mp3",
+    "audio/readings/30533081.mp3",
+    "audio/readings/3053308d304c308b.mp3",
+    "audio/readings/3053308d3059.mp3",
+    "audio/readings/30553044.mp3",
+    "audio/readings/30553044308f3044.mp3",
+    "audio/readings/3055304b.mp3",
+    "audio/readings/3055304b3044.mp3",
+    "audio/readings/3055304b3048308b.mp3",
+    "audio/readings/3055304b306a.mp3",
+    "audio/readings/3055304c3059.mp3",
+    "audio/readings/3055304d.mp3",
+    "audio/readings/3055304f3089.mp3",
+    "audio/readings/30553051.mp3",
+    "audio/readings/305530553048308b.mp3",
+    "audio/readings/30553059.mp3",
+    "audio/readings/305530603081308b.mp3",
+    "audio/readings/30553068.mp3",
+    "audio/readings/30553070304f.mp3",
+    "audio/readings/3055307e.mp3",
+    "audio/readings/305530803044.mp3",
+    "audio/readings/30553089.mp3",
+    "audio/readings/3055308b.mp3",
+    "audio/readings/30573042308f305b.mp3",
+    "audio/readings/3057304a.mp3",
+    "audio/readings/3057304b.mp3",
+    "audio/readings/3057304c.mp3",
+    "audio/readings/3057305a.mp3",
+    "audio/readings/3057305a304b.mp3",
+    "audio/readings/3057305f.mp3",
+    "audio/readings/3057305f304c3046.mp3",
+    "audio/readings/3057306a.mp3",
+    "audio/readings/3057306c.mp3",
+    "audio/readings/3057307e.mp3",
+    "audio/readings/305730813059.mp3",
+    "audio/readings/305730893079308b.mp3",
+    "audio/readings/3057308a305e304f.mp3",
+    "audio/readings/3057308b.mp3",
+    "audio/readings/3057308b3057.mp3",
+    "audio/readings/3057308b3059.mp3",
+    "audio/readings/3057308d.mp3",
+    "audio/readings/3057308d3044.mp3",
+    "audio/readings/3058.mp3",
+    "audio/readings/3059.mp3",
+    "audio/readings/30593046.mp3",
+    "audio/readings/30593048.mp3",
+    "audio/readings/3059304c305f.mp3",
+    "audio/readings/3059304e308b.mp3",
+    "audio/readings/3059304f.mp3",
+    "audio/readings/3059304f3046.mp3",
+    "audio/readings/3059304f306a3044.mp3",
+    "audio/readings/30593058.mp3",
+    "audio/readings/305930593080.mp3",
+    "audio/readings/30593066308b.mp3",
+    "audio/readings/3059306a.mp3",
+    "audio/readings/3059307f.mp3",
+    "audio/readings/30593080.mp3",
+    "audio/readings/3059308b.mp3",
+    "audio/readings/305b.mp3",
+    "audio/readings/305b304d.mp3",
+    "audio/readings/305b3081308b.mp3",
+    "audio/readings/305d3046.mp3",
+    "audio/readings/305d3053.mp3",
+    "audio/readings/305d305d3050.mp3",
+    "audio/readings/305d30603064.mp3",
+    "audio/readings/305d30603066308b.mp3",
+    "audio/readings/305d3068.mp3",
+    "audio/readings/305d306a3048308b.mp3",
+    "audio/readings/305d3081308b.mp3",
+    "audio/readings/305d3089.mp3",
+    "audio/readings/305d308b.mp3",
+    "audio/readings/305f30443089.mp3",
+    "audio/readings/305f3048308b.mp3",
+    "audio/readings/305f304b3044.mp3",
+    "audio/readings/305f304b3089.mp3",
+    "audio/readings/305f304c30843059.mp3",
+    "audio/readings/305f30503044.mp3",
+    "audio/readings/305f3051.mp3",
+    "audio/readings/305f3057304b.mp3",
+    "audio/readings/305f30593051308b.mp3",
+    "audio/readings/305f305a306d308b.mp3",
+    "audio/readings/305f305f304b3046.mp3",
+    "audio/readings/305f306030573044.mp3",
+    "audio/readings/305f30603061306b.mp3",
+    "audio/readings/305f306330683044.mp3",
+    "audio/readings/305f3064.mp3",
+    "audio/readings/305f3066.mp3",
+    "audio/readings/305f3066308b.mp3",
+    "audio/readings/305f30683048308b.mp3",
+    "audio/readings/305f306b.mp3",
+    "audio/readings/305f306d.mp3",
+    "audio/readings/305f306e30573044.mp3",
+    "audio/readings/305f3070.mp3",
+    "audio/readings/305f3073.mp3",
+    "audio/readings/305f3079308b.mp3",
+    "audio/readings/305f307e.mp3",
+    "audio/readings/305f307e3054.mp3",
+    "audio/readings/305f30823064.mp3",
+    "audio/readings/305f3088308a.mp3",
+    "audio/readings/305f308c308b.mp3",
+    "audio/readings/305f308f3089.mp3",
+    "audio/readings/3061.mp3",
+    "audio/readings/3061304430553044.mp3",
+    "audio/readings/3061304b3044.mp3",
+    "audio/readings/30613061.mp3",
+    "audio/readings/306130623080.mp3",
+    "audio/readings/3061308b.mp3",
+    "audio/readings/3064304b3046.mp3",
+    "audio/readings/3064304b3048308b.mp3",
+    "audio/readings/3064304e.mp3",
+    "audio/readings/3064304f3048.mp3",
+    "audio/readings/3064304f308b.mp3",
+    "audio/readings/30643050.mp3",
+    "audio/readings/30643051308b.mp3",
+    "audio/readings/30643052308b.mp3",
+    "audio/readings/3064305f3048308b.mp3",
+    "audio/readings/3064305f308f308b.mp3",
+    "audio/readings/30643061.mp3",
+    "audio/readings/306430643080.mp3",
+    "audio/readings/30643065304f.mp3",
+    "audio/readings/306430683081308b.mp3",
+    "audio/readings/3064306d.mp3",
+    "audio/readings/3064307e.mp3",
+    "audio/readings/3064307f.mp3",
+    "audio/readings/30643080.mp3",
+    "audio/readings/30643081305f3044.mp3",
+    "audio/readings/306430883044.mp3",
+    "audio/readings/30643089306a308b.mp3",
+    "audio/readings/3064308c308b.mp3",
+    "audio/readings/3066.mp3",
+    "audio/readings/30663089.mp3",
+    "audio/readings/3066308b.mp3",
+    "audio/readings/3067308b.mp3",
+    "audio/readings/3068.mp3",
+    "audio/readings/30683046.mp3",
+    "audio/readings/3068304630683044.mp3",
+    "audio/readings/3068304a.mp3",
+    "audio/readings/3068304a3044.mp3",
+    "audio/readings/3068304a308b.mp3",
+    "audio/readings/3068304d.mp3",
+    "audio/readings/3068304f.mp3",
+    "audio/readings/30683051308b.mp3",
+    "audio/readings/30683053308d.mp3",
+    "audio/readings/30683057.mp3",
+    "audio/readings/30683058308b.mp3",
+    "audio/readings/30683061.mp3",
+    "audio/readings/30683068306e3048308b.mp3",
+    "audio/readings/306830693051308b.mp3",
+    "audio/readings/3068306a3048308b.mp3",
+    "audio/readings/30683076.mp3",
+    "audio/readings/3068307e308b.mp3",
+    "audio/readings/30683080.mp3",
+    "audio/readings/30683081308b.mp3",
+    "audio/readings/30683082.mp3",
+    "audio/readings/3068308a.mp3",
+    "audio/readings/3068308b.mp3",
+    "audio/readings/306a.mp3",
+    "audio/readings/306a3044.mp3",
+    "audio/readings/306a304a3059.mp3",
+    "audio/readings/306a304a308b.mp3",
+    "audio/readings/306a304b.mp3",
+    "audio/readings/306a304b3070.mp3",
+    "audio/readings/306a304c3044.mp3",
+    "audio/readings/306a304c308c308b.mp3",
+    "audio/readings/306a304f.mp3",
+    "audio/readings/306a3052308b.mp3",
+    "audio/readings/306a30553051.mp3",
+    "audio/readings/306a3057.mp3",
+    "audio/readings/306a3064.mp3",
+    "audio/readings/306a306a.mp3",
+    "audio/readings/306a306a3064.mp3",
+    "audio/readings/306a306b.mp3",
+    "audio/readings/306a307f.mp3",
+    "audio/readings/306a30893046.mp3",
+    "audio/readings/306a30893076.mp3",
+    "audio/readings/306a308b.mp3",
+    "audio/readings/306a308c308b.mp3",
+    "audio/readings/306a308f.mp3",
+    "audio/readings/306b.mp3",
+    "audio/readings/306b3057.mp3",
+    "audio/readings/306b308b.mp3",
+    "audio/readings/306b308f.mp3",
+    "audio/readings/306c3057.mp3",
+    "audio/readings/306c306e.mp3",
+    "audio/readings/306d.mp3",
+    "audio/readings/306d304c3046.mp3",
+    "audio/readings/306d308b.mp3",
+    "audio/readings/306e.mp3",
+    "audio/readings/306e3053308b.mp3",
+    "audio/readings/306e305e304f.mp3",
+    "audio/readings/306e305e3080.mp3",
+    "audio/readings/306e3061.mp3",
+    "audio/readings/306e3073308b.mp3",
+    "audio/readings/306e3079308b.mp3",
+    "audio/readings/306e307c308b.mp3",
+    "audio/readings/306e3080.mp3",
+    "audio/readings/306e308b.mp3",
+    "audio/readings/306f.mp3",
+    "audio/readings/306f3044.mp3",
+    "audio/readings/306f3044308b.mp3",
+    "audio/readings/306f304b.mp3",
+    "audio/readings/306f304b308b.mp3",
+    "audio/readings/306f305230573044.mp3",
+    "audio/readings/306f3053.mp3",
+    "audio/readings/306f30533076.mp3",
+    "audio/readings/306f3057.mp3",
+    "audio/readings/306f30573089.mp3",
+    "audio/readings/306f3057308b.mp3",
+    "audio/readings/306f30583081.mp3",
+    "audio/readings/306f305830813066.mp3",
+    "audio/readings/306f30583081308b.mp3",
+    "audio/readings/306f305f.mp3",
+    "audio/readings/306f305f3051.mp3",
+    "audio/readings/306f305f3059.mp3",
+    "audio/readings/306f305f3089304f.mp3",
+    "audio/readings/306f306a.mp3",
+    "audio/readings/306f306a3059.mp3",
+    "audio/readings/306f306d.mp3",
+    "audio/readings/306f306f.mp3",
+    "audio/readings/306f3076304f.mp3",
+    "audio/readings/306f30843044.mp3",
+    "audio/readings/306f3089.mp3",
+    "audio/readings/306f308a.mp3",
+    "audio/readings/306f308b.mp3",
+    "audio/readings/306f308c308b.mp3",
+    "audio/readings/3070.mp3",
+    "audio/readings/30703051308b.mp3",
+    "audio/readings/3072304b308a.mp3",
+    "audio/readings/3072304b308b.mp3",
+    "audio/readings/3072304c3057.mp3",
+    "audio/readings/3072304d3044308b.mp3",
+    "audio/readings/3072304f.mp3",
+    "audio/readings/3072304f3044.mp3",
+    "audio/readings/3072305530573044.mp3",
+    "audio/readings/3072305f3044.mp3",
+    "audio/readings/30723060308a.mp3",
+    "audio/readings/307230643058.mp3",
+    "audio/readings/3072306830573044.mp3",
+    "audio/readings/30723068308a.mp3",
+    "audio/readings/30723089304f.mp3",
+    "audio/readings/3072308b.mp3",
+    "audio/readings/3072308d3044.mp3",
+    "audio/readings/3072308d3046.mp3",
+    "audio/readings/30753048.mp3",
+    "audio/readings/30753048308b.mp3",
+    "audio/readings/3075304b3044.mp3",
+    "audio/readings/30753057.mp3",
+    "audio/readings/3075305b3050.mp3",
+    "audio/readings/3075305f.mp3",
+    "audio/readings/3075305f305f3073.mp3",
+    "audio/readings/3075305f3064.mp3",
+    "audio/readings/30753060.mp3",
+    "audio/readings/30753067.mp3",
+    "audio/readings/307530683044.mp3",
+    "audio/readings/3075306d.mp3",
+    "audio/readings/30753086.mp3",
+    "audio/readings/3075308b3044.mp3",
+    "audio/readings/3075308b3046.mp3",
+    "audio/readings/3078308b.mp3",
+    "audio/readings/3079306b.mp3",
+    "audio/readings/307b304b.mp3",
+    "audio/readings/307b3057.mp3",
+    "audio/readings/307b3059.mp3",
+    "audio/readings/307b305d3044.mp3",
+    "audio/readings/307b30683051.mp3",
+    "audio/readings/307b306d.mp3",
+    "audio/readings/307e.mp3",
+    "audio/readings/307e3044308b.mp3",
+    "audio/readings/307e3048.mp3",
+    "audio/readings/307e304b305b308b.mp3",
+    "audio/readings/307e304c308b.mp3",
+    "audio/readings/307e304f.mp3",
+    "audio/readings/307e3051308b.mp3",
+    "audio/readings/307e3054.mp3",
+    "audio/readings/307e3056308b.mp3",
+    "audio/readings/307e3058308b.mp3",
+    "audio/readings/307e3058308f308b.mp3",
+    "audio/readings/307e3059.mp3",
+    "audio/readings/307e305a30573044.mp3",
+    "audio/readings/307e3061.mp3",
+    "audio/readings/307e3063305f304f.mp3",
+    "audio/readings/307e3064.mp3",
+    "audio/readings/307e3064308a.mp3",
+    "audio/readings/307e3064308b.mp3",
+    "audio/readings/307e3068.mp3",
+    "audio/readings/307e3069.mp3",
+    "audio/readings/307e306d304f.mp3",
+    "audio/readings/307e3081.mp3",
+    "audio/readings/307e3082308b.mp3",
+    "audio/readings/307e30883046.mp3",
+    "audio/readings/307e308b.mp3",
+    "audio/readings/307e308b3044.mp3",
+    "audio/readings/307e308f308a.mp3",
+    "audio/readings/307e308f308b.mp3",
+    "audio/readings/307f.mp3",
+    "audio/readings/307f304d.mp3",
+    "audio/readings/307f304e.mp3",
+    "audio/readings/307f3058304b3044.mp3",
+    "audio/readings/307f305a3046307f.mp3",
+    "audio/readings/307f305a304b3089.mp3",
+    "audio/readings/307f305b.mp3",
+    "audio/readings/307f3060308c308b.mp3",
+    "audio/readings/307f3061.mp3",
+    "audio/readings/307f30613073304f.mp3",
+    "audio/readings/307f3061308b.mp3",
+    "audio/readings/307f30633064.mp3",
+    "audio/readings/307f30683081308b.mp3",
+    "audio/readings/307f3069308a.mp3",
+    "audio/readings/307f306a3068.mp3",
+    "audio/readings/307f306a307f.mp3",
+    "audio/readings/307f306a30823068.mp3",
+    "audio/readings/307f307f.mp3",
+    "audio/readings/307f3084.mp3",
+    "audio/readings/307f30843053.mp3",
+    "audio/readings/307f308b.mp3",
+    "audio/readings/3080.mp3",
+    "audio/readings/3080304b3057.mp3",
+    "audio/readings/3080304e.mp3",
+    "audio/readings/3080304f.mp3",
+    "audio/readings/308030533046.mp3",
+    "audio/readings/30803057.mp3",
+    "audio/readings/308030593076.mp3",
+    "audio/readings/3080305a304b30573044.mp3",
+    "audio/readings/308030633064.mp3",
+    "audio/readings/3080306d.mp3",
+    "audio/readings/30803089.mp3",
+    "audio/readings/3080308c.mp3",
+    "audio/readings/3080308c308b.mp3",
+    "audio/readings/3081.mp3",
+    "audio/readings/30813057.mp3",
+    "audio/readings/308230463051308b.mp3",
+    "audio/readings/308230463059.mp3",
+    "audio/readings/30823048308b.mp3",
+    "audio/readings/308230613044308b.mp3",
+    "audio/readings/3082306330683082.mp3",
+    "audio/readings/30823064.mp3",
+    "audio/readings/30823068.mp3",
+    "audio/readings/308230683081308b.mp3",
+    "audio/readings/3082306e.mp3",
+    "audio/readings/3082308b.mp3",
+    "audio/readings/3084.mp3",
+    "audio/readings/3084304b305f.mp3",
+    "audio/readings/3084304f.mp3",
+    "audio/readings/3084305530573044.mp3",
+    "audio/readings/30843057306a3046.mp3",
+    "audio/readings/30843057308d.mp3",
+    "audio/readings/308430593044.mp3",
+    "audio/readings/308430593080.mp3",
+    "audio/readings/308430633064.mp3",
+    "audio/readings/30843069.mp3",
+    "audio/readings/30843076308b.mp3",
+    "audio/readings/30843076308c308b.mp3",
+    "audio/readings/3084307e3044.mp3",
+    "audio/readings/3086.mp3",
+    "audio/readings/30863046.mp3",
+    "audio/readings/3086304d.mp3",
+    "audio/readings/3086305f304b.mp3",
+    "audio/readings/30863060306d308b.mp3",
+    "audio/readings/30863073.mp3",
+    "audio/readings/3086307f.mp3",
+    "audio/readings/30863081.mp3",
+    "audio/readings/3086308b3059.mp3",
+    "audio/readings/3088.mp3",
+    "audio/readings/30883044.mp3",
+    "audio/readings/30883053.mp3",
+    "audio/readings/308830633064.mp3",
+    "audio/readings/30883076.mp3",
+    "audio/readings/30883080.mp3",
+    "audio/readings/3088308b.mp3",
+    "audio/readings/3088308d30533076.mp3",
+    "audio/readings/3088308f3044.mp3",
+    "audio/readings/308f.mp3",
+    "audio/readings/308f304b3044.mp3",
+    "audio/readings/308f304b308b.mp3",
+    "audio/readings/308f304b308c308b.mp3",
+    "audio/readings/308f3051.mp3",
+    "audio/readings/308f3051308b.mp3",
+    "audio/readings/308f3059308c308b.mp3",
+    "audio/readings/308f305f.mp3",
+    "audio/readings/308f305f304f3057.mp3",
+    "audio/readings/308f305f3057.mp3",
+    "audio/readings/308f30893046.mp3",
+    "audio/readings/308f308b.mp3",
+    "audio/readings/308f308b3044.mp3",
+    "audio/readings/308f308c.mp3",
+    "audio/readings/30a230a4.mp3",
+    "audio/readings/30a230c4.mp3",
+    "audio/readings/30a230f3.mp3",
+    "audio/readings/30a4.mp3",
+    "audio/readings/30a430ad.mp3",
+    "audio/readings/30a430f3.mp3",
+    "audio/readings/30a6.mp3",
+    "audio/readings/30a8.mp3",
+    "audio/readings/30a830a4.mp3",
+    "audio/readings/30a830ad.mp3",
+    "audio/readings/30a830f3.mp3",
+    "audio/readings/30aa30a6.mp3",
+    "audio/readings/30aa30af.mp3",
+    "audio/readings/30aa30f3.mp3",
+    "audio/readings/30ab.mp3",
+    "audio/readings/30ab30a4.mp3",
+    "audio/readings/30ab30af.mp3",
+    "audio/readings/30ab30c4.mp3",
+    "audio/readings/30ab30f3.mp3",
+    "audio/readings/30ac.mp3",
+    "audio/readings/30ac30a4.mp3",
+    "audio/readings/30ac30af.mp3",
+    "audio/readings/30ac30f3.mp3",
+    "audio/readings/30ad.mp3",
+    "audio/readings/30ad30e330af.mp3",
+    "audio/readings/30ad30e530a6.mp3",
+    "audio/readings/30ad30e730a6.mp3",
+    "audio/readings/30ad30e730af.mp3",
+    "audio/readings/30ad30f3.mp3",
+    "audio/readings/30ae.mp3",
+    "audio/readings/30ae30e530a6.mp3",
+    "audio/readings/30ae30e7.mp3",
+    "audio/readings/30ae30e730a6.mp3",
+    "audio/readings/30ae30f3.mp3",
+    "audio/readings/30af.mp3",
+    "audio/readings/30af30f3.mp3",
+    "audio/readings/30b0.mp3",
+    "audio/readings/30b030f3.mp3",
+    "audio/readings/30b130a4.mp3",
+    "audio/readings/30b130c4.mp3",
+    "audio/readings/30b130f3.mp3",
+    "audio/readings/30b230a4.mp3",
+    "audio/readings/30b230ad.mp3",
+    "audio/readings/30b230f3.mp3",
+    "audio/readings/30b3.mp3",
+    "audio/readings/30b330a6.mp3",
+    "audio/readings/30b330af.mp3",
+    "audio/readings/30b330f3.mp3",
+    "audio/readings/30b4.mp3",
+    "audio/readings/30b430a6.mp3",
+    "audio/readings/30b5.mp3",
+    "audio/readings/30b530a4.mp3",
+    "audio/readings/30b530af.mp3",
+    "audio/readings/30b530c4.mp3",
+    "audio/readings/30b530f3.mp3",
+    "audio/readings/30b6.mp3",
+    "audio/readings/30b630a4.mp3",
+    "audio/readings/30b630c4.mp3",
+    "audio/readings/30b7.mp3",
+    "audio/readings/30b730ad.mp3",
+    "audio/readings/30b730c1.mp3",
+    "audio/readings/30b730c4.mp3",
+    "audio/readings/30b730e3.mp3",
+    "audio/readings/30b730e330af.mp3",
+    "audio/readings/30b730e5.mp3",
+    "audio/readings/30b730e530a6.mp3",
+    "audio/readings/30b730e7.mp3",
+    "audio/readings/30b730e730a6.mp3",
+    "audio/readings/30b730e730af.mp3",
+    "audio/readings/30b730f3.mp3",
+    "audio/readings/30b8.mp3",
+    "audio/readings/30b830e330af.mp3",
+    "audio/readings/30b830e5.mp3",
+    "audio/readings/30b830e530af.mp3",
+    "audio/readings/30b830e530c4.mp3",
+    "audio/readings/30b830e530f3.mp3",
+    "audio/readings/30b830e7.mp3",
+    "audio/readings/30b830e730a6.mp3",
+    "audio/readings/30b830f3.mp3",
+    "audio/readings/30b930a4.mp3",
+    "audio/readings/30b930a6.mp3",
+    "audio/readings/30b930f3.mp3",
+    "audio/readings/30ba.mp3",
+    "audio/readings/30bb30a4.mp3",
+    "audio/readings/30bb30ad.mp3",
+    "audio/readings/30bb30c4.mp3",
+    "audio/readings/30bb30f3.mp3",
+    "audio/readings/30bc30a4.mp3",
+    "audio/readings/30bc30f3.mp3",
+    "audio/readings/30bd.mp3",
+    "audio/readings/30bd30a6.mp3",
+    "audio/readings/30bd30af.mp3",
+    "audio/readings/30bd30c4.mp3",
+    "audio/readings/30bd30f3.mp3",
+    "audio/readings/30be30a6.mp3",
+    "audio/readings/30be30af.mp3",
+    "audio/readings/30bf.mp3",
+    "audio/readings/30bf30a4.mp3",
+    "audio/readings/30bf30af.mp3",
+    "audio/readings/30bf30c4.mp3",
+    "audio/readings/30bf30f3.mp3",
+    "audio/readings/30c030a4.mp3",
+    "audio/readings/30c030f3.mp3",
+    "audio/readings/30c1.mp3",
+    "audio/readings/30c130e3.mp3",
+    "audio/readings/30c130e530a6.mp3",
+    "audio/readings/30c130e7.mp3",
+    "audio/readings/30c130e730a6.mp3",
+    "audio/readings/30c130e730af.mp3",
+    "audio/readings/30c130f3.mp3",
+    "audio/readings/30c430a6.mp3",
+    "audio/readings/30c630a4.mp3",
+    "audio/readings/30c630ad.mp3",
+    "audio/readings/30c630c4.mp3",
+    "audio/readings/30c630f3.mp3",
+    "audio/readings/30c730f3.mp3",
+    "audio/readings/30c8.mp3",
+    "audio/readings/30c830a6.mp3",
+    "audio/readings/30c830af.mp3",
+    "audio/readings/30c9.mp3",
+    "audio/readings/30c930a6.mp3",
+    "audio/readings/30c930af.mp3",
+    "audio/readings/30ca.mp3",
+    "audio/readings/30ca30a4.mp3",
+    "audio/readings/30cb.mp3",
+    "audio/readings/30cb30af.mp3",
+    "audio/readings/30cb30e530a6.mp3",
+    "audio/readings/30cd30f3.mp3",
+    "audio/readings/30ce30a6.mp3",
+    "audio/readings/30cf.mp3",
+    "audio/readings/30cf30a4.mp3",
+    "audio/readings/30cf30af.mp3",
+    "audio/readings/30cf30c1.mp3",
+    "audio/readings/30cf30c4.mp3",
+    "audio/readings/30cf30f3.mp3",
+    "audio/readings/30d030a4.mp3",
+    "audio/readings/30d030f3.mp3",
+    "audio/readings/30d2.mp3",
+    "audio/readings/30d230e330af.mp3",
+    "audio/readings/30d230e730a6.mp3",
+    "audio/readings/30d330e730a6.mp3",
+    "audio/readings/30d5.mp3",
+    "audio/readings/30d530af.mp3",
+    "audio/readings/30d6.mp3",
+    "audio/readings/30d630f3.mp3",
+    "audio/readings/30d830a4.mp3",
+    "audio/readings/30d930f3.mp3",
+    "audio/readings/30db.mp3",
+    "audio/readings/30db30a6.mp3",
+    "audio/readings/30dc30a6.mp3",
+    "audio/readings/30dc30af.mp3",
+    "audio/readings/30de30a4.mp3",
+    "audio/readings/30de30af.mp3",
+    "audio/readings/30de30f3.mp3",
+    "audio/readings/30df.mp3",
+    "audio/readings/30df30c4.mp3",
+    "audio/readings/30df30e330af.mp3",
+    "audio/readings/30df30f3.mp3",
+    "audio/readings/30e130a4.mp3",
+    "audio/readings/30e130f3.mp3",
+    "audio/readings/30e2.mp3",
+    "audio/readings/30e230f3.mp3",
+    "audio/readings/30e430af.mp3",
+    "audio/readings/30e6.mp3",
+    "audio/readings/30e630a6.mp3",
+    "audio/readings/30e8.mp3",
+    "audio/readings/30e830a6.mp3",
+    "audio/readings/30e830af.mp3",
+    "audio/readings/30e930a4.mp3",
+    "audio/readings/30e930f3.mp3",
+    "audio/readings/30ea.mp3",
+    "audio/readings/30ea30af.mp3",
+    "audio/readings/30ea30c4.mp3",
+    "audio/readings/30ea30e330af.mp3",
+    "audio/readings/30ea30e730a6.mp3",
+    "audio/readings/30ea30f3.mp3",
+    "audio/readings/30eb30a4.mp3",
+    "audio/readings/30ec30a4.mp3",
+    "audio/readings/30ec30ad.mp3",
+    "audio/readings/30ec30c4.mp3",
+    "audio/readings/30ec30f3.mp3",
+    "audio/readings/30ed.mp3",
+    "audio/readings/30ed30a6.mp3",
+    "audio/readings/30ed30af.mp3",
+    "audio/readings/30ed30f3.mp3",
+    "audio/readings/30ef.mp3"
+  ],
   "pending": {
     "一": [
       {
@@ -448,6 +6332,30 @@
         "satisfied_by": [
           "audio/readings/moku_on2.mp3",
           "audio/readings/me_kun.mp3"
+        ]
+      }
+    ],
+    "媛": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/304830723081.mp3"
+        ]
+      }
+    ],
+    "岐": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/304e3075.mp3"
+        ]
+      }
+    ],
+    "阪": [
+      {
+        "item": "audio",
+        "satisfied_by": [
+          "audio/readings/304a304a3055304b.mp3"
         ]
       }
     ]

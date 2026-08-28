@@ -1,0 +1,89 @@
+character: 虫
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: むし
+      type: kun
+      audio: audio/readings/30803057.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: むし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    むし。
+    小さな 虫。
+    草の うえ。
+surfaces:
+  - id: s0
+    word: 虫
+    reading_id: r0
+    audio: audio/surfaces/866b_0.mp3
+  - id: s1
+    word: 虫
+    reading_id: r0
+    audio: audio/surfaces/866b_1.mp3
+  - id: s2
+    word: 虫
+    reading_id: r0
+    audio: audio/surfaces/30803057_2.mp3
+  - id: s3
+    word: 虫歯
+    reading_id: r0
+    audio: audio/surfaces/866b6b6f_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+    - order: 4
+      type: たて
+      a11y_ja: たて4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい
+    - order: 6
+      type: てん
+      a11y_ja: てん
+items:
+  - id: 虫-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: むし
+        correct: true
+      - kana: たつ
+        correct: false
+      - kana: む
+        correct: false
+  - id: 虫-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: むし
+        semantic: true
+        correct: true
+      - gloss_ja: さき。せんせい
+        semantic: true
+        correct: false
+      - gloss_ja: むら
+        semantic: true
+        correct: false
+  - id: 虫-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

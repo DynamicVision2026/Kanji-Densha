@@ -1,0 +1,69 @@
+character: 難
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: むずかしい
+      type: kun
+      audio: audio/readings/3080305a304b30573044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かたい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    むずかしい。
+    難しい 問題。
+    かんたん ではない。
+surfaces:
+  - id: s0
+    word: 難
+    reading_id: r0
+    audio: audio/surfaces/96e3_0.mp3
+  - id: s1
+    word: 難しい
+    reading_id: r0
+    audio: audio/surfaces/96e330573044_1.mp3
+  - id: s2
+    word: 難しい
+    reading_id: r0
+    audio: audio/surfaces/3080305a304b30573044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 𦰩
+    - char: 隹
+items:
+  - id: 難-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: むずかしい
+        correct: true
+      - kana: チン
+        correct: false
+      - kana: はげしい
+        correct: false
+  - id: 難-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かたい
+        semantic: true
+        correct: true
+      - gloss_ja: ほがらか
+        semantic: true
+        correct: false
+      - gloss_ja: けん。きっぷ
+        semantic: true
+        correct: false
+  - id: 難-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

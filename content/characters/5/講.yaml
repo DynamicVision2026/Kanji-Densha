@@ -1,0 +1,73 @@
+character: 講
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こう。こうぎ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こう。
+    講義を きく。
+    はなして おしえる。
+surfaces:
+  - id: s0
+    word: 講
+    reading_id: r0
+    audio: audio/surfaces/8b1b_0.mp3
+  - id: s1
+    word: 講義
+    reading_id: r0
+    audio: audio/surfaces/8b1b7fa9_1.mp3
+  - id: s2
+    word: 講義
+    reading_id: r0
+    audio: audio/surfaces/30533046304e_2.mp3
+  - id: s3
+    word: 講演
+    reading_id: r0
+    audio: audio/surfaces/8b1b6f14_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 冓
+items:
+  - id: 講-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: サイ
+        correct: false
+      - kana: さかい
+        correct: false
+  - id: 講-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こう。こうぎ
+        semantic: true
+        correct: true
+      - gloss_ja: ふく。かさなる。ふくすう
+        semantic: true
+        correct: false
+      - gloss_ja: まじる
+        semantic: true
+        correct: false
+  - id: 講-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

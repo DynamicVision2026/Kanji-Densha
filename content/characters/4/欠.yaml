@@ -1,0 +1,79 @@
+character: 欠
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: かける
+      type: kun
+      audio: audio/readings/304b3051308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かける。
+    月が 欠ける。
+    たりない。
+surfaces:
+  - id: s0
+    word: 欠
+    reading_id: r0
+    audio: audio/surfaces/6b20_0.mp3
+  - id: s1
+    word: 欠ける
+    reading_id: r0
+    audio: audio/surfaces/6b203051308b_1.mp3
+  - id: s2
+    word: 欠ける
+    reading_id: r0
+    audio: audio/surfaces/304b3051308b_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 欠-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かける
+        correct: true
+      - kana: くら
+        correct: false
+      - kana: ヒョウ
+        correct: false
+  - id: 欠-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かける
+        semantic: true
+        correct: true
+      - gloss_ja: くだ
+        semantic: true
+        correct: false
+      - gloss_ja: うつわ
+        semantic: true
+        correct: false
+  - id: 欠-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

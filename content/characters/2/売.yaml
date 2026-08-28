@@ -1,0 +1,92 @@
+character: 売
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: うる
+      type: kun
+      audio: audio/readings/3046308b.mp3
+    - id: r1
+      kana: バイ
+      type: on
+      audio: audio/readings/30d030a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うる。
+    花を 売る。
+    みせで。
+surfaces:
+  - id: s0
+    word: 売
+    reading_id: r0
+    audio: audio/surfaces/58f2_0.mp3
+  - id: s1
+    word: 売る
+    reading_id: r0
+    audio: audio/surfaces/58f2308b_1.mp3
+  - id: s2
+    word: 売る
+    reading_id: r0
+    audio: audio/surfaces/3046308b_2.mp3
+  - id: s3
+    word: 売店
+    reading_id: r1
+    audio: audio/surfaces/58f25e97_3.mp3
+  - id: s4
+    word: 発売
+    reading_id: r1
+    audio: audio/surfaces/767a58f2_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 士
+    - char: 儿
+items:
+  - id: 売-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うる
+        correct: true
+      - kana: キョウ
+        correct: false
+      - kana: サイ
+        correct: false
+  - id: 売-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: バイ
+        correct: true
+      - kana: ショウ
+        correct: false
+      - kana: かぜ
+        correct: false
+  - id: 売-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うる
+        semantic: true
+        correct: true
+      - gloss_ja: その
+        semantic: true
+        correct: false
+      - gloss_ja: あさ
+        semantic: true
+        correct: false
+  - id: 売-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

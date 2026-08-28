@@ -1,0 +1,73 @@
+character: 庫
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: コ
+      type: on
+      audio: audio/readings/30b3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くら
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くら。
+    金庫の 庫。
+    しまって おく。
+surfaces:
+  - id: s0
+    word: 庫
+    reading_id: r0
+    audio: audio/surfaces/5eab_0.mp3
+  - id: s1
+    word: 金庫
+    reading_id: r0
+    audio: audio/surfaces/91d15eab_1.mp3
+  - id: s2
+    word: 金庫
+    reading_id: r0
+    audio: audio/surfaces/304d30933053_2.mp3
+  - id: s3
+    word: 倉庫
+    reading_id: r0
+    audio: audio/surfaces/50095eab_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 車
+items:
+  - id: 庫-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コ
+        correct: true
+      - kana: リョウ
+        correct: false
+      - kana: みや
+        correct: false
+  - id: 庫-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くら
+        semantic: true
+        correct: true
+      - gloss_ja: いそぐ
+        semantic: true
+        correct: false
+      - gloss_ja: ところ
+        semantic: true
+        correct: false
+  - id: 庫-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

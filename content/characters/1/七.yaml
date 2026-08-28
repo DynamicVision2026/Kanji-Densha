@@ -1,0 +1,111 @@
+character: 七
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: なな
+      type: kun
+      audio: audio/readings/306a306a.mp3
+    - id: r1
+      kana: ななつ
+      type: kun
+      audio: audio/readings/306a306a3064.mp3
+    - id: r2
+      kana: シチ
+      type: on
+      audio: audio/readings/30b730c1.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ななつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ななつ。
+    かずの 七。
+    七つ かぞえる。
+surfaces:
+  - id: s0
+    word: 七
+    reading_id: r0
+    audio: audio/surfaces/4e03_0.mp3
+  - id: s1
+    word: 七つ
+    reading_id: r1
+    audio: audio/surfaces/4e033064_1.mp3
+  - id: s2
+    word: 七つ
+    reading_id: r1
+    audio: audio/surfaces/306a306a3064_2.mp3
+  - id: s3
+    word: 七月
+    reading_id: r2
+    audio: audio/surfaces/4e036708_3.mp3
+  - id: s4
+    word: 七時
+    reading_id: r2
+    audio: audio/surfaces/4e036642_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: はらい
+      a11y_ja: はらい
+items:
+  - id: 七-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なな
+        correct: true
+      - kana: つち
+        correct: false
+      - kana: まち
+        correct: false
+  - id: 七-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ななつ
+        correct: true
+      - kana: はやい
+        correct: false
+      - kana: セン
+        correct: false
+  - id: 七-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: シチ
+        correct: true
+      - kana: うえ
+        correct: false
+      - kana: ちいさい
+        correct: false
+  - id: 七-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ななつ
+        semantic: true
+        correct: true
+      - gloss_ja: した。さがる
+        semantic: true
+        correct: false
+      - gloss_ja: ここのつ
+        semantic: true
+        correct: false
+  - id: 七-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

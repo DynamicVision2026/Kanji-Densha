@@ -1,0 +1,75 @@
+character: 穀
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: コク
+      type: on
+      audio: audio/readings/30b330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こく。こくもつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こく。
+    穀物を つくる。
+    いねや むぎ。
+surfaces:
+  - id: s0
+    word: 穀
+    reading_id: r0
+    audio: audio/surfaces/7a40_0.mp3
+  - id: s1
+    word: 穀物
+    reading_id: r0
+    audio: audio/surfaces/7a407269_1.mp3
+  - id: s2
+    word: 穀物
+    reading_id: r0
+    audio: audio/surfaces/3053304f30823064_2.mp3
+  - id: s3
+    word: 穀類
+    reading_id: r0
+    audio: audio/surfaces/7a40985e_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 士
+    - char: 冖
+    - char: 禾
+    - char: 殳
+items:
+  - id: 穀-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コク
+        correct: true
+      - kana: つくえ
+        correct: false
+      - kana: しりぞく
+        correct: false
+  - id: 穀-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こく。こくもつ
+        semantic: true
+        correct: true
+      - gloss_ja: たく。いえ
+        semantic: true
+        correct: false
+      - gloss_ja: ふるう
+        semantic: true
+        correct: false
+  - id: 穀-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

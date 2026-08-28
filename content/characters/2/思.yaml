@@ -1,0 +1,92 @@
+character: 思
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: おもう
+      type: kun
+      audio: audio/readings/304a30823046.mp3
+    - id: r1
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おもう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おもう。
+    家を 思う。
+    こころの なか。
+surfaces:
+  - id: s0
+    word: 思
+    reading_id: r0
+    audio: audio/surfaces/601d_0.mp3
+  - id: s1
+    word: 思う
+    reading_id: r0
+    audio: audio/surfaces/601d3046_1.mp3
+  - id: s2
+    word: 思う
+    reading_id: r0
+    audio: audio/surfaces/304a30823046_2.mp3
+  - id: s3
+    word: 思想
+    reading_id: r1
+    audio: audio/surfaces/601d60f3_3.mp3
+  - id: s4
+    word: 意思
+    reading_id: r1
+    audio: audio/surfaces/610f601d_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 田
+    - char: 心
+items:
+  - id: 思-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おもう
+        correct: true
+      - kana: ワ
+        correct: false
+      - kana: さかな
+        correct: false
+  - id: 思-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: シ
+        correct: true
+      - kana: こころ
+        correct: false
+      - kana: きく
+        correct: false
+  - id: 思-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おもう
+        semantic: true
+        correct: true
+      - gloss_ja: ながい
+        semantic: true
+        correct: false
+      - gloss_ja: くに
+        semantic: true
+        correct: false
+  - id: 思-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

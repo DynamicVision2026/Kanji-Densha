@@ -1,0 +1,89 @@
+character: 竹
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: たけ
+      type: kun
+      audio: audio/readings/305f3051.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たけ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たけ。
+    ほそい 竹。
+    まっすぐ のびる。
+surfaces:
+  - id: s0
+    word: 竹
+    reading_id: r0
+    audio: audio/surfaces/7af9_0.mp3
+  - id: s1
+    word: 竹
+    reading_id: r0
+    audio: audio/surfaces/7af9_1.mp3
+  - id: s2
+    word: 竹
+    reading_id: r0
+    audio: audio/surfaces/305f3051_2.mp3
+  - id: s3
+    word: 竹馬
+    reading_id: r0
+    audio: audio/surfaces/7af999ac_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: たて
+      a11y_ja: たて
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: よこ
+      a11y_ja: よこ5
+    - order: 6
+      type: はらい
+      a11y_ja: はらい6
+items:
+  - id: 竹-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たけ
+        correct: true
+      - kana: サン
+        correct: false
+      - kana: よ
+        correct: false
+  - id: 竹-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たけ
+        semantic: true
+        correct: true
+      - gloss_ja: て
+        semantic: true
+        correct: false
+      - gloss_ja: ちいさい
+        semantic: true
+        correct: false
+  - id: 竹-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

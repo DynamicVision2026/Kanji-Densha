@@ -1,0 +1,73 @@
+character: 利
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: リ
+      type: on
+      audio: audio/readings/30ea.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きく。
+    利用する。
+    やくに たつ。
+surfaces:
+  - id: s0
+    word: 利
+    reading_id: r0
+    audio: audio/surfaces/5229_0.mp3
+  - id: s1
+    word: 利用
+    reading_id: r0
+    audio: audio/surfaces/52297528_1.mp3
+  - id: s2
+    word: 利用
+    reading_id: r0
+    audio: audio/surfaces/308a30883046_2.mp3
+  - id: s3
+    word: 利益
+    reading_id: r0
+    audio: audio/surfaces/522976ca_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 禾
+    - char: 刀
+items:
+  - id: 利-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: リ
+        correct: true
+      - kana: おいる
+        correct: false
+      - kana: あげる
+        correct: false
+  - id: 利-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きく
+        semantic: true
+        correct: true
+      - gloss_ja: ころも
+        semantic: true
+        correct: false
+      - gloss_ja: おか
+        semantic: true
+        correct: false
+  - id: 利-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

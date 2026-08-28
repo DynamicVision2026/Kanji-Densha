@@ -1,0 +1,108 @@
+character: 魚
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: うお
+      type: kun
+      audio: audio/readings/3046304a.mp3
+    - id: r1
+      kana: さかな
+      type: kun
+      audio: audio/readings/3055304b306a.mp3
+    - id: r2
+      kana: ギョ
+      type: on
+      audio: audio/readings/30ae30e7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うお
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さかな。
+    川の 魚。
+    水に およぐ。
+surfaces:
+  - id: s0
+    word: 魚
+    reading_id: r0
+    audio: audio/surfaces/9b5a_0.mp3
+  - id: s1
+    word: 魚
+    reading_id: r1
+    audio: audio/surfaces/9b5a_1.mp3
+  - id: s2
+    word: 魚
+    reading_id: r1
+    audio: audio/surfaces/3055304b306a_2.mp3
+  - id: s3
+    word: 金魚
+    reading_id: r2
+    audio: audio/surfaces/91d19b5a_3.mp3
+  - id: s4
+    word: 魚類
+    reading_id: r2
+    audio: audio/surfaces/9b5a985e_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺈
+    - char: 田
+    - char: 灬
+items:
+  - id: 魚-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うお
+        correct: true
+      - kana: カツ
+        correct: false
+      - kana: ダイ
+        correct: false
+  - id: 魚-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: さかな
+        correct: true
+      - kana: ショウ
+        correct: false
+      - kana: はね
+        correct: false
+  - id: 魚-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ギョ
+        correct: true
+      - kana: ゴ
+        correct: false
+      - kana: ドク
+        correct: false
+  - id: 魚-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うお
+        semantic: true
+        correct: true
+      - gloss_ja: まわる
+        semantic: true
+        correct: false
+      - gloss_ja: あたる
+        semantic: true
+        correct: false
+  - id: 魚-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

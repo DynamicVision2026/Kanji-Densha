@@ -1,0 +1,73 @@
+character: 樹
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジュ
+      type: on
+      audio: audio/readings/30b830e5.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: き
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    き。
+    樹木が たつ。
+    大きな 木。
+surfaces:
+  - id: s0
+    word: 樹
+    reading_id: r0
+    audio: audio/surfaces/6a39_0.mp3
+  - id: s1
+    word: 樹木
+    reading_id: r0
+    audio: audio/surfaces/6a396728_1.mp3
+  - id: s2
+    word: 樹木
+    reading_id: r0
+    audio: audio/surfaces/305830853082304f_2.mp3
+  - id: s3
+    word: 樹齢
+    reading_id: r0
+    audio: audio/surfaces/6a399f62_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 尌
+items:
+  - id: 樹-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジュ
+        correct: true
+      - kana: わけ
+        correct: false
+      - kana: したがう
+        correct: false
+  - id: 樹-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: き
+        semantic: true
+        correct: true
+      - gloss_ja: はげしい
+        semantic: true
+        correct: false
+      - gloss_ja: おさめる
+        semantic: true
+        correct: false
+  - id: 樹-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

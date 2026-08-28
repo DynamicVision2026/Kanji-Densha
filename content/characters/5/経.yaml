@@ -1,0 +1,69 @@
+character: 経
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: へる
+      type: kun
+      audio: audio/readings/3078308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: へる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    へる。
+    時が 経る。
+    とおりすぎる。
+surfaces:
+  - id: s0
+    word: 経
+    reading_id: r0
+    audio: audio/surfaces/7d4c_0.mp3
+  - id: s1
+    word: 経る
+    reading_id: r0
+    audio: audio/surfaces/7d4c308b_1.mp3
+  - id: s2
+    word: 経る
+    reading_id: r0
+    audio: audio/surfaces/3078308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 圣
+items:
+  - id: 経-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: へる
+        correct: true
+      - kana: オウ
+        correct: false
+      - kana: ミャク
+        correct: false
+  - id: 経-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: へる
+        semantic: true
+        correct: true
+      - gloss_ja: すぎる
+        semantic: true
+        correct: false
+      - gloss_ja: ささえる
+        semantic: true
+        correct: false
+  - id: 経-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

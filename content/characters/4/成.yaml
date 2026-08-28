@@ -1,0 +1,69 @@
+character: 成
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: なる
+      type: kun
+      audio: audio/readings/306a308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: なる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    なる。
+    大人に 成る。
+    できあがる。
+surfaces:
+  - id: s0
+    word: 成
+    reading_id: r0
+    audio: audio/surfaces/6210_0.mp3
+  - id: s1
+    word: 成る
+    reading_id: r0
+    audio: audio/surfaces/6210308b_1.mp3
+  - id: s2
+    word: 成る
+    reading_id: r0
+    audio: audio/surfaces/306a308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 戊
+    - char: 丁
+items:
+  - id: 成-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: なる
+        correct: true
+      - kana: ト
+        correct: false
+      - kana: いさむ
+        correct: false
+  - id: 成-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: なる
+        semantic: true
+        correct: true
+      - gloss_ja: みち
+        semantic: true
+        correct: false
+      - gloss_ja: かためる
+        semantic: true
+        correct: false
+  - id: 成-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

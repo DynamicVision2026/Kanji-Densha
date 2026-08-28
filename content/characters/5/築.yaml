@@ -1,0 +1,69 @@
+character: 築
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: きずく
+      type: kun
+      audio: audio/readings/304d305a304f.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きずく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    きずく。
+    家を 築く。
+    つみあげる。
+surfaces:
+  - id: s0
+    word: 築
+    reading_id: r0
+    audio: audio/surfaces/7bc9_0.mp3
+  - id: s1
+    word: 築く
+    reading_id: r0
+    audio: audio/surfaces/7bc9304f_1.mp3
+  - id: s2
+    word: 築く
+    reading_id: r0
+    audio: audio/surfaces/304d305a304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 竹
+    - char: 筑
+items:
+  - id: 築-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: きずく
+        correct: true
+      - kana: カク
+        correct: false
+      - kana: とめる
+        correct: false
+  - id: 築-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きずく
+        semantic: true
+        correct: true
+      - gloss_ja: ひさしい
+        semantic: true
+        correct: false
+      - gloss_ja: つくる
+        semantic: true
+        correct: false
+  - id: 築-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 店
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: みせ
+      type: kun
+      audio: audio/readings/307f305b.mp3
+    - id: r1
+      kana: テン
+      type: on
+      audio: audio/readings/30c630f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みせ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みせ。
+    小さな 店。
+    ものを うる。
+surfaces:
+  - id: s0
+    word: 店
+    reading_id: r0
+    audio: audio/surfaces/5e97_0.mp3
+  - id: s1
+    word: 店
+    reading_id: r0
+    audio: audio/surfaces/5e97_1.mp3
+  - id: s2
+    word: 店
+    reading_id: r0
+    audio: audio/surfaces/307f305b_2.mp3
+  - id: s3
+    word: 店員
+    reading_id: r1
+    audio: audio/surfaces/5e9754e1_3.mp3
+  - id: s4
+    word: 商店
+    reading_id: r1
+    audio: audio/surfaces/55465e97_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 广
+    - char: 占
+items:
+  - id: 店-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みせ
+        correct: true
+      - kana: ゴウ
+        correct: false
+      - kana: いろ
+        correct: false
+  - id: 店-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: テン
+        correct: true
+      - kana: くろ
+        correct: false
+      - kana: ただちに
+        correct: false
+  - id: 店-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みせ
+        semantic: true
+        correct: true
+      - gloss_ja: いろ
+        semantic: true
+        correct: false
+      - gloss_ja: みやこ
+        semantic: true
+        correct: false
+  - id: 店-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

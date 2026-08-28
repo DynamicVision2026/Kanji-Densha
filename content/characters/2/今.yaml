@@ -1,0 +1,102 @@
+character: 今
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: いま
+      type: kun
+      audio: audio/readings/3044307e.mp3
+    - id: r1
+      kana: コン
+      type: on
+      audio: audio/readings/30b330f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いま。
+    今 ここ。
+    この とき。
+surfaces:
+  - id: s0
+    word: 今
+    reading_id: r0
+    audio: audio/surfaces/4eca_0.mp3
+  - id: s1
+    word: 今
+    reading_id: r0
+    audio: audio/surfaces/4eca_1.mp3
+  - id: s2
+    word: 今
+    reading_id: r0
+    audio: audio/surfaces/3044307e_2.mp3
+  - id: s3
+    word: 今月
+    reading_id: r1
+    audio: audio/surfaces/4eca6708_3.mp3
+  - id: s4
+    word: 今回
+    reading_id: r1
+    audio: audio/surfaces/4eca56de_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 今-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いま
+        correct: true
+      - kana: そと
+        correct: false
+      - kana: よわい
+        correct: false
+  - id: 今-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: コン
+        correct: true
+      - kana: ギュウ
+        correct: false
+      - kana: シン
+        correct: false
+  - id: 今-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いま
+        semantic: true
+        correct: true
+      - gloss_ja: あいだ
+        semantic: true
+        correct: false
+      - gloss_ja: みなみ
+        semantic: true
+        correct: false
+  - id: 今-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

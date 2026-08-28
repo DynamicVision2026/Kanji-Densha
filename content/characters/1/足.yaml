@@ -1,0 +1,69 @@
+character: 足
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: あし
+      type: kun
+      audio: audio/readings/30423057.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あし。
+    足が はやい。
+    あるく とき。
+surfaces:
+  - id: s0
+    word: 足
+    reading_id: r0
+    audio: audio/surfaces/8db3_0.mp3
+  - id: s1
+    word: 足
+    reading_id: r0
+    audio: audio/surfaces/8db3_1.mp3
+  - id: s2
+    word: 足音
+    reading_id: r0
+    audio: audio/surfaces/8db397f3_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 止
+items:
+  - id: 足-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あし
+        correct: true
+      - kana: おんな
+        correct: false
+      - kana: ショウ
+        correct: false
+  - id: 足-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あし
+        semantic: true
+        correct: true
+      - gloss_ja: はな
+        semantic: true
+        correct: false
+      - gloss_ja: やすむ
+        semantic: true
+        correct: false
+  - id: 足-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,117 @@
+character: 分
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: わける
+      type: kun
+      audio: audio/readings/308f3051308b.mp3
+    - id: r1
+      kana: わかる
+      type: kun
+      audio: audio/readings/308f304b308b.mp3
+    - id: r2
+      kana: ブン
+      type: on
+      audio: audio/readings/30d630f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: わける
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    わかる。
+    意味が 分かる。
+    わける こと。
+surfaces:
+  - id: s0
+    word: 分
+    reading_id: r0
+    audio: audio/surfaces/5206_0.mp3
+  - id: s1
+    word: 分かる
+    reading_id: r1
+    audio: audio/surfaces/5206304b308b_1.mp3
+  - id: s2
+    word: 分かる
+    reading_id: r1
+    audio: audio/surfaces/308f304b308b_2.mp3
+  - id: s3
+    word: 分数
+    reading_id: r2
+    audio: audio/surfaces/52066570_3.mp3
+  - id: s4
+    word: 自分
+    reading_id: r2
+    audio: audio/surfaces/81ea5206_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+    - order: 3
+      type: はらい
+      a11y_ja: はらい3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+items:
+  - id: 分-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: わける
+        correct: true
+      - kana: まじわる
+        correct: false
+      - kana: からだ
+        correct: false
+  - id: 分-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: わかる
+        correct: true
+      - kana: ニク
+        correct: false
+      - kana: ギュウ
+        correct: false
+  - id: 分-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ブン
+        correct: true
+      - kana: シツ
+        correct: false
+      - kana: くる
+        correct: false
+  - id: 分-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: わける
+        semantic: true
+        correct: true
+      - gloss_ja: つける
+        semantic: true
+        correct: false
+      - gloss_ja: いち
+        semantic: true
+        correct: false
+  - id: 分-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

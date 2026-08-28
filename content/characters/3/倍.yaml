@@ -1,0 +1,69 @@
+character: 倍
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: バイ
+      type: on
+      audio: audio/readings/30d030a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ばい。にばい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ばい。
+    二倍に なる。
+    ふたつぶん。
+surfaces:
+  - id: s0
+    word: 倍
+    reading_id: r0
+    audio: audio/surfaces/500d_0.mp3
+  - id: s1
+    word: 二倍
+    reading_id: r0
+    audio: audio/surfaces/4e8c500d_1.mp3
+  - id: s2
+    word: 二倍
+    reading_id: r0
+    audio: audio/surfaces/306b30703044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 咅
+items:
+  - id: 倍-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: バイ
+        correct: true
+      - kana: ジ
+        correct: false
+      - kana: ソウ
+        correct: false
+  - id: 倍-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ばい。にばい
+        semantic: true
+        correct: true
+      - gloss_ja: うける
+        semantic: true
+        correct: false
+      - gloss_ja: くろがね
+        semantic: true
+        correct: false
+  - id: 倍-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

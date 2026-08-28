@@ -1,0 +1,84 @@
+character: 初
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: はじめ
+      type: kun
+      audio: audio/readings/306f30583081.mp3
+    - id: r1
+      kana: はじめて
+      type: kun
+      audio: audio/readings/306f305830813066.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はじめ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はじめ。
+    初めて いく。
+    いちばん まえ。
+surfaces:
+  - id: s0
+    word: 初
+    reading_id: r0
+    audio: audio/surfaces/521d_0.mp3
+  - id: s1
+    word: 初めて
+    reading_id: r1
+    audio: audio/surfaces/521d30813066_1.mp3
+  - id: s2
+    word: 初めて
+    reading_id: r1
+    audio: audio/surfaces/306f305830813066_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 衤
+    - char: 刀
+items:
+  - id: 初-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はじめ
+        correct: true
+      - kana: つづく
+        correct: false
+      - kana: アン
+        correct: false
+  - id: 初-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: はじめて
+        correct: true
+      - kana: ケン
+        correct: false
+      - kana: そこ
+        correct: false
+  - id: 初-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はじめ
+        semantic: true
+        correct: true
+      - gloss_ja: はなぶさ
+        semantic: true
+        correct: false
+      - gloss_ja: たから
+        semantic: true
+        correct: false
+  - id: 初-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

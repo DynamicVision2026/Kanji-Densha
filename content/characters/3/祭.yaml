@@ -1,0 +1,85 @@
+character: 祭
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: まつる
+      type: kun
+      audio: audio/readings/307e3064308b.mp3
+    - id: r1
+      kana: まつり
+      type: kun
+      audio: audio/readings/307e3064308a.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まつる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まつり。
+    夏の 祭り。
+    太鼓が なる。
+surfaces:
+  - id: s0
+    word: 祭
+    reading_id: r0
+    audio: audio/surfaces/796d_0.mp3
+  - id: s1
+    word: 祭り
+    reading_id: r1
+    audio: audio/surfaces/796d308a_1.mp3
+  - id: s2
+    word: 祭り
+    reading_id: r1
+    audio: audio/surfaces/307e3064308a_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 月
+    - char: 又
+    - char: 示
+items:
+  - id: 祭-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まつる
+        correct: true
+      - kana: ころがる
+        correct: false
+      - kana: よこ
+        correct: false
+  - id: 祭-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: まつり
+        correct: true
+      - kana: ひつじ
+        correct: false
+      - kana: ゆび
+        correct: false
+  - id: 祭-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まつる
+        semantic: true
+        correct: true
+      - gloss_ja: はしら
+        semantic: true
+        correct: false
+      - gloss_ja: よし
+        semantic: true
+        correct: false
+  - id: 祭-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

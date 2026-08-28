@@ -1,0 +1,70 @@
+character: 刷
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: する
+      type: kun
+      audio: audio/readings/3059308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: する
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    する。
+    紙を 刷る。
+    いんさつ。
+surfaces:
+  - id: s0
+    word: 刷
+    reading_id: r0
+    audio: audio/surfaces/5237_0.mp3
+  - id: s1
+    word: 刷る
+    reading_id: r0
+    audio: audio/surfaces/5237308b_1.mp3
+  - id: s2
+    word: 刷る
+    reading_id: r0
+    audio: audio/surfaces/3059308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 尸
+    - char: 巾
+    - char: 刀
+items:
+  - id: 刷-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: する
+        correct: true
+      - kana: リ
+        correct: false
+      - kana: かた
+        correct: false
+  - id: 刷-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: する
+        semantic: true
+        correct: true
+      - gloss_ja: とく
+        semantic: true
+        correct: false
+      - gloss_ja: たば
+        semantic: true
+        correct: false
+  - id: 刷-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

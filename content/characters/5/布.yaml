@@ -1,0 +1,82 @@
+character: 布
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ぬの
+      type: kun
+      audio: audio/readings/306c306e.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ぬの
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ぬの。
+    白い 布。
+    織った もの。
+surfaces:
+  - id: s0
+    word: 布
+    reading_id: r0
+    audio: audio/surfaces/5e03_0.mp3
+  - id: s1
+    word: 布
+    reading_id: r0
+    audio: audio/surfaces/5e03_1.mp3
+  - id: s2
+    word: 布
+    reading_id: r0
+    audio: audio/surfaces/306c306e_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: たて
+      a11y_ja: たて
+    - order: 4
+      type: はらい
+      a11y_ja: はらい4
+    - order: 5
+      type: たて
+      a11y_ja: たて5
+items:
+  - id: 布-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ぬの
+        correct: true
+      - kana: かこむ
+        correct: false
+      - kana: こな
+        correct: false
+  - id: 布-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ぬの
+        semantic: true
+        correct: true
+      - gloss_ja: すべて
+        semantic: true
+        correct: false
+      - gloss_ja: かく。しかく。かくさ
+        semantic: true
+        correct: false
+  - id: 布-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,73 @@
+character: 票
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヒョウ
+      type: on
+      audio: audio/readings/30d230e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ひょう。ひょうを いれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ひょう。
+    投票する。
+    ふだ。
+surfaces:
+  - id: s0
+    word: 票
+    reading_id: r0
+    audio: audio/surfaces/7968_0.mp3
+  - id: s1
+    word: 投票
+    reading_id: r0
+    audio: audio/surfaces/62957968_1.mp3
+  - id: s2
+    word: 投票
+    reading_id: r0
+    audio: audio/surfaces/30683046307230873046_2.mp3
+  - id: s3
+    word: 票数
+    reading_id: r0
+    audio: audio/surfaces/79686570_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 西
+    - char: 示
+items:
+  - id: 票-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヒョウ
+        correct: true
+      - kana: ぎふ
+        correct: false
+      - kana: サク
+        correct: false
+  - id: 票-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ひょう。ひょうを いれる
+        semantic: true
+        correct: true
+      - gloss_ja: たから
+        semantic: true
+        correct: false
+      - gloss_ja: おのおの
+        semantic: true
+        correct: false
+  - id: 票-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

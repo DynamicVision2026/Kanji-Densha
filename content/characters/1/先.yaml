@@ -1,0 +1,84 @@
+character: 先
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: さき
+      type: kun
+      audio: audio/readings/3055304d.mp3
+    - id: r1
+      kana: セン
+      type: on
+      audio: audio/readings/30bb30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さき。せんせい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さき。
+    先生の 先。
+    まえを いく。
+surfaces:
+  - id: s0
+    word: 先
+    reading_id: r0
+    audio: audio/surfaces/5148_0.mp3
+  - id: s1
+    word: 先生
+    reading_id: r1
+    audio: audio/surfaces/5148751f_1.mp3
+  - id: s2
+    word: 先月
+    reading_id: r1
+    audio: audio/surfaces/51486708_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺧
+    - char: 儿
+items:
+  - id: 先-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: さき
+        correct: true
+      - kana: はいる
+        correct: false
+      - kana: とし
+        correct: false
+  - id: 先-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: セン
+        correct: true
+      - kana: ジョウ
+        correct: false
+      - kana: うえ
+        correct: false
+  - id: 先-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さき。せんせい
+        semantic: true
+        correct: true
+      - gloss_ja: やすむ
+        semantic: true
+        correct: false
+      - gloss_ja: みる
+        semantic: true
+        correct: false
+  - id: 先-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

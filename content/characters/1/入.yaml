@@ -1,0 +1,111 @@
+character: 入
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: いる
+      type: kun
+      audio: audio/readings/3044308b.mp3
+    - id: r1
+      kana: はいる
+      type: kun
+      audio: audio/readings/306f3044308b.mp3
+    - id: r2
+      kana: ニュウ
+      type: on
+      audio: audio/readings/30cb30e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はいる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はいる。
+    いえに 入る。
+    人と にてる。
+surfaces:
+  - id: s0
+    word: 入
+    reading_id: r0
+    audio: audio/surfaces/5165_0.mp3
+  - id: s1
+    word: 入る
+    reading_id: r1
+    audio: audio/surfaces/5165308b_1.mp3
+  - id: s2
+    word: 入る
+    reading_id: r1
+    audio: audio/surfaces/306f3044308b_2.mp3
+  - id: s3
+    word: 入学
+    reading_id: r2
+    audio: audio/surfaces/51655b66_3.mp3
+  - id: s4
+    word: 入場
+    reading_id: r2
+    audio: audio/surfaces/51655834_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: はらい
+      a11y_ja: はらい2
+items:
+  - id: 入-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: いる
+        correct: true
+      - kana: よ
+        correct: false
+      - kana: サン
+        correct: false
+  - id: 入-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: はいる
+        correct: true
+      - kana: あめ
+        correct: false
+      - kana: みぎ
+        correct: false
+  - id: 入-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: ニュウ
+        correct: true
+      - kana: した
+        correct: false
+      - kana: オウ
+        correct: false
+  - id: 入-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はいる
+        semantic: true
+        correct: true
+      - gloss_ja: むし
+        semantic: true
+        correct: false
+      - gloss_ja: ふたつ
+        semantic: true
+        correct: false
+  - id: 入-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

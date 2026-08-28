@@ -1,0 +1,84 @@
+character: 乳
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ちち
+      type: kun
+      audio: audio/readings/30613061.mp3
+    - id: r1
+      kana: ニュウ
+      type: on
+      audio: audio/readings/30cb30e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ちち
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちち。
+    牛乳を のむ。
+    しろい みず。
+surfaces:
+  - id: s0
+    word: 乳
+    reading_id: r0
+    audio: audio/surfaces/4e73_0.mp3
+  - id: s1
+    word: 牛乳
+    reading_id: r1
+    audio: audio/surfaces/725b4e73_1.mp3
+  - id: s2
+    word: 牛乳
+    reading_id: r1
+    audio: audio/surfaces/304e30853046306b30853046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 孚
+    - char: 乚
+items:
+  - id: 乳-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ちち
+        correct: true
+      - kana: おりる
+        correct: false
+      - kana: カク
+        correct: false
+  - id: 乳-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ニュウ
+        correct: true
+      - kana: オン
+        correct: false
+      - kana: くれる
+        correct: false
+  - id: 乳-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ちち
+        semantic: true
+        correct: true
+      - gloss_ja: むね
+        semantic: true
+        correct: false
+      - gloss_ja: くら
+        semantic: true
+        correct: false
+  - id: 乳-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

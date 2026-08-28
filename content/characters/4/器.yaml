@@ -1,0 +1,74 @@
+character: 器
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うつわ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うつわ。
+    楽器を ふく。
+    いれもの。
+surfaces:
+  - id: s0
+    word: 器
+    reading_id: r0
+    audio: audio/surfaces/5668_0.mp3
+  - id: s1
+    word: 楽器
+    reading_id: r0
+    audio: audio/surfaces/697d5668_1.mp3
+  - id: s2
+    word: 楽器
+    reading_id: r0
+    audio: audio/surfaces/304c3063304d_2.mp3
+  - id: s3
+    word: 器具
+    reading_id: r0
+    audio: audio/surfaces/56685177_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 犬
+    - char: 口
+items:
+  - id: 器-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: ミン
+        correct: false
+      - kana: め
+        correct: false
+  - id: 器-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うつわ
+        semantic: true
+        correct: true
+      - gloss_ja: むすぶ
+        semantic: true
+        correct: false
+      - gloss_ja: そうろう
+        semantic: true
+        correct: false
+  - id: 器-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

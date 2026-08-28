@@ -1,0 +1,89 @@
+character: 年
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: とし
+      type: kun
+      audio: audio/readings/30683057.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とし。ねん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とし。
+    ことしの 年。
+    いちねん。
+surfaces:
+  - id: s0
+    word: 年
+    reading_id: r0
+    audio: audio/surfaces/5e74_0.mp3
+  - id: s1
+    word: 年
+    reading_id: r0
+    audio: audio/surfaces/5e74_1.mp3
+  - id: s2
+    word: 年
+    reading_id: r0
+    audio: audio/surfaces/30683057_2.mp3
+  - id: s3
+    word: 年下
+    reading_id: r0
+    audio: audio/surfaces/5e744e0b_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: はらい
+      a11y_ja: はらい
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+    - order: 4
+      type: たて
+      a11y_ja: たて
+    - order: 5
+      type: よこ
+      a11y_ja: よこ5
+    - order: 6
+      type: たて
+      a11y_ja: たて6
+items:
+  - id: 年-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とし
+        correct: true
+      - kana: かい
+        correct: false
+      - kana: ここの
+        correct: false
+  - id: 年-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とし。ねん
+        semantic: true
+        correct: true
+      - gloss_ja: よっつ
+        semantic: true
+        correct: false
+      - gloss_ja: ななつ
+        semantic: true
+        correct: false
+  - id: 年-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

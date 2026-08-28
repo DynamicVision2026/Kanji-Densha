@@ -1,0 +1,73 @@
+character: 揮
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: キ
+      type: on
+      audio: audio/readings/30ad.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふるう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふるう。
+    指揮する。
+    手を うごかす。
+surfaces:
+  - id: s0
+    word: 揮
+    reading_id: r0
+    audio: audio/surfaces/63ee_0.mp3
+  - id: s1
+    word: 指揮
+    reading_id: r0
+    audio: audio/surfaces/630763ee_1.mp3
+  - id: s2
+    word: 指揮
+    reading_id: r0
+    audio: audio/surfaces/3057304d_2.mp3
+  - id: s3
+    word: 発揮
+    reading_id: r0
+    audio: audio/surfaces/767a63ee_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 扌
+    - char: 軍
+items:
+  - id: 揮-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: キ
+        correct: true
+      - kana: ちち
+        correct: false
+      - kana: よぶ
+        correct: false
+  - id: 揮-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふるう
+        semantic: true
+        correct: true
+      - gloss_ja: こう。てんのう
+        semantic: true
+        correct: false
+      - gloss_ja: すてる
+        semantic: true
+        correct: false
+  - id: 揮-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,74 @@
+character: 商
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: ショウ
+      type: on
+      audio: audio/readings/30b730e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あきなう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あきなう。
+    商店の 商。
+    ものを うる。
+surfaces:
+  - id: s0
+    word: 商
+    reading_id: r0
+    audio: audio/surfaces/5546_0.mp3
+  - id: s1
+    word: 商店
+    reading_id: r0
+    audio: audio/surfaces/55465e97_1.mp3
+  - id: s2
+    word: 商店
+    reading_id: r0
+    audio: audio/surfaces/30573087304630663093_2.mp3
+  - id: s3
+    word: 商業
+    reading_id: r0
+    audio: audio/surfaces/5546696d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 立
+    - char: 冂
+    - char: 口
+items:
+  - id: 商-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ショウ
+        correct: true
+      - kana: ゴウ
+        correct: false
+      - kana: うえる
+        correct: false
+  - id: 商-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あきなう
+        semantic: true
+        correct: true
+      - gloss_ja: はな
+        semantic: true
+        correct: false
+      - gloss_ja: おう。まんなか
+        semantic: true
+        correct: false
+  - id: 商-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

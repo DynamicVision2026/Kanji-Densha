@@ -1,0 +1,73 @@
+character: 特
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: トク
+      type: on
+      audio: audio/readings/30c830af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とく。とくべつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とく。
+    特別な 日。
+    ふつう ではない。
+surfaces:
+  - id: s0
+    word: 特
+    reading_id: r0
+    audio: audio/surfaces/7279_0.mp3
+  - id: s1
+    word: 特別
+    reading_id: r0
+    audio: audio/surfaces/72795225_1.mp3
+  - id: s2
+    word: 特別
+    reading_id: r0
+    audio: audio/surfaces/3068304f30793064_2.mp3
+  - id: s3
+    word: 特色
+    reading_id: r0
+    audio: audio/surfaces/72798272_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 牛
+    - char: 寺
+items:
+  - id: 特-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: トク
+        correct: true
+      - kana: つたえる
+        correct: false
+      - kana: いさむ
+        correct: false
+  - id: 特-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とく。とくべつ
+        semantic: true
+        correct: true
+      - gloss_ja: しるべ
+        semantic: true
+        correct: false
+      - gloss_ja: つわもの
+        semantic: true
+        correct: false
+  - id: 特-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

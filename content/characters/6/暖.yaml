@@ -1,0 +1,84 @@
+character: 暖
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: あたたか
+      type: kun
+      audio: audio/readings/3042305f305f304b.mp3
+    - id: r1
+      kana: あたたかい
+      type: kun
+      audio: audio/readings/3042305f305f304b3044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あたたか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あたたかい。
+    暖かい 日。
+    さむく ない。
+surfaces:
+  - id: s0
+    word: 暖
+    reading_id: r0
+    audio: audio/surfaces/6696_0.mp3
+  - id: s1
+    word: 暖かい
+    reading_id: r1
+    audio: audio/surfaces/6696304b3044_1.mp3
+  - id: s2
+    word: 暖かい
+    reading_id: r1
+    audio: audio/surfaces/3042305f305f304b3044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 爰
+items:
+  - id: 暖-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あたたか
+        correct: true
+      - kana: とじる
+        correct: false
+      - kana: ダン
+        correct: false
+  - id: 暖-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: あたたかい
+        correct: true
+      - kana: なみ
+        correct: false
+      - kana: タク
+        correct: false
+  - id: 暖-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あたたか
+        semantic: true
+        correct: true
+      - gloss_ja: わる
+        semantic: true
+        correct: false
+      - gloss_ja: こく。こくもつ
+        semantic: true
+        correct: false
+  - id: 暖-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

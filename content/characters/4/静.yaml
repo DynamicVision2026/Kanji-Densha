@@ -1,0 +1,84 @@
+character: 静
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: しず
+      type: kun
+      audio: audio/readings/3057305a.mp3
+    - id: r1
+      kana: しずか
+      type: kun
+      audio: audio/readings/3057305a304b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しず
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しずか。
+    静かな 部屋。
+    おとが ない。
+surfaces:
+  - id: s0
+    word: 静
+    reading_id: r0
+    audio: audio/surfaces/9759_0.mp3
+  - id: s1
+    word: 静か
+    reading_id: r1
+    audio: audio/surfaces/9759304b_1.mp3
+  - id: s2
+    word: 静か
+    reading_id: r1
+    audio: audio/surfaces/3057305a304b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 青
+    - char: 争
+items:
+  - id: 静-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: しず
+        correct: true
+      - kana: さす
+        correct: false
+      - kana: トク
+        correct: false
+  - id: 静-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: しずか
+        correct: true
+      - kana: フク
+        correct: false
+      - kana: キョク
+        correct: false
+  - id: 静-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しず
+        semantic: true
+        correct: true
+      - gloss_ja: やぶれる
+        semantic: true
+        correct: false
+      - gloss_ja: しるべ
+        semantic: true
+        correct: false
+  - id: 静-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

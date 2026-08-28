@@ -1,0 +1,73 @@
+character: 服
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: フク
+      type: on
+      audio: audio/readings/30d530af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ふく。ようふく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ふく。
+    新しい 服。
+    からだを つつむ。
+surfaces:
+  - id: s0
+    word: 服
+    reading_id: r0
+    audio: audio/surfaces/670d_0.mp3
+  - id: s1
+    word: 服
+    reading_id: r0
+    audio: audio/surfaces/670d_1.mp3
+  - id: s2
+    word: 服
+    reading_id: r0
+    audio: audio/surfaces/3075304f_2.mp3
+  - id: s3
+    word: 衣服
+    reading_id: r0
+    audio: audio/surfaces/8863670d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 月
+    - char: 𠬝
+items:
+  - id: 服-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: フク
+        correct: true
+      - kana: キュウ
+        correct: false
+      - kana: こと
+        correct: false
+  - id: 服-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ふく。ようふく
+        semantic: true
+        correct: true
+      - gloss_ja: はなす
+        semantic: true
+        correct: false
+      - gloss_ja: き。きかん。とき
+        semantic: true
+        correct: false
+  - id: 服-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

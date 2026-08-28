@@ -1,0 +1,70 @@
+character: 争
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: あらそう
+      type: kun
+      audio: audio/readings/30423089305d3046.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あらそう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あらそう。
+    ボールを 争う。
+    とりあう。
+surfaces:
+  - id: s0
+    word: 争
+    reading_id: r0
+    audio: audio/surfaces/4e89_0.mp3
+  - id: s1
+    word: 争う
+    reading_id: r0
+    audio: audio/surfaces/4e893046_1.mp3
+  - id: s2
+    word: 争う
+    reading_id: r0
+    audio: audio/surfaces/30423089305d3046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ⺈
+    - char: ヨ
+    - char: 亅
+items:
+  - id: 争-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あらそう
+        correct: true
+      - kana: サ
+        correct: false
+      - kana: い
+        correct: false
+  - id: 争-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あらそう
+        semantic: true
+        correct: true
+      - gloss_ja: ふ。〜でない
+        semantic: true
+        correct: false
+      - gloss_ja: わかれる
+        semantic: true
+        correct: false
+  - id: 争-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

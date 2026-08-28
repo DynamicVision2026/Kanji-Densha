@@ -1,0 +1,73 @@
+character: 階
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: カイ
+      type: on
+      audio: audio/readings/30ab30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: きざはし
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かい。
+    二階の 階。
+    のぼる だん。
+surfaces:
+  - id: s0
+    word: 階
+    reading_id: r0
+    audio: audio/surfaces/968e_0.mp3
+  - id: s1
+    word: 二階
+    reading_id: r0
+    audio: audio/surfaces/4e8c968e_1.mp3
+  - id: s2
+    word: 二階
+    reading_id: r0
+    audio: audio/surfaces/306b304b3044_2.mp3
+  - id: s3
+    word: 階段
+    reading_id: r0
+    audio: audio/surfaces/968e6bb5_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 阝
+    - char: 皆
+items:
+  - id: 階-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カイ
+        correct: true
+      - kana: たび
+        correct: false
+      - kana: みや
+        correct: false
+  - id: 階-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: きざはし
+        semantic: true
+        correct: true
+      - gloss_ja: よう。うみ。せいよう
+        semantic: true
+        correct: false
+      - gloss_ja: くるしい
+        semantic: true
+        correct: false
+  - id: 階-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

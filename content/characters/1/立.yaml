@@ -1,0 +1,105 @@
+character: 立
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: たつ
+      type: kun
+      audio: audio/readings/305f3064.mp3
+    - id: r1
+      kana: リツ
+      type: on
+      audio: audio/readings/30ea30c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たつ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たつ。
+    まえに 立つ。
+    足を つける。
+surfaces:
+  - id: s0
+    word: 立
+    reading_id: r0
+    audio: audio/surfaces/7acb_0.mp3
+  - id: s1
+    word: 立つ
+    reading_id: r0
+    audio: audio/surfaces/7acb3064_1.mp3
+  - id: s2
+    word: 立つ
+    reading_id: r0
+    audio: audio/surfaces/305f3064_2.mp3
+  - id: s3
+    word: 起立
+    reading_id: r1
+    audio: audio/surfaces/8d777acb_3.mp3
+  - id: s4
+    word: 独立
+    reading_id: r1
+    audio: audio/surfaces/72ec7acb_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: てん
+      a11y_ja: てん
+    - order: 4
+      type: はらい
+      a11y_ja: はらい
+    - order: 5
+      type: よこ
+      a11y_ja: よこ5
+items:
+  - id: 立-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たつ
+        correct: true
+      - kana: シ
+        correct: false
+      - kana: よっつ
+        correct: false
+  - id: 立-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: リツ
+        correct: true
+      - kana: よっつ
+        correct: false
+      - kana: よ
+        correct: false
+  - id: 立-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たつ
+        semantic: true
+        correct: true
+      - gloss_ja: ちいさい
+        semantic: true
+        correct: false
+      - gloss_ja: ゆうがた
+        semantic: true
+        correct: false
+  - id: 立-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

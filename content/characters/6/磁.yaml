@@ -1,0 +1,73 @@
+character: 磁
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジ
+      type: on
+      audio: audio/readings/30b8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: じ。じしゃく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    じ。
+    磁石が つく。
+    ひきよせる。
+surfaces:
+  - id: s0
+    word: 磁
+    reading_id: r0
+    audio: audio/surfaces/78c1_0.mp3
+  - id: s1
+    word: 磁石
+    reading_id: r0
+    audio: audio/surfaces/78c177f3_1.mp3
+  - id: s2
+    word: 磁石
+    reading_id: r0
+    audio: audio/surfaces/305830573083304f_2.mp3
+  - id: s3
+    word: 磁気
+    reading_id: r0
+    audio: audio/surfaces/78c16c17_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 石
+    - char: 兹
+items:
+  - id: 磁-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジ
+        correct: true
+      - kana: ゾウ
+        correct: false
+      - kana: わる
+        correct: false
+  - id: 磁-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: じ。じしゃく
+        semantic: true
+        correct: true
+      - gloss_ja: えらぶ
+        semantic: true
+        correct: false
+      - gloss_ja: すむ
+        semantic: true
+        correct: false
+  - id: 磁-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

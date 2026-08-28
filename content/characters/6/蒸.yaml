@@ -1,0 +1,73 @@
+character: 蒸
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジョウ
+      type: on
+      audio: audio/readings/30b830e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: むす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    むす。
+    蒸気が でる。
+    ゆげ。
+surfaces:
+  - id: s0
+    word: 蒸
+    reading_id: r0
+    audio: audio/surfaces/84b8_0.mp3
+  - id: s1
+    word: 蒸気
+    reading_id: r0
+    audio: audio/surfaces/84b86c17_1.mp3
+  - id: s2
+    word: 蒸気
+    reading_id: r0
+    audio: audio/surfaces/305830873046304d_2.mp3
+  - id: s3
+    word: 蒸発
+    reading_id: r0
+    audio: audio/surfaces/84b8767a_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 艹
+    - char: 烝
+items:
+  - id: 蒸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジョウ
+        correct: true
+      - kana: べに
+        correct: false
+      - kana: ノウ
+        correct: false
+  - id: 蒸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: むす
+        semantic: true
+        correct: true
+      - gloss_ja: うやまう
+        semantic: true
+        correct: false
+      - gloss_ja: すてる
+        semantic: true
+        correct: false
+  - id: 蒸-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

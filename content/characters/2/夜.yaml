@@ -1,0 +1,88 @@
+character: 夜
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: よ
+      type: kun
+      audio: audio/readings/3088.mp3
+    - id: r1
+      kana: よる
+      type: kun
+      audio: audio/readings/3088308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    よる。
+    暗い 夜。
+    星が でる。
+surfaces:
+  - id: s0
+    word: 夜
+    reading_id: r0
+    audio: audio/surfaces/591c_0.mp3
+  - id: s1
+    word: 夜
+    reading_id: r1
+    audio: audio/surfaces/591c_1.mp3
+  - id: s2
+    word: 夜
+    reading_id: r1
+    audio: audio/surfaces/3088308b_2.mp3
+  - id: s3
+    word: 夜中
+    reading_id: r1
+    audio: audio/surfaces/591c4e2d_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 亠
+    - char: 夕
+items:
+  - id: 夜-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: よ
+        correct: true
+      - kana: ヨウ
+        correct: false
+      - kana: き
+        correct: false
+  - id: 夜-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: よる
+        correct: true
+      - kana: みち
+        correct: false
+      - kana: かお
+        correct: false
+  - id: 夜-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よ
+        semantic: true
+        correct: true
+      - gloss_ja: おおい
+        semantic: true
+        correct: false
+      - gloss_ja: まじわる
+        semantic: true
+        correct: false
+  - id: 夜-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

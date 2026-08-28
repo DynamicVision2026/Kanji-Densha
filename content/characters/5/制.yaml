@@ -1,0 +1,74 @@
+character: 制
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: セイ
+      type: on
+      audio: audio/readings/30bb30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: せい。せいど。きまり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    せい。
+    制度を しらべる。
+    きまり。
+surfaces:
+  - id: s0
+    word: 制
+    reading_id: r0
+    audio: audio/surfaces/5236_0.mp3
+  - id: s1
+    word: 制度
+    reading_id: r0
+    audio: audio/surfaces/52365ea6_1.mp3
+  - id: s2
+    word: 制度
+    reading_id: r0
+    audio: audio/surfaces/305b30443069_2.mp3
+  - id: s3
+    word: 制限
+    reading_id: r0
+    audio: audio/surfaces/52369650_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 牛
+    - char: 巾
+    - char: 刀
+items:
+  - id: 制-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: セイ
+        correct: true
+      - kana: ひきいる
+        correct: false
+      - kana: ジョ
+        correct: false
+  - id: 制-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: せい。せいど。きまり
+        semantic: true
+        correct: true
+      - gloss_ja: き。きまり
+        semantic: true
+        correct: false
+      - gloss_ja: たえる
+        semantic: true
+        correct: false
+  - id: 制-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

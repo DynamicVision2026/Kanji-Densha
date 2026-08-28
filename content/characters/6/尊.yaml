@@ -1,0 +1,84 @@
+character: 尊
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: たっとい
+      type: kun
+      audio: audio/readings/305f306330683044.mp3
+    - id: r1
+      kana: とうとい
+      type: kun
+      audio: audio/readings/3068304630683044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たっとい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とうとい。
+    尊い 命。
+    たいせつ。
+surfaces:
+  - id: s0
+    word: 尊
+    reading_id: r0
+    audio: audio/surfaces/5c0a_0.mp3
+  - id: s1
+    word: 尊い
+    reading_id: r1
+    audio: audio/surfaces/5c0a3044_1.mp3
+  - id: s2
+    word: 尊い
+    reading_id: r1
+    audio: audio/surfaces/3068304630683044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 酋
+    - char: 寸
+items:
+  - id: 尊-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たっとい
+        correct: true
+      - kana: すな
+        correct: false
+      - kana: カン
+        correct: false
+  - id: 尊-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: とうとい
+        correct: true
+      - kana: のぞく
+        correct: false
+      - kana: きざむ
+        correct: false
+  - id: 尊-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たっとい
+        semantic: true
+        correct: true
+      - gloss_ja: じゅん。まじりけが ない
+        semantic: true
+        correct: false
+      - gloss_ja: そめる
+        semantic: true
+        correct: false
+  - id: 尊-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

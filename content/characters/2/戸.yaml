@@ -1,0 +1,83 @@
+character: 戸
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: と
+      type: kun
+      audio: audio/readings/3068.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: と
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    と。
+    いえの 戸。
+    あけて しめる。
+surfaces:
+  - id: s0
+    word: 戸
+    reading_id: r0
+    audio: audio/surfaces/6238_0.mp3
+  - id: s1
+    word: 戸
+    reading_id: r0
+    audio: audio/surfaces/6238_1.mp3
+  - id: s2
+    word: 戸
+    reading_id: r0
+    audio: audio/surfaces/3068_2.mp3
+  - id: s3
+    word: 戸口
+    reading_id: r0
+    audio: audio/surfaces/623853e3_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: よこ
+      a11y_ja: よこ
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+    - order: 4
+      type: はらい
+      a11y_ja: はらい
+items:
+  - id: 戸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: と
+        correct: true
+      - kana: はら
+        correct: false
+      - kana: ジ
+        correct: false
+  - id: 戸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: と
+        semantic: true
+        correct: true
+      - gloss_ja: とおい
+        semantic: true
+        correct: false
+      - gloss_ja: とおる
+        semantic: true
+        correct: false
+  - id: 戸-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

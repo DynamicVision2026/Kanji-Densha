@@ -1,0 +1,69 @@
+character: 圧
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: アツ
+      type: on
+      audio: audio/readings/30a230c4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おす。
+    圧力の 圧。
+    下へ おす。
+surfaces:
+  - id: s0
+    word: 圧
+    reading_id: r0
+    audio: audio/surfaces/5727_0.mp3
+  - id: s1
+    word: 圧力
+    reading_id: r0
+    audio: audio/surfaces/5727529b_1.mp3
+  - id: s2
+    word: 圧力
+    reading_id: r0
+    audio: audio/surfaces/30423064308a3087304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 厂
+    - char: 土
+items:
+  - id: 圧-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: アツ
+        correct: true
+      - kana: ひとり
+        correct: false
+      - kana: ソ
+        correct: false
+  - id: 圧-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おす
+        semantic: true
+        correct: true
+      - gloss_ja: きわ
+        semantic: true
+        correct: false
+      - gloss_ja: ついやす
+        semantic: true
+        correct: false
+  - id: 圧-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

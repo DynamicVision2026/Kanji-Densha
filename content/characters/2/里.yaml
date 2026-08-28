@@ -1,0 +1,73 @@
+character: 里
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: さと
+      type: kun
+      audio: audio/readings/30553068.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さと。
+    古い 里。
+    いなか。
+surfaces:
+  - id: s0
+    word: 里
+    reading_id: r0
+    audio: audio/surfaces/91cc_0.mp3
+  - id: s1
+    word: 里
+    reading_id: r0
+    audio: audio/surfaces/91cc_1.mp3
+  - id: s2
+    word: 里
+    reading_id: r0
+    audio: audio/surfaces/30553068_2.mp3
+  - id: s3
+    word: 里山
+    reading_id: r0
+    audio: audio/surfaces/91cc5c71_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 田
+    - char: 土
+items:
+  - id: 里-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: さと
+        correct: true
+      - kana: たかい
+        correct: false
+      - kana: ショウ
+        correct: false
+  - id: 里-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さと
+        semantic: true
+        correct: true
+      - gloss_ja: こたえる
+        semantic: true
+        correct: false
+      - gloss_ja: みずから
+        semantic: true
+        correct: false
+  - id: 里-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

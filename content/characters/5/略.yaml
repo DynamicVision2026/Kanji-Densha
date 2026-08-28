@@ -1,0 +1,69 @@
+character: 略
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: リャク
+      type: on
+      audio: audio/readings/30ea30e330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ほぼ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ほぼ。
+    省略する。
+    はぶく。
+surfaces:
+  - id: s0
+    word: 略
+    reading_id: r0
+    audio: audio/surfaces/7565_0.mp3
+  - id: s1
+    word: 省略
+    reading_id: r0
+    audio: audio/surfaces/77017565_1.mp3
+  - id: s2
+    word: 省略
+    reading_id: r0
+    audio: audio/surfaces/305730873046308a3083304f_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 田
+    - char: 各
+items:
+  - id: 略-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: リャク
+        correct: true
+      - kana: あつい
+        correct: false
+      - kana: キ
+        correct: false
+  - id: 略-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ほぼ
+        semantic: true
+        correct: true
+      - gloss_ja: かたまり
+        semantic: true
+        correct: false
+      - gloss_ja: よろこぶ
+        semantic: true
+        correct: false
+  - id: 略-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,86 @@
+character: 央
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: オウ
+      type: on
+      audio: audio/readings/30aa30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おう。まんなか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    まんなか。
+    中央の 央。
+    どまんなか。
+surfaces:
+  - id: s0
+    word: 央
+    reading_id: r0
+    audio: audio/surfaces/592e_0.mp3
+  - id: s1
+    word: 中央
+    reading_id: r0
+    audio: audio/surfaces/4e2d592e_1.mp3
+  - id: s2
+    word: 中央
+    reading_id: r0
+    audio: audio/surfaces/306130853046304a3046_2.mp3
+  - id: s3
+    word: 中央線
+    reading_id: r0
+    audio: audio/surfaces/4e2d592e7dda_3.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+    - order: 4
+      type: はらい
+      a11y_ja: はらい
+    - order: 5
+      type: はらい
+      a11y_ja: はらい5
+items:
+  - id: 央-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: オウ
+        correct: true
+      - kana: はじめる
+        correct: false
+      - kana: ととのえる
+        correct: false
+  - id: 央-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おう。まんなか
+        semantic: true
+        correct: true
+      - gloss_ja: だい。だいいちの だい
+        semantic: true
+        correct: false
+      - gloss_ja: はなす
+        semantic: true
+        correct: false
+  - id: 央-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

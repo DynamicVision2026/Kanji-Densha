@@ -1,0 +1,92 @@
+character: 晴
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: はれる
+      type: kun
+      audio: audio/readings/306f308c308b.mp3
+    - id: r1
+      kana: セイ
+      type: on
+      audio: audio/readings/30bb30a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はれる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はれる。
+    空が 晴れる。
+    あかるい ひ。
+surfaces:
+  - id: s0
+    word: 晴
+    reading_id: r0
+    audio: audio/surfaces/6674_0.mp3
+  - id: s1
+    word: 晴れる
+    reading_id: r0
+    audio: audio/surfaces/6674308c308b_1.mp3
+  - id: s2
+    word: 晴れる
+    reading_id: r0
+    audio: audio/surfaces/306f308c308b_2.mp3
+  - id: s3
+    word: 晴天
+    reading_id: r1
+    audio: audio/surfaces/66745929_3.mp3
+  - id: s4
+    word: 快晴
+    reading_id: r1
+    audio: audio/surfaces/5feb6674_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 青
+items:
+  - id: 晴-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: はれる
+        correct: true
+      - kana: うみ
+        correct: false
+      - kana: とき
+        correct: false
+  - id: 晴-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: セイ
+        correct: true
+      - kana: うる
+        correct: false
+      - kana: ギュウ
+        correct: false
+  - id: 晴-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はれる
+        semantic: true
+        correct: true
+      - gloss_ja: たのしい
+        semantic: true
+        correct: false
+      - gloss_ja: よむ
+        semantic: true
+        correct: false
+  - id: 晴-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

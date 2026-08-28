@@ -1,0 +1,73 @@
+character: 昨
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: サク
+      type: on
+      audio: audio/readings/30b530af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さく。きのう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さく。
+    昨日の こと。
+    一日 まえ。
+surfaces:
+  - id: s0
+    word: 昨
+    reading_id: r0
+    audio: audio/surfaces/6628_0.mp3
+  - id: s1
+    word: 昨日
+    reading_id: r0
+    audio: audio/surfaces/662865e5_1.mp3
+  - id: s2
+    word: 昨日
+    reading_id: r0
+    audio: audio/surfaces/3055304f30583064_2.mp3
+  - id: s3
+    word: 昨年
+    reading_id: r0
+    audio: audio/surfaces/66285e74_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 日
+    - char: 乍
+items:
+  - id: 昨-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: サク
+        correct: true
+      - kana: うしなう
+        correct: false
+      - kana: まご
+        correct: false
+  - id: 昨-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さく。きのう
+        semantic: true
+        correct: true
+      - gloss_ja: する
+        semantic: true
+        correct: false
+      - gloss_ja: こころみる
+        semantic: true
+        correct: false
+  - id: 昨-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

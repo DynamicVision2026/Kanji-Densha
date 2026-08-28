@@ -1,0 +1,69 @@
+character: 飛
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: とぶ
+      type: kun
+      audio: audio/readings/30683076.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とぶ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とぶ。
+    鳥が 飛ぶ。
+    空へ。
+surfaces:
+  - id: s0
+    word: 飛
+    reading_id: r0
+    audio: audio/surfaces/98db_0.mp3
+  - id: s1
+    word: 飛ぶ
+    reading_id: r0
+    audio: audio/surfaces/98db3076_1.mp3
+  - id: s2
+    word: 飛ぶ
+    reading_id: r0
+    audio: audio/surfaces/30683076_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 升
+    - char: 飞
+items:
+  - id: 飛-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とぶ
+        correct: true
+      - kana: か
+        correct: false
+      - kana: なわ
+        correct: false
+  - id: 飛-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とぶ
+        semantic: true
+        correct: true
+      - gloss_ja: ふ。おおやけの ばしょ
+        semantic: true
+        correct: false
+      - gloss_ja: たより
+        semantic: true
+        correct: false
+  - id: 飛-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

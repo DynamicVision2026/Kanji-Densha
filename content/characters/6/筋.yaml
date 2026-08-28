@@ -1,0 +1,69 @@
+character: 筋
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: すじ
+      type: kun
+      audio: audio/readings/30593058.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すじ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すじ。
+    細い 筋。
+    つながり。
+surfaces:
+  - id: s0
+    word: 筋
+    reading_id: r0
+    audio: audio/surfaces/7b4b_0.mp3
+  - id: s1
+    word: 筋
+    reading_id: r0
+    audio: audio/surfaces/7b4b_1.mp3
+  - id: s2
+    word: 筋
+    reading_id: r0
+    audio: audio/surfaces/30593058_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 竹
+    - char: 肋
+items:
+  - id: 筋-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: すじ
+        correct: true
+      - kana: さがす
+        correct: false
+      - kana: キ
+        correct: false
+  - id: 筋-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すじ
+        semantic: true
+        correct: true
+      - gloss_ja: さく。はかりごと
+        semantic: true
+        correct: false
+      - gloss_ja: ひじり
+        semantic: true
+        correct: false
+  - id: 筋-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,84 @@
+character: 関
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: せき
+      type: kun
+      audio: audio/readings/305b304d.mp3
+    - id: r1
+      kana: かかわる
+      type: kun
+      audio: audio/readings/304b304b308f308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: せき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    せき。
+    ことに 関わる。
+    つながる。
+surfaces:
+  - id: s0
+    word: 関
+    reading_id: r0
+    audio: audio/surfaces/95a2_0.mp3
+  - id: s1
+    word: 関わる
+    reading_id: r1
+    audio: audio/surfaces/95a2308f308b_1.mp3
+  - id: s2
+    word: 関わる
+    reading_id: r1
+    audio: audio/surfaces/304b304b308f308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 門
+    - char: 关
+items:
+  - id: 関-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: せき
+        correct: true
+      - kana: あらそう
+        correct: false
+      - kana: つれる
+        correct: false
+  - id: 関-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: かかわる
+        correct: true
+      - kana: あらそう
+        correct: false
+      - kana: つれる
+        correct: false
+  - id: 関-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: せき
+        semantic: true
+        correct: true
+      - gloss_ja: つかさどる
+        semantic: true
+        correct: false
+      - gloss_ja: かりる
+        semantic: true
+        correct: false
+  - id: 関-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,92 @@
+character: 弟
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: おとうと
+      type: kun
+      audio: audio/readings/304a306830463068.mp3
+    - id: r1
+      kana: ダイ
+      type: on
+      audio: audio/readings/30c030a4.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: おとうと
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おとうと。
+    下の 弟。
+    きょうだい。
+surfaces:
+  - id: s0
+    word: 弟
+    reading_id: r0
+    audio: audio/surfaces/5f1f_0.mp3
+  - id: s1
+    word: 弟
+    reading_id: r0
+    audio: audio/surfaces/5f1f_1.mp3
+  - id: s2
+    word: 弟
+    reading_id: r0
+    audio: audio/surfaces/304a306830463068_2.mp3
+  - id: s3
+    word: 兄弟
+    reading_id: r1
+    audio: audio/surfaces/51445f1f_3.mp3
+  - id: s4
+    word: 子弟
+    reading_id: r1
+    audio: audio/surfaces/5b505f1f_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 丷
+    - char: 弓
+items:
+  - id: 弟-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: おとうと
+        correct: true
+      - kana: くろい
+        correct: false
+      - kana: シン
+        correct: false
+  - id: 弟-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ダイ
+        correct: true
+      - kana: うしろ
+        correct: false
+      - kana: おおい
+        correct: false
+  - id: 弟-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: おとうと
+        semantic: true
+        correct: true
+      - gloss_ja: てら
+        semantic: true
+        correct: false
+      - gloss_ja: かど
+        semantic: true
+        correct: false
+  - id: 弟-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,99 @@
+character: 上
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: うえ
+      type: kun
+      audio: audio/readings/30463048.mp3
+    - id: r1
+      kana: ジョウ
+      type: on
+      audio: audio/readings/30b830e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うえ。あがる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    うえ。
+    つくえの 上。
+    あがる とき。
+surfaces:
+  - id: s0
+    word: 上
+    reading_id: r0
+    audio: audio/surfaces/4e0a_0.mp3
+  - id: s1
+    word: 上
+    reading_id: r0
+    audio: audio/surfaces/4e0a_1.mp3
+  - id: s2
+    word: 上
+    reading_id: r0
+    audio: audio/surfaces/30463048_2.mp3
+  - id: s3
+    word: 上手
+    reading_id: r1
+    audio: audio/surfaces/4e0a624b_3.mp3
+  - id: s4
+    word: 以上
+    reading_id: r1
+    audio: audio/surfaces/4ee54e0a_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ3
+items:
+  - id: 上-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: うえ
+        correct: true
+      - kana: あお
+        correct: false
+      - kana: ただしい
+        correct: false
+  - id: 上-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ジョウ
+        correct: true
+      - kana: ななつ
+        correct: false
+      - kana: なな
+        correct: false
+  - id: 上-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うえ。あがる
+        semantic: true
+        correct: true
+      - gloss_ja: はやい
+        semantic: true
+        correct: false
+      - gloss_ja: たけ
+        semantic: true
+        correct: false
+  - id: 上-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

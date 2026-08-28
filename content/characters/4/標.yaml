@@ -1,0 +1,73 @@
+character: 標
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ヒョウ
+      type: on
+      audio: audio/readings/30d230e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しるべ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しるべ。
+    目標を きめる。
+    めじるし。
+surfaces:
+  - id: s0
+    word: 標
+    reading_id: r0
+    audio: audio/surfaces/6a19_0.mp3
+  - id: s1
+    word: 目標
+    reading_id: r0
+    audio: audio/surfaces/76ee6a19_1.mp3
+  - id: s2
+    word: 目標
+    reading_id: r0
+    audio: audio/surfaces/3082304f307230873046_2.mp3
+  - id: s3
+    word: 標準
+    reading_id: r0
+    audio: audio/surfaces/6a196e96_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 木
+    - char: 票
+items:
+  - id: 標-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ヒョウ
+        correct: true
+      - kana: かりる
+        correct: false
+      - kana: おびる
+        correct: false
+  - id: 標-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しるべ
+        semantic: true
+        correct: true
+      - gloss_ja: はた
+        semantic: true
+        correct: false
+      - gloss_ja: あさる
+        semantic: true
+        correct: false
+  - id: 標-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,69 @@
+character: 宙
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: チュウ
+      type: on
+      audio: audio/readings/30c130e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ちゅう。そら の なか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ちゅう。
+    宇宙を みる。
+    そらの なか。
+surfaces:
+  - id: s0
+    word: 宙
+    reading_id: r0
+    audio: audio/surfaces/5b99_0.mp3
+  - id: s1
+    word: 宇宙
+    reading_id: r0
+    audio: audio/surfaces/5b875b99_1.mp3
+  - id: s2
+    word: 宇宙
+    reading_id: r0
+    audio: audio/surfaces/3046306130853046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 宀
+    - char: 由
+items:
+  - id: 宙-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: チュウ
+        correct: true
+      - kana: ショ
+        correct: false
+      - kana: ヨク
+        correct: false
+  - id: 宙-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ちゅう。そら の なか
+        semantic: true
+        correct: true
+      - gloss_ja: たまご
+        semantic: true
+        correct: false
+      - gloss_ja: うやまう
+        semantic: true
+        correct: false
+  - id: 宙-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

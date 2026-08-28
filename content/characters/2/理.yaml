@@ -1,0 +1,77 @@
+character: 理
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: リ
+      type: on
+      audio: audio/readings/30ea.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ことわり
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    りょうり。
+    料理を つくる。
+    わけ。
+surfaces:
+  - id: s0
+    word: 理
+    reading_id: r0
+    audio: audio/surfaces/7406_0.mp3
+  - id: s1
+    word: 料理
+    reading_id: r0
+    audio: audio/surfaces/65997406_1.mp3
+  - id: s2
+    word: 料理
+    reading_id: r0
+    audio: audio/surfaces/308a30873046308a_2.mp3
+  - id: s3
+    word: 理由
+    reading_id: r0
+    audio: audio/surfaces/74067531_3.mp3
+  - id: s4
+    word: 地理
+    reading_id: r0
+    audio: audio/surfaces/57307406_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 王
+    - char: 里
+items:
+  - id: 理-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: リ
+        correct: true
+      - kana: むぎ
+        correct: false
+      - kana: は
+        correct: false
+  - id: 理-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ことわり
+        semantic: true
+        correct: true
+      - gloss_ja: ちかい
+        semantic: true
+        correct: false
+      - gloss_ja: こめ
+        semantic: true
+        correct: false
+  - id: 理-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

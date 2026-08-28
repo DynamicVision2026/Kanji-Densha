@@ -1,0 +1,73 @@
+character: 臣
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: シン
+      type: on
+      audio: audio/readings/30b730f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しん。しんか
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    おみ。
+    大臣が はなす。
+    つかえる ひと。
+surfaces:
+  - id: s0
+    word: 臣
+    reading_id: r0
+    audio: audio/surfaces/81e3_0.mp3
+  - id: s1
+    word: 大臣
+    reading_id: r0
+    audio: audio/surfaces/592781e3_1.mp3
+  - id: s2
+    word: 大臣
+    reading_id: r0
+    audio: audio/surfaces/3060304430583093_2.mp3
+  - id: s3
+    word: 忠臣
+    reading_id: r0
+    audio: audio/surfaces/5fe081e3_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 巨
+    - char: 丨
+items:
+  - id: 臣-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シン
+        correct: true
+      - kana: トク
+        correct: false
+      - kana: あびる
+        correct: false
+  - id: 臣-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しん。しんか
+        semantic: true
+        correct: true
+      - gloss_ja: つける
+        semantic: true
+        correct: false
+      - gloss_ja: かわる
+        semantic: true
+        correct: false
+  - id: 臣-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

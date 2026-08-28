@@ -1,0 +1,73 @@
+character: 員
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: イン
+      type: on
+      audio: audio/readings/30a430f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: いん。なかま
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    いん。
+    委員の 員。
+    なかま。
+surfaces:
+  - id: s0
+    word: 員
+    reading_id: r0
+    audio: audio/surfaces/54e1_0.mp3
+  - id: s1
+    word: 委員
+    reading_id: r0
+    audio: audio/surfaces/59d454e1_1.mp3
+  - id: s2
+    word: 委員
+    reading_id: r0
+    audio: audio/surfaces/304430443093_2.mp3
+  - id: s3
+    word: 全員
+    reading_id: r0
+    audio: audio/surfaces/516854e1_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 口
+    - char: 貝
+items:
+  - id: 員-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: イン
+        correct: true
+      - kana: ひつじ
+        correct: false
+      - kana: おきる
+        correct: false
+  - id: 員-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: いん。なかま
+        semantic: true
+        correct: true
+      - gloss_ja: うつくしい
+        semantic: true
+        correct: false
+      - gloss_ja: おう。まんなか
+        semantic: true
+        correct: false
+  - id: 員-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

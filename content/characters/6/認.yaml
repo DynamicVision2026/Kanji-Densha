@@ -1,0 +1,69 @@
+character: 認
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: みとめる
+      type: kun
+      audio: audio/readings/307f30683081308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みとめる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みとめる。
+    あやまちを 認める。
+    うけいれる。
+surfaces:
+  - id: s0
+    word: 認
+    reading_id: r0
+    audio: audio/surfaces/8a8d_0.mp3
+  - id: s1
+    word: 認める
+    reading_id: r0
+    audio: audio/surfaces/8a8d3081308b_1.mp3
+  - id: s2
+    word: 認める
+    reading_id: r0
+    audio: audio/surfaces/307f30683081308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 忍
+items:
+  - id: 認-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みとめる
+        correct: true
+      - kana: コク
+        correct: false
+      - kana: せ
+        correct: false
+  - id: 認-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みとめる
+        semantic: true
+        correct: true
+      - gloss_ja: そう。かさなり
+        semantic: true
+        correct: false
+      - gloss_ja: ばん。ばんがた
+        semantic: true
+        correct: false
+  - id: 認-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,84 @@
+character: 留
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: とめる
+      type: kun
+      audio: audio/readings/30683081308b.mp3
+    - id: r1
+      kana: とまる
+      type: kun
+      audio: audio/readings/3068307e308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とめる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とめる。
+    鳥が 留まる。
+    とどまる。
+surfaces:
+  - id: s0
+    word: 留
+    reading_id: r0
+    audio: audio/surfaces/7559_0.mp3
+  - id: s1
+    word: 留まる
+    reading_id: r1
+    audio: audio/surfaces/7559307e308b_1.mp3
+  - id: s2
+    word: 留まる
+    reading_id: r1
+    audio: audio/surfaces/3068307e308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 卯
+    - char: 田
+items:
+  - id: 留-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とめる
+        correct: true
+      - kana: ころす
+        correct: false
+      - kana: ゾウ
+        correct: false
+  - id: 留-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: とまる
+        correct: true
+      - kana: シキ
+        correct: false
+      - kana: セツ
+        correct: false
+  - id: 留-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とめる
+        semantic: true
+        correct: true
+      - gloss_ja: さかん
+        semantic: true
+        correct: false
+      - gloss_ja: おす
+        semantic: true
+        correct: false
+  - id: 留-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

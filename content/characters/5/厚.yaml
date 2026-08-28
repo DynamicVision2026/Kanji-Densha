@@ -1,0 +1,70 @@
+character: 厚
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: あつい
+      type: kun
+      audio: audio/readings/304230643044.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あつい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あつい。
+    厚い 本。
+    こころが あたたかい。
+surfaces:
+  - id: s0
+    word: 厚
+    reading_id: r0
+    audio: audio/surfaces/539a_0.mp3
+  - id: s1
+    word: 厚い
+    reading_id: r0
+    audio: audio/surfaces/539a3044_1.mp3
+  - id: s2
+    word: 厚い
+    reading_id: r0
+    audio: audio/surfaces/304230643044_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 厂
+    - char: 日
+    - char: 子
+items:
+  - id: 厚-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: あつい
+        correct: true
+      - kana: セキ
+        correct: false
+      - kana: しめす
+        correct: false
+  - id: 厚-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あつい
+        semantic: true
+        correct: true
+      - gloss_ja: かた
+        semantic: true
+        correct: false
+      - gloss_ja: かたまり
+        semantic: true
+        correct: false
+  - id: 厚-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

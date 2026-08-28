@@ -1,0 +1,73 @@
+character: 鉱
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: あらがね
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    あらがね。
+    鉱山に いく。
+    地の なか。
+surfaces:
+  - id: s0
+    word: 鉱
+    reading_id: r0
+    audio: audio/surfaces/9271_0.mp3
+  - id: s1
+    word: 鉱山
+    reading_id: r0
+    audio: audio/surfaces/92715c71_1.mp3
+  - id: s2
+    word: 鉱山
+    reading_id: r0
+    audio: audio/surfaces/3053304630563093_2.mp3
+  - id: s3
+    word: 鉱物
+    reading_id: r0
+    audio: audio/surfaces/92717269_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 金
+    - char: 広
+items:
+  - id: 鉱-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: キン
+        correct: false
+      - kana: かり
+        correct: false
+  - id: 鉱-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: あらがね
+        semantic: true
+        correct: true
+      - gloss_ja: ゆめ
+        semantic: true
+        correct: false
+      - gloss_ja: さむらい
+        semantic: true
+        correct: false
+  - id: 鉱-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

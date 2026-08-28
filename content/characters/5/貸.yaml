@@ -1,0 +1,69 @@
+character: 貸
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: かす
+      type: kun
+      audio: audio/readings/304b3059.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: かす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    かす。
+    本を 貸す。
+    あとで かえして もらう。
+surfaces:
+  - id: s0
+    word: 貸
+    reading_id: r0
+    audio: audio/surfaces/8cb8_0.mp3
+  - id: s1
+    word: 貸す
+    reading_id: r0
+    audio: audio/surfaces/8cb83059_1.mp3
+  - id: s2
+    word: 貸す
+    reading_id: r0
+    audio: audio/surfaces/304b3059_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 代
+    - char: 貝
+items:
+  - id: 貸-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: かす
+        correct: true
+      - kana: きく
+        correct: false
+      - kana: ガン
+        correct: false
+  - id: 貸-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: かす
+        semantic: true
+        correct: true
+      - gloss_ja: たつ
+        semantic: true
+        correct: false
+      - gloss_ja: よろこぶ
+        semantic: true
+        correct: false
+  - id: 貸-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

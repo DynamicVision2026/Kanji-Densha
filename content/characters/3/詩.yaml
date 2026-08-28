@@ -1,0 +1,69 @@
+character: 詩
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: シ
+      type: on
+      audio: audio/readings/30b7.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: うた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    し。
+    短い 詩。
+    ことばの うた。
+surfaces:
+  - id: s0
+    word: 詩
+    reading_id: r0
+    audio: audio/surfaces/8a69_0.mp3
+  - id: s1
+    word: 詩
+    reading_id: r0
+    audio: audio/surfaces/8a69_1.mp3
+  - id: s2
+    word: 詩
+    reading_id: r0
+    audio: audio/surfaces/3057_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 寺
+items:
+  - id: 詩-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シ
+        correct: true
+      - kana: は
+        correct: false
+      - kana: まったく
+        correct: false
+  - id: 詩-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: うた
+        semantic: true
+        correct: true
+      - gloss_ja: まめ
+        semantic: true
+        correct: false
+      - gloss_ja: てる
+        semantic: true
+        correct: false
+  - id: 詩-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

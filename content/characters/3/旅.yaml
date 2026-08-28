@@ -1,0 +1,70 @@
+character: 旅
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: たび
+      type: kun
+      audio: audio/readings/305f3073.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たび
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たび。
+    遠い 旅。
+    出て いく。
+surfaces:
+  - id: s0
+    word: 旅
+    reading_id: r0
+    audio: audio/surfaces/65c5_0.mp3
+  - id: s1
+    word: 旅
+    reading_id: r0
+    audio: audio/surfaces/65c5_1.mp3
+  - id: s2
+    word: 旅
+    reading_id: r0
+    audio: audio/surfaces/305f3073_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 方
+    - char: 𠂉
+    - char: 氏
+items:
+  - id: 旅-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: たび
+        correct: true
+      - kana: ブ
+        correct: false
+      - kana: はこぶ
+        correct: false
+  - id: 旅-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たび
+        semantic: true
+        correct: true
+      - gloss_ja: まったく
+        semantic: true
+        correct: false
+      - gloss_ja: しょう。しるし。ぶんしょう
+        semantic: true
+        correct: false
+  - id: 旅-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

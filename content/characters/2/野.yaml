@@ -1,0 +1,73 @@
+character: 野
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: の
+      type: kun
+      audio: audio/readings/306e.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: の
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    の。
+    広い 野。
+    草が はえる。
+surfaces:
+  - id: s0
+    word: 野
+    reading_id: r0
+    audio: audio/surfaces/91ce_0.mp3
+  - id: s1
+    word: 野
+    reading_id: r0
+    audio: audio/surfaces/91ce_1.mp3
+  - id: s2
+    word: 野
+    reading_id: r0
+    audio: audio/surfaces/306e_2.mp3
+  - id: s3
+    word: 野原
+    reading_id: r0
+    audio: audio/surfaces/91ce539f_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 里
+    - char: 予
+items:
+  - id: 野-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: の
+        correct: true
+      - kana: ライ
+        correct: false
+      - kana: ゆみ
+        correct: false
+  - id: 野-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: の
+        semantic: true
+        correct: true
+      - gloss_ja: とき
+        semantic: true
+        correct: false
+      - gloss_ja: いきる
+        semantic: true
+        correct: false
+  - id: 野-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

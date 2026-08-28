@@ -1,0 +1,102 @@
+character: 円
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: まるい
+      type: kun
+      audio: audio/readings/307e308b3044.mp3
+    - id: r1
+      kana: エン
+      type: on
+      audio: audio/readings/30a830f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: まる。えん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    えん。
+    まるい かたち。
+    百円の 円。
+surfaces:
+  - id: s0
+    word: 円
+    reading_id: r0
+    audio: audio/surfaces/5186_0.mp3
+  - id: s1
+    word: 円い
+    reading_id: r0
+    audio: audio/surfaces/51863044_1.mp3
+  - id: s2
+    word: 円い
+    reading_id: r0
+    audio: audio/surfaces/307e308b3044_2.mp3
+  - id: s3
+    word: 百円
+    reading_id: r1
+    audio: audio/surfaces/767e5186_3.mp3
+  - id: s4
+    word: 円周
+    reading_id: r1
+    audio: audio/surfaces/51865468_4.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: たて
+      a11y_ja: たて
+    - order: 2
+      type: おれ
+      a11y_ja: おれ
+    - order: 3
+      type: よこ
+      a11y_ja: よこ
+    - order: 4
+      type: たて
+      a11y_ja: たて4
+items:
+  - id: 円-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: まるい
+        correct: true
+      - kana: ふたつ
+        correct: false
+      - kana: ふた
+        correct: false
+  - id: 円-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: エン
+        correct: true
+      - kana: ヒャク
+        correct: false
+      - kana: ハチ
+        correct: false
+  - id: 円-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: まる。えん
+        semantic: true
+        correct: true
+      - gloss_ja: なか
+        semantic: true
+        correct: false
+      - gloss_ja: つち
+        semantic: true
+        correct: false
+  - id: 円-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

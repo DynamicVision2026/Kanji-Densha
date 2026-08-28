@@ -1,0 +1,103 @@
+character: 好
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: このむ
+      type: kun
+      audio: audio/readings/3053306e3080.mp3
+    - id: r1
+      kana: すく
+      type: kun
+      audio: audio/readings/3059304f.mp3
+    - id: r2
+      kana: コウ
+      type: on
+      audio: audio/readings/30b330a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: このむ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すき。
+    好きな ほん。
+    女と 子。
+surfaces:
+  - id: s0
+    word: 好
+    reading_id: r0
+    audio: audio/surfaces/597d_0.mp3
+  - id: s1
+    word: 好き
+    reading_id: r1
+    audio: audio/surfaces/597d304d_1.mp3
+  - id: s2
+    word: 好き
+    reading_id: r1
+    audio: audio/surfaces/3059304d_2.mp3
+  - id: s3
+    word: 好物
+    reading_id: r2
+    audio: audio/surfaces/597d7269_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 女
+    - char: 子
+items:
+  - id: 好-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: このむ
+        correct: true
+      - kana: セキ
+        correct: false
+      - kana: よい
+        correct: false
+  - id: 好-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: すく
+        correct: true
+      - kana: あげる
+        correct: false
+      - kana: す
+        correct: false
+  - id: 好-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: コウ
+        correct: true
+      - kana: うむ
+        correct: false
+      - kana: たとえる
+        correct: false
+  - id: 好-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: このむ
+        semantic: true
+        correct: true
+      - gloss_ja: こころみる
+        semantic: true
+        correct: false
+      - gloss_ja: たね
+        semantic: true
+        correct: false
+  - id: 好-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

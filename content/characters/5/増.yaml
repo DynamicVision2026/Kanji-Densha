@@ -1,0 +1,84 @@
+character: 増
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ます
+      type: kun
+      audio: audio/readings/307e3059.mp3
+    - id: r1
+      kana: ふえる
+      type: kun
+      audio: audio/readings/30753048308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: ます
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    ます。
+    数が 増える。
+    ふえる。
+surfaces:
+  - id: s0
+    word: 増
+    reading_id: r0
+    audio: audio/surfaces/5897_0.mp3
+  - id: s1
+    word: 増える
+    reading_id: r1
+    audio: audio/surfaces/58973048308b_1.mp3
+  - id: s2
+    word: 増える
+    reading_id: r1
+    audio: audio/surfaces/30753048308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 土
+    - char: 曽
+items:
+  - id: 増-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ます
+        correct: true
+      - kana: まざる
+        correct: false
+      - kana: ジュ
+        correct: false
+  - id: 増-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ふえる
+        correct: true
+      - kana: シツ
+        correct: false
+      - kana: もうける
+        correct: false
+  - id: 増-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: ます
+        semantic: true
+        correct: true
+      - gloss_ja: すい
+        semantic: true
+        correct: false
+      - gloss_ja: とめる
+        semantic: true
+        correct: false
+  - id: 増-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

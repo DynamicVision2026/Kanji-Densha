@@ -1,0 +1,82 @@
+character: 民
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ミン
+      type: on
+      audio: audio/readings/30df30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たみ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たみ。
+    国民の ひとり。
+    ひとびと。
+surfaces:
+  - id: s0
+    word: 民
+    reading_id: r0
+    audio: audio/surfaces/6c11_0.mp3
+  - id: s1
+    word: 国民
+    reading_id: r0
+    audio: audio/surfaces/56fd6c11_1.mp3
+  - id: s2
+    word: 国民
+    reading_id: r0
+    audio: audio/surfaces/3053304f307f3093_2.mp3
+shape:
+  published: true
+  kind: primitive
+  strokes:
+    - order: 1
+      type: おれ
+      a11y_ja: おれ
+    - order: 2
+      type: よこ
+      a11y_ja: よこ
+    - order: 3
+      type: おれ
+      a11y_ja: おれ3
+    - order: 4
+      type: よこ
+      a11y_ja: よこ4
+    - order: 5
+      type: はらい
+      a11y_ja: はらい
+items:
+  - id: 民-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ミン
+        correct: true
+      - kana: たより
+        correct: false
+      - kana: えひめ
+        correct: false
+  - id: 民-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たみ
+        semantic: true
+        correct: true
+      - gloss_ja: ふだ
+        semantic: true
+        correct: false
+      - gloss_ja: つかさどる
+        semantic: true
+        correct: false
+  - id: 民-s-0
+    type: stroke_order
+    lamp: shape
+lines: []
+status: published

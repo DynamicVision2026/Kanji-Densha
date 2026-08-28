@@ -1,0 +1,107 @@
+character: 黒
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: くろ
+      type: kun
+      audio: audio/readings/304f308d.mp3
+    - id: r1
+      kana: くろい
+      type: kun
+      audio: audio/readings/304f308d3044.mp3
+    - id: r2
+      kana: コク
+      type: on
+      audio: audio/readings/30b330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: くろ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    くろい。
+    黒い いぬ。
+    よるの いろ。
+surfaces:
+  - id: s0
+    word: 黒
+    reading_id: r0
+    audio: audio/surfaces/9ed2_0.mp3
+  - id: s1
+    word: 黒い
+    reading_id: r1
+    audio: audio/surfaces/9ed23044_1.mp3
+  - id: s2
+    word: 黒い
+    reading_id: r1
+    audio: audio/surfaces/304f308d3044_2.mp3
+  - id: s3
+    word: 黒板
+    reading_id: r2
+    audio: audio/surfaces/9ed2677f_3.mp3
+  - id: s4
+    word: 黒色
+    reading_id: r2
+    audio: audio/surfaces/9ed28272_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 里
+    - char: 灬
+items:
+  - id: 黒-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: くろ
+        correct: true
+      - kana: とおる
+        correct: false
+      - kana: うたう
+        correct: false
+  - id: 黒-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: くろい
+        correct: true
+      - kana: ワ
+        correct: false
+      - kana: コン
+        correct: false
+  - id: 黒-r-2
+    type: reading_choice
+    lamp: reading
+    reading_id: r2
+    choices:
+      - kana: コク
+        correct: true
+      - kana: ライ
+        correct: false
+      - kana: ショク
+        correct: false
+  - id: 黒-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: くろ
+        semantic: true
+        correct: true
+      - gloss_ja: くむ
+        semantic: true
+        correct: false
+      - gloss_ja: こう。つくる しごと
+        semantic: true
+        correct: false
+  - id: 黒-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

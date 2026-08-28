@@ -1,0 +1,69 @@
+character: 閉
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: とじる
+      type: kun
+      audio: audio/readings/30683058308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: とじる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    とじる。
+    本を 閉じる。
+    あかない。
+surfaces:
+  - id: s0
+    word: 閉
+    reading_id: r0
+    audio: audio/surfaces/9589_0.mp3
+  - id: s1
+    word: 閉じる
+    reading_id: r0
+    audio: audio/surfaces/95893058308b_1.mp3
+  - id: s2
+    word: 閉じる
+    reading_id: r0
+    audio: audio/surfaces/30683058308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 門
+    - char: 才
+items:
+  - id: 閉-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: とじる
+        correct: true
+      - kana: ほす
+        correct: false
+      - kana: つくる
+        correct: false
+  - id: 閉-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: とじる
+        semantic: true
+        correct: true
+      - gloss_ja: いたる
+        semantic: true
+        correct: false
+      - gloss_ja: のたまう
+        semantic: true
+        correct: false
+  - id: 閉-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

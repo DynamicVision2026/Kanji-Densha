@@ -1,0 +1,69 @@
+character: 総
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ソウ
+      type: on
+      audio: audio/readings/30bd30a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: すべて
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    すべて。
+    総合する。
+    まとめる。
+surfaces:
+  - id: s0
+    word: 総
+    reading_id: r0
+    audio: audio/surfaces/7dcf_0.mp3
+  - id: s1
+    word: 総合
+    reading_id: r0
+    audio: audio/surfaces/7dcf5408_1.mp3
+  - id: s2
+    word: 総合
+    reading_id: r0
+    audio: audio/surfaces/305d304630543046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 忩
+items:
+  - id: 総-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ソウ
+        correct: true
+      - kana: ゴ
+        correct: false
+      - kana: なれる
+        correct: false
+  - id: 総-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: すべて
+        semantic: true
+        correct: true
+      - gloss_ja: せき。せいせき。みのり
+        semantic: true
+        correct: false
+      - gloss_ja: かり
+        semantic: true
+        correct: false
+  - id: 総-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

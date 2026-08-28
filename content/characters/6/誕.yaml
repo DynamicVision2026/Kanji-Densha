@@ -1,0 +1,69 @@
+character: 誕
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: タン
+      type: on
+      audio: audio/readings/30bf30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: たん。うまれる。たんじょう
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    たん。
+    誕生日。
+    うまれる。
+surfaces:
+  - id: s0
+    word: 誕
+    reading_id: r0
+    audio: audio/surfaces/8a95_0.mp3
+  - id: s1
+    word: 誕生
+    reading_id: r0
+    audio: audio/surfaces/8a95751f_1.mp3
+  - id: s2
+    word: 誕生
+    reading_id: r0
+    audio: audio/surfaces/305f3093305830873046_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 言
+    - char: 延
+items:
+  - id: 誕-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: タン
+        correct: true
+      - kana: たから
+        correct: false
+      - kana: シ
+        correct: false
+  - id: 誕-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: たん。うまれる。たんじょう
+        semantic: true
+        correct: true
+      - gloss_ja: ちゅう。そら の なか
+        semantic: true
+        correct: false
+      - gloss_ja: たから
+        semantic: true
+        correct: false
+  - id: 誕-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

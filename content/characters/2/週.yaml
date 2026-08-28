@@ -1,0 +1,69 @@
+character: 週
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: シュウ
+      type: on
+      audio: audio/readings/30b730e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: しゅう。いっしゅうかん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    しゅう。
+    今週と 来週。
+    ななの ひ。
+surfaces:
+  - id: s0
+    word: 週
+    reading_id: r0
+    audio: audio/surfaces/9031_0.mp3
+  - id: s1
+    word: 今週
+    reading_id: r0
+    audio: audio/surfaces/4eca9031_1.mp3
+  - id: s2
+    word: 来週
+    reading_id: r0
+    audio: audio/surfaces/67659031_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 辶
+    - char: 周
+items:
+  - id: 週-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: シュウ
+        correct: true
+      - kana: もちいる
+        correct: false
+      - kana: キ
+        correct: false
+  - id: 週-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: しゅう。いっしゅうかん
+        semantic: true
+        correct: true
+      - gloss_ja: ば
+        semantic: true
+        correct: false
+      - gloss_ja: うし
+        semantic: true
+        correct: false
+  - id: 週-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

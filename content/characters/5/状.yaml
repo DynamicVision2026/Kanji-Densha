@@ -1,0 +1,73 @@
+character: 状
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: ジョウ
+      type: on
+      audio: audio/readings/30b830e730a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: じょう。ようす
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    じょう。
+    状態を みる。
+    ようす。
+surfaces:
+  - id: s0
+    word: 状
+    reading_id: r0
+    audio: audio/surfaces/72b6_0.mp3
+  - id: s1
+    word: 状態
+    reading_id: r0
+    audio: audio/surfaces/72b6614b_1.mp3
+  - id: s2
+    word: 状態
+    reading_id: r0
+    audio: audio/surfaces/305830873046305f3044_2.mp3
+  - id: s3
+    word: 状況
+    reading_id: r0
+    audio: audio/surfaces/72b66cc1_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 丬
+    - char: 犬
+items:
+  - id: 状-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ジョウ
+        correct: true
+      - kana: ころす
+        correct: false
+      - kana: けわしい
+        correct: false
+  - id: 状-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: じょう。ようす
+        semantic: true
+        correct: true
+      - gloss_ja: ぞう。すがた。ぞう
+        semantic: true
+        correct: false
+      - gloss_ja: たしか
+        semantic: true
+        correct: false
+  - id: 状-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,88 @@
+character: 右
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: みぎ
+      type: kun
+      audio: audio/readings/307f304e.mp3
+    - id: r1
+      kana: ユウ
+      type: on
+      audio: audio/readings/30e630a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: みぎがわ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    みぎ。
+    右手で かく。
+    みぎがわ。
+surfaces:
+  - id: s0
+    word: 右
+    reading_id: r0
+    audio: audio/surfaces/53f3_0.mp3
+  - id: s1
+    word: 右手
+    reading_id: r0
+    audio: audio/surfaces/53f3624b_1.mp3
+  - id: s2
+    word: 右側
+    reading_id: r0
+    audio: audio/surfaces/53f35074_2.mp3
+  - id: s3
+    word: 左右
+    reading_id: r1
+    audio: audio/surfaces/5de653f3_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: ナ
+    - char: 口
+items:
+  - id: 右-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: みぎ
+        correct: true
+      - kana: サン
+        correct: false
+      - kana: みっつ
+        correct: false
+  - id: 右-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ユウ
+        correct: true
+      - kana: ななつ
+        correct: false
+      - kana: なな
+        correct: false
+  - id: 右-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: みぎがわ
+        semantic: true
+        correct: true
+      - gloss_ja: はやい
+        semantic: true
+        correct: false
+      - gloss_ja: たけ
+        semantic: true
+        correct: false
+  - id: 右-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

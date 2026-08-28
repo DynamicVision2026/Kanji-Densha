@@ -1,0 +1,88 @@
+character: 絵
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: カイ
+      type: on
+      audio: audio/readings/30ab30a4.mp3
+    - id: r1
+      kana: エ
+      type: on
+      audio: audio/readings/30a8.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: え。えがく
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    え。
+    絵を かく。
+    いろを ぬる。
+surfaces:
+  - id: s0
+    word: 絵
+    reading_id: r0
+    audio: audio/surfaces/7d75_0.mp3
+  - id: s1
+    word: 絵
+    reading_id: r1
+    audio: audio/surfaces/7d75_1.mp3
+  - id: s2
+    word: 絵
+    reading_id: r1
+    audio: audio/surfaces/3048_2.mp3
+  - id: s3
+    word: 絵本
+    reading_id: r1
+    audio: audio/surfaces/7d75672c_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 糸
+    - char: 会
+items:
+  - id: 絵-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: カイ
+        correct: true
+      - kana: や
+        correct: false
+      - kana: トウ
+        correct: false
+  - id: 絵-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: エ
+        correct: true
+      - kana: は
+        correct: false
+      - kana: おしえる
+        correct: false
+  - id: 絵-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: え。えがく
+        semantic: true
+        correct: true
+      - gloss_ja: ふとい
+        semantic: true
+        correct: false
+      - gloss_ja: ひかる
+        semantic: true
+        correct: false
+  - id: 絵-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

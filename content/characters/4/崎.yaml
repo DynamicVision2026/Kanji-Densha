@@ -1,0 +1,69 @@
+character: 崎
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: さき
+      type: kun
+      audio: audio/readings/3055304d.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: さき
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    さき。
+    海の 崎。
+    とがった ところ。
+surfaces:
+  - id: s0
+    word: 崎
+    reading_id: r0
+    audio: audio/surfaces/5d0e_0.mp3
+  - id: s1
+    word: 崎
+    reading_id: r0
+    audio: audio/surfaces/5d0e_1.mp3
+  - id: s2
+    word: 崎
+    reading_id: r0
+    audio: audio/surfaces/3055304d_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 山
+    - char: 奇
+items:
+  - id: 崎-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: さき
+        correct: true
+      - kana: クン
+        correct: false
+      - kana: うしなう
+        correct: false
+  - id: 崎-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: さき
+        semantic: true
+        correct: true
+      - gloss_ja: おく
+        semantic: true
+        correct: false
+      - gloss_ja: すこやか
+        semantic: true
+        correct: false
+  - id: 崎-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

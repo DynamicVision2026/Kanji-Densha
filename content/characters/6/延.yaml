@@ -1,0 +1,69 @@
+character: 延
+grade: 6
+taught_readings:
+  entries:
+    - id: r0
+      kana: のびる
+      type: kun
+      audio: audio/readings/306e3073308b.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: のびる
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    のびる。
+    道が 延びる。
+    長く する。
+surfaces:
+  - id: s0
+    word: 延
+    reading_id: r0
+    audio: audio/surfaces/5ef6_0.mp3
+  - id: s1
+    word: 延びる
+    reading_id: r0
+    audio: audio/surfaces/5ef63073308b_1.mp3
+  - id: s2
+    word: 延びる
+    reading_id: r0
+    audio: audio/surfaces/306e3073308b_2.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 廴
+    - char: 正
+items:
+  - id: 延-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: のびる
+        correct: true
+      - kana: ジョウ
+        correct: false
+      - kana: ラン
+        correct: false
+  - id: 延-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: のびる
+        semantic: true
+        correct: true
+      - gloss_ja: すな
+        semantic: true
+        correct: false
+      - gloss_ja: たれる
+        semantic: true
+        correct: false
+  - id: 延-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

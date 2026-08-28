@@ -1,0 +1,92 @@
+character: 休
+grade: 1
+taught_readings:
+  entries:
+    - id: r0
+      kana: やすむ
+      type: kun
+      audio: audio/readings/308430593080.mp3
+    - id: r1
+      kana: キュウ
+      type: on
+      audio: audio/readings/30ad30e530a6.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やすむ
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やすむ。
+    いえで 休む。
+    人と 木。
+surfaces:
+  - id: s0
+    word: 休
+    reading_id: r0
+    audio: audio/surfaces/4f11_0.mp3
+  - id: s1
+    word: 休む
+    reading_id: r0
+    audio: audio/surfaces/4f113080_1.mp3
+  - id: s2
+    word: 休む
+    reading_id: r0
+    audio: audio/surfaces/308430593080_2.mp3
+  - id: s3
+    word: 休日
+    reading_id: r1
+    audio: audio/surfaces/4f1165e5_3.mp3
+  - id: s4
+    word: 休校
+    reading_id: r1
+    audio: audio/surfaces/4f116821_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 木
+items:
+  - id: 休-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: やすむ
+        correct: true
+      - kana: さき
+        correct: false
+      - kana: ソウ
+        correct: false
+  - id: 休-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: キュウ
+        correct: true
+      - kana: あかい
+        correct: false
+      - kana: あか
+        correct: false
+  - id: 休-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やすむ
+        semantic: true
+        correct: true
+      - gloss_ja: むし
+        semantic: true
+        correct: false
+      - gloss_ja: ふたつ
+        semantic: true
+        correct: false
+  - id: 休-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

@@ -1,0 +1,88 @@
+character: 館
+grade: 3
+taught_readings:
+  entries:
+    - id: r0
+      kana: やかた
+      type: kun
+      audio: audio/readings/3084304b305f.mp3
+    - id: r1
+      kana: カン
+      type: on
+      audio: audio/readings/30ab30f3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: やかた
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    やかた。
+    図書館へ いく。
+    本が ならぶ。
+surfaces:
+  - id: s0
+    word: 館
+    reading_id: r0
+    audio: audio/surfaces/9928_0.mp3
+  - id: s1
+    word: 図書館
+    reading_id: r1
+    audio: audio/surfaces/56f366f89928_1.mp3
+  - id: s2
+    word: 図書館
+    reading_id: r1
+    audio: audio/surfaces/306830573087304b3093_2.mp3
+  - id: s3
+    word: 会館
+    reading_id: r1
+    audio: audio/surfaces/4f1a9928_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 食
+    - char: 官
+items:
+  - id: 館-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: やかた
+        correct: true
+      - kana: よこ
+        correct: false
+      - kana: しあわせ
+        correct: false
+  - id: 館-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: カン
+        correct: true
+      - kana: やすい
+        correct: false
+      - kana: うける
+        correct: false
+  - id: 館-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: やかた
+        semantic: true
+        correct: true
+      - gloss_ja: ふで
+        semantic: true
+        correct: false
+      - gloss_ja: よこ
+        semantic: true
+        correct: false
+  - id: 館-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

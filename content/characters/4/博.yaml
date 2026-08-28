@@ -1,0 +1,73 @@
+character: 博
+grade: 4
+taught_readings:
+  entries:
+    - id: r0
+      kana: ハク
+      type: on
+      audio: audio/readings/30cf30af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: はく。ひろい。はくぶつかん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    はく。
+    博物館へ いく。
+    ひろい。
+surfaces:
+  - id: s0
+    word: 博
+    reading_id: r0
+    audio: audio/surfaces/535a_0.mp3
+  - id: s1
+    word: 博物館
+    reading_id: r0
+    audio: audio/surfaces/535a72699928_1.mp3
+  - id: s2
+    word: 博物館
+    reading_id: r0
+    audio: audio/surfaces/306f304f30763064304b3093_2.mp3
+  - id: s3
+    word: 博士
+    reading_id: r0
+    audio: audio/surfaces/535a58eb_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 十
+    - char: 尃
+items:
+  - id: 博-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: ハク
+        correct: true
+      - kana: おぼえる
+        correct: false
+      - kana: さす
+        correct: false
+  - id: 博-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: はく。ひろい。はくぶつかん
+        semantic: true
+        correct: true
+      - gloss_ja: わ
+        semantic: true
+        correct: false
+      - gloss_ja: しるす
+        semantic: true
+        correct: false
+  - id: 博-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

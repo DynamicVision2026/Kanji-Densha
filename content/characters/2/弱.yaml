@@ -1,0 +1,92 @@
+character: 弱
+grade: 2
+taught_readings:
+  entries:
+    - id: r0
+      kana: よわい
+      type: kun
+      audio: audio/readings/3088308f3044.mp3
+    - id: r1
+      kana: ジャク
+      type: on
+      audio: audio/readings/30b830e330af.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: よわい
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    よわい。
+    弱い かぜ。
+    つよく ない。
+surfaces:
+  - id: s0
+    word: 弱
+    reading_id: r0
+    audio: audio/surfaces/5f31_0.mp3
+  - id: s1
+    word: 弱い
+    reading_id: r0
+    audio: audio/surfaces/5f313044_1.mp3
+  - id: s2
+    word: 弱い
+    reading_id: r0
+    audio: audio/surfaces/3088308f3044_2.mp3
+  - id: s3
+    word: 弱点
+    reading_id: r1
+    audio: audio/surfaces/5f3170b9_3.mp3
+  - id: s4
+    word: 弱気
+    reading_id: r1
+    audio: audio/surfaces/5f316c17_4.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 弓
+    - char: 冫
+items:
+  - id: 弱-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: よわい
+        correct: true
+      - kana: あたらしい
+        correct: false
+      - kana: あるく
+        correct: false
+  - id: 弱-r-1
+    type: reading_choice
+    lamp: reading
+    reading_id: r1
+    choices:
+      - kana: ジャク
+        correct: true
+      - kana: ソウ
+        correct: false
+      - kana: ヨウ
+        correct: false
+  - id: 弱-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: よわい
+        semantic: true
+        correct: true
+      - gloss_ja: さい。うまれつきの ちから
+        semantic: true
+        correct: false
+      - gloss_ja: か。きょうか
+        semantic: true
+        correct: false
+  - id: 弱-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published

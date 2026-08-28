@@ -1,0 +1,73 @@
+character: 個
+grade: 5
+taught_readings:
+  entries:
+    - id: r0
+      kana: コ
+      type: on
+      audio: audio/readings/30b3.mp3
+  rationale: "[AUTO] derived from word surfaces"
+  anchor: r0
+meaning:
+  gloss_ja: こ。ひとつ。こじん
+  category: harvest
+encounter:
+  art: null
+  template: template
+  copy_ja: |-
+    こ。
+    個人の 名前。
+    ひとつ。
+surfaces:
+  - id: s0
+    word: 個
+    reading_id: r0
+    audio: audio/surfaces/500b_0.mp3
+  - id: s1
+    word: 個人
+    reading_id: r0
+    audio: audio/surfaces/500b4eba_1.mp3
+  - id: s2
+    word: 個人
+    reading_id: r0
+    audio: audio/surfaces/305330583093_2.mp3
+  - id: s3
+    word: 個性
+    reading_id: r0
+    audio: audio/surfaces/500b6027_3.mp3
+shape:
+  published: true
+  kind: compound
+  components:
+    - char: 人
+    - char: 固
+items:
+  - id: 個-r-0
+    type: reading_choice
+    lamp: reading
+    reading_id: r0
+    choices:
+      - kana: コ
+        correct: true
+      - kana: ケツ
+        correct: false
+      - kana: とく
+        correct: false
+  - id: 個-m-0
+    type: meaning_choice
+    lamp: meaning
+    choices:
+      - gloss_ja: こ。ひとつ。こじん
+        semantic: true
+        correct: true
+      - gloss_ja: かたどる
+        semantic: true
+        correct: false
+      - gloss_ja: えり
+        semantic: true
+        correct: false
+  - id: 個-s-0
+    type: component_assembly
+    lamp: shape
+lines: []
+status: published
