@@ -15,6 +15,7 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as OnboardRouteImport } from './routes/onboard'
 import { Route as AppIndexRouteImport } from './routes/app/index'
 import { Route as AppCatalogRouteImport } from './routes/app/catalog'
+import { Route as AppCreditsRouteImport } from './routes/app/credits'
 import { Route as AppMapRouteImport } from './routes/app/map'
 import { Route as AppMistakesRouteImport } from './routes/app/mistakes'
 import { Route as AppParentRouteImport } from './routes/app/parent'
@@ -59,6 +60,11 @@ const AppIndexRoute = AppIndexRouteImport.update({
 const AppCatalogRoute = AppCatalogRouteImport.update({
   id: '/catalog',
   path: '/catalog',
+  getParentRoute: () => AppRouteRoute,
+} as any)
+const AppCreditsRoute = AppCreditsRouteImport.update({
+  id: '/credits',
+  path: '/credits',
   getParentRoute: () => AppRouteRoute,
 } as any)
 const AppMapRoute = AppMapRouteImport.update({
@@ -143,6 +149,7 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/onboard': typeof OnboardRoute
   '/app/catalog': typeof AppCatalogRoute
+  '/app/credits': typeof AppCreditsRoute
   '/app/map': typeof AppMapRoute
   '/app/mistakes': typeof AppMistakesRoute
   '/app/parent': typeof AppParentRoute
@@ -165,6 +172,7 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/onboard': typeof OnboardRoute
   '/app/catalog': typeof AppCatalogRoute
+  '/app/credits': typeof AppCreditsRoute
   '/app/map': typeof AppMapRoute
   '/app/mistakes': typeof AppMistakesRoute
   '/app/parent': typeof AppParentRoute
@@ -189,6 +197,7 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/onboard': typeof OnboardRoute
   '/app/catalog': typeof AppCatalogRoute
+  '/app/credits': typeof AppCreditsRoute
   '/app/map': typeof AppMapRoute
   '/app/mistakes': typeof AppMistakesRoute
   '/app/parent': typeof AppParentRoute
@@ -214,6 +223,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/onboard'
     | '/app/catalog'
+    | '/app/credits'
     | '/app/map'
     | '/app/mistakes'
     | '/app/parent'
@@ -236,6 +246,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/onboard'
     | '/app/catalog'
+    | '/app/credits'
     | '/app/map'
     | '/app/mistakes'
     | '/app/parent'
@@ -259,6 +270,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/onboard'
     | '/app/catalog'
+    | '/app/credits'
     | '/app/map'
     | '/app/mistakes'
     | '/app/parent'
@@ -335,6 +347,13 @@ declare module '@tanstack/react-router' {
       path: '/catalog'
       fullPath: '/app/catalog'
       preLoaderRoute: typeof AppCatalogRouteImport
+      parentRoute: typeof AppRouteRoute
+    }
+    '/app/credits': {
+      id: '/app/credits'
+      path: '/credits'
+      fullPath: '/app/credits'
+      preLoaderRoute: typeof AppCreditsRouteImport
       parentRoute: typeof AppRouteRoute
     }
     '/app/map': {
@@ -447,6 +466,7 @@ declare module '@tanstack/react-router' {
 
 interface AppRouteRouteChildren {
   AppCatalogRoute: typeof AppCatalogRoute
+  AppCreditsRoute: typeof AppCreditsRoute
   AppMapRoute: typeof AppMapRoute
   AppMistakesRoute: typeof AppMistakesRoute
   AppParentRoute: typeof AppParentRoute
@@ -458,6 +478,7 @@ interface AppRouteRouteChildren {
 
 const AppRouteRouteChildren: AppRouteRouteChildren = {
   AppCatalogRoute: AppCatalogRoute,
+  AppCreditsRoute: AppCreditsRoute,
   AppMapRoute: AppMapRoute,
   AppMistakesRoute: AppMistakesRoute,
   AppParentRoute: AppParentRoute,
@@ -489,12 +510,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
