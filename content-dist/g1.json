@@ -129,9 +129,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/ichi_on.mp3",
-          "audio/readings/hitotsu_kun.mp3",
-          "audio/surfaces/ichi_1.mp3",
-          "audio/surfaces/hitotsu_1.mp3"
+          "audio/readings/hitotsu_kun.mp3"
         ]
       }
     ]
@@ -267,9 +265,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/jin_on.mp3",
-          "audio/readings/hito_kun.mp3",
-          "audio/surfaces/hito_1.mp3",
-          "audio/surfaces/nihonjin_1.mp3"
+          "audio/readings/hito_kun.mp3"
         ]
       }
     ]
@@ -405,9 +401,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/ryoku_on.mp3",
-          "audio/readings/chikara_kun.mp3",
-          "audio/surfaces/chikara_1.mp3",
-          "audio/surfaces/suiryoku_1.mp3"
+          "audio/readings/chikara_kun.mp3"
         ]
       }
     ]
@@ -556,9 +550,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/dai_on.mp3",
-          "audio/readings/ookii_kun.mp3",
-          "audio/surfaces/ookii_1.mp3",
-          "audio/surfaces/daigaku_1.mp3"
+          "audio/readings/ookii_kun.mp3"
         ]
       }
     ]
@@ -672,9 +664,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/gaku_on.mp3",
-          "audio/readings/manabu_kun.mp3",
-          "audio/surfaces/manabu_1.mp3",
-          "audio/surfaces/gakkou_1.mp3"
+          "audio/readings/manabu_kun.mp3"
         ]
       }
     ]
@@ -811,9 +801,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/san_on.mp3",
-          "audio/readings/yama_kun.mp3",
-          "audio/surfaces/yama_1.mp3",
-          "audio/surfaces/kazan_1.mp3"
+          "audio/readings/yama_kun.mp3"
         ]
       }
     ]
@@ -946,9 +934,7 @@
       {
         "item": "audio",
         "satisfied_by": [
-          "audio/readings/kawa_kun.mp3",
-          "audio/surfaces/kawa_1.mp3",
-          "audio/surfaces/ogawa_1.mp3"
+          "audio/readings/kawa_kun.mp3"
         ]
       }
     ]
@@ -1098,9 +1084,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/nichi_on.mp3",
-          "audio/readings/hi_kun.mp3",
-          "audio/surfaces/hi_1.mp3",
-          "audio/surfaces/nichiyou_1.mp3"
+          "audio/readings/hi_kun.mp3"
         ]
       }
     ]
@@ -1246,9 +1230,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/getsu_on.mp3",
-          "audio/readings/tsuki_kun.mp3",
-          "audio/surfaces/tsuki_1.mp3",
-          "audio/surfaces/getsuyou_1.mp3"
+          "audio/readings/tsuki_kun.mp3"
         ]
       }
     ]
@@ -1400,9 +1382,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/moku_on.mp3",
-          "audio/readings/ki_kun.mp3",
-          "audio/surfaces/ki_1.mp3",
-          "audio/surfaces/mokuyou_1.mp3"
+          "audio/readings/ki_kun.mp3"
         ]
       }
     ]
@@ -1566,9 +1546,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/hon_on.mp3",
-          "audio/readings/moto_kun.mp3",
-          "audio/surfaces/hon_1.mp3",
-          "audio/surfaces/nihon_1.mp3"
+          "audio/readings/moto_kun.mp3"
         ]
       }
     ]
@@ -1698,9 +1676,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/rin_on.mp3",
-          "audio/readings/hayashi_kun.mp3",
-          "audio/surfaces/hayashi_1.mp3",
-          "audio/surfaces/sanrin_1.mp3"
+          "audio/readings/hayashi_kun.mp3"
         ]
       }
     ]
@@ -1833,9 +1809,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/shin_on.mp3",
-          "audio/readings/mori_kun.mp3",
-          "audio/surfaces/mori_1.mp3",
-          "audio/surfaces/shinrin_1.mp3"
+          "audio/readings/mori_kun.mp3"
         ]
       }
     ]
@@ -1977,9 +1951,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/sui_on.mp3",
-          "audio/readings/mizu_kun.mp3",
-          "audio/surfaces/mizu_1.mp3",
-          "audio/surfaces/suiyou_1.mp3"
+          "audio/readings/mizu_kun.mp3"
         ]
       }
     ]
@@ -2126,9 +2098,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/ka_on.mp3",
-          "audio/readings/hi_kun.mp3",
-          "audio/surfaces/hi_2.mp3",
-          "audio/surfaces/kazan_2.mp3"
+          "audio/readings/hi_kun.mp3"
         ]
       }
     ]
@@ -2270,9 +2240,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/ken_on.mp3",
-          "audio/readings/inu_kun.mp3",
-          "audio/surfaces/inu_1.mp3",
-          "audio/surfaces/koinu_1.mp3"
+          "audio/readings/inu_kun.mp3"
         ]
       }
     ]
@@ -2473,10 +2441,7 @@
         "satisfied_by": [
           "audio/readings/sei_on.mp3",
           "audio/readings/ikiru_kun.mp3",
-          "audio/readings/umareru_kun.mp3",
-          "audio/surfaces/sensei_1.mp3",
-          "audio/surfaces/ikiru_1.mp3",
-          "audio/surfaces/umareru_1.mp3"
+          "audio/readings/umareru_kun.mp3"
         ]
       }
     ]
@@ -2623,9 +2588,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/den_on.mp3",
-          "audio/readings/ta_kun.mp3",
-          "audio/surfaces/ta_1.mp3",
-          "audio/surfaces/suiden_1.mp3"
+          "audio/readings/ta_kun.mp3"
         ]
       }
     ]
@@ -2757,9 +2720,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/dan_on.mp3",
-          "audio/readings/otoko_kun.mp3",
-          "audio/surfaces/otoko_1.mp3",
-          "audio/surfaces/danshi_1.mp3"
+          "audio/readings/otoko_kun.mp3"
         ]
       }
     ]
@@ -2915,9 +2876,7 @@
         "item": "audio",
         "satisfied_by": [
           "audio/readings/moku_on2.mp3",
-          "audio/readings/me_kun.mp3",
-          "audio/surfaces/me_1.mp3",
-          "audio/surfaces/mokuhyou_1.mp3"
+          "audio/readings/me_kun.mp3"
         ]
       }
     ]

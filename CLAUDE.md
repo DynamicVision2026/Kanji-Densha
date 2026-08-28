@@ -66,9 +66,9 @@ Enforced boundaries (CI fails, not a review comment):
 - `apps/web` may **not** import from `content/`. Only `content-dist/`.
 - `packages/engine` may **not** import from anything except its own files.
 - Nothing may import from `packages/content-build` at runtime.
-- `content-dist/` is generated; a diff there without a matching `content/` **or**
-  `packages/content-build/` diff fails CI (the generator changing is as legitimate a cause
-  as the data changing — only a hand-edit with neither is rejected).
+- `content-dist/` is generated; a diff there without a matching `content/`, `packages/content-build/`,
+  **or** `packages/content-schema/` diff fails CI (either half of the generator changing is as
+  legitimate a cause as the data changing — only a hand-edit with none of the three is rejected).
 
 ---
 
