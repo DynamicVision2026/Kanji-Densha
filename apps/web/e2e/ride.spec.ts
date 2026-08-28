@@ -74,43 +74,45 @@ test('I7: a completed session leaves the character at almost, never perfect, how
   expect(progress?.echoes).toEqual([]);
 });
 
-test('a wrong answer on a forceReteachOnWrong grade (G1, D19) correctly denies almost within the same ride — a real gap, documented, not silently dropped', async ({
+test('Q16: a wrong answer on a forceReteachOnWrong grade (G1) sends the child back to わかる, and a correct retry after that still reaches だいたい', async ({
   page,
 }) => {
   // Grade 1 sets forceReteachOnWrong: true (grades.yaml, the architect's
   // locked values — "at six, re-meeting the character costs nothing and
   // carries no shame"). MR-4.6: any counted wrong answer sets
   // understood=false, and only the `understand` event (MR-3.2) sets it back
-  // to true. M3's Practice beat has no path back to わかる mid-practice, so a
-  // single wrong answer here — even immediately followed by the correct one —
-  // structurally denies almost for the rest of THIS ride. That is the engine
-  // doing exactly what was specified; the gap is that the UI never offers the
-  // child a way back to わかる to recover within the same session. Worth
-  // building a "route back to わかる" flow later; not built here, since M3's
-  // prompt asks for the four beats, not this recovery path. Asserted here so
-  // the gap is visible and intentional, not an unnoticed dead end.
+  // to true. Practice.tsx now detours to わかる (Understand's `reteach`
+  // framing) when that happens, then resumes ためす on the SAME item once the
+  // child re-confirms — the train backing up one station, not a dead end and
+  // not a restart of items already answered correctly.
   await page.getByRole('button', { name: 'のった！' }).click();
   await expect(page.getByRole('button', { name: 'わかった！' })).toBeVisible();
   await page.getByRole('button', { name: 'わかった！' }).click();
   await expect(page.getByText('どう よむ？')).toBeVisible();
 
-  await page.getByRole('button', { name: 'かわ', exact: true }).click(); // wrong
-  await expect(page.getByText('おしい！もういちど。')).toBeVisible();
+  await page.getByRole('button', { name: 'かわ', exact: true }).click(); // wrong, counted
+
+  // Reteach: back at わかる, with the warm framing, not the inline retry hint.
+  await expect(page.getByText('もういちど みてみよう')).toBeVisible();
+  await expect(page.getByText('どう よむ？')).toHaveCount(0);
+  await page.getByRole('button', { name: 'わかった！' }).click();
+
+  // Resumes on the SAME item (still asking how to read 山), not a restart.
+  await expect(page.getByText('どう よむ？')).toBeVisible();
   await page.getByRole('button', { name: 'やま', exact: true }).click(); // correct, advances
+
   await expect(page.getByText('どういう いみ？')).toBeVisible();
   await page.getByRole('button', { name: 'たかい つち の ところ' }).click();
   await expect(page.getByText('かきかたを みてみよう。')).toBeVisible();
   await page.getByRole('button', { name: 'できた！' }).click();
 
+  await expect(page.getByText('だいたい', { exact: true })).toBeVisible();
+
   const stored = await readStoredProgress(page);
   const progress = stored?.山 as { status: string; understood: boolean; lamps: Record<string, boolean> } | undefined;
-  // All three lamps did light (the retry worked) — but understood stayed
-  // false, so status cannot be almost (MR-7.3 requires encountered &&
-  // understood && every required lamp lit).
   expect(progress?.lamps).toEqual({ reading: true, meaning: true, shape: true });
-  expect(progress?.understood).toBe(false);
-  expect(progress?.status).not.toBe('almost');
-  expect(progress?.status).not.toBe('perfect');
+  expect(progress?.understood).toBe(true);
+  expect(progress?.status).toBe('almost');
 });
 
 test.describe('accessibility (axe) — one pass per beat', () => {

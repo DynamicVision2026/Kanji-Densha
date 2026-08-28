@@ -7,10 +7,20 @@
 // docs/open-questions.md Q15. It cannot be answered wrong: it exists so the
 // shape lamp can light for real (山 has shape.published: true, so requiredLamps
 // includes shape), not to evaluate stroke order, which M4 owns.
+//
+// Q16 recovery path — Grade 1 sets forceReteachOnWrong (MR-4.6, the
+// architect's parameter: "at six, re-meeting the character costs nothing and
+// carries no shame"). A counted wrong here can clear `understood`; when it
+// does, this component detours to わかる (reusing Understand.tsx with its
+// `reteach` framing) instead of the inline retry hint, then resumes on the
+// SAME item once the child re-confirms understanding — a `understand` event
+// is fired for real (MR-3.2), not synthesised. `index` is untouched by the
+// detour since Practice itself never unmounts.
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
 import type { CharacterProgress, ProgressEvent, Lamp } from '@kanji-densha/engine';
 import type { CharacterBundle, Item } from '../published/types.js';
+import { Understand } from './Understand.js';
 
 interface PracticeProps {
   char: CharacterBundle;
@@ -117,9 +127,22 @@ function ShapePlaceholder({ char, onDone }: { char: CharacterBundle; onDone: () 
 export function Practice({ char, sessionId, onAnswer, onComplete }: PracticeProps) {
   const [index, setIndex] = useState(0);
   const [showRetry, setShowRetry] = useState(false);
+  const [needsReteach, setNeedsReteach] = useState(false);
 
   const items = char.items;
   const item = items[index];
+
+  if (needsReteach) {
+    return (
+      <Understand
+        char={char}
+        reteach
+        onContinue={() => {
+          void onAnswer({ type: 'understand', at: Date.now(), sessionId }).then(() => setNeedsReteach(false));
+        }}
+      />
+    );
+  }
 
   if (item === undefined) {
     onComplete();
@@ -133,9 +156,17 @@ export function Practice({ char, sessionId, onAnswer, onComplete }: PracticeProp
   };
 
   const handlePick = (lamp: Lamp) => (correct: boolean) => {
-    void onAnswer(makeAnswerEvent(item.id, lamp, correct, sessionId)).then(() => {
-      if (correct) advance();
-      else setShowRetry(true);
+    void onAnswer(makeAnswerEvent(item.id, lamp, correct, sessionId)).then((next) => {
+      if (correct) {
+        advance();
+      } else if (!next.understood) {
+        // MR-4.6 fired: back to わかる, resuming on this same item once the
+        // child re-confirms (not a restart of ためす — see file header).
+        setShowRetry(false);
+        setNeedsReteach(true);
+      } else {
+        setShowRetry(true);
+      }
     });
   };
 
