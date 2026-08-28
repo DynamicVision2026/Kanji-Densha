@@ -123,16 +123,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ichi_on.mp3",
-          "audio/readings/hitotsu_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "七",
@@ -1766,16 +1758,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/jin_on.mp3",
-          "audio/readings/hito_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "休",
@@ -3140,16 +3124,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ryoku_on.mp3",
-          "audio/readings/chikara_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "十",
@@ -4487,16 +4463,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/dai_on.mp3",
-          "audio/readings/ookii_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "天",
@@ -5188,16 +5156,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/gaku_on.mp3",
-          "audio/readings/manabu_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "小",
@@ -5504,16 +5464,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/san_on.mp3",
-          "audio/readings/yama_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "川",
@@ -5642,15 +5594,8 @@
         "type": "on"
       }
     ],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/kawa_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "左",
@@ -6345,16 +6290,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/nichi_on.mp3",
-          "audio/readings/hi_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "早",
@@ -6662,16 +6599,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/getsu_on.mp3",
-          "audio/readings/tsuki_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "木",
@@ -6814,16 +6743,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/moku_on.mp3",
-          "audio/readings/ki_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "本",
@@ -6978,16 +6899,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/hon_on.mp3",
-          "audio/readings/moto_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "村",
@@ -7234,16 +7147,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/rin_on.mp3",
-          "audio/readings/hayashi_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "校",
@@ -7483,16 +7388,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/shin_on.mp3",
-          "audio/readings/mori_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "正",
@@ -7915,16 +7812,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/sui_on.mp3",
-          "audio/readings/mizu_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "火",
@@ -8062,16 +7951,8 @@
         "type": "kun"
       }
     ],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ka_on.mp3",
-          "audio/readings/hi_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "犬",
@@ -8204,16 +8085,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/ken_on.mp3",
-          "audio/readings/inu_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "玉",
@@ -8679,17 +8552,8 @@
         "type": "kun"
       }
     ],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/sei_on.mp3",
-          "audio/readings/ikiru_kun.mp3",
-          "audio/readings/umareru_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "田",
@@ -8827,16 +8691,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/den_on.mp3",
-          "audio/readings/ta_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "男",
@@ -8959,16 +8815,8 @@
       }
     ],
     "later_readings": [],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/dan_on.mp3",
-          "audio/readings/otoko_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "町",
@@ -9573,16 +9421,8 @@
         "type": "kun"
       }
     ],
-    "teach_ready": false,
-    "audio_pending": [
-      {
-        "item": "audio",
-        "satisfied_by": [
-          "audio/readings/moku_on2.mp3",
-          "audio/readings/me_kun.mp3"
-        ]
-      }
-    ]
+    "teach_ready": true,
+    "audio_pending": []
   },
   {
     "character": "石",
