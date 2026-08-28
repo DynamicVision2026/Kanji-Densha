@@ -11,11 +11,23 @@ import {
   echoAvailable,
   echoIsDue,
   emptyProgress,
-  evaluateProgress,
-  hydrateProgress,
   utcDay,
   type ProgressState,
 } from "@/lib/progress-eval";
+import {
+  EchoRejectedError,
+  evaluateProgress,
+  initialProgress,
+  type CharacterProgress,
+  type EchoAttempt,
+  type Lamp,
+  type OpenEcho,
+} from "@kanji-densha/engine";
+import {
+  requiredLamps as computeRequiredLamps,
+  toEngineGradeParams,
+  toLegacyProgressState,
+} from "@/lib/legacy-progress-adapter";
 import { getItem, gradeChoice, shapeSurfaceAvailable } from "@/lib/items";
 import { mapLinesFor } from "@/lib/lines";
 import { justReachedPerfect, stampFromPerfect, type Stamp } from "@/lib/stamps";
@@ -78,23 +90,6 @@ function parseStringList(raw: unknown): string[] {
   }
 }
 
-function parseLastSuccess(raw: unknown): ProgressState["lastSuccessByKind"] {
-  if (!raw) return {};
-  if (typeof raw === "object" && !Array.isArray(raw)) {
-    return raw as ProgressState["lastSuccessByKind"];
-  }
-  try {
-    const v = JSON.parse(String(raw));
-    return v && typeof v === "object" ? v : {};
-  } catch {
-    return {};
-  }
-}
-
-function completedKindsOf(s: ProgressState): string {
-  return (["reading", "meaning", "shape"] as const).filter((k) => s.lights[k]).join(",");
-}
-
 function iso(v: unknown): string | null {
   if (!v) return null;
   if (v instanceof Date) return v.toISOString();
@@ -104,32 +99,79 @@ function iso(v: unknown): string | null {
   return Number.isNaN(t) ? null : new Date(t).toISOString();
 }
 
-function rowToState(r: Record<string, unknown>): ProgressState {
-  const kinds = parseKinds(String(r.completed_kinds ?? ""));
-  return hydrateProgress({
-    kanji: String(r.kanji),
+// Hours since the Unix epoch — the real engine's own time unit (evaluate.ts:
+// "at and the *DelayHours grade params share one time unit"). Converted at
+// this DB boundary only; nothing else in the app ever sees engine hours.
+function toHours(ms: number): number {
+  return ms / 3_600_000;
+}
+function hoursFromTimestamp(v: unknown): number | null {
+  if (!v) return null;
+  const d = v instanceof Date ? v : new Date(String(v));
+  const ms = d.getTime();
+  return Number.isNaN(ms) ? null : toHours(ms);
+}
+function timestampFromHours(h: number | null): Date | null {
+  return h === null ? null : new Date(h * 3_600_000);
+}
+
+function parseEchoes(raw: unknown): readonly EchoAttempt[] {
+  if (!raw) return [];
+  try {
+    const v = typeof raw === "string" ? JSON.parse(raw) : raw;
+    if (!Array.isArray(v)) return [];
+    return v.map((e: Record<string, unknown>) => ({
+      at: Number(e?.at ?? 0),
+      ok: Boolean(e?.ok),
+      sessionId: String(e?.sessionId ?? ""),
+    }));
+  } catch {
+    return [];
+  }
+}
+
+function parseOpenEcho(raw: unknown): OpenEcho | null {
+  if (!raw) return null;
+  try {
+    const v = typeof raw === "string" ? JSON.parse(raw) : raw;
+    if (!v || typeof v !== "object") return null;
+    const o = v as Record<string, unknown>;
+    return {
+      startedAt: Number(o.startedAt ?? 0),
+      sessionId: String(o.sessionId ?? ""),
+      results: (o.results ?? {}) as Partial<Record<Lamp, boolean>>,
+    };
+  } catch {
+    return null;
+  }
+}
+
+// Reads a `kanji_progress` row straight into the real engine's own shape.
+// This is the only place a DB row becomes a `CharacterProgress` — write
+// handlers evaluate against this, never against the legacy projection below.
+function rowToProgress(r: Record<string, unknown>): CharacterProgress {
+  return {
+    characterId: String(r.kanji),
     status: asStatus(String(r.status ?? "new")),
-    lights: {
-      reading: asBool(r.lights_reading) || kinds.includes("reading"),
-      meaning: asBool(r.lights_meaning) || kinds.includes("meaning"),
-      shape: asBool(r.lights_shape) || kinds.includes("shape"),
+    lamps: {
+      reading: asBool(r.lights_reading),
+      meaning: asBool(r.lights_meaning),
+      shape: asBool(r.lights_shape),
     },
-    encounterCompleted: asBool(r.encounter_completed),
-    understandCompleted: asBool(r.understand_completed),
-    seenAt: iso(r.seen_at),
-    lastPracticeAt: iso(r.last_practice_at),
-    almostAt: iso(r.almost_at),
-    echoDueAt: iso(r.echo_due_at),
-    perfectAt: iso(r.perfect_at),
-    correctStreakByKind: parseCountMap(r.correct_streak_by_kind),
-    wrongCountByKind: parseCountMap(r.wrong_count_by_kind),
-    consecutiveWrongByKind: parseCountMap(r.consecutive_wrong_by_kind),
-    repairRequiredKinds: parseKinds(String(r.repair_required_kinds ?? "")),
-    attempts: Number(r.attempts ?? 0),
-    surfacesSeenSuccess: parseStringList(r.surfaces_seen_success),
-    lastSuccessByKind: parseLastSuccess(r.last_success_by_kind),
-    echoSuccessCount: Number(r.echo_success_count ?? 0) || 0,
-  });
+    encountered: asBool(r.encounter_completed),
+    understood: asBool(r.understand_completed),
+    repairs: parseKinds(String(r.repair_required_kinds ?? "")),
+    lostFlag: asBool(r.lost_flag),
+    consecutiveWrong: parseCountMap(r.consecutive_wrong_by_kind),
+    lifetimeWrong: parseCountMap(r.wrong_count_by_kind),
+    almostAt: hoursFromTimestamp(r.almost_at),
+    almostSessionId: r.almost_session_id ? String(r.almost_session_id) : null,
+    echoes: parseEchoes(r.echoes),
+    openEcho: parseOpenEcho(r.open_echo),
+    seenSurfaces: parseStringList(r.surfaces_seen_success),
+    novelFailures: parseStringList(r.novel_failures),
+    stampedAt: hoursFromTimestamp(r.perfect_at),
+  };
 }
 
 export async function loadProgress(userId: string, childId: string) {
@@ -144,92 +186,91 @@ export async function loadProgress(userId: string, childId: string) {
     `select * from kanji_progress where child_id = $1 and user_id = $2`,
     [childId, userId],
   );
+  // `progressMap` is the real engine state — write handlers evaluate against
+  // it. `map` is the one-way legacy projection (legacy-progress-adapter.ts)
+  // every pre-harvest read consumer already expects; building it here means
+  // every read-only handler below is unchanged from before the engine swap.
+  const progressMap = new Map<string, CharacterProgress>();
   const map = new Map<string, ProgressState>();
   for (const r of rows) {
-    const state = rowToState(r);
-    map.set(state.kanji, state);
+    const progress = rowToProgress(r);
+    progressMap.set(progress.characterId, progress);
+    const params = toEngineGradeParams(
+      paramsForChar(progress.characterId, child.grade as Grade),
+    );
+    map.set(progress.characterId, toLegacyProgressState(progress, params));
   }
   return {
     child: { id: child.id, name: child.name, grade: child.grade as Grade },
     map,
+    progressMap,
   };
 }
 
-async function saveProgress(userId: string, childId: string, state: ProgressState) {
+async function saveProgress(userId: string, childId: string, progress: CharacterProgress) {
   const sql = await getSql();
-  const kinds = completedKindsOf(state);
   await sql.query(
     `insert into kanji_progress (
-      user_id, child_id, kanji, status, correct_streak, attempts, wrong_count, completed_kinds,
+      user_id, child_id, kanji, status,
       lights_reading, lights_meaning, lights_shape,
       encounter_completed, understand_completed,
-      seen_at, last_practice_at, almost_at, echo_due_at, perfect_at,
-      wrong_count_by_kind, correct_streak_by_kind, consecutive_wrong_by_kind,
-      repair_required_kinds, surfaces_seen_success, last_success_by_kind, echo_success_count, updated_at
+      almost_at, perfect_at,
+      wrong_count_by_kind, consecutive_wrong_by_kind, repair_required_kinds,
+      surfaces_seen_success,
+      almost_session_id, lost_flag, novel_failures, open_echo, echoes,
+      updated_at
     ) values (
-      $1,$2,$3,$4,$5,$6,$7,$8,
-      $9,$10,$11,
-      $12,$13,
-      $14,$15,$16,$17,$18,
-      $19,$20,$21,
-      $22,$23,$24,$25, now()
+      $1,$2,$3,$4,
+      $5,$6,$7,
+      $8,$9,
+      $10,$11,
+      $12,$13,$14,
+      $15,
+      $16,$17,$18,$19,$20,
+      now()
     )
     on conflict (child_id, kanji)
     do update set
       status = excluded.status,
-      correct_streak = excluded.correct_streak,
-      attempts = excluded.attempts,
-      wrong_count = excluded.wrong_count,
-      completed_kinds = excluded.completed_kinds,
       lights_reading = excluded.lights_reading,
       lights_meaning = excluded.lights_meaning,
       lights_shape = excluded.lights_shape,
       encounter_completed = excluded.encounter_completed,
       understand_completed = excluded.understand_completed,
-      seen_at = excluded.seen_at,
-      last_practice_at = excluded.last_practice_at,
       almost_at = excluded.almost_at,
-      echo_due_at = excluded.echo_due_at,
       perfect_at = excluded.perfect_at,
       wrong_count_by_kind = excluded.wrong_count_by_kind,
-      correct_streak_by_kind = excluded.correct_streak_by_kind,
       consecutive_wrong_by_kind = excluded.consecutive_wrong_by_kind,
       repair_required_kinds = excluded.repair_required_kinds,
       surfaces_seen_success = excluded.surfaces_seen_success,
-      last_success_by_kind = excluded.last_success_by_kind,
-      echo_success_count = excluded.echo_success_count,
+      almost_session_id = excluded.almost_session_id,
+      lost_flag = excluded.lost_flag,
+      novel_failures = excluded.novel_failures,
+      open_echo = excluded.open_echo,
+      echoes = excluded.echoes,
       updated_at = now()
     where kanji_progress.user_id = $1`,
     [
       userId,
       childId,
-      state.kanji,
-      state.status,
-      state.correctStreakByKind.reading +
-        state.correctStreakByKind.meaning +
-        state.correctStreakByKind.shape,
-      state.attempts,
-      state.wrongCountByKind.reading +
-        state.wrongCountByKind.meaning +
-        state.wrongCountByKind.shape,
-      kinds,
-      state.lights.reading,
-      state.lights.meaning,
-      state.lights.shape,
-      state.encounterCompleted,
-      state.understandCompleted,
-      state.seenAt,
-      state.lastPracticeAt,
-      state.almostAt,
-      state.echoDueAt,
-      state.perfectAt,
-      JSON.stringify(state.wrongCountByKind),
-      JSON.stringify(state.correctStreakByKind),
-      JSON.stringify(state.consecutiveWrongByKind),
-      state.repairRequiredKinds.join(","),
-      JSON.stringify(state.surfacesSeenSuccess ?? []),
-      JSON.stringify(state.lastSuccessByKind ?? {}),
-      state.echoSuccessCount ?? 0,
+      progress.characterId,
+      progress.status,
+      progress.lamps.reading,
+      progress.lamps.meaning,
+      progress.lamps.shape,
+      progress.encountered,
+      progress.understood,
+      timestampFromHours(progress.almostAt),
+      timestampFromHours(progress.stampedAt),
+      JSON.stringify(progress.lifetimeWrong),
+      JSON.stringify(progress.consecutiveWrong),
+      progress.repairs.join(","),
+      JSON.stringify(progress.seenSurfaces),
+      progress.almostSessionId,
+      progress.lostFlag,
+      JSON.stringify(progress.novelFailures),
+      progress.openEcho ? JSON.stringify(progress.openEcho) : null,
+      JSON.stringify(progress.echoes),
     ],
   );
 }
@@ -374,32 +415,36 @@ export const getKanjiStudy = createServerFn({ method: "GET" })
 
 export const completeEncounter = createServerFn({ method: "POST" })
   .middleware([authMiddleware])
-  .validator((input: { childId: string; char: string }) => input)
+  .validator((input: { childId: string; char: string; sessionId: string }) => input)
   .handler(async ({ context, data }) => {
-    const { child, map } = await loadProgress(context.userId, data.childId);
-    const now = new Date().toISOString();
+    const { child, progressMap } = await loadProgress(context.userId, data.childId);
+    const params = toEngineGradeParams(paramsForChar(data.char, child.grade));
+    const required = computeRequiredLamps(shapeSurfaceAvailable(data.char));
     const next = evaluateProgress(
-      map.get(data.char) ?? emptyProgress(data.char),
-      { type: "completeEncounter", nowIso: now },
-      paramsForChar(data.char, child.grade),
+      progressMap.get(data.char) ?? initialProgress(data.char),
+      { type: "encounter", at: toHours(Date.now()), sessionId: data.sessionId },
+      params,
+      required,
     );
     await saveProgress(context.userId, data.childId, next);
-    return { progress: next };
+    return { progress: toLegacyProgressState(next, params) };
   });
 
 export const completeUnderstand = createServerFn({ method: "POST" })
   .middleware([authMiddleware])
-  .validator((input: { childId: string; char: string }) => input)
+  .validator((input: { childId: string; char: string; sessionId: string }) => input)
   .handler(async ({ context, data }) => {
-    const { child, map } = await loadProgress(context.userId, data.childId);
-    const now = new Date().toISOString();
+    const { child, progressMap } = await loadProgress(context.userId, data.childId);
+    const params = toEngineGradeParams(paramsForChar(data.char, child.grade));
+    const required = computeRequiredLamps(shapeSurfaceAvailable(data.char));
     const next = evaluateProgress(
-      map.get(data.char) ?? emptyProgress(data.char),
-      { type: "completeUnderstand", nowIso: now },
-      paramsForChar(data.char, child.grade),
+      progressMap.get(data.char) ?? initialProgress(data.char),
+      { type: "understand", at: toHours(Date.now()), sessionId: data.sessionId },
+      params,
+      required,
     );
     await saveProgress(context.userId, data.childId, next);
-    return { progress: next };
+    return { progress: toLegacyProgressState(next, params) };
   });
 
 export const submitPractice = createServerFn({ method: "POST" })
@@ -418,36 +463,63 @@ export const submitPractice = createServerFn({ method: "POST" })
     if (!item || item.kanji !== data.char) throw new Error("unknown item");
     const graded = gradeChoice(item, data.choiceId);
 
-    const { child, map } = await loadProgress(context.userId, data.childId);
+    const { child, map, progressMap } = await loadProgress(context.userId, data.childId);
 
-    const now = new Date().toISOString();
-    const p = paramsForChar(data.char, child.grade);
-    const prev = map.get(data.char) ?? emptyProgress(data.char);
-    const scoringEcho = echoIsDue(prev, now);
-    const next = evaluateProgress(
-      prev,
-      {
-        type: "answer",
-        kind: item.kind,
-        correct: graded.correct,
-        isEcho: scoringEcho,
-        echoBatchDone: scoringEcho,
-        nowIso: now,
-        shapeAvailable: shapeSurfaceAvailable(data.char),
-        surfaceId: item.surfaceId ?? item.payload.surface?.id ?? `${item.kanji}:solo`,
-        gentle: Boolean(item.payload.confusable || item.payload.phoneticFamily || item.payload.cloze),
-      },
-      p,
-    );
+    const now = Date.now();
+    const nowIso = new Date(now).toISOString();
+    const params = toEngineGradeParams(paramsForChar(data.char, child.grade));
+    const required = computeRequiredLamps(shapeSurfaceAvailable(data.char));
+    const prev = progressMap.get(data.char) ?? initialProgress(data.char);
+    const prevLegacy = map.get(data.char) ?? emptyProgress(data.char);
+    const wantsEcho = data.isEcho && echoIsDue(prevLegacy, nowIso);
+    const surfaceId = item.surfaceId ?? item.payload.surface?.id ?? `${item.kanji}:solo`;
+    const soft = Boolean(item.payload.confusable || item.payload.phoneticFamily || item.payload.cloze);
+
+    const attempt = (mode: "practice" | "echo"): CharacterProgress =>
+      evaluateProgress(
+        prev,
+        {
+          type: "answer",
+          at: toHours(now),
+          sessionId: data.sessionId,
+          itemId: data.itemId,
+          lamp: item.kind,
+          correct: graded.correct,
+          mode,
+          surfaceId,
+          soft,
+        },
+        params,
+        required,
+      );
+
+    let scoringEcho = wantsEcho;
+    let next: CharacterProgress;
+    try {
+      next = attempt(wantsEcho ? "echo" : "practice");
+    } catch (err) {
+      if (!(err instanceof EchoRejectedError) || !wantsEcho) throw err;
+      // The engine's own eligibility check (MR-5) is the authority, not the
+      // app's echoIsDue guess above — a rejection here means that guess was
+      // stale (e.g. a second tab already spent the echo). Downgrade to
+      // practice-mode scoring rather than surfacing an error to the child;
+      // this console line stands in for telemetry until a real pipeline
+      // exists.
+      console.warn(`echo rejected, scoring as practice: ${err.clause} ${data.char}`);
+      scoringEcho = false;
+      next = attempt("practice");
+    }
+
     await saveProgress(context.userId, data.childId, next);
-    await awardStamp(context.userId, data.childId, prev, next);
+    const nextLegacy = toLegacyProgressState(next, params);
+    await awardStamp(context.userId, data.childId, prevLegacy, nextLegacy);
     await maybeRecordInspection({
       userId: context.userId,
       childId: data.childId,
       kanji: data.char,
-      prev,
-      next,
-      nowIso: now,
+      prev: prevLegacy,
+      next: nextLegacy,
+      nowIso,
     });
 
     const sql = await getSql();
@@ -464,11 +536,11 @@ export const submitPractice = createServerFn({ method: "POST" })
     return {
       correct: graded.correct,
       label: graded.label,
-      progress: next,
+      progress: nextLegacy,
       gradePerfect: buildGradeRings({
         progress: (() => {
           const nextMap = new Map(map);
-          nextMap.set(data.char, next);
+          nextMap.set(data.char, nextLegacy);
           return nextMap;
         })(),
         profileGrade: child.grade,
