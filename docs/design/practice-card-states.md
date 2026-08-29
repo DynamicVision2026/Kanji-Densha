@@ -80,7 +80,49 @@ competing; the eye must have one place to go.
 Lamps never scale below 32px. The kanji is the largest element on the card at every width.
 Test at 767, 768, 1023 and 1024 exactly.
 
-## 5. Prohibited
+## 5. Ticket resemblance, and the transformation at 到着
+
+The card and the ticket are the same object at two moments in its life. The card is a card
+while it is being *used*; it becomes a ticket at the moment it becomes worth *keeping*.
+
+### On the card — family resemblance only
+
+Borrow ticket detailing without the form factor: **punched semicircular notches** on the left
+and right edges, a small monospace serial in a corner, and the same paper texture as the
+ticket. The card reads as being from the same world without pretending to be a keepsake.
+
+**Notches, never dashed perforation lines.** Dashes already mean "not yet real" across this
+product — はじめて here, demo cars on the entrance page. A dashed ticket edge would collide with
+that grammar and quietly weaken both. This is not a stylistic preference; it is the one rule
+that keeps the visual language coherent.
+
+**Do not adopt the ticket's proportions.** A 乗車券 is wide, short and text-dense; the practice
+card's entire job is an 88px glyph and three 40px lamps, and at 360px there is no room for both.
+Ticket aspect ratios also break in the two-up tablet grid.
+
+**No QR on the practice card.** A QR bridges physical to digital. On the screen the child is
+already holding, mid-ride, it is decoration that costs contrast. It belongs only on the saved
+artifact.
+
+### At 到着 — the transformation
+
+The card folds into a ticket in front of the child: same character, **same state colour**, now
+dated, punched, and scannable. See `docs/design/return-ticket.md`.
+
+This is the emotional beat 到着 currently lacks, and it is also the screen where a parent
+decides whether to save — so the transformation and the save prompt reinforce each other rather
+than competing.
+
+**The ticket inherits the state colour exactly.** A だいたい ticket is pale green; a なおし
+ticket is amber. The five-state rules above carry through unchanged. The ticket never shows
+かんぺき (MR-7.3, I7) — that has its own ticket, issued on the day the second echo passes.
+
+**Text must be sized to the ticket, not allowed to reflow.** A ticket is a fixed-size object.
+Fixed footer height, `white-space: nowrap` on the serial and the footer line, and the body
+sentence capped at two lines. Overflowing text breaking across lines is the failure mode that
+makes a generated ticket look like a web page instead of a ticket.
+
+## 6. Prohibited
 
 Scores, percentages, timers, streaks, comparison to other children, red error states, sad or
 disapproving faces, and any copy implying the child is behind or has failed. A wrong answer
