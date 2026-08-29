@@ -110,6 +110,44 @@
     radial-gradient(900px 400px at 110% 0%, rgb(61 122 90 / 0.05), transparent 46%);
 }
 
+/* practice-card-states.md §5 — family resemblance only: punched semicircular
+   notches on the left/right edges, never dashed perforation lines (dashes
+   already mean "not yet real" product-wide). A dual-layer mask, intersected,
+   cuts a circular hole where either layer is transparent — i.e. right at
+   each edge's vertical centre — without affecting card size or layout, so
+   it can never touch proportions, glyph size, or lamps. */
+.ticket-notch {
+  --ticket-notch-radius: 9px;
+  mask-image:
+    radial-gradient(circle var(--ticket-notch-radius) at 0 50%, transparent 99%, black 100%),
+    radial-gradient(circle var(--ticket-notch-radius) at 100% 50%, transparent 99%, black 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    radial-gradient(circle var(--ticket-notch-radius) at 0 50%, transparent 99%, black 100%),
+    radial-gradient(circle var(--ticket-notch-radius) at 100% 50%, transparent 99%, black 100%);
+  -webkit-mask-composite: source-in;
+}
+
+/* Same paper texture as the ticket (return-ticket.md), scaled down to card
+   size: a faint fibre grain, not the page-level paper-wash colour tint. An
+   overlay pseudo-element rather than a card background-image so it composites
+   over every status fill (including transparent はじめて) without changing
+   the element box. */
+.ticket-paper {
+  position: relative;
+}
+.ticket-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
 .map-overlay-sheet {
   animation: map-in 180ms cubic-bezier(0.22, 1, 0.36, 1);
   transform-origin: top center;
