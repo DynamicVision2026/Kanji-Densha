@@ -38,6 +38,7 @@ import {
   dismissDemoRollover,
 } from "@/lib/demo-route";
 import type { StartBand } from "@/lib/grade-route";
+import { markHasRidden } from "@/lib/has-ridden";
 
 const KEY = "densha.demo.progress.v3";
 const EVENT_KEY = "densha.demo.events.v2";
@@ -347,6 +348,7 @@ export function completeDemoEncounter(char: string): ProgressState {
     { type: "completeEncounter", nowIso: now },
     paramsFor(char),
   );
+  markHasRidden();
   return persist(char, next);
 }
 

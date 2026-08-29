@@ -144,6 +144,16 @@ export function ChildHome({
               grade={grade}
               onOpenMap={() => setMapOpen(true)}
             />
+            {/* entrance-page.md §1: a labelled, visible parent control — not
+                hold-only, which a first-time parent will never discover.
+                ParentDoor's 1.5s hold stays as an additional path. */}
+            <Link
+              to={parentTo}
+              className="ml-auto inline-flex h-11 shrink-0 items-center rounded-md border border-border bg-surface/90 px-3 text-xs text-fg-muted"
+              data-parent-link
+            >
+              {t("parentLinkLabel")}
+            </Link>
             <ParentDoor to={parentTo} />
           </header>
 
