@@ -98,7 +98,15 @@ function seedMap(): Record<string, ProgressState> {
     ...patch,
   });
 
-  out[chars[0] ?? "一"] = base(chars[0] ?? "一", {
+  // chars[0] (一) is deliberately left unseeded: entrance-page.md §5 sends
+  // every first-time guest's さわってみる tap straight to /demo/kanji/一,
+  // specifically because it is fast to complete honestly from scratch. A
+  // perfect seed here would show that guest a character already finished
+  // before they had done anything — chars[4] (王) carries the "already
+  // かんぺき" demo slot instead, since nothing routes a fresh guest there
+  // (prepareDemoTour resets it to empty of its own accord for the guided
+  // tour, independent of whatever this function seeds it to).
+  out[chars[4] ?? "王"] = base(chars[4] ?? "王", {
     status: "perfect",
     lights: { reading: true, meaning: true, shape: true },
     perfectAt: isoHoursFromNow(-24),
@@ -167,6 +175,17 @@ function migrateDemo(all: Record<string, ProgressState>): {
   const couple = next[DEMO_COUPLE_CHAR];
   if (!couple) {
     next[DEMO_COUPLE_CHAR] = seeded[DEMO_COUPLE_CHAR]!;
+    changed = true;
+  }
+  // Fix-up for browsers that already persisted the old seed, which put
+  // かんぺき on chars[0] (一) — exactly the character entrance-page.md
+  // routes a first-time guest's さわってみる tap to. An untouched (never
+  // actually played) かんぺき entry there can only be that leftover seed
+  // value, never real progress, so it is safe to drop back to fresh.
+  const rideTarget = (trainsForGrade(1)[0]?.chars ?? ["一"])[0] ?? "一";
+  const rideTargetRow = next[rideTarget];
+  if (rideTargetRow?.status === "perfect" && !readTouchedChars().includes(rideTarget)) {
+    delete next[rideTarget];
     changed = true;
   }
   return { all: next, changed };
