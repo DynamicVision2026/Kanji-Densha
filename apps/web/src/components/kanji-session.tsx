@@ -9,6 +9,7 @@ import { PuzzleFrame } from "@/components/puzzle-frame";
 import { QuizPanel } from "@/components/quiz-panel";
 import { ReadingLine } from "@/components/speaker-button";
 import { RideShell } from "@/components/ride-shell";
+import { SavePromptBanner } from "@/components/save-prompt-banner";
 import { CoupleBeat } from "@/components/couple-beat";
 import { TrainAnnounce } from "@/components/train-announce";
 import { Button } from "@/components/ui/button";
@@ -45,6 +46,7 @@ import {
   type ProgressState,
 } from "@/lib/progress-eval";
 import { useDwell } from "@/lib/use-dwell";
+import { markSavePromptShown, sawSavePromptThisSession } from "@/lib/save-prompt";
 
 function openingBeat(input: {
   lookMode: boolean;
@@ -154,6 +156,15 @@ export function KanjiSession({
   const [lastWrongByKind, setLastWrongByKind] = useState<Partial<Record<PracticeKind, string>>>(
     {},
   );
+  // entrance-page.md §6: first だいたい arrival, guest only, once per session.
+  const [savePromptVisible, setSavePromptVisible] = useState(false);
+  useEffect(() => {
+    if (hrefHome === "/demo" && progress.status === "almost" && !sawSavePromptThisSession()) {
+      markSavePromptShown();
+      setSavePromptVisible(true);
+    }
+  }, [progress.status, hrefHome]);
+  const showSavePrompt = savePromptVisible && hrefHome === "/demo" && progress.status === "almost";
   const echoArmed = useRef(false);
   const itemsArmed = useRef(false);
   const answering = useRef(false);
@@ -697,6 +708,9 @@ export function KanjiSession({
     );
     action = (
       <div className="space-y-3">
+        {showSavePrompt ? (
+          <SavePromptBanner onDecline={() => setSavePromptVisible(false)} />
+        ) : null}
         {status !== "perfect" && status !== "almost" ? (
           <Button
             type="button"

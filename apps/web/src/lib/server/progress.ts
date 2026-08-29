@@ -28,6 +28,7 @@ import {
   toEngineGradeParams,
   toLegacyProgressState,
 } from "@/lib/legacy-progress-adapter";
+import { mergeGuestProgress } from "@/lib/guest-import";
 import { getItem, gradeChoice, shapeSurfaceAvailable } from "@/lib/items";
 import { mapLinesFor } from "@/lib/lines";
 import { justReachedPerfect, stampFromPerfect, type Stamp } from "@/lib/stamps";
@@ -472,6 +473,34 @@ export const completeUnderstand = createServerFn({ method: "POST" })
     );
     await saveProgress(context.userId, data.childId, next);
     return { progress: toLegacyProgressState(next, params) };
+  });
+
+/**
+ * Guest -> account migration (entrance-page.md §6's "つづきから のれます"
+ * promise). `records` are already `CharacterProgress` — converted
+ * client-side from the old demo engine's ProgressState by
+ * lib/guest-import.ts, and pre-filtered there to characters the guest
+ * actually touched (never the seeded demo fixture). Each character merges
+ * against whatever the new child already has — trivially nothing, for the
+ * one caller this has today, but the merge is real: the higher status wins,
+ * a tie keeps the earlier almostAt, so a re-import (or a future path that
+ * isn't a brand-new child) can't reset an echo clock or demote real
+ * progress. This is a write path with no engine event behind it — it does
+ * not go through evaluateProgress, because there is no event: it is a
+ * one-time transcription of state that already existed, not something that
+ * happened just now.
+ */
+export const importGuestProgress = createServerFn({ method: "POST" })
+  .middleware([authMiddleware])
+  .validator((input: { childId: string; records: CharacterProgress[] }) => input)
+  .handler(async ({ context, data }) => {
+    const { progressMap } = await loadProgress(context.userId, data.childId);
+    for (const guestRecord of data.records) {
+      const existing = progressMap.get(guestRecord.characterId) ?? initialProgress(guestRecord.characterId);
+      const merged = mergeGuestProgress(existing, guestRecord);
+      await saveProgress(context.userId, data.childId, merged);
+    }
+    return { imported: data.records.length };
   });
 
 export const submitPractice = createServerFn({ method: "POST" })

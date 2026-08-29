@@ -3,8 +3,11 @@ import { useState } from "react";
 import { RedirectToSignIn } from "@/lib/auth/gates";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { createChild } from "@/lib/server/children";
+import { importGuestProgress } from "@/lib/server/progress";
 import { writeActiveChildId } from "@/lib/active-child";
 import { writeStoredActiveGrade } from "@/lib/active-grade";
+import { readMigratableProgress } from "@/lib/demo-progress";
+import { toCharacterProgressFromGuest } from "@/lib/guest-import";
 import { AppShell } from "@/components/app-shell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -45,6 +48,22 @@ function Onboard() {
       const child = await createChild({ data: { name, grade, startBand } });
       writeActiveChildId(child.id);
       writeStoredActiveGrade(child.grade, child.id);
+      // entrance-page.md §6: "ほぞんしておくと、そのとき つづきから のれます" —
+      // a promise, not a nicety. A no-op when there's nothing touched to
+      // migrate (readMigratableProgress excludes the seeded demo fixture).
+      // Failure here must not block account creation — the child already
+      // exists — but must not be silent either: it's the one path where
+      // the product would otherwise break its own explicit promise.
+      const guestProgress = Object.values(readMigratableProgress());
+      if (guestProgress.length > 0) {
+        try {
+          await importGuestProgress({
+            data: { childId: child.id, records: guestProgress.map(toCharacterProgressFromGuest) },
+          });
+        } catch (err) {
+          console.error("guest progress import failed", err);
+        }
+      }
       await navigate({ to: "/app", search: { grade: child.grade } });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("saveFailed"));
