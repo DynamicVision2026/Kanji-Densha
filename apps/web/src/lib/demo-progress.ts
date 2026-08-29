@@ -44,6 +44,7 @@ const KEY = "densha.demo.progress.v3";
 const EVENT_KEY = "densha.demo.events.v2";
 const ECHO_KEY = "densha.demo.echo-starts.v2";
 const STAMP_KEY = "densha.demo.stamps.v1";
+const TOUCHED_KEY = "densha.demo.touched.v1";
 
 export const DEMO_CHILD = {
   id: "demo",
@@ -322,11 +323,53 @@ export function recordEchoStart(nowIso = new Date().toISOString()) {
   writeEchoStarts(starts);
 }
 
+/**
+ * Characters a real interaction touched — distinct from `readAll()`, which
+ * also contains the seeded demo fixture (一 かんぺき, 右/雨 だいたい, 円
+ * なおし, …) every guest has on first load. Only this set may ever be
+ * carried into a real account: importing the seed would hand a brand-new
+ * account achievements nobody earned, which is exactly the counterfeit
+ * かんぺき entrance-page.md and welcome-screen.md both spend a paragraph
+ * ruling out for the demo train — a migrated account is not a demo car, but
+ * the same "never show a record that doesn't exist" rule applies to it.
+ */
+function readTouchedChars(): string[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = window.localStorage.getItem(TOUCHED_KEY);
+    return raw ? (JSON.parse(raw) as string[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+function markTouched(char: string) {
+  try {
+    const touched = new Set(readTouchedChars());
+    touched.add(char);
+    window.localStorage.setItem(TOUCHED_KEY, JSON.stringify([...touched]));
+  } catch {
+    /* ignore */
+  }
+}
+
+/** Guest progress eligible for account migration: touched characters only. */
+export function readMigratableProgress(): Record<string, ProgressState> {
+  const all = readAll();
+  const touched = new Set(readTouchedChars());
+  const out: Record<string, ProgressState> = {};
+  for (const char of touched) {
+    if (all[char]) out[char] = all[char];
+  }
+  return out;
+}
+
 function persist(char: string, next: ProgressState) {
   const all = readAll();
   const prev = all[char];
   all[char] = next;
   writeAll(all);
+  markTouched(char);
   awardIfPerfect(prev, next);
   return next;
 }
