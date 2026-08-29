@@ -56,5 +56,7 @@ authority should always move in this codebase.
 
 | **D26** | *Decided 2026-08-28, launch deadline.* 学 ships its real compound shape data (⺍+子) from the harvest, replacing the M2 placeholder `shape.published: false`. That placeholder was proving the D4 honest-omission path (unpublished shape → no shape item, no apology, still `teach_ready`); the proof moves to `fixtures/regression/honest-omission-unpublished-shape.yaml` rather than `fixtures/bad-content/`, since that directory's own test harness asserts every fixture is *rejected* — a should-pass fixture belongs in its own directory, not special-cased into that one. | D4, `packages/content-schema/src/regression.test.ts` |
 
+| **D27** | *Decided 2026-08-29, launch deadline.* The guest→account merge rule `build-plan.md`'s M7 entry deferred defining: per character, the **higher status wins**; on a **tie, the earlier `almostAt` is kept** so an echo clock already running is never reset. Echo reconstruction (the old demo engine stored only a bare success count, never individual attempt timestamps) anchors the synthetic attempt to `almostAt` itself — the true first echo could only have happened later, so this can only make the second-echo floor *more* permissive than reality, never stricter, which is the correct direction to be wrong in. | `build-plan.md` M7, `apps/web/src/lib/guest-import.ts`, `apps/web/src/lib/guest-import.test.ts` |
+
 **Still open:** Q14 (whether to license a 教科書体 for the hero character) — a budget
 decision, not a build blocker, since it is one CSS token.

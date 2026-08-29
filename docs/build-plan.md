@@ -132,6 +132,11 @@ proves the whole product thesis; give it a name and put it in the README.
 Better Auth + PGLite/Neon, `RemoteStore`, and the guest→account merge rule. Do not start
 before M5: the merge rule is only definable once echo timestamps matter.
 
+**The merge rule is defined: see D27.** Implemented ahead of the rest of this milestone,
+directly against the launch entrance page's save prompt (`entrance-page.md` §6) rather than
+waiting for the full M7 scope — Better Auth and PGLite/Neon were already in place from
+earlier milestones, so the one missing piece was the rule itself.
+
 ---
 
 ## Content track (parallel, from M2)
