@@ -11,6 +11,7 @@ import { ReadingLine } from "@/components/speaker-button";
 import { RideShell } from "@/components/ride-shell";
 import { SavePromptBanner } from "@/components/save-prompt-banner";
 import { CoupleBeat } from "@/components/couple-beat";
+import { TicketFold } from "@/components/ticket-fold";
 import { TrainAnnounce } from "@/components/train-announce";
 import { Button } from "@/components/ui/button";
 import { getKanji, GRADE_COUNTS, type Grade } from "@/data/kyoiku";
@@ -684,21 +685,21 @@ export function KanjiSession({
         </div>
       );
     } else {
-    stage = (
+    const feedbackText =
+      status === "perfect"
+        ? t("feedbackPerfect")
+        : status === "almost" && progress.echoSuccessCount >= 1
+          ? t("feedbackAlmostEcho")
+          : status === "almost"
+            ? t("feedbackAlmost")
+            : status === "lost"
+              ? t("feedbackLost")
+              : t("feedbackFix");
+    const feedbackSection = (
       <section className="flex min-h-0 flex-1 flex-col items-center justify-center space-y-4 text-center" data-tour="feedback">
         <h1 className="font-display text-7xl leading-none">{kanji.char}</h1>
         <MasteryLights lights={progress.lights} ui={params.lights_ui} />
-        <p className="text-sm leading-7 text-fg-muted">
-          {status === "perfect"
-            ? t("feedbackPerfect")
-            : status === "almost" && progress.echoSuccessCount >= 1
-              ? t("feedbackAlmostEcho")
-              : status === "almost"
-                ? t("feedbackAlmost")
-                : status === "lost"
-                  ? t("feedbackLost")
-                  : t("feedbackFix")}
-        </p>
+        <p className="text-sm leading-7 text-fg-muted">{feedbackText}</p>
         {status === "almost" && progress.echoDueAt ? (
           <p className="text-xs text-fg-subtle" data-echo-arrival={kanji.char}>
             {t("echoArrival", { when: arrivalWhen })}
@@ -706,6 +707,22 @@ export function KanjiSession({
         ) : null}
       </section>
     );
+    // practice-card-states.md §5 — the card folds into a ticket at 到着.
+    // The rare non-coupled `perfect` edge case still renders here too;
+    // TicketFold clamps its colour to だいたい (MR-7.3, I7) rather than
+    // trusting the caller, but a clamped colour paired with かんぺき's own
+    // wording would just move the same lie from colour to text — so the
+    // ticket's body text is computed against the same clamped status,
+    // never against the raw (unclamped) `status` used for the front face.
+    const ticketBody =
+      status === "almost" || status === "perfect"
+        ? progress.echoSuccessCount >= 1
+          ? t("feedbackAlmostEcho")
+          : t("feedbackAlmost")
+        : status === "lost"
+          ? t("feedbackLost")
+          : t("feedbackFix");
+    stage = <TicketFold front={feedbackSection} char={kanji.char} status={status} body={ticketBody} now={now} />;
     action = (
       <div className="space-y-3">
         {showSavePrompt ? (

@@ -29,6 +29,7 @@ import { Route as DemoParentRouteImport } from './routes/demo/parent'
 import { Route as DemoStampsRouteImport } from './routes/demo/stamps'
 import { Route as DemoWorkshopRouteImport } from './routes/demo/workshop'
 import { Route as DevPracticeCardStatesRouteImport } from './routes/dev/practice-card-states'
+import { Route as DevTicketFoldRouteImport } from './routes/dev/ticket-fold'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as AppKanjiCharRouteImport } from './routes/app/kanji.$char'
 import { Route as DemoKanjiCharRouteImport } from './routes/demo/kanji.$char'
@@ -133,6 +134,11 @@ const DevPracticeCardStatesRoute = DevPracticeCardStatesRouteImport.update({
   path: '/dev/practice-card-states',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DevTicketFoldRoute = DevTicketFoldRouteImport.update({
+  id: '/dev/ticket-fold',
+  path: '/dev/ticket-fold',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -168,6 +174,7 @@ export interface FileRoutesByFullPath {
   '/demo/stamps': typeof DemoStampsRoute
   '/demo/workshop': typeof DemoWorkshopRoute
   '/dev/practice-card-states': typeof DevPracticeCardStatesRoute
+  '/dev/ticket-fold': typeof DevTicketFoldRoute
   '/app/': typeof AppIndexRoute
   '/demo/': typeof DemoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -192,6 +199,7 @@ export interface FileRoutesByTo {
   '/demo/stamps': typeof DemoStampsRoute
   '/demo/workshop': typeof DemoWorkshopRoute
   '/dev/practice-card-states': typeof DevPracticeCardStatesRoute
+  '/dev/ticket-fold': typeof DevTicketFoldRoute
   '/app': typeof AppIndexRoute
   '/demo': typeof DemoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -218,6 +226,7 @@ export interface FileRoutesById {
   '/demo/stamps': typeof DemoStampsRoute
   '/demo/workshop': typeof DemoWorkshopRoute
   '/dev/practice-card-states': typeof DevPracticeCardStatesRoute
+  '/dev/ticket-fold': typeof DevTicketFoldRoute
   '/app/': typeof AppIndexRoute
   '/demo/': typeof DemoIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -245,6 +254,7 @@ export interface FileRouteTypes {
     | '/demo/stamps'
     | '/demo/workshop'
     | '/dev/practice-card-states'
+    | '/dev/ticket-fold'
     | '/app/'
     | '/demo/'
     | '/api/auth/$'
@@ -269,6 +279,7 @@ export interface FileRouteTypes {
     | '/demo/stamps'
     | '/demo/workshop'
     | '/dev/practice-card-states'
+    | '/dev/ticket-fold'
     | '/app'
     | '/demo'
     | '/api/auth/$'
@@ -294,6 +305,7 @@ export interface FileRouteTypes {
     | '/demo/stamps'
     | '/demo/workshop'
     | '/dev/practice-card-states'
+    | '/dev/ticket-fold'
     | '/app/'
     | '/demo/'
     | '/api/auth/$'
@@ -314,6 +326,7 @@ export interface RootRouteChildren {
   DemoStampsRoute: typeof DemoStampsRoute
   DemoWorkshopRoute: typeof DemoWorkshopRoute
   DevPracticeCardStatesRoute: typeof DevPracticeCardStatesRoute
+  DevTicketFoldRoute: typeof DevTicketFoldRoute
   DemoIndexRoute: typeof DemoIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   DemoKanjiCharRoute: typeof DemoKanjiCharRoute
@@ -461,6 +474,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DevPracticeCardStatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dev/ticket-fold': {
+      id: '/dev/ticket-fold'
+      path: '/dev/ticket-fold'
+      fullPath: '/dev/ticket-fold'
+      preLoaderRoute: typeof DevTicketFoldRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -524,6 +544,7 @@ const rootRouteChildren: RootRouteChildren = {
   DemoStampsRoute: DemoStampsRoute,
   DemoWorkshopRoute: DemoWorkshopRoute,
   DevPracticeCardStatesRoute: DevPracticeCardStatesRoute,
+  DevTicketFoldRoute: DevTicketFoldRoute,
   DemoIndexRoute: DemoIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   DemoKanjiCharRoute: DemoKanjiCharRoute,

@@ -28,6 +28,20 @@ const CARD: Record<
 const DASHED_BORDER = "new" satisfies MasteryStatus; // the product-wide "not yet real" border (§1)
 const VERMILION = "#B4432F";
 
+/**
+ * The fill/border/ink subset of the table above, exported so anything that
+ * needs the state colour without the rest of the card (the 到着 ticket
+ * transformation, ticket-fold.tsx) inherits it exactly rather than
+ * re-declaring the same five hex triples a second place they could drift.
+ */
+export const CARD_TONE: Record<MasteryStatus, { fill: string; border: string; ink: string }> =
+  Object.fromEntries(
+    (Object.keys(CARD) as MasteryStatus[]).map((status) => {
+      const { fill, border, ink } = CARD[status];
+      return [status, { fill, border, ink }];
+    }),
+  ) as Record<MasteryStatus, { fill: string; border: string; ink: string }>;
+
 // Plain monochrome SVGs, not emoji: an emoji glyph is pre-coloured by the
 // font and ignores `color`, so "icon in #FFF9F0" (lit) / "#B9B2A0" (hollow)
 // from §2 has no effect on one — currentColor is the only way both lamp

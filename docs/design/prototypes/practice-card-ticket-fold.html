@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>Practice card → ticket fold, at 到着</title>
+<style>
+  body { font-family: "Hiragino Sans", sans-serif; background: #f4efe4; color: #2c2a24; padding: 2rem; }
+  h1 { font-size: 1.05rem; margin: 0 0 1rem; }
+  .controls { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  button { padding: .5rem 1rem; border-radius: 8px; border: 1px solid #c4b8a4; background: #fffbf3; cursor: pointer; }
+  button.active { background: #b4432f; color: #fff; border-color: #b4432f; }
+  .stage { perspective: 1400px; width: 320px; margin-bottom: 1rem; }
+  .flipper {
+    position: relative; width: 100%; height: 340px; transform-style: preserve-3d;
+    transition: transform 900ms cubic-bezier(.65,0,.35,1), height 900ms cubic-bezier(.65,0,.35,1);
+  }
+  .flipper.folded { transform: rotateX(180deg); height: 200px; }
+  .face {
+    position: absolute; inset: 0; backface-visibility: hidden; border-radius: 16px; box-sizing: border-box;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: 1rem;
+  }
+  .face.ticket {
+    transform: rotateX(180deg); justify-content: flex-start; text-align: center; overflow: hidden; gap: .4rem;
+    --notch: 9px;
+    mask-image: radial-gradient(circle var(--notch) at 0 50%, transparent 99%, black 100%),
+                radial-gradient(circle var(--notch) at 100% 50%, transparent 99%, black 100%);
+    mask-composite: intersect;
+  }
+  .kanji { font-size: 64px; line-height: 1; }
+  .kanji.small { font-size: 34px; margin-top: .35rem; flex: none; }
+  .lamps { display: flex; gap: .5rem; }
+  .lamp { width: 16px; height: 16px; border-radius: 50%; }
+  .body-text {
+    font-size: 13px; line-height: 1.4; height: 2.8em; flex: none; padding: 0 1rem; overflow: hidden;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+  .footer {
+    margin-top: auto; width: 100%; flex: none; display: flex; justify-content: space-between; align-items: center;
+    padding: 0 1rem; font-family: monospace; font-size: 10px; white-space: nowrap; height: 28px; box-sizing: border-box;
+  }
+  .footer .qr { width: 22px; height: 22px; image-rendering: pixelated; flex: none; }
+  figcaption { font-size: 12px; color: #5c574e; max-width: 320px; margin-top: .5rem; }
+  figcaption.warn { color: #b4432f; }
+</style>
+</head>
+<body>
+<h1>Practice card → ticket, at 到着 — every state reachable below</h1>
+<div class="controls" id="controls"></div>
+<figure class="stage"><div class="flipper" id="flipper"></div></figure>
+<figcaption id="caption"></figcaption>
+<script>
+const CHAR = "森";
+const RIDES = [
+  { status: "almost", fill: "#E6F0DC", border: "#9AAE85", ink: "#16301F",
+    body: "だいたい できました。よみ・いみ・かたち、ぜんぶ ひかりました。",
+    note: "だいたい — pale green, the common case." },
+  { status: "fix", fill: "#FBF2E2", border: "#D9A441", ink: "#2C2A24",
+    body: "かたちだけ もういちど なおしました。よみと いみは、そのままです。",
+    note: "なおし — amber, lit lamps kept, exactly as the card shows them." },
+  { status: "lost", fill: "#F0EDE6", border: "#A79F8D", ink: "#2C2A24",
+    body: "もういちど、はじめから みてみよう。だいじょうぶ、あわてなくて いいよ。",
+    note: "まよい — warm grey, gentlest of the set, never a penalty screen." },
+  { status: "perfect (session edge case)", fill: "#E6F0DC", border: "#9AAE85", ink: "#16301F",
+    body: "だいたい できました。かんぺきは、まだ さきです。",
+    note: "Engine reported perfect mid-session (should be structurally impossible, MR-7.3/I7) — " +
+          "the ticket still clamps to だいたい's pale green. This is the invariant this prototype exists to check." },
+];
+function serialFor(status) {
+  let hash = 0;
+  for (const c of `${CHAR}:${status}`) hash = (hash * 31 + c.charCodeAt(0)) >>> 0;
+  return `No.${String(hash % 100000).padStart(5, "0")}`;
+}
+// Placeholder only — a deterministic-looking black/white grid, NOT a real
+// scannable QR code. Real generation (library choice, resume-URL payload)
+// is a decision for the PR, not this prototype; this exists only to prove
+// the footer still fits nowrap serial + date beside it.
+function qrPlaceholder(status) {
+  let seed = 0;
+  for (const c of `${CHAR}:${status}`) seed = (seed * 33 + c.charCodeAt(0)) >>> 0;
+  const n = 9, cell = 3, canvas = document.createElement("canvas");
+  canvas.width = canvas.height = n * cell;
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, n * cell, n * cell); ctx.fillStyle = "#2c2a24";
+  for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) {
+    seed = (seed * 1103515245 + 12345) >>> 0;
+    if (seed % 2 === 0) ctx.fillRect(x * cell, y * cell, cell, cell);
+  }
+  return canvas.toDataURL();
+}
+const issueDate = new Date().toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" });
+const flipper = document.getElementById("flipper");
+const controls = document.getElementById("controls");
+const caption = document.getElementById("caption");
+function render(ride) {
+  flipper.classList.remove("folded");
+  flipper.innerHTML = `
+    <div class="face card" style="background:${ride.fill};border:2px solid ${ride.border};color:${ride.ink}">
+      <div class="kanji">${CHAR}</div>
+      <div class="lamps">${[0, 1, 2].map(() => `<div class="lamp" style="background:${ride.border}"></div>`).join("")}</div>
+    </div>
+    <div class="face ticket" style="background:${ride.fill};border:2px solid ${ride.border};color:${ride.ink}">
+      <div class="kanji small">${CHAR}</div>
+      <p class="body-text">${ride.body}</p>
+      <div class="footer">
+        <span>${serialFor(ride.status)}</span>
+        <img class="qr" src="${qrPlaceholder(ride.status)}" alt="" />
+        <span>${issueDate}</span>
+      </div>
+    </div>`;
+  caption.textContent = ride.note;
+  caption.classList.toggle("warn", ride.status.includes("edge case"));
+  requestAnimationFrame(() => requestAnimationFrame(() => flipper.classList.add("folded")));
+}
+RIDES.forEach((ride, i) => {
+  const b = document.createElement("button");
+  b.textContent = ride.status;
+  b.onclick = () => {
+    [...controls.children].forEach((c) => c.classList.remove("active"));
+    b.classList.add("active");
+    render(ride);
+  };
+  controls.appendChild(b);
+  if (i === 0) b.classList.add("active");
+});
+render(RIDES[0]);
+</script>
+</body>
+</html>
