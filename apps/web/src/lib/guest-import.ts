@@ -1,15 +1,23 @@
 import type { CharacterProgress, EchoAttempt, Status } from "@kanji-densha/engine";
 import type { ProgressState } from "@/lib/progress-eval";
 
-// Guest -> account migration. Not specified in any design doc as written —
-// build-plan.md's M7 entry defers defining "the guest->account merge rule"
-// until echo timestamps exist, and this file is that definition, arrived at
-// directly from the architect's brief (per-character: take the higher
-// status; on a tie, keep the earlier almostAt so an echo clock already
-// ticking is never reset). If a future doc states this rule differently,
-// that doc wins — this comment is not a citation, it's a record of where
-// the rule actually came from.
-
+// Guest -> account migration — the rule build-plan.md's M7 entry deferred
+// defining until echo timestamps existed. Now recorded as D27
+// (docs/decisions.md): per character, take the higher status; on a tie,
+// keep the earlier almostAt so an echo clock already ticking is never reset.
+//
+// Callers must pass only characters from demo-progress.ts's
+// readMigratableProgress() (or equivalently, ids in its touched-character
+// set), never the full readAll() blob. That guard is not defensive
+// boilerplate: readAll() also contains the seeded demo fixture (一 already
+// かんぺき, 右/雨 だいたい, 円 なおし, …) that every guest has on first
+// load, never having touched any of it. This exact seed has already caused
+// two separate bugs in one launch week — first a guest funnelled into 一 by
+// the entrance page's own door destination found it pre-completed instead
+// of starting fresh, then this file's first draft would have imported that
+// same fabricated かんぺき into a brand-new real account. If you are looking
+// at the touched-set plumbing and it looks like unnecessary indirection,
+// it is the fix for both.
 const GUEST_IMPORT_SESSION = "guest-import";
 
 function hoursFromIso(iso: string | null): number | null {
