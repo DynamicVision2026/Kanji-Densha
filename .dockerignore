@@ -1,0 +1,9 @@
+.git
+**/node_modules
+**/dist
+**/.output
+**/coverage
+**/test-results
+**/playwright-report
+**/*.tsbuildinfo
+.DS_Store

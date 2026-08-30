@@ -142,13 +142,15 @@ function authPopupPlugin(): Plugin {
   };
 }
 
-// `0.0.0.0:8080` is the live-preview contract — don't change host/port.
-// The dev server starts once `src/router.tsx` and `src/routes/` exist — see
-// AGENTS.md § "First scaffold".
+// `0.0.0.0:$PORT` (default 8080) is the live-preview contract — don't hardcode
+// a different host, and always read the port from `PORT` so platforms like
+// Cloud Run (which inject a dynamic PORT) can bind correctly.
+const devPort = Number(process.env.PORT) || 8080;
+
 export default defineConfig(({ command, isPreview }) => ({
   server: {
     host: "0.0.0.0",
-    port: 8080,
+    port: devPort,
     strictPort: true,
   },
   preview: {
@@ -170,7 +172,13 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "vercel",
+            // "node-server" builds a standalone Node HTTP server (.output/server/index.mjs)
+            // that reads HOST/PORT from the environment — required for Cloud Run,
+            // which injects a dynamic PORT and requires binding 0.0.0.0. The
+            // previous "vercel" preset only produces Vercel serverless functions
+            // and never starts a listening server, which is why Cloud Run's
+            // health check timed out waiting for something to bind $PORT.
+            preset: "node-server",
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
