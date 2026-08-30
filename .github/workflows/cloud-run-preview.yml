@@ -5,7 +5,7 @@ name: Cloud Run Preview Deploy
 # tagged "welcome-polish" so it never affects live traffic.
 #
 # Requires a repository secret named GCP_SA_KEY containing a GCP service
-# account JSON key with these roles on the dynamic-densha project:
+# account JSON key with these roles on the kanji-densha-jp project:
 #   - Cloud Run Admin
 #   - Artifact Registry Administrator
 #   - Cloud Build Editor
@@ -23,7 +23,7 @@ on:
         default: "dynamic-densha-web"
 
 env:
-  PROJECT_ID: dynamic-densha
+  PROJECT_ID: kanji-densha-jp
   REGION: asia-northeast1
   TAG: welcome-polish
 
