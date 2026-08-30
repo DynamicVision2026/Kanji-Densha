@@ -25,11 +25,38 @@ test("SessionStub renders a fixed だいたい status, never derived from any ch
   assert.equal(/\.status\b/.test(src), false);
 });
 
-test("session ticket is offered before the save prompt, per return-ticket.md", () => {
+// child-home-and-sessions.md §4 review ruling on #27: "Give the stub the
+// moment alone: after 到着, the stub appears with 「きっぷを もらう」, and the
+// save prompt follows after the child interacts with it or dismisses it —
+// not stacked simultaneously." Supersedes the earlier "offered before"
+// ordering check: rendering order alone can't prove they never overlap,
+// since both used to mount together on the same arrival.
+test("the ticket gets the arrival moment alone; the save prompt only arms after it", () => {
   const session = readFileSync("src/components/kanji-session.tsx", "utf8");
   const ticketIdx = session.indexOf("<SessionStub");
   const saveIdx = session.indexOf("<SavePromptBanner");
   assert.ok(ticketIdx >= 0 && saveIdx > ticketIdx);
+  // the first-almost-arrival effect must arm only the ticket...
+  const arrivalEffect = session.slice(
+    session.indexOf("if (hrefHome === \"/demo\" && progress.status === \"almost\""),
+    session.indexOf("function advanceFromTicket"),
+  );
+  assert.match(arrivalEffect, /setTicketVisible\(true\)/);
+  assert.equal(/setSavePromptVisible/.test(arrivalEffect), false);
+  // ...and advanceFromTicket — the only path to the save prompt — must
+  // also retire the ticket in the same update, so they never coexist.
+  const advanceFn = session.slice(
+    session.indexOf("function advanceFromTicket"),
+    session.indexOf("const showSavePrompt"),
+  );
+  assert.match(advanceFn, /setTicketVisible\(false\)/);
+  assert.match(advanceFn, /setSavePromptVisible\(true\)/);
+});
+
+test("both the ticket's save and its あとで lead to advanceFromTicket", () => {
+  const session = readFileSync("src/components/kanji-session.tsx", "utf8");
+  assert.match(session, /onSaved=\{advanceFromTicket\}/);
+  assert.match(session, /onDecline=\{advanceFromTicket\}/);
 });
 
 test("declining the ticket costs nothing — its own dismiss, independent of the save prompt", () => {

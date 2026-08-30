@@ -42,10 +42,12 @@ function formatDate(iso: string): string {
 export function SessionStub({
   rides,
   returnDate,
+  onSaved,
   onDecline,
 }: {
   rides: SessionRide[];
   returnDate: string | null;
+  onSaved: () => void;
   onDecline: () => void;
 }) {
   const { t } = useI18n();
@@ -86,6 +88,7 @@ export function SessionStub({
     a.href = url;
     a.download = `densha-ticket-${chars.join("")}.png`;
     a.click();
+    onSaved();
   }
 
   if (!chars.length) return null;

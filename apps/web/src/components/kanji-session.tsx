@@ -168,14 +168,17 @@ export function KanjiSession({
   // placed right after it — independently dismissible, so declining one
   // doesn't hide the other.
   const [installPromptVisible, setInstallPromptVisible] = useState(false);
-  // return-ticket.md — "offer the ticket first, the save prompt second,"
-  // both at the same first-だいたい-arrival moment the save prompt already
-  // uses. The ride LOG itself (recordSessionRide) is unconditional — every
-  // almost/perfect arrival is remembered for the session regardless of
-  // whether the offer is shown this particular time — but the offer to
-  // view/save the ticket follows the save prompt's own guest-only,
-  // once-per-session gate, since return-ticket.md pairs them as one
-  // sequence on one screen.
+  // child-home-and-sessions.md §4 review ruling: "Give the stub the moment
+  // alone: after 到着, the stub appears with 「きっぷを もらう」, and the save
+  // prompt follows after the child interacts with it or dismisses it — not
+  // stacked simultaneously." The ride LOG itself (recordSessionRide) is
+  // unconditional — every almost/perfect arrival is remembered for the
+  // session regardless of whether the offer is shown this particular time
+  // — but the ticket and save prompt no longer share a render: the ticket
+  // gets the first-だいたい-arrival moment alone, and advanceFromTicket
+  // (fired by either the ticket's save or its あとで) is the only thing
+  // that arms the save prompt. The install prompt is unaffected by this
+  // ruling and still arms on the same arrival as the ticket.
   const [ticketVisible, setTicketVisible] = useState(false);
   useEffect(() => {
     if (progress.status === "almost" || progress.status === "perfect") {
@@ -186,11 +189,14 @@ export function KanjiSession({
   useEffect(() => {
     if (hrefHome === "/demo" && progress.status === "almost" && !sawSavePromptThisSession()) {
       markSavePromptShown();
-      setSavePromptVisible(true);
       setInstallPromptVisible(true);
       setTicketVisible(true);
     }
   }, [progress.status, hrefHome]);
+  function advanceFromTicket() {
+    setTicketVisible(false);
+    setSavePromptVisible(true);
+  }
   const showSavePrompt = savePromptVisible && hrefHome === "/demo" && progress.status === "almost";
   const showInstallPrompt =
     installPromptVisible && hrefHome === "/demo" && progress.status === "almost";
@@ -761,7 +767,8 @@ export function KanjiSession({
           <SessionStub
             rides={readSessionRides()}
             returnDate={earliestEchoDueAt(readSessionRides())}
-            onDecline={() => setTicketVisible(false)}
+            onSaved={advanceFromTicket}
+            onDecline={advanceFromTicket}
           />
         ) : null}
         {showSavePrompt ? (
