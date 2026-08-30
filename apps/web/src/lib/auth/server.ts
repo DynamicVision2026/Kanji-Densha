@@ -203,7 +203,21 @@ export const auth = betterAuth({
   // (incl. the client's `/get-session`) skip the DB — this shrinks the "loading"
   // window and reduces auth flicker. See the `auth` skill for the full
   // flicker-prevention guidance (gate on `isPending`; SSR the session).
-  session: { cookieCache: { enabled: true, maxAge: 300 } },
+  //
+  // D28 (docs/decisions.md): Better Auth's own default `expiresIn` is 7
+  // days — exactly the second echo's 168h interval. A family that
+  // registers, rides once, and (as the product's own return-ticket design
+  // intends) does not open the app again until day eight would find the
+  // session cookie already expired by the time they come back for the
+  // moment the product exists to deliver, independent of any browser's
+  // storage-eviction behaviour — the cookie's own Max-Age does it alone.
+  // `updateAge: 1d` gives a rolling refresh, so any normal, more-frequent
+  // usage keeps extending the session; `expiresIn: 90d` is the idle
+  // ceiling for a household that goes genuinely quiet across a school
+  // term. This does not touch the auth method — still the same
+  // server-set HttpOnly cookie, just a longer lifetime with a sliding
+  // refresh window.
+  session: { expiresIn: 60 * 60 * 24 * 90, updateAge: 60 * 60 * 24, cookieCache: { enabled: true, maxAge: 300 } },
 
   // Local email/password — toggled only via `./email-password` (not a plugin).
   ...(emailAndPasswordEnabled ? { emailAndPassword: { enabled: true } } : {}),
