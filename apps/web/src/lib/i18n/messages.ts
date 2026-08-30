@@ -59,6 +59,9 @@ const ja = {
   statusAlmost: "だいたい",
   statusPerfect: "かんぺき",
   gradeLabel: "{n}年生",
+  // child-home-and-sessions.md §4 — the station board, shown only when a
+  // household has more than one child profile.
+  stationBoardTitle: "だれが のる？",
   onboardKicker: "はじめての列車",
   onboardTitle: "お子さまを登録",
   onboardLead: "学年に合わせた配当漢字の時刻表が開きます。あとから追加できます。",
@@ -419,6 +422,7 @@ const en: Record<MessageKey, string> = {
   statusAlmost: "Almost",
   statusPerfect: "Perfect",
   gradeLabel: "Grade {n}",
+  stationBoardTitle: "Who's riding?",
   onboardKicker: "First train",
   onboardTitle: "Add a child",
   onboardLead: "A timetable opens for their school year. You can add more later.",
@@ -775,6 +779,7 @@ const zhHans: Record<MessageKey, string> = {
   statusAlmost: "大致",
   statusPerfect: "完美",
   gradeLabel: "{n}年级",
+  stationBoardTitle: "谁来坐车？",
   onboardKicker: "第一列列车",
   onboardTitle: "登记孩子",
   onboardLead: "会打开对应该学年的汉字时刻表。以后还可以再加。",
@@ -1130,6 +1135,7 @@ const zhHant: Record<MessageKey, string> = {
   statusAlmost: "大致",
   statusPerfect: "完美",
   gradeLabel: "{n}年級",
+  stationBoardTitle: "誰要搭車？",
   onboardKicker: "第一列列車",
   onboardTitle: "登記孩子",
   onboardLead: "會打開對應該學年的漢字時刻表。以後還可以再加。",
