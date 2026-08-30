@@ -1,11 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { AppShell } from "@/components/app-shell";
 import { ParentReportView } from "@/components/parent-report";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
+import { clearActiveChildId, readActiveChildId, writeActiveChildId } from "@/lib/active-child";
 import { resetActiveGradeToProfile } from "@/lib/active-grade";
 import {
   confirmGradeRollover,
@@ -31,6 +31,7 @@ export const Route = createFileRoute("/app/parent")({
 
 function ParentPage() {
   const { t } = useI18n();
+  const navigate = useNavigate();
   const search = Route.useSearch();
   const [childId, setChildId] = useState(search.child || readActiveChildId() || "");
   const childrenQ = useQuery({ queryKey: ["children"], queryFn: () => listChildren() });
@@ -91,8 +92,25 @@ function ParentPage() {
   return (
     <AppShell childName={data.child.name} grade={data.child.grade}>
       <main data-parent-doc className="mx-auto max-w-[900px] px-5 py-8">
-        <p className="text-xs tracking-[0.2em] text-fg-subtle">{t("parentPage")}</p>
-        <h1 className="mt-1 font-display text-3xl">{t("parentTitle")}</h1>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="text-xs tracking-[0.2em] text-fg-subtle">{t("parentPage")}</p>
+            <h1 className="mt-1 font-display text-3xl">{t("parentTitle")}</h1>
+          </div>
+          {childrenQ.data && childrenQ.data.length > 1 ? (
+            <button
+              type="button"
+              data-switch-child
+              className="mt-1 shrink-0 text-sm text-fg-subtle underline-offset-4 hover:underline"
+              onClick={() => {
+                clearActiveChildId();
+                void navigate({ to: "/app" });
+              }}
+            >
+              {t("switchChild")}
+            </button>
+          ) : null}
+        </div>
 
         <div className="mt-6 flex flex-wrap gap-2">
           {childrenQ.data?.map((c) => (

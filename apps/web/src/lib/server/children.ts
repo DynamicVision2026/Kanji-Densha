@@ -14,6 +14,11 @@ export type ChildRow = {
   grade: Grade;
   createdAt: string;
   startBand: StartBand;
+  /** child-home-and-sessions.md §4 — "nickname and their train" on the
+   * station board: a count, not the full visualization, since the board
+   * has no reason to fetch every profile's complete progress just to be
+   * looked at once before a tap. */
+  perfectCount: number;
 };
 
 export const listChildren = createServerFn({ method: "GET" })
@@ -26,11 +31,20 @@ export const listChildren = createServerFn({ method: "GET" })
       grade: number;
       created_at: string | Date;
       start_band: string | null;
+      perfect_count: number;
     }>`
-      select id, name, grade, created_at, start_band
-      from children
-      where user_id = ${context.userId}
-      order by created_at asc
+      select
+        c.id, c.name, c.grade, c.created_at, c.start_band,
+        coalesce(p.perfect_count, 0)::int as perfect_count
+      from children c
+      left join (
+        select child_id, count(*)::int as perfect_count
+        from kanji_progress
+        where perfect_at is not null
+        group by child_id
+      ) p on p.child_id = c.id
+      where c.user_id = ${context.userId}
+      order by c.created_at asc
     `;
     return rows.map((r) => ({
       id: r.id,
@@ -38,6 +52,7 @@ export const listChildren = createServerFn({ method: "GET" })
       grade: r.grade as Grade,
       createdAt: r.created_at instanceof Date ? r.created_at.toISOString() : String(r.created_at),
       startBand: parseStartBand(r.start_band) ?? "beginning",
+      perfectCount: r.perfect_count,
     })) satisfies ChildRow[];
   });
 
@@ -88,6 +103,7 @@ export const createChild = createServerFn({ method: "POST" })
       grade: data.grade,
       createdAt: nowIso,
       startBand: data.startBand,
+      perfectCount: 0,
     } satisfies ChildRow;
   });
 

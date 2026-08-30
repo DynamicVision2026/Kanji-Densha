@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { ChildHome } from "@/components/child-home";
 import { ChildShell } from "@/components/child-shell";
+import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
 import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
 import { resolveActiveGrade, usePersistActiveGrade } from "@/lib/active-grade";
@@ -21,6 +22,14 @@ function AppHome() {
   const navigate = useNavigate();
   const search = Route.useSearch();
   const [childId, setChildId] = useState<string | null>(null);
+  // child-home-and-sessions.md §4 review ruling: the board should show
+  // only on first open or when the parent explicitly switches — a
+  // single-profile household resolves `childId` here and never sees the
+  // board; a multi-profile one that already has a remembered child (see
+  // active-child.ts) resolves straight to it too. The board only appears
+  // when there is no remembered child, or after /app/parent's "switch
+  // child" affordance clears it.
+  const [confirmed, setConfirmed] = useState(false);
 
   const childrenQ = useQuery({
     queryKey: ["children"],
@@ -33,12 +42,19 @@ function AppHome() {
       void navigate({ to: "/onboard" });
       return;
     }
-    const stored = readActiveChildId();
-    const next =
-      (stored && childrenQ.data.some((c) => c.id === stored) && stored) ||
-      childrenQ.data[0]!.id;
-    setChildId(next);
-    writeActiveChildId(next);
+    if (childrenQ.data.length > 1) {
+      const remembered = readActiveChildId();
+      const stillValid = remembered && childrenQ.data.some((c) => c.id === remembered);
+      if (stillValid) {
+        setChildId(remembered);
+        setConfirmed(true);
+      }
+      return;
+    }
+    const only = childrenQ.data[0]!.id;
+    setChildId(only);
+    writeActiveChildId(only);
+    setConfirmed(true);
   }, [childrenQ.data, navigate]);
 
   const current = useMemo(
@@ -71,7 +87,32 @@ function AppHome() {
     queryFn: () => getMapState({ data: { childId: childId!, grade: viewGrade } }),
     enabled: Boolean(childId),
   });
-  if (childrenQ.isLoading || (childId && homeQ.isLoading) || !homeQ.data) {
+  if (childrenQ.isLoading) {
+    return (
+      <ChildShell>
+        <div className="mx-auto flex w-full max-w-[900px] flex-1 items-center px-4">
+          <Skeleton className="h-48 w-full rounded-xl" />
+        </div>
+      </ChildShell>
+    );
+  }
+
+  if (childrenQ.data && childrenQ.data.length > 1 && !confirmed) {
+    return (
+      <ChildShell>
+        <StationBoard
+          children={childrenQ.data}
+          onSelect={(id) => {
+            setChildId(id);
+            writeActiveChildId(id);
+            setConfirmed(true);
+          }}
+        />
+      </ChildShell>
+    );
+  }
+
+  if ((childId && homeQ.isLoading) || !homeQ.data) {
     return (
       <ChildShell>
         <div className="mx-auto flex w-full max-w-[900px] flex-1 items-center px-4">
