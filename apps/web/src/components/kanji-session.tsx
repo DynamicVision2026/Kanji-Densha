@@ -4,6 +4,7 @@ import { useAutoDemo } from "@/components/auto-demo";
 import { ChildShell } from "@/components/child-shell";
 import { EchoTeachStrip } from "@/components/echo-teach-strip";
 import { EncounterCard } from "@/components/encounter-card";
+import { HomeScreenPrompt } from "@/components/home-screen-prompt";
 import { MasteryLights } from "@/components/mastery-lights";
 import { PuzzleFrame } from "@/components/puzzle-frame";
 import { QuizPanel } from "@/components/quiz-panel";
@@ -158,13 +159,23 @@ export function KanjiSession({
   );
   // entrance-page.md §6: first だいたい arrival, guest only, once per session.
   const [savePromptVisible, setSavePromptVisible] = useState(false);
+  // child-home-and-sessions.md §5 — 「じぶんの えきを つくる」, load-bearing
+  // because guest localStorage stays ITP-subject regardless of whether the
+  // save prompt is accepted or declined. Same trigger as the save prompt
+  // (first だいたい arrival, guest only, once per session) since it's
+  // placed right after it — independently dismissible, so declining one
+  // doesn't hide the other.
+  const [installPromptVisible, setInstallPromptVisible] = useState(false);
   useEffect(() => {
     if (hrefHome === "/demo" && progress.status === "almost" && !sawSavePromptThisSession()) {
       markSavePromptShown();
       setSavePromptVisible(true);
+      setInstallPromptVisible(true);
     }
   }, [progress.status, hrefHome]);
   const showSavePrompt = savePromptVisible && hrefHome === "/demo" && progress.status === "almost";
+  const showInstallPrompt =
+    installPromptVisible && hrefHome === "/demo" && progress.status === "almost";
   const echoArmed = useRef(false);
   const itemsArmed = useRef(false);
   const answering = useRef(false);
@@ -729,6 +740,9 @@ export function KanjiSession({
       <div className="space-y-3">
         {showSavePrompt ? (
           <SavePromptBanner onDecline={() => setSavePromptVisible(false)} />
+        ) : null}
+        {showInstallPrompt ? (
+          <HomeScreenPrompt onDismiss={() => setInstallPromptVisible(false)} />
         ) : null}
         {status !== "perfect" && status !== "almost" ? (
           <Button
