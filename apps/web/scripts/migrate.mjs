@@ -2,15 +2,22 @@
 /**
  * Deploy-time database migrator (node-postgres, `pg`).
  *
- * Runs during `npm run build` — on every Vercel deploy — applying pending files
- * in ../migrations to DATABASE_URL. Each file is applied in one transaction and
- * recorded in a `_migrations` table, so it runs once and is safe to re-run.
+ * Deliberately NOT wired into `npm run build` (see `package.json` — `build`
+ * is `vite build` only). A build step that mutates a database means any
+ * build — preview, CI, or a Cloud Build image build with no DB access at
+ * all — can migrate production, and a failed migration fails the build
+ * instead of the deploy. Run this explicitly as its own deploy step
+ * (`npm run db:migrate`) against DATABASE_URL, separate from `build`.
+ *
+ * Applies pending files in ../migrations to DATABASE_URL. Each file is
+ * applied in one transaction and recorded in a `_migrations` table, so it
+ * runs once and is safe to re-run.
  *
  * The read is non-recursive, so the opt-in auth schema under migrations/auth/
  * is not applied to an app that never asked for sign-in.
  *
- * No DATABASE_URL (local / preview builds) -> skip; the PGLite fallback applies
- * the same files at startup instead (see src/lib/db.ts).
+ * No DATABASE_URL (local dev) -> skip; the PGLite fallback applies the same
+ * files at startup instead (see src/lib/db.ts).
  */
 import { readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
