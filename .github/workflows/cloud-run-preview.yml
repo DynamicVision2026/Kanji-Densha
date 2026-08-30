@@ -15,6 +15,10 @@ name: Cloud Run Preview Deploy
 #       - Cloud Build Editor
 #       - Service Account User
 #       - Storage Admin
+#       - Service Usage Admin (roles/serviceusage.serviceUsageAdmin — without
+#         this, "Enable required APIs" below fails with AUTH_PERMISSION_DENIED;
+#         the other five roles let you *use* an already-enabled API, not turn
+#         one on)
 #   - DATABASE_URL: the Neon connection string for the target database.
 #     Migrated here (see "Run database migrations" below) and passed to the
 #     deployed revision via --set-env-vars, so the container reads the same
