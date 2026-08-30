@@ -19,6 +19,13 @@ export type OverviewIntent = {
   focusChar?: string;
   glow?: string[];
   gradeComplete?: boolean;
+  /** child-home-and-sessions.md §1 amendment: the map has no tap-trigger
+   * of its own on the child home (the ticket is the only control), but a
+   * child who has just arrived somewhere — coupling a car onto the train
+   * — is exactly who wants to see where they are. Set from the couple-beat
+   * screen's "see the route" link, alongside the existing `open` (see the
+   * train) intent. */
+  map?: boolean;
 };
 
 const INTENT_KEY = "densha.overview.intent.v1";
@@ -142,6 +149,12 @@ export function clearOverviewGlow() {
   const prev = readOverviewIntent();
   if (!prev) return;
   writeOverviewIntent({ ...prev, glow: [] });
+}
+
+export function clearMapIntent() {
+  const prev = readOverviewIntent();
+  if (!prev) return;
+  writeOverviewIntent({ ...prev, map: false });
 }
 
 export function pushCouplePending(char: string) {

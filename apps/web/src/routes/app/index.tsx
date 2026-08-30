@@ -8,7 +8,7 @@ import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
 import { resolveActiveGrade, usePersistActiveGrade } from "@/lib/active-grade";
 import { gradeSearchFrom } from "@/lib/grade-nav";
 import { listChildren } from "@/lib/server/children";
-import { getHomeState } from "@/lib/server/progress";
+import { getHomeState, getMapState } from "@/lib/server/progress";
 import type { Grade } from "@/data/kyoiku";
 
 export const Route = createFileRoute("/app/")({
@@ -62,6 +62,14 @@ function AppHome() {
     queryFn: () => getHomeState({ data: { childId: childId!, grade: viewGrade } }),
     enabled: Boolean(childId),
   });
+  // Only feeds MapOverlay, which now opens from 到着 (the couple-beat's
+  // "see the route" link) rather than a home-screen tap — not urgent
+  // enough to block the home's own loading skeleton on.
+  const mapQ = useQuery({
+    queryKey: ["map", childId, viewGrade],
+    queryFn: () => getMapState({ data: { childId: childId!, grade: viewGrade } }),
+    enabled: Boolean(childId),
+  });
   if (childrenQ.isLoading || (childId && homeQ.isLoading) || !homeQ.data) {
     return (
       <ChildShell>
@@ -86,6 +94,7 @@ function AppHome() {
       cars={cars}
       board={home.board}
       echoQueue={home.echoQueue}
+      lines={mapQ.data?.lines ?? []}
       rings={home.rings ?? []}
     />
   );

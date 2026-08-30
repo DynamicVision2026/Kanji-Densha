@@ -124,12 +124,16 @@ test("ticket stays a centred card in landscape, not a side rail", () => {
 
 test("map is overlay state, not a child tab; old map routes replace to home", () => {
   const overlay = readFileSync("src/components/map-overlay.tsx", "utf8");
+  const home = readFileSync("src/components/child-home.tsx", "utf8");
   const demoMap = readFileSync("src/routes/demo/map.tsx", "utf8");
   const appMap = readFileSync("src/routes/app/map.tsx", "utf8");
-  // child-home-and-sessions.md §1 / work-order-child-home.md Task 1: the
-  // ticket is the child home's only control, so child-home.tsx no longer
-  // mounts a manual map trigger — MapOverlay itself, and the legacy-URL
-  // redirects below, are unchanged and still correct in isolation.
+  // child-home-and-sessions.md §1 amendment: the ticket is still the child
+  // home's only DIRECT tap target, but losing the map entirely would make
+  // the child's route, editorial lines, and 未開通 stations unreachable —
+  // so it opens from 到着 instead (WelcomeOverview's own onOpenMap button,
+  // and the couple-beat's data-see-map link in kanji-session.tsx), not
+  // from a second control on the home itself.
+  assert.match(home, /MapOverlay/);
   assert.match(overlay, /data-map-overlay/);
   assert.match(overlay, /fixed inset-0/);
   assert.match(overlay, /aria-modal/);

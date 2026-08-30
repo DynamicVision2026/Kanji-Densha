@@ -3,12 +3,15 @@ import { useEffect, useMemo, useState } from "react";
 import { useAutoDemo } from "@/components/auto-demo";
 import { ChildShell } from "@/components/child-shell";
 import { DepartureTicket } from "@/components/departure-ticket";
+import { MapOverlay } from "@/components/map-overlay";
 import { ParentDoor } from "@/components/parent-door";
 import { TrainLine } from "@/components/train-line";
 import { WelcomeOverview } from "@/components/welcome-overview";
+import type { MapLineView } from "@/components/route-map";
 import type { DepartureBoard } from "@/lib/departure-board";
 import { boardStageCards, pickDeparture, type StripCar } from "@/lib/pick-departure";
 import {
+  clearMapIntent,
   clearOverviewGlow,
   clearOverviewOpen,
   readOverviewIntent,
@@ -18,16 +21,19 @@ import { useI18n } from "@/lib/i18n/i18n";
 import type { Grade } from "@/data/kyoiku";
 
 // child-home-and-sessions.md §1 — "the child home has exactly one control:
-// the ticket." HubPlate and the map overlay were both tap-triggers with no
-// other purpose; neither is named in the design doc's element list (the
-// train, then the ticket), and removing their tap paths — required by
-// "nothing else tappable" — leaves them unreachable from here. Their
-// component files are untouched in case a parent-surface use turns up, but
-// this screen no longer mounts them. Flagged in the PR, not silently
-// dropped: there is currently no way for a child to open the map or the
-// full-train overview by their own tap, only via the post-couple
-// `writeOverviewIntent` path below, which is unaffected (it is driven by
-// navigation + an effect, not by a control on this screen).
+// the ticket." HubPlate was a tap-trigger with no other purpose; it isn't
+// named in the design doc's element list (the train, then the ticket), and
+// removing its tap path — required by "nothing else tappable" — leaves it
+// unreachable from here. Its component file is untouched in case a
+// parent-surface use turns up, but this screen no longer mounts it.
+//
+// The map is different: losing it entirely would make the child's route,
+// editorial lines, and 未開通 stations unreachable, which is most of the
+// built world. Rather than a second home-screen control (which would undo
+// the ticket-as-anchor), it opens from 到着 — alongside the overview that
+// already appears after coupling (see WelcomeOverview's onOpenMap). A
+// child who has just arrived somewhere is exactly who wants to see where
+// they are.
 export function ChildHome({
   hrefBase,
   childId,
@@ -36,6 +42,7 @@ export function ChildHome({
   cars,
   board,
   echoQueue,
+  lines,
   rings,
 }: {
   hrefBase: "/demo" | "/app";
@@ -45,12 +52,14 @@ export function ChildHome({
   cars: StripCar[];
   board: DepartureBoard | null | undefined;
   echoQueue: { kanji: string }[];
+  lines: MapLineView[];
   rings: GradeRingView[];
 }) {
   const { t } = useI18n();
   const tour = useAutoDemo();
   const navigate = useNavigate();
   const [overview, setOverview] = useState(false);
+  const [mapOpen, setMapOpen] = useState(false);
   const [focusGrade, setFocusGrade] = useState<Grade>(grade);
   const [focusChar, setFocusChar] = useState<string | undefined>();
   const [glow, setGlow] = useState<string[]>([]);
@@ -76,6 +85,10 @@ export function ChildHome({
       setOverview(true);
       if (intent.focusChar) setFocusChar(intent.focusChar);
       clearOverviewOpen();
+    }
+    if (intent.map) {
+      setMapOpen(true);
+      clearMapIntent();
     }
     if (intent.glow?.length) {
       setGlow(intent.glow);
@@ -121,6 +134,7 @@ export function ChildHome({
             setFocusGrade(g);
             setFocusChar(undefined);
           }}
+          onOpenMap={() => setMapOpen(true)}
         />
       ) : (
         <div className="flex min-h-0 flex-1 flex-col">
@@ -163,6 +177,15 @@ export function ChildHome({
           </section>
         </div>
       )}
+
+      <MapOverlay
+        open={mapOpen}
+        lines={lines}
+        hrefBase={hrefBase}
+        childId={childId}
+        grade={grade}
+        onClose={() => setMapOpen(false)}
+      />
     </ChildShell>
   );
 }
