@@ -5,7 +5,7 @@ import { ChildHome } from "@/components/child-home";
 import { ChildShell } from "@/components/child-shell";
 import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
-import { writeActiveChildId } from "@/lib/active-child";
+import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
 import { resolveActiveGrade, usePersistActiveGrade } from "@/lib/active-grade";
 import { gradeSearchFrom } from "@/lib/grade-nav";
 import { listChildren } from "@/lib/server/children";
@@ -22,13 +22,13 @@ function AppHome() {
   const navigate = useNavigate();
   const search = Route.useSearch();
   const [childId, setChildId] = useState<string | null>(null);
-  // child-home-and-sessions.md §4: "with more than one profile, a station
-  // board shows... single profile and already signed in skips straight to
-  // the home." A single-profile household resolves `childId` here and
-  // never sees the board; a multi-profile one stays unconfirmed until a
-  // tap on StationBoard sets it, every time this route loads — not just
-  // once per stored preference, since the point is letting whichever
-  // child is holding the device pick themselves.
+  // child-home-and-sessions.md §4 review ruling: the board should show
+  // only on first open or when the parent explicitly switches — a
+  // single-profile household resolves `childId` here and never sees the
+  // board; a multi-profile one that already has a remembered child (see
+  // active-child.ts) resolves straight to it too. The board only appears
+  // when there is no remembered child, or after /app/parent's "switch
+  // child" affordance clears it.
   const [confirmed, setConfirmed] = useState(false);
 
   const childrenQ = useQuery({
@@ -42,7 +42,15 @@ function AppHome() {
       void navigate({ to: "/onboard" });
       return;
     }
-    if (childrenQ.data.length > 1) return;
+    if (childrenQ.data.length > 1) {
+      const remembered = readActiveChildId();
+      const stillValid = remembered && childrenQ.data.some((c) => c.id === remembered);
+      if (stillValid) {
+        setChildId(remembered);
+        setConfirmed(true);
+      }
+      return;
+    }
     const only = childrenQ.data[0]!.id;
     setChildId(only);
     writeActiveChildId(only);
