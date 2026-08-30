@@ -23,9 +23,18 @@ COPY packages/engine/package.json packages/engine/package.json
 COPY packages/store/package.json packages/store/package.json
 RUN pnpm install --frozen-lockfile
 
-# --- build: compile the content pipeline, then the web app ---
+# --- build: compile the workspace engine, the content pipeline, then the web app ---
 FROM deps AS build
 COPY . .
+# apps/web depends on @kanji-densha/engine via its published dist/ (package.json
+# "main"/"exports" point at ./dist/index.js), and dist/ is gitignored — never
+# committed, only ever produced by running its own `tsc -b` build script. A
+# fresh checkout (exactly what `COPY . .` above just did) has no dist/ at all,
+# so the workspace import fails to resolve during `vite build` unless this
+# runs first. `pnpm content:build` builds its own project-reference graph
+# (content-build + content-schema) but never touches engine, since content
+# generation has no dependency on it.
+RUN pnpm --filter @kanji-densha/engine build
 RUN pnpm content:build
 RUN pnpm --filter @kanji-densha/web build
 
