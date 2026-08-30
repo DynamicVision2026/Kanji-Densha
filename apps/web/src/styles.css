@@ -103,6 +103,37 @@
   }
 }
 
+/* session-stub.tsx — return-ticket.md's punched session ticket. Same
+   dual-mask notch technique as practice-card.tsx's ticket resemblance
+   (docs/design/prototypes, a separate unmerged branch) — duplicated here
+   rather than shared since that work hasn't landed yet; dedupe once it
+   does. */
+.stub-notch {
+  --stub-notch-radius: 9px;
+  mask-image:
+    radial-gradient(circle var(--stub-notch-radius) at 0 50%, transparent 99%, black 100%),
+    radial-gradient(circle var(--stub-notch-radius) at 100% 50%, transparent 99%, black 100%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    radial-gradient(circle var(--stub-notch-radius) at 0 50%, transparent 99%, black 100%),
+    radial-gradient(circle var(--stub-notch-radius) at 100% 50%, transparent 99%, black 100%);
+  -webkit-mask-composite: source-in;
+}
+.stub-paper {
+  position: relative;
+}
+.stub-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
 .paper-wash {
   background-color: var(--color-bg);
   background-image:

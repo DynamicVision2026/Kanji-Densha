@@ -11,6 +11,7 @@ import { QuizPanel } from "@/components/quiz-panel";
 import { ReadingLine } from "@/components/speaker-button";
 import { RideShell } from "@/components/ride-shell";
 import { SavePromptBanner } from "@/components/save-prompt-banner";
+import { SessionStub } from "@/components/session-stub";
 import { CoupleBeat } from "@/components/couple-beat";
 import { TrainAnnounce } from "@/components/train-announce";
 import { Button } from "@/components/ui/button";
@@ -48,6 +49,7 @@ import {
 } from "@/lib/progress-eval";
 import { useDwell } from "@/lib/use-dwell";
 import { markSavePromptShown, sawSavePromptThisSession } from "@/lib/save-prompt";
+import { earliestEchoDueAt, readSessionRides, recordSessionRide } from "@/lib/session-stub";
 
 function openingBeat(input: {
   lookMode: boolean;
@@ -166,16 +168,39 @@ export function KanjiSession({
   // placed right after it — independently dismissible, so declining one
   // doesn't hide the other.
   const [installPromptVisible, setInstallPromptVisible] = useState(false);
+  // child-home-and-sessions.md §4 review ruling: "Give the stub the moment
+  // alone: after 到着, the stub appears with 「きっぷを もらう」, and the save
+  // prompt follows after the child interacts with it or dismisses it — not
+  // stacked simultaneously." The ride LOG itself (recordSessionRide) is
+  // unconditional — every almost/perfect arrival is remembered for the
+  // session regardless of whether the offer is shown this particular time
+  // — but the ticket and save prompt no longer share a render: the ticket
+  // gets the first-だいたい-arrival moment alone, and advanceFromTicket
+  // (fired by either the ticket's save or its あとで) is the only thing
+  // that arms the save prompt. The install prompt is unaffected by this
+  // ruling and still arms on the same arrival as the ticket.
+  const [ticketVisible, setTicketVisible] = useState(false);
+  useEffect(() => {
+    if (progress.status === "almost" || progress.status === "perfect") {
+      recordSessionRide({ char, echoDueAt: progress.echoDueAt });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- log once per (char, status) landing, not on every echoDueAt tick
+  }, [char, progress.status]);
   useEffect(() => {
     if (hrefHome === "/demo" && progress.status === "almost" && !sawSavePromptThisSession()) {
       markSavePromptShown();
-      setSavePromptVisible(true);
       setInstallPromptVisible(true);
+      setTicketVisible(true);
     }
   }, [progress.status, hrefHome]);
+  function advanceFromTicket() {
+    setTicketVisible(false);
+    setSavePromptVisible(true);
+  }
   const showSavePrompt = savePromptVisible && hrefHome === "/demo" && progress.status === "almost";
   const showInstallPrompt =
     installPromptVisible && hrefHome === "/demo" && progress.status === "almost";
+  const showTicket = ticketVisible && hrefHome === "/demo" && progress.status === "almost";
   const echoArmed = useRef(false);
   const itemsArmed = useRef(false);
   const answering = useRef(false);
@@ -738,6 +763,14 @@ export function KanjiSession({
     );
     action = (
       <div className="space-y-3">
+        {showTicket ? (
+          <SessionStub
+            rides={readSessionRides()}
+            returnDate={earliestEchoDueAt(readSessionRides())}
+            onSaved={advanceFromTicket}
+            onDecline={advanceFromTicket}
+          />
+        ) : null}
         {showSavePrompt ? (
           <SavePromptBanner onDecline={() => setSavePromptVisible(false)} />
         ) : null}
