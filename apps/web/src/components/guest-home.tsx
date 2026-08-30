@@ -1,5 +1,5 @@
 import { ChildHome } from "@/components/child-home";
-import { DEMO_CHILD, getDemoHome, getDemoMap } from "@/lib/demo-progress";
+import { DEMO_CHILD, getDemoHome } from "@/lib/demo-progress";
 import { resolveActiveGrade, usePersistActiveGrade } from "@/lib/active-grade";
 import type { Grade } from "@/data/kyoiku";
 
@@ -13,7 +13,6 @@ export function GuestHome({ urlGrade }: { urlGrade?: Grade }) {
   const viewGrade = resolveActiveGrade({ urlGrade, profileGrade: DEMO_CHILD.grade });
   usePersistActiveGrade(viewGrade);
   const home = getDemoHome(viewGrade);
-  const map = getDemoMap(viewGrade);
   const cars = home.trains.flatMap((t) =>
     t.cars.map((c) => ({ char: c.char, status: c.status, echoDue: c.echoDue })),
   );
@@ -26,7 +25,6 @@ export function GuestHome({ urlGrade }: { urlGrade?: Grade }) {
       cars={cars}
       board={home.board}
       echoQueue={home.echoQueue}
-      lines={map.lines}
       rings={home.rings}
     />
   );
