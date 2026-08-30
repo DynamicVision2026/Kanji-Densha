@@ -62,12 +62,14 @@ function AppHome() {
     queryFn: () => getHomeState({ data: { childId: childId!, grade: viewGrade } }),
     enabled: Boolean(childId),
   });
+  // Only feeds MapOverlay, which now opens from 到着 (the couple-beat's
+  // "see the route" link) rather than a home-screen tap — not urgent
+  // enough to block the home's own loading skeleton on.
   const mapQ = useQuery({
     queryKey: ["map", childId, viewGrade],
     queryFn: () => getMapState({ data: { childId: childId!, grade: viewGrade } }),
     enabled: Boolean(childId),
   });
-
   if (childrenQ.isLoading || (childId && homeQ.isLoading) || !homeQ.data) {
     return (
       <ChildShell>

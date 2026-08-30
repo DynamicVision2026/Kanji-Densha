@@ -681,6 +681,25 @@ export function KanjiSession({
           >
             {t("next")}
           </Link>
+          {/* child-home-and-sessions.md §1 amendment: the map has no
+              tap-trigger on the child home itself (the ticket is the only
+              control), so 到着 — specifically the moment a car couples — is
+              where it opens instead. A smaller, tertiary link: seeing the
+              train or moving on are the two real choices here, the map is
+              an optional detour either path can still reach via
+              WelcomeOverview's own map button once there. */}
+          <Link
+            to={hrefHome}
+            search={homeSearch}
+            data-see-map
+            onClick={() => {
+              takeCouplePending();
+              writeOverviewIntent({ map: true, glow: coupleChars });
+            }}
+            className="mx-auto flex h-11 items-center justify-center px-3 text-sm text-fg-subtle underline-offset-4 hover:underline"
+          >
+            {t("navMap")}
+          </Link>
         </div>
       );
     } else {

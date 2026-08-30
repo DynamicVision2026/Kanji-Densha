@@ -75,10 +75,13 @@ test("inspections on the stage are capped at 3", () => {
 
 test("child home chrome has no peer nav / login / workshop / demo tile", () => {
   const home = readFileSync("src/components/child-home.tsx", "utf8");
+  // work-order-child-home.md Task 1: the departure vocabulary now lives in
+  // the ticket component, not inline in child-home.tsx.
+  const ticket = readFileSync("src/components/departure-ticket.tsx", "utf8");
   const demo = readFileSync("src/routes/demo/index.tsx", "utf8");
   const app = readFileSync("src/routes/app/index.tsx", "utf8");
   const shell = readFileSync("src/components/app-shell.tsx", "utf8");
-  assert.match(home, /しゅっぱつ|depart/);
+  assert.match(ticket, /しゅっぱつ|depart/);
   assert.match(home, /ParentDoor/);
   assert.equal(/WorldNav/.test(home), false);
   assert.equal(/WatchDemoButton/.test(home + demo + app), false);
@@ -109,11 +112,14 @@ test("index launches child 発車標, not a marketing wall", () => {
   assert.equal(/ctaRide/.test(index), false);
 });
 
-test("home landscape keeps しゅっぱつ bottom-center, not a side rail", () => {
-  const home = readFileSync("src/components/child-home.tsx", "utf8");
-  assert.match(home, /landscape:w-\[40%\]/);
-  assert.match(home, /data-child-action/);
-  assert.equal(/side-rail|landscape:flex-row/.test(home), false);
+test("ticket stays a centred card in landscape, not a side rail", () => {
+  // child-home-and-sessions.md §1: the ticket replaced the old bottom CTA
+  // strip this test used to check for directly (work-order-child-home.md
+  // Task 1) — the invariant it protects (no full-bleed side rail in
+  // landscape) still applies to the ticket itself.
+  const ticket = readFileSync("src/components/departure-ticket.tsx", "utf8");
+  assert.match(ticket, /landscape:max-w/);
+  assert.equal(/side-rail|landscape:flex-row/.test(ticket), false);
 });
 
 test("map is overlay state, not a child tab; old map routes replace to home", () => {
@@ -121,6 +127,12 @@ test("map is overlay state, not a child tab; old map routes replace to home", ()
   const home = readFileSync("src/components/child-home.tsx", "utf8");
   const demoMap = readFileSync("src/routes/demo/map.tsx", "utf8");
   const appMap = readFileSync("src/routes/app/map.tsx", "utf8");
+  // child-home-and-sessions.md §1 amendment: the ticket is still the child
+  // home's only DIRECT tap target, but losing the map entirely would make
+  // the child's route, editorial lines, and 未開通 stations unreachable —
+  // so it opens from 到着 instead (WelcomeOverview's own onOpenMap button,
+  // and the couple-beat's data-see-map link in kanji-session.tsx), not
+  // from a second control on the home itself.
   assert.match(home, /MapOverlay/);
   assert.match(overlay, /data-map-overlay/);
   assert.match(overlay, /fixed inset-0/);
@@ -141,14 +153,18 @@ test("parent door holds 1.5s for pointer and exposes immediate a11y control", ()
   assert.match(door, /aria-hidden/);
 });
 
-test("empty board copy stays live as じゆうに のる", () => {
-  const home = readFileSync("src/components/child-home.tsx", "utf8");
-  assert.match(home, /emptyBoard/);
-  assert.match(home, /freeRide/);
-  assert.match(home, /echoArrival/);
-  assert.match(home, /data-empty-board/);
-  assert.match(home, /data-free-ride/);
-  assert.equal(/disabled/.test(home), false);
+test("empty ticket offers 休 rest day, never an invented free ride", () => {
+  // child-home-and-sessions.md §1: "Never a blank card, and never an
+  // invented task." This supersedes the ticket's own empty state — the old
+  // じゆうに のる fallback still exists in pick-departure.ts's contract for
+  // other callers (`out.empty` stays true so nothing upstream broke), but
+  // the ticket itself must not use it. work-order-child-home.md's test
+  // list: "empty state renders with a date and offers no session."
+  const ticket = readFileSync("src/components/departure-ticket.tsx", "utf8");
+  assert.match(ticket, /restDay/);
+  assert.match(ticket, /nextArrival/);
+  assert.match(ticket, /disabled/);
+  assert.equal(/freeRide/.test(ticket), false);
 });
 
 test("parent document is sticky + 900px; sitemap order progress → week → attention → paper", () => {

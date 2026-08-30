@@ -90,9 +90,14 @@ test("overview is UI state on child home, not a peer route", () => {
   const demo = readFileSync("src/lib/demo-progress.ts", "utf8");
   const ja = readFileSync("src/lib/i18n/messages.ts", "utf8");
   assert.match(home, /WelcomeOverview/);
-  assert.match(home, /HubPlate/);
+  // work-order-child-home.md Task 1: HubPlate was a tap-trigger for the
+  // overview with no other purpose, and child-home-and-sessions.md §1
+  // leaves nothing tappable on the child home besides the ticket and the
+  // small 保護者 control — so child-home.tsx no longer mounts it. The
+  // overview itself stays reachable via the couple-beat's `writeOverviewIntent`
+  // path below, unaffected since that is driven by navigation + an effect,
+  // not by a tap on this screen. hub-plate.tsx is untouched in isolation.
   assert.match(hub, /data-open-overview/);
-  assert.match(home, /landscape:w-\[40%\]/);
   assert.equal(/createFileRoute/.test(overview), false);
   assert.equal(/WatchDemoButton|loginParent|workshopTry/.test(home), false);
   assert.match(session, /CoupleBeat/);

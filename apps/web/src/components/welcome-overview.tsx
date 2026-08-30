@@ -94,6 +94,7 @@ export function WelcomeOverview({
   hrefBase,
   onBack,
   onFocusGrade,
+  onOpenMap,
 }: {
   rings: GradeRingView[];
   profileGrade: Grade;
@@ -103,6 +104,10 @@ export function WelcomeOverview({
   hrefBase: "/demo" | "/app";
   onBack: () => void;
   onFocusGrade: (g: Grade) => void;
+  /** child-home-and-sessions.md §1 amendment: the map's only remaining
+   * entry point, now that the ticket is the child home's sole control.
+   * Optional so dev/review call sites can omit it. */
+  onOpenMap?: () => void;
 }) {
   const { t } = useI18n();
   const [linesOn, setLinesOn] = useState(false);
@@ -329,6 +334,16 @@ export function WelcomeOverview({
       >
         {linesOn ? t("hideLines") : t("seeLines")}
       </button>
+      {onOpenMap ? (
+        <button
+          type="button"
+          data-open-map
+          onClick={onOpenMap}
+          className="absolute right-3 top-[max(0.9rem,env(safe-area-inset-top))] z-[2] inline-flex h-11 items-center rounded-md border border-border bg-surface/90 px-3 text-xs text-fg-subtle shadow-soft"
+        >
+          {t("navMap")}
+        </button>
+      ) : null}
     </div>
   );
 }
