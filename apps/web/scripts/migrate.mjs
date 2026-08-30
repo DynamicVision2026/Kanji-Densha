@@ -2,15 +2,27 @@
 /**
  * Deploy-time database migrator (node-postgres, `pg`).
  *
- * Runs during `npm run build` — on every Vercel deploy — applying pending files
- * in ../migrations to DATABASE_URL. Each file is applied in one transaction and
- * recorded in a `_migrations` table, so it runs once and is safe to re-run.
+ * Deliberately NOT wired into `npm run build` (see `package.json` — `build`
+ * is `vite build` only). A build step that mutates a database means any
+ * build — preview, CI, or a Cloud Build image build with no DB access at
+ * all — can migrate production, and a failed migration fails the build
+ * instead of the deploy. Run this explicitly as its own deploy step
+ * (`npm run db:migrate`) against DATABASE_URL, separate from `build`.
+ *
+ * Applies pending files in ../migrations to DATABASE_URL. Each file is
+ * applied in one transaction and recorded in a `_migrations` table, so it
+ * runs once and is safe to re-run.
  *
  * The read is non-recursive, so the opt-in auth schema under migrations/auth/
  * is not applied to an app that never asked for sign-in.
  *
- * No DATABASE_URL (local / preview builds) -> skip; the PGLite fallback applies
- * the same files at startup instead (see src/lib/db.ts).
+ * DATABASE_URL is required here. Local dev never calls this script — it
+ * runs on PGLite instead (see src/lib/db.ts), which migrates itself. The
+ * only caller of this file is `npm run db:migrate`, invoked deliberately
+ * as its own deploy step, so a missing DATABASE_URL at that point is a
+ * real misconfiguration (wrong secret, wrong deploy target), not a
+ * legitimate no-op — it fails loudly rather than exiting 0 and letting a
+ * skipped migration look like a successful one.
  */
 import { readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -20,10 +32,12 @@ import { pendingMigrations } from "./migration-plan.mjs";
 
 const databaseUrl = process.env.DATABASE_URL;
 if (!databaseUrl) {
-  console.log(
-    "[migrate] DATABASE_URL not set — skipping (the PGLite fallback migrates itself).",
+  console.error(
+    "[migrate] DATABASE_URL is not set. Refusing to silently skip — this script is only ever " +
+      "invoked as an explicit deploy step, so a missing DATABASE_URL means the wrong secret or " +
+      "the wrong target, not 'use the local PGLite fallback instead'. Set DATABASE_URL and re-run.",
   );
-  process.exit(0);
+  process.exit(1);
 }
 
 const migrationsDir = join(dirname(fileURLToPath(import.meta.url)), "..", "migrations");
