@@ -10,6 +10,7 @@ import { WelcomeOverview } from "@/components/welcome-overview";
 import type { MapLineView } from "@/components/route-map";
 import type { DepartureBoard } from "@/lib/departure-board";
 import { boardStageCards, pickDeparture, type StripCar } from "@/lib/pick-departure";
+import type { TrainCar } from "@/lib/train-car";
 import {
   clearMapIntent,
   clearOverviewGlow,
@@ -40,6 +41,7 @@ export function ChildHome({
   grade,
   profileGrade,
   cars,
+  trainCars,
   board,
   echoQueue,
   lines,
@@ -50,6 +52,7 @@ export function ChildHome({
   grade: Grade;
   profileGrade: Grade;
   cars: StripCar[];
+  trainCars: TrainCar[];
   board: DepartureBoard | null | undefined;
   echoQueue: { kanji: string }[];
   lines: MapLineView[];
@@ -158,7 +161,7 @@ export function ChildHome({
           </header>
 
           <div data-child-train className="shrink-0 px-3">
-            <TrainLine cars={cars} currentChar={depart.empty ? undefined : depart.kanji} />
+            <TrainLine cars={trainCars} glow={glow} />
           </div>
 
           <section
