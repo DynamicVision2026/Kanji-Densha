@@ -3,9 +3,10 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { AppShell } from "@/components/app-shell";
 import { PhoneticWorkshopBoard } from "@/components/phonetic-workshop";
+import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PHONETIC_FAMILIES } from "@/data/phonetic-families";
-import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
+import { useActiveChild } from "@/lib/active-child";
 import { resolveActiveGrade, usePersistActiveGrade } from "@/lib/active-grade";
 import { listChildren } from "@/lib/server/children";
 import { type Grade } from "@/data/kyoiku";
@@ -27,7 +28,6 @@ function AppWorkshop() {
   const { t } = useI18n();
   const navigate = useNavigate();
   const search = Route.useSearch();
-  const [childId, setChildId] = useState<string | null>(null);
   const [done, setDone] = useState(false);
   const [familyId, setFamilyId] = useState(() => familyIdFromSearch(search.family));
   const family = PHONETIC_FAMILIES.find((f) => f.id === familyId) ?? PHONETIC_FAMILIES[0]!;
@@ -36,20 +36,9 @@ function AppWorkshop() {
     queryKey: ["children"],
     queryFn: () => listChildren(),
   });
-
-  useEffect(() => {
-    if (!childrenQ.data) return;
-    if (childrenQ.data.length === 0) {
-      void navigate({ to: "/onboard" });
-      return;
-    }
-    const stored = readActiveChildId();
-    const next =
-      (stored && childrenQ.data.some((c) => c.id === stored) && stored) ||
-      childrenQ.data[0]!.id;
-    setChildId(next);
-    writeActiveChildId(next);
-  }, [childrenQ.data, navigate]);
+  const { childId, needsPicker, select } = useActiveChild(childrenQ.data, {
+    onEmpty: () => void navigate({ to: "/onboard" }),
+  });
 
   useEffect(() => {
     if (search.family) setFamilyId(familyIdFromSearch(search.family));
@@ -72,6 +61,14 @@ function AppWorkshop() {
       });
     }
   }, [childId, search.grade, search.family, viewGrade, navigate]);
+
+  if (needsPicker && childrenQ.data) {
+    return (
+      <AppShell>
+        <StationBoard children={childrenQ.data} onSelect={select} />
+      </AppShell>
+    );
+  }
 
   if (childrenQ.isLoading || !child) {
     return (

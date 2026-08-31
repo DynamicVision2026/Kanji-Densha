@@ -1,11 +1,11 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import { AppShell } from "@/components/app-shell";
 import { ParentReportView } from "@/components/parent-report";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { clearActiveChildId, readActiveChildId, writeActiveChildId } from "@/lib/active-child";
+import { StationBoard } from "@/components/station-board";
+import { clearActiveChildId, useActiveChild } from "@/lib/active-child";
 import { resetActiveGradeToProfile } from "@/lib/active-grade";
 import {
   confirmGradeRollover,
@@ -33,48 +33,52 @@ function ParentPage() {
   const { t } = useI18n();
   const navigate = useNavigate();
   const search = Route.useSearch();
-  const [childId, setChildId] = useState(search.child || readActiveChildId() || "");
   const childrenQ = useQuery({ queryKey: ["children"], queryFn: () => listChildren() });
-
-  useEffect(() => {
-    if (!childId && childrenQ.data?.[0]) {
-      setChildId(childrenQ.data[0].id);
-      writeActiveChildId(childrenQ.data[0].id);
-    }
-  }, [childId, childrenQ.data]);
+  const { childId, needsPicker, select } = useActiveChild(childrenQ.data, {
+    explicit: search.child,
+    onEmpty: () => void navigate({ to: "/onboard" }),
+  });
 
   const overviewQ = useQuery({
     queryKey: ["overview", childId],
-    queryFn: () => getParentOverview({ data: childId }),
+    queryFn: () => getParentOverview({ data: childId ?? "" }),
     enabled: Boolean(childId),
   });
 
   const insight = useMutation({
-    mutationFn: () => requestInsight({ data: childId }),
+    mutationFn: () => requestInsight({ data: childId ?? "" }),
   });
 
   const rolloverMut = useMutation({
-    mutationFn: () => confirmGradeRollover({ data: { childId } }),
+    mutationFn: () => confirmGradeRollover({ data: { childId: childId ?? "" } }),
     onSuccess: (out) => {
-      if (out.ok) resetActiveGradeToProfile(out.grade, childId);
+      if (out.ok && childId) resetActiveGradeToProfile(out.grade, childId);
       void childrenQ.refetch();
       void overviewQ.refetch();
     },
   });
 
   const dismissMut = useMutation({
-    mutationFn: () => dismissGradeRollover({ data: { childId } }),
+    mutationFn: () => dismissGradeRollover({ data: { childId: childId ?? "" } }),
     onSuccess: () => {
       void overviewQ.refetch();
     },
   });
 
   const bandMut = useMutation({
-    mutationFn: (startBand: StartBand) => updateStartBand({ data: { childId, startBand } }),
+    mutationFn: (startBand: StartBand) => updateStartBand({ data: { childId: childId ?? "", startBand } }),
     onSuccess: () => {
       void overviewQ.refetch();
     },
   });
+
+  if (needsPicker && childrenQ.data) {
+    return (
+      <AppShell>
+        <StationBoard children={childrenQ.data} onSelect={select} />
+      </AppShell>
+    );
+  }
 
   if (!childId || overviewQ.isLoading) {
     return (
@@ -120,10 +124,7 @@ function ParentPage() {
               className={`h-11 rounded-full border px-3 text-sm ${
                 c.id === childId ? "border-fg bg-fg text-bg" : "border-border bg-surface"
               }`}
-              onClick={() => {
-                writeActiveChildId(c.id);
-                setChildId(c.id);
-              }}
+              onClick={() => select(c.id)}
             >
               {c.name}
             </button>

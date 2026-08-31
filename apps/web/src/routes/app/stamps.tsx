@@ -1,10 +1,10 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import { AppShell } from "@/components/app-shell";
 import { StampBook } from "@/components/stamp-book";
+import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
-import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
+import { useActiveChild } from "@/lib/active-child";
 import { listChildren } from "@/lib/server/children";
 import { getStampBook } from "@/lib/server/progress";
 import { useI18n } from "@/lib/i18n/i18n";
@@ -18,32 +18,28 @@ export const Route = createFileRoute("/app/stamps")({
 function AppStamps() {
   const { t } = useI18n();
   const navigate = useNavigate();
-  const [childId, setChildId] = useState<string | null>(null);
 
   const childrenQ = useQuery({
     queryKey: ["children"],
     queryFn: () => listChildren(),
   });
-
-  useEffect(() => {
-    if (!childrenQ.data) return;
-    if (childrenQ.data.length === 0) {
-      void navigate({ to: "/onboard" });
-      return;
-    }
-    const stored = readActiveChildId();
-    const next =
-      (stored && childrenQ.data.some((c) => c.id === stored) && stored) ||
-      childrenQ.data[0]!.id;
-    setChildId(next);
-    writeActiveChildId(next);
-  }, [childrenQ.data, navigate]);
+  const { childId, needsPicker, select } = useActiveChild(childrenQ.data, {
+    onEmpty: () => void navigate({ to: "/onboard" }),
+  });
 
   const bookQ = useQuery({
     queryKey: ["stamps", childId],
     queryFn: () => getStampBook({ data: childId! }),
     enabled: Boolean(childId),
   });
+
+  if (needsPicker && childrenQ.data) {
+    return (
+      <AppShell>
+        <StationBoard children={childrenQ.data} onSelect={select} />
+      </AppShell>
+    );
+  }
 
   if (childrenQ.isLoading || (childId && bookQ.isLoading) || !bookQ.data) {
     return (
