@@ -12,7 +12,6 @@ import { shapeModeFor, structureType } from "../src/lib/kanji-structure.ts";
 import { canPlaceComponent } from "../src/lib/component-assembly.ts";
 import { COMPONENT_COMPLETE_ID } from "../src/lib/component-assembly.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
-import { initialProgress } from "@kanji-densha/engine";
 import { answer, legacy, taught } from "./test-helpers/real-engine.ts";
 import { isElementaryReading } from "../src/lib/readings.ts";
 

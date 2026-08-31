@@ -189,18 +189,44 @@ Deleting is the work. Each step is independently shippable.
 Manual clicking will not settle this; it is what let two of everything survive a week. The
 proof is CI, in the same style as the engine-purity gate.
 
-- **No module outside `packages/engine` may compute a status.** Grep gate: no occurrence of
-  `'perfect'|'almost'|'fix'|'lost'` as an assignment target outside the engine and the
-  `toTrainCar` mapping.
+**✅ Shipped.** `scripts/check-routing-invariants.mjs` at the repo root, wired into `pnpm verify`
+as `check:routing-invariants`, same blunt-textual-gate style as `check-engine-purity.mjs`:
+
+- **No module outside `packages/engine` may compute a status.** No occurrence of
+  `status: "perfect"|"almost"|"fix"|"lost"` (or `status = "..."`) outside the engine, with two
+  named exceptions carried over from §1's hand-built-literal note — `demo-progress.ts`'s seed
+  function and the `dev/practice-card-states.tsx` review gallery. (`toTrainCar` turned out not to
+  need an exception: it reads `status`, never assigns a literal.)
 - **`demo-progress.ts` is the only caller of `evaluateProgress` on the guest side, as
-  `server/progress.ts` is on the account side.** Boundary lint rule — no third module may import
+  `server/progress.ts` is on the account side.** No third module may import
   `@kanji-densha/engine`'s `evaluateProgress` directly. (Originally phrased as "importable only by
   `LocalStore`"; corrected per §2 — that class is not in the call path.)
-- **The route tree matches the canonical table in §2**, asserted by a test that enumerates the
-  generated route tree and diffs against a checked-in list. A new route is a deliberate edit to
-  that list, not an accident.
-- **One end-to-end path per persona**: guest ride → 到着 → ticket; register → import →
-  `/home`; returning signed-in child → `/home`.
+- **The active child is resolved in one place, and nothing else may derive it.** No module
+  outside `apps/web/src/routes/` may import `active-child.ts`'s primitives — the direct consequence
+  of step 2's finding that this resolution had drifted into five separate copies before
+  `useActiveChild` existed. Verified empirically before being written as a gate: every
+  presentational component in the app is prop-driven; none resolves a child on its own.
+- **The route tree matches a checked-in list**, asserted by `check-routing-invariants.mjs`
+  enumerating `apps/web/src/routes/` and diffing against `CANONICAL_ROUTES` in that script. This
+  locks in today's actual dual-tree inventory (`/app/*` + `/demo/*`), not yet the single post-
+  collapse tree from §2 — steps 3 and 5 haven't happened. Update the list when they do.
+
+**Not done.** One end-to-end path per persona (guest ride → 到着 → ticket; register → import →
+`/home`; returning signed-in child → `/home`) needs real Playwright E2E infrastructure this repo
+doesn't have yet — a test runner wired into CI, a running built app, and a test-database story for
+the two authenticated personas. The guest-ride check done by hand for step 1 (a local dev server,
+driven by a throwaway script, confirming だいたい is reachable in one sitting) is a one-time
+verification, not this gate; it ran against neither CI nor the actual deployed preview. Standing
+this up is a real decision (which test DB, which CI job, how long it can take) that hasn't been
+made, not an oversight.
+
+**Also shipped, not originally in this list.** A `/health` endpoint (`apps/web/src/routes/health.ts`)
+returning `{ status, sha, shortSha, buildTime }`. `.git` is dockerignored, so the SHA can't be
+computed inside the container — `scripts/write-build-info.mjs` runs on the CI runner (real git
+access) before either `gcloud run deploy --source .` step, writing
+`apps/web/public/build-info.json`, which rides through the build as an ordinary file and Vite
+copies into `.output/public/`. One URL answers "is the new version actually live" instead of a
+screenshot.
 
 ## 5. Division of labour
 

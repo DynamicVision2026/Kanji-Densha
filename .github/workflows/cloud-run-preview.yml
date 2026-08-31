@@ -52,6 +52,15 @@ jobs:
         with:
           node-version: 22
 
+      - name: Write build info (git SHA + build time) for /health
+        # Must run on this runner, before either `gcloud run deploy --source .`
+        # step below: .git is excluded from the Docker build context
+        # (.dockerignore), so this cannot be computed inside the image. This
+        # writes apps/web/public/build-info.json, which `gcloud run deploy
+        # --source .` picks up as an ordinary file in the snapshotted
+        # directory, and Vite copies verbatim into .output/public/.
+        run: node scripts/write-build-info.mjs
+
       - name: Enable pnpm
         run: corepack enable && corepack prepare pnpm@10.33.0 --activate
 
