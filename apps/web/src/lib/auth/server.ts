@@ -68,6 +68,33 @@ const env = (key: string): string | undefined => {
   return value ? value : undefined;
 };
 
+// R1 (docs/reviews/remediation-plan.md): development convenience, production
+// failure. Every fallback below exists so the sandbox live preview and local
+// `npm run dev` work with zero configuration — none of them is safe for a
+// real deploy. `NODE_ENV=production` is what the Dockerfile actually sets
+// (see root Dockerfile `ENV NODE_ENV=production`), so it's the one signal
+// this module has, at import time, for "this is a real deploy, not preview."
+const isProduction = env("NODE_ENV") === "production";
+
+/**
+ * Throws at module load — i.e. at process startup, before anything is served
+ * — when `name` is required and missing. Returns the raw value otherwise
+ * (including `undefined` when `required` is false), so every existing
+ * preview/dev fallback chain below is untouched outside production.
+ */
+function requiredInProduction(name: string, required: boolean): string | undefined {
+  const value = env(name);
+  if (required && !value) {
+    throw new Error(
+      `${name} is required when NODE_ENV=production and must not fall back to a ` +
+        `preview/dev default — see docs/reviews/remediation-plan.md R1. Every Cloud Run ` +
+        `instance otherwise disagrees with every other one (or with its own next ` +
+        `redeploy) about what this value is.`,
+    );
+  }
+  return value;
+}
+
 // Explicit off-switch. The deployer sets `VITE_AUTH_ENABLED=true` when it
 // provisions auth; set it to "false" to force auth off everywhere (dev user).
 const authDisabled = env("VITE_AUTH_ENABLED") === "false";
@@ -75,6 +102,18 @@ const authDisabled = env("VITE_AUTH_ENABLED") === "false";
 // Broker federation creds: the deployer injects a per-app client when deployed;
 // otherwise fall back to the shared live-preview client, which the broker accepts
 // for any `*.grok-sandbox.com` callback (see `./preview`).
+//
+// R1 audit note (docs/reviews/remediation-plan.md): this fallback fits the
+// same "signs with the wrong credential" shape as BETTER_AUTH_SECRET's, but
+// it is NOT hard-required here, deliberately. Unlike the secret, a missing
+// client secret already fails safe today: `authConfigured` below goes
+// `false`, the OAuth plugin is omitted entirely, and no request is ever
+// signed through the shared preview client — there is no real Grok broker
+// client provisioned for this app's Cloud Run deploy yet, so hard-requiring
+// this would turn an inert, not-yet-shipped feature into a launch blocker
+// with no safe value to set. Left for the architect to rule on once (or if)
+// federated OAuth is actually being wired up for this deploy — see the R1
+// PR description.
 const grokIssuer = env("GROK_AUTH_ISSUER") ?? GROK_ISSUER_DEFAULT;
 const grokClientId = env("GROK_AUTH_CLIENT_ID") ?? PREVIEW_CLIENT_ID;
 const grokClientSecret = env("GROK_AUTH_CLIENT_SECRET") ?? env("GROK_PREVIEW_CLIENT_SECRET");
@@ -89,6 +128,19 @@ export const authConfigured =
 // it derives the origin per-request from the (proxied) host, validated against the
 // preview allowlist, which makes the OAuth `redirect_uri` the concrete preview URL
 // the broker's preview client accepts.
+//
+// R1 audit note (docs/reviews/remediation-plan.md): a production deploy
+// without this falls back to the dynamic-preview-host resolution below,
+// whose allowedHosts is PREVIEW_ALLOWED_HOSTS ("*.grok-sandbox.com") plus
+// localhost — never the real Cloud Run/custom domain host, so real users
+// fail origin validation on every credentialed request. This fits R1's rule
+// and arguably should be hard-required, but doing so safely means the
+// deploy workflow must inject the exact live URL AND the tagged preview
+// URL Cloud Run assigns `--tag welcome-polish` revisions (a different host,
+// currently used for pre-launch phone verification) — not verifiable from
+// this sandbox (no network access to the deployed service) and risks
+// breaking that verification flow if guessed wrong. Left soft, deliberately,
+// pending the architect's ruling — see the R1 PR description.
 const explicitBaseURL = env("BETTER_AUTH_URL");
 // Explicit `string[]` (not a readonly tuple) — Better Auth's DynamicBaseURLConfig
 // requires a mutable `allowedHosts: string[]`.
@@ -123,7 +175,10 @@ const trustedOrigins: string[] = explicitBaseURL
       ...LOCAL_DEV_ORIGINS,
     ];
 
-const databaseUrl = env("DATABASE_URL");
+// A production process must never silently fall back to the embedded PGLite
+// below — that's per-instance, in-memory-on-restart storage for what should
+// be real, shared, durable Postgres.
+const databaseUrl = requiredInProduction("DATABASE_URL", isProduction);
 
 // Static broker OAuth endpoints (skip OIDC discovery on every sign-in / callback).
 // Discovery would cost an extra network hop to the broker before the popup can
@@ -172,9 +227,12 @@ const grokOAuthPlugin = authConfigured
 
 export const auth = betterAuth({
   baseURL,
-  // Deployed apps inject BETTER_AUTH_SECRET. Preview: process-stable secret on
-  // globalThis so HMR doesn't invalidate PGLite-backed sessions (see above).
-  secret: env("BETTER_AUTH_SECRET") ?? previewAuthSecret(),
+  // Deployed apps inject BETTER_AUTH_SECRET (required in production — see
+  // requiredInProduction above; a fallback here means every instance/redeploy
+  // signs sessions with a different secret, so no session survives either).
+  // Preview: process-stable secret on globalThis so HMR doesn't invalidate
+  // PGLite-backed sessions (see above).
+  secret: requiredInProduction("BETTER_AUTH_SECRET", isProduction) ?? previewAuthSecret(),
   database,
 
   // CSRF / origin check for credentialed auth POSTs (email sign-up/sign-in, …).

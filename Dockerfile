@@ -43,6 +43,12 @@ FROM node:22-slim AS runtime
 WORKDIR /workspace
 ENV NODE_ENV=production
 COPY --from=build /workspace/apps/web/.output ./.output
+# R1 (docs/reviews/remediation-plan.md): the startup gate CMD runs below.
+# Nitro imports src/lib/auth/server.ts lazily (on the first /api/auth/*
+# request), so a misconfigured container would otherwise bind the port and
+# pass Cloud Run's health check before ever finding out — see the script for
+# the full story.
+COPY --from=build /workspace/apps/web/scripts/assert-production-env.mjs ./scripts/assert-production-env.mjs
 
 # Cloud Run sets PORT at runtime (defaults to 8080 if unset, e.g. local `docker run`).
 ENV PORT=8080
@@ -51,4 +57,4 @@ EXPOSE 8080
 
 # Nitro's node-server preset reads HOST/PORT directly from the environment,
 # so this always binds whatever port Cloud Run assigns, on all interfaces.
-CMD ["node", ".output/server/index.mjs"]
+CMD ["sh", "-c", "node scripts/assert-production-env.mjs && exec node .output/server/index.mjs"]
