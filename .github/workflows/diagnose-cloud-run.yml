@@ -1,0 +1,49 @@
+name: Diagnose Cloud Run revisions
+
+# Read-only. Answers "what's actually running": every revision's creation
+# time and active-traffic status, plus the exact container image the
+# newest revision runs. No build, no deploy — safe to run any time
+# something looks stale and you need to know whether the deploy pipeline
+# ran what you think it ran.
+
+on:
+  workflow_dispatch:
+    inputs:
+      service_name:
+        description: "Cloud Run service name"
+        required: false
+        default: "dynamic-densha-web"
+
+env:
+  PROJECT_ID: kanji-densha-jp
+  REGION: asia-northeast1
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: List revisions (name, creation time, active traffic)
+        env:
+          SERVICE: ${{ inputs.service_name }}
+        run: |
+          gcloud run revisions list --service "$SERVICE" --region "$REGION" --project "$PROJECT_ID" \
+            --format="table(name, creationTimestamp, active)"
+
+      - name: Describe the newest revision's image
+        env:
+          SERVICE: ${{ inputs.service_name }}
+        run: |
+          LATEST=$(gcloud run revisions list --service "$SERVICE" --region "$REGION" --project "$PROJECT_ID" \
+            --sort-by=~creationTimestamp --limit=1 --format="value(name)")
+          echo "Latest revision: $LATEST"
+          gcloud run revisions describe "$LATEST" --region "$REGION" --project "$PROJECT_ID" \
+            --format="value(spec.containers[0].image)"
