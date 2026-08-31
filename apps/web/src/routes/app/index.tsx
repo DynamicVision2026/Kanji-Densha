@@ -1,11 +1,11 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { ChildHome } from "@/components/child-home";
 import { ChildShell } from "@/components/child-shell";
 import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
-import { readActiveChildId, writeActiveChildId } from "@/lib/active-child";
+import { useActiveChild } from "@/lib/active-child";
 import { resolveActiveGrade, usePersistActiveGrade } from "@/lib/active-grade";
 import { gradeSearchFrom } from "@/lib/grade-nav";
 import { listChildren } from "@/lib/server/children";
@@ -21,7 +21,12 @@ export const Route = createFileRoute("/app/")({
 function AppHome() {
   const navigate = useNavigate();
   const search = Route.useSearch();
-  const [childId, setChildId] = useState<string | null>(null);
+
+  const childrenQ = useQuery({
+    queryKey: ["children"],
+    queryFn: () => listChildren(),
+  });
+
   // child-home-and-sessions.md §4 review ruling: the board should show
   // only on first open or when the parent explicitly switches — a
   // single-profile household resolves `childId` here and never sees the
@@ -29,33 +34,9 @@ function AppHome() {
   // active-child.ts) resolves straight to it too. The board only appears
   // when there is no remembered child, or after /app/parent's "switch
   // child" affordance clears it.
-  const [confirmed, setConfirmed] = useState(false);
-
-  const childrenQ = useQuery({
-    queryKey: ["children"],
-    queryFn: () => listChildren(),
+  const { childId, needsPicker, select } = useActiveChild(childrenQ.data, {
+    onEmpty: () => void navigate({ to: "/onboard" }),
   });
-
-  useEffect(() => {
-    if (!childrenQ.data) return;
-    if (childrenQ.data.length === 0) {
-      void navigate({ to: "/onboard" });
-      return;
-    }
-    if (childrenQ.data.length > 1) {
-      const remembered = readActiveChildId();
-      const stillValid = remembered && childrenQ.data.some((c) => c.id === remembered);
-      if (stillValid) {
-        setChildId(remembered);
-        setConfirmed(true);
-      }
-      return;
-    }
-    const only = childrenQ.data[0]!.id;
-    setChildId(only);
-    writeActiveChildId(only);
-    setConfirmed(true);
-  }, [childrenQ.data, navigate]);
 
   const current = useMemo(
     () => childrenQ.data?.find((c) => c.id === childId),
@@ -97,17 +78,10 @@ function AppHome() {
     );
   }
 
-  if (childrenQ.data && childrenQ.data.length > 1 && !confirmed) {
+  if (needsPicker && childrenQ.data) {
     return (
       <ChildShell>
-        <StationBoard
-          children={childrenQ.data}
-          onSelect={(id) => {
-            setChildId(id);
-            writeActiveChildId(id);
-            setConfirmed(true);
-          }}
-        />
+        <StationBoard children={childrenQ.data} onSelect={select} />
       </ChildShell>
     );
   }
