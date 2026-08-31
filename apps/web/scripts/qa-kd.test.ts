@@ -13,7 +13,6 @@ import {
   gradeChoice,
 } from "../src/lib/items.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
-import { initialProgress } from "@kanji-densha/engine";
 import { answer, legacy, taught } from "./test-helpers/real-engine.ts";
 import { selectEchoSurface } from "../src/lib/echo-surfaces.ts";
 import { lookupReadingAudio } from "../src/data/reading-audio.ts";

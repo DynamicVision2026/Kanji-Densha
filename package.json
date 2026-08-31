@@ -15,7 +15,9 @@
     "content:build": "tsc -b packages/content-build && node packages/content-build/dist/build.js",
     "check:engine-purity": "node scripts/check-engine-purity.mjs",
     "check:content-dist-drift": "node scripts/check-content-dist-drift.mjs",
-    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm test:coverage && pnpm content:build && pnpm check:content-dist-drift",
+    "check:routing-invariants": "node scripts/check-routing-invariants.mjs",
+    "build:info": "node scripts/write-build-info.mjs",
+    "verify": "pnpm typecheck && pnpm lint && pnpm check:engine-purity && pnpm check:routing-invariants && pnpm test:coverage && pnpm content:build && pnpm check:content-dist-drift",
     "content:reference": "node packages/content-build/ingest-reference.mjs"
   },
   "devDependencies": {
