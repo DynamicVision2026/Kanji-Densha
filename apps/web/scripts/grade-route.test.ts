@@ -8,7 +8,6 @@ import {
   startIndexFor,
 } from "../src/lib/grade-route.ts";
 import { emptyProgress, type ProgressState } from "../src/lib/progress-view.ts";
-import { getGradeParams } from "../src/lib/grade-params.ts";
 import { isInspectionDue, markInspectionPass } from "../src/lib/inspection.ts";
 import {
   pickWeeklyNew,
@@ -124,10 +123,12 @@ test("P1 発車標 has this-week dates only and no behind copy in source", () =>
   assert.ok(board.today.some((c) => c.kanji === "右" && c.kind === "echo"));
   assert.ok(board.tomorrow.some((c) => c.kanji === "雨"));
   assert.deepEqual(board.newStations, ["円", "王"]);
-  const src = [
-    readFileSync(new URL("../src/lib/departure-board.ts", import.meta.url), "utf8"),
-    readFileSync(new URL("../src/components/departure-board.tsx", import.meta.url), "utf8"),
-  ].join("\n");
+  // routing.md §1/§3 step 3: components/departure-board.tsx (DepartureBoardView)
+  // was a confirmed orphan — exported but imported nowhere — and is deleted,
+  // not merely dropped from this scan. child-home.tsx renders 発車標 data
+  // through translated strings only, no board-specific literal copy of its
+  // own to scan.
+  const src = readFileSync(new URL("../src/lib/departure-board.ts", import.meta.url), "utf8");
   assert.equal(/遅れ|behind/i.test(src), false);
 });
 
