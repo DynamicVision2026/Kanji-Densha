@@ -187,20 +187,26 @@ export function KanjiSession({
     // eslint-disable-next-line react-hooks/exhaustive-deps -- log once per (char, status) landing, not on every echoDueAt tick
   }, [char, progress.status]);
   useEffect(() => {
-    if (hrefHome === "/demo" && progress.status === "almost" && !sawSavePromptThisSession()) {
+    // R4 (docs/reviews/remediation-plan.md): the ticket and install prompt
+    // arm on both paths — an account child needs the return mechanism and
+    // the storage-eviction protection just as much as a guest does. Only
+    // the save prompt below stays guest-only (an account holder has already
+    // saved), so markSavePromptShown() here is fine to call unconditionally:
+    // it is the same "don't stack the arrival bundle on every character"
+    // once-per-session throttle for both paths, not a guest-only flag.
+    if (progress.status === "almost" && !sawSavePromptThisSession()) {
       markSavePromptShown();
       setInstallPromptVisible(true);
       setTicketVisible(true);
     }
-  }, [progress.status, hrefHome]);
+  }, [progress.status]);
   function advanceFromTicket() {
     setTicketVisible(false);
     setSavePromptVisible(true);
   }
   const showSavePrompt = savePromptVisible && hrefHome === "/demo" && progress.status === "almost";
-  const showInstallPrompt =
-    installPromptVisible && hrefHome === "/demo" && progress.status === "almost";
-  const showTicket = ticketVisible && hrefHome === "/demo" && progress.status === "almost";
+  const showInstallPrompt = installPromptVisible && progress.status === "almost";
+  const showTicket = ticketVisible && progress.status === "almost";
   const echoArmed = useRef(false);
   const itemsArmed = useRef(false);
   const answering = useRef(false);
