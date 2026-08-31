@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { evaluateProgress, initialProgress, EchoRejectedError, LAMPS } from './index';
+import { evaluateProgress, initialProgress, nextEchoEligibleAtHours, EchoRejectedError, LAMPS } from './index';
 import type { GradeParams } from './index';
 
 const PARAMS: GradeParams = {
@@ -36,5 +36,35 @@ describe('engine public surface', () => {
 
   it('exports EchoRejectedError', () => {
     expect(typeof EchoRejectedError).toBe('function');
+  });
+});
+
+// docs/reviews/remediation-plan.md R2: exported for read-side callers (e.g.
+// the adapter's echoDueAt) that never go through assertEchoEligible, so this
+// function's own guard clause needs its own coverage — assertEchoEligible
+// never calls it with a non-almost/null-almostAt state (it already checked
+// both beforehand), so that branch was otherwise dead from this package's
+// own test suite's point of view.
+describe('nextEchoEligibleAtHours (R2 single source)', () => {
+  it('is null when the character is not almost', () => {
+    expect(nextEchoEligibleAtHours({ status: 'new', almostAt: null, echoes: [] }, PARAMS)).toBeNull();
+    expect(nextEchoEligibleAtHours({ status: 'perfect', almostAt: 100, echoes: [] }, PARAMS)).toBeNull();
+  });
+
+  it('is null when almost but almostAt is unset (the unreachable state assertEchoEligible names)', () => {
+    expect(nextEchoEligibleAtHours({ status: 'almost', almostAt: null, echoes: [] }, PARAMS)).toBeNull();
+  });
+
+  it('first echo: almostAt + echoFirstDelayHours', () => {
+    expect(nextEchoEligibleAtHours({ status: 'almost', almostAt: 100, echoes: [] }, PARAMS)).toBe(120);
+  });
+
+  it('second echo: max(almostAt + echoSecondDelayHours, firstOk.at + 48h floor)', () => {
+    expect(
+      nextEchoEligibleAtHours(
+        { status: 'almost', almostAt: 100, echoes: [{ at: 130, ok: true, sessionId: 'e1' }] },
+        PARAMS,
+      ),
+    ).toBe(268); // 100 + 168 (echoSecondDelayHours) beats 130 + 48 (floor) here
   });
 });
