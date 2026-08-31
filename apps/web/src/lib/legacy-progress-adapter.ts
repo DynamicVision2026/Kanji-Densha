@@ -27,6 +27,7 @@
  * status, lamps, echo eligibility, and repairs — the parts that actually
  * decide what a child sees — all come straight from the real engine.
  */
+import { nextEchoEligibleAtHours } from "@kanji-densha/engine";
 import type { CharacterProgress, GradeParams as EngineGradeParams, Lamp } from "@kanji-densha/engine";
 import type { ProgressState } from "./progress-view";
 import type { GradeParams as LegacyGradeParams } from "./grade-params";
@@ -40,23 +41,23 @@ function zeroByKind(): Record<Lamp, number> {
 /**
  * `echoDueAt` was a stored column in the old model. The real engine doesn't
  * store it — MR-8 makes echo timing a scheduler concern, computed from
- * `almostAt` + params at read time. D1: the second delay is anchored to
- * `almostAt`, with a 48h floor after the first successful echo — the same
- * compound rule the real engine's `evaluateProgress` enforces on write, not
- * a re-derivation of it. If this ever drifts from evaluate.ts's own
- * echoIsDue-equivalent logic, that is exactly the kind of bug this adapter
- * exists to make impossible to hide: it would show up as a UI offering an
- * echo the engine itself would then reject with `EchoRejectedError`.
+ * `almostAt` + params at read time.
+ *
+ * R2 (docs/reviews/remediation-plan.md): this used to re-derive the MR-5.2/5.3
+ * formula inline, and did it wrong — `almostAt` and `ev.at` are hours-since-epoch
+ * everywhere in the engine (see evaluate.ts's file-level comment), but this
+ * function treated `almostAt` as an epoch-millisecond timestamp and added a
+ * millisecond delay to it, producing a boundary a few hours after 1970-01-01,
+ * not a real due date. `nextEchoEligibleAtHours` is the engine's own boundary
+ * calculation, in its own hours unit; this function's only remaining job is
+ * the one, single hours→ms conversion for display. There is now exactly one
+ * implementation of echo eligibility — a UI can no longer offer an echo the
+ * engine would then reject with `EchoRejectedError`, because it cannot compute
+ * a different boundary than the one that rejection would be checked against.
  */
 function computeEchoDueAt(progress: CharacterProgress, params: EngineGradeParams): string | null {
-  if (progress.status !== "almost" || progress.almostAt === null) return null;
-  const firstOk = progress.echoes.find((e) => e.ok);
-  if (!firstOk) {
-    return new Date(progress.almostAt + params.echoFirstDelayHours * 3600_000).toISOString();
-  }
-  const fromAlmost = progress.almostAt + params.echoSecondDelayHours * 3600_000;
-  const floorAfterFirst = firstOk.at + 48 * 3600_000;
-  return new Date(Math.max(fromAlmost, floorAfterFirst)).toISOString();
+  const dueAtHours = nextEchoEligibleAtHours(progress, params);
+  return dueAtHours === null ? null : new Date(dueAtHours * 3600_000).toISOString();
 }
 
 function iso(ms: number | null): string | null {
