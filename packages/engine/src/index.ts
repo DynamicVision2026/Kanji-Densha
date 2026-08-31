@@ -11,5 +11,10 @@ export type {
   GradeParams,
 } from './types.js';
 export { LAMPS } from './types.js';
-export { evaluateProgress, initialProgress, EchoRejectedError } from './evaluate.js';
+export {
+  evaluateProgress,
+  initialProgress,
+  nextEchoEligibleAtHours,
+  EchoRejectedError,
+} from './evaluate.js';
 export { EngineInvariantError } from './invariant.js';

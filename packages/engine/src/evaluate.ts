@@ -199,6 +199,33 @@ function openOrContinueEchoRound(
   d.openEcho = { startedAt: ev.at, sessionId: ev.sessionId, results: {} };
 }
 
+/**
+ * MR-5's echo-eligibility boundary — the hours-since-epoch instant at or
+ * after which the next echo may be answered, in the same unit as
+ * `almostAt`/`ev.at` everywhere else in this file (see the file-level
+ * comment: no conversion is ever applied to these values). `null` when the
+ * character is not at `almost` (nothing to schedule).
+ *
+ * This is the ONE echo-scheduling implementation (docs/reviews/remediation-plan.md
+ * R2). `assertEchoEligible` below enforces it on write; read-side callers —
+ * a UI computing when to next offer an echo — import this directly from
+ * `packages/engine` rather than re-deriving the MR-5.2/5.3 formula, so they
+ * cannot drift from what the engine will actually accept.
+ */
+export function nextEchoEligibleAtHours(
+  progress: Pick<CharacterProgress, 'status' | 'almostAt' | 'echoes'>,
+  params: Pick<GradeParams, 'echoFirstDelayHours' | 'echoSecondDelayHours'>,
+): number | null {
+  if (progress.status !== 'almost' || progress.almostAt === null) return null;
+  const firstOk = progress.echoes.find((e) => e.ok);
+  if (!firstOk) {
+    return progress.almostAt + params.echoFirstDelayHours; // MR-5.2 first echo
+  }
+  // MR-5.3 second echo: measured from almostAt (D1), with a 48h floor after
+  // the first successful echo.
+  return Math.max(progress.almostAt + params.echoSecondDelayHours, firstOk.at + ECHO_SECOND_FLOOR_HOURS);
+}
+
 function assertEchoEligible(
   d: Draft,
   ev: Extract<ProgressEvent, { type: 'answer' }>,
@@ -219,27 +246,18 @@ function assertEchoEligible(
   }
 
   const okEchoes = okEchoCount(d);
-  if (okEchoes === 0) {
-    // MR-5.2 first echo.
-    if (ev.at < d.almostAt + params.echoFirstDelayHours) {
-      throw new EchoRejectedError('MR-5.2', 'first echo before the first delay');
-    }
-    return;
-  }
   // A character at `almost` has at most one successful echo — two would have
   // derived `perfect`, not `almost`. Stated as an invariant so the impossibility
   // is explicit and honest, not a deleted branch.
-  invariant(okEchoes === 1, 'MR-5: an almost character has at most one successful echo');
+  invariant(okEchoes === 0 || okEchoes === 1, 'MR-5: an almost character has at most one successful echo');
 
-  // MR-5.3 second echo: measured from almostAt (D1), with a 48h floor after the
-  // first successful echo. okEchoes === 1 guarantees a first successful echo.
-  const firstOk = d.echoes.find((e) => e.ok);
-  invariant(firstOk, 'MR-5.3: okEchoes===1 implies a first successful echo');
-  if (ev.at < d.almostAt + params.echoSecondDelayHours) {
-    throw new EchoRejectedError('MR-5.3', 'second echo before the second delay');
-  }
-  if (ev.at < firstOk.at + ECHO_SECOND_FLOOR_HOURS) {
-    throw new EchoRejectedError('MR-5.3', 'second echo before the 48h floor after the first');
+  const eligibleAt = nextEchoEligibleAtHours(d, params);
+  invariant(eligibleAt !== null, 'MR-5: status/almostAt already checked above');
+  if (ev.at < eligibleAt) {
+    throw new EchoRejectedError(
+      okEchoes === 0 ? 'MR-5.2' : 'MR-5.3',
+      okEchoes === 0 ? 'first echo before the first delay' : 'second echo before the second delay or the 48h floor',
+    );
   }
 }
 
