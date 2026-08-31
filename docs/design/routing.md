@@ -1,9 +1,11 @@
 # Routing and state — the cutover
 
 Written 2026-08-31 during launch triage; corrected 2026-08-31 against
-`docs/reviews/verification-report.md`'s findings. Diagnostic, then target, then how we prove it.
-Every claim below has either been confirmed by demonstration, confirmed by inspection, or
-corrected against what the code actually does — the verification report cites which for each.
+`docs/reviews/verification-report.md`'s findings; updated 2026-08-31 after step 1 of §3 shipped
+(#36) with what that step actually did, where it deliberately departed from this document's
+original plan, and why. Diagnostic, then target, then how we prove it. Every claim below has
+either been confirmed by demonstration, confirmed by inspection, or corrected against what the
+code actually does — the verification report cites which for each.
 
 ---
 
@@ -26,18 +28,33 @@ A third, narrower construction path also exists: `demo-progress.ts`'s seed funct
 characters, bypassing both evaluators at seed time. Worth naming, not worth treating as equal in
 scope to the other two — it fires once, not on every interaction.
 
-**Two stores, and this is expected, not itself the defect.** Guest progress lives in one
-localStorage key (`densha.demo.progress.v3`, owned by `demo-progress.ts`); account progress lives
-server-side (`apps/web/src/lib/server/progress.ts`, Postgres/Neon). A guest/account split
-necessarily has different persistence per side — that isn't the flaw. The flaw is that the guest
-side's persistence is wired to the legacy evaluator instead of the real one.
+**What this actually cost, said plainly.** MR-6.3 and D9 are not new rules — they have governed
+the account path since M1. MR-6.3: a failed echo round unlights and repairs the lamp, taking
+status to なおし, even when the individual wrong answer is exempt from the wrong counters (a
+novel-surface failure, MR-6.4). D9: a soft item (似た駅名 and kin) can repair a lamp but never
+light one. Neither rule reached a guest, ever, because the guest path never ran the engine they
+belong to. That means every guest until this week — including the child in any session run
+against this build, and anyone who has touched the preview — was learning under different rules
+than every account holder. Guest mode was not a lighter version of the product; it was a
+different product wearing the same interface. That is the concrete answer to what the two-engine
+defect was costing, and the argument for having fixed it before launch rather than after.
 
-**The target architecture for the guest side already exists, built and tested, and is unused.**
-`packages/store` is a complete `ProgressStore` implementation — `LocalStore` (localStorage) calls
-`@kanji-densha/engine`'s real `evaluateProgress`, has its own test file, and its own comments cite
-architecture §3 and I5 directly. **Zero files in `apps/web` import `@kanji-densha/store`.** This
-was evidently built for an earlier milestone and never wired in. The work below is connecting it
-and deleting what it replaces — not designing new infrastructure.
+**Two stores, and this is expected, not itself the defect.** Guest progress lives in one
+localStorage key (`densha.demo.progress.v4` as of #36, owned by `demo-progress.ts`); account
+progress lives server-side (`apps/web/src/lib/server/progress.ts`, Postgres/Neon). A
+guest/account split necessarily has different persistence per side — that isn't the flaw. The
+flaw was that the guest side's persistence was wired to the legacy evaluator instead of the real
+one — fixed in step 1 below.
+
+**A `ProgressStore` implementation already exists, built and tested, and remains unused —
+deliberately, as of step 1.** `packages/store`'s `LocalStore` calls `@kanji-densha/engine`'s real
+`evaluateProgress` and its comments cite architecture §3 and I5 directly, but its `load`/`apply`
+are `Promise`-returning — built for a future `RemoteStore` that will genuinely need to await a
+network call. The guest UI reads progress *synchronously*, at render time and inside `useState`
+initializers, throughout (`guest-home.tsx`, `kanji-session.tsx`, `kanji.$char.tsx`). Wiring
+`LocalStore` in as originally planned here would have meant converting every one of those
+call sites to an async loading pattern — a materially larger, higher-regression-risk change than
+the actual defect required. §2 below records what step 1 did instead.
 
 **One route tree, mostly already shared — corrected from the original diagnosis.** `/demo/*`
 mirrors `/app/*` file-for-file, but the *presentation layer underneath both trees is already a
@@ -69,12 +86,14 @@ problem both follow from that single mistake.
 
 ## 2. Target — one of everything
 
-Exactly as `architecture.md` §3 specified before the harvest:
+Exactly as `architecture.md` §3 specified before the harvest, with one deliberate departure
+recorded below rather than silently taken:
 
-**One engine.** `evaluateProgress` in `packages/engine` is the only evaluator.
-`progress-eval.ts` and `demo-progress.ts`'s scoring are deleted, not deprecated.
+**One engine — done.** `evaluateProgress` in `packages/engine` is the only evaluator anywhere in
+the app. `progress-eval.ts` is deleted; `demo-progress.ts`'s scoring is deleted and replaced with
+calls to the real engine. This is the part of §2 that actually mattered, and it shipped in #36.
 
-**One store, two adapters — the interface already exists.**
+**One store, two adapters — the interface exists; step 1 did not adopt it for the guest side.**
 
 ```ts
 // packages/store/src/types.ts — already written, already tested
@@ -84,9 +103,19 @@ interface ProgressStore {
 }
 ```
 
-`LocalStore` (guest, localStorage) is built. `RemoteStore` (account, database) is the piece that
-doesn't exist yet — `apps/web/src/lib/server/progress.ts` does the equivalent job today but not
-behind this interface. Both call the same engine. **The UI never knows which one it has.**
+The plan going into step 1 was `LocalStore` (guest, localStorage) behind this interface, with
+`RemoteStore` (account, database) as the still-missing piece `apps/web/src/lib/server/progress.ts`
+does the equivalent job of today, outside the interface. That plan named `LocalStore` because it
+exists, not because its call shape had been checked against the guest UI's — it hadn't. It reads
+progress synchronously, and this interface is `Promise`-based. Step 1 wires `demo-progress.ts`
+straight to `evaluateProgress` plus `legacy-progress-adapter.ts`, the same direct-call shape
+`server/progress.ts` already uses instead of `RemoteStore`. **Both sides of the split now use the
+same pattern** — arguably more consistent than the originally planned mix of one direct-call side
+and one `ProgressStore` side would have been. The `ProgressStore` interface stays as written,
+unused by either side, pending one of two follow-ups, neither decided here: give it a
+synchronous-capable shape a localStorage adapter can honor without an async rewrite of the guest
+UI, or retire it if `RemoteStore` never gets built either. Either way, **the UI never knows which
+storage it has** — that property held throughout step 1 regardless of which pattern got it there.
 
 **One route tree.** No `/demo/*`. A guest and an account holder visit identical URLs; only the
 injected adapter differs.
@@ -118,8 +147,8 @@ top-level placement their sibling already had. Whether any of the four should mo
 **One resolver.** `/` decides, and nothing else does:
 
 ```
-signed in                     → /home  (RemoteStore)
-hasRidden flag present        → /home  (LocalStore)
+signed in                     → /home  (account persistence)
+hasRidden flag present        → /home  (guest persistence)
 otherwise                     → entrance page
 ```
 
@@ -130,10 +159,15 @@ first open or explicit switch.
 
 Deleting is the work. Each step is independently shippable.
 
-1. **Guest path onto the real engine.** `LocalStore` (already built) is wired into the guest
-   path. Delete `progress-eval.ts` and the legacy scoring in `demo-progress.ts`. Discard existing
-   guest localStorage rather than migrating it — nobody has real guest data yet, and migrating
-   between two disagreeing engines risks corrupting whatever *is* there for no gain.
+1. **✅ Shipped (#36). Guest path onto the real engine.** `progress-eval.ts` deleted;
+   `demo-progress.ts`'s scoring deleted and replaced with direct calls to
+   `@kanji-densha/engine`'s `evaluateProgress` plus `legacy-progress-adapter.ts` — not `LocalStore`,
+   per §2's note above. Guest localStorage moved `densha.demo.progress.v3` → `.v4` and old data was
+   discarded, not migrated, as planned. Also surfaced, not introduced: guest mode had never been
+   subject to MR-6.3 or D9 (see §1) — both now apply, so a guest ride is measurably stricter than
+   it was. Watch a full guest ride to だいたい on a deployed build and confirm it is still reachable
+   in one sitting before treating this as closed; if it isn't, that is a grade-parameter question,
+   not a rules question.
 2. **Fix the resolver duplication concretely confirmed above**, before collapsing routes: give
    `catalog.tsx`, `stamps.tsx`, `workshop.tsx` the same remembered-active-child resolution
    `app/index.tsx` already has, rather than falling back to the first-created child.
@@ -150,7 +184,10 @@ proof is CI, in the same style as the engine-purity gate.
 - **No module outside `packages/engine` may compute a status.** Grep gate: no occurrence of
   `'perfect'|'almost'|'fix'|'lost'` as an assignment target outside the engine and the
   `toTrainCar` mapping.
-- **`demo-progress` is importable only by `LocalStore`.** Boundary lint rule.
+- **`demo-progress.ts` is the only caller of `evaluateProgress` on the guest side, as
+  `server/progress.ts` is on the account side.** Boundary lint rule — no third module may import
+  `@kanji-densha/engine`'s `evaluateProgress` directly. (Originally phrased as "importable only by
+  `LocalStore`"; corrected per §2 — that class is not in the call path.)
 - **The route tree matches the canonical table in §2**, asserted by a test that enumerates the
   generated route tree and diffs against a checked-in list. A new route is a deliberate edit to
   that list, not an accident.
