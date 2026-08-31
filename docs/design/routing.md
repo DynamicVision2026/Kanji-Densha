@@ -168,13 +168,21 @@ Deleting is the work. Each step is independently shippable.
    it was. Watch a full guest ride to だいたい on a deployed build and confirm it is still reachable
    in one sitting before treating this as closed; if it isn't, that is a grade-parameter question,
    not a rules question.
-2. **Fix the resolver duplication concretely confirmed above**, before collapsing routes: give
-   `catalog.tsx`, `stamps.tsx`, `workshop.tsx` the same remembered-active-child resolution
-   `app/index.tsx` already has, rather than falling back to the first-created child.
+2. **✅ Shipped (#38). Fixed the resolver duplication.** `catalog.tsx`, `stamps.tsx`,
+   `workshop.tsx`, and a fourth instance found while checking (`parent.tsx`, arguably the most
+   serious — a parent could see another child's report with no indication it wasn't the one they
+   meant) now share `app/index.tsx`'s remembered-active-child resolution via one hook,
+   `useActiveChild` in `active-child.ts`, instead of each falling back to the first-created child.
+   Checked for a fifth instance by grepping every reader of the active-child primitives across
+   `apps/web/src`: all seven call sites are routes; every presentational component is prop-driven.
+   None found.
 3. **Collapse the routes.** `/demo/*` redirects to its `/` equivalent for one release, then is
-   deleted.
-4. **Delete the orphan.** `DepartureBoardView`.
-5. **One resolver** at `/`, per §2.
+   deleted. Not started — later work, not part of this week's four steps.
+4. **✅ Shipped. Deleted the orphan.** `DepartureBoardView` — confirmed still unreferenced,
+   removed along with its exclusive i18n strings (`boardTitle` stays; `departure-ticket.tsx` also
+   reads it). `apps/web/src/lib/departure-board.ts` (the data/scheduling module, `buildDepartureBoard`)
+   is untouched — it was never the orphan, only the `.tsx` view was.
+5. **One resolver** at `/`, per §2. Not started — later work, not part of this week's four steps.
 
 ## 4. How we prove it — structural, not manual
 
