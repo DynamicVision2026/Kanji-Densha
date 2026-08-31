@@ -12,8 +12,9 @@ import {
   getItem,
   gradeChoice,
 } from "../src/lib/items.ts";
-import { emptyProgress, evaluateProgress } from "../src/lib/progress-eval.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
+import { initialProgress } from "@kanji-densha/engine";
+import { answer, legacy, taught } from "./test-helpers/real-engine.ts";
 import { selectEchoSurface } from "../src/lib/echo-surfaces.ts";
 import { lookupReadingAudio } from "../src/data/reading-audio.ts";
 import { MESSAGES } from "../src/lib/i18n/messages.ts";
@@ -43,22 +44,9 @@ test("KD-001 completing 王 strokes is a shape success only", () => {
   const item = getItem("王:shape:0", true);
   assert.ok(item?.payload.strokeAssembly);
   assert.equal(gradeChoice(item, STROKE_COMPLETE_ID).correct, true);
-  let s = emptyProgress("王");
-  s = evaluateProgress(s, { type: "completeEncounter", nowIso: NOW }, G1);
-  s = evaluateProgress(s, { type: "completeUnderstand", nowIso: NOW }, G1);
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "shape",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-    },
-    G1,
-  );
+  let raw = taught("王", G1, NOW);
+  raw = answer(raw, G1, { lamp: "shape", correct: true, nowIso: NOW });
+  const s = legacy(raw, G1);
   assert.equal(s.lights.shape, true);
   assert.equal(s.lights.reading, false);
   assert.equal(s.lights.meaning, false);
@@ -89,24 +77,15 @@ test("KD-002 cloze success lights shape only", () => {
   const cloze = getClozeItem("王")!;
   const right = cloze.payload.choices.find((c) => c.correct)!;
   assert.equal(gradeChoice(cloze, right.id).correct, true);
-  let s = emptyProgress("王");
-  s = evaluateProgress(s, { type: "completeEncounter", nowIso: NOW }, G1);
-  s = evaluateProgress(s, { type: "completeUnderstand", nowIso: NOW }, G1);
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: cloze.kind,
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-      gentle: true,
-    },
-    G1,
-  );
-  assert.equal(s.lights.shape, true);
+  let raw = taught("王", G1, NOW);
+  raw = answer(raw, G1, { lamp: cloze.kind, correct: true, nowIso: NOW, soft: true });
+  const s = legacy(raw, G1);
+  // MR-4.2: a correct *soft* answer (cloze is soft — server/progress.ts
+  // classifies it the same way) repairs the light but does not light it.
+  // The legacy evaluator this test used to run against always lit on
+  // correct regardless of gentle; the real engine's rule is stricter, and
+  // this is the already-shipped account-path behavior, not a new change.
+  assert.equal(s.lights.shape, false);
   assert.equal(s.lights.reading, false);
   assert.equal(s.lights.meaning, false);
   assert.notEqual(s.status, "almost");

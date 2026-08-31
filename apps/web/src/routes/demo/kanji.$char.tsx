@@ -14,7 +14,7 @@ import {
 import { parseGrade } from "@/lib/grade-nav";
 import { PRACTICE_KINDS, type PracticeKind } from "@/lib/mastery";
 import { useI18n } from "@/lib/i18n/i18n";
-import type { ProgressState } from "@/lib/progress-eval";
+import type { ProgressState } from "@/lib/progress-view";
 
 type Search = { mode?: "play" | "look"; kind?: PracticeKind; grade?: number };
 

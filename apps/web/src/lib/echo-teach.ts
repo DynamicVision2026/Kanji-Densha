@@ -1,4 +1,4 @@
-import { utcDay } from "./progress-eval.ts";
+import { utcDay } from "./progress-view.ts";
 
 const KEY = "densha.echo-taught.v1";
 

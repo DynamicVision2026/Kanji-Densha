@@ -2,7 +2,7 @@ import { ymdInZone } from "./echo-arrival.ts";
 import { DEFAULT_WEEKLY_NEW, reachedBlueOrGreen, type GradeRoute } from "./grade-route.ts";
 import { schoolYearStartYear } from "./grade-rollover.ts";
 import type { ReportEvent } from "./parent-report.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 
 const TOKYO = "Asia/Tokyo";
 const DAY_MS = 86_400_000;

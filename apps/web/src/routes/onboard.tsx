@@ -7,7 +7,6 @@ import { importGuestProgress } from "@/lib/server/progress";
 import { writeActiveChildId } from "@/lib/active-child";
 import { writeStoredActiveGrade } from "@/lib/active-grade";
 import { readMigratableProgress } from "@/lib/demo-progress";
-import { toCharacterProgressFromGuest } from "@/lib/guest-import";
 import { AppShell } from "@/components/app-shell";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,7 +57,7 @@ function Onboard() {
       if (guestProgress.length > 0) {
         try {
           await importGuestProgress({
-            data: { childId: child.id, records: guestProgress.map(toCharacterProgressFromGuest) },
+            data: { childId: child.id, records: guestProgress },
           });
         } catch (err) {
           console.error("guest progress import failed", err);

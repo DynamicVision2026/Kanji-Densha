@@ -1,5 +1,5 @@
 import { linesContaining } from "./lines.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 
 export type Stamp = {
   kanji: string;

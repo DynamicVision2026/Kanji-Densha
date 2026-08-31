@@ -3,7 +3,7 @@ import { test } from "node:test";
 import { readFileSync } from "node:fs";
 import { getItem } from "../src/lib/items.ts";
 import { preferredMeaningSurface, exampleWordSurfaces, isLegalEchoTransition } from "../src/lib/echo-surfaces.ts";
-import { emptyProgress, type ProgressState } from "../src/lib/progress-eval.ts";
+import { emptyProgress, type ProgressState } from "../src/lib/progress-view.ts";
 import { buildParentReport } from "../src/lib/parent-report.ts";
 import { isTeachReady, teachReadyReport } from "../src/lib/teach-ready.ts";
 

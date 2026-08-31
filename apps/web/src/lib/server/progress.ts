@@ -13,7 +13,7 @@ import {
   emptyProgress,
   utcDay,
   type ProgressState,
-} from "@/lib/progress-eval";
+} from "@/lib/progress-view";
 import {
   EchoRejectedError,
   evaluateProgress,
@@ -49,7 +49,7 @@ import {
 } from "@/lib/server/grade-route";
 
 export type { TrainView } from "@/lib/trains";
-export type { ProgressState } from "@/lib/progress-eval";
+export type { ProgressState } from "@/lib/progress-view";
 
 function asStatus(raw: string): MasteryStatus {
   if (raw === "lost" || raw === "fix" || raw === "almost" || raw === "perfect") return raw;

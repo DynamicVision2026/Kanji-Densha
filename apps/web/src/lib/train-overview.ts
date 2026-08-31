@@ -1,7 +1,7 @@
 import { GRADE_COUNTS, trainsForGrade, type Grade } from "../data/kyoiku.ts";
 import { KANJI_LINES } from "../data/lines.ts";
 import type { MasteryStatus } from "./mastery.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 
 export type GradeRingView = {
   grade: Grade;

@@ -2,7 +2,7 @@ import { KANJI_LINES } from "../data/lines.ts";
 import { PHONETIC_FAMILIES } from "../data/phonetic-families.ts";
 import { familyFor } from "./phonetic-family.ts";
 import { primaryLineFor } from "./lines.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 
 export type WeekPeek = {
   kind: "line" | "family";

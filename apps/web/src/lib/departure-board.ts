@@ -1,4 +1,4 @@
-import { echoIsDue, type ProgressState } from "./progress-eval.ts";
+import { echoIsDue, type ProgressState } from "./progress-view.ts";
 import { echoArrival } from "./echo-arrival.ts";
 import { dueInspections, INSPECTION_DAILY_CAP, type InspectionRow } from "./inspection.ts";
 import type { WeeklyPlan } from "./weekly-plan.ts";

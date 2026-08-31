@@ -5,8 +5,9 @@ import { getItem, drawPublishedItems, shapeSurfaceAvailable, gradeChoice } from 
 import { shapeModeFor, structureType } from "../src/lib/kanji-structure.ts";
 import { getPublishedShape, classifyStructure } from "../src/data/shape-catalog.ts";
 import { autoGate } from "../src/lib/shape-payload.ts";
-import { emptyProgress, evaluateProgress } from "../src/lib/progress-eval.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
+import { initialProgress } from "@kanji-densha/engine";
+import { answer, legacy } from "./test-helpers/real-engine.ts";
 import { COMPONENT_COMPLETE_ID } from "../src/lib/component-assembly.ts";
 import { STROKE_COMPLETE_ID } from "../src/lib/stroke-assembly.ts";
 
@@ -72,19 +73,12 @@ test("B5 child sources do not call a live decompose API", () => {
 
 test("B6 evaluateProgress is unchanged by the gate", () => {
   const params = getGradeParams(1);
-  const next = evaluateProgress(
-    emptyProgress("山"),
-    {
-      type: "answer",
-      kind: "shape",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: new Date().toISOString(),
-      shapeAvailable: true,
-    },
-    params,
-  );
+  const raw = answer(initialProgress("山"), params, {
+    lamp: "shape",
+    correct: true,
+    nowIso: new Date().toISOString(),
+  });
+  const next = legacy(raw, params);
   assert.equal(next.lights.shape, true);
   assert.notEqual(next.status, "perfect");
 });

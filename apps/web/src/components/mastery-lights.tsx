@@ -1,4 +1,4 @@
-import type { Lights } from "@/lib/progress-eval";
+import type { Lights } from "@/lib/progress-view";
 import type { LightsUi } from "@/lib/grade-params";
 import { useI18n } from "@/lib/i18n/i18n";
 import { cn } from "@/lib/utils";

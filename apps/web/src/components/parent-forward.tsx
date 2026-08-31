@@ -1,6 +1,6 @@
 import type { ForwardMetrics } from "@/lib/parent-forward";
 import type { GradeRoute } from "@/lib/grade-route";
-import type { ProgressState } from "@/lib/progress-eval";
+import type { ProgressState } from "@/lib/progress-view";
 import type { WeeklyPlan } from "@/lib/weekly-plan";
 import type { ProjectedArrival } from "@/lib/projected-arrival";
 import type { MessageKey } from "@/lib/i18n/messages";

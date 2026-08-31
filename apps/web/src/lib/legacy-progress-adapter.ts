@@ -6,12 +6,14 @@
  * every caller of this function can only read a projection of one that
  * `evaluateProgress` already computed.
  *
- * This exists so the engine swap doesn't require rewriting 23 files in one
- * pass. `server/progress.ts` is the only file that changes: it calls the
- * real engine to write, and this adapter to read. Every consumer keeps
- * compiling, untouched, against the same field names it always used. Delete
- * this file, one consumer at a time, as each moves to `CharacterProgress`
- * natively — it is meant to shrink, not to become permanent scaffolding.
+ * This exists so the engine swap doesn't require rewriting every consumer in
+ * one pass. `server/progress.ts` (account) and `demo-progress.ts` (guest) are
+ * the only two files that write: each calls the real engine directly, then
+ * this adapter to produce the read-side projection. Every other consumer
+ * keeps compiling, untouched, against the same field names it always used.
+ * Delete this file, one consumer at a time, as each moves to
+ * `CharacterProgress` natively — it is meant to shrink, not to become
+ * permanent scaffolding.
  *
  * Not every field this shape wants has a source in the real engine — some
  * were never engine state at all (`attempts`, `correctStreakByKind`,
@@ -26,7 +28,7 @@
  * decide what a child sees — all come straight from the real engine.
  */
 import type { CharacterProgress, GradeParams as EngineGradeParams, Lamp } from "@kanji-densha/engine";
-import type { ProgressState } from "./progress-eval";
+import type { ProgressState } from "./progress-view";
 import type { GradeParams as LegacyGradeParams } from "./grade-params";
 
 const LAMPS: readonly Lamp[] = ["reading", "meaning", "shape"];

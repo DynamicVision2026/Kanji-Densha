@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { echoArrivalWhen } from "@/lib/echo-arrival";
 import { useI18n } from "@/lib/i18n/i18n";
-import type { ProgressState } from "@/lib/progress-eval";
+import type { ProgressState } from "@/lib/progress-view";
 
 export function EchoQueue({
   rows,

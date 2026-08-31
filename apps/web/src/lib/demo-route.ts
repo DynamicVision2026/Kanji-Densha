@@ -17,7 +17,7 @@ import { buildDepartureBoard, type DepartureBoard } from "./departure-board.ts";
 import { buildForwardMetrics, type ForwardMetrics } from "./parent-forward.ts";
 import { buildProjectedArrival, type ProjectedArrival } from "./projected-arrival.ts";
 import { buildWeeklyPlan, rollPlanState, type PlanState, type WeeklyPlan } from "./weekly-plan.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 import type { ReportEvent } from "./parent-report.ts";
 import type { Grade } from "../data/kyoiku.ts";
 

@@ -46,7 +46,7 @@ import {
   suggestBeat,
   type BeatId,
   type ProgressState,
-} from "@/lib/progress-eval";
+} from "@/lib/progress-view";
 import { useDwell } from "@/lib/use-dwell";
 import { markSavePromptShown, sawSavePromptThisSession } from "@/lib/save-prompt";
 import { earliestEchoDueAt, readSessionRides, recordSessionRide } from "@/lib/session-stub";

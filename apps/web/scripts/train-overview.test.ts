@@ -3,8 +3,10 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { GRADE_COUNTS, trainsForGrade } from "../src/data/kyoiku.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
-import { emptyProgress, evaluateProgress, type ProgressState } from "../src/lib/progress-eval.ts";
+import { emptyProgress, type ProgressState } from "../src/lib/progress-view.ts";
 import { justReachedPerfect } from "../src/lib/stamps.ts";
+import { initialProgress, type CharacterProgress } from "@kanji-densha/engine";
+import { answer, legacy, hoursFromIso } from "./test-helpers/real-engine.ts";
 import { buildGradeRings, hubCounts } from "../src/lib/train-overview.ts";
 import {
   CAR_GAP,
@@ -118,7 +120,11 @@ test("overview is UI state on child home, not a peer route", () => {
   assert.match(ja, /はっしゃひょうへ/);
   assert.match(ja, /みどりの くるま/);
   assert.match(demo, /DEMO_COUPLE_CHAR = "花"/);
-  assert.match(demo, /echoSuccessCount: 1/);
+  // Was `echoSuccessCount: 1` under the legacy ProgressState seed; the real
+  // engine's CharacterProgress records one successful echo as a single
+  // `{ ok: true, ... }` entry in `echoes` instead (routing.md §1 step 1).
+  assert.match(demo, /seed-echo-couple-0/);
+  assert.equal(/seed-echo-couple-1/.test(demo), false);
   assert.match(demo, /\["音", "下", "火"\]/);
   assert.equal(/opts\?\.char \?\? hubLast/.test(home), false);
 });
@@ -154,29 +160,29 @@ test("switchback: first landing is detected from the LUT; pose interpolates", ()
 
 test("second due echo still becomes perfect (couple trigger; rules unchanged)", () => {
   const now = "2026-08-25T06:00:00.000Z";
-  const prev: ProgressState = {
-    ...emptyProgress("花"),
-    encounterCompleted: true,
-    understandCompleted: true,
+  const params = getGradeParams(1);
+  let raw: CharacterProgress = {
+    ...initialProgress("花"),
+    encountered: true,
+    understood: true,
     status: "almost",
-    lights: { reading: true, meaning: true, shape: true },
-    echoSuccessCount: 1,
-    echoDueAt: "2026-08-25T05:00:00.000Z",
+    lamps: { reading: true, meaning: true, shape: true },
+    almostAt: hoursFromIso(now) - 200,
+    echoes: [{ at: hoursFromIso(now) - 100, ok: true, sessionId: "prior-echo" }],
   };
-  const next = evaluateProgress(
-    prev,
-    {
-      type: "answer",
-      kind: "reading",
+  const prev = legacy(raw, params);
+  const echoSession = "second-echo";
+  for (const lamp of ["reading", "meaning", "shape"] as const) {
+    raw = answer(raw, params, {
+      lamp,
       correct: true,
-      isEcho: true,
-      echoBatchDone: true,
       nowIso: now,
-      shapeAvailable: true,
+      mode: "echo",
       surfaceId: "花:花火",
-    },
-    getGradeParams(1),
-  );
+      sessionId: echoSession,
+    });
+  }
+  const next = legacy(raw, params);
   assert.equal(next.status, "perfect");
   assert.equal(justReachedPerfect(prev, next), true);
 });

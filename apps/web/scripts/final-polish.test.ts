@@ -12,7 +12,7 @@ import { MOTIF_ELEMENTS } from "../src/data/encounter-motif-drawings.ts";
 import { ENCOUNTER_MOTIF_W63 } from "../src/data/encounter-motifs-w63.ts";
 import { isTeachReady } from "../src/lib/teach-ready.ts";
 import { buildParentReport } from "../src/lib/parent-report.ts";
-import { emptyProgress } from "../src/lib/progress-eval.ts";
+import { emptyProgress } from "../src/lib/progress-view.ts";
 import { MESSAGES } from "../src/lib/i18n/messages.ts";
 
 test("second 再訪 delay is ~168h on every grade; first delay stays 20/36", () => {

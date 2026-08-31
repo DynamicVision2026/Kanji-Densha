@@ -11,8 +11,9 @@ import { getItem, gradeChoice, drawPublishedItems } from "../src/lib/items.ts";
 import { shapeModeFor, structureType } from "../src/lib/kanji-structure.ts";
 import { canPlaceComponent } from "../src/lib/component-assembly.ts";
 import { COMPONENT_COMPLETE_ID } from "../src/lib/component-assembly.ts";
-import { emptyProgress, evaluateProgress } from "../src/lib/progress-eval.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
+import { initialProgress } from "@kanji-densha/engine";
+import { answer, legacy, taught } from "./test-helpers/real-engine.ts";
 import { isElementaryReading } from "../src/lib/readings.ts";
 
 const G1 = getGradeParams(1);
@@ -84,69 +85,30 @@ test("echo published item reading stays inside elementary_readings", () => {
   assert.equal(gradeChoice(item, sei.id).correct, true);
 });
 
-test("novel surface failure repairs the light but does not demote", () => {
-  let s = emptyProgress("生");
-  s = evaluateProgress(s, { type: "completeEncounter", nowIso: NOW }, G1);
-  s = evaluateProgress(s, { type: "completeUnderstand", nowIso: NOW }, G1);
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "reading",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-      surfaceId: "生:solo",
-    },
-    G1,
-  );
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "meaning",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-      surfaceId: "生:solo",
-    },
-    G1,
-  );
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "shape",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-      surfaceId: "生:solo",
-    },
-    G1,
-  );
+test("novel surface failure repairs the light but does not touch the wrong counters", () => {
+  let raw = taught("生", G1, NOW);
+  for (const lamp of ["reading", "meaning", "shape"] as const) {
+    raw = answer(raw, G1, { lamp, correct: true, nowIso: NOW, surfaceId: "生:solo" });
+  }
+  const s = legacy(raw, G1);
   assert.equal(s.status, "almost");
   const later = "2026-08-22T02:00:00.000Z";
-  const failed = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "reading",
-      correct: false,
-      isEcho: true,
-      echoBatchDone: false,
-      nowIso: later,
-      shapeAvailable: true,
-      surfaceId: "生:生きる",
-    },
-    G1,
-  );
-  assert.equal(failed.status, "almost");
+  const failedRaw = answer(raw, G1, {
+    lamp: "reading",
+    correct: false,
+    nowIso: later,
+    mode: "echo",
+    surfaceId: "生:生きる",
+  });
+  const failed = legacy(failedRaw, G1);
+  // MR-7.2: any non-empty repairs list is "fix", regardless of why the
+  // repair was added — a novel-surface failure is exempt from the wrong
+  // counters (asserted below) but not from needing repair. The legacy
+  // evaluator this test used to run against special-cased novel failures out
+  // of its status derivation entirely; the real engine's derivation is a
+  // single unconditional rule (routing.md's I5) and does not carry that
+  // special case.
+  assert.equal(failed.status, "fix");
   assert.equal(failed.lights.reading, false);
   assert.ok(failed.repairRequiredKinds.includes("reading"));
   assert.equal(failed.wrongCountByKind.reading, s.wrongCountByKind.reading);
@@ -154,40 +116,19 @@ test("novel surface failure repairs the light but does not demote", () => {
 });
 
 test("known surface failure still demotes echo to fix", () => {
-  let s = emptyProgress("生");
-  s = evaluateProgress(s, { type: "completeEncounter", nowIso: NOW }, G1);
-  s = evaluateProgress(s, { type: "completeUnderstand", nowIso: NOW }, G1);
-  for (const kind of ["reading", "meaning", "shape"] as const) {
-    s = evaluateProgress(
-      s,
-      {
-        type: "answer",
-        kind,
-        correct: true,
-        isEcho: false,
-        echoBatchDone: false,
-        nowIso: NOW,
-        shapeAvailable: true,
-        surfaceId: "生:solo",
-      },
-      G1,
-    );
+  let raw = taught("生", G1, NOW);
+  for (const lamp of ["reading", "meaning", "shape"] as const) {
+    raw = answer(raw, G1, { lamp, correct: true, nowIso: NOW, surfaceId: "生:solo" });
   }
   const later = "2026-08-22T02:00:00.000Z";
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "reading",
-      correct: false,
-      isEcho: true,
-      echoBatchDone: false,
-      nowIso: later,
-      shapeAvailable: true,
-      surfaceId: "生:solo",
-    },
-    G1,
-  );
+  raw = answer(raw, G1, {
+    lamp: "reading",
+    correct: false,
+    nowIso: later,
+    mode: "echo",
+    surfaceId: "生:solo",
+  });
+  const s = legacy(raw, G1);
   assert.equal(s.status, "fix");
   assert.equal(s.wrongCountByKind.reading, 1);
   assert.equal(s.consecutiveWrongByKind.reading, 1);
@@ -229,66 +170,32 @@ test("wrong component does not snap; matching label on next slot does", () => {
 });
 
 test("three novel failures do not send G1 to まよい", () => {
-  let s = emptyProgress("花");
-  s = evaluateProgress(s, { type: "completeEncounter", nowIso: NOW }, G1);
-  s = evaluateProgress(s, { type: "completeUnderstand", nowIso: NOW }, G1);
-  for (let i = 0; i < 3; i++) {
-    s = evaluateProgress(
-      s,
-      {
-        type: "answer",
-        kind: "reading",
-        correct: false,
-        isEcho: false,
-        echoBatchDone: false,
-        nowIso: NOW,
-        shapeAvailable: true,
-        surfaceId: "花:花火",
-      },
-      G1,
-    );
+  let raw = taught("花", G1, NOW);
+  // MR-4.3's novel-surface exemption spends per surface — a repeated wrong
+  // on the SAME surface only exempts once (novelFailures tracks that it was
+  // already spent). Three genuinely distinct never-seen surfaces are needed
+  // to keep every one of these three wrongs exempt, unlike the legacy
+  // evaluator (no such per-surface bookkeeping — every repeat of an
+  // never-succeeded surface stayed "novel" indefinitely).
+  for (const surfaceId of ["花:花火", "花:花見", "花:花束"]) {
+    raw = answer(raw, G1, { lamp: "reading", correct: false, nowIso: NOW, surfaceId });
   }
+  const s = legacy(raw, G1);
   assert.notEqual(s.status, "lost");
   assert.equal(s.wrongCountByKind.reading, 0);
   assert.equal(s.lights.reading, false);
 });
 
 test("known surface in surfacesSeenSuccess + wrong uses fix/lost counters", () => {
-  let s = emptyProgress("花");
-  s = evaluateProgress(s, { type: "completeEncounter", nowIso: NOW }, G1);
-  s = evaluateProgress(s, { type: "completeUnderstand", nowIso: NOW }, G1);
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "reading",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-      surfaceId: "花:花火",
-    },
-    G1,
-  );
+  let raw = taught("花", G1, NOW);
+  raw = answer(raw, G1, { lamp: "reading", correct: true, nowIso: NOW, surfaceId: "花:花火" });
+  let s = legacy(raw, G1);
   assert.ok(s.surfacesSeenSuccess.includes("花:花火"));
   assert.equal(s.wrongCountByKind.reading, 0);
   assert.equal(s.consecutiveWrongByKind.reading, 0);
 
-  s = evaluateProgress(
-    s,
-    {
-      type: "answer",
-      kind: "reading",
-      correct: false,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: NOW,
-      shapeAvailable: true,
-      surfaceId: "花:花火",
-    },
-    G1,
-  );
+  raw = answer(raw, G1, { lamp: "reading", correct: false, nowIso: NOW, surfaceId: "花:花火" });
+  s = legacy(raw, G1);
   assert.equal(s.status, "fix");
   assert.equal(s.wrongCountByKind.reading, 1);
   assert.equal(s.consecutiveWrongByKind.reading, 1);
@@ -296,21 +203,9 @@ test("known surface in surfacesSeenSuccess + wrong uses fix/lost counters", () =
   assert.ok(s.repairRequiredKinds.includes("reading"));
 
   for (let i = 0; i < 2; i++) {
-    s = evaluateProgress(
-      s,
-      {
-        type: "answer",
-        kind: "reading",
-        correct: false,
-        isEcho: false,
-        echoBatchDone: false,
-        nowIso: NOW,
-        shapeAvailable: true,
-        surfaceId: "花:花火",
-      },
-      G1,
-    );
+    raw = answer(raw, G1, { lamp: "reading", correct: false, nowIso: NOW, surfaceId: "花:花火" });
   }
+  s = legacy(raw, G1);
   assert.equal(s.status, "lost");
   assert.equal(s.wrongCountByKind.reading, 3);
   assert.equal(s.consecutiveWrongByKind.reading, 3);

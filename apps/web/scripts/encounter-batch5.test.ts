@@ -10,8 +10,9 @@ import {
 } from "../src/lib/encounters.ts";
 import { hasEchoBundle } from "../src/lib/echo-surfaces.ts";
 import { isTeachReady, teachReadyReport } from "../src/lib/teach-ready.ts";
-import { emptyProgress, evaluateProgress } from "../src/lib/progress-eval.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
+import { evaluateProgress, initialProgress } from "@kanji-densha/engine";
+import { requiredLamps, toEngineGradeParams, toLegacyProgressState } from "../src/lib/legacy-progress-adapter.ts";
 
 function packageChars(grade: number) {
   return KYOIKU.filter((k) => k.grade === grade && (grade === 1 || hasEchoBundle(k.char)));
@@ -54,12 +55,14 @@ test("teach_ready imagery uses encounter, not YouTube", () => {
 });
 
 test("encounter completion does not invent lamps", () => {
-  const params = getGradeParams(1);
-  const next = evaluateProgress(
-    emptyProgress("山"),
-    { type: "completeEncounter", nowIso: "2026-08-23T00:00:00.000Z" },
-    params,
+  const engineParams = toEngineGradeParams(getGradeParams(1));
+  const raw = evaluateProgress(
+    initialProgress("山"),
+    { type: "encounter", at: Date.parse("2026-08-23T00:00:00.000Z") / 3_600_000, sessionId: "t" },
+    engineParams,
+    requiredLamps(true),
   );
+  const next = toLegacyProgressState(raw, engineParams);
   assert.equal(next.encounterCompleted, true);
   assert.equal(next.lights.reading, false);
   assert.equal(next.lights.meaning, false);

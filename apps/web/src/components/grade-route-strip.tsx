@@ -1,6 +1,6 @@
 import { reachedBlueOrGreen, type GradeRoute } from "@/lib/grade-route";
 import { STATUS_META, type MasteryStatus } from "@/lib/mastery";
-import type { ProgressState } from "@/lib/progress-eval";
+import type { ProgressState } from "@/lib/progress-view";
 import type { WeeklyPlan } from "@/lib/weekly-plan";
 import { useI18n } from "@/lib/i18n/i18n";
 import { cn } from "@/lib/utils";
