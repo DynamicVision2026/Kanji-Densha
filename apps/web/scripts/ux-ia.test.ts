@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { buildDepartureBoard } from "../src/lib/departure-board.ts";
-import { emptyProgress, type ProgressState } from "../src/lib/progress-eval.ts";
+import { emptyProgress, type ProgressState } from "../src/lib/progress-view.ts";
 import { boardStageCards, pickDeparture } from "../src/lib/pick-departure.ts";
 
 function carsFrom(chars: string[], status: ProgressState["status"] = "new") {

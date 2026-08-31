@@ -3,7 +3,7 @@ import { pairFor } from "./confusable.ts";
 import { exampleWordSurfaces } from "./echo-surfaces.ts";
 import { mapLinesFor } from "./lines.ts";
 import { STATUSES, type MasteryStatus, type PracticeKind } from "./mastery.ts";
-import { emptyProgress, type ProgressState } from "./progress-eval.ts";
+import { emptyProgress, type ProgressState } from "./progress-view.ts";
 import { isTeachReady } from "./teach-ready.ts";
 import type { Stamp } from "./stamps.ts";
 import { taughtThisWeek, type TaughtItem } from "./week-taught.ts";

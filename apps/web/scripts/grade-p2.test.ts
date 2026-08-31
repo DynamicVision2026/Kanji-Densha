@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { GRADE_PARAMS } from "../src/lib/grade-params.ts";
 import { makeGradeRoute, orderedKanjiForGrade } from "../src/lib/grade-route.ts";
-import { emptyProgress, type ProgressState } from "../src/lib/progress-eval.ts";
+import { emptyProgress, type ProgressState } from "../src/lib/progress-view.ts";
 import {
   canAdvanceGrade,
   firstWeekOnNewRoute,

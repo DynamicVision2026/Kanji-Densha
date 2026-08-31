@@ -3,7 +3,7 @@ import { test } from "node:test";
 import { CONFUSABLE_PAIRS } from "../src/data/confusable.ts";
 import { buildConfusableQuiz, pairFor, pairPlayable } from "../src/lib/confusable.ts";
 import { getConfusableItem, gradeChoice } from "../src/lib/items.ts";
-import { emptyProgress } from "../src/lib/progress-eval.ts";
+import { emptyProgress } from "../src/lib/progress-view.ts";
 import { justReachedPerfect, mergeStamp, stampFromPerfect } from "../src/lib/stamps.ts";
 
 test("fifteen editorial confusable pairs; G1 can play 右/石 and not 未/末", () => {

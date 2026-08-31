@@ -7,7 +7,7 @@ import {
   orderedKanjiForGrade,
   startIndexFor,
 } from "../src/lib/grade-route.ts";
-import { emptyProgress, evaluateProgress, type ProgressState } from "../src/lib/progress-eval.ts";
+import { emptyProgress, type ProgressState } from "../src/lib/progress-view.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
 import { isInspectionDue, markInspectionPass } from "../src/lib/inspection.ts";
 import {
@@ -92,12 +92,11 @@ test("P1 点検 is a flag: 60 days quiet after green, never demotes", () => {
   assert.equal(isInspectionDue(quiet, passed["一"], now), false);
   const later = isInspectionDue(quiet, passed["一"], "2027-02-01T00:00:00.000Z");
   assert.equal(later, true);
-  const afterOpen = evaluateProgress(
-    quiet,
-    { type: "open", nowIso: now },
-    getGradeParams(1),
-  );
-  assert.equal(afterOpen.status, "perfect");
+  // D8 / MR-8: the real engine has no decay branch and no "open" event —
+  // status only ever changes on an answer/encounter/understand event, so a
+  // quiet perfect character simply stays perfect with nothing to assert here
+  // beyond what isInspectionDue already covers above.
+  assert.equal(quiet.status, "perfect");
 });
 
 test("P1 発車標 has this-week dates only and no behind copy in source", () => {

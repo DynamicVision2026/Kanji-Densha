@@ -1,5 +1,5 @@
 import { ymdInZone } from "./echo-arrival.ts";
-import { echoIsDue, type ProgressState } from "./progress-eval.ts";
+import { echoIsDue, type ProgressState } from "./progress-view.ts";
 import {
   DEFAULT_WEEKLY_NEW,
   reachedBlueOrGreen,

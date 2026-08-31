@@ -11,8 +11,9 @@ import {
   isAssemblyComplete,
   isNextStroke,
 } from "../src/lib/stroke-assembly.ts";
-import { evaluateProgress, emptyProgress } from "../src/lib/progress-eval.ts";
 import { getGradeParams } from "../src/lib/grade-params.ts";
+import { initialProgress } from "@kanji-densha/engine";
+import { answer, legacy } from "./test-helpers/real-engine.ts";
 import { COMPONENT_COMPLETE_ID } from "../src/lib/component-assembly.ts";
 
 test("pilot set exposes stroke_assembly for primitives", () => {
@@ -87,20 +88,9 @@ test("右 is ナ+口 component assembly, not leftover MCQ", () => {
 
 test("successful stroke assembly only lights the existing shape lamp", () => {
   const params = getGradeParams(1);
-  const prev = emptyProgress("山");
-  const next = evaluateProgress(
-    prev,
-    {
-      type: "answer",
-      kind: "shape",
-      correct: true,
-      isEcho: false,
-      echoBatchDone: false,
-      nowIso: new Date().toISOString(),
-      shapeAvailable: true,
-    },
-    params,
-  );
+  const prev = initialProgress("山");
+  const raw = answer(prev, params, { lamp: "shape", correct: true, nowIso: new Date().toISOString() });
+  const next = legacy(raw, params);
   assert.equal(next.lights.shape, true);
   assert.equal(next.status === "perfect", false);
   assert.notEqual(next.status, "perfect");

@@ -13,7 +13,7 @@ import type { InspectionRow } from "@/lib/inspection";
 import { markInspectionPass } from "@/lib/inspection";
 import { isInspectionDue } from "@/lib/inspection";
 import { rollPlanState, type PlanState } from "@/lib/weekly-plan";
-import type { ProgressState } from "@/lib/progress-eval";
+import type { ProgressState } from "@/lib/progress-view";
 
 export type ChildRouteRow = {
   id: string;

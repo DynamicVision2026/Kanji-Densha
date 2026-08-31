@@ -2,7 +2,7 @@ import { ymdInZone } from "./echo-arrival.ts";
 import { reachedBlueOrGreen, type GradeRoute, type StartBand } from "./grade-route.ts";
 import { isInspectionDue, type InspectionRow } from "./inspection.ts";
 import type { ReportEvent } from "./parent-report.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 import type { WeeklyPlan } from "./weekly-plan.ts";
 
 export type ForwardMetrics = {

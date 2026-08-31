@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { useAutoDemo } from "@/components/auto-demo";
 import { ChildShell } from "@/components/child-shell";
-import type { BeatId } from "@/lib/progress-eval";
+import type { BeatId } from "@/lib/progress-view";
 import { parseGrade } from "@/lib/grade-nav";
 import { useI18n } from "@/lib/i18n/i18n";
 import { cn } from "@/lib/utils";

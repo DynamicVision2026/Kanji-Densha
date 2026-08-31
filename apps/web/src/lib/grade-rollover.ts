@@ -5,7 +5,7 @@ import {
   makeGradeRoute,
   type GradeRoute,
 } from "./grade-route.ts";
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 import { pickWeeklyNew, rollPlanState, tokyoWeekStart, type PlanState } from "./weekly-plan.ts";
 
 const TOKYO = "Asia/Tokyo";

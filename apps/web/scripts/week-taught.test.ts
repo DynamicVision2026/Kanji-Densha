@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import { emptyProgress } from "../src/lib/progress-eval.ts";
+import { emptyProgress } from "../src/lib/progress-view.ts";
 import { buildParentReport } from "../src/lib/parent-report.ts";
 import { taughtThisWeek } from "../src/lib/week-taught.ts";
 import { pickWeekPeek } from "../src/lib/week-peek.ts";

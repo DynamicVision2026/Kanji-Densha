@@ -1,4 +1,4 @@
-import type { ProgressState } from "./progress-eval.ts";
+import type { ProgressState } from "./progress-view.ts";
 
 /** Quiet days after green before the first 点検. Flag only — never demotes. */
 export const INSPECTION_FIRST_DAYS = 60;

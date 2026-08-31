@@ -1,19 +1,17 @@
 import { trainsForGrade, getKanji, type Grade } from "@/data/kyoiku";
-import type { MasteryStatus, PracticeKind } from "@/lib/mastery";
+import type { PracticeKind } from "@/lib/mastery";
 import { decorateTrains } from "@/lib/trains";
 import { getGradeParams } from "@/lib/grade-params";
 import {
   echoAvailable,
   echoIsDue,
   emptyProgress,
-  evaluateProgress,
-  hydrateProgress,
   requiredLights,
   suggestBeat,
   utcDay,
   type BeatId,
   type ProgressState,
-} from "@/lib/progress-eval";
+} from "@/lib/progress-view";
 import {
   drawPublishedItems,
   getItem,
@@ -39,8 +37,26 @@ import {
 } from "@/lib/demo-route";
 import type { StartBand } from "@/lib/grade-route";
 import { markHasRidden } from "@/lib/has-ridden";
+import {
+  EchoRejectedError,
+  evaluateProgress,
+  initialProgress,
+  type CharacterProgress,
+} from "@kanji-densha/engine";
+import {
+  requiredLamps as computeRequiredLamps,
+  toEngineGradeParams,
+  toLegacyProgressState,
+} from "@/lib/legacy-progress-adapter";
 
-const KEY = "densha.demo.progress.v3";
+// v4: real-engine `CharacterProgress` records, keyed by character (routing.md
+// §1/§3 step 1 — the guest path now runs the same evaluateProgress the
+// account path does, I5). v3 held the legacy engine's own `ProgressState`
+// and is deliberately abandoned rather than migrated: nobody has real guest
+// data yet, and reconstructing engine state (echo timestamps, open rounds)
+// from the legacy projection's summary fields would be a guess dressed up as
+// a migration.
+const KEY = "densha.demo.progress.v4";
 const EVENT_KEY = "densha.demo.events.v2";
 const ECHO_KEY = "densha.demo.echo-starts.v2";
 const STAMP_KEY = "densha.demo.stamps.v1";
@@ -79,24 +95,43 @@ function paramsFor(char: string) {
   return getGradeParams(getKanji(char)?.grade ?? DEMO_CHILD.grade);
 }
 
-function isoHoursFromNow(h: number) {
-  return new Date(Date.now() + h * 3600_000).toISOString();
+function engineParamsFor(char: string) {
+  return toEngineGradeParams(paramsFor(char));
 }
 
-function seedMap(): Record<string, ProgressState> {
+function requiredLampsFor(char: string) {
+  return computeRequiredLamps(shapeSurfaceAvailable(char));
+}
+
+function nowHours(): number {
+  return Date.now() / 3_600_000;
+}
+
+function hoursAgo(h: number): number {
+  return nowHours() - h;
+}
+
+function toLegacyRow(p: CharacterProgress): ProgressState {
+  return toLegacyProgressState(p, engineParamsFor(p.characterId));
+}
+
+/** A hand-built seed row, not a real evaluatedProgress — see seedMap's own note. */
+function seedChar(char: string, patch: Partial<CharacterProgress>): CharacterProgress {
+  return { ...initialProgress(char), encountered: true, understood: true, ...patch };
+}
+
+/**
+ * Hand-built `CharacterProgress` literals, exactly as the old seed built
+ * hand-built `ProgressState` literals — bypassing evaluateProgress at seed
+ * time (routing.md §1 names this narrow, accepted exception). Echo arrays
+ * are filled in consistently with each row's status (e.g. two ok echoes for
+ * かんぺき) so a later real answer re-derives the same status, not a
+ * contradictory one.
+ */
+function seedMap(): Record<string, CharacterProgress> {
   const first = trainsForGrade(1)[0];
   const chars = first?.chars ?? ["一", "右", "雨", "円", "王"];
-  const now = new Date().toISOString();
-  const out: Record<string, ProgressState> = {};
-
-  const base = (char: string, patch: Partial<ProgressState>): ProgressState => ({
-    ...emptyProgress(char),
-    encounterCompleted: true,
-    understandCompleted: true,
-    seenAt: isoHoursFromNow(-48),
-    lastPracticeAt: isoHoursFromNow(-2),
-    ...patch,
-  });
+  const out: Record<string, CharacterProgress> = {};
 
   // chars[0] (一) is deliberately left unseeded: entrance-page.md §5 sends
   // every first-time guest's さわってみる tap straight to /demo/kanji/一,
@@ -106,61 +141,59 @@ function seedMap(): Record<string, ProgressState> {
   // かんぺき" demo slot instead, since nothing routes a fresh guest there
   // (prepareDemoTour resets it to empty of its own accord for the guided
   // tour, independent of whatever this function seeds it to).
-  out[chars[4] ?? "王"] = base(chars[4] ?? "王", {
+  out[chars[4] ?? "王"] = seedChar(chars[4] ?? "王", {
     status: "perfect",
-    lights: { reading: true, meaning: true, shape: true },
-    perfectAt: isoHoursFromNow(-24),
-    almostAt: isoHoursFromNow(-48),
-    echoSuccessCount: 2,
+    lamps: { reading: true, meaning: true, shape: true },
+    almostAt: hoursAgo(48),
+    stampedAt: hoursAgo(24),
+    echoes: [
+      { at: hoursAgo(30), ok: true, sessionId: "seed-echo-0" },
+      { at: hoursAgo(25), ok: true, sessionId: "seed-echo-1" },
+    ],
   });
-  out[chars[1] ?? "右"] = base(chars[1] ?? "右", {
+  out[chars[1] ?? "右"] = seedChar(chars[1] ?? "右", {
     status: "almost",
-    lights: { reading: true, meaning: true, shape: true },
-    almostAt: isoHoursFromNow(-30),
-    echoDueAt: isoHoursFromNow(-1),
-    echoSuccessCount: 0,
-    surfacesSeenSuccess: ["右:solo"],
-    lastSuccessByKind: { reading: "右:solo", meaning: "右:solo", shape: "右:solo" },
+    lamps: { reading: true, meaning: true, shape: true },
+    almostAt: hoursAgo(30),
+    seenSurfaces: [`${chars[1] ?? "右"}:solo`],
   });
-  out[chars[2] ?? "雨"] = base(chars[2] ?? "雨", {
+  out[chars[2] ?? "雨"] = seedChar(chars[2] ?? "雨", {
     status: "almost",
-    lights: { reading: true, meaning: true, shape: true },
-    almostAt: now,
-    echoDueAt: isoHoursFromNow(20),
+    lamps: { reading: true, meaning: true, shape: true },
+    almostAt: hoursAgo(0),
   });
-  out[chars[3] ?? "円"] = base(chars[3] ?? "円", {
+  out[chars[3] ?? "円"] = seedChar(chars[3] ?? "円", {
     status: "fix",
-    lights: { reading: true, meaning: false, shape: false },
-    repairRequiredKinds: ["meaning"],
-    wrongCountByKind: { reading: 0, meaning: 1, shape: 0 },
+    lamps: { reading: true, meaning: false, shape: false },
+    repairs: ["meaning"],
+    lifetimeWrong: { reading: 0, meaning: 1, shape: 0 },
   });
   for (const char of DEMO_CONSIST_CHARS) {
-    out[char] = base(char, {
+    out[char] = seedChar(char, {
       status: "perfect",
-      lights: { reading: true, meaning: true, shape: true },
-      perfectAt: isoHoursFromNow(-36),
-      almostAt: isoHoursFromNow(-60),
-      echoSuccessCount: 2,
+      lamps: { reading: true, meaning: true, shape: true },
+      almostAt: hoursAgo(60),
+      stampedAt: hoursAgo(36),
+      echoes: [
+        { at: hoursAgo(45), ok: true, sessionId: `seed-echo-${char}-0` },
+        { at: hoursAgo(40), ok: true, sessionId: `seed-echo-${char}-1` },
+      ],
     });
   }
-  out[DEMO_COUPLE_CHAR] = base(DEMO_COUPLE_CHAR, {
+  out[DEMO_COUPLE_CHAR] = seedChar(DEMO_COUPLE_CHAR, {
     status: "almost",
-    lights: { reading: true, meaning: true, shape: true },
-    almostAt: isoHoursFromNow(-200),
-    echoDueAt: isoHoursFromNow(-1),
-    echoSuccessCount: 1,
-    surfacesSeenSuccess: [`${DEMO_COUPLE_CHAR}:solo`],
-    lastSuccessByKind: {
-      reading: `${DEMO_COUPLE_CHAR}:solo`,
-      meaning: `${DEMO_COUPLE_CHAR}:solo`,
-      shape: `${DEMO_COUPLE_CHAR}:solo`,
-    },
+    lamps: { reading: true, meaning: true, shape: true },
+    almostAt: hoursAgo(200),
+    echoes: [{ at: hoursAgo(150), ok: true, sessionId: "seed-echo-couple-0" }],
+    seenSurfaces: [`${DEMO_COUPLE_CHAR}:solo`],
   });
   return out;
 }
 
-function migrateDemo(all: Record<string, ProgressState>): {
-  all: Record<string, ProgressState>;
+/** Backfills characters a future build added to the seed set. Not a migration
+ * from the abandoned v3 shape — v4 never reads v3 at all. */
+function migrateDemo(all: Record<string, CharacterProgress>): {
+  all: Record<string, CharacterProgress>;
   changed: boolean;
 } {
   let changed = false;
@@ -172,26 +205,14 @@ function migrateDemo(all: Record<string, ProgressState>): {
       changed = true;
     }
   }
-  const couple = next[DEMO_COUPLE_CHAR];
-  if (!couple) {
+  if (!next[DEMO_COUPLE_CHAR]) {
     next[DEMO_COUPLE_CHAR] = seeded[DEMO_COUPLE_CHAR]!;
-    changed = true;
-  }
-  // Fix-up for browsers that already persisted the old seed, which put
-  // かんぺき on chars[0] (一) — exactly the character entrance-page.md
-  // routes a first-time guest's さわってみる tap to. An untouched (never
-  // actually played) かんぺき entry there can only be that leftover seed
-  // value, never real progress, so it is safe to drop back to fresh.
-  const rideTarget = (trainsForGrade(1)[0]?.chars ?? ["一"])[0] ?? "一";
-  const rideTargetRow = next[rideTarget];
-  if (rideTargetRow?.status === "perfect" && !readTouchedChars().includes(rideTarget)) {
-    delete next[rideTarget];
     changed = true;
   }
   return { all: next, changed };
 }
 
-function readAll(): Record<string, ProgressState> {
+function readAll(): Record<string, CharacterProgress> {
   if (typeof window === "undefined") return seedMap();
   try {
     const raw = window.localStorage.getItem(KEY);
@@ -200,7 +221,7 @@ function readAll(): Record<string, ProgressState> {
       window.localStorage.setItem(KEY, JSON.stringify(seeded));
       return seeded;
     }
-    const parsed = JSON.parse(raw) as Record<string, ProgressState>;
+    const parsed = JSON.parse(raw) as Record<string, CharacterProgress>;
     const { all, changed } = migrateDemo(parsed);
     if (changed) writeAll(all);
     return all;
@@ -209,7 +230,7 @@ function readAll(): Record<string, ProgressState> {
   }
 }
 
-function writeAll(all: Record<string, ProgressState>) {
+function writeAll(all: Record<string, CharacterProgress>) {
   try {
     window.localStorage.setItem(KEY, JSON.stringify(all));
   } catch {
@@ -217,10 +238,18 @@ function writeAll(all: Record<string, ProgressState>) {
   }
 }
 
+function legacyProgressMap(): Map<string, ProgressState> {
+  const map = new Map<string, ProgressState>();
+  for (const p of Object.values(readAll())) {
+    map.set(p.characterId, toLegacyRow(p));
+  }
+  return map;
+}
+
+/** 一 is deliberately never seeded (see seedMap) — the initial stamp set is
+ * always empty, exactly as it always was. */
 function seedStamps(): Stamp[] {
-  const one = readAll()["一"] ?? seedMap()["一"];
-  if (!one || (one.status !== "perfect" && !one.perfectAt)) return [];
-  return [stampFromPerfect(one)];
+  return [];
 }
 
 function readStamps(): Stamp[] {
@@ -228,7 +257,7 @@ function readStamps(): Stamp[] {
   try {
     const raw = window.localStorage.getItem(STAMP_KEY);
     if (!raw) {
-      const fromPerfect = Object.values(readAll())
+      const fromPerfect = [...legacyProgressMap().values()]
         .filter((row) => row.status === "perfect" || row.perfectAt)
         .reduce<Stamp[]>((acc, row) => mergeStamp(acc, stampFromPerfect(row)), []);
       const seeded = fromPerfect.length ? fromPerfect : seedStamps();
@@ -372,56 +401,75 @@ function markTouched(char: string) {
   }
 }
 
-/** Guest progress eligible for account migration: touched characters only. */
-export function readMigratableProgress(): Record<string, ProgressState> {
+/**
+ * Guest progress eligible for account migration: touched characters only,
+ * already in the real engine's own shape — `onboard.tsx` hands these
+ * straight to `importGuestProgress` with no adapter step, since both sides
+ * of the guest/account split now speak `CharacterProgress` natively.
+ */
+export function readMigratableProgress(): Record<string, CharacterProgress> {
   const all = readAll();
   const touched = new Set(readTouchedChars());
-  const out: Record<string, ProgressState> = {};
+  const out: Record<string, CharacterProgress> = {};
   for (const char of touched) {
     if (all[char]) out[char] = all[char];
   }
   return out;
 }
 
-function persist(char: string, next: ProgressState) {
+function persist(char: string, next: CharacterProgress): CharacterProgress {
   const all = readAll();
   const prev = all[char];
   all[char] = next;
   writeAll(all);
   markTouched(char);
-  awardIfPerfect(prev, next);
+  const engineParams = engineParamsFor(char);
+  awardIfPerfect(
+    prev ? toLegacyProgressState(prev, engineParams) : undefined,
+    toLegacyProgressState(next, engineParams),
+  );
   return next;
 }
 
-export function getDemoStudy(char: string): ProgressState {
-  return hydrateProgress(readAll()[char] ?? emptyProgress(char));
+function getRawStudy(char: string): CharacterProgress {
+  return readAll()[char] ?? initialProgress(char);
 }
 
+export function getDemoStudy(char: string): ProgressState {
+  return toLegacyRow(getRawStudy(char));
+}
+
+/** No engine event: opening a kanji is not a scoring moment (MR-8 — decay,
+ * the old model's only "open" effect, does not exist in the real engine). */
 export function openDemoKanji(char: string): ProgressState {
-  const now = new Date().toISOString();
-  const next = evaluateProgress(getDemoStudy(char), { type: "open", nowIso: now }, paramsFor(char));
-  return persist(char, next);
+  return getDemoStudy(char);
 }
 
 export function completeDemoEncounter(char: string): ProgressState {
-  const now = new Date().toISOString();
+  const engineParams = engineParamsFor(char);
+  const required = requiredLampsFor(char);
   const next = evaluateProgress(
-    getDemoStudy(char),
-    { type: "completeEncounter", nowIso: now },
-    paramsFor(char),
+    getRawStudy(char),
+    { type: "encounter", at: nowHours(), sessionId: `demo-${char}-encounter` },
+    engineParams,
+    required,
   );
   markHasRidden();
-  return persist(char, next);
+  persist(char, next);
+  return toLegacyProgressState(next, engineParams);
 }
 
 export function completeDemoUnderstand(char: string): ProgressState {
-  const now = new Date().toISOString();
+  const engineParams = engineParamsFor(char);
+  const required = requiredLampsFor(char);
   const next = evaluateProgress(
-    getDemoStudy(char),
-    { type: "completeUnderstand", nowIso: now },
-    paramsFor(char),
+    getRawStudy(char),
+    { type: "understand", at: nowHours(), sessionId: `demo-${char}-understand` },
+    engineParams,
+    required,
   );
-  return persist(char, next);
+  persist(char, next);
+  return toLegacyProgressState(next, engineParams);
 }
 
 export function demoBeat(char: string): BeatId {
@@ -472,48 +520,75 @@ export function submitDemoAnswer(input: {
     throw new Error("unknown item");
   }
   const graded = gradeChoice(item, input.choiceId);
-  const now = new Date().toISOString();
-  const prev = getDemoStudy(input.char);
-  const scoringEcho = echoIsDue(prev, now);
-  const next = evaluateProgress(
-    prev,
-    {
-      type: "answer",
-      kind: item.kind,
-      correct: graded.correct,
-      isEcho: scoringEcho,
-      echoBatchDone: scoringEcho,
-      nowIso: now,
-      shapeAvailable: shapeSurfaceAvailable(input.char),
-      surfaceId: item.surfaceId ?? item.payload.surface?.id ?? `${item.kanji}:solo`,
-      gentle: Boolean(item.payload.confusable || item.payload.phoneticFamily || item.payload.cloze),
-    },
-    paramsFor(input.char),
-  );
-  persist(input.char, next);
-  if (
-    prev.status === "perfect" &&
-    next.status === "perfect" &&
-    isInspectionDue(prev, readDemoInspections()[input.char], now)
-  ) {
-    recordDemoInspection(input.char, now);
+
+  const now = Date.now();
+  const nowIso = new Date(now).toISOString();
+  const engineParams = engineParamsFor(input.char);
+  const required = requiredLampsFor(input.char);
+  const prev = getRawStudy(input.char);
+  const prevLegacy = toLegacyProgressState(prev, engineParams);
+  const wantsEcho = input.isEcho && echoIsDue(prevLegacy, nowIso);
+  const surfaceId = item.surfaceId ?? item.payload.surface?.id ?? `${item.kanji}:solo`;
+  const soft = Boolean(item.payload.confusable || item.payload.phoneticFamily || item.payload.cloze);
+
+  const attempt = (mode: "practice" | "echo"): CharacterProgress =>
+    evaluateProgress(
+      prev,
+      {
+        type: "answer",
+        at: nowHours(),
+        sessionId: input.sessionId,
+        itemId: input.itemId,
+        lamp: item.kind,
+        correct: graded.correct,
+        mode,
+        surfaceId,
+        soft,
+      },
+      engineParams,
+      required,
+    );
+
+  let scoringEcho = wantsEcho;
+  let next: CharacterProgress;
+  try {
+    next = attempt(wantsEcho ? "echo" : "practice");
+  } catch (err) {
+    if (!(err instanceof EchoRejectedError) || !wantsEcho) throw err;
+    // Same MR-5 authority rule as the account path (server/progress.ts): the
+    // engine's own eligibility check wins over this file's echoIsDue guess.
+    // The child never sees this — it falls back to silent practice scoring.
+    scoringEcho = false;
+    next = attempt("practice");
   }
+
+  persist(input.char, next);
+  const nextLegacy = toLegacyProgressState(next, engineParams);
+
+  if (
+    prevLegacy.status === "perfect" &&
+    nextLegacy.status === "perfect" &&
+    isInspectionDue(prevLegacy, readDemoInspections()[input.char], nowIso)
+  ) {
+    recordDemoInspection(input.char, nowIso);
+  }
+
   const events = readEvents();
   events.unshift({
     kanji: input.char,
     kind: item.kind,
     correct: graded.correct,
     answer: graded.label,
-    created_at: now,
+    created_at: nowIso,
     item_id: input.itemId,
     is_echo: scoringEcho,
     session_id: input.sessionId,
   });
   writeEvents(events);
-  const rings = buildGradeRings({ progress: readAll(), profileGrade: DEMO_CHILD.grade });
+  const rings = buildGradeRings({ progress: legacyProgressMap(), profileGrade: DEMO_CHILD.grade });
   const g = (getKanji(input.char)?.grade ?? DEMO_CHILD.grade) as Grade;
   const gradePerfect = rings.find((r) => r.grade === g)?.perfect ?? 0;
-  return { correct: graded.correct, label: graded.label, progress: next, gradePerfect };
+  return { correct: graded.correct, label: graded.label, progress: nextLegacy, gradePerfect };
 }
 
 /** Workshop: UI-only 当たり / 半分当たり. Never writes mastery. */
@@ -526,7 +601,7 @@ export function applyDemoWorkshop(kanji: string, choiceId: string) {
 export function getDemoHome(viewGrade: Grade = DEMO_CHILD.grade) {
   const now = new Date().toISOString();
   const p = params();
-  const map = new Map(Object.values(readAll()).map((row) => [row.kanji, row]));
+  const map = legacyProgressMap();
   const trains = decorateTrains(viewGrade, map).map((t) => ({
     ...t,
     cars: t.cars.map((car) => ({
@@ -580,7 +655,7 @@ export function listDemoStamps(): Stamp[] {
 
 export function getDemoMap(viewGrade: Grade = DEMO_CHILD.grade) {
   const now = new Date().toISOString();
-  const map = new Map(Object.values(readAll()).map((row) => [row.kanji, row]));
+  const map = legacyProgressMap();
   const lines = mapLinesFor(viewGrade).map((view) => ({
     ...view,
     stations: view.stations.map((station) => ({
@@ -596,7 +671,7 @@ export function getDemoMap(viewGrade: Grade = DEMO_CHILD.grade) {
 export function getDemoOverview() {
   const home = getDemoHome();
   const stamps = readStamps();
-  const progressMap = new Map(Object.entries(readAll()));
+  const progressMap = legacyProgressMap();
   const report = buildParentReport({
     grade: DEMO_CHILD.grade,
     progress: progressMap,
@@ -638,13 +713,11 @@ export function getDemoOverview() {
 }
 
 export function setDemoStartBand(band: StartBand) {
-  const progressMap = new Map(Object.entries(readAll()));
-  return setBand(band, progressMap);
+  return setBand(band, legacyProgressMap());
 }
 
 export function setDemoRollover() {
-  const progressMap = new Map(Object.entries(readAll()));
-  return confirmDemoRollover(progressMap);
+  return confirmDemoRollover(legacyProgressMap());
 }
 
 export function setDemoRolloverDismiss() {
@@ -654,21 +727,13 @@ export function setDemoRolloverDismiss() {
 /** Reset 王 (new) and 右 (echo-due) so the in-app auto-demo can replay cleanly. */
 export function prepareDemoTour() {
   const all = readAll();
-  all["王"] = emptyProgress("王");
-  all["右"] = {
-    ...emptyProgress("右"),
-    encounterCompleted: true,
-    understandCompleted: true,
-    seenAt: isoHoursFromNow(-48),
-    lastPracticeAt: isoHoursFromNow(-2),
+  all["王"] = initialProgress("王");
+  all["右"] = seedChar("右", {
     status: "almost",
-    lights: { reading: true, meaning: true, shape: true },
-    almostAt: isoHoursFromNow(-30),
-    echoDueAt: isoHoursFromNow(-1),
-    echoSuccessCount: 0,
-    surfacesSeenSuccess: ["右:solo"],
-    lastSuccessByKind: { reading: "右:solo", meaning: "右:solo", shape: "右:solo" },
-  };
+    lamps: { reading: true, meaning: true, shape: true },
+    almostAt: hoursAgo(30),
+    seenSurfaces: ["右:solo"],
+  });
   writeAll(all);
   writeEchoStarts([]);
 }

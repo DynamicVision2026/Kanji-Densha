@@ -1,8 +1,7 @@
-import type { CharacterProgress, EchoAttempt, Status } from "@kanji-densha/engine";
-import type { ProgressState } from "@/lib/progress-eval";
+import type { CharacterProgress, Status } from "@kanji-densha/engine";
 
 // Guest -> account migration — the rule build-plan.md's M7 entry deferred
-// defining until echo timestamps existed. Now recorded as D27
+// defining until echo timestamps existed. Recorded as D27
 // (docs/decisions.md): per character, take the higher status; on a tie,
 // keep the earlier almostAt so an echo clock already ticking is never reset.
 //
@@ -10,66 +9,9 @@ import type { ProgressState } from "@/lib/progress-eval";
 // readMigratableProgress() (or equivalently, ids in its touched-character
 // set), never the full readAll() blob. That guard is not defensive
 // boilerplate: readAll() also contains the seeded demo fixture (一 already
-// かんぺき, 右/雨 だいたい, 円 なおし, …) that every guest has on first
-// load, never having touched any of it. This exact seed has already caused
-// two separate bugs in one launch week — first a guest funnelled into 一 by
-// the entrance page's own door destination found it pre-completed instead
-// of starting fresh, then this file's first draft would have imported that
-// same fabricated かんぺき into a brand-new real account. If you are looking
-// at the touched-set plumbing and it looks like unnecessary indirection,
-// it is the fix for both.
-const GUEST_IMPORT_SESSION = "guest-import";
-
-function hoursFromIso(iso: string | null): number | null {
-  if (!iso) return null;
-  const ms = Date.parse(iso);
-  return Number.isNaN(ms) ? null : ms / 3_600_000;
-}
-
-/**
- * The old demo engine only ever stored a bare success count (0/1/2), never
- * individual echo attempts — MR-5's eligibility checks need at least the
- * first attempt's own timestamp to anchor the 48h floor on a second echo.
- * That timestamp was never recorded, so it can't be recovered; anchoring the
- * synthetic attempt to `almostAt` itself is the safe direction to be wrong
- * in, because the true first echo could only have happened at or after
- * `almostAt + echoFirstDelayHours` — strictly later than `almostAt`. Using
- * `almostAt` therefore never makes a migrated child wait *longer* for a
- * second echo than they honestly would have; it can only make the floor a
- * little more permissive than reality, never less.
- */
-function reconstructEchoes(state: ProgressState, almostAt: number | null): readonly EchoAttempt[] {
-  const count = Math.min(2, state.echoSuccessCount ?? 0);
-  if (count <= 0 || almostAt === null) return [];
-  return Array.from({ length: count }, (_, i) => ({
-    at: almostAt + i,
-    ok: true,
-    sessionId: `${GUEST_IMPORT_SESSION}-${i}`,
-  }));
-}
-
-/** Legacy ProgressState (the old, still-demo-only engine) -> CharacterProgress. */
-export function toCharacterProgressFromGuest(state: ProgressState): CharacterProgress {
-  const almostAt = hoursFromIso(state.almostAt);
-  return {
-    characterId: state.kanji,
-    status: state.status,
-    lamps: { ...state.lights },
-    encountered: state.encounterCompleted,
-    understood: state.understandCompleted,
-    repairs: [...state.repairRequiredKinds],
-    lostFlag: state.status === "lost",
-    consecutiveWrong: { ...state.consecutiveWrongByKind },
-    lifetimeWrong: { ...state.wrongCountByKind },
-    almostAt,
-    almostSessionId: almostAt === null ? null : GUEST_IMPORT_SESSION,
-    echoes: reconstructEchoes(state, almostAt),
-    openEcho: null,
-    seenSurfaces: [...state.surfacesSeenSuccess],
-    novelFailures: [],
-    stampedAt: hoursFromIso(state.perfectAt),
-  };
-}
+// かんぺき, 右/雨 だいたい, 円 なおし, …) every guest has on first load,
+// never having touched any of it. Importing that fabricated かんぺき into a
+// brand-new real account would hand it achievements nobody earned.
 
 // "Higher" = closer to かんぺき. まよい ranks below はじめて: a character
 // the engine had to flag as needing repair is a worse place to be starting
