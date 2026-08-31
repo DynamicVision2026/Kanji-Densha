@@ -1,9 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { AppShell } from "@/components/app-shell";
+import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
-import { readActiveChildId } from "@/lib/active-child";
+import { useActiveChild } from "@/lib/active-child";
 import type { PracticeKind } from "@/lib/mastery";
+import { listChildren } from "@/lib/server/children";
 import { listMistakes } from "@/lib/server/progress";
 import { useI18n } from "@/lib/i18n/i18n";
 import type { MessageKey } from "@/lib/i18n/messages";
@@ -25,12 +27,25 @@ const KIND_LABEL: Record<string, MessageKey> = {
 function MistakesPage() {
   const { t } = useI18n();
   const search = Route.useSearch();
-  const childId = search.child || readActiveChildId() || "";
+  const navigate = useNavigate();
+  const childrenQ = useQuery({ queryKey: ["children"], queryFn: () => listChildren() });
+  const { childId, needsPicker, select } = useActiveChild(childrenQ.data, {
+    explicit: search.child,
+    onEmpty: () => void navigate({ to: "/onboard" }),
+  });
   const q = useQuery({
     queryKey: ["mistakes", childId],
-    queryFn: () => listMistakes({ data: childId }),
+    queryFn: () => listMistakes({ data: childId ?? "" }),
     enabled: Boolean(childId),
   });
+
+  if (needsPicker && childrenQ.data) {
+    return (
+      <AppShell>
+        <StationBoard children={childrenQ.data} onSelect={select} />
+      </AppShell>
+    );
+  }
 
   return (
     <AppShell>
@@ -51,7 +66,7 @@ function MistakesPage() {
                   <Link
                     to="/app/kanji/$char"
                     params={{ char: row.kanji }}
-                    search={{ child: childId, mode: "play" }}
+                    search={{ child: childId ?? undefined, mode: "play" }}
                     className="font-display text-2xl"
                   >
                     {row.kanji}
@@ -67,7 +82,7 @@ function MistakesPage() {
         )}
 
         <p className="mt-8 text-center">
-          <Link to="/app/parent" search={{ child: childId }} className="text-sm text-fg-muted">
+          <Link to="/app/parent" search={{ child: childId ?? undefined }} className="text-sm text-fg-muted">
             {t("backInsight")}
           </Link>
         </p>

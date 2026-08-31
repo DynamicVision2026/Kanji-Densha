@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { KanjiSession } from "@/components/kanji-session";
 import { AppShell } from "@/components/app-shell";
+import { StationBoard } from "@/components/station-board";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getKanji } from "@/data/kyoiku";
-import { readActiveChildId } from "@/lib/active-child";
+import { useActiveChild } from "@/lib/active-child";
 import { parseGrade } from "@/lib/grade-nav";
 import { PRACTICE_KINDS, type PracticeKind } from "@/lib/mastery";
+import { listChildren } from "@/lib/server/children";
 import {
   completeEncounter,
   completeUnderstand,
@@ -33,7 +35,12 @@ function KanjiStudy() {
   const { char: raw } = Route.useParams();
   const char = decodeURIComponent(raw);
   const search = Route.useSearch();
-  const childId = search.child || readActiveChildId() || "";
+  const navigate = useNavigate();
+  const childrenQ = useQuery({ queryKey: ["children"], queryFn: () => listChildren() });
+  const { childId, needsPicker, select } = useActiveChild(childrenQ.data, {
+    explicit: search.child,
+    onEmpty: () => void navigate({ to: "/onboard" }),
+  });
   const lookMode = (search.mode ?? "play") === "look";
   const qc = useQueryClient();
   // One id per visit to this kanji (the component remounts on char change via
@@ -44,12 +51,12 @@ function KanjiStudy() {
 
   const studyQ = useQuery({
     queryKey: ["study", childId, char],
-    queryFn: () => getKanjiStudy({ data: { childId, char } }),
+    queryFn: () => getKanjiStudy({ data: { childId: childId ?? "", char } }),
     enabled: Boolean(childId),
   });
 
   const encounter = useMutation({
-    mutationFn: () => completeEncounter({ data: { childId, char, sessionId } }),
+    mutationFn: () => completeEncounter({ data: { childId: childId ?? "", char, sessionId } }),
     onSuccess: (out) => {
       void qc.setQueryData(["study", childId, char], (prev: typeof studyQ.data) =>
         prev ? { ...prev, progress: out.progress } : prev,
@@ -57,13 +64,21 @@ function KanjiStudy() {
     },
   });
   const understand = useMutation({
-    mutationFn: () => completeUnderstand({ data: { childId, char, sessionId } }),
+    mutationFn: () => completeUnderstand({ data: { childId: childId ?? "", char, sessionId } }),
     onSuccess: (out) => {
       void qc.setQueryData(["study", childId, char], (prev: typeof studyQ.data) =>
         prev ? { ...prev, progress: out.progress } : prev,
       );
     },
   });
+
+  if (needsPicker && childrenQ.data) {
+    return (
+      <AppShell>
+        <StationBoard children={childrenQ.data} onSelect={select} />
+      </AppShell>
+    );
+  }
 
   if (!childId || studyQ.isLoading || !studyQ.data) {
     return (
