@@ -65,3 +65,15 @@ authority should always move in this codebase.
 
 **Still open:** Q14 (whether to license a 教科書体 for the hero character) — a budget
 decision, not a build blocker, since it is one CSS token.
+
+**First task after launch, per the architect (2026-08-31):** audit every gate in this
+repo for whether it is actually wired to what it names, not just whether it exits 0.
+R5 alone found five gates that ran, reported success, and were never looking at the
+thing they claimed to check: the content-dist drift gate blind to kanji filenames,
+`db:migrate` silently no-oping, Nitro's lazy-imported auth module masking a
+startup-crash fix, the `apps/web` test runner's `&&` chain hiding 252 tests behind
+one `.mjs` failure, and `pnpm verify`'s `test:coverage` step never actually invoking
+`apps/web`'s suite at all. All five were found by accident while chasing something
+else. The only way to close this as a category, not a string of one-off discoveries,
+is to break each gate deliberately — feed it the exact input it's supposed to catch —
+and watch it actually fail.
