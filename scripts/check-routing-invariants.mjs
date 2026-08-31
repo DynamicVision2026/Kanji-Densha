@@ -145,6 +145,31 @@ for (const r of removed) {
   );
 }
 
+// --- Gate 5: any route reading readActiveChildId() must render StationBoard -
+// docs/reviews/remediation-plan.md R3: kanji.$char.tsx and mistakes.tsx each
+// called readActiveChildId() directly instead of going through
+// useActiveChild, so neither ever showed the picker on a multi-profile
+// household — one silently landed on whichever child's id happened to be in
+// storage, the other showed an infinite skeleton. Gate 3 above forbids a
+// *component* from resolving a child; it does not fire here because these
+// are routes. This gate is the one that would have caught it: reading the
+// raw active-child value directly (not through the hook, which already
+// carries its own needsPicker/StationBoard contract) is only safe if the
+// same file also renders StationBoard for the multi-profile case.
+const READ_ACTIVE_CHILD_DIRECT = /\breadActiveChildId\s*\(/;
+for (const file of srcFiles) {
+  if (file === ACTIVE_CHILD_DEFINITION) continue;
+  const text = readFileSync(file, "utf8");
+  if (!READ_ACTIVE_CHILD_DIRECT.test(text)) continue;
+  if (!text.includes("StationBoard")) {
+    problems.push(
+      `${file}: calls readActiveChildId() directly but never renders StationBoard — ` +
+        "a multi-profile household gets no picker (R3). Use useActiveChild instead, " +
+        "which needsPicker/StationBoard is the contract for.",
+    );
+  }
+}
+
 if (problems.length > 0) {
   console.error("✗ routing invariants gate FAILED:\n");
   for (const p of problems) console.error("  - " + p);
