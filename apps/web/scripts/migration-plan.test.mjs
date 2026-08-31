@@ -57,8 +57,17 @@ test("non-.sql entries are dropped (readdir also yields the auth/ directory)", (
 });
 
 test("the auth schema ships outside the globbed directory", () => {
+  // Written when migrations/ held only the (conditional) auth schema, so an
+  // empty applied set meant nothing pending — stale now that real content
+  // migrations (0002_kanji.sql etc.) ship unconditionally at top level too.
+  // What this test actually guards: a database that has applied every
+  // migration currently shipped at top level has nothing left pending —
+  // in particular the `auth/` subdirectory entry itself never leaks in as
+  // a fake pending migration (readdir also yields it, and it isn't .sql).
   const migrationsDir = join(projectRoot(), "migrations");
-  assert.deepEqual(pendingMigrations(readdirSync(migrationsDir), []), []);
+  const entries = readdirSync(migrationsDir);
+  const applied = entries.filter((name) => name.endsWith(".sql"));
+  assert.deepEqual(pendingMigrations(entries, applied), []);
   assert.ok(readdirSync(join(migrationsDir, "auth")).includes("0001_auth.sql"));
 });
 
