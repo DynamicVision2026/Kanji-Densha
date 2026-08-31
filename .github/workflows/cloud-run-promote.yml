@@ -1,0 +1,91 @@
+name: Cloud Run Promote
+
+# Manual-only. Shifts 100% traffic to an already-deployed tagged revision
+# (built by Cloud Run Preview Deploy) and removes the tag once it's serving
+# at the real service URL — a tagged preview URL that keeps existing after
+# promotion gets mistaken for the product. This workflow does not build or
+# deploy anything; it only moves traffic on what's already there.
+#
+# Requires the same GCP_SA_KEY secret as cloud-run-preview.yml, plus
+# Cloud Run Admin (already granted) to call update-traffic.
+
+on:
+  workflow_dispatch:
+    inputs:
+      service_name:
+        description: "Cloud Run service name"
+        required: false
+        default: "dynamic-densha-web"
+      tag:
+        description: "Tag currently holding the reviewed revision"
+        required: false
+        default: "welcome-polish"
+      confirm:
+        description: 'Type "promote" to confirm — this shifts 100% of live traffic'
+        required: true
+
+env:
+  PROJECT_ID: kanji-densha-jp
+  REGION: asia-northeast1
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Require explicit confirmation
+        env:
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          if [ "$CONFIRM" != "promote" ]; then
+            echo "::error::confirm input must be exactly 'promote' — refusing to shift production traffic."
+            exit 1
+          fi
+
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - uses: google-github-actions/setup-gcloud@v2
+
+      - name: Shift 100% traffic to the tagged revision
+        env:
+          SERVICE: ${{ inputs.service_name }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          gcloud run services update-traffic "$SERVICE" \
+            --region "$REGION" \
+            --project "$PROJECT_ID" \
+            --to-tags "$TAG=100"
+
+      - name: Remove the now-redundant preview tag
+        # Once the tagged revision serves 100% at the real service URL, the
+        # welcome-polish---... URL is a second, easily-confused way to reach
+        # the same thing — remove it rather than leave two URLs for one
+        # product in browser tabs and shared links.
+        env:
+          SERVICE: ${{ inputs.service_name }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          gcloud run services update-traffic "$SERVICE" \
+            --region "$REGION" \
+            --project "$PROJECT_ID" \
+            --remove-tags "$TAG"
+
+      - name: Print live URL and verify /health
+        env:
+          SERVICE: ${{ inputs.service_name }}
+        run: |
+          URL=$(gcloud run services describe "$SERVICE" --region "$REGION" --project "$PROJECT_ID" \
+            --format="value(status.url)")
+          echo "### Live service URL" >> "$GITHUB_STEP_SUMMARY"
+          echo "$URL" >> "$GITHUB_STEP_SUMMARY"
+          echo "LIVE_URL=$URL"
+          HEALTH=$(curl -sS --max-time 20 "$URL/health" || echo '{"status":"unreachable"}')
+          echo "### /health" >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          echo "$HEALTH" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "$HEALTH"
