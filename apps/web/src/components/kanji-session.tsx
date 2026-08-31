@@ -815,7 +815,7 @@ export function KanjiSession({
   }
 
   return (
-    <>
+    <main>
       {announce && localBeat !== "echo" && localBeat !== "feedback" ? (
         <TrainAnnounce
           announcement={announce}
@@ -834,6 +834,6 @@ export function KanjiSession({
       >
         {stage}
       </RideShell>
-    </>
+    </main>
   );
 }
