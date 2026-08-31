@@ -1,0 +1,18 @@
+# What `gcloud run deploy --source .` uploads to Cloud Build, separate from
+# the Dockerfile's own .dockerignore (which governs the Docker build context
+# once uploaded). Without this file, gcloud silently falls back to excluding
+# whatever .gitignore excludes — which broke /health's git SHA: build-info.json
+# is gitignored (regenerated every build, never checked in), so before this
+# file existed, gcloud dropped it from the upload before the Docker build
+# ever ran, and the deployed /health always read back "unknown" no matter
+# what scripts/write-build-info.mjs wrote. This file's job is exactly to NOT
+# inherit that exclusion.
+.git
+**/node_modules
+**/dist
+**/.output
+**/coverage
+**/test-results
+**/playwright-report
+**/*.tsbuildinfo
+.DS_Store
