@@ -113,25 +113,39 @@ jobs:
           gcloud builds log "$BUILD_ID" --project "$PROJECT_ID" --region "$REGION" || true
 
       - name: Deploy welcome-polish tagged revision at 0% traffic
+        id: deploy
         env:
           SERVICE: ${{ inputs.service_name }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          gcloud run deploy "$SERVICE" \
+          OUTPUT=$(gcloud run deploy "$SERVICE" \
             --source . \
             --region "$REGION" \
             --project "$PROJECT_ID" \
             --no-traffic \
             --tag "$TAG" \
             --set-env-vars "DATABASE_URL=$DATABASE_URL" \
-            --allow-unauthenticated
+            --allow-unauthenticated 2>&1 | tee /dev/stderr)
+          # `gcloud run services describe --format=value(status.traffic[?tag=...])`
+          # (the previous approach here) reliably returned empty — a known,
+          # unexplained cosmetic bug. `gcloud run deploy`'s own stdout always
+          # prints "The revision can be reached directly at <url>", so read the
+          # URL from there instead.
+          URL=$(echo "$OUTPUT" | grep -oP 'reached directly at \K\S+')
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
 
-      - name: Print preview URL
-        env:
-          SERVICE: ${{ inputs.service_name }}
+      - name: Print preview URL and verify /health
         run: |
-          URL=$(gcloud run services describe "$SERVICE" --region "$REGION" --project "$PROJECT_ID" \
-            --format="value(status.traffic[?tag='$TAG'].url)")
+          URL="${{ steps.deploy.outputs.url }}"
           echo "### Cloud Run preview URL" >> "$GITHUB_STEP_SUMMARY"
           echo "$URL" >> "$GITHUB_STEP_SUMMARY"
           echo "PREVIEW_URL=$URL"
+          # routing.md §4 — confirm the deployed revision is actually the
+          # commit this run built, not a stale image, before anyone opens the
+          # preview on a phone.
+          HEALTH=$(curl -sS --max-time 20 "$URL/health" || echo '{"status":"unreachable"}')
+          echo "### /health" >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          echo "$HEALTH" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "$HEALTH"
