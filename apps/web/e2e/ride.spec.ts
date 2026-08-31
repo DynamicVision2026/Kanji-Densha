@@ -215,6 +215,8 @@ test.describe('accessibility (axe) — one pass per beat', () => {
     for (let tick = 0; tick < 20; tick += 1) {
       const tapReadings = page.locator('button[data-tour="tap-readings"]');
       if (await tapReadings.count()) await tapReadings.first().click().catch(() => {});
+      const speaker = page.locator('button[data-tour="speaker"]');
+      if (await speaker.count()) await speaker.first().click().catch(() => {});
       const readingsAck = page.locator('[data-tour="readings-ack"]');
       if (await readingsAck.count()) await readingsAck.first().click().catch(() => {});
       const placeScroll = page.locator('[data-tour="place-scroll"]');
