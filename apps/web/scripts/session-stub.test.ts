@@ -31,17 +31,24 @@ test("SessionStub renders a fixed だいたい status, never derived from any ch
 // not stacked simultaneously." Supersedes the earlier "offered before"
 // ordering check: rendering order alone can't prove they never overlap,
 // since both used to mount together on the same arrival.
+//
+// docs/reviews/remediation-plan.md R4: the arrival effect that arms the
+// ticket (and the install prompt) no longer checks hrefHome — both render
+// on the account path now, same as guest. Only the save prompt itself
+// stays guest-only (showSavePrompt's own hrefHome check, asserted below).
 test("the ticket gets the arrival moment alone; the save prompt only arms after it", () => {
   const session = readFileSync("src/components/kanji-session.tsx", "utf8");
   const ticketIdx = session.indexOf("<SessionStub");
   const saveIdx = session.indexOf("<SavePromptBanner");
   assert.ok(ticketIdx >= 0 && saveIdx > ticketIdx);
-  // the first-almost-arrival effect must arm only the ticket...
+  // the first-almost-arrival effect must arm only the ticket (and the
+  // install prompt), on both paths...
   const arrivalEffect = session.slice(
-    session.indexOf("if (hrefHome === \"/demo\" && progress.status === \"almost\""),
+    session.indexOf("if (progress.status === \"almost\" && !sawSavePromptThisSession())"),
     session.indexOf("function advanceFromTicket"),
   );
   assert.match(arrivalEffect, /setTicketVisible\(true\)/);
+  assert.match(arrivalEffect, /setInstallPromptVisible\(true\)/);
   assert.equal(/setSavePromptVisible/.test(arrivalEffect), false);
   // ...and advanceFromTicket — the only path to the save prompt — must
   // also retire the ticket in the same update, so they never coexist.
@@ -51,6 +58,9 @@ test("the ticket gets the arrival moment alone; the save prompt only arms after 
   );
   assert.match(advanceFn, /setTicketVisible\(false\)/);
   assert.match(advanceFn, /setSavePromptVisible\(true\)/);
+  // the save prompt itself stays guest-only — this is the one hrefHome
+  // check that must survive.
+  assert.match(session, /const showSavePrompt = savePromptVisible && hrefHome === "\/demo"/);
 });
 
 test("both the ticket's save and its あとで lead to advanceFromTicket", () => {

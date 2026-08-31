@@ -106,9 +106,17 @@ test("ride shell is 100dvh with a stable action zone; parent door holds 1.5s", (
   assert.equal(/overflow-y-auto/.test(stageChunk), false);
 });
 
-test("index launches child 発車標, not a marketing wall", () => {
+// docs/reviews/remediation-plan.md R5: this used to assert a redirect to
+// `/demo` that entrance-page.md §1 superseded — "/" re-renders directly
+// (EntranceDoor first-time, GuestHome once ridden) rather than redirecting
+// to a separate route, so a bookmark or home-screen icon at the root keeps
+// working. The invariant the test name describes (root launches straight
+// into the child experience, never a marketing page) still holds; only the
+// mechanism changed.
+test("index renders the child experience directly, not a marketing wall", () => {
   const index = readFileSync("src/routes/index.tsx", "utf8");
-  assert.match(index, /Navigate to="\/demo"/);
+  assert.match(index, /EntranceDoor/);
+  assert.match(index, /GuestHome/);
   assert.equal(/ctaRide/.test(index), false);
 });
 

@@ -7,16 +7,18 @@ import { test } from "node:test";
 // login.tsx (the parent's own sign-in) is deliberately excluded: it is
 // never reached by tapping through a child route.
 //
-// This branch was cut from main before #23/#24 (the ticket-anchor child
-// home and its siding) land, so it checks the child-home.tsx/
-// home-line-strip.tsx that exist here now. Once those PRs merge,
-// departure-ticket.tsx and train-line.tsx become child-reachable too and
-// belong in this list.
+// docs/reviews/remediation-plan.md R5: the ticket-anchor child home and its
+// siding (departure-ticket.tsx, train-line.tsx) landed and are reachable
+// from child-home.tsx (see its own imports) — this list was never updated
+// to include them, so a credential input added to either would have gone
+// unchecked despite this test staying green.
 const CHILD_REACHABLE_FILES = [
   "src/components/child-home.tsx",
   "src/components/station-board.tsx",
   "src/components/home-line-strip.tsx",
   "src/components/parent-door.tsx",
+  "src/components/departure-ticket.tsx",
+  "src/components/train-line.tsx",
   "src/routes/app/index.tsx",
   "src/routes/demo/index.tsx",
 ];

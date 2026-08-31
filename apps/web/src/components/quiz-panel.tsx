@@ -310,7 +310,7 @@ export function QuizPanel({
             >
               <button
                 type="button"
-                data-tour={c.correct ? "choice-correct" : undefined}
+                data-tour={c.correct ? "choice-correct" : "choice-decoy"}
                 disabled={busy || Boolean(result)}
                 onClick={() => onSelect(c.id)}
                 className={cn(
