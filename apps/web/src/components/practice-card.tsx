@@ -28,6 +28,22 @@ const CARD: Record<
 const DASHED_BORDER = "new" satisfies MasteryStatus; // the product-wide "not yet real" border (§1)
 const VERMILION = "#B4432F";
 
+/**
+ * practice-card-states.md §5 — "a small monospace serial in a corner",
+ * family resemblance to the ticket rather than data: deterministic from
+ * character + status only, so it's stable across renders (no hydration
+ * mismatch) and needs no server round-trip, consistent with the ticket
+ * system's own no-server-round-trip rule (return-ticket.md).
+ */
+function serialFor(char: string, status: MasteryStatus): string {
+  const input = `${char}:${status}`;
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+    hash = (hash * 31 + input.charCodeAt(i)) >>> 0;
+  }
+  return `No.${String(hash % 100000).padStart(5, "0")}`;
+}
+
 // Plain monochrome SVGs, not emoji: an emoji glyph is pre-coloured by the
 // font and ignores `color`, so "icon in #FFF9F0" (lit) / "#B9B2A0" (hollow)
 // from §2 has no effect on one — currentColor is the only way both lamp
@@ -168,7 +184,7 @@ export function PracticeCard({
 
   return (
     <div
-      className={`flex flex-col items-center gap-4 rounded-xl p-4 ${className ?? ""}`}
+      className={`ticket-notch ticket-paper flex flex-col items-center gap-4 rounded-xl p-4 ${className ?? ""}`}
       style={{
         backgroundColor: tone.fill,
         border: `2px ${dashed ? "dashed" : "solid"} ${tone.border}`,
@@ -176,6 +192,14 @@ export function PracticeCard({
       data-practice-card
       data-status={status}
     >
+      <span
+        className="pointer-events-none absolute left-3 top-2 font-mono text-[9px] tracking-wide whitespace-nowrap"
+        style={{ color: tone.ink, opacity: 0.45 }}
+        data-serial
+      >
+        {serialFor(char, status)}
+      </span>
+
       <div className="relative">
         <p
           className="font-display text-[76px] leading-none md:text-[88px]"
