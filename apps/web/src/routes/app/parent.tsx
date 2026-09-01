@@ -218,6 +218,10 @@ function ParentPage() {
           {t("audioLicense")}
           <br />
           {t("fontLicense")}
+          <br />
+          <Link to="/app/credits" className="underline underline-offset-2">
+            {t("creditsLink")}
+          </Link>
         </p>
       </main>
     </AppShell>
